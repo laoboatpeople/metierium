@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { Search, HelpCircle, GraduationCap, ChevronRight, Loader2 } from 'lucide-react';
+import Nav from '@/components/Nav';
 
 interface FaqEntry {
   slug: string;
@@ -52,6 +53,7 @@ export default function FaqListing() {
 
   return (
     <div className="min-h-screen bg-[#0A0E1A]">
+      <Nav />
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">

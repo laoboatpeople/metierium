@@ -59,7 +59,8 @@ export default function LandingPage() {
                 { "@type": "Course", "name": "Préparation Examen Plombier CMMTQ", "description": "Préparation à l'examen de certification en plomberie — Code de plomberie, tuyauterie et normes", "provider": { "@type": "Organization", "name": "Certification Québec" } },
                 { "@type": "Course", "name": "Préparation Examen Soudeur QBQ", "description": "Préparation à l'examen de certification en soudage — SMAW, GMAW, FCAW et normes CSA", "provider": { "@type": "Organization", "name": "Certification Québec" } },
                 { "@type": "Course", "name": "Préparation Examen HVAC CMMTQ", "description": "Préparation à l'examen de certification en chauffage-climatisation — thermodynamique, CVC et réfrigération", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Mécanicien Véhicules Lourds CCQ", "description": "Préparation à l'examen de certification en mécanique de véhicules lourds — moteurs diesel, transmissions et hydraulique", "provider": { "@type": "Organization", "name": "Certification Québec" } }
+                { "@type": "Course", "name": "Préparation Examen Mécanicien Véhicules Lourds CCQ", "description": "Préparation à l'examen de certification en mécanique de véhicules lourds — moteurs diesel, transmissions et hydraulique", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+                { "@type": "Course", "name": "Préparation Examen Technicien Sécurité Incendie RBQ", "description": "Préparation à l'examen de certification RBQ en sécurité incendie — alarmes, gicleurs, détection et signalisation", "provider": { "@type": "Organization", "name": "Certification Québec" } }
               ]
             },
             {
@@ -255,6 +256,7 @@ export default function LandingPage() {
                   { label: 'QBQ', color: 'from-[#8B5CF6] to-[#7C3AED]' },
                   { label: 'HVAC', color: 'from-[#F59E0B] to-[#D97706]' },
                   { label: 'MVL', color: 'from-[#10B981] to-[#059669]' },
+                  { label: 'INCENDIE', color: 'from-[#EF4444] to-[#DC2626]' },
                 ].map((item, i) => (
                   <span
                     key={i}
@@ -444,6 +446,27 @@ export default function LandingPage() {
                 <span>{t('tradeTheoryComplete')}</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-[#10B981] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Technicien en sécurité incendie (INCENDIE) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#EF4444]/10 to-[#DC2626]/10 border border-[#EF4444]/20 hover:border-[#EF4444]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#EF4444] to-[#DC2626] flex items-center justify-center mb-4">
+                <Shield className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#EF4444] transition-colors">
+                <Link href="/trade/securite-incendie">{t('tradeIncendie')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeIncendieDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#EF4444]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#EF4444] mt-1">
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>

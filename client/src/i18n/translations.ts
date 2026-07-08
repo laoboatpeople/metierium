@@ -49,13 +49,13 @@ const fr: Record<string, unknown> = {
   navSignUp: 'Inscription',
 
   // Landing page - Hero
-  heroBadge: 'Préparation aux examens de métiers — CMEQ, CMMTQ, QBQ, HVAC, MVL',
+  heroBadge: 'Préparation aux examens de métiers — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE',
   heroTitle: 'Certification Québec',
-  heroTagline: 'Réussissez votre examen CMEQ, CMMTQ, QBQ, HVAC ou MVL',
+  heroTagline: 'Réussissez votre examen CMEQ, CMMTQ, QBQ, HVAC, MVL ou INCENDIE',
   heroDesc: "Accédez à du contenu théorique complet, des simulations d'examen et un suivi personnalisé pour maximiser vos chances de réussite à l'examen de certification.",
   heroPillTheory: 'Théorie complète',
   heroPillExams: "Simulations d'examen",
-  heroPillTracking: 'Suivi personnalisé',
+  heroPillTracking: 'Étudier partout',
   heroCta: 'Commencer',
 
   // Landing page - How it works
@@ -89,10 +89,12 @@ const fr: Record<string, unknown> = {
   tradePlombierDesc: 'Préparation à l\'examen de certification en plomberie.',
   tradeSoudeur: 'Soudeur (QBQ)',
   tradeSoudeurDesc: 'Préparation à l\'examen de certification en soudage.',
-  tradeHvac: 'Chauffage-Climatisation (CMMTQ)',
+  tradeHvac: 'HVAC — Chauffage-Climatisation (CMMTQ)',
   tradeHvacDesc: 'Préparation à l\'examen de certification en systèmes de chauffage, ventilation et climatisation.',
   tradeMvl: 'Mécanicien véhicules lourds (CCQ)',
-  tradeMvlDesc: 'Préparation à l\'examen de certification en mécanique de véhicules lourds et équipements diesel.',
+  tradeMvlDesc: "Préparation à l'examen de certification en mécanique de véhicules lourds et équipements diesel.",
+  tradeIncendie: 'Technicien en sécurité incendie (RBQ)',
+  tradeIncendieDesc: "Préparation à l'examen de certification RBQ en sécurité incendie — alarmes, gicleurs, détection et signalisation.",
   comingSoon: 'À Venir',
 
   // Landing page - Pricing
@@ -239,13 +241,13 @@ const en: Record<string, string> = {
   navSignUp: 'Sign Up',
 
   // Landing page - Hero
-  heroBadge: 'Trade Exam Preparation — CMEQ, CMMTQ, QBQ, HVAC, MVL',
+  heroBadge: 'Trade Exam Preparation — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE',
   heroTitle: 'Certification Québec',
-  heroTagline: 'Pass your CMEQ, CMMTQ, QBQ, HVAC or MVL exam',
+  heroTagline: 'Pass your CMEQ, CMMTQ, QBQ, HVAC, MVL or INCENDIE exam',
   heroDesc: 'Access complete theoretical content, practice exams, and personalized tracking to maximize your chances of passing the certification exam.',
   heroPillTheory: 'Complete Theory',
   heroPillExams: 'Practice Exams',
-  heroPillTracking: 'Personalized Tracking',
+  heroPillTracking: 'Study anywhere',
   heroCta: 'Get Started',
 
   // Landing page - How it works
@@ -283,6 +285,8 @@ const en: Record<string, string> = {
   tradeHvacDesc: 'Preparation for the heating, ventilation, and air conditioning systems certification exam.',
   tradeMvl: 'Heavy Vehicle Mechanic (CCQ)',
   tradeMvlDesc: 'Preparation for the heavy vehicle and diesel equipment mechanics certification exam.',
+  tradeIncendie: 'Fire Safety Technician (RBQ)',
+  tradeIncendieDesc: 'Preparation for the RBQ fire safety certification exam — alarms, sprinklers, detection and signaling.',
   comingSoon: 'Coming Soon',
 
   // Landing page - Pricing
