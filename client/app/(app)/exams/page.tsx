@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from 'framer-motion';
 import {
   BookOpen,
   Clock,
-  AlertCircle,
   CheckCircle,
   XCircle,
   ChevronRight,
@@ -13,11 +12,13 @@ import {
   RefreshCw,
   BarChart3,
   Target,
-  Award,
   GraduationCap,
   Loader2,
-  HelpCircle,
+  Info,
+  Trophy,
 } from 'lucide-react';
+import { saveExamResult, ExamRecord, ChapterResult } from '@/lib/examStorage';
+import Link from 'next/link';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 
@@ -32,6 +33,14 @@ interface Question {
   chapterId: string | null;
 }
 
+interface Chapter {
+  id: string;
+  number: number;
+  name: string;
+  theoryContent: string;
+  tradeId: string;
+}
+
 interface Trade {
   id: string;
   code: string;
@@ -44,11 +53,35 @@ interface ExamResult {
   correct: number;
   incorrect: number;
   score: number;
-  answers: { questionId: string; selected: string; correct: boolean }[];
+  answers: { questionId: string; selected: string; correct: boolean; chapterId: string | null }[];
   timeSpent: number;
+  chapterBreakdown: { chapterId: string | null; chapterName: string; correct: number; total: number }[];
 }
 
 type ExamPhase = 'setup' | 'exam' | 'result';
+
+const TRADE_NAME_MAP: Record<string, string> = {
+  electrician: 'Électricien',
+  plumber: 'Plombier',
+  welder: 'Soudeur',
+};
+
+function getTradeName(tradeId: string, trades: Trade[]): string {
+  const t = trades.find((tr) => tr.id === tradeId);
+  if (t) return t.name || t.nameFr;
+  return TRADE_NAME_MAP[tradeId] || tradeId;
+}
+
+function weightedShuffle<T>(arr: T[]): T[] {
+  const copy = [...arr];
+  for (let i = copy.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [copy[i], copy[j]] = [copy[j], copy[i]];
+  }
+  return copy;
+}
+
+const PASS_THRESHOLD = 70;
 
 export default function ExamsPage() {
   const [phase, setPhase] = useState<ExamPhase>('setup');
@@ -65,6 +98,13 @@ export default function ExamsPage() {
   const [timerActive, setTimerActive] = useState(false);
   const [questionCount, setQuestionCount] = useState(20);
   const [difficulty, setDifficulty] = useState<string>('');
+  const [chapters, setChapters] = useState<Chapter[]>([]);
+  const [selectedChapters, setSelectedChapters] = useState<Set<string>>(new Set());
+  const [chaptersLoading, setChaptersLoading] = useState(false);
+  const [reviewMode, setReviewMode] = useState(false);
+  const [saved, setSaved] = useState(false);
+
+  const EXAM_DURATION = 60 * 60; // 60 minutes in seconds
 
   useEffect(() => {
     (async () => {
@@ -89,6 +129,32 @@ export default function ExamsPage() {
     })();
   }, []);
 
+  // Fetch chapters when trade changes
+  useEffect(() => {
+    if (!selectedTrade) {
+      setChapters([]);
+      setSelectedChapters(new Set());
+      return;
+    }
+    (async () => {
+      setChaptersLoading(true);
+      try {
+        const token = localStorage.getItem('token');
+        const res = await fetch(`${API_BASE}/api/theory?tradeId=${selectedTrade}&locale=fr`, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        if (res.ok) {
+          const data = await res.json();
+          const list: Chapter[] = (data.data || []).sort(
+            (a: Chapter, b: Chapter) => a.number - b.number
+          );
+          setChapters(list);
+        }
+      } catch { /* ignore */ }
+      setChaptersLoading(false);
+    })();
+  }, [selectedTrade]);
+
   // Timer
   useEffect(() => {
     let interval: NodeJS.Timeout;
@@ -104,18 +170,68 @@ export default function ExamsPage() {
     return `${m.toString().padStart(2, '0')}:${sec.toString().padStart(2, '0')}`;
   };
 
+  const toggleChapter = (chapterId: string) => {
+    setSelectedChapters((prev) => {
+      const next = new Set(prev);
+      if (next.has(chapterId)) {
+        next.delete(chapterId);
+      } else {
+        next.add(chapterId);
+      }
+      return next;
+    });
+  };
+
   const startExam = async () => {
     if (!selectedTrade) return;
     setStarting(true);
     try {
       const token = localStorage.getItem('token');
-      const url = `${API_BASE}/api/questions?tradeId=${selectedTrade}&limit=${questionCount}${difficulty ? `&difficulty=${difficulty}` : ''}`;
-      const res = await fetch(url, {
-        headers: { Authorization: `Bearer ${token}` },
-      });
-      if (!res.ok) throw new Error('Failed to fetch questions');
-      const data = await res.json();
-      const qs = (data.data || []).sort(() => Math.random() - 0.5);
+      const hasChapterFilter = selectedChapters.size > 0;
+      let qs: Question[] = [];
+
+      if (hasChapterFilter) {
+        // Weighted distribution across selected chapters
+        const selectedChapterList = chapters.filter((c) => selectedChapters.has(c.id));
+        const totalWeight = selectedChapterList.length;
+        let allocated = 0;
+        const fetchPromises = selectedChapterList.map((ch, idx) => {
+          // Distribute proportionally, last chapter gets remainder
+          let count: number;
+          if (idx < selectedChapterList.length - 1) {
+            count = Math.round((questionCount / totalWeight));
+          } else {
+            count = questionCount - allocated;
+          }
+          allocated += count;
+          if (count < 1) return null;
+
+          let url = `${API_BASE}/api/questions?tradeId=${selectedTrade}&chapterId=${ch.id}&limit=${count}`;
+          if (difficulty) url += `&difficulty=${difficulty}`;
+          return fetch(url, {
+            headers: { Authorization: `Bearer ${token}` },
+          }).then((r) => (r.ok ? r.json() : { data: [] }));
+        });
+
+        const results = await Promise.all(fetchPromises.filter(Boolean));
+        for (const res of results) {
+          const chapterQs = (res.data || []).map((q: Question) => ({
+            ...q,
+          }));
+          qs.push(...chapterQs);
+        }
+      } else {
+        const url = `${API_BASE}/api/questions?tradeId=${selectedTrade}&limit=${questionCount}${difficulty ? `&difficulty=${difficulty}` : ''}`;
+        const res = await fetch(url, {
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        if (!res.ok) throw new Error('Failed to fetch questions');
+        const data = await res.json();
+        qs = data.data || [];
+      }
+
+      qs = weightedShuffle(qs);
+
       if (qs.length === 0) {
         alert('Aucune question disponible pour ce métier pour le moment.');
         setStarting(false);
@@ -128,7 +244,8 @@ export default function ExamsPage() {
       setSubmittedQuestions(new Set());
       setExamResult(null);
       setExamTime(0);
-      setTimerActive(true);
+      setSaved(false);
+      setTimerActive(!reviewMode);
     } catch (err) {
       alert('Erreur lors du chargement des questions.');
     }
@@ -161,21 +278,70 @@ export default function ExamsPage() {
     setTimerActive(false);
     let correct = 0;
     const resultAnswers: ExamResult['answers'] = [];
+    const chapterMap = new Map<string, { correct: number; total: number; name: string }>();
+
     for (const q of questions) {
       const selected = answers[q.id] || '';
       const isCorrect = selected === q.answer;
       if (isCorrect) correct++;
-      resultAnswers.push({ questionId: q.id, selected, correct: isCorrect });
+      resultAnswers.push({ questionId: q.id, selected, correct: isCorrect, chapterId: q.chapterId });
+
+      // Track per-chapter
+      const chId = q.chapterId || 'none';
+      if (!chapterMap.has(chId)) {
+        const ch = chapters.find((c) => c.id === chId);
+        chapterMap.set(chId, { correct: 0, total: 0, name: ch ? `Ch. ${ch.number} — ${ch.name}` : 'Général' });
+      }
+      const entry = chapterMap.get(chId)!;
+      entry.total++;
+      if (isCorrect) entry.correct++;
     }
-    setExamResult({
+
+    const chapterBreakdown = Array.from(chapterMap.entries()).map(([chapterId, data]) => ({
+      chapterId,
+      chapterName: data.name,
+      correct: data.correct,
+      total: data.total,
+    }));
+
+    const score = Math.round((correct / questions.length) * 100);
+    const result: ExamResult = {
       total: questions.length,
       correct,
       incorrect: questions.length - correct,
-      score: Math.round((correct / questions.length) * 100),
+      score,
       answers: resultAnswers,
       timeSpent: examTime,
-    });
+      chapterBreakdown,
+    };
+    setExamResult(result);
     setPhase('result');
+
+    // Save result
+    try {
+      const record: ExamRecord = {
+        id: `exam_${Date.now()}`,
+        date: new Date().toISOString(),
+        tradeId: selectedTrade,
+        tradeName: getTradeName(selectedTrade, trades),
+        totalQuestions: questions.length,
+        correct,
+        incorrect: questions.length - correct,
+        score,
+        timeSpent: examTime,
+        chapterResults: chapterBreakdown.map((cb) => ({
+          chapterNumber: parseInt(cb.chapterId, 10) || 0,
+          chapterName: cb.chapterName,
+          correct: cb.correct,
+          total: cb.total,
+        })),
+        difficulty,
+        passed: score >= PASS_THRESHOLD,
+        reviewMode,
+      };
+      saveExamResult(record);
+      setSaved(true);
+    } catch { /* ignore */ }
   };
 
   const resetExam = () => {
@@ -187,6 +353,7 @@ export default function ExamsPage() {
     setExamResult(null);
     setExamTime(0);
     setTimerActive(false);
+    setSaved(false);
   };
 
   if (loading) {
@@ -275,13 +442,98 @@ export default function ExamsPage() {
             </div>
           </div>
 
+          {/* Chapter filter */}
+          {selectedTrade && (
+            <div>
+              <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">
+                Chapitres à étudier
+                <span className="text-xs text-[#64748B] ml-2">(optionnel — laissez vide pour tous)</span>
+              </label>
+              {chaptersLoading ? (
+                <div className="flex items-center gap-2 text-sm text-[#64748B] py-2">
+                  <Loader2 size={14} className="animate-spin" />
+                  Chargement des chapitres...
+                </div>
+              ) : chapters.length > 0 ? (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-48 overflow-y-auto pr-1">
+                  {chapters.map((ch) => (
+                    <label
+                      key={ch.id}
+                      className={`flex items-center gap-2 px-3 py-2 rounded-lg border cursor-pointer text-sm transition-all ${
+                        selectedChapters.has(ch.id)
+                          ? 'border-[#06B6D4] bg-[#06B6D4]/10 text-[#06B6D4]'
+                          : 'border-[#2D3A52] bg-[#111827] text-[#94A3B8] hover:border-[#3B82F6]/40'
+                      }`}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={selectedChapters.has(ch.id)}
+                        onChange={() => toggleChapter(ch.id)}
+                        className="sr-only"
+                      />
+                      <div
+                        className={`w-4 h-4 rounded border flex items-center justify-center flex-shrink-0 ${
+                          selectedChapters.has(ch.id)
+                            ? 'bg-[#06B6D4] border-[#06B6D4]'
+                            : 'border-[#2D3A52] bg-transparent'
+                        }`}
+                      >
+                        {selectedChapters.has(ch.id) && (
+                          <CheckCircle size={12} className="text-white" />
+                        )}
+                      </div>
+                      <span>Ch. {ch.number} — {ch.name}</span>
+                    </label>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-sm text-[#64748B]">Aucun chapitre disponible</p>
+              )}
+            </div>
+          )}
+
+          {/* Review mode toggle */}
+          <div>
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <label className="text-sm font-medium text-[#94A3B8]">Mode révision</label>
+                <div className="relative group">
+                  <Info size={14} className="text-[#64748B] cursor-help" />
+                  <div className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-3 py-1.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-xs text-[#94A3B8] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none z-10">
+                    Pas de minuterie — révisez à votre rythme
+                  </div>
+                </div>
+              </div>
+              <button
+                onClick={() => setReviewMode(!reviewMode)}
+                className={`relative w-11 h-6 rounded-full transition-colors ${
+                  reviewMode ? 'bg-[#06B6D4]' : 'bg-[#2D3A52]'
+                }`}
+              >
+                <div
+                  className={`absolute top-0.5 w-5 h-5 bg-white rounded-full transition-transform ${
+                    reviewMode ? 'translate-x-[22px]' : 'translate-x-0.5'
+                  }`}
+                />
+              </button>
+            </div>
+          </div>
+
+          {/* Pass threshold info */}
+          <div className="flex items-center gap-2 text-sm text-[#94A3B8] bg-[#111827] rounded-lg px-4 py-2.5 border border-[#2D3A52]">
+            <Info size={16} className="text-[#3B82F6] flex-shrink-0" />
+            <span>
+              Seuil de réussite : <span className="text-[#F8FAFC] font-semibold">{PASS_THRESHOLD}%</span> requis pour la certification
+            </span>
+          </div>
+
           <button
             onClick={startExam}
             disabled={!selectedTrade || starting}
             className="w-full py-3 bg-gradient-to-r from-[#06B6D4] to-[#3B82F6] rounded-xl font-semibold text-white hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
           >
             {starting ? <Loader2 size={18} className="animate-spin" /> : <Target size={18} />}
-            {starting ? 'Préparation...' : 'Commencer l\'examen'}
+            {starting ? 'Préparation...' : "Commencer l'examen"}
           </button>
         </div>
       </div>
@@ -298,28 +550,68 @@ export default function ExamsPage() {
     const answeredCount = Object.keys(answers).length;
     const progress = ((currentIndex + 1) / questions.length) * 100;
 
+    // Visual timer bar
+    const timeRemaining = Math.max(0, EXAM_DURATION - examTime);
+    const timerPercent = (examTime / EXAM_DURATION) * 100;
+    let timerBarColor = 'bg-[#22C55E]';
+    if (timerPercent > 50) timerBarColor = 'bg-[#F59E0B]';
+    if (timerPercent > 75) timerBarColor = 'bg-[#EF4444]';
+
+    // Current chapter name
+    const currentChapter = chapters.find((c) => c.id === q.chapterId);
+    const currentChapterName = currentChapter ? `Ch. ${currentChapter.number} — ${currentChapter.name}` : null;
+
     return (
       <div className="max-w-3xl mx-auto space-y-4">
         {/* Header bar */}
-        <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <span className="text-sm text-[#94A3B8]">
-              Question <span className="text-[#F8FAFC] font-semibold">{currentIndex + 1}</span>/{questions.length}
-            </span>
-            <span className="text-xs text-[#94A3B8] flex items-center gap-1">
-              <Clock size={12} /> {formatTime(examTime)}
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-[#94A3B8]">{answeredCount}/{questions.length} répondues</span>
-            <div className="w-20 h-1.5 bg-[#111827] rounded-full overflow-hidden">
-              <div
-                className="h-full bg-[#06B6D4] rounded-full transition-all"
-                style={{ width: `${(answeredCount / questions.length) * 100}%` }}
-              />
+        <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4">
+          <div className="flex items-center justify-between mb-2">
+            <div className="flex items-center gap-4">
+              <span className="text-sm text-[#94A3B8]">
+                Question <span className="text-[#F8FAFC] font-semibold">{currentIndex + 1}</span>/{questions.length}
+              </span>
+              {!reviewMode && (
+                <span className={`text-sm flex items-center gap-1.5 font-medium ${
+                  timerPercent > 75 ? 'text-[#EF4444]' : timerPercent > 50 ? 'text-[#F59E0B]' : 'text-[#94A3B8]'
+                }`}>
+                  <Clock size={14} />
+                  {formatTime(examTime)}
+                </span>
+              )}
+            </div>
+            <div className="flex items-center gap-2">
+              {reviewMode && (
+                <span className="text-xs text-[#06B6D4] bg-[#06B6D4]/10 px-2 py-0.5 rounded-full font-medium">
+                  Mode révision
+                </span>
+              )}
+              <span className="text-xs text-[#94A3B8]">{answeredCount}/{questions.length} répondues</span>
+              <div className="w-20 h-1.5 bg-[#111827] rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-[#06B6D4] rounded-full transition-all"
+                  style={{ width: `${(answeredCount / questions.length) * 100}%` }}
+                />
+              </div>
             </div>
           </div>
+
+          {/* Visual timer bar (only in normal mode) */}
+          {!reviewMode && (
+            <div className="w-full h-2 bg-[#111827] rounded-full overflow-hidden">
+              <div
+                className={`h-full rounded-full transition-all duration-1000 ${timerBarColor}`}
+                style={{ width: `${Math.min(timerPercent, 100)}%` }}
+              />
+            </div>
+          )}
         </div>
+
+        {/* Chapter name below header */}
+        {currentChapterName && (
+          <div className="text-xs text-[#06B6D4] bg-[#06B6D4]/5 px-3 py-1.5 rounded-lg border border-[#06B6D4]/10 inline-block">
+            {currentChapterName}
+          </div>
+        )}
 
         {/* Progress bar */}
         <div className="w-full h-1 bg-[#111827] rounded-full overflow-hidden">
@@ -476,22 +768,48 @@ export default function ExamsPage() {
 
   // ─── RESULT PHASE ────────────────────────────────────────
   if (phase === 'result' && examResult) {
-    const gradeColor = examResult.score >= 70 ? 'text-[#22C55E]' : examResult.score >= 50 ? 'text-[#F59E0B]' : 'text-[#EF4444]';
-    const gradeBg = examResult.score >= 70 ? 'bg-[#22C55E]/10 border-[#22C55E]/20' : examResult.score >= 50 ? 'bg-[#F59E0B]/10 border-[#F59E0B]/20' : 'bg-[#EF4444]/10 border-[#EF4444]/20';
+    const passed = examResult.score >= PASS_THRESHOLD;
 
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-[#F8FAFC]">Résultat de l'examen</h1>
-          <p className="text-sm text-[#94A3B8] mt-1">Temps: {formatTime(examResult.timeSpent)}</p>
+          <p className="text-sm text-[#94A3B8] mt-1">
+            Temps: {formatTime(examResult.timeSpent)}
+            {reviewMode && (
+              <span className="ml-2 text-[#06B6D4]">(Mode révision)</span>
+            )}
+          </p>
         </div>
 
-        {/* Score card */}
-        <div className={`${gradeBg} border rounded-2xl p-8 text-center`}>
-          <div className={`text-6xl font-bold ${gradeColor} mb-2`}>{examResult.score}%</div>
-          <p className={`text-lg font-medium ${gradeColor}`}>
-            {examResult.score >= 70 ? 'Réussi ! 🎉' : examResult.score >= 50 ? 'Presque ! Continuez vos révisions' : 'À réessayer'}
+        {/* Score card with Pass/Fail badge */}
+        <div className={`bg-[#1A2035] border rounded-2xl p-8 text-center ${
+          passed ? 'border-[#22C55E]/20' : 'border-[#EF4444]/20'
+        }`}>
+          {/* Pass/Fail badge */}
+          <div className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-sm font-bold mb-4 ${
+            passed
+              ? 'bg-[#22C55E]/15 text-[#22C55E] border border-[#22C55E]/30'
+              : 'bg-[#EF4444]/15 text-[#EF4444] border border-[#EF4444]/30'
+          }`}>
+            {passed ? (
+              <>
+                <Trophy size={16} /> RÉUSSI
+              </>
+            ) : (
+              <>
+                <XCircle size={16} /> ÉCHEC
+              </>
+            )}
+          </div>
+
+          <div className={`text-6xl font-bold mb-1 ${passed ? 'text-[#22C55E]' : 'text-[#EF4444]'}`}>
+            {examResult.score}%
+          </div>
+          <p className={`text-sm mb-4 ${passed ? 'text-[#22C55E]' : 'text-[#EF4444]'}`}>
+            {PASS_THRESHOLD}% requis pour la certification
           </p>
+
           <div className="flex justify-center gap-6 mt-4">
             <div className="text-center">
               <p className="text-2xl font-bold text-[#22C55E]">{examResult.correct}</p>
@@ -506,6 +824,12 @@ export default function ExamsPage() {
               <p className="text-xs text-[#94A3B8]">Total</p>
             </div>
           </div>
+
+          {saved && (
+            <p className="text-xs text-[#22C55E] mt-3 flex items-center justify-center gap-1">
+              <CheckCircle size={12} /> Résultat enregistré
+            </p>
+          )}
         </div>
 
         {/* Actions */}
@@ -516,7 +840,48 @@ export default function ExamsPage() {
           >
             <RefreshCw size={18} /> Nouvel examen
           </button>
+          <Link
+            href="/stats"
+            className="flex-1 py-3 bg-[#1A2035] border border-[#2D3A52] rounded-xl font-medium text-[#F8FAFC] hover:bg-[#2D3A52] transition-colors flex items-center justify-center gap-2"
+          >
+            <BarChart3 size={18} /> Voir les statistiques
+          </Link>
         </div>
+
+        {/* Per-chapter breakdown */}
+        {examResult.chapterBreakdown.length > 0 && (
+          <div>
+            <h2 className="text-lg font-semibold text-[#F8FAFC] mb-3 flex items-center gap-2">
+              <GraduationCap size={18} className="text-[#06B6D4]" />
+              Résultats par chapitre
+            </h2>
+            <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4 space-y-3">
+              {examResult.chapterBreakdown.map((cb) => {
+                const chPercent = cb.total > 0 ? Math.round((cb.correct / cb.total) * 100) : 0;
+                return (
+                  <div key={cb.chapterId}>
+                    <div className="flex items-center justify-between text-sm mb-1">
+                      <span className="text-[#94A3B8]">{cb.chapterName}</span>
+                      <span className={`font-medium ${
+                        chPercent >= PASS_THRESHOLD ? 'text-[#22C55E]' : 'text-[#EF4444]'
+                      }`}>
+                        {cb.correct}/{cb.total} ({chPercent}%)
+                      </span>
+                    </div>
+                    <div className="w-full h-2 bg-[#111827] rounded-full overflow-hidden">
+                      <div
+                        className={`h-full rounded-full transition-all ${
+                          chPercent >= PASS_THRESHOLD ? 'bg-[#22C55E]' : 'bg-[#EF4444]'
+                        }`}
+                        style={{ width: `${chPercent}%` }}
+                      />
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
 
         {/* Question review */}
         <div>
