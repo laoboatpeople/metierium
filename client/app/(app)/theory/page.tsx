@@ -2,6 +2,7 @@
 
 import { useEffect, useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Script from 'next/script';
 import {
   BookMarked,
   BookOpen,
@@ -427,6 +428,35 @@ export default function TheoryPage() {
 
   return (
     <div className="animate-fade-in space-y-8">
+      {/* JSON-LD Article Schema */}
+      <Script id="theory-jsonld" type="application/ld+json" strategy="afterInteractive">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Théorie — Certification Québec",
+          "description": "Contenu théorique pour la préparation aux examens de métiers au Québec — CMEQ, CMMTQ, QBQ",
+          "itemListElement": [
+            {
+              "@type": "Article",
+              "name": "Préparation Examen CMEQ — Électricien",
+              "description": "10 chapitres de théorie sur le Code de construction du Québec, chapitre V — Électricité",
+              "author": { "@type": "Organization", "name": "Certification Québec" }
+            },
+            {
+              "@type": "Article",
+              "name": "Préparation Examen CMMTQ — Plombier",
+              "description": "8 chapitres sur la plomberie, le Code de plomberie et les normes CSA B149",
+              "author": { "@type": "Organization", "name": "Certification Québec" }
+            },
+            {
+              "@type": "Article",
+              "name": "Préparation Examen QBQ — Soudeur",
+              "description": "8 chapitres sur le soudage SMAW, GMAW, FCAW, GTAW et les normes CSA",
+              "author": { "@type": "Organization", "name": "Certification Québec" }
+            }
+          ]
+        }
+      `}</Script>
       {/* Header */}
       <div>
         <div className="flex items-center gap-3 mb-1">

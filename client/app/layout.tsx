@@ -30,6 +30,19 @@ export const metadata: Metadata = {
   alternates: {
     canonical: 'https://certificationquebec.com',
   },
+  other: {
+    'application/ld+json': JSON.stringify({
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      name: 'Certification Québec',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://certificationquebec.com' },
+        { '@type': 'ListItem', position: 2, name: 'Théorie', item: 'https://certificationquebec.com/theory' },
+        { '@type': 'ListItem', position: 3, name: 'Examens', item: 'https://certificationquebec.com/exams' },
+        { '@type': 'ListItem', position: 4, name: 'Abonnement', item: 'https://certificationquebec.com/pricing' },
+      ],
+    }),
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

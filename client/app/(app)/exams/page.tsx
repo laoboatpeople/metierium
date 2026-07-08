@@ -18,6 +18,7 @@ import {
   Trophy,
 } from 'lucide-react';
 import { saveExamResult, ExamRecord, ChapterResult } from '@/lib/examStorage';
+import Script from 'next/script';
 import Link from 'next/link';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
@@ -368,6 +369,24 @@ export default function ExamsPage() {
   if (phase === 'setup') {
     return (
       <div className="max-w-3xl mx-auto space-y-6">
+        {/* JSON-LD HowTo Schema */}
+        <Script id="howto-jsonld" type="application/ld+json" strategy="afterInteractive">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "Comment réussir un examen blanc de certification",
+            "description": "Préparez-vous à l'examen de métier du Québec avec notre simulateur d'examen blanc",
+            "step": [
+              { "@type": "HowToStep", "position": 1, "name": "Choisissez votre métier", "text": "Sélectionnez CMEQ (Électricien), CMMTQ (Plombier) ou QBQ (Soudeur)" },
+              { "@type": "HowToStep", "position": 2, "name": "Sélectionnez les chapitres et le nombre de questions", "text": "Choisissez les chapitres à réviser et le nombre de questions pour l'examen" },
+              { "@type": "HowToStep", "position": 3, "name": "Répondez aux questions", "text": "Chaque question est à choix multiples avec correction et explication détaillée" },
+              { "@type": "HowToStep", "position": 4, "name": "Consultez vos résultats", "text": "Obtenez votre score, le détail par chapitre et vos statistiques de progression" }
+            ],
+            "tool": { "@type": "Thing", "name": "Ordinateur ou appareil mobile avec connexion internet" },
+            "timeRequired": "PT60M",
+            "totalTime": "PT60M"
+          }
+        `}</Script>
         <div className="flex items-center gap-3">
           <BookOpen size={28} className="text-[#06B6D4]" />
           <div>
