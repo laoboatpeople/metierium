@@ -156,6 +156,8 @@ export default function LandingPage() {
             <a href="#features" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navFeatures')}</a>
             <a href="#trades" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navTrades')}</a>
             <a href="#pricing" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navPricing')}</a>
+            <Link href="/faq" className="text-sm text-[#94A3B8] hover:text-white transition-colors">FAQ</Link>
+            <Link href="/blog" className="text-sm text-[#94A3B8] hover:text-white transition-colors">Blog</Link>
             <button
               onClick={toggleLocale}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-sm text-[#94A3B8] hover:text-white hover:border-white/20 transition-all"
@@ -189,6 +191,8 @@ export default function LandingPage() {
               <a href="#features" onClick={() => setMobileMenuOpen(false)} className="text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navFeatures')}</a>
               <a href="#trades" onClick={() => setMobileMenuOpen(false)} className="text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navTrades')}</a>
               <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navPricing')}</a>
+              <Link href="/faq" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-[#94A3B8] hover:text-white transition-colors py-2">FAQ</Link>
+              <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-[#94A3B8] hover:text-white transition-colors py-2">Blog</Link>
               <button
                 onClick={() => { toggleLocale(); setMobileMenuOpen(false); }}
                 className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-white/10 bg-white/5 text-sm text-[#94A3B8] hover:text-white w-fit"
