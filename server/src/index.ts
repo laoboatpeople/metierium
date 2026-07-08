@@ -17,6 +17,7 @@ import questionsRoutes from './routes/questions';
 import stripeRoutes from './routes/stripe';
 import adminRoutes from './routes/admin';
 import turnstileRoutes from './routes/turnstile';
+import tutorRoutes from './routes/tutor';
 
 const app = express();
 
@@ -73,6 +74,7 @@ app.use('/api/questions', questionsRoutes);
 app.use('/api/stripe', stripeRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/turnstile', turnstileRoutes);
+app.use('/api/tutor', tutorRoutes);
 
 // ─── 404 handler ────────────────────────────────────────────────
 

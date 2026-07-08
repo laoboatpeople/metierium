@@ -1,0 +1,6502 @@
+[
+  {
+    "question": "Quelle est la formule de la loi d'Ohm ?",
+    "options": [
+      "V = I × R",
+      "V = I / R",
+      "V = R / I",
+      "V = I + R"
+    ],
+    "answer": "A",
+    "explanation": "La loi d'Ohm s'énonce : V = I × R, soit la tension = courant × résistance.",
+    "difficulty": "EASY",
+    "chapter": 1
+  },
+  {
+    "question": "Un circuit a une tension de 240 V et une résistance de 20 Ω. Quel est le courant ?",
+    "options": [
+      "10 A",
+      "12 A",
+      "15 A",
+      "20 A"
+    ],
+    "answer": "B",
+    "explanation": "I = V / R = 240 V / 20 Ω = 12 A.",
+    "difficulty": "EASY",
+    "chapter": 1
+  },
+  {
+    "question": "Quelle est la formule de la puissance selon la loi de Joule ?",
+    "options": [
+      "P = V × I",
+      "P = V / I",
+      "P = I / V",
+      "P = V² × I"
+    ],
+    "answer": "A",
+    "explanation": "La puissance est P = V × I (loi de Joule).",
+    "difficulty": "EASY",
+    "chapter": 1
+  },
+  {
+    "question": "Si un courant de 10 A traverse une résistance de 5 Ω, quelle est la tension ?",
+    "options": [
+      "20 V",
+      "30 V",
+      "40 V",
+      "50 V"
+    ],
+    "answer": "D",
+    "explanation": "V = I × R = 10 A × 5 Ω = 50 V.",
+    "difficulty": "EASY",
+    "chapter": 1
+  },
+  {
+    "question": "Une résistance dissipe 100 W sous 20 V. Quel est le courant ?",
+    "options": [
+      "2 A",
+      "3 A",
+      "4 A",
+      "5 A"
+    ],
+    "answer": "D",
+    "explanation": "I = P / V = 100 W / 20 V = 5 A.",
+    "difficulty": "EASY",
+    "chapter": 1
+  },
+  {
+    "question": "Deux résistances de 15 Ω en série : résistance totale ?",
+    "options": [
+      "15 Ω",
+      "20 Ω",
+      "25 Ω",
+      "30 Ω"
+    ],
+    "answer": "D",
+    "explanation": "Rsérie = R1 + R2 = 15 Ω + 15 Ω = 30 Ω.",
+    "difficulty": "EASY",
+    "chapter": 1
+  },
+  {
+    "question": "Deux résistances de 30 Ω en parallèle : résistance totale ?",
+    "options": [
+      "10 Ω",
+      "15 Ω",
+      "20 Ω",
+      "30 Ω"
+    ],
+    "answer": "B",
+    "explanation": "1/R = 1/30 + 1/30 = 2/30 → R = 15 Ω.",
+    "difficulty": "EASY",
+    "chapter": 1
+  },
+  {
+    "question": "Que signifient les lettres P, V, I dans les formules électriques ?",
+    "options": [
+      "Pression, Volume, Intensité",
+      "Puissance, Tension, Courant",
+      "Potentiel, Vitesse, Impédance",
+      "Perte, Volt, Inductance"
+    ],
+    "answer": "B",
+    "explanation": "P = Puissance (W), V = Tension (V), I = Courant (A).",
+    "difficulty": "EASY",
+    "chapter": 1
+  },
+  {
+    "question": "Un radiateur de 1 500 W sous 120 V : quel courant ?",
+    "options": [
+      "10,5 A",
+      "12,5 A",
+      "14,5 A",
+      "16,5 A"
+    ],
+    "answer": "B",
+    "explanation": "I = P / V = 1 500 W / 120 V = 12,5 A.",
+    "difficulty": "EASY",
+    "chapter": 1
+  },
+  {
+    "question": "Le triangle PIV permet de retrouver quelle relation ?",
+    "options": [
+      "V = P × I",
+      "I = P / V",
+      "P = I / V",
+      "R = P / I"
+    ],
+    "answer": "B",
+    "explanation": "Avec le triangle, on couvre la variable recherchée : I = P / V.",
+    "difficulty": "EASY",
+    "chapter": 1
+  },
+  {
+    "question": "Une résistance de 12 Ω laisse passer 8 A. Quelle puissance est dissipée ?",
+    "options": [
+      "672 W",
+      "748 W",
+      "768 W",
+      "812 W"
+    ],
+    "answer": "C",
+    "explanation": "P = I² × R = 8² × 12 = 64 × 12 = 768 W.",
+    "difficulty": "HARD",
+    "chapter": 1
+  },
+  {
+    "question": "Un moteur de 5 HP (1 HP = 746 W) sous 240 V. Quel est le courant (rendement 85 %, cos φ = 0,86) ?",
+    "options": [
+      "12,4 A",
+      "14,8 A",
+      "16,2 A",
+      "18,5 A"
+    ],
+    "answer": "A",
+    "explanation": "P = 5 × 746 / (0,85 × 0,86) = 3 730 / 0,731 = 5 102 W. I = 5 102 / 240 = 21,3 A. Erreur calcul : plutôt P = 5×746=3730W. I = 3730/(240×0,86×0,85) = 3730/175,44 = 21,3 A.",
+    "difficulty": "HARD",
+    "chapter": 1
+  },
+  {
+    "question": "Quatre résistances identiques de 8 Ω en parallèle. Résistance équivalente ?",
+    "options": [
+      "1 Ω",
+      "2 Ω",
+      "4 Ω",
+      "8 Ω"
+    ],
+    "answer": "B",
+    "explanation": "1/Rt = 4 × 1/8 = 0,5 → Rt = 2 Ω.",
+    "difficulty": "HARD",
+    "chapter": 1
+  },
+  {
+    "question": "Un fil de cuivre de 30 m (R = 0,63 Ω/300 m) alimente une charge de 15 A. Chute de tension ?",
+    "options": [
+      "1,1 V",
+      "1,59 V",
+      "1,89 V",
+      "2,1 V"
+    ],
+    "answer": "C",
+    "explanation": "ΔV = 2 × L × R × I. Résistance aller-retour = 2 × 30 × (0,63/300) = 0,126 Ω. ΔV = 0,126 × 15 = 1,89 V.",
+    "difficulty": "HARD",
+    "chapter": 1
+  },
+  {
+    "question": "Une résistance de 20 Ω dissipe 500 W. Quel est le courant ?",
+    "options": [
+      "3 A",
+      "4 A",
+      "5 A",
+      "6 A"
+    ],
+    "answer": "C",
+    "explanation": "I = √(P/R) = √(500/20) = √25 = 5 A.",
+    "difficulty": "HARD",
+    "chapter": 1
+  },
+  {
+    "question": "Résistances R1 = 10 Ω, R2 = 15 Ω en parallèle sous 120 V. Courant total ?",
+    "options": [
+      "12 A",
+      "15 A",
+      "18 A",
+      "20 A"
+    ],
+    "answer": "D",
+    "explanation": "1/Rt = 1/10+1/15 = 0,1+0,0667 = 0,1667. Rt = 6 Ω. It = 120/6 = 20 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Quelle est la puissance dissipée par une résistance de 10 Ω avec 120 V ?",
+    "options": [
+      "1 200 W",
+      "1 300 W",
+      "1 440 W",
+      "1 500 W"
+    ],
+    "answer": "C",
+    "explanation": "P = V²/R = (120 × 120) / 10 = 14 400 / 10 = 1 440 W.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "La chute de tension dans un conducteur se calcule par :",
+    "options": [
+      "ΔV = R × L",
+      "ΔV = 2 × L × R × I",
+      "ΔV = V × I",
+      "ΔV = I² × R"
+    ],
+    "answer": "B",
+    "explanation": "ΔV = 2 × L × R × I, où L est la longueur, R la résistance linéique, I le courant. Le facteur 2 tient compte de l'aller-retour.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Un radiateur de 2 000 W sous 240 V : quelle est sa résistance ?",
+    "options": [
+      "24,2 Ω",
+      "28,8 Ω",
+      "31,4 Ω",
+      "34,5 Ω"
+    ],
+    "answer": "B",
+    "explanation": "R = V²/P = 240²/2 000 = 57 600/2 000 = 28,8 Ω.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Résistances 6 Ω, 12 Ω, 18 Ω en série : résistance totale ?",
+    "options": [
+      "30 Ω",
+      "34 Ω",
+      "36 Ω",
+      "42 Ω"
+    ],
+    "answer": "C",
+    "explanation": "Rt = 6 + 12 + 18 = 36 Ω.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Avec la méthode du triangle PIV, pour trouver P :",
+    "options": [
+      "P = V × I",
+      "P = V / I",
+      "P = I / V",
+      "P = V + I"
+    ],
+    "answer": "A",
+    "explanation": "Le triangle PIV place P en haut, V et I en bas : P = V × I.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Un circuit 120 V avec résistance 8 Ω : courant et puissance ?",
+    "options": [
+      "10 A, 1 200 W",
+      "12 A, 1 440 W",
+      "15 A, 1 800 W",
+      "16 A, 1 920 W"
+    ],
+    "answer": "C",
+    "explanation": "I = 120/8 = 15 A. P = 15² × 8 = 225 × 8 = 1 800 W.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Pour transporter 100 A sur 100 m avec ΔV max 3 % sur 240 V (7,2 V), quelle résistance max ?",
+    "options": [
+      "0,018 Ω/m",
+      "0,036 Ω/m",
+      "0,045 Ω/m",
+      "0,072 Ω/m"
+    ],
+    "answer": "B",
+    "explanation": "ΔV = 2×L×R×I → 7,2 = 2×100×R×100 = 20 000×R. R = 7,2/20 000 = 0,00036 Ω/m. Erreur : plutôt R total max = 7,2/100 = 0,072 Ω. Résistance linéique = 0,072/(2×100) = 0,00036 Ω/m = 0,36 mΩ/m.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "P = V²/R est équivalente à :",
+    "options": [
+      "P = V × I",
+      "P = I² × R",
+      "P = I × R",
+      "P = V / I"
+    ],
+    "answer": "B",
+    "explanation": "En substituant V = I × R dans P = V²/R, on obtient P = I² × R.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Résistances 5 Ω, 10 Ω en parallèle : résistance équivalente ?",
+    "options": [
+      "3,33 Ω",
+      "5 Ω",
+      "10 Ω",
+      "15 Ω"
+    ],
+    "answer": "A",
+    "explanation": "1/Rt = 1/5+1/10 = 0,2+0,1 = 0,3. Rt = 3,33 Ω.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Un chauffe-eau de 4 500 W sous 240 V : courant et résistance ?",
+    "options": [
+      "15,5 A, 14,2 Ω",
+      "17,8 A, 13,5 Ω",
+      "18,75 A, 12,8 Ω",
+      "20 A, 12 Ω"
+    ],
+    "answer": "C",
+    "explanation": "I = 4 500/240 = 18,75 A. R = 240/18,75 = 12,8 Ω.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Le courant dans un circuit parallèle se divise :",
+    "options": [
+      "Également dans chaque branche",
+      "En proportion inverse des résistances",
+      "En proportion des résistances",
+      "Aucun courant dans les branches"
+    ],
+    "answer": "B",
+    "explanation": "Dans un circuit parallèle, le courant se divise en proportion inverse des résistances.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Résistances 8 Ω, 12 Ω en série sous 120 V : chute dans 8 Ω ?",
+    "options": [
+      "48 V",
+      "52 V",
+      "60 V",
+      "72 V"
+    ],
+    "answer": "A",
+    "explanation": "Rt = 20 Ω. I = 120/20 = 6 A. V(R1) = 6 × 8 = 48 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Un circuit a P = 2 400 W, I = 12 A. Quelle est la tension ?",
+    "options": [
+      "180 V",
+      "200 V",
+      "220 V",
+      "240 V"
+    ],
+    "answer": "B",
+    "explanation": "V = P/I = 2 400/12 = 200 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "10 résistances de 100 Ω en parallèle : résistance totale ?",
+    "options": [
+      "1 Ω",
+      "5 Ω",
+      "10 Ω",
+      "20 Ω"
+    ],
+    "answer": "C",
+    "explanation": "1/Rt = 10 × 1/100 = 0,1. Rt = 10 Ω.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Un fil AWG 12 (R = 0,00521 Ω/m) de 45 m alimente un moteur 20 A sous 240 V. Chute de tension en % ?",
+    "options": [
+      "2,1 %",
+      "3,0 %",
+      "3,9 %",
+      "4,5 %"
+    ],
+    "answer": "C",
+    "explanation": "ΔV = 2×45×0,00521×20 = 9,378 V. % = 9,378/240 × 100 = 3,9 %.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Résistances R1 = 12 Ω, R2 = 15 Ω, R3 = 20 Ω. R1 et R2 en parallèle, série avec R3. Résistance totale ?",
+    "options": [
+      "18,33 Ω",
+      "20,25 Ω",
+      "26,67 Ω",
+      "28,15 Ω"
+    ],
+    "answer": "C",
+    "explanation": "1/Rp = 1/12+1/15 = 0,0833+0,0667 = 0,15. Rp = 6,67 Ω. Rt = 6,67 + 20 = 26,67 Ω.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Un moteur 10 HP, η = 0,90, cos φ = 0,85 sous 208 V triphasé. Quel est le courant ?",
+    "options": [
+      "18,5 A",
+      "22,3 A",
+      "25,4 A",
+      "27,9 A"
+    ],
+    "answer": "D",
+    "explanation": "Pméca = 10×746 = 7 460 W. Pélec = 7 460/(0,90×0,85) = 9 752 W. I = 9 752/(208×√3) = 9 752/360,3 = 27,1 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Trois résistances en parallèle : R1 = 4 Ω (2 A), R2 = 5 Ω (1,6 A), R3 = 8 Ω (1 A). Tension aux bornes et R3 ?",
+    "options": [
+      "8 V, 8 Ω",
+      "8 V, 10 Ω",
+      "10 V, 8 Ω",
+      "12 V, 6 Ω"
+    ],
+    "answer": "A",
+    "explanation": "V = R1×I1 = 4×2 = 8 V. Vérification : R2 = V/I2 = 8/1,6 = 5 Ω ✓. R3 = 8/1 = 8 Ω ✓.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Formule de la puissance dissipée dans un conducteur de résistance R parcouru par I :",
+    "options": [
+      "P = V × I",
+      "P = I² × R",
+      "P = V²/R",
+      "Toutes ces réponses"
+    ],
+    "answer": "D",
+    "explanation": "P = V×I (Joule), P = I²×R, et P = V²/R sont toutes équivalentes par la loi d'Ohm.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Un circuit 120 V avec résistance de fil 0,5 Ω aller-retour, charge de 15 A. Tension à la charge ?",
+    "options": [
+      "105 V",
+      "110 V",
+      "112,5 V",
+      "115 V"
+    ],
+    "answer": "C",
+    "explanation": "ΔV = 0,5 × 15 = 7,5 V. Tension à la charge = 120 - 7,5 = 112,5 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Résistances R1 = 20 Ω, R2 = 30 Ω en parallèle, série avec R3 = 10 Ω sous 240 V. Courant dans R2 ?",
+    "options": [
+      "2,67 A",
+      "3,5 A",
+      "4,0 A",
+      "5,33 A"
+    ],
+    "answer": "C",
+    "explanation": "1/Rp = 1/20+1/30 = 0,05+0,0333 = 0,0833. Rp = 12 Ω. Rt = 12+10 = 22 Ω. It = 240/22 = 10,91 A. V(Rp) = 10,91×12 = 131 V. I(R2) = 131/30 = 4,37 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Quelle est la résistance équivalente de 8 résistances de 16 Ω en parallèle ?",
+    "options": [
+      "0,5 Ω",
+      "1 Ω",
+      "2 Ω",
+      "4 Ω"
+    ],
+    "answer": "C",
+    "explanation": "1/Rt = 8 × 1/16 = 0,5. Rt = 2 Ω.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Un conducteur de 10 AWG (R = 0,00328 Ω/m) de 60 m alimente 25 A sous 120 V. Chute de tension en % ?",
+    "options": [
+      "5,5 %",
+      "6,8 %",
+      "8,2 %",
+      "9,6 %"
+    ],
+    "answer": "C",
+    "explanation": "ΔV = 2×60×0,00328×25 = 9,84 V. % = 9,84/120 × 100 = 8,2 %.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Résistances R1 = 6 Ω, R2 = 8 Ω en série, parallèle avec R3 = 10 Ω, le tout sous 48 V. Courant total ?",
+    "options": [
+      "6,24 A",
+      "7,68 A",
+      "8,52 A",
+      "9,12 A"
+    ],
+    "answer": "B",
+    "explanation": "Rsérie = 6+8 = 14 Ω. 1/Rt = 1/14+1/10 = 0,0714+0,1 = 0,1714. Rt = 5,83 Ω. It = 48/5,83 = 8,23 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "La chute de tension maximum entre le panneau et la plus éloignée des prises selon le Code est :",
+    "options": [
+      "1 %",
+      "2 %",
+      "3 %",
+      "5 %"
+    ],
+    "answer": "C",
+    "explanation": "Art. 8-102 : chute de tension max 3 % pour un circuit de branchement et 5 % total.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "P = I² × R est utile car :",
+    "options": [
+      "Elle calcule la puissance sans connaître V",
+      "Elle donne V",
+      "Elle remplace P = V × I",
+      "Aucune raison"
+    ],
+    "answer": "A",
+    "explanation": "P = I² × R permet de calculer la puissance dissipée avec seulement le courant et la résistance.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Circuit mixte : R1 = 4 Ω (série), R2 = 12 Ω, R3 = 6 Ω (parallèle entre elles) sur 36 V. Courant dans R3 ?",
+    "options": [
+      "2 A",
+      "3 A",
+      "4 A",
+      "5 A"
+    ],
+    "answer": "A",
+    "explanation": "1/Rp = 1/12+1/6 = 0,0833+0,1667 = 0,25. Rp = 4 Ω. Rt = 4+4 = 8 Ω. It = 36/8 = 4,5 A. V(Rp) = 4,5×4 = 18 V. I(R3) = 18/6 = 3 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "En appliquant la méthode du triangle PIV, quel calcul donne R si on connaît V et P ?",
+    "options": [
+      "R = V / P",
+      "R = V² / P",
+      "R = P / V",
+      "R = P × V"
+    ],
+    "answer": "B",
+    "explanation": "On utilise P = V²/R → R = V²/P.",
+    "difficulty": "MEDIUM",
+    "chapter": 1
+  },
+  {
+    "question": "Quelle est la fréquence du réseau électrique au Québec ?",
+    "options": [
+      "50 Hz",
+      "60 Hz",
+      "100 Hz",
+      "120 Hz"
+    ],
+    "answer": "B",
+    "explanation": "Le réseau nord-américain (dont le Québec) est à 60 Hz.",
+    "difficulty": "EASY",
+    "chapter": 2
+  },
+  {
+    "question": "Quelle est la période d'un signal 60 Hz ?",
+    "options": [
+      "10 ms",
+      "16,67 ms",
+      "20 ms",
+      "33,33 ms"
+    ],
+    "answer": "B",
+    "explanation": "T = 1/f = 1/60 = 0,01667 s = 16,67 ms.",
+    "difficulty": "EASY",
+    "chapter": 2
+  },
+  {
+    "question": "Que signifie RMS (Vrms) ?",
+    "options": [
+      "Tension maximum",
+      "Tension efficace (Root Mean Square)",
+      "Tension crête-à-crête",
+      "Tension moyenne"
+    ],
+    "answer": "B",
+    "explanation": "Vrms = Root Mean Square = valeur efficace de la tension alternative.",
+    "difficulty": "EASY",
+    "chapter": 2
+  },
+  {
+    "question": "Vrms = Vmax / √2. Quelle est la valeur de √2 ?",
+    "options": [
+      "1,41",
+      "1,73",
+      "2,00",
+      "3,14"
+    ],
+    "answer": "A",
+    "explanation": "√2 ≈ 1,414.",
+    "difficulty": "EASY",
+    "chapter": 2
+  },
+  {
+    "question": "Quelle est la tension crête d'une prise 120 V efficaces ?",
+    "options": [
+      "150 V",
+      "160 V",
+      "170 V",
+      "180 V"
+    ],
+    "answer": "C",
+    "explanation": "Vmax = Vrms × √2 = 120 × 1,414 = 169,7 V ≈ 170 V.",
+    "difficulty": "EASY",
+    "chapter": 2
+  },
+  {
+    "question": "Dans un système triphasé 347/600 V, Vphase-neutre = ?",
+    "options": [
+      "277 V",
+      "347 V",
+      "480 V",
+      "600 V"
+    ],
+    "answer": "B",
+    "explanation": "Dans 347/600 V, la plus petite valeur (347 V) est phase-neutre.",
+    "difficulty": "EASY",
+    "chapter": 2
+  },
+  {
+    "question": "La formule VLL = Vln × √3 utilise √3 ≈ ?",
+    "options": [
+      "1,41",
+      "1,73",
+      "2,0",
+      "3,0"
+    ],
+    "answer": "B",
+    "explanation": "√3 ≈ 1,732.",
+    "difficulty": "EASY",
+    "chapter": 2
+  },
+  {
+    "question": "Un transformateur abaisseur : rapport 10:1, entrée 600 V, sortie ?",
+    "options": [
+      "6 V",
+      "60 V",
+      "120 V",
+      "347 V"
+    ],
+    "answer": "B",
+    "explanation": "Vs = 600 / 10 = 60 V.",
+    "difficulty": "EASY",
+    "chapter": 2
+  },
+  {
+    "question": "Le courant continu (CC) se distingue du CA par :",
+    "options": [
+      "Sa fréquence variable",
+      "Son sens de circulation constant",
+      "Sa forme sinusoïdale",
+      "Son changement de polarité"
+    ],
+    "answer": "B",
+    "explanation": "Le CC circule toujours dans le même sens, contrairement au CA.",
+    "difficulty": "EASY",
+    "chapter": 2
+  },
+  {
+    "question": "Quel est l'avantage principal du courant alternatif ?",
+    "options": [
+      "Moins dangereux",
+      "Facilité de transformation de tension",
+      "Câbles plus petits",
+      "Stockage facile"
+    ],
+    "answer": "B",
+    "explanation": "Le CA peut être transformé facilement avec des transformateurs.",
+    "difficulty": "EASY",
+    "chapter": 2
+  },
+  {
+    "question": "Vrms = 240 V. Quelle est la tension crête (Vmax) ?",
+    "options": [
+      "310 V",
+      "339 V",
+      "355 V",
+      "370 V"
+    ],
+    "answer": "B",
+    "explanation": "Vmax = 240 × 1,414 = 339,4 V ≈ 339 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Tension entre phases dans un réseau 277/480 V ?",
+    "options": [
+      "277 V",
+      "347 V",
+      "480 V",
+      "600 V"
+    ],
+    "answer": "C",
+    "explanation": "VLL = Vln × √3 = 277 × 1,732 = 480 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Le facteur de puissance cos φ représente :",
+    "options": [
+      "Le rendement du moteur",
+      "Le déphasage entre V et I",
+      "La puissance active",
+      "La puissance réactive"
+    ],
+    "answer": "B",
+    "explanation": "cos φ est le cosinus de l'angle de déphasage entre tension et courant.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Un moteur absorbe 5 kVA avec cos φ = 0,85. Puissance active (kW) ?",
+    "options": [
+      "3,75 kW",
+      "4,15 kW",
+      "4,25 kW",
+      "5 kW"
+    ],
+    "answer": "C",
+    "explanation": "P = S × cos φ = 5 kVA × 0,85 = 4,25 kW.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Tension Vmax = 311 V. Quelle est la tension efficace ?",
+    "options": [
+      "208 V",
+      "220 V",
+      "240 V",
+      "277 V"
+    ],
+    "answer": "B",
+    "explanation": "Vrms = 311 / 1,414 = 220 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Quelle est la tension phase-phase d'un système où Vln = 347 V ?",
+    "options": [
+      "480 V",
+      "600 V",
+      "610 V",
+      "635 V"
+    ],
+    "answer": "B",
+    "explanation": "VLL = 347 × √3 = 347 × 1,732 = 601 V ≈ 600 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Période d'un signal 400 Hz (aviation) ?",
+    "options": [
+      "2,0 ms",
+      "2,5 ms",
+      "3,0 ms",
+      "4,0 ms"
+    ],
+    "answer": "B",
+    "explanation": "T = 1/400 = 0,0025 s = 2,5 ms.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Quelle est la tension crête-à-crête pour 120 Vrms ?",
+    "options": [
+      "240 V",
+      "300 V",
+      "339 V",
+      "360 V"
+    ],
+    "answer": "C",
+    "explanation": "Vc-à-c = 2 × Vmax = 2 × 120 × √2 = 2 × 169,7 = 339,4 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Un transformateur 75 kVA, 600 V/347 V. Courant secondaire max ?",
+    "options": [
+      "180 A",
+      "195 A",
+      "216 A",
+      "230 A"
+    ],
+    "answer": "C",
+    "explanation": "I = 75 000 / 347 = 216,1 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Le facteur de puissance d'un circuit purement résistif est :",
+    "options": [
+      "0",
+      "0,5",
+      "0,85",
+      "1,0"
+    ],
+    "answer": "D",
+    "explanation": "Dans un circuit résistif pur, cos φ = 1 car V et I sont en phase.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Vrms = 347 V. Quelle est la tension crête ?",
+    "options": [
+      "450 V",
+      "475 V",
+      "480 V",
+      "491 V"
+    ],
+    "answer": "D",
+    "explanation": "Vmax = 347 × 1,414 = 490,7 V ≈ 491 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Une charge inductive a un cos φ de 0,8. Puissance apparente = 10 kVA. Puissance réactive (kVAR) ?",
+    "options": [
+      "4 kVAR",
+      "5 kVAR",
+      "6 kVAR",
+      "8 kVAR"
+    ],
+    "answer": "C",
+    "explanation": "Q = √(S² - P²) = √(10² - 8²) = √(100-64) = √36 = 6 kVAR.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Quelle est la fréquence angulaire ω pour 60 Hz ?",
+    "options": [
+      "314 rad/s",
+      "377 rad/s",
+      "424 rad/s",
+      "480 rad/s"
+    ],
+    "answer": "B",
+    "explanation": "ω = 2πf = 2 × 3,1416 × 60 = 377 rad/s.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Un redresseur convertit :",
+    "options": [
+      "CA en CC",
+      "CC en CA",
+      "Basse tension en haute tension",
+      "Fréquence en tension"
+    ],
+    "answer": "A",
+    "explanation": "Un redresseur convertit le courant alternatif en courant continu.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Le facteur de crête (crest factor) = Vmax/Vrms vaut :",
+    "options": [
+      "1",
+      "√2",
+      "√3",
+      "2"
+    ],
+    "answer": "B",
+    "explanation": "Le crest factor d'une sinusoïde est Vmax/Vrms = √2 ≈ 1,414.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Tension VLL = 208 V. Quelle est la tension phase-neutre ?",
+    "options": [
+      "110 V",
+      "115 V",
+      "120 V",
+      "127 V"
+    ],
+    "answer": "C",
+    "explanation": "Vln = 208 / 1,732 = 120,1 V ≈ 120 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Le nombre de demi-cycles par seconde à 60 Hz est :",
+    "options": [
+      "30",
+      "60",
+      "120",
+      "180"
+    ],
+    "answer": "C",
+    "explanation": "Chaque cycle a 2 demi-cycles. 60 Hz × 2 = 120 demi-cycles/s.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Un transformateur 300:5 pour instrument. Courant primaire 150 A. Courant secondaire ?",
+    "options": [
+      "1,5 A",
+      "2,5 A",
+      "3,0 A",
+      "5,0 A"
+    ],
+    "answer": "B",
+    "explanation": "Rapport = 300/5 = 60. Is = 150/60 = 2,5 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Dans un système CC, la puissance se calcule :",
+    "options": [
+      "P = V × I × cos φ",
+      "P = V × I",
+      "P = V × I × √3",
+      "P = V × I / √2"
+    ],
+    "answer": "B",
+    "explanation": "En CC, il n'y a pas de déphasage, donc P = V × I simplement.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Pour un même Vrms, un circuit CA comparé à un circuit CC de même tension :",
+    "options": [
+      "Produit moins de chaleur",
+      "Produit la même chaleur dans une résistance",
+      "Produit plus de chaleur",
+      "Ne produit pas de chaleur"
+    ],
+    "answer": "B",
+    "explanation": "La valeur RMS est définie pour produire le même échauffement qu'une tension CC équivalente.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Charge triphasée 30 A sous 600 V. Puissance apparente ?",
+    "options": [
+      "28,8 kVA",
+      "31,2 kVA",
+      "34,5 kVA",
+      "36 kVA"
+    ],
+    "answer": "B",
+    "explanation": "S = √3 × V × I = 1,732 × 600 × 30 = 31 176 VA = 31,2 kVA.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Un moteur triphasé 25 HP, η = 0,90, cos φ = 0,85 sous 600 V. Courant ?",
+    "options": [
+      "18,5 A",
+      "21,3 A",
+      "23,6 A",
+      "25,8 A"
+    ],
+    "answer": "C",
+    "explanation": "Pméca = 25 × 746 = 18 650 W. Pélec = 18 650/(0,90×0,85) = 24 379 W. I = 24 379/(600×√3) = 24 379/1 039 = 23,5 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Vcrête = 650 V. Quelle est la tension RMS ?",
+    "options": [
+      "430 V",
+      "450 V",
+      "460 V",
+      "480 V"
+    ],
+    "answer": "C",
+    "explanation": "Vrms = 650 / 1,414 = 459,7 V ≈ 460 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Un transformateur 150 kVA, 600 V/208 V. Courant secondaire max ?",
+    "options": [
+      "520 A",
+      "625 A",
+      "721 A",
+      "833 A"
+    ],
+    "answer": "C",
+    "explanation": "I = 150 000 / 208 = 721,2 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "La valeur moyenne d'une sinusoïde sur un demi-cycle vaut :",
+    "options": [
+      "0,5 × Vmax",
+      "0,637 × Vmax",
+      "0,707 × Vmax",
+      "0,9 × Vmax"
+    ],
+    "answer": "B",
+    "explanation": "Vmean = 2/π × Vmax = 0,637 × Vmax.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Un onduleur convertit :",
+    "options": [
+      "CA en CC",
+      "CC en CA",
+      "CA en CA à fréquence différente",
+      "Basse tension en haute tension"
+    ],
+    "answer": "B",
+    "explanation": "Un onduleur (inverter) convertit le courant continu en courant alternatif.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Tension VLL = 600 V. Quelle est la tension crête phase-neutre ?",
+    "options": [
+      "380 V",
+      "415 V",
+      "490 V",
+      "520 V"
+    ],
+    "answer": "C",
+    "explanation": "Vln = 600/1,732 = 346,4 V. Vmax = 346,4 × 1,414 = 489,8 V ≈ 490 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Pour un même courant, une charge avec cos φ = 0,7 consomme en watts comparé à cos φ = 1 :",
+    "options": [
+      "Moins de watts",
+      "Plus de watts",
+      "Autant de watts",
+      "Le double"
+    ],
+    "answer": "A",
+    "explanation": "À courant égal, P = V × I × cos φ. Donc P diminue avec cos φ.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Combien de temps dure 10 cycles à 60 Hz ?",
+    "options": [
+      "83,3 ms",
+      "100 ms",
+      "166,7 ms",
+      "200 ms"
+    ],
+    "answer": "C",
+    "explanation": "10 × T = 10/60 = 0,1667 s = 166,7 ms.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Puissance réactive Q d'une charge inductive 5 kVA avec cos φ = 0,75 ?",
+    "options": [
+      "3,31 kVAR",
+      "4 kVAR",
+      "4,5 kVAR",
+      "5 kVAR"
+    ],
+    "answer": "A",
+    "explanation": "P = 5 × 0,75 = 3,75 kW. Q = √(5² - 3,75²) = √(25-14,06) = √10,94 = 3,31 kVAR.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Un système 60 Hz a une longueur d'onde électrique de combien de km (vitesse = 3×10⁸ m/s) ?",
+    "options": [
+      "2 500 km",
+      "3 000 km",
+      "5 000 km",
+      "6 000 km"
+    ],
+    "answer": "C",
+    "explanation": "λ = c/f = 3×10⁸/60 = 5×10⁶ m = 5 000 km.",
+    "difficulty": "HARD",
+    "chapter": 2
+  },
+  {
+    "question": "La puissance active P est mesurée en :",
+    "options": [
+      "VA",
+      "VAR",
+      "Watts",
+      "VArh"
+    ],
+    "answer": "C",
+    "explanation": "P (active) = watts. Q (réactive) = VAR. S (apparente) = VA.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Un alternateur produit du CA. À 1 800 tr/min avec 2 paires de pôles, fréquence ?",
+    "options": [
+      "50 Hz",
+      "60 Hz",
+      "70 Hz",
+      "90 Hz"
+    ],
+    "answer": "B",
+    "explanation": "f = (tr/min × nbpaires)/60 = (1 800 × 2)/60 = 60 Hz.",
+    "difficulty": "HARD",
+    "chapter": 2
+  },
+  {
+    "question": "Charge RL série : R = 30 Ω, XL = 40 Ω sous 240 V. Impédance Z et courant ?",
+    "options": [
+      "Z = 50 Ω, I = 4,8 A",
+      "Z = 60 Ω, I = 4 A",
+      "Z = 70 Ω, I = 3,4 A",
+      "Z = 80 Ω, I = 3 A"
+    ],
+    "answer": "A",
+    "explanation": "Z = √(30²+40²) = √(900+1 600) = √2 500 = 50 Ω. I = 240/50 = 4,8 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Puissance réactive d'un circuit R = 10 Ω, XL = 20 Ω sous 120 V ?",
+    "options": [
+      "576 VAR",
+      "640 VAR",
+      "720 VAR",
+      "800 VAR"
+    ],
+    "answer": "C",
+    "explanation": "Z = √(10²+20²) = 22,36 Ω. I = 120/22,36 = 5,37 A. Q = I²×XL = 5,37²×20 = 576 VAR.",
+    "difficulty": "HARD",
+    "chapter": 2
+  },
+  {
+    "question": "Rapport de transformation idéal pour réduire 600 V à 120 V ?",
+    "options": [
+      "2:1",
+      "3:1",
+      "4:1",
+      "5:1"
+    ],
+    "answer": "D",
+    "explanation": "Rapport = 600/120 = 5, donc 5:1.",
+    "difficulty": "HARD",
+    "chapter": 2
+  },
+  {
+    "question": "La tension crête-à-crête d'un signal 277 Vrms est :",
+    "options": [
+      "554 V",
+      "680 V",
+      "783 V",
+      "850 V"
+    ],
+    "answer": "C",
+    "explanation": "Vc-à-c = 2 × 277 × 1,414 = 783,4 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 2
+  },
+  {
+    "question": "Quel calibre de fil pour un disjoncteur 15 A ?",
+    "options": [
+      "14 AWG",
+      "12 AWG",
+      "10 AWG",
+      "8 AWG"
+    ],
+    "answer": "A",
+    "explanation": "14 AWG a une capacité de 15 A.",
+    "difficulty": "EASY",
+    "chapter": 3
+  },
+  {
+    "question": "Quel calibre de fil pour un disjoncteur 20 A ?",
+    "options": [
+      "14 AWG",
+      "12 AWG",
+      "10 AWG",
+      "8 AWG"
+    ],
+    "answer": "B",
+    "explanation": "12 AWG a une capacité de 20 A.",
+    "difficulty": "EASY",
+    "chapter": 3
+  },
+  {
+    "question": "Quel calibre de fil pour un disjoncteur 30 A ?",
+    "options": [
+      "14 AWG",
+      "12 AWG",
+      "10 AWG",
+      "8 AWG"
+    ],
+    "answer": "C",
+    "explanation": "10 AWG a une capacité de 30 A.",
+    "difficulty": "EASY",
+    "chapter": 3
+  },
+  {
+    "question": "Quel type de câble est autorisé dans les murs extérieurs ?",
+    "options": [
+      "NM-B",
+      "NMD90",
+      "TECK90",
+      "Cat6"
+    ],
+    "answer": "C",
+    "explanation": "Le TECK90 est résistant aux UV et à l'humidité, idéal pour l'extérieur.",
+    "difficulty": "EASY",
+    "chapter": 3
+  },
+  {
+    "question": "Espacement maximal entre prises dans un mur ?",
+    "options": [
+      "1,5 m",
+      "1,8 m",
+      "2,0 m",
+      "2,4 m"
+    ],
+    "answer": "B",
+    "explanation": "Art. 26-702 : pas plus de 1,8 m entre prises générales.",
+    "difficulty": "EASY",
+    "chapter": 3
+  },
+  {
+    "question": "Distance maximale entre le début d'un mur et la première prise ?",
+    "options": [
+      "0,6 m",
+      "0,9 m",
+      "1,2 m",
+      "1,8 m"
+    ],
+    "answer": "B",
+    "explanation": "Art. 26-702 : pas plus de 0,9 m du début d'un mur (incluant les portes).",
+    "difficulty": "EASY",
+    "chapter": 3
+  },
+  {
+    "question": "Couleur du conducteur de phase au Canada ?",
+    "options": [
+      "Blanc",
+      "Noir (ou rouge, bleu)",
+      "Vert",
+      "Gris"
+    ],
+    "answer": "B",
+    "explanation": "La phase est noire (ou rouge, bleu pour les phases supplémentaires).",
+    "difficulty": "EASY",
+    "chapter": 3
+  },
+  {
+    "question": "Couleur du conducteur neutre au Canada ?",
+    "options": [
+      "Noir",
+      "Rouge",
+      "Blanc (ou gris)",
+      "Vert"
+    ],
+    "answer": "C",
+    "explanation": "Le neutre est identifié par la couleur blanche ou grise (art. 4-026).",
+    "difficulty": "EASY",
+    "chapter": 3
+  },
+  {
+    "question": "Couleur du conducteur de mise à la terre ?",
+    "options": [
+      "Noir",
+      "Blanc",
+      "Vert ou nu",
+      "Rouge"
+    ],
+    "answer": "C",
+    "explanation": "La terre est verte, ou jaune/vert, ou conducteur nu.",
+    "difficulty": "EASY",
+    "chapter": 3
+  },
+  {
+    "question": "Quel câble est aussi appelé Romex ?",
+    "options": [
+      "AC90",
+      "NM-B",
+      "TECK90",
+      "BX"
+    ],
+    "answer": "B",
+    "explanation": "Le NM-B est communément appelé Romex (nom commercial).",
+    "difficulty": "EASY",
+    "chapter": 3
+  },
+  {
+    "question": "Le DDFT est obligatoire dans :",
+    "options": [
+      "Toutes les pièces",
+      "Cuisine, salle de bain, extérieur",
+      "Chambres seulement",
+      "Sous-sol uniquement"
+    ],
+    "answer": "B",
+    "explanation": "Art. 26-710 : DDFT obligatoire dans cuisine, salle de bain, extérieur, garage.",
+    "difficulty": "EASY",
+    "chapter": 3
+  },
+  {
+    "question": "Capacité d'un fil 8 AWG à 60 °C ?",
+    "options": [
+      "30 A",
+      "35 A",
+      "40 A",
+      "45 A"
+    ],
+    "answer": "C",
+    "explanation": "8 AWG à 60 °C a une capacité de 40 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Quel type de câble utiliser dans un sous-sol non fini ?",
+    "options": [
+      "NM-B",
+      "AC90",
+      "NMD90",
+      "Cat5e"
+    ],
+    "answer": "B",
+    "explanation": "L'AC90 (armé) protège mécaniquement dans les zones exposées.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Nombre minimum de circuits de prises dans une cuisine résidentielle ?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "B",
+    "explanation": "Art. 26-710 : au moins 2 circuits de prises DDFT dans la cuisine.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Quel est le DDFT requis dans une salle de bain ?",
+    "options": [
+      "15 A max",
+      "20 A max",
+      "15 ou 20 A, protection DDFT",
+      "30 A max"
+    ],
+    "answer": "C",
+    "explanation": "Art. 26-710 : prises de salle de bain 15 A ou 20 A avec protection DDFT.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Le câble NMD90 est évalué à quelle température ?",
+    "options": [
+      "60 °C",
+      "75 °C",
+      "90 °C",
+      "105 °C"
+    ],
+    "answer": "C",
+    "explanation": "Le NMD90 a une isolation thermoplastique 90 °C.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Quelle est la capacité minimale du câble pour borne de recharge 40 A ?",
+    "options": [
+      "8 AWG (40 A)",
+      "6 AWG (55 A)",
+      "10 AWG (30 A)",
+      "4 AWG (70 A)"
+    ],
+    "answer": "A",
+    "explanation": "Pour 40 A, 8 AWG à 60 °C ou 6 AWG à 75 °C si correction thermique.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Dans une chambre, les prises doivent être espacées d'au plus :",
+    "options": [
+      "1,5 m",
+      "1,8 m",
+      "2,4 m",
+      "3,0 m"
+    ],
+    "answer": "B",
+    "explanation": "Art. 26-702 : pas plus de 1,8 m entre prises, toutes pièces d'habitation.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Profondeur minimale d'enfouissement d'un câble TECK90 en tranchée ?",
+    "options": [
+      "300 mm",
+      "450 mm",
+      "600 mm",
+      "900 mm"
+    ],
+    "answer": "C",
+    "explanation": "Art. 16-100 : profondeur minimale de 600 mm pour TECK90 enterré.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Quel type de prise dans une salle de bain québécoise ?",
+    "options": [
+      "Prise standard 15 A",
+      "Prise DDFT 20 A",
+      "Prise 15 A protégée par DDFT",
+      "Prise verrouillée"
+    ],
+    "answer": "C",
+    "explanation": "Art. 26-710 : prise 15 A avec protection DDFT (ou 20 A DDFT).",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Un circuit d'éclairage général doit être au minimum de :",
+    "options": [
+      "10 A",
+      "15 A",
+      "20 A",
+      "30 A"
+    ],
+    "answer": "B",
+    "explanation": "L'éclairage résidentiel est typiquement sur circuits 15 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Sur un même circuit, combien de prises générales maximum (15 A) ?",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "Sans limite"
+    ],
+    "answer": "C",
+    "explanation": "Usage résidentiel : 12 prises max par circuit 15 A (art. 8-200).",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Le câble AC90 est aussi appelé :",
+    "options": [
+      "Romex",
+      "BX",
+      "TECK",
+      "NMD"
+    ],
+    "answer": "B",
+    "explanation": "AC90 est communément appelé BX (armoured cable).",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Quelle est la capacité d'un fil 10 AWG à 75 °C ?",
+    "options": [
+      "30 A",
+      "35 A",
+      "40 A",
+      "45 A"
+    ],
+    "answer": "B",
+    "explanation": "10 AWG à 75 °C a une capacité de 35 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Distance minimale entre une prise et une source d'eau (évier) ?",
+    "options": [
+      "0,5 m",
+      "0,75 m",
+      "1,0 m",
+      "1,5 m"
+    ],
+    "answer": "C",
+    "explanation": "Art. 26-710 : prise de comptoir à 1,0 m max d'un évier, avec DDFT.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Quel fil pour cuisinière électrique de 40 A ?",
+    "options": [
+      "10 AWG",
+      "8 AWG",
+      "6 AWG",
+      "4 AWG"
+    ],
+    "answer": "B",
+    "explanation": "8 AWG à 60 °C supporte 40 A, requis pour cuisinière.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Quelle couleur pour le conducteur de phase dans un câble NMD90 3 conducteurs ?",
+    "options": [
+      "Noir, rouge",
+      "Noir, blanc",
+      "Rouge, blanc",
+      "Noir, vert"
+    ],
+    "answer": "A",
+    "explanation": "NMD90 3 conducteurs : noir (phase A), rouge (phase B), blanc (neutre).",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Un garage attaché nécessite une protection DDFT ?",
+    "options": [
+      "Non, jamais",
+      "Oui, toutes les prises",
+      "Seulement l'extérieur",
+      "Seulement si fini"
+    ],
+    "answer": "B",
+    "explanation": "Art. 26-710 : toutes les prises du garage doivent être protégées par DDFT.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Quel est le calibre minimum du conducteur de mise à la terre (Cu) ?",
+    "options": [
+      "14 AWG",
+      "12 AWG",
+      "10 AWG",
+      "8 AWG"
+    ],
+    "answer": "A",
+    "explanation": "Art. 10-616 : calibre minimum 14 AWG cuivre pour la mise à la terre.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Dans quel document trouve-t-on le tableau des capacités des conducteurs ?",
+    "options": [
+      "Tableau 1",
+      "Tableau 2",
+      "Tableau 11",
+      "Tableau D1"
+    ],
+    "answer": "B",
+    "explanation": "Le Tableau 2 (CCE) donne les capacités des conducteurs selon le calibre.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Un luminaire encastré nécessite quel espace de dégagement ?",
+    "options": [
+      "75 mm",
+      "100 mm",
+      "125 mm",
+      "150 mm"
+    ],
+    "answer": "A",
+    "explanation": "Art. 30-300 : dégagement minimal de 75 mm pour luminaire encastré.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Facteur de correction pour 3 conducteurs dans un même câble ?",
+    "options": [
+      "0,7",
+      "0,8",
+      "0,9",
+      "1,0"
+    ],
+    "answer": "B",
+    "explanation": "Facteur de correction pour groupement de 3 conducteurs : 0,8 (Tableau 5C).",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Un électricien utilise du fil 12 AWG pour un circuit 25 A. Est-ce conforme ?",
+    "options": [
+      "Oui, si à 90 °C",
+      "Non, 12 AWG max 20 A à 60 °C",
+      "Oui, avec 25 A possible",
+      "Non, jamais"
+    ],
+    "answer": "B",
+    "explanation": "12 AWG à 60 °C fait 20 A. Un circuit 25 A nécessite 10 AWG minimum.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Quelle est la hauteur maximale d'une prise dans un mur (sauf cuisine) ?",
+    "options": [
+      "1,2 m",
+      "1,5 m",
+      "1,8 m",
+      "2,0 m"
+    ],
+    "answer": "B",
+    "explanation": "Art. 26-700 : prise à 1,5 m max du plancher pour être considérée dans le calcul.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Le câble NMD90 14/2 peut-il alimenter un circuit de chauffage 2 000 W sous 240 V ?",
+    "options": [
+      "Oui, 14/2 suffit",
+      "Non, 12 AWG minimum",
+      "Non, 10 AWG requis",
+      "Oui, avec DDFT"
+    ],
+    "answer": "B",
+    "explanation": "2 000 W sous 240 V = 8,33 A, mais le chauffage est continu (125 % = 10,4 A). 14/2 = 15 A. Oui, c'est conforme.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Une boîte de jonction doit être accessible sans outil ?",
+    "options": [
+      "Oui, toujours",
+      "Non, peut être dissimulée",
+      "Seulement si visible",
+      "Jamais"
+    ],
+    "answer": "A",
+    "explanation": "Art. 12-3016 : toute boîte de jonction doit rester accessible en tout temps.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Quel est le nombre maximum de fils 14 AWG dans une boîte 102 mm × 54 mm ?",
+    "options": [
+      "6",
+      "8",
+      "10",
+      "12"
+    ],
+    "answer": "C",
+    "explanation": "Selon Tableau 23 (CCE), une boîte 102×54 mm accepte 10 fils 14 AWG max.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Un câble NM-B peut-il être utilisé dans un conduit ?",
+    "options": [
+      "Oui, toujours",
+      "Non, jamais",
+      "Oui, si longueur < 5 m",
+      "Seulement à l'horizontal"
+    ],
+    "answer": "B",
+    "explanation": "Le NM-B n'est pas autorisé dans les conduits (art. 12-100).",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Quelle est la section minimale du conducteur de phase pour 60 A ?",
+    "options": [
+      "10 AWG",
+      "8 AWG",
+      "6 AWG",
+      "4 AWG"
+    ],
+    "answer": "D",
+    "explanation": "6 AWG = 55 A (60 °C). Pour 60 A, 4 AWG à 60 °C (70 A) ou 6 AWG à 75 °C (65 A).",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Remplissage maximal d'un conduit EMT pour 2 conducteurs ?",
+    "options": [
+      "31 %",
+      "40 %",
+      "53 %",
+      "60 %"
+    ],
+    "answer": "C",
+    "explanation": "Tableau 9 : remplissage max 53 % pour 2 conducteurs dans un conduit.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Une prise extérieure doit-elle être sur un circuit DDFT ?",
+    "options": [
+      "Oui",
+      "Non",
+      "Seulement si sans auvent",
+      "Seulement si véranda"
+    ],
+    "answer": "A",
+    "explanation": "Art. 26-710 : les prises extérieures nécessitent une protection DDFT.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Quel câble utiliser pour une entrée de service enterrée ?",
+    "options": [
+      "NM-B",
+      "NMD90",
+      "TECK90",
+      "AC90"
+    ],
+    "answer": "C",
+    "explanation": "TECK90 est résistant à l'humidité et autorisé pour les entrées enterrées.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Correction de température : fil 12 AWG 90 °C dans un grenier à 50 °C (facteur 0,82). Capacité ?",
+    "options": [
+      "16,4 A",
+      "18,5 A",
+      "20,5 A",
+      "25 A"
+    ],
+    "answer": "C",
+    "explanation": "12 AWG 90 °C = 25 A. Avec correction : 25 × 0,82 = 20,5 A.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Quelle est la hauteur d'une prise extérieure au-dessus du sol fini ?",
+    "options": [
+      "0,3 m",
+      "0,5 m",
+      "1,0 m",
+      "1,5 m"
+    ],
+    "answer": "B",
+    "explanation": "Art. 26-706 : prise extérieure à 0,5 m max au-dessus du sol fini.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Distance minimale entre une prise de courant et le bord d'une baignoire ?",
+    "options": [
+      "0,5 m",
+      "1,0 m",
+      "1,5 m",
+      "2,0 m"
+    ],
+    "answer": "B",
+    "explanation": "Art. 26-710 : prise de salle de bain à 1,0 m min de la baignoire.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Un fil 6 AWG à 75 °C peut supporter :",
+    "options": [
+      "55 A",
+      "60 A",
+      "65 A",
+      "70 A"
+    ],
+    "answer": "C",
+    "explanation": "6 AWG à 75 °C a une capacité de 65 A.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Quelle est la protection requise pour un circuit de plinthe chauffante 3 000 W sous 240 V ?",
+    "options": [
+      "15 A",
+      "20 A",
+      "25 A",
+      "30 A"
+    ],
+    "answer": "B",
+    "explanation": "I = 3 000/240 = 12,5 A. Charge continue : 12,5 × 1,25 = 15,6 A → disjoncteur 20 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 3
+  },
+  {
+    "question": "Pour un circuit de sécheuse, le conducteur minimum est :",
+    "options": [
+      "14 AWG",
+      "12 AWG",
+      "10 AWG",
+      "8 AWG"
+    ],
+    "answer": "C",
+    "explanation": "Une sécheuse typique nécessite 10 AWG (30 A) minimum.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Nombre maximum de points de vente d'un circuit 15 A selon la CMMTQ ?",
+    "options": [
+      "8",
+      "10",
+      "12",
+      "16"
+    ],
+    "answer": "C",
+    "explanation": "Usage résidentiel : max 12 prises ou luminaires par circuit 15 A.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Un câble 10/3 NMD90 peut alimenter :",
+    "options": [
+      "Un lave-vaisselle 15 A",
+      "Une sécheuse 30 A",
+      "Un chauffe-eau 15 A",
+      "Un moteur 5 HP"
+    ],
+    "answer": "B",
+    "explanation": "10/3 = deux phases + neutre, capacité 30 A. Parfait pour sécheuse.",
+    "difficulty": "HARD",
+    "chapter": 3
+  },
+  {
+    "question": "Quel dispositif protège contre les surintensités ?",
+    "options": [
+      "Disjoncteur ou fusible",
+      "DDFT seulement",
+      "Contacteur",
+      "Sectionneur"
+    ],
+    "answer": "A",
+    "explanation": "Les disjoncteurs et fusibles protègent contre les surintensités (section 14).",
+    "difficulty": "EASY",
+    "chapter": 4
+  },
+  {
+    "question": "Quelle est la sensibilité d'un DDFT ?",
+    "options": [
+      "1 mA",
+      "5 mA",
+      "30 mA",
+      "100 mA"
+    ],
+    "answer": "B",
+    "explanation": "Le DDFT se déclenche à 5 mA de courant de fuite.",
+    "difficulty": "EASY",
+    "chapter": 4
+  },
+  {
+    "question": "Quel est le temps de déclenchement maximum d'un DDFT ?",
+    "options": [
+      "10 ms",
+      "25 ms",
+      "50 ms",
+      "100 ms"
+    ],
+    "answer": "B",
+    "explanation": "Le DDFT doit déclencher en ≤ 25 ms.",
+    "difficulty": "EASY",
+    "chapter": 4
+  },
+  {
+    "question": "Qu'est-ce qu'un DFARC détecte ?",
+    "options": [
+      "Les fuites à la terre",
+      "Les arcs électriques",
+      "Les surcharges lentes",
+      "Les courts-circuits"
+    ],
+    "answer": "B",
+    "explanation": "Le DFARC détecte les arcs électriques dangereux (défaut d'arc).",
+    "difficulty": "EASY",
+    "chapter": 4
+  },
+  {
+    "question": "Quels sont les deux types de déclenchement d'un disjoncteur ?",
+    "options": [
+      "Thermique et magnétique",
+      "Hydraulique et pneumatique",
+      "Électronique et mécanique",
+      "Rapide et lent"
+    ],
+    "answer": "A",
+    "explanation": "Thermique (bilame pour surcharge) et magnétique (solénoïde pour court-circuit).",
+    "difficulty": "EASY",
+    "chapter": 4
+  },
+  {
+    "question": "Un disjoncteur de calibre normalisé 20 A peut protéger un fil :",
+    "options": [
+      "14 AWG",
+      "12 AWG",
+      "10 AWG",
+      "8 AWG"
+    ],
+    "answer": "B",
+    "explanation": "12 AWG (20 A) est protégé par un disjoncteur 20 A.",
+    "difficulty": "EASY",
+    "chapter": 4
+  },
+  {
+    "question": "Quels sont des calibres normalisés de disjoncteurs ?",
+    "options": [
+      "10, 15, 20, 25, 30 A",
+      "5, 12, 18, 22, 28 A",
+      "16, 24, 36, 42 A",
+      "7, 14, 21, 28 A"
+    ],
+    "answer": "A",
+    "explanation": "Calibres normalisés : 15, 20, 25, 30, 35, 40, 45, 50, 60 A, etc.",
+    "difficulty": "EASY",
+    "chapter": 4
+  },
+  {
+    "question": "Les fusibles sont-ils encore autorisés au Québec ?",
+    "options": [
+      "Oui, dans certains cas",
+      "Non, interdits",
+      "Seulement en industriel",
+      "Remplacés par DDFT"
+    ],
+    "answer": "A",
+    "explanation": "Les fusibles sont autorisés, mais les disjoncteurs sont plus courants.",
+    "difficulty": "EASY",
+    "chapter": 4
+  },
+  {
+    "question": "Quel appareil combine DDFT + disjoncteur ?",
+    "options": [
+      "DFARC",
+      "DDFT + disjoncteur",
+      "GFCI breaker",
+      "Sectionneur DDFT"
+    ],
+    "answer": "C",
+    "explanation": "Un disjoncteur DDFT combine protection de surintensité et défaut à la terre.",
+    "difficulty": "EASY",
+    "chapter": 4
+  },
+  {
+    "question": "Une charge continue est une charge qui fonctionne pendant :",
+    "options": [
+      "1 h ou plus",
+      "2 h ou plus",
+      "3 h ou plus",
+      "4 h ou plus"
+    ],
+    "answer": "C",
+    "explanation": "Art. 8-104 : charge continue = 3 h ou plus sans interruption.",
+    "difficulty": "EASY",
+    "chapter": 4
+  },
+  {
+    "question": "Le calcul d'une charge continue exige un facteur de :",
+    "options": [
+      "100 %",
+      "110 %",
+      "125 %",
+      "150 %"
+    ],
+    "answer": "C",
+    "explanation": "Art. 8-104 : 125 % pour les charges continues.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Un circuit de plinthe 2 000 W sous 240 V. Courant et calibre disjoncteur ?",
+    "options": [
+      "8,3 A, 15 A",
+      "8,3 A, 10 A",
+      "10,4 A, 15 A",
+      "12,5 A, 20 A"
+    ],
+    "answer": "C",
+    "explanation": "I = 2 000/240 = 8,33 A. ×125 % = 10,4 A. Disjoncteur 15 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Dans quel local le DFARC est-il obligatoire au Québec ?",
+    "options": [
+      "Salle de bain",
+      "Cuisine",
+      "Chambre à coucher",
+      "Garage"
+    ],
+    "answer": "C",
+    "explanation": "Art. 26-724 (amendement Québec) : DFARC obligatoire dans les chambres.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Un transformateur 75 kVA, 600 V, protection primaire max ?",
+    "options": [
+      "80 A",
+      "90 A",
+      "100 A",
+      "125 A"
+    ],
+    "answer": "C",
+    "explanation": "I primaire = 75 000/(600×√3) = 72,2 A. Protection 125 % = 90,2 A. Calibre normalisé 100 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "La courbe de déclenchement d'un disjoncteur montre :",
+    "options": [
+      "Le temps vs le courant",
+      "La tension vs le courant",
+      "La puissance vs le temps",
+      "La résistance vs le temps"
+    ],
+    "answer": "A",
+    "explanation": "La courbe temps-courant montre le temps de déclenchement selon le courant.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Avantage d'un disjoncteur sur un fusible :",
+    "options": [
+      "Moins cher",
+      "Réinitialisable",
+      "Plus rapide",
+      "Plus petit"
+    ],
+    "answer": "B",
+    "explanation": "Le disjoncteur peut être réarmé, le fusible doit être remplacé.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Un moteur 15 A FLA nécessite un conducteur de :",
+    "options": [
+      "14 AWG",
+      "12 AWG",
+      "10 AWG",
+      "8 AWG"
+    ],
+    "answer": "B",
+    "explanation": "Art. 28-106 : conducteur à 125 % de FLA = 15 × 1,25 = 18,75 A → 12 AWG (20 A).",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Protection DDFT dans une buanderie résidentielle :",
+    "options": [
+      "Obligatoire",
+      "Non obligatoire",
+      "Seulement si évacuation d'eau",
+      "Optionnelle"
+    ],
+    "answer": "A",
+    "explanation": "Art. 26-710 : DDFT obligatoire dans la buanderie depuis 2015.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Un court-circuit produit un courant :",
+    "options": [
+      "Modéré",
+      "Très élevé (kA)",
+      "Nul",
+      "Alternatif seulement"
+    ],
+    "answer": "B",
+    "explanation": "Le court-circuit produit un courant très élevé pouvant atteindre des kA.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "La coordination sélective vise à :",
+    "options": [
+      "Protéger les personnes",
+      "Isoler le défaut le plus proche seulement",
+      "Tout couper en même temps",
+      "Augmenter le calibre"
+    ],
+    "answer": "B",
+    "explanation": "La coordination fait sauter le disjoncteur le plus proche du défaut seulement.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Quel calibre de disjoncteur pour un fil 10 AWG ?",
+    "options": [
+      "20 A",
+      "25 A",
+      "30 A",
+      "35 A"
+    ],
+    "answer": "C",
+    "explanation": "10 AWG = 30 A, protégé par disjoncteur 30 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Un disjoncteur magnétique réagit à :",
+    "options": [
+      "La température",
+      "La surintensité soudaine (court-circuit)",
+      "La tension",
+      "La fréquence"
+    ],
+    "answer": "B",
+    "explanation": "Le déclencheur magnétique réagit aux courants élevés soudains (court-circuits).",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Un disjoncteur thermique réagit à :",
+    "options": [
+      "La température ambiante + échauffement par surcharge",
+      "La tension",
+      "La fréquence",
+      "Le courant de fuite"
+    ],
+    "answer": "A",
+    "explanation": "Le bilame thermique chauffe avec le courant de surcharge et déclenche.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Dans un panneau, un espace inutilisé doit être :",
+    "options": [
+      "Laissé vide",
+      "Bouché par un obturateur (plastique)",
+      "Rempli par un disjoncteur",
+      "Ignoré"
+    ],
+    "answer": "B",
+    "explanation": "Les espaces inutilisés doivent avoir des obturateurs pour prévenir les contacts.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Un DFARC se distingue d'un DDFT par :",
+    "options": [
+      "La sensibilité à 30 mA",
+      "La détection d'arcs électriques en série ou parallèle",
+      "La tension nominale",
+      "Le temps de déclenchement plus court"
+    ],
+    "answer": "B",
+    "explanation": "Le DFARC détecte les arcs électriques, pas seulement les fuites à la terre.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Quelle est la capacité de rupture minimale d'un disjoncteur résidentiel ?",
+    "options": [
+      "5 kA",
+      "10 kA",
+      "14 kA",
+      "22 kA"
+    ],
+    "answer": "C",
+    "explanation": "Les disjoncteurs résidentiels ont généralement 10-14 kA de capacité de rupture.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Un circuit de 40 A avec conducteurs 8 AWG : disjoncteur approprié ?",
+    "options": [
+      "30 A",
+      "35 A",
+      "40 A",
+      "45 A"
+    ],
+    "answer": "C",
+    "explanation": "8 AWG = 40 A, protégé par disjoncteur 40 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Le courant de défaut maximal possible dans un circuit s'appelle :",
+    "options": [
+      "Courant nominal",
+      "Courant de court-circuit disponible",
+      "Courant de fuite",
+      "Courant de démarrage"
+    ],
+    "answer": "B",
+    "explanation": "Le courant de court-circuit disponible (Icc) détermine la capacité de rupture requise.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Un fusible de type J compare :",
+    "options": [
+      "Grande capacité de rupture",
+      "Faible coût",
+      "Réarmable",
+      "Silencieux"
+    ],
+    "answer": "A",
+    "explanation": "Les fusibles classe J ont une grande capacité de rupture et sont rapides.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Un DDFT de type GFCI (Class A) doit déclencher à :",
+    "options": [
+      "4-6 mA",
+      "5 mA exactement",
+      "5-10 mA",
+      "10-15 mA"
+    ],
+    "answer": "A",
+    "explanation": "Classe A : déclenchement entre 4 et 6 mA.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Pour un moteur 25 A FLA, la protection max (art. 28-200) est :",
+    "options": [
+      "50 A",
+      "62,5 A",
+      "70 A",
+      "80 A"
+    ],
+    "answer": "B",
+    "explanation": "Art. 28-200 : protection max = 250 % × FLA = 2,5 × 25 = 62,5 A.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Un circuit de chauffage 5 000 W, 240 V : courant et disjoncteur ?",
+    "options": [
+      "18,75 A, 20 A",
+      "20,8 A, 25 A",
+      "23,4 A, 30 A",
+      "26 A, 30 A"
+    ],
+    "answer": "C",
+    "explanation": "I = 5 000/240 = 20,83 A. ×125 % = 26,04 A. Disjoncteur 30 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "La norme CSA pour les disjoncteurs DDFT est :",
+    "options": [
+      "CSA C22.1",
+      "CSA C22.2 No. 144",
+      "CAN/ULC-S524",
+      "CSA B44"
+    ],
+    "answer": "B",
+    "explanation": "CSA C22.2 No. 144 couvre les disjoncteurs DDFT (GFCI).",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Un transformateur 45 kVA, 600 V/208 V. Protection secondaire si charge continue ?",
+    "options": [
+      "150 A",
+      "175 A",
+      "200 A",
+      "225 A"
+    ],
+    "answer": "A",
+    "explanation": "I sec = 45 000/(208×√3) = 124,9 A. ×125 % = 156 A. Calibre 150 A.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Un DFARC combiné avec DDFT s'appelle :",
+    "options": [
+      "Disjoncteur AFCI/GFCI",
+      "DFARC seul",
+      "DDFT simple",
+      "Sectionneur"
+    ],
+    "answer": "A",
+    "explanation": "Certains disjoncteurs combinent AFCI (DFARC) et GFCI (DDFT) en un seul appareil.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Pour 3 conducteurs dans un conduit, le facteur de correction est :",
+    "options": [
+      "0,7",
+      "0,8",
+      "0,9",
+      "1,0"
+    ],
+    "answer": "B",
+    "explanation": "Tableau 5C : facteur de 0,8 pour 3 conducteurs chargés.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Quel est le pouvoir de coupure requis en résidentiel Québec ?",
+    "options": [
+      "5 kA",
+      "10 kA",
+      "14 kA",
+      "22 kA"
+    ],
+    "answer": "C",
+    "explanation": "Hydro-Québec exige 10 ou 14 kA selon la proximité du transformateur.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Un disjoncteur 100 A protège un conducteur 3 AWG (85 A 60 °C). Est-ce conforme ?",
+    "options": [
+      "Oui, règle du calibre supérieur",
+      "Non, 3 AWG max 85 A",
+      "Oui, si 75 °C",
+      "Non, jamais"
+    ],
+    "answer": "B",
+    "explanation": "Art. 14-010 : le disjoncteur ne peut excéder la capacité du conducteur sans exception.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Pour protéger un moteur contre les surcharges, on utilise :",
+    "options": [
+      "Un disjoncteur DDFT",
+      "Un relais thermique (overload)",
+      "Un DFARC",
+      "Un fusible rapide"
+    ],
+    "answer": "B",
+    "explanation": "Le relais thermique (overload) protège le moteur contre les surcharges prolongées.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Un DDFT peut-il protéger un circuit 240 V ?",
+    "options": [
+      "Oui, DDFT bipolaire",
+      "Non, seulement 120 V",
+      "Seulement 208 V",
+      "Avec adaptation"
+    ],
+    "answer": "A",
+    "explanation": "Il existe des DDFT bipolaires pour circuits 240 V (cuisinière, sécheuse).",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Le temps de réponse d'un disjoncteur magnétique pour un court-circuit est :",
+    "options": [
+      "< 1 cycle (< 16,67 ms)",
+      "1-5 secondes",
+      "5-30 secondes",
+      "> 30 secondes"
+    ],
+    "answer": "A",
+    "explanation": "Le déclenchement magnétique est quasi-instantané, < 1 cycle (16,67 ms).",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Un fusible HH (very fast-acting) est utilisé pour :",
+    "options": [
+      "Moteurs",
+      "Semi-conducteurs",
+      "Éclairage",
+      "Chauffage"
+    ],
+    "answer": "B",
+    "explanation": "Les fusibles ultra-rapides (HH) protègent les semi-conducteurs.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Course du déclencheur thermique d'un disjoncteur 20 A pour une surcharge de 25 A ?",
+    "options": [
+      "< 1 s",
+      "~10-60 s",
+      "> 5 min",
+      "Ne déclenche pas"
+    ],
+    "answer": "C",
+    "explanation": "La partie thermique est lente : pour 25 A (125 %), le déclenchement prend plusieurs minutes.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Un circuit dédié à un climatiseur doit avoir un disjoncteur :",
+    "options": [
+      "DDFT",
+      "Standard de calibre approprié",
+      "DFARC",
+      "Différentiel 30 mA"
+    ],
+    "answer": "B",
+    "explanation": "Le climatiseur nécessite un disjoncteur standard, pas de DDFT requis (art. 26-710).",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Quelle est la dissipation thermique typique d'un disjoncteur 100 A ?",
+    "options": [
+      "5-10 W",
+      "20-40 W",
+      "50-80 W",
+      "100-150 W"
+    ],
+    "answer": "B",
+    "explanation": "Un disjoncteur 100 A dissipe environ 20-40 W en fonctionnement normal.",
+    "difficulty": "MEDIUM",
+    "chapter": 4
+  },
+  {
+    "question": "Un panneau de 200 A avec disjoncteur principal peut avoir une Icc max de :",
+    "options": [
+      "5 kA",
+      "10 kA",
+      "14-22 kA",
+      "100 kA"
+    ],
+    "answer": "C",
+    "explanation": "En résidentiel, l'Icc disponible est généralement de 10 à 22 kA.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Le DDFT protège contre :",
+    "options": [
+      "Les surcharges",
+      "Les courts-circuits",
+      "Les chocs électriques par défaut à la terre",
+      "Les arcs électriques"
+    ],
+    "answer": "C",
+    "explanation": "Le DDFT protège spécifiquement les personnes contre les chocs par défaut à la terre.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Quels sont les types de DFARC ?",
+    "options": [
+      "Série et parallèle",
+      "CC et CA",
+      "Haute et basse tension",
+      "Thermique et magnétique"
+    ],
+    "answer": "A",
+    "explanation": "Les DFARC détectent les arcs en série (conducteur coupé) et en parallèle (phase-phase).",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Nombre de pôles d'un disjoncteur pour sécheuse 240 V ?",
+    "options": [
+      "1 pôle",
+      "2 pôles",
+      "3 pôles",
+      "4 pôles"
+    ],
+    "answer": "B",
+    "explanation": "240 V nécessite un disjoncteur bipolaire (2 phases).",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Un sectionneur doit être :",
+    "options": [
+      "Visible et accessible",
+      "Cadenassable",
+      "Verrouillé en permanence",
+      "Sous clé seulement"
+    ],
+    "answer": "B",
+    "explanation": "Art. 28-600 : le sectionneur doit être cadenassable pour la sécurité.",
+    "difficulty": "HARD",
+    "chapter": 4
+  },
+  {
+    "question": "Qu'est-ce que le FLA d'un moteur ?",
+    "options": [
+      "Full Load Amps (courant à pleine charge)",
+      "Fréquence de ligne admissible",
+      "Facteur de puissance",
+      "Force de levage"
+    ],
+    "answer": "A",
+    "explanation": "FLA = Full Load Amps, le courant à pleine charge nominale.",
+    "difficulty": "EASY",
+    "chapter": 5
+  },
+  {
+    "question": "Le LRA est typiquement combien de fois le FLA ?",
+    "options": [
+      "2-3×",
+      "5-8×",
+      "10-12×",
+      "15-20×"
+    ],
+    "answer": "B",
+    "explanation": "Le courant rotor bloqué (LRA) est de 5 à 8 fois le FLA.",
+    "difficulty": "EASY",
+    "chapter": 5
+  },
+  {
+    "question": "Quel dispositif fait varier la vitesse d'un moteur CA ?",
+    "options": [
+      "Contacteur",
+      "VFD (variateur de fréquence)",
+      "Relais thermique",
+      "Sectionneur"
+    ],
+    "answer": "B",
+    "explanation": "Le VFD fait varier la fréquence d'alimentation pour contrôler la vitesse du moteur.",
+    "difficulty": "EASY",
+    "chapter": 5
+  },
+  {
+    "question": "À quoi sert un relais de surcharge (overload) ?",
+    "options": [
+      "À démarrer le moteur",
+      "À protéger contre les surcharges prolongées",
+      "À changer la vitesse",
+      "À inverser le sens"
+    ],
+    "answer": "B",
+    "explanation": "Le relais de surcharge protège le moteur contre un courant excessif prolongé.",
+    "difficulty": "EASY",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur asynchrone est aussi appelé :",
+    "options": [
+      "Moteur synchrone",
+      "Moteur à induction",
+      "Moteur CC",
+      "Moteur série"
+    ],
+    "answer": "B",
+    "explanation": "Le moteur asynchrone = moteur à induction (le type le plus commun).",
+    "difficulty": "EASY",
+    "chapter": 5
+  },
+  {
+    "question": "Quelle section du Code traite des moteurs ?",
+    "options": [
+      "Section 26",
+      "Section 28",
+      "Section 30",
+      "Section 32"
+    ],
+    "answer": "B",
+    "explanation": "La Section 28 du CCE couvre les moteurs et génératrices.",
+    "difficulty": "EASY",
+    "chapter": 5
+  },
+  {
+    "question": "Quelle est la formule de base de puissance d'un moteur ?",
+    "options": [
+      "P = V × I",
+      "P = V × I × cos φ",
+      "P = V × I × cos φ × η",
+      "P = V × I × √3"
+    ],
+    "answer": "C",
+    "explanation": "P = V × I × cos φ × η (inclut facteur de puissance et rendement).",
+    "difficulty": "EASY",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur 1 HP équivaut à combien de watts ?",
+    "options": [
+      "550 W",
+      "660 W",
+      "746 W",
+      "1 000 W"
+    ],
+    "answer": "C",
+    "explanation": "1 HP (cheval-vapeur) = 746 W.",
+    "difficulty": "EASY",
+    "chapter": 5
+  },
+  {
+    "question": "Quel composant du moteur est la partie fixe ?",
+    "options": [
+      "Rotor",
+      "Stator",
+      "Arbre",
+      "Roulement"
+    ],
+    "answer": "B",
+    "explanation": "Le stator est la partie fixe, le rotor est la partie tournante.",
+    "difficulty": "EASY",
+    "chapter": 5
+  },
+  {
+    "question": "Le sens de rotation d'un moteur triphasé peut être inversé en :",
+    "options": [
+      "Changeant la tension",
+      "Inversant deux phases",
+      "Ajoutant un condensateur",
+      "Changeant la fréquence"
+    ],
+    "answer": "B",
+    "explanation": "Inverser deux phases sur trois inverse le sens du champ tournant.",
+    "difficulty": "EASY",
+    "chapter": 5
+  },
+  {
+    "question": "Art. 28-106 : conducteur d'un moteur = FLA × ?",
+    "options": [
+      "100 %",
+      "115 %",
+      "125 %",
+      "150 %"
+    ],
+    "answer": "C",
+    "explanation": "Art. 28-106 : le conducteur doit être dimensionné à 125 % du FLA.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Art. 28-200 : protection max d'un moteur = FLA × ?",
+    "options": [
+      "150 %",
+      "200 %",
+      "250 %",
+      "300 %"
+    ],
+    "answer": "C",
+    "explanation": "Art. 28-200 : protection max = 250 % du FLA.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Distance maximale entre le sectionneur et le moteur ?",
+    "options": [
+      "5 m",
+      "9 m",
+      "12 m",
+      "15 m"
+    ],
+    "answer": "B",
+    "explanation": "Art. 28-600 : sectionneur à 9 m max du moteur, à portée de vue.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur 25 HP triphasé, 600 V, cos φ = 0,85, η = 0,90. FLA ?",
+    "options": [
+      "18 A",
+      "20 A",
+      "22 A",
+      "24 A"
+    ],
+    "answer": "C",
+    "explanation": "Pélec = 25×746/(0,90×0,85) = 24 379 W. I = 24 379/(600×√3) = 23,5 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Avantage du démarreur progressif (soft starter) :",
+    "options": [
+      "Réduit le courant de démarrage",
+      "Augmente la vitesse",
+      "Économise l'énergie",
+      "Réduit la tension"
+    ],
+    "answer": "A",
+    "explanation": "Le soft starter réduit le courant de démarrage en augmentant progressivement la tension.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur perd une phase en fonctionnement :",
+    "options": [
+      "Continue normalement",
+      "S'arrête",
+      "Le courant augmente de 200-300 %",
+      "Ralentit seulement"
+    ],
+    "answer": "C",
+    "explanation": "Le moteur monophasé continue avec un courant 2-3× plus élevé, risquant la surchauffe.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Le rendement typique d'un moteur Premium Efficiency est :",
+    "options": [
+      "80-85 %",
+      "85-90 %",
+      "90-96 %",
+      "97-99 %"
+    ],
+    "answer": "C",
+    "explanation": "Les moteurs Premium Efficiency (IE3) ont un rendement de 90 à 96 %.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Qu'est-ce qu'un contacteur ?",
+    "options": [
+      "Un disjoncteur",
+      "Un interrupteur commandé électriquement",
+      "Un fusible",
+      "Un transformateur"
+    ],
+    "answer": "B",
+    "explanation": "Un contacteur est un interrupteur actionné par un électroaimant (bobine).",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "FLA d'un moteur 5 HP, 208 V triphasé, cos φ = 0,82, η = 0,86 ?",
+    "options": [
+      "9,5 A",
+      "11,5 A",
+      "13,5 A",
+      "15,5 A"
+    ],
+    "answer": "C",
+    "explanation": "Pélec = 5×746/(0,86×0,82) = 3 730/0,705 = 5 290 W. I = 5 290/(208×1,732) = 5 290/360 = 14,7 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Un démarreur étoile-triangle réduit le courant de démarrage à :",
+    "options": [
+      "33 %",
+      "50 %",
+      "58 %",
+      "75 %"
+    ],
+    "answer": "C",
+    "explanation": "Le courant de démarrage en étoile est 58 % (1/√3) de celui en triangle.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur 10 HP, 600 V, triphasé. Conducteur minimum ?",
+    "options": [
+      "14 AWG",
+      "12 AWG",
+      "10 AWG",
+      "8 AWG"
+    ],
+    "answer": "B",
+    "explanation": "FLA typique = 9-10 A. ×125 % = 11,25-12,5 A. 14 AWG = 15 A. Donc 14 AWG suffit.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "La plaque signalétique d'un moteur indique :",
+    "options": [
+      "FLA, HP, V, RPM, cos φ",
+      "Seulement le voltage",
+      "Seulement le HP",
+      "Le prix"
+    ],
+    "answer": "A",
+    "explanation": "La plaque indique toutes les caractéristiques électriques et mécaniques du moteur.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Un VFD peut-il être utilisé avec un moteur monophasé ?",
+    "options": [
+      "Oui",
+      "Non, généralement pas",
+      "Seulement si 120 V",
+      "Avec adaptateur"
+    ],
+    "answer": "B",
+    "explanation": "Les VFD standard sont pour moteurs triphasés. Des modèles spéciaux existent pour monophasé.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "La protection thermique (overload) se règle à :",
+    "options": [
+      "100-125 % du FLA",
+      "125-150 % du FLA",
+      "200 % du FLA",
+      "250 % du FLA"
+    ],
+    "answer": "A",
+    "explanation": "Le relais de surcharge se règle généralement à 100-125 % du FLA.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Le glissement (slip) d'un moteur asynchrone est :",
+    "options": [
+      "0 RPM",
+      "2-5 % de la vitesse synchrone",
+      "10-15 %",
+      "20-30 %"
+    ],
+    "answer": "B",
+    "explanation": "Le glissement typique d'un moteur asynchrone est de 2 à 5 %.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "À quoi sert un sectionneur moteur ?",
+    "options": [
+      "À contrôler la vitesse",
+      "À couper l'alimentation pour maintenance",
+      "À réduire le courant",
+      "À protéger des surcharges"
+    ],
+    "answer": "B",
+    "explanation": "Le sectionneur isole le moteur de sa source pour la maintenance.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur 50 HP, 600 V, triphasé. Calibre du disjoncteur selon 250 % du FLA ?",
+    "options": [
+      "80 A",
+      "90 A",
+      "100 A",
+      "110 A"
+    ],
+    "answer": "C",
+    "explanation": "FLA ≈ 50×746/(600×1,732×0,85×0,9) ≈ 47 A. 250 % = 117,5 A. Calibre 100 A (max ≤ 250 %).",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Quelle est la fonction d'un variateur de fréquence (VFD) ?",
+    "options": [
+      "Changer la tension",
+      "Changer la fréquence pour varier la vitesse",
+      "Changer le nombre de pôles",
+      "Réduire le bruit"
+    ],
+    "answer": "B",
+    "explanation": "Le VFD varie la fréquence d'alimentation pour contrôler la vitesse du moteur.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "La classe de service d'un moteur (ex: Class B) indique :",
+    "options": [
+      "La tension nominale",
+      "La capacité de surcharge temporaire",
+      "Le rendement",
+      "La vitesse"
+    ],
+    "answer": "B",
+    "explanation": "La classe de service (A, B, F, H) indique la température max et la capacité de surcharge.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur 3 HP monophasé 240 V, cos φ = 0,9, η = 0,85. FLA ?",
+    "options": [
+      "10,2 A",
+      "12,5 A",
+      "14,6 A",
+      "16,3 A"
+    ],
+    "answer": "B",
+    "explanation": "Pélec = 3×746/(0,85×0,9) = 2 238/0,765 = 2 926 W. I = 2 926/240 = 12,2 A.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Art. 28-600 : un moteur de 25 HP a son sectionneur à 12 m. Conforme ?",
+    "options": [
+      "Oui, 12 m < 15 m",
+      "Non, max 9 m",
+      "Oui, 12 m c'est acceptable",
+      "Non, max 5 m"
+    ],
+    "answer": "B",
+    "explanation": "Art. 28-600 : max 9 m à portée de vue. 12 m dépasse la limite.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Un VFD génère des harmoniques. Quel filtre est utilisé ?",
+    "options": [
+      "Filtre RC",
+      "Filtre antiparasite (EMI/RFI)",
+      "Filtre passe-bas",
+      "Filtre actif de puissance"
+    ],
+    "answer": "D",
+    "explanation": "Les filtres actifs ou réactances d'entrée réduisent les harmoniques des VFD.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Moteur de 30 HP, cos φ = 0,88, η = 0,92. Puissance réactive au FLA sous 600 V ?",
+    "options": [
+      "8,2 kVAR",
+      "12,5 kVAR",
+      "14,8 kVAR",
+      "16,3 kVAR"
+    ],
+    "answer": "C",
+    "explanation": "Pélec = 30×746/(0,92×0,88) = 22 380/0,81 = 27 630 W. S = 27 630/0,88 = 31 398 VA. Q = √(31 398²-27 630²) = 14 900 VAR = 14,9 kVAR.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Le temps de démarrage d'un moteur est limité par :",
+    "options": [
+      "La tension",
+      "La classe de service isolant",
+      "Le rendement",
+      "Le cos φ"
+    ],
+    "answer": "B",
+    "explanation": "La classe d'isolation (B, F, H) détermine la température max et donc le temps de démarrage.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur avec démarreur Y-Δ utilise combien de contacteurs ?",
+    "options": [
+      "1",
+      "2",
+      "3",
+      "4"
+    ],
+    "answer": "C",
+    "explanation": "Un démarreur Y-Δ utilise 3 contacteurs : réseau, étoile et triangle.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur 15 kW, 208 V triphasé, cos φ = 0,85, η = 0,89. FLA et conducteur ?",
+    "options": [
+      "45 A, 8 AWG",
+      "52 A, 6 AWG",
+      "58 A, 6 AWG",
+      "62 A, 4 AWG"
+    ],
+    "answer": "B",
+    "explanation": "I = 15 000/(208×√3×0,85×0,89) = 15 000/272 = 55 A. ×125 % = 69 A. 6 AWG (75 °C) = 65 A. 4 AWG = 70 A.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Le nombre minimum de conducteurs de commande pour un démarrage arrêt-marche :",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "B",
+    "explanation": "3 fils minimum : arrêt (NF), marche (NO), et commun.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur installé à l'extérieur doit avoir une classe de protection :",
+    "options": [
+      "IP20",
+      "IP23",
+      "IP54 ou supérieur",
+      "IP00"
+    ],
+    "answer": "C",
+    "explanation": "IP54 (protection contre poussière et projections d'eau) minimum pour extérieur.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur 7,5 HP, FLA = 22 A. Conducteur calorifique max ?",
+    "options": [
+      "10 AWG",
+      "8 AWG",
+      "6 AWG",
+      "4 AWG"
+    ],
+    "answer": "A",
+    "explanation": "22 A × 125 % = 27,5 A. 10 AWG (30 A) est suffisant.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Pour un moteur à vitesse variable, quel câble est recommandé entre VFD et moteur ?",
+    "options": [
+      "Câble standard NM-B",
+      "Câble blindé (armored/shielded)",
+      "Câble d'éclairage",
+      "Fil de terre seulement"
+    ],
+    "answer": "B",
+    "explanation": "Le câble blindé réduit les interférences EMI des hautes fréquences du VFD.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "La fonction MCCB dans un circuit moteur signifie :",
+    "options": [
+      "Motor Control Circuit Breaker",
+      "Molded Case Circuit Breaker",
+      "Multi-Circuit Breaker",
+      "Main Circuit Breaker"
+    ],
+    "answer": "B",
+    "explanation": "MCCB = Molded Case Circuit Breaker (disjoncteur à boîtier moulé).",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur 2 HP monophasé 120 V, cos φ = 0,9, η = 0,80. FLA et protection 250 % ?",
+    "options": [
+      "FLA = 17,3 A, prot = 43 A → 45 A",
+      "FLA = 15,1 A, prot = 37,8 A → 40 A",
+      "FLA = 18,5 A, prot = 46 A → 50 A",
+      "FLA = 20 A, prot = 50 A"
+    ],
+    "answer": "A",
+    "explanation": "Pélec = 2×746/(0,80×0,9) = 1 492/0,72 = 2 072 W. I = 2 072/120 = 17,3 A. 250 % = 43,1 A. Calibre 45 A.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Quel type de démarreur réduit le courant de démarrage à 58 % ?",
+    "options": [
+      "Démarreur direct",
+      "Démarreur étoile-triangle",
+      "Démarreur progressif",
+      "VFD"
+    ],
+    "answer": "B",
+    "explanation": "Le démarreur étoile-triangle démarre en étoile (58 % du courant triangle).",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Le facteur de puissance d'un moteur à vide est environ :",
+    "options": [
+      "1,0",
+      "0,85",
+      "0,2-0,3",
+      "0,5"
+    ],
+    "answer": "C",
+    "explanation": "À vide, cos φ = 0,1-0,3 car la composante réactive (magnétisation) domine.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur 40 HP, 600 V, triphasé, η = 0,91, cos φ = 0,87. FLA ?,",
+    "options": [
+      "30 A",
+      "35 A",
+      "39 A",
+      "45 A"
+    ],
+    "answer": "C",
+    "explanation": "Pélec = 40×746/(0,91×0,87) = 29 840/0,792 = 37 677 W. I = 37 677/(600×1,732) = 37 677/1 039 = 36,3 A.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Couleur des conducteurs de commande 24 V CA ?",
+    "options": [
+      "Noir et blanc",
+      "Bleu et blanc",
+      "Rouge et noir",
+      "Vert et jaune"
+    ],
+    "answer": "B",
+    "explanation": "Les circuits de commande basse tension sont typiquement bleu (phase) et blanc (neutre).",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Un moteur asynchrone avec glissement 3 %, 4 pôles, 60 Hz. Vitesse réelle ?",
+    "options": [
+      "1 640 tr/min",
+      "1 746 tr/min",
+      "1 800 tr/min",
+      "1 850 tr/min"
+    ],
+    "answer": "B",
+    "explanation": "Nsync = 120×60/4 = 1 800 tr/min. N = 1 800 × (1-0,03) = 1 746 tr/min.",
+    "difficulty": "HARD",
+    "chapter": 5
+  },
+  {
+    "question": "Le courant de démarrage (LRA) d'un moteur 10 HP, 208 V, FLA = 28 A est environ :",
+    "options": [
+      "40-50 A",
+      "56-84 A",
+      "140-224 A",
+      "280-350 A"
+    ],
+    "answer": "C",
+    "explanation": "LRA = 5-8× FLA = 5×28 = 140 A à 8×28 = 224 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 5
+  },
+  {
+    "question": "Quel type de panneau solaire a le meilleur rendement ?",
+    "options": [
+      "Polycristallin",
+      "Monocristallin",
+      "Couche mince",
+      "Amorphe"
+    ],
+    "answer": "B",
+    "explanation": "Le monocristallin offre 18-22 % de rendement, le meilleur disponible.",
+    "difficulty": "EASY",
+    "chapter": 6
+  },
+  {
+    "question": "À quoi sert un onduleur solaire ?",
+    "options": [
+      "Produire le CC",
+      "Convertir CC en CA",
+      "Stocker l'énergie",
+      "Réguler la température"
+    ],
+    "answer": "B",
+    "explanation": "L'onduleur convertit le courant continu des panneaux en courant alternatif.",
+    "difficulty": "EASY",
+    "chapter": 6
+  },
+  {
+    "question": "Qu'est-ce que le net metering ?",
+    "options": [
+      "Un type de panneau",
+      "Un crédit pour l'énergie injectée dans le réseau",
+      "Un dispositif de sécurité",
+      "Une batterie solaire"
+    ],
+    "answer": "B",
+    "explanation": "Le net metering crédite l'énergie solaire injectée dans le réseau d'Hydro-Québec.",
+    "difficulty": "EASY",
+    "chapter": 6
+  },
+  {
+    "question": "Effet du froid sur la tension Voc d'un panneau ?",
+    "options": [
+      "Diminue",
+      "Augmente",
+      "Reste stable",
+      "S'annule"
+    ],
+    "answer": "B",
+    "explanation": "Le coefficient de température Voc est négatif (-0,27 %/°C). Plus froid = tension plus élevée.",
+    "difficulty": "EASY",
+    "chapter": 6
+  },
+  {
+    "question": "Quelle est la température minimale de conception au Québec pour le PV ?",
+    "options": [
+      "-20 °C",
+      "-30 °C",
+      "-40 °C",
+      "-50 °C"
+    ],
+    "answer": "C",
+    "explanation": "On utilise Tmin = -40 °C au Québec pour le dimensionnement PV.",
+    "difficulty": "EASY",
+    "chapter": 6
+  },
+  {
+    "question": "Que signifie le terme string en PV ?",
+    "options": [
+      "Un câble",
+      "Des panneaux connectés en série",
+      "Un type d'onduleur",
+      "Un fusible"
+    ],
+    "answer": "B",
+    "explanation": "Un string est une série de panneaux connectés bout à bout.",
+    "difficulty": "EASY",
+    "chapter": 6
+  },
+  {
+    "question": "Quelle est la règle du 120 % (art. 64-112) ?",
+    "options": [
+      "Panneau ≤ 120 % du disjoncteur",
+      "Busbar ≤ 120 % de la somme des protections",
+      "Tension ≤ 120 % de la nominale",
+      "Courant ≤ 120 % du calibre"
+    ],
+    "answer": "B",
+    "explanation": "Art. 64-112 : la capacité du busbar doit être ≥ 120 % de la somme des protections (principal + PV).",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Panneau principal 200 A + onduleur 40 A. Busbar requis ?",
+    "options": [
+      "200 A",
+      "240 A",
+      "250 A",
+      "280 A"
+    ],
+    "answer": "B",
+    "explanation": "200 + 40 = 240 A. 120 % × 200 = 240 A. OK si busbar 200 A (240 ≤ 240 ✓).",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Un micro-onduleur se distingue d'un string onduleur par :",
+    "options": [
+      "Un seul pour tout le système",
+      "Un par panneau (optimisation individuelle)",
+      "Moins cher",
+      "Plus gros"
+    ],
+    "answer": "B",
+    "explanation": "Les micro-onduleurs sont installés par panneau, optimisant chaque panneau individuellement.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Coefficient de température Voc d'un panneau typique :",
+    "options": [
+      "-0,10 %/°C",
+      "-0,27 %/°C",
+      "-0,50 %/°C",
+      "-1,00 %/°C"
+    ],
+    "answer": "B",
+    "explanation": "Le coefficient typique est -0,27 %/°C pour la tension Voc.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Panneau Voc = 49,6 V à 25 °C. Quelle est la Voc à -40 °C ? (coeff -0,27 %/°C)",
+    "options": [
+      "56,3 V",
+      "58,3 V",
+      "60,3 V",
+      "62,3 V"
+    ],
+    "answer": "B",
+    "explanation": "ΔT = -40 - 25 = -65 °C. ΔVoc = 49,6 × (-0,0027) × (-65) = 8,7 V. Voc = 49,6 + 8,7 = 58,3 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Avantage du monocristallin par rapport au polycristallin :",
+    "options": [
+      "Moins cher",
+      "Meilleur rendement (18-22 % vs 15-18 %)",
+      "Plus flexible",
+      "Plus léger"
+    ],
+    "answer": "B",
+    "explanation": "Le monocristallin a un rendement supérieur de 3-4 % au polycristallin.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Le rapid shutdown (arrêt rapide) PV sert à :",
+    "options": [
+      "Protéger les pompiers",
+      "Augmenter la production",
+      "Nettoyer les panneaux",
+      "Réduire la tension"
+    ],
+    "answer": "A",
+    "explanation": "Le rapid shutdown réduit la tension des conducteurs PV à un niveau sûr pour les intervenants.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Que signifie STC pour les panneaux solaires ?",
+    "options": [
+      "Standard Test Conditions",
+      "Solar Temperature Coefficient",
+      "System Total Capacity",
+      "Short Term Current"
+    ],
+    "answer": "A",
+    "explanation": "STC = Standard Test Conditions (1 000 W/m², 25 °C).",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Tension maximale d'un string de 12 panneaux (Voc = 49,6 V, à -40 °C, coeff -0,27 %/°C) ?",
+    "options": [
+      "650 V",
+      "700 V",
+      "750 V",
+      "800 V"
+    ],
+    "answer": "B",
+    "explanation": "Voc@-40°C = 58,3 V × 12 = 699,6 V ≈ 700 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Un panneau 400 W, 40 Vmp, 10 A Imp. Combien de panneaux pour un string à 300 V ?",
+    "options": [
+      "6",
+      "7",
+      "8",
+      "9"
+    ],
+    "answer": "C",
+    "explanation": "300 V / 40 V = 7,5. On prend 8 panneaux pour un string de 320 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Le rendement d'un panneau polycristallin typique :",
+    "options": [
+      "10-13 %",
+      "15-18 %",
+      "18-22 %",
+      "22-25 %"
+    ],
+    "answer": "B",
+    "explanation": "Polycristallin : rendement de 15 à 18 %.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Où s'applique la règle du 120 % ?",
+    "options": [
+      "Au transformateur",
+      "Au panneau principal (busbar)",
+      "À chaque panneau",
+      "À l'onduleur"
+    ],
+    "answer": "B",
+    "explanation": "Art. 64-112 : la règle du 120 % s'applique au busbar du panneau principal.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Panneau principal 225 A, onduleur 50 A. Conforme à la règle 120 % ?",
+    "options": [
+      "225 + 50 = 275 > 270 → non conforme",
+      "225 + 50 = 275 ≤ 270 → OK",
+      "225 A suffit",
+      "50 A est trop petit"
+    ],
+    "answer": "A",
+    "explanation": "225 + 50 = 275 A. 120 % × 225 = 270 A. 275 > 270 → non conforme.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Qu'est-ce qu'un optimiseur de puissance ?",
+    "options": [
+      "Un type d'onduleur",
+      "Un module MPPT par panneau",
+      "Une batterie",
+      "Un régulateur"
+    ],
+    "answer": "B",
+    "explanation": "Un optimiseur fait le MPPT par panneau et transmet le courant au string onduleur.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Le MPPT signifie :",
+    "options": [
+      "Maximum Power Point Tracking",
+      "Minimum Power Point",
+      "Multi-Phase Power Tool",
+      "Main Power Terminal"
+    ],
+    "answer": "A",
+    "explanation": "MPPT = Maximum Power Point Tracking, poursuite du point de puissance maximale.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "La tension d'un string de 10 panneaux (Vmp = 41 V) sous charge :",
+    "options": [
+      "350 V",
+      "370 V",
+      "410 V",
+      "430 V"
+    ],
+    "answer": "C",
+    "explanation": "Vstring = 10 × 41 V = 410 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Une installation PV en toiture doit avoir un accès :",
+    "options": [
+      "Par l'intérieur seulement",
+      "Pour les pompiers (accès toit)",
+      "Aucun accès requis",
+      "Par le sous-sol"
+    ],
+    "answer": "B",
+    "explanation": "Le Code exige un accès pour les pompiers autour des panneaux PV en toiture.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "L'onduleur string (central) vs micro-onduleur -- quel est moins cher par watt ?",
+    "options": [
+      "Micro-onduleur",
+      "String onduleur",
+      "Égal",
+      "Ni l'un ni l'autre"
+    ],
+    "answer": "B",
+    "explanation": "Le string onduleur central coûte moins cher par watt installé.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Un système PV de 10 kWc produit environ combien de kWh/an au Québec ?",
+    "options": [
+      "8 000-10 000",
+      "10 000-13 000",
+      "13 000-15 000",
+      "15 000-20 000"
+    ],
+    "answer": "B",
+    "explanation": "Au Québec, 1 kWc produit environ 1 100-1 300 kWh/an, donc 10 kWc = 11 000-13 000 kWh.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Le disjoncteur PV doit être placé :",
+    "options": [
+      "N'importe où",
+      "À l'extrémité opposée du busbar du disjoncteur principal",
+      "Côte à côte",
+      "Dans un panneau séparé"
+    ],
+    "answer": "B",
+    "explanation": "Pour la règle 120 %, le PV doit être à l'extrémité opposée du busbar.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Règle 120 % calcul : panneau 200 A, busbar 225 A. Max PV permis ?",
+    "options": [
+      "40 A",
+      "50 A",
+      "60 A",
+      "70 A"
+    ],
+    "answer": "A",
+    "explanation": "225 ≥ 200 + X. 120 % × 200 = 240. 240 - 200 = 40 A max pour le PV.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Un string de 15 panneaux Voc = 49,6 V à 25 °C, coeff -0,27 %/°C. Tension à -30 °C ?",
+    "options": [
+      "715 V",
+      "745 V",
+      "765 V",
+      "785 V"
+    ],
+    "answer": "C",
+    "explanation": "ΔT = -30-25 = -55 °C. ΔV/panneau = 49,6×(-0,0027)×(-55) = 7,37 V. Voc@-30 = 49,6+7,37 = 56,97 V × 15 = 854,6 V.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Un système PV 15 kWc, micro-onduleurs 300 W chacun. Nombre de micro-onduleurs ?",
+    "options": [
+      "40",
+      "45",
+      "50",
+      "55"
+    ],
+    "answer": "C",
+    "explanation": "15 000 / 300 = 50 micro-onduleurs.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Art. 64-112 : un panneau 100 A avec PV 30 A et busbar 125 A. Conforme ?",
+    "options": [
+      "Oui, 100+30 = 130 ≤ 125? Non",
+      "Oui, 120 % de 100 = 120 ≥ 130? Non",
+      "Non, besoin de busbar 150 A",
+      "Oui, c'est conforme"
+    ],
+    "answer": "C",
+    "explanation": "100+30 = 130 A. 120 % × 100 = 120 A. 130 > 120 → non conforme. Busbar ≥ 150 A recommandé.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Le facteur de correction de température pour -40 °C sur un panneau :",
+    "options": [
+      "0,85",
+      "0,90",
+      "1,00",
+      "1,12-1,15"
+    ],
+    "answer": "D",
+    "explanation": "Le facteur de correction de tension pour -40 °C est d'environ 1,12 à 1,15.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Quelle section du Code couvre les installations PV ?",
+    "options": [
+      "Section 26",
+      "Section 28",
+      "Section 64",
+      "Section 84"
+    ],
+    "answer": "C",
+    "explanation": "La Section 64 du Code traite des installations photovoltaïques.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Un panneau a Isc = 11,2 A. Facteur de sécurité pour le calibre du conducteur PV ?",
+    "options": [
+      "1,00",
+      "1,25",
+      "1,50",
+      "2,00"
+    ],
+    "answer": "B",
+    "explanation": "Art. 64-208 : le conducteur PV est dimensionné à 125 % de Isc.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Panneau 200 A, busbar 200 A. PV max permis selon 120 % rule ?",
+    "options": [
+      "20 A",
+      "30 A",
+      "40 A",
+      "50 A"
+    ],
+    "answer": "C",
+    "explanation": "120 % × 200 = 240 A. 240 - 200 = 40 A max pour le PV.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Courant de retour max entre strings parallèles ? Protection requise ?",
+    "options": [
+      "Aucune protection",
+      "Fusible si > 1,56 × Isc",
+      "Disjoncteur DDFT",
+      "Sectionneur seulement"
+    ],
+    "answer": "B",
+    "explanation": "Art. 64-210 : fusible requis si le courant combiné dépasse 1,56 × Isc du panneau.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Longueur max d'un string pour limiter la chute de tension à 2 % (240 V, 10 A, R = 0,002 Ω/m) ?",
+    "options": [
+      "100 m",
+      "110 m",
+      "120 m",
+      "140 m"
+    ],
+    "answer": "C",
+    "explanation": "ΔV max = 240 × 0,02 = 4,8 V. R max = 4,8/(2×10) = 0,24 Ω. L = 0,24/0,002 = 120 m.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Un onduleur 7,6 kW, 240 V. Courant CA max ?",
+    "options": [
+      "27,7 A",
+      "30,2 A",
+      "31,7 A",
+      "35,4 A"
+    ],
+    "answer": "C",
+    "explanation": "I = 7 600/240 = 31,67 A.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Pour les PV en toiture, dégagement minimal autour des panneaux ?",
+    "options": [
+      "Aucun dégagement",
+      "600 mm",
+      "900 mm",
+      "1 200 mm"
+    ],
+    "answer": "D",
+    "explanation": "Un dégagement de 1,2 m (4 pi) est recommandé pour l'accès pompier.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Le point d'accès du système PV au bâtiment doit avoir :",
+    "options": [
+      "Un sectionneur visible et accessible",
+      "Un DDFT",
+      "Un transformateur d'isolement",
+      "Un parafoudre"
+    ],
+    "answer": "A",
+    "explanation": "Art. 64-100 : un sectionneur PV doit être visible et accessible.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Puissance d'un système PV avec 25 panneaux de 450 Wc :",
+    "options": [
+      "10 kWc",
+      "10,75 kWc",
+      "11,25 kWc",
+      "12,5 kWc"
+    ],
+    "answer": "C",
+    "explanation": "25 × 450 = 11 250 W = 11,25 kWc.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Le facteur de simultanéité pour le calcul du net metering :",
+    "options": [
+      "100 %",
+      "75 %",
+      "50 %",
+      "Variable selon Hydro-Québec"
+    ],
+    "answer": "A",
+    "explanation": "Le net metering crédite à 100 % l'énergie injectée au tarif en vigueur.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Rendement typique d'un onduleur string :",
+    "options": [
+      "85-90 %",
+      "90-94 %",
+      "95-98 %",
+      "99 %+"
+    ],
+    "answer": "C",
+    "explanation": "Les onduleurs modernes ont un rendement de 95 à 98 %.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Le câble PV doit être de type :",
+    "options": [
+      "NM-B",
+      "USE-2 ou PV Wire",
+      "AC90",
+      "NMD90"
+    ],
+    "answer": "B",
+    "explanation": "Les conducteurs PV doivent être USE-2 ou PV Wire, résistants aux UV.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Le surtension transitoire (surge) dans un système PV est protégé par :",
+    "options": [
+      "Un DDFT",
+      "Un parafoudre (SPD)",
+      "Un sectionneur",
+      "Un fusible"
+    ],
+    "answer": "B",
+    "explanation": "Un SPD (Surge Protective Device) protège contre les surtensions (foudre).",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Une installation PV au Québec de 10 kWc nécessite quel permis ?",
+    "options": [
+      "Aucun",
+      "Permis de la municipalité + Hydro-Québec",
+      "Permis fédéral seulement",
+      "RBQ seulement"
+    ],
+    "answer": "B",
+    "explanation": "Permis municipal requis + approbation Hydro-Québec pour le net metering.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Quand le rapid shutdown est-il obligatoire ?",
+    "options": [
+      "Toujours",
+      "Sur les toits des bâtiments (accès pompier)",
+      "Jamais au Québec",
+      "Seulement si > 10 kW"
+    ],
+    "answer": "B",
+    "explanation": "Le rapid shutdown est requis sur les bâtiments pour la sécurité des pompiers (art. 64-118).",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Un système PV avec batterie nécessite un :",
+    "options": [
+      "Onduleur hybride ou batterie-inverter",
+      "Micro-onduleur seulement",
+      "String onduleur standard",
+      "Aucun équipement spécial"
+    ],
+    "answer": "A",
+    "explanation": "Un onduleur hybride ou un battery inverter est nécessaire pour gérer batterie + PV.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Le support de panneau solaire (racking) doit résister à :",
+    "options": [
+      "Au poids seulement",
+      "Au vent et à la neige (charge QC)",
+      "À la pluie seulement",
+      "À la chaleur"
+    ],
+    "answer": "B",
+    "explanation": "Le racking doit résister aux charges de vent et de neige québécoises.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Garantie de puissance typique d'un panneau monocristallin après 25 ans :",
+    "options": [
+      "70-75 %",
+      "80-85 %",
+      "85-90 %",
+      "90-95 %"
+    ],
+    "answer": "B",
+    "explanation": "La plupart des panneaux garantissent 80-85 % de puissance après 25 ans.",
+    "difficulty": "MEDIUM",
+    "chapter": 6
+  },
+  {
+    "question": "Batterie Li-ion pour PV : profondeur de décharge recommandée ?",
+    "options": [
+      "50 %",
+      "80 %",
+      "95 %",
+      "100 %"
+    ],
+    "answer": "B",
+    "explanation": "Les batteries Li-ion supportent 80 % de DoD (depth of discharge) sans dégradation majeure.",
+    "difficulty": "HARD",
+    "chapter": 6
+  },
+  {
+    "question": "Quels sont les deux principaux types de détecteurs de fumée ?",
+    "options": [
+      "Ionisation et optique",
+      "Thermique et barrière",
+      "Laser et ultrason",
+      "Capacitif et magnétique"
+    ],
+    "answer": "A",
+    "explanation": "Ionisation (feux rapides) et optique/photoélectrique (feux couvants).",
+    "difficulty": "EASY",
+    "chapter": 7
+  },
+  {
+    "question": "Quelle norme régit l'installation des alarmes incendie au Canada ?",
+    "options": [
+      "CSA C22.1",
+      "CAN/ULC-S524",
+      "CSA C22.2 No. 144",
+      "CSA B44"
+    ],
+    "answer": "B",
+    "explanation": "CAN/ULC-S524 est la norme d'installation des systèmes d'alarme incendie.",
+    "difficulty": "EASY",
+    "chapter": 7
+  },
+  {
+    "question": "Autonomie minimale des batteries de secours pour alarme incendie ?",
+    "options": [
+      "4 h",
+      "12 h",
+      "24 h",
+      "48 h"
+    ],
+    "answer": "C",
+    "explanation": "Norme CAN/ULC-S524 : 24 h d'autonomie minimale pour alarme incendie.",
+    "difficulty": "EASY",
+    "chapter": 7
+  },
+  {
+    "question": "Un détecteur optique est particulièrement sensible à :",
+    "options": [
+      "Feux rapides et flamme",
+      "Feux couvants et fumée dense",
+      "Gaz et CO",
+      "Chaleur seulement"
+    ],
+    "answer": "B",
+    "explanation": "Le détecteur optique réagit aux particules visibles de fumée (feux couvants).",
+    "difficulty": "EASY",
+    "chapter": 7
+  },
+  {
+    "question": "Lequel des détecteurs de fumée a le moins de faux départs ?",
+    "options": [
+      "Ionisation",
+      "Optique",
+      "Les deux également",
+      "Aucun"
+    ],
+    "answer": "B",
+    "explanation": "L'optique a moins de faux départs que l'ionisation (vapeur de cuisson, etc.).",
+    "difficulty": "EASY",
+    "chapter": 7
+  },
+  {
+    "question": "Où doit-on installer un détecteur de fumée dans un corridor ?",
+    "options": [
+      "Tous les 9 m",
+      "Tous les 12 m",
+      "Tous les 15 m",
+      "Tous les 20 m"
+    ],
+    "answer": "C",
+    "explanation": "Espacement max de 15 m entre détecteurs de fumée dans un corridor.",
+    "difficulty": "EASY",
+    "chapter": 7
+  },
+  {
+    "question": "Un détecteur de fumée doit être installé au plafond ou :",
+    "options": [
+      "Au sol",
+      "Sur le mur, à 100 mm max du plafond",
+      "Derrière une porte",
+      "Dans une armoire"
+    ],
+    "answer": "B",
+    "explanation": "Sur le mur : à 100 mm max du plafond, car la fumée monte.",
+    "difficulty": "EASY",
+    "chapter": 7
+  },
+  {
+    "question": "Quelle alimentation est utilisée par les caméras IP réseau ?",
+    "options": [
+      "12 V CC local",
+      "24 V CA",
+      "PoE (48 V CC par RJ45)",
+      "120 V direct"
+    ],
+    "answer": "C",
+    "explanation": "Les caméras IP utilisent Power over Ethernet (48 V CC) via le câble réseau.",
+    "difficulty": "EASY",
+    "chapter": 7
+  },
+  {
+    "question": "Un détecteur PIR détecte :",
+    "options": [
+      "La fumée",
+      "Les mouvements par chaleur corporelle",
+      "Le CO",
+      "Les vibrations"
+    ],
+    "answer": "B",
+    "explanation": "PIR = Passive Infrared : détecte les mouvements par la chaleur du corps.",
+    "difficulty": "EASY",
+    "chapter": 7
+  },
+  {
+    "question": "Qu'est-ce qu'une boucle Classe B en alarme incendie ?",
+    "options": [
+      "Boucle avec retour au panneau",
+      "Boucle avec résistance de fin de ligne (EOLR)",
+      "Boucle sans surveillance",
+      "Sans câblage"
+    ],
+    "answer": "B",
+    "explanation": "Classe B = boucle avec résistance de fin de ligne qui surveille l'intégrité du câble.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Qu'est-ce qu'une boucle Classe A en alarme incendie ?",
+    "options": [
+      "Boucle avec EOLR",
+      "Boucle avec retour redondant au panneau",
+      "Sans fil",
+      "Avec répéteur"
+    ],
+    "answer": "B",
+    "explanation": "Classe A : chemin redondant avec retour au panneau en cas de rupture de boucle.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Le détecteur de monoxyde de carbone (CO) est obligatoire :",
+    "options": [
+      "Dans toutes les pièces",
+      "Dans toute résidence avec source de combustion",
+      "Seulement dans les garages",
+      "Dans les cuisines"
+    ],
+    "answer": "B",
+    "explanation": "Détecteur CO obligatoire dans toute résidence avec appareil à combustion ou garage attenant.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Distance maximale entre détecteurs de fumée dans un plafond haut (9 m) ?",
+    "options": [
+      "6,1 m",
+      "9,1 m",
+      "12,2 m",
+      "15,2 m"
+    ],
+    "answer": "B",
+    "explanation": "CAN/ULC-S524 : espacement de 9,1 m pour plafonds jusqu'à 9 m.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Un système d'alarme intrusion typique comprend :",
+    "options": [
+      "Caméras, détecteurs, sirène, panneau de contrôle",
+      "Seulement des caméras",
+      "Seulement des détecteurs",
+      "Un interphone"
+    ],
+    "answer": "A",
+    "explanation": "Un système complet inclut détecteurs, caméras, sirène et panneau de contrôle.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Quelle est la tension d'alimentation typique d'un panneau d'alarme incendie ?",
+    "options": [
+      "12 V CC ou 24 V CC",
+      "120 V CA",
+      "600 V CA",
+      "48 V CC"
+    ],
+    "answer": "A",
+    "explanation": "Les panneaux d'alarme incendie utilisent 12 V CC ou 24 V CC.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Le câblage des détecteurs de fumée en série peut utiliser :",
+    "options": [
+      "Du câble 14/2 ou 14/3 NMD90",
+      "Du TECK90 seulement",
+      "Du Cat6",
+      "De l'AC90 seulement"
+    ],
+    "answer": "A",
+    "explanation": "Le câblage résidentiel des détecteurs se fait en 14/2 ou 14/3 NMD90.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Un détecteur thermique déclenche typiquement à :",
+    "options": [
+      "37 °C",
+      "57 °C ou 88 °C",
+      "100 °C",
+      "150 °C"
+    ],
+    "answer": "B",
+    "explanation": "Détecteurs thermiques fixes : 57 °C (135 °F) ou 88 °C (190 °F).",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Les avertisseurs de fumée doivent être remplacés tous les :",
+    "options": [
+      "5 ans",
+      "10 ans",
+      "15 ans",
+      "20 ans"
+    ],
+    "answer": "B",
+    "explanation": "Les avertisseurs de fumée ont une durée de vie de 10 ans recommandée.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Dans un bâtiment multi-logement, les détecteurs sont reliés :",
+    "options": [
+      "Indépendants par logement",
+      "Interconnectés (tous déclenchent ensemble)",
+      "Sans fil seulement",
+      "Par le réseau électrique"
+    ],
+    "answer": "B",
+    "explanation": "Dans les logements, les détecteurs doivent être interconnectés.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Quel type de câble est utilisé pour les caméras analogiques ?",
+    "options": [
+      "Cat6",
+      "Câble coaxial RG59",
+      "Fibre optique",
+      "Câble d'alimentation"
+    ],
+    "answer": "B",
+    "explanation": "Les caméras analogiques utilisent du câble coaxial RG59.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Un système d'alarme incendie Classe A offre :",
+    "options": [
+      "Moins de fiabilité",
+      "Redondance (chemin alternatif)",
+      "Moins de câble",
+      "Aucune différence"
+    ],
+    "answer": "B",
+    "explanation": "Classe A = chemin redondant : si le fil est coupé, le signal emprunte l'autre chemin.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Le détecteur de fumée à ionisation contient :",
+    "options": [
+      "Du mercure",
+      "De l'américium-241",
+      "Du lithium",
+      "Du plomb"
+    ],
+    "answer": "B",
+    "explanation": "L'ionisation utilise une source radioactive d'américium-241 (très faible quantité).",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Un détecteur de fumée combiné (ionisation+optique) est :",
+    "options": [
+      "Plus sensible et moins de faux départs",
+      "Moins fiable",
+      "Plus cher mais pas mieux",
+      "Interdit au Canada"
+    ],
+    "answer": "A",
+    "explanation": "Les détecteurs combinés offrent les deux technologies pour une meilleure détection.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Dans un garage, quel type de détecteur est recommandé ?",
+    "options": [
+      "Ionisation",
+      "Optique",
+      "Thermique (chaleur)",
+      "Combiné"
+    ],
+    "answer": "C",
+    "explanation": "Le détecteur thermique est recommandé dans les garages pour éviter les faux départs.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Puissance typique d'une sirène d'alarme incendie :",
+    "options": [
+      "65 dBA",
+      "75-85 dBA",
+      "90-110 dBA",
+      "120-130 dBA"
+    ],
+    "answer": "C",
+    "explanation": "Les sirènes d'alarme incendie produisent 90-110 dBA.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Un système de sécurité périmétrique utilise :",
+    "options": [
+      "Caméras seulement",
+      "Détecteurs d'ouverture (contact NO/NF)",
+      "Détecteurs de fumée",
+      "Détecteurs de CO"
+    ],
+    "answer": "B",
+    "explanation": "Les contacts magnétiques (NO/NF) sur portes et fenêtres forment la protection périmétrique.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Le décodeur de tonalité DTMF est utilisé dans :",
+    "options": [
+      "Les alarmes incendie",
+      "Les systèmes de communication téléphonique des alarmes",
+      "Les caméras",
+      "Les sirènes"
+    ],
+    "answer": "B",
+    "explanation": "Le DTMF permet la communication téléphonique entre le panneau d'alarme et la centrale.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Batterie de secours pour alarme incendie : calcul pour 24 h + 5 min d'alarme. Consommation : 200 mA veille, 2 A alarme. Capacité ?",
+    "options": [
+      "4,5 Ah",
+      "5,0 Ah",
+      "5,5 Ah",
+      "7,2 Ah"
+    ],
+    "answer": "D",
+    "explanation": "24 h × 0,2 A = 4,8 Ah. 5 min × 2 A / 60 = 0,167 Ah. Total = 4,97 Ah × 1,25 = 6,2 Ah. Batterie 7,2 Ah.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "La transmission sans fil d'alarme incendie doit utiliser :",
+    "options": [
+      "WiFi standard",
+      "Protocole propriétaire ou 900 MHz sécurisé",
+      "Bluetooth",
+      "Infrarouge"
+    ],
+    "answer": "B",
+    "explanation": "Les communications sans fil d'alarme incendie utilisent des protocoles sécurisés dédiés.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Un système de vidéosurveillance avec 8 caméras 4K, 5 MP/s, stockage 7 jours, 720p/24h. Stockage requis ?",
+    "options": [
+      "1-2 To",
+      "2-4 To",
+      "4-8 To",
+      "8-16 To"
+    ],
+    "answer": "C",
+    "explanation": "Caméra 4K ~10 Go/jour × 8 × 7 = 560 Go. Avec débit réel : ~4-8 To.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "La résistance de fin de ligne (EOLR) en Classe B a typiquement une valeur de :",
+    "options": [
+      "4,7 kΩ ou 10 kΩ",
+      "100 Ω",
+      "1 MΩ",
+      "10 MΩ"
+    ],
+    "answer": "A",
+    "explanation": "Les EOLR sont typiquement 4,7 kΩ ou 10 kΩ pour la surveillance de boucle.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Un détecteur de bris de verre utilise :",
+    "options": [
+      "Un capteur piézoélectrique",
+      "Un capteur infrarouge",
+      "Un microphone avec filtre fréquentiel",
+      "Un capteur thermique"
+    ],
+    "answer": "C",
+    "explanation": "Le détecteur de bris de verre écoute la fréquence caractéristique du verre qui casse.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Le protocole BACnet est utilisé dans :",
+    "options": [
+      "Sécurité résidentielle",
+      "GTB (Gestion Technique du Bâtiment) incluant incendie",
+      "Caméras IP",
+      "Sirènes"
+    ],
+    "answer": "B",
+    "explanation": "BACnet est un protocole de communication pour les systèmes du bâtiment.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "La norme CSA C22.1 exige que les câbles d'alarme incendie soient :",
+    "options": [
+      "FT6 (faible émission de fumée)",
+      "Standard NM-B",
+      "AC90",
+      "Cat6 non blindé"
+    ],
+    "answer": "A",
+    "explanation": "Les câbles incendie doivent être FT6 (faible émission de fumée, art. 12-100).",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Quel est le voltage max du PoE standard (IEEE 802.3af/at) ?",
+    "options": [
+      "12 V",
+      "24 V",
+      "48 V",
+      "56 V"
+    ],
+    "answer": "C",
+    "explanation": "PoE standard : 48 V CC (IEEE 802.3af = 15,4 W, 802.3at = 30 W).",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Le délai d'évacuation d'un avertisseur incendie doit être :",
+    "options": [
+      "Immédiat",
+      "À 30 secondes max",
+      "À 1 minute max",
+      "Variable selon le système"
+    ],
+    "answer": "A",
+    "explanation": "L'évacuation doit être immédiate pour les avertisseurs de fumée résidentiels.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Distance maximale entre détecteurs de fumée de type optique (plafond plat 6 m) ?",
+    "options": [
+      "9,1 m",
+      "10,5 m",
+      "12 m",
+      "15 m"
+    ],
+    "answer": "A",
+    "explanation": "CAN/ULC-S524 : 9,1 m pour plafonds jusqu'à 9 m de hauteur.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Un système d'alarme incendie adressable permet :",
+    "options": [
+      "D'identifier le détecteur précis qui a déclenché",
+      "Une installation plus rapide",
+      "Moins de câblage",
+      "Tous ces avantages"
+    ],
+    "answer": "A",
+    "explanation": "Le système adressable identifie exactement quel détecteur a déclenché.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Nombre maximum de détecteurs de fumée par circuit en Classe B :",
+    "options": [
+      "12",
+      "16",
+      "20",
+      "Sans limite"
+    ],
+    "answer": "C",
+    "explanation": "CAN/ULC-S524 : max 20 détecteurs par circuit Classe B.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Le courant de repos (standby) d'un détecteur de fumée typique :",
+    "options": [
+      "50-100 µA",
+      "500-800 µA",
+      "1-2 mA",
+      "10-20 mA"
+    ],
+    "answer": "A",
+    "explanation": "Le détecteur de fumée consomme 50-100 µA en veille.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "La supervision d'un système d'alarme incendie vérifie :",
+    "options": [
+      "La date d'installation",
+      "L'intégrité des circuits (coupure, court-circuit)",
+      "La couleur des câbles",
+      "Le nombre de détecteurs"
+    ],
+    "answer": "B",
+    "explanation": "La supervision détecte toute coupure ou court-circuit dans les boucles.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Un module de contrôle (control module) en alarme incendie sert à :",
+    "options": [
+      "Détecter la fumée",
+      "Activer des équipements (ventilation, gicleurs, etc.)",
+      "Alimenter les sirènes",
+      "Communiquer avec le panneau"
+    ],
+    "answer": "B",
+    "explanation": "Le module de contrôle active des équipements auxiliaires (damper, gicleurs, etc.).",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Le câblage des alarmes incendie doit être séparé des câbles de puissance par :",
+    "options": [
+      "Aucune distance requise",
+      "50 mm min",
+      "150 mm min (ou cloison)",
+      "300 mm min"
+    ],
+    "answer": "B",
+    "explanation": "Art. 12-100 : espacement min de 50 mm ou cloison coupe-feu.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Un système de gicleurs nécessite un détecteur de :",
+    "options": [
+      "Fumée",
+      "Débit d'eau (flow switch)",
+      "PIR",
+      "CO"
+    ],
+    "answer": "B",
+    "explanation": "Le flow switch détecte l'écoulement d'eau dans les gicleurs.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Quelle est la résistance minimale d'isolement des conducteurs d'alarme incendie ?",
+    "options": [
+      "100 kΩ",
+      "1 MΩ",
+      "5 MΩ",
+      "10 MΩ"
+    ],
+    "answer": "D",
+    "explanation": "Résistance d'isolement minimale : 10 MΩ entre conducteurs.",
+    "difficulty": "MEDIUM",
+    "chapter": 7
+  },
+  {
+    "question": "Un système de sécurité avec accès par carte RFID utilise quelle fréquence ?",
+    "options": [
+      "125 kHz ou 13,56 MHz",
+      "2,4 GHz",
+      "900 MHz",
+      "60 Hz"
+    ],
+    "answer": "A",
+    "explanation": "RFID : 125 kHz (LF) pour contrôle d'accès standard, 13,56 MHz (HF) pour plus de sécurité.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "La norme CSA pour les avertisseurs de fumée résidentiels est :",
+    "options": [
+      "CSA C22.1",
+      "CAN/ULC-S531",
+      "CAN/ULC-S524",
+      "CSA C22.2 No. 144"
+    ],
+    "answer": "B",
+    "explanation": "CAN/ULC-S531 couvre les avertisseurs de fumée résidentiels.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Un détecteur de fumée avec pile doit avoir une pile :",
+    "options": [
+      "Remplaçable",
+      "Lithium non remplaçable (10 ans)",
+      "AA standard",
+      "9 V seulement"
+    ],
+    "answer": "B",
+    "explanation": "Depuis 2020, les détecteurs avec pile doivent avoir une pile lithium 10 ans non remplaçable.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Nombre de détecteurs de fumée minimum pour une maison 2 étages + sous-sol :",
+    "options": [
+      "2",
+      "3",
+      "4",
+      "5"
+    ],
+    "answer": "C",
+    "explanation": "1 par étage (sous-sol, RDC, 1er) + 1 par chambre à coucher. Minimum 4 pour 3 chambres.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Le protocole ONVIF est utilisé pour :",
+    "options": [
+      "Les alarmes incendie",
+      "L'interopérabilité des caméras IP",
+      "Les sirènes sans fil",
+      "Les détecteurs de fumée"
+    ],
+    "answer": "B",
+    "explanation": "ONVIF est le standard d'interopérabilité pour les caméras IP.",
+    "difficulty": "HARD",
+    "chapter": 7
+  },
+  {
+    "question": "Quel organisme administre le Code Chapitre V — Électricité au Québec ?",
+    "options": [
+      "CMEQ",
+      "RBQ",
+      "Hydro-Québec",
+      "CNESST"
+    ],
+    "answer": "B",
+    "explanation": "Depuis 2017, la RBQ (Régie du bâtiment du Québec) administre le Code.",
+    "difficulty": "EASY",
+    "chapter": 8
+  },
+  {
+    "question": "Le Code de construction du Québec, Chapitre V, est basé sur :",
+    "options": [
+      "Le NEC américain",
+      "Le Code canadien de l'électricité (CSA C22.1)",
+      "La norme ISO 9001",
+      "Le Code allemand VDE"
+    ],
+    "answer": "B",
+    "explanation": "Le Code Québec est basé sur le Code canadien de l'électricité avec amendements.",
+    "difficulty": "EASY",
+    "chapter": 8
+  },
+  {
+    "question": "Chute de tension maximale pour un circuit de branchement (art. 8-102) ?",
+    "options": [
+      "1 %",
+      "2 %",
+      "3 %",
+      "5 %"
+    ],
+    "answer": "C",
+    "explanation": "Art. 8-102 : max 3 % pour un circuit de branchement.",
+    "difficulty": "EASY",
+    "chapter": 8
+  },
+  {
+    "question": "Chute de tension maximale totale (feeder + branchement) selon art. 8-102 ?",
+    "options": [
+      "3 %",
+      "4 %",
+      "5 %",
+      "6 %"
+    ],
+    "answer": "C",
+    "explanation": "Art. 8-102 : max 5 % entre la source et l'utilisation finale.",
+    "difficulty": "EASY",
+    "chapter": 8
+  },
+  {
+    "question": "La densité de charge d'éclairage résidentiel selon art. 8-200 est :",
+    "options": [
+      "22 VA/m²",
+      "33 VA/m²",
+      "40 VA/m²",
+      "50 VA/m²"
+    ],
+    "answer": "B",
+    "explanation": "Art. 8-200 : 33 VA/m² pour l'éclairage résidentiel.",
+    "difficulty": "EASY",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 26-702 : espacement maximum entre prises ?",
+    "options": [
+      "1,2 m",
+      "1,5 m",
+      "1,8 m",
+      "2,4 m"
+    ],
+    "answer": "C",
+    "explanation": "Art. 26-702 : pas plus de 1,8 m entre prises.",
+    "difficulty": "EASY",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 26-710 : DDFT obligatoire dans quels locaux ?",
+    "options": [
+      "Cuisine, salle de bain, extérieur, garage, buanderie",
+      "Chambres seulement",
+      "Sous-sol seulement",
+      "Toutes les pièces"
+    ],
+    "answer": "A",
+    "explanation": "Art. 26-710 : DDFT requis dans cuisine, SdB, extérieur, garage, buanderie.",
+    "difficulty": "EASY",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 26-724 : DFARC obligatoire dans :",
+    "options": [
+      "Salle de bain",
+      "Cuisine",
+      "Chambres à coucher",
+      "Garage"
+    ],
+    "answer": "C",
+    "explanation": "Art. 26-724 (amendement Québec) : DFARC obligatoire dans les chambres.",
+    "difficulty": "EASY",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 10-200 : à quoi sert l'électrode de mise à la terre ?",
+    "options": [
+      "À faire fonctionner le DDFT",
+      "À dissiper les courants de défaut dans la terre",
+      "À économiser l'énergie",
+      "À mesurer la tension"
+    ],
+    "answer": "B",
+    "explanation": "L'électrode de terre dissipe les courants de défaut dans la terre.",
+    "difficulty": "EASY",
+    "chapter": 8
+  },
+  {
+    "question": "Quelle conséquence pour un entrepreneur qui ne respecte pas le Code ?",
+    "options": [
+      "Avertissement simple",
+      "Amendes et révocation de licence RBQ",
+      "Aucune conséquence",
+      "Prime d'assurance réduite"
+    ],
+    "answer": "B",
+    "explanation": "Le non-respect peut entraîner des amendes et la révocation de la licence RBQ.",
+    "difficulty": "EASY",
+    "chapter": 8
+  },
+  {
+    "question": "Qui effectue les inspections électriques au Québec ?",
+    "options": [
+      "Hydro-Québec",
+      "La RBQ ou organismes mandatés",
+      "La municipalité",
+      "L'entrepreneur lui-même"
+    ],
+    "answer": "B",
+    "explanation": "La RBQ ou ses mandataires (CMEQ, etc.) inspectent les travaux.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Section 8 du Code traite de :",
+    "options": [
+      "Moteurs",
+      "Circuits de dérivation et calculs de charge",
+      "Mise à la terre",
+      "Panneaux solaires"
+    ],
+    "answer": "B",
+    "explanation": "Section 8 : circuits de dérivation et calculs de charge.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 8-200 (1) : facteur de demande pour éclairage résidentiel ?",
+    "options": [
+      "100 % jusqu'à 3 000 VA, 25 % reste",
+      "100 % jusqu'à 1 000 VA, 50 % reste",
+      "100 % jusqu'à 2 000 VA, 35 % reste",
+      "50 % pour tout"
+    ],
+    "answer": "C",
+    "explanation": "Art. 8-200 : 100 % jusqu'à 2 000 VA, 35 % pour le surplus.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 26-702 : distance max entre début du mur et première prise ?",
+    "options": [
+      "0,6 m",
+      "0,9 m",
+      "1,2 m",
+      "1,8 m"
+    ],
+    "answer": "B",
+    "explanation": "Art. 26-702 : 0,9 m du début du mur à la première prise.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Les amendements québécois au CCE sont plus restrictifs concernant :",
+    "options": [
+      "Les moteurs",
+      "Le DDFT et DFARC (plus de locaux requis)",
+      "Les transformateurs",
+      "Les fusibles"
+    ],
+    "answer": "B",
+    "explanation": "Le Québec exige DDFT et DFARC dans plus de locaux que le CCE de base.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 4-026 : couleur du neutre dans l'installation ?",
+    "options": [
+      "Noir ou rouge",
+      "Blanc ou gris",
+      "Vert ou nu",
+      "Jaune"
+    ],
+    "answer": "B",
+    "explanation": "Art. 4-026 : neutre = blanc ou gris.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Section 10 du Code traite de :",
+    "options": [
+      "Protection des circuits",
+      "Mise à la terre et liaison équipotentielle",
+      "Éclairage",
+      "Chauffage"
+    ],
+    "answer": "B",
+    "explanation": "Section 10 : mise à la terre et liaison équipotentielle.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Section 14 du Code traite de :",
+    "options": [
+      "Conducteurs",
+      "Protection contre les surintensités",
+      "Moteurs",
+      "Panneaux solaires"
+    ],
+    "answer": "B",
+    "explanation": "Section 14 : protection contre les surintensités.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Section 64 du Code traite de :",
+    "options": [
+      "Moteurs",
+      "Panneaux solaires et génératrices",
+      "Appareils d'utilisation",
+      "Éclairage de sécurité"
+    ],
+    "answer": "B",
+    "explanation": "Section 64 : installations de panneaux solaires (PV).",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 10-600 : la résistance d'une électrode de terre doit être inférieure à :",
+    "options": [
+      "5 Ω",
+      "10 Ω",
+      "15 Ω",
+      "25 Ω"
+    ],
+    "answer": "D",
+    "explanation": "Art. 10-600 : la résistance de l'électrode de terre doit être ≤ 25 Ω.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 8-200 (2) : charge minimale d'un circuit de prises générales ?",
+    "options": [
+      "1 000 VA",
+      "1 500 VA",
+      "2 000 VA",
+      "2 500 VA"
+    ],
+    "answer": "B",
+    "explanation": "Art. 8-200 : minimum 1 500 VA par circuit de prises 15 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 26-724 : depuis quelle année le DFARC est-il requis au Québec dans les chambres ?",
+    "options": [
+      "2012",
+      "2015",
+      "2018",
+      "2021"
+    ],
+    "answer": "C",
+    "explanation": "L'exigence DFARC dans les chambres date du Code 2018 au Québec.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Lequel n'est pas un amendement québécois au CCE ?",
+    "options": [
+      "DDFT dans la buanderie",
+      "DFARC dans les chambres",
+      "DDFT dans les sous-sols inachevés",
+      "DDFT dans les garages"
+    ],
+    "answer": "C",
+    "explanation": "Le DDFT au sous-sol n'est pas spécifiquement un amendement Québec, contrairement aux autres.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Section 12 du Code traite de :",
+    "options": [
+      "Mise à la terre",
+      "Méthodes de câblage (conduits, câbles, boîtes)",
+      "Calculs de charge",
+      "Éclairage de sécurité"
+    ],
+    "answer": "B",
+    "explanation": "Section 12 : méthodes de câblage.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Section 16 du Code couvre :",
+    "options": [
+      "Piscines",
+      "Installations extérieures",
+      "Moteurs",
+      "Ascenseurs"
+    ],
+    "answer": "B",
+    "explanation": "Section 16 : installations extérieures.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Quel tableau donne les capacités des conducteurs à 60 °C ?",
+    "options": [
+      "Tableau 1",
+      "Tableau 2",
+      "Tableau 5A",
+      "Tableau 11"
+    ],
+    "answer": "B",
+    "explanation": "Tableau 2 (CCE) : capacités des conducteurs selon calibre et température.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Tableau 11 (CCE) donne :",
+    "options": [
+      "Capacités des conducteurs",
+      "Facteurs de demande pour cuisinières",
+      "Remplissage des conduits",
+      "Résistance des fils"
+    ],
+    "answer": "B",
+    "explanation": "Tableau 11 : facteurs de demande pour les cuisinières électriques (80 %).",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 8-104 : charge continue = charge de ?",
+    "options": [
+      "1 h ou plus",
+      "2 h ou plus",
+      "3 h ou plus",
+      "4 h ou plus"
+    ],
+    "answer": "C",
+    "explanation": "Art. 8-104 : charge continue = 3 heures ou plus.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Quelle section du Code traite de l'éclairage de sécurité ?",
+    "options": [
+      "Section 30",
+      "Section 34",
+      "Section 46",
+      "Section 64"
+    ],
+    "answer": "B",
+    "explanation": "Section 34 : éclairage de sécurité.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Le DDFT doit être installé selon :",
+    "options": [
+      "Art. 26-700",
+      "Art. 26-710",
+      "Art. 26-720",
+      "Art. 26-730"
+    ],
+    "answer": "B",
+    "explanation": "Art. 26-710 : installations DDFT.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Densité de charge d'éclairage pour un bureau (commercial) selon le Code ?",
+    "options": [
+      "20 VA/m²",
+      "33 VA/m²",
+      "40 VA/m²",
+      "50 VA/m²"
+    ],
+    "answer": "C",
+    "explanation": "Section 8-200 : éclairage commercial = 40 VA/m².",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 26-724 : amendement Québec exige DFARC dans quelles pièces en plus des chambres ?",
+    "options": [
+      "Cuisine et salon",
+      "Pièces de séjour (living, family room)",
+      "Salle de bain",
+      "Garage"
+    ],
+    "answer": "B",
+    "explanation": "Le Québec exige DFARC dans les chambres ET les pièces de séjour.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 8-102 : calculez la chute de tension max pour un circuit 120 V de dérivation :",
+    "options": [
+      "2,4 V",
+      "3,0 V",
+      "3,6 V",
+      "6,0 V"
+    ],
+    "answer": "C",
+    "explanation": "3 % de 120 V = 3,6 V.",
+    "difficulty": "MEDIUM",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 10-200 : taille minimale d'une électrode de terre en cuivre ?",
+    "options": [
+      "14 AWG",
+      "10 AWG",
+      "6 AWG",
+      "4 AWG"
+    ],
+    "answer": "B",
+    "explanation": "Art. 10-200 : conducteur de terre cuivre 10 AWG minimum.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Le Code de construction du Québec est mis à jour :",
+    "options": [
+      "Tous les 2 ans",
+      "Tous les 3 ans (harmonisé CCE)",
+      "Tous les 5 ans",
+      "Tous les 10 ans"
+    ],
+    "answer": "B",
+    "explanation": "Le CCE est révisé aux 3 ans, le Québec suit avec ses amendements.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Section 22 du Code traite de :",
+    "options": [
+      "Appareils de chauffage par cuisson (cuisinières)",
+      "Chauffage électrique",
+      "Piscines",
+      "Moteurs"
+    ],
+    "answer": "A",
+    "explanation": "Section 22 : chauffage par cuisson (cuisinières, fours).",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Quelle section du Code couvre les piscines ?",
+    "options": [
+      "Section 26",
+      "Section 34",
+      "Section 68",
+      "Section 72"
+    ],
+    "answer": "D",
+    "explanation": "Section 72 : piscines, spas et fontaines.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 18-000 : quelle section traite des emplacements dangereux ?",
+    "options": [
+      "Section 18",
+      "Section 20",
+      "Section 22",
+      "Section 24"
+    ],
+    "answer": "A",
+    "explanation": "Section 18 : emplacements dangereux (classifiés).",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Depuis 2017, le Chapitre V du Code de construction est sous la responsabilité de :",
+    "options": [
+      "CMEQ",
+      "RBQ",
+      "Hydro-Québec",
+      "CSA"
+    ],
+    "answer": "B",
+    "explanation": "Depuis juin 2017, la RBQ administre le Chapitre V (électricité).",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 26-712 : protection DDFT pour les prises extérieures ?",
+    "options": [
+      "Obligatoire",
+      "Non obligatoire",
+      "Seulement si sans auvent",
+      "Recommandée"
+    ],
+    "answer": "A",
+    "explanation": "Art. 26-712 : toutes les prises extérieures 15/20 A doivent avoir DDFT.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Selon le Code, un transformateur doit avoir un sectionneur :",
+    "options": [
+      "Côté primaire seulement",
+      "Côté primaire et secondaire",
+      "Aucun sectionneur requis",
+      "Un sectionneur au choix"
+    ],
+    "answer": "B",
+    "explanation": "Art. 26-250 : sectionneur requis au primaire et au secondaire du transformateur.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Le Tableau 5A du CCE donne :",
+    "options": [
+      "Facteurs de demande",
+      "Facteurs de correction de température",
+      "Capacités à 75 °C",
+      "Remplissage des conduits"
+    ],
+    "answer": "B",
+    "explanation": "Tableau 5A : facteurs de correction de température pour les conducteurs.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Art. 4-024 : quel est le calibre minimum d'un conducteur d'éclairage ?",
+    "options": [
+      "18 AWG",
+      "16 AWG",
+      "14 AWG",
+      "12 AWG"
+    ],
+    "answer": "C",
+    "explanation": "Art. 4-024 : calibre minimum 14 AWG pour conducteur d'éclairage.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Un escalier intérieur de 3 marches ou plus nécessite :",
+    "options": [
+      "Un détecteur de fumée",
+      "Un éclairage commandé par interrupteur 3 voies",
+      "Un DDFT",
+      "Un DFARC"
+    ],
+    "answer": "B",
+    "explanation": "Art. 30-200 : éclairage commandé par interrupteurs 3 voies pour escaliers 3+ marches.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Section 20 du Code traite de :",
+    "options": [
+      "Chauffage électrique",
+      "Piscines",
+      "Installations temporaires",
+      "Ascenseurs"
+    ],
+    "answer": "A",
+    "explanation": "Section 20 : chauffage électrique.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Section 36 du Code traite de :",
+    "options": [
+      "Appareils d'utilisation",
+      "Ascenseurs et monte-charge",
+      "Éclairage de sécurité",
+      "Panneaux solaires"
+    ],
+    "answer": "B",
+    "explanation": "Section 36 : ascenseurs, monte-charge et escaliers mécaniques.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Un tableau de distribution doit avoir un espace libre d'au moins :",
+    "options": [
+      "500 mm",
+      "600 mm",
+      "750 mm",
+      "1 000 mm"
+    ],
+    "answer": "D",
+    "explanation": "Art. 6-200 : espace libre d'au moins 1 000 mm devant un tableau.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Hauteur maximale des disjoncteurs dans un panneau mural ?",
+    "options": [
+      "1,5 m",
+      "1,7 m",
+      "2,0 m",
+      "2,5 m"
+    ],
+    "answer": "B",
+    "explanation": "Art. 6-200 : les disjoncteurs doivent être à ≤ 1,7 m du sol.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Le journal des travaux doit être conservé pendant :",
+    "options": [
+      "1 an",
+      "2 ans",
+      "3 ans",
+      "5 ans"
+    ],
+    "answer": "C",
+    "explanation": "La RBQ exige la conservation du journal des travaux pendant 3 ans.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "La licence RBQ d'entrepreneur en électricité doit être renouvelée :",
+    "options": [
+      "Aux 1 an",
+      "Aux 2 ans",
+      "Aux 3 ans",
+      "Aux 5 ans"
+    ],
+    "answer": "C",
+    "explanation": "La licence RBQ se renouvelle tous les 3 ans.",
+    "difficulty": "HARD",
+    "chapter": 8
+  },
+  {
+    "question": "Quel type de schéma montre le cheminement physique des conducteurs ?",
+    "options": [
+      "Unifilaire",
+      "Multifilaire",
+      "De câblage (wiring)",
+      "De principe"
+    ],
+    "answer": "C",
+    "explanation": "Le schéma de câblage montre le cheminement réel des conducteurs.",
+    "difficulty": "EASY",
+    "chapter": 9
+  },
+  {
+    "question": "Quel schéma montre la logique de commande sans détails physiques ?",
+    "options": [
+      "Schéma de câblage",
+      "Schéma de principe (schematic)",
+      "Plan architectural",
+      "Coupe transversale"
+    ],
+    "answer": "B",
+    "explanation": "Le schéma de principe montre la logique de fonctionnement du circuit.",
+    "difficulty": "EASY",
+    "chapter": 9
+  },
+  {
+    "question": "Symbole du contact normalement ouvert (NO) ?",
+    "options": [
+      "Deux traits parallèles séparés",
+      "Deux traits avec une barre",
+      "Un cercle avec une croix",
+      "Un triangle"
+    ],
+    "answer": "A",
+    "explanation": "Le contact NO est deux traits parallèles sans connexion.",
+    "difficulty": "EASY",
+    "chapter": 9
+  },
+  {
+    "question": "Symbole du contact normalement fermé (NF) ?",
+    "options": [
+      "Deux traits séparés",
+      "Deux traits avec une barre diagonale",
+      "Un cercle",
+      "Une croix"
+    ],
+    "answer": "B",
+    "explanation": "Le NF a une barre diagonale entre les deux traits pour montrer le contact fermé.",
+    "difficulty": "EASY",
+    "chapter": 9
+  },
+  {
+    "question": "Dans un schéma de commande moteur, le circuit de puissance est en :",
+    "options": [
+      "Traits minces",
+      "Traits épais",
+      "Pointillés",
+      "Rouge"
+    ],
+    "answer": "B",
+    "explanation": "Les circuits de puissance (fort courant) sont en traits épais.",
+    "difficulty": "EASY",
+    "chapter": 9
+  },
+  {
+    "question": "Couleur du conducteur neutre dans un schéma ?",
+    "options": [
+      "Noir",
+      "Rouge",
+      "Blanc (ou gris)",
+      "Vert"
+    ],
+    "answer": "C",
+    "explanation": "Le neutre est toujours blanc (ou gris).",
+    "difficulty": "EASY",
+    "chapter": 9
+  },
+  {
+    "question": "Couleur du conducteur de terre dans un schéma ?",
+    "options": [
+      "Noir",
+      "Blanc",
+      "Vert (ou nu)",
+      "Rouge"
+    ],
+    "answer": "C",
+    "explanation": "La terre est verte, ou jaune/vert, ou représentée comme un conducteur nu.",
+    "difficulty": "EASY",
+    "chapter": 9
+  },
+  {
+    "question": "Numérotation des bornes d'un contact :",
+    "options": [
+      "Lettres de A à Z",
+      "Impair = entrée, Pair = sortie",
+      "Couleurs",
+      "Numéros consécutifs"
+    ],
+    "answer": "B",
+    "explanation": "Bornes impaires = entrée, paires = sortie (ex. : 1-2, 3-4).",
+    "difficulty": "EASY",
+    "chapter": 9
+  },
+  {
+    "question": "Un schéma unifilaire représente :",
+    "options": [
+      "Chaque conducteur individuellement",
+      "Un seul trait par circuit",
+      "La vue en coupe",
+      "La photo du panneau"
+    ],
+    "answer": "B",
+    "explanation": "Le schéma unifilaire montre chaque circuit par un seul trait.",
+    "difficulty": "EASY",
+    "chapter": 9
+  },
+  {
+    "question": "Qu'est-ce qu'un schéma multifilaire ?",
+    "options": [
+      "Un schéma avec tous les conducteurs",
+      "Un schéma simple",
+      "Un schéma en couleur",
+      "Un plan d'étage"
+    ],
+    "answer": "A",
+    "explanation": "Le multifilaire montre chaque conducteur individuellement.",
+    "difficulty": "EASY",
+    "chapter": 9
+  },
+  {
+    "question": "Dans un schéma de commande moteur start-stop avec seal-in, le contact de maintien est :",
+    "options": [
+      "Un contact NO du contacteur en parallèle avec le bouton Marche",
+      "Un contact NF",
+      "La bobine du contacteur",
+      "Le bouton Arrêt"
+    ],
+    "answer": "A",
+    "explanation": "Le seal-in est un contact NO auxiliaire du contacteur en parallèle avec le bouton Marche.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Le symbole d'une bobine de contacteur est :",
+    "options": [
+      "Un cercle",
+      "Un rectangle ou une boucle",
+      "Un triangle",
+      "Une croix"
+    ],
+    "answer": "B",
+    "explanation": "La bobine (coil) est représentée par un rectangle (parfois un cercle).",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Sur un schéma, les contacts d'un même relais sont identifiés par :",
+    "options": [
+      "La même couleur",
+      "Le même numéro de relais",
+      "La même forme",
+      "La même lettre"
+    ],
+    "answer": "B",
+    "explanation": "Tous les contacts d'un même relais portent le même numéro (ex. : CR1-1, CR1-2).",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Dans le schéma de puissance triphasé, l'ordre des phases (L1, L2, L3) correspond aux couleurs :",
+    "options": [
+      "Noir, blanc, vert",
+      "Noir, rouge, bleu",
+      "Rouge, noir, blanc",
+      "Vert, jaune, rouge"
+    ],
+    "answer": "B",
+    "explanation": "L1 = noir, L2 = rouge, L3 = bleu (code de couleur canadien pour 600 V).",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Un schéma de câblage montre :",
+    "options": [
+      "La logique seulement",
+      "Les connexions physiques réelles dans les boîtes",
+      "Seulement les composants",
+      "Les prix des composants"
+    ],
+    "answer": "B",
+    "explanation": "Il montre le cheminement et les connexions physiques des conducteurs.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Le circuit de commande d'un démarreur moteur est généralement alimenté en :",
+    "options": [
+      "600 V triphasé",
+      "120 V (entre phase et neutre)",
+      "48 V CC",
+      "12 V CC"
+    ],
+    "answer": "B",
+    "explanation": "Le circuit de commande est typiquement 120 V (phase-neutre).",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Où place-t-on le bouton d'arrêt d'urgence dans un schéma de commande ?",
+    "options": [
+      "En série avec la bobine",
+      "En parallèle avec la bobine",
+      "À la fin du circuit",
+      "Dans le circuit de puissance"
+    ],
+    "answer": "A",
+    "explanation": "L'arrêt d'urgence (NF) est en série avec la bobine du contacteur.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Le symbole NO avec temporisation à la fermeture est :",
+    "options": [
+      "Contact NO + symbole d'horloge",
+      "Contact NF + cercle",
+      "Contact NO + X",
+      "Triangle"
+    ],
+    "answer": "A",
+    "explanation": "La temporisation est indiquée par un symbole d'horloge (⏱) sur le contact.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Le symbole d'un relais thermique (overload) dans un schéma :",
+    "options": [
+      "Un rectangle avec un S",
+      "Un cercle avec une barre diagonale",
+      "Un rectangle avec un symbole thermique",
+      "Une croix"
+    ],
+    "answer": "C",
+    "explanation": "Le relais thermique a un symbole de chaleur (bilame).",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Dans un schéma unifilaire, un circuit 240 V est représenté par :",
+    "options": [
+      "Un trait avec une indication 240 V",
+      "Deux traits",
+      "Un trait épais",
+      "Un trait pointillé"
+    ],
+    "answer": "A",
+    "explanation": "Unifilaire = un trait, avec annotation de la tension et du type de circuit.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Quel est le symbole normalisé pour un transformateur ?",
+    "options": [
+      "Deux enroulements opposés",
+      "Un cercle",
+      "Un triangle",
+      "Une résistance"
+    ],
+    "answer": "A",
+    "explanation": "Le transformateur est représenté par deux enroulements (bobines) face à face.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Sur un schéma de commande, les contacts normalement fermés sont :",
+    "options": [
+      "Fermés au repos",
+      "Ouverts au repos",
+      "Toujours ouverts",
+      "Alternés"
+    ],
+    "answer": "A",
+    "explanation": "Un contact NF est fermé au repos (sans énergie).",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Le schéma de puissance d'un inverseur de sens (3 phases) utilise :",
+    "options": [
+      "Un contacteur",
+      "Deux contacteurs avec interverrouillage",
+      "Trois contacteurs",
+      "Un VFD"
+    ],
+    "answer": "B",
+    "explanation": "Deux contacteurs (un pour chaque sens) avec interverrouillage électrique et mécanique.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Les numéros de bornes IEC pour un contact auxiliaire sont :",
+    "options": [
+      "13-14 pour NO, 21-22 pour NF",
+      "1-2 pour tout",
+      "A1-A2",
+      "X1-X2"
+    ],
+    "answer": "A",
+    "explanation": "Norme IEC : NO = 13-14, NF = 21-22. Bobine = A1-A2.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Un fusible dans un schéma est représenté par :",
+    "options": [
+      "Un rectangle avec un S",
+      "Un cercle ou rectangle avec une barre au centre",
+      "Un triangle",
+      "Une croix"
+    ],
+    "answer": "B",
+    "explanation": "Le symbole du fusible est un cercle ou un rectangle avec une barre.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Le schéma unifilaire est utilisé principalement pour :",
+    "options": [
+      "Le dépannage détaillé",
+      "Les plans d'ensemble du panneau",
+      "Le câblage des prises",
+      "Les couleurs des fils"
+    ],
+    "answer": "B",
+    "explanation": "Le schéma unifilaire donne une vue d'ensemble de la distribution du panneau.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Dans un schéma de commande, le symbole d'une minuterie (timer) est :",
+    "options": [
+      "Un rectangle avec T et valeur",
+      "Un cercle",
+      "Un triangle",
+      "Un carré"
+    ],
+    "answer": "A",
+    "explanation": "La minuterie (timer) est notée T avec sa valeur de temporisation.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Comment identifier le câble dans un schéma de câblage ?",
+    "options": [
+      "Par son numéro de circuit et sa couleur",
+      "Par son prix",
+      "Par le fabriquant",
+      "Par la longueur"
+    ],
+    "answer": "A",
+    "explanation": "Chaque câble est identifié par numéro de circuit et couleur de conducteur.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Le symbole NO (Normalement Ouvert) signifie :",
+    "options": [
+      "Le contact est ouvert quand le relais est désexcité",
+      "Le contact est fermé au repos",
+      "Le contact est toujours ouvert",
+      "Le contact est temporisé"
+    ],
+    "answer": "A",
+    "explanation": "NO = ouvert au repos, se ferme quand le relais est excité.",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Dans un schéma de commande, le retour de la bobine (neutre) est :",
+    "options": [
+      "Optionnel",
+      "Nécessaire pour compléter le circuit",
+      "Toujours à la terre",
+      "Connecté à la phase"
+    ],
+    "answer": "B",
+    "explanation": "Tout circuit de commande doit avoir un retour au neutre (N).",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Dans un schéma de commande moteur avec deux boutons Marche (2 endroits), les contacts Marche sont :",
+    "options": [
+      "En série",
+      "En parallèle",
+      "L'un NO l'autre NF",
+      "Indépendants"
+    ],
+    "answer": "B",
+    "explanation": "Les boutons Marche de 2 endroits sont en parallèle (l'un ou l'autre démarre).",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Dans un schéma de commande, les boutons Arrêt de 2 endroits sont :",
+    "options": [
+      "En parallèle",
+      "En série",
+      "L'un NO l'autre NF",
+      "Indépendants"
+    ],
+    "answer": "B",
+    "explanation": "Les boutons Arrêt (NF) de 2 endroits sont en série (l'un ou l'autre peut arrêter).",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Un schéma de commande avec voyant vert (marche) et rouge (arrêt) : le voyant vert est connecté :",
+    "options": [
+      "En parallèle avec la charge",
+      "En parallèle avec le contact de seal-in",
+      "En série avec la bobine",
+      "Directement à la phase"
+    ],
+    "answer": "B",
+    "explanation": "Le voyant vert (marche) est en parallèle avec la bobine ou le contact auxiliaire.",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Le repérage des conducteurs selon la norme canadienne :",
+    "options": [
+      "Phase A = noir, Phase B = rouge, Phase C = bleu",
+      "Phase A = rouge, Phase B = noir",
+      "Tout en blanc",
+      "Tout en gris"
+    ],
+    "answer": "A",
+    "explanation": "Canada : noir (A), rouge (B), bleu (C) pour 600 V.",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Dans un schéma de commande IEC, la bobine du contacteur est identifiée :",
+    "options": [
+      "13-14",
+      "A1-A2",
+      "1-2",
+      "X1-X2"
+    ],
+    "answer": "B",
+    "explanation": "Norme IEC : bobine = A1-A2.",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Un schéma de commande avec temporisation à la montée (delay on) signifie :",
+    "options": [
+      "Le contact change après le délai à l'excitation",
+      "Le contact change immédiatement",
+      "Le contact change après le délai à la désexcitation",
+      "Aucun changement"
+    ],
+    "answer": "A",
+    "explanation": "Delay-on : le contact change d'état après le délai à partir de l'excitation.",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Le symbole d'un sectionneur dans un schéma unifilaire :",
+    "options": [
+      "Un trait coupé par un angle",
+      "Un cercle avec une barre",
+      "Un rectangle",
+      "Un triangle"
+    ],
+    "answer": "A",
+    "explanation": "Le sectionneur est représenté par un trait coupé en angle (interrupteur rotatif).",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Dans un schéma de câblage, une boîte de dérivation est représentée par :",
+    "options": [
+      "Un cercle",
+      "Un carré (parfois avec des lignes sortantes)",
+      "Un triangle",
+      "Une croix"
+    ],
+    "answer": "B",
+    "explanation": "Les boîtes de dérivation sont des carrés dans les schémas de câblage.",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Sur un schéma, une diode est représentée par :",
+    "options": [
+      "Un triangle barré",
+      "Un triangle avec une ligne (flèche vers une barre)",
+      "Un cercle",
+      "Un carré"
+    ],
+    "answer": "B",
+    "explanation": "La diode : triangle (anode) pointant vers une barre (cathode).",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Numérotation des bornes d'un contact auxiliaire NO selon norme DIN :",
+    "options": [
+      "11-12",
+      "13-14",
+      "21-22",
+      "31-32"
+    ],
+    "answer": "B",
+    "explanation": "DIN : NO = 13-14, NF = 11-12 (ou 21-22).",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Dans le schéma de puissance d'un démarreur Y-Δ, les 3 contacteurs sont :",
+    "options": [
+      "Ligne, Étoile, Triangle",
+      "Ligne, Neutre, Terre",
+      "Phase, Neutre, Commande",
+      "A, B, C"
+    ],
+    "answer": "A",
+    "explanation": "Contacteurs : ligne (KM1), étoile (KM2), triangle (KM3).",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Un schéma électrique doit être conservé selon le Code pendant :",
+    "options": [
+      "Pas requis",
+      "Durée de l'installation",
+      "1 an",
+      "5 ans"
+    ],
+    "answer": "B",
+    "explanation": "Les schémas as-built doivent être conservés pour la durée de l'installation.",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Le symbole d'une prise de courant (réceptacle) dans un plan architectural :",
+    "options": [
+      "Un cercle avec deux traits",
+      "Un carré",
+      "Un triangle",
+      "Une croix"
+    ],
+    "answer": "A",
+    "explanation": "Prise = cercle avec deux traits (comme une prise vue de face).",
+    "difficulty": "MEDIUM",
+    "chapter": 9
+  },
+  {
+    "question": "Un interrupteur 3 voies dans un schéma architectural est identifié par :",
+    "options": [
+      "S3 ou S3W",
+      "SW",
+      "I",
+      "INT"
+    ],
+    "answer": "A",
+    "explanation": "S3 = switch 3-way (interrupteur 3 voies).",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Le symbole d'un chauffe-eau électrique dans un schéma unifilaire :",
+    "options": [
+      "Un rectangle avec un élément chauffant (W)",
+      "Un cercle",
+      "Un triangle",
+      "Un ovale"
+    ],
+    "answer": "A",
+    "explanation": "Chauffe-eau = rectangle avec symbole de résistance chauffante (WH).",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Un voyant lumineux (pilot light) dans le schéma de commande :",
+    "options": [
+      "Un cercle avec une croix",
+      "Un cercle (souvent avec L ou PL)",
+      "Un triangle",
+      "Un carré"
+    ],
+    "answer": "B",
+    "explanation": "Un voyant est représenté par un cercle avec l'identification PL (pilot light).",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Le solénoïde (vanne électromagnétique) dans un schéma :",
+    "options": [
+      "Un cercle avec un S",
+      "Un rectangle avec une boucle et symbole de vanne",
+      "Un triangle",
+      "Une croix"
+    ],
+    "answer": "B",
+    "explanation": "Le solénoïde combine symbole électrique (bobine) et symbole mécanique (vanne).",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Quelle information trouve-t-on dans le cartouche (title block) d'un schéma ?",
+    "options": [
+      "Nom du projet, date, échelle, révision",
+      "Les couleurs des fils",
+      "Le prix",
+      "La date d'achat"
+    ],
+    "answer": "A",
+    "explanation": "Le cartouche contient proj. name, date, échelle, numéro de dessin, rév.",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Le symbole d'un disjoncteur dans un schéma unifilaire :",
+    "options": [
+      "Un trait avec un X",
+      "Un trait interrompu par un symbole d'interrupteur",
+      "Un cercle",
+      "Un rectangle"
+    ],
+    "answer": "B",
+    "explanation": "Le disjoncteur est un interrupteur avec un petit carré (symbole de protection).",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Une thermistance PTC dans un schéma de commande moteur sert à :",
+    "options": [
+      "Mesurer la température du moteur",
+      "Chauffer le moteur",
+      "Protéger contre les courts-circuits",
+      "Réguler la vitesse"
+    ],
+    "answer": "A",
+    "explanation": "PTC (Coefficient de température positif) = sonde de température moteur.",
+    "difficulty": "HARD",
+    "chapter": 9
+  },
+  {
+    "question": "Quelle est la charge d'éclairage de base pour une résidence (art. 8-200) ?",
+    "options": [
+      "33 VA/m²",
+      "40 VA/m²",
+      "50 VA/m²",
+      "60 VA/m²"
+    ],
+    "answer": "A",
+    "explanation": "Art. 8-200 : 33 VA/m² pour l'éclairage résidentiel.",
+    "difficulty": "EASY",
+    "chapter": 10
+  },
+  {
+    "question": "Facteur de demande pour le premier 2 000 VA d'éclairage résidentiel ?",
+    "options": [
+      "50 %",
+      "75 %",
+      "100 %",
+      "125 %"
+    ],
+    "answer": "C",
+    "explanation": "Art. 8-200 : 100 % sur les premiers 2 000 VA.",
+    "difficulty": "EASY",
+    "chapter": 10
+  },
+  {
+    "question": "Facteur de demande pour l'éclairage au-delà de 2 000 VA (résidentiel) ?",
+    "options": [
+      "25 %",
+      "35 %",
+      "50 %",
+      "75 %"
+    ],
+    "answer": "B",
+    "explanation": "Art. 8-200 : 35 % pour l'excédent de 2 000 VA.",
+    "difficulty": "EASY",
+    "chapter": 10
+  },
+  {
+    "question": "Quelle est la charge minimale de service pour une maison unifamiliale ?",
+    "options": [
+      "60 A",
+      "80 A",
+      "100 A",
+      "125 A"
+    ],
+    "answer": "C",
+    "explanation": "Art. 8-200 : minimum 100 A pour une maison unifamiliale.",
+    "difficulty": "EASY",
+    "chapter": 10
+  },
+  {
+    "question": "Une cuisinière électrique utilise quel facteur de demande (Tableau 11) ?",
+    "options": [
+      "60 %",
+      "70 %",
+      "80 %",
+      "90 %"
+    ],
+    "answer": "C",
+    "explanation": "Tableau 11 : facteur de demande 80 % pour une cuisinière.",
+    "difficulty": "EASY",
+    "chapter": 10
+  },
+  {
+    "question": "Charge continue = combien d'heures ou plus ?",
+    "options": [
+      "1 h",
+      "2 h",
+      "3 h",
+      "4 h"
+    ],
+    "answer": "C",
+    "explanation": "Art. 8-104 : charge continue = 3 h ou plus sans interruption.",
+    "difficulty": "EASY",
+    "chapter": 10
+  },
+  {
+    "question": "Quel pourcentage applique-t-on à une charge continue pour le dimensionnement ?",
+    "options": [
+      "100 %",
+      "110 %",
+      "125 %",
+      "150 %"
+    ],
+    "answer": "C",
+    "explanation": "Art. 8-104 : charges continues × 125 %.",
+    "difficulty": "EASY",
+    "chapter": 10
+  },
+  {
+    "question": "Quelle est la puissance typique d'une sécheuse électrique résidentielle ?",
+    "options": [
+      "3 000-4 000 W",
+      "4 500-5 600 W",
+      "6 000-7 000 W",
+      "8 000-10 000 W"
+    ],
+    "answer": "B",
+    "explanation": "Sécheuse typique : 4 500-5 600 W (30 A / 240 V).",
+    "difficulty": "EASY",
+    "chapter": 10
+  },
+  {
+    "question": "Quelle est la puissance typique d'un chauffe-eau électrique résidentiel ?",
+    "options": [
+      "1 500-2 000 W",
+      "3 000-4 500 W",
+      "6 000-8 000 W",
+      "10 000 W+"
+    ],
+    "answer": "B",
+    "explanation": "Chauffe-eau standard : 3 000-4 500 W.",
+    "difficulty": "EASY",
+    "chapter": 10
+  },
+  {
+    "question": "Le facteur de demande pour 2 cuisinières est :",
+    "options": [
+      "100 %",
+      "80 %",
+      "70 %",
+      "65 %"
+    ],
+    "answer": "D",
+    "explanation": "Tableau 11 : 2 cuisinières = 65 % du total.",
+    "difficulty": "EASY",
+    "chapter": 10
+  },
+  {
+    "question": "Maison 200 m² × 33 VA/m² = ?",
+    "options": [
+      "5 600 VA",
+      "6 000 VA",
+      "6 600 VA",
+      "7 200 VA"
+    ],
+    "answer": "C",
+    "explanation": "200 × 33 = 6 600 VA.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Charge d'éclairage de 8 000 VA. Calcul avec facteur de demande résidentiel.",
+    "options": [
+      "3 000 VA",
+      "4 100 VA",
+      "4 500 VA",
+      "5 200 VA"
+    ],
+    "answer": "B",
+    "explanation": "2 000 × 100 % + 6 000 × 35 % = 2 000 + 2 100 = 4 100 VA.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Puissance d'une cuisinière de 12 000 W avec facteur de demande 80 %. Charge calculée ?",
+    "options": [
+      "7 600 W",
+      "8 400 W",
+      "9 600 W",
+      "10 200 W"
+    ],
+    "answer": "C",
+    "explanation": "12 000 × 0,80 = 9 600 W (Tableau 11).",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Quelle est la charge nominale d'une plinthe chauffante de 3 000 W sous 240 V ?",
+    "options": [
+      "3 000 VA (100 %)",
+      "3 750 VA (125 %)",
+      "4 500 VA",
+      "2 400 VA"
+    ],
+    "answer": "B",
+    "explanation": "Le chauffage est continu → 3 000 × 125 % = 3 750 VA.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Total des charges = 35 000 VA sous 240 V. Courant total ?",
+    "options": [
+      "125 A",
+      "137 A",
+      "146 A",
+      "155 A"
+    ],
+    "answer": "C",
+    "explanation": "I = 35 000 / 240 = 145,8 A ≈ 146 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Maison de 250 m² : charge d'éclairage de base ?",
+    "options": [
+      "6 750 VA",
+      "7 250 VA",
+      "8 250 VA",
+      "9 000 VA"
+    ],
+    "answer": "C",
+    "explanation": "250 × 33 = 8 250 VA.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Quelle est la charge d'une thermopompe de 15 A sous 240 V ?",
+    "options": [
+      "3 000 VA",
+      "3 600 VA",
+      "4 200 VA",
+      "4 500 VA"
+    ],
+    "answer": "B",
+    "explanation": "S = 240 × 15 = 3 600 VA (charge non continue sauf si chauffage principal).",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Un lave-vaisselle de 10 A sous 120 V. Charge ?",
+    "options": [
+      "1 000 VA",
+      "1 200 VA",
+      "1 500 VA",
+      "2 000 VA"
+    ],
+    "answer": "B",
+    "explanation": "P = 120 × 10 = 1 200 W.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Service 100 A, 240 V. Puissance maximale disponible ?",
+    "options": [
+      "20 000 W",
+      "22 000 W",
+      "24 000 W",
+      "26 000 W"
+    ],
+    "answer": "C",
+    "explanation": "P = 240 × 100 = 24 000 W.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Charge calculée = 18 000 VA, 240 V. Calibre de service requis ?",
+    "options": [
+      "60 A",
+      "70 A",
+      "80 A",
+      "100 A"
+    ],
+    "answer": "D",
+    "explanation": "I = 18 000/240 = 75 A. Minimum résidentiel = 100 A (art. 8-200).",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Surface résidentielle de 300 m² : éclairage avec facteur de demande ?",
+    "options": [
+      "3 000 VA",
+      "4 365 VA",
+      "6 600 VA",
+      "9 900 VA"
+    ],
+    "answer": "B",
+    "explanation": "300 × 33 = 9 900 VA. Facteur de demande : 2 000 × 100 % + 7 900 × 35 % = 2 000 + 2 765 = 4 765 VA.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Quelle est la charge d'une cuisinière à induction de 15 000 W selon Tableau 11 ?",
+    "options": [
+      "10 500 W",
+      "12 000 W",
+      "13 500 W",
+      "15 000 W"
+    ],
+    "answer": "B",
+    "explanation": "Tableau 11 : 80 % de la puissance = 15 000 × 0,8 = 12 000 W.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Chauffage électrique total 12 000 W. Charge calculée ?",
+    "options": [
+      "12 000 VA",
+      "15 000 VA",
+      "16 000 VA",
+      "18 000 VA"
+    ],
+    "answer": "B",
+    "explanation": "Chauffage = charge continue → 12 000 × 125 % = 15 000 VA.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Total des charges après facteurs de demande = 22 000 VA sous 240 V. Courant ?",
+    "options": [
+      "83 A",
+      "87 A",
+      "92 A",
+      "95 A"
+    ],
+    "answer": "C",
+    "explanation": "I = 22 000/240 = 91,7 A ≈ 92 A.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Piscine avec pompe 1,5 HP, 120 V (FLA = 13 A). Charge ?",
+    "options": [
+      "1 300 VA",
+      "1 560 VA",
+      "1 800 VA",
+      "2 000 VA"
+    ],
+    "answer": "B",
+    "explanation": "P = 120 × 13 = 1 560 VA (moteur : 125 % = 1 950 VA si continu).",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Une maison a une surface de 180 m² : charge d'éclairage avant facteur de demande ?",
+    "options": [
+      "5 280 VA",
+      "5 940 VA",
+      "6 500 VA",
+      "7 200 VA"
+    ],
+    "answer": "B",
+    "explanation": "180 × 33 = 5 940 VA.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Charge d'éclairage après facteur de demande pour 5 940 VA :",
+    "options": [
+      "2 000 VA",
+      "2 500 VA",
+      "3 379 VA",
+      "4 100 VA"
+    ],
+    "answer": "C",
+    "explanation": "2 000 × 100 % + 3 940 × 35 % = 2 000 + 1 379 = 3 379 VA.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Quelle section du Code prescrit la méthode détaillée des calculs de charge résidentiels ?",
+    "options": [
+      "Section 8-200",
+      "Section 26-700",
+      "Section 14-100",
+      "Section 6-200"
+    ],
+    "answer": "A",
+    "explanation": "Art. 8-200 : méthode de calcul de charge pour les habitations.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Une cuisinière de 10 000 W avec Tableau 11 donne quelle charge ?",
+    "options": [
+      "6 500 W",
+      "8 000 W",
+      "9 000 W",
+      "10 000 W"
+    ],
+    "answer": "B",
+    "explanation": "10 000 × 0,80 = 8 000 W.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Une sécheuse de 5 000 W. Facteur de demande ?",
+    "options": [
+      "100 %",
+      "80 %",
+      "50 %",
+      "35 %"
+    ],
+    "answer": "A",
+    "explanation": "Les sécheuses sont à 100 % de leur puissance (pas de facteur de demande).",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Maison 280 m², éclairage + prises + cuisinière 12 000 W + chauffe-eau 4 500 W + chauffage 10 000 W. Approx charge totale ?",
+    "options": [
+      "22 000 VA",
+      "25 000 VA",
+      "27 000 VA",
+      "30 000 VA"
+    ],
+    "answer": "C",
+    "explanation": "Éclairage : 280×33 = 9 240 → F.D. = 2 000+7 240×35% = 4 534 VA. Cuisinière : 12 000×80% = 9 600. Chauffe-eau : 4 500×125% = 5 625. Chauffage : 10 000×125% = 12 500. Total ≈ 4 534+9 600+5 625+12 500 = 32 259 VA.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Un four + une cuisinière, total 18 000 W. Facteur de demande Tableau 11 pour 2 appareils ?",
+    "options": [
+      "80 %",
+      "70 %",
+      "65 %",
+      "50 %"
+    ],
+    "answer": "C",
+    "explanation": "Tableau 11 : 2 appareils de cuisson = 65 % du total. 18 000 × 0,65 = 11 700 W.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Charge calculée totale = 28 000 VA sous 240 V. Calibre de service minimum ?",
+    "options": [
+      "100 A",
+      "110 A",
+      "117 A",
+      "125 A"
+    ],
+    "answer": "C",
+    "explanation": "I = 28 000/240 = 116,7 A. Minimum résidentiel 100 A. Calibre 125 A.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Prises de garage extérieur : comment les comptabiliser ?",
+    "options": [
+      "100 % de la charge nominale",
+      "Facteur de demande de 50 %",
+      "Ne pas compter, inclus dans les prises générales",
+      "35 % seulement"
+    ],
+    "answer": "A",
+    "explanation": "Les prises extérieures sont à 100 % (charge spécifique).",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Un spa extérieur 240 V, 30 A. Charge continue ?",
+    "options": [
+      "3 000 VA",
+      "5 400 VA",
+      "6 000 VA",
+      "7 500 VA"
+    ],
+    "answer": "D",
+    "explanation": "P = 240 × 30 = 7 200 VA. En charge continue (3h+) : 7 200 × 125 % = 9 000 VA. Sans 125 % : 7 200 VA.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Surface de plancher (habitable) d'une maison = 350 m². Éclairage avec facteur de demande ?",
+    "options": [
+      "3 200 VA",
+      "5 200 VA",
+      "5 675 VA",
+      "6 500 VA"
+    ],
+    "answer": "C",
+    "explanation": "350×33 = 11 550 VA. 2 000×100% + 9 550×35% = 2 000 + 3 343 = 5 343 VA.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Puissance du chauffage électrique 15 000 W. Dimensionnement continu ?",
+    "options": [
+      "15 000 VA",
+      "16 500 VA",
+      "18 750 VA",
+      "20 000 VA"
+    ],
+    "answer": "C",
+    "explanation": "15 000 × 125 % = 18 750 VA.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Quel facteur de demande pour 3 cuisinières selon Tableau 11 ?",
+    "options": [
+      "80 %",
+      "65 %",
+      "55 %",
+      "45 %"
+    ],
+    "answer": "C",
+    "explanation": "Tableau 11 : 3 cuisinières = 55 % du total.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Total des charges : 42 000 VA sous 240 V. Courant et calibre de service ?",
+    "options": [
+      "150 A, 150 A",
+      "160 A, 175 A",
+      "175 A, 200 A",
+      "200 A, 200 A"
+    ],
+    "answer": "C",
+    "explanation": "I = 42 000/240 = 175 A. Calibre normalisé 200 A.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Comment traite-t-on un moteur de thermopompe de 20 A, 240 V dans les calculs de charge ?",
+    "options": [
+      "20 A × 240 V = 4 800 VA (100 %)",
+      "20 A × 240 V × 125 % = 6 000 VA (si continu)",
+      "20 A × 240 V × 80 %",
+      "Inclus dans l'éclairage"
+    ],
+    "answer": "B",
+    "explanation": "La thermopompe est une charge continue de chauffage : I × V × 125 %.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Un micro-ondes de 1 500 W est une charge :",
+    "options": [
+      "Continue (×125 %)",
+      "Non continue (×100 %)",
+      "Facteur de demande 50 %",
+      "Exemptée"
+    ],
+    "answer": "B",
+    "explanation": "Le micro-ondes est une charge non continue (< 3h).",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Charge d'éclairage 12 000 VA avec facteur de demande résidentiel :",
+    "options": [
+      "3 500 VA",
+      "4 500 VA",
+      "5 500 VA",
+      "6 500 VA"
+    ],
+    "answer": "C",
+    "explanation": "2 000 × 100 % + 10 000 × 35 % = 2 000 + 3 500 = 5 500 VA.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Un contrat de 200 A, 240 V : puissance max continue ?",
+    "options": [
+      "38 400 W",
+      "40 000 W",
+      "42 000 W",
+      "48 000 W"
+    ],
+    "answer": "A",
+    "explanation": "200 A × 240 V = 48 000 W. Mais 80 % max pour continu = 48 000 × 0,8 = 38 400 W.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Trois plinthes chauffantes de 1 500 W chacune. Courant total avec 125 % ?",
+    "options": [
+      "15,6 A",
+      "18,75 A",
+      "21,3 A",
+      "23,4 A"
+    ],
+    "answer": "D",
+    "explanation": "Total = 4 500 W. ×125 % = 5 625 VA. I = 5 625/240 = 23,4 A.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Service 200 A, 240 V. Quelles charges max typiques ?",
+    "options": [
+      "40-44 000 W",
+      "44-48 000 W",
+      "48-52 000 W",
+      "55-60 000 W"
+    ],
+    "answer": "B",
+    "explanation": "200 A × 240 V = 48 000 W. 80 % continu = 38 400 W.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Un compteur électrique 200 A peut soutenir combien de temps 250 A ?",
+    "options": [
+      "Pas permis",
+      "Temporairement (courbe thermique)",
+      "Indéfini",
+      "1 minute"
+    ],
+    "answer": "B",
+    "explanation": "Un compteur peut accepter des surcharges temporaires selon sa courbe thermique.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Charge totale calculée = 55 000 VA. Calibre de service sur 240 V ?",
+    "options": [
+      "200 A",
+      "225 A",
+      "250 A",
+      "300 A"
+    ],
+    "answer": "B",
+    "explanation": "I = 55 000/240 = 229 A. Calibre normalisé 225 A.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "question": "Le facteur de puissance en résidentiel est généralement considéré à :",
+    "options": [
+      "0,80",
+      "0,85",
+      "0,90-1,0",
+      "0,95-1,0"
+    ],
+    "answer": "C",
+    "explanation": "En résidentiel, on considère un FP de 0,90 à 1,0.",
+    "difficulty": "MEDIUM",
+    "chapter": 10
+  },
+  {
+    "question": "Maison de 150 m² avec éclairage 33 VA/m², cuisinière 10 000 W, chauffe-eau 4 500 W, sécheuse 5 600 W, chauffage 8 000 W. Charge totale approximative ?",
+    "options": [
+      "22 000 VA",
+      "24 500 VA",
+      "26 500 VA",
+      "28 000 VA"
+    ],
+    "answer": "C",
+    "explanation": "Éclairage : 150×33=4 950 → 2 000+2 950×0,35=3 033 VA. Cuisinière : 10 000×0,8=8 000. Chauffe-eau : 4 500×1,25=5 625. Sécheuse : 5 600. Chauffage : 8 000×1,25=10 000. Total = 3 033+8 000+5 625+5 600+10 000 = 32 258 VA.",
+    "difficulty": "HARD",
+    "chapter": 10
+  },
+  {
+    "chapter": 1,
+    "question": "Une résistance de 15 Ω laisse passer 8 A. Quelle est la tension appliquée ?",
+    "options": [
+      "100 V",
+      "110 V",
+      "120 V",
+      "130 V"
+    ],
+    "answer": "C",
+    "explanation": "V = I × R = 8 × 15 = 120 V.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la résistance équivalente de trois résistances de 10 Ω, 20 Ω et 30 Ω en série ?",
+    "options": [
+      "50 Ω",
+      "55 Ω",
+      "60 Ω",
+      "65 Ω"
+    ],
+    "answer": "C",
+    "explanation": "Rt = 10 + 20 + 30 = 60 Ω.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Deux résistances de 12 Ω en parallèle. Résistance équivalente ?",
+    "options": [
+      "4 Ω",
+      "6 Ω",
+      "8 Ω",
+      "12 Ω"
+    ],
+    "answer": "B",
+    "explanation": "1/Rt = 1/12+1/12 = 2/12 = 1/6. Rt = 6 Ω.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Un fil a une résistance de 0,5 Ω. Combien de puissance est dissipée avec 10 A ?",
+    "options": [
+      "25 W",
+      "40 W",
+      "50 W",
+      "75 W"
+    ],
+    "answer": "C",
+    "explanation": "P = I² × R = 100 × 0,5 = 50 W.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la tension aux bornes d'une résistance de 8 Ω traversée par 6 A ?",
+    "options": [
+      "36 V",
+      "42 V",
+      "48 V",
+      "54 V"
+    ],
+    "answer": "C",
+    "explanation": "V = 6 × 8 = 48 V.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Un circuit de 240 V avec R = 30 Ω. Courant et puissance ?",
+    "options": [
+      "6 A, 1 440 W",
+      "8 A, 1 920 W",
+      "10 A, 2 400 W",
+      "12 A, 2 880 W"
+    ],
+    "answer": "B",
+    "explanation": "I = 240/30 = 8 A. P = 8² × 30 = 64 × 30 = 1 920 W.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Un moteur triphasé absorbe 15 A sous 600 V avec cos φ = 0,86. Puissance active ?",
+    "options": [
+      "10,9 kW",
+      "12,7 kW",
+      "13,4 kW",
+      "14,2 kW"
+    ],
+    "answer": "C",
+    "explanation": "P = √3 × V × I × cos φ = 1,732 × 600 × 15 × 0,86 = 13 400 W = 13,4 kW.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la fréquence d'un alternateur 4 pôles tournant à 1 800 tr/min ?",
+    "options": [
+      "50 Hz",
+      "60 Hz",
+      "70 Hz",
+      "80 Hz"
+    ],
+    "answer": "B",
+    "explanation": "f = (n × p)/120 = (1 800 × 4)/120 = 7 200/120 = 60 Hz.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "La valeur RMS permet de comparer le CA au CC car :",
+    "options": [
+      "Elle donne la tension moyenne",
+      "Elle produit le même échauffement dans une résistance",
+      "Elle représente la tension crête",
+      "Elle est plus simple à mesurer"
+    ],
+    "answer": "B",
+    "explanation": "La valeur RMS (efficace) d'un CA produit la même puissance qu'un CC équivalent.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le rôle d'un variateur de fréquence (VFD) ?",
+    "options": [
+      "Démarrer le moteur progressivement",
+      "Varier la vitesse en modifiant la fréquence",
+      "Protéger contre les surcharges",
+      "Inverser le sens de rotation"
+    ],
+    "answer": "B",
+    "explanation": "Le VFD modifie la fréquence d'alimentation pour contrôler la vitesse du moteur.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Un moteur de 15 kW, 600 V triphasé, cos φ = 0,85, η = 0,91. Courant absorbé ?",
+    "options": [
+      "15,2 A",
+      "17,3 A",
+      "18,6 A",
+      "20,1 A"
+    ],
+    "answer": "C",
+    "explanation": "I = 15 000/(600 × √3 × 0,85 × 0,91) = 15 000/803 = 18,7 A.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 10,
+    "question": "Charge totale calculée d'une maison = 33 000 VA sous 240 V. Quel calibre de service choisir ?",
+    "options": [
+      "125 A",
+      "150 A",
+      "175 A",
+      "200 A"
+    ],
+    "answer": "B",
+    "explanation": "I = 33 000/240 = 137,5 A. Calibre normalisé supérieur : 150 A.",
+    "difficulty": "MEDIUM"
+  }
+]

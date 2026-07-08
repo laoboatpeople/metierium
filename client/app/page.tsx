@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Script from 'next/script';
 import {
   GraduationCap,
   BookOpen,
@@ -27,6 +28,31 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-[#0A0E1A] text-[#F8FAFC] font-sans overflow-x-hidden">
+      {/* JSON-LD Structured Data */}
+      <Script id="json-ld" type="application/ld+json" strategy="beforeInteractive">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          "name": "Certification Québec",
+          "description": "Préparation aux examens de métiers au Québec — CMEQ, CMMTQ, QBQ",
+          "url": "https://certificationquebec.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Québec",
+            "addressCountry": "CA"
+          },
+          "offers": {
+            "@type": "Offer",
+            "description": "Préparation aux examens de certification",
+            "offeredBy": { "@type": "Organization", "name": "Certification Québec" }
+          },
+          "hasCourse": [
+            { "@type": "Course", "name": "Préparation Examen Électricien CMEQ", "description": "Préparation à l'examen des maîtres électriciens du Québec", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+            { "@type": "Course", "name": "Préparation Examen Plombier CMMTQ", "description": "Préparation à l'examen de certification en plomberie", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+            { "@type": "Course", "name": "Préparation Examen Soudeur QBQ", "description": "Préparation à l'examen de certification en soudage", "provider": { "@type": "Organization", "name": "Certification Québec" } }
+          ]
+        }
+      `}</Script>
       {/* ===== NAVIGATION ===== */}
       <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0A0E1A]/80 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">

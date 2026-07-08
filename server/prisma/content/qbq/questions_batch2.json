@@ -1,0 +1,3434 @@
+[
+  {
+    "chapter": 1,
+    "question": "Quel procédé de soudage utilise une électrode de tungstène non consommable avec baguette d'apport séparée?",
+    "options": [
+      "SMAW",
+      "GTAW (TIG)",
+      "GMAW (MIG/MAG)",
+      "FCAW"
+    ],
+    "answer": "Option B",
+    "explanation": "Le GTAW (TIG) utilise une électrode de tungstène non consommable. Le métal d'apport est ajouté manuellement sous forme de baguette.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le rôle principal du laitier (slag) formé par l'enrobage d'une électrode SMAW?",
+    "options": [
+      "Conduire le courant",
+      "Protéger le bain de fusion de l'oxydation au refroidissement",
+      "Augmenter la vitesse de soudage",
+      "Réduire la température de l'arc"
+    ],
+    "answer": "Option B",
+    "explanation": "Le laitier flotte sur le bain de fusion et protège le métal chaud de l'oxydation pendant le refroidissement. Il ralentit aussi la vitesse de refroidissement.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel terme désigne la distance entre le tube contact et la pièce en GMAW?",
+    "options": [
+      "Angle de travail",
+      "Stick-out (dégagement)",
+      "Longueur d'arc",
+      "Pénétration"
+    ],
+    "answer": "Option B",
+    "explanation": "Le stick-out (ou dégagement) est la distance entre l'extrémité du tube contact et la pièce. Typiquement 12-20 mm selon le fil et le mode.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce que le facteur de marche (duty cycle) d'un poste de soudage?",
+    "options": [
+      "Consommation électrique max",
+      "Pourcentage du temps de soudage sur 10 min à un courant donné",
+      "Tension à vide",
+      "Épaisseur max soudable"
+    ],
+    "answer": "Option B",
+    "explanation": "Par ex. 60% à 250 A = 6 min de soudage, 4 min de repos. Basé sur un cycle de 10 min selon CSA.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la position de soudage 1G?",
+    "options": [
+      "Vertical ascendant",
+      "À plat avec rotation du tuyau",
+      "Au-dessus de la tête",
+      "Tuyau fixe à 45°"
+    ],
+    "answer": "Option B",
+    "explanation": "Position 1G = soudage à plat avec rotation du tuyau. C'est la position la plus facile car la gravité aide le bain.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel type de courant produisent la plupart des postes de soudage modernes?",
+    "options": [
+      "AC seulement",
+      "DC avec polarité réversible",
+      "Triphasé seulement",
+      "AC haute fréquence"
+    ],
+    "answer": "Option B",
+    "explanation": "Les postes modernes (redresseurs/inverseurs) produisent du DC avec inversion de polarité. Le DC offre un arc plus stable que l'AC.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'appelle-t-on le 'bain de fusion' (weld pool) en soudage?",
+    "options": [
+      "Métal d'apport avant solidification",
+      "Zone du métal de base qui a fondu",
+      "Zone de métal liquide formée pendant le soudage",
+      "Laitier en fusion"
+    ],
+    "answer": "Option C",
+    "explanation": "Le bain de fusion est la zone liquide composée du métal de base et du métal d'apport fondus.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle température atteint un arc électrique de soudage?",
+    "options": [
+      "1 000-3 000 °C",
+      "3 000-20 000 °C",
+      "500-1 500 °C",
+      "20 000-30 000 °C"
+    ],
+    "answer": "Option B",
+    "explanation": "L'arc atteint 3 000 à 20 000 °C, suffisant pour faire fondre l'acier (≈1 500 °C).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Fonction principale de l'enrobage d'une électrode SMAW:",
+    "options": [
+      "Conduire l'électricité",
+      "Protéger le métal en fusion par gaz et laitier",
+      "Augmenter la résistance",
+      "Réduire le poids"
+    ],
+    "answer": "Option B",
+    "explanation": "L'enrobage génère des gaz protecteurs, forme du laitier, stabilise l'arc et ajoute des éléments d'alliage.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "En GTAW (TIG), quel courant pour l'aluminium?",
+    "options": [
+      "DCEN",
+      "DCEP",
+      "AC avec haute fréquence",
+      "DC pulsé"
+    ],
+    "answer": "Option C",
+    "explanation": "L'AC combine nettoyage de l'oxyde (DCEP) et pénétration (DCEN). La HF stabilise l'arc au passage à zéro.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce que la tension à vide (OCV)?",
+    "options": [
+      "Tension pendant le soudage",
+      "Tension poste allumé sans soudage, pour amorcer l'arc",
+      "Tension min pour fondre l'électrode",
+      "Tension d'alimentation"
+    ],
+    "answer": "Option B",
+    "explanation": "L'OCV varie de 50-100 V. Essentielle pour l'amorçage de l'arc.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Effet d'une augmentation de la vitesse de soudage en GMAW?",
+    "options": [
+      "Augmente la pénétration",
+      "Réduit largeur et pénétration du cordon",
+      "Augmente le volume déposé",
+      "Aucun effet"
+    ],
+    "answer": "Option B",
+    "explanation": "Vitesse élevée = moins d'apport de chaleur par unité de longueur = cordon plus étroit et moins pénétrant.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce que l'angle de travail (work angle)?",
+    "options": [
+      "Angle électrode-pièce perpendiculaire à l'axe du joint",
+      "Angle dans la direction de soudage",
+      "Angle de chanfrein",
+      "Angle entre les pièces"
+    ],
+    "answer": "Option A",
+    "explanation": "L'angle de travail est dans le plan perpendiculaire à l'axe du joint. L'angle de déplacement (travel angle) est dans le plan parallèle.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "En tuyauterie, que signifie la position 5G?",
+    "options": [
+      "Tuyau horizontal fixe sans rotation",
+      "Tuyau vertical avec rotation",
+      "Tuyau incliné à 45° fixe",
+      "Tuyau horizontal avec rotation"
+    ],
+    "answer": "Option A",
+    "explanation": "5G = tuyau horizontal fixe. Le soudeur soude autour du tuyau, passant par toutes les positions.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce que la longueur d'arc?",
+    "options": [
+      "Distance électrode-pièce; arc long = cordon large, moins de pénétration",
+      "Distance tube contact-pièce fixe",
+      "Longueur du cordon",
+      "Distance porte-électrode-pièce"
+    ],
+    "answer": "Option A",
+    "explanation": "Arc long = tension élevée = cordon large, faible pénétration. Arc court = cordon étroit, bonne pénétration.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Avantage d'un poste à inverseur vs poste traditionnel?",
+    "options": [
+      "60-80% plus léger à puissance égale",
+      "Meilleur AC seulement",
+      "Facteur de marche réduit",
+      "Coût moins élevé"
+    ],
+    "answer": "Option A",
+    "explanation": "Les inverseurs sont 60-80% plus légers avec 85-90% d'efficacité vs 50-60%.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Effet d'une tension trop élevée en GMAW?",
+    "options": [
+      "Cordon étroit, pénétration excessive",
+      "Cordon large, projections, risque de brûlure",
+      "Arc instable, porosité",
+      "Taux de dépôt réduit"
+    ],
+    "answer": "Option B",
+    "explanation": "Tension trop haute = cordon large, projections, risque de burn-through sur tôles minces.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Différence entre joint rainuré (groove) et joint d'angle (fillet)?",
+    "options": [
+      "Angle = structural, rainuré = cosmétique",
+      "Rainuré = pièces alignées, Angle = pièces perpendiculaires",
+      "Rainuré = chanfrein obligatoire",
+      "Angle = toujours plus résistant"
+    ],
+    "answer": "Option B",
+    "explanation": "Joint rainuré = pièces dans le même plan. Joint d'angle = pièces perpendiculaires (~70% des assemblages).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce que le soudage vertical descendant (downhill)?",
+    "options": [
+      "Soudage de bas en haut",
+      "Soudage de haut en bas, plus rapide mais moins pénétrant",
+      "Soudage incliné à 30°",
+      "Électrode vers le bas"
+    ],
+    "answer": "Option B",
+    "explanation": "Le downhill est plus rapide avec moins de pénétration, utilisé pour tôles minces et passes de couverture.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Que signifie 'MAG' en soudage?",
+    "options": [
+      "Metal Active Gas — gaz actif CO₂/Ar-CO₂",
+      "Manual Arc Gun",
+      "Mild Arc Gas",
+      "Multiple Arc Generator"
+    ],
+    "answer": "Option A",
+    "explanation": "MAG = gaz actif chimiquement (CO₂). MIG = gaz inerte (Ar, He).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel paramètre contrôle principalement la pénétration en SMAW?",
+    "options": [
+      "Tension",
+      "Courant (ampérage)",
+      "Vitesse de dévidage",
+      "Grosseur des grains"
+    ],
+    "answer": "Option B",
+    "explanation": "Le courant est le principal facteur de pénétration. La tension contrôle largeur et forme.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Rôle du 'backing' (support) en soudage?",
+    "options": [
+      "Plaque de maintien",
+      "Matériau sous la racine retenant le métal fondu",
+      "Dernière passe",
+      "Refroidissement"
+    ],
+    "answer": "Option B",
+    "explanation": "Le backing (cuivre, céramique, métal) supporte le métal fondu et prévient le brûlage.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Distribution de chaleur en polarité DC+ (DCEP)?",
+    "options": [
+      "~66% pièce, ~33% électrode",
+      "~33% pièce, ~66% électrode",
+      "Égal",
+      "Tout dans l'arc"
+    ],
+    "answer": "Option A",
+    "explanation": "DC+ = anode = pièce = 2/3 de la chaleur, meilleure pénétration.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Rôle de la pince de masse en soudage?",
+    "options": [
+      "Protection électrique",
+      "Compléter le circuit sur surface propre sans peinture",
+      "Alimenter le poste",
+      "Mesurer le courant"
+    ],
+    "answer": "Option B",
+    "explanation": "La masse doit être fixée près du joint, sur métal nu, pour éviter chute de tension et arcs parasites.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce que la position 3G?",
+    "options": [
+      "Soudure d'angle horizontale",
+      "Soudure rainurée verticale",
+      "Soudure à plat",
+      "Soudure au plafond"
+    ],
+    "answer": "Option B",
+    "explanation": "3G = rainurée verticale. Le soudeur choisit montant (uphill) pour pénétration ou descendant (downhill) pour vitesse.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Poste 40% à 400 A, temps de soudage continu?",
+    "options": [
+      "2 min",
+      "4 min",
+      "6 min",
+      "8 min"
+    ],
+    "answer": "Option B",
+    "explanation": "40% × 10 min = 4 min de soudage à 400 A, 6 min de repos.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Formule de l'apport de chaleur (heat input)?",
+    "options": [
+      "U×I×60 / V (mm/min)",
+      "U×I / V",
+      "I×60 / (U×V)",
+      "U×I×60 / (1000×V mm/min)"
+    ],
+    "answer": "Option D",
+    "explanation": "Apport (kJ/mm) = (Tension × Courant × 60) / (1000 × Vitesse mm/min).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Effets d'un arc long en SMAW?",
+    "options": [
+      "Meilleure pénétration",
+      "Projections, porosité, protection gazeuse affaiblie",
+      "Arc plus stable",
+      "Aucun effet"
+    ],
+    "answer": "Option B",
+    "explanation": "Arc long = nuage de gaz éloigné = protection réduite = porosité et projections.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Relation ampérage/diamètre d'électrode SMAW?",
+    "options": [
+      "A = Ømm × 25",
+      "A = Ømm × 40-65",
+      "A = (Ømm)² × 10",
+      "A = Ømm × 100"
+    ],
+    "answer": "Option B",
+    "explanation": "40-65 A/mm. Ex: 3.2 mm = 130-200 A. E6010 = haut, E7018 = bas.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Rôle de la haute fréquence (HF) en GTAW?",
+    "options": [
+      "Amorcer l'arc sans contact pour éviter la contamination du tungstène",
+      "Augmenter la température",
+      "Nettoyer la surface",
+      "Réduire la tension"
+    ],
+    "answer": "Option A",
+    "explanation": "La HF ionise l'entrefer pour amorcer l'arc sans contact. Essentiel pour ne pas contaminer le tungstène.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Différence entre 2F et 2G?",
+    "options": [
+      "2F = joint d'angle horizontal; 2G = joint rainuré horizontal",
+      "2F = plat; 2G = plafond",
+      "2F = tuyau; 2G = tôle",
+      "2F = V; 2G = U"
+    ],
+    "answer": "Option A",
+    "explanation": "F = fillet (angle), G = groove (rainuré). Les deux en position horizontale.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Angle de déplacement recommandé SMAW à plat?",
+    "options": [
+      "5-10°",
+      "15-25°",
+      "30-45°",
+      "50-60°"
+    ],
+    "answer": "Option B",
+    "explanation": "15-25°. Trop faible = bombé/manque fusion. Trop fort = projections/undercut.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce que l'arc blow (soufflage magnétique)?",
+    "options": [
+      "Déviation de l'arc par champ magnétique",
+      "Augmentation de l'ampérage",
+      "Refroidissement de l'arc",
+      "Vibration de l'électrode"
+    ],
+    "answer": "Option A",
+    "explanation": "Solutions : passer en AC, enrouler le câble de masse, déplacer la masse.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Que signifie CSA?",
+    "options": [
+      "Canadian Soudage Association",
+      "Canadian Standards Association",
+      "Canadian Steel Association",
+      "Comité de Soudage Acier"
+    ],
+    "answer": "Option B",
+    "explanation": "Canadian Standards Association. Au Québec, le BNQ collabore avec la CSA via QBQ.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "But principal d'une WPS?",
+    "options": [
+      "Évaluer le soudeur",
+      "Documenter les paramètres de soudage selon une procédure qualifiée",
+      "Certifier le poste",
+      "Calculer le prix"
+    ],
+    "answer": "Option B",
+    "explanation": "La WPS documente procédé, métaux, électrodes, gaz, paramètres et préchauffage.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Qui qualifie une WPS selon CSA W47.1?",
+    "options": [
+      "Le soudeur",
+      "Le fabricant (compagnie certifiée)",
+      "Le client",
+      "L'inspecteur"
+    ],
+    "answer": "Option B",
+    "explanation": "Le fabricant doit faire qualifier ses WPS par essais mécaniques avant production.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Que signifie PQR?",
+    "options": [
+      "Procedure Qualification Record",
+      "Practical Quality Review",
+      "Process Qualification Requirement",
+      "Production Quality Report"
+    ],
+    "answer": "Option A",
+    "explanation": "Le PQR enregistre les résultats des essais de qualification de la WPS.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle norme régit le soudage des structures en acier?",
+    "options": [
+      "CSA W47.1",
+      "CSA W59",
+      "CSA W117.2",
+      "CSA W178"
+    ],
+    "answer": "Option B",
+    "explanation": "CSA W59 établit conception, fabrication et inspection des structures en acier soudées.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Rôle de la norme CSA W178?",
+    "options": [
+      "Soudage de l'aluminium",
+      "Certification des organismes d'inspection",
+      "Conception des joints",
+      "Sécurité"
+    ],
+    "answer": "Option B",
+    "explanation": "CSA W178 certifie les organismes d'inspection, en complément de W47.1 et W59.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Que signifie QBQ?",
+    "options": [
+      "Québec Bureau de la Qualité",
+      "Québec Board of Trades",
+      "Québec Bureau de Quarantaine",
+      "Qualification des Bâtiments"
+    ],
+    "answer": "Option B",
+    "explanation": "Québec Board of Trades — Bureau de qualification des métiers du Québec.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Différence Division 1 vs Division 2 selon CSA W47.1?",
+    "options": [
+      "1=bâtiments, 2=ponts",
+      "1=haute responsabilité + superviseur niv2/3; 2=modérée",
+      "1=atelier, 2=chantier",
+      "1=acier, 2=alu"
+    ],
+    "answer": "Option B",
+    "explanation": "Division 1 : WPS qualifiées, superviseur niv2/3, inspection rigoureuse.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce qu'une variable essentielle dans une WPS?",
+    "options": [
+      "Paramètre optionnel",
+      "Paramètre dont tout changement hors limites requiert requalification",
+      "Paramètre libre",
+      "Paramètre de sécurité"
+    ],
+    "answer": "Option B",
+    "explanation": "Procédé, épaisseur, métal, électrode, préchauffage sont des variables essentielles.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Organisme certifiant les soudeurs au Québec?",
+    "options": [
+      "CSA International",
+      "BNQ via QBQ",
+      "CWB",
+      "ASME"
+    ],
+    "answer": "Option B",
+    "explanation": "Le BNQ via QBQ certifie au Québec. Le CWB dans les autres provinces.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Soudure de Catégorie A selon CSA W59?",
+    "options": [
+      "La moins exigeante",
+      "Critique en traction/fatigue, critères les plus stricts",
+      "Esthétique",
+      "Temporaire"
+    ],
+    "answer": "Option B",
+    "explanation": "Catégorie A : undercut max 0.8 mm, aucune fissure, aucune porosité alignée.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce qu'une variable non-essentielle?",
+    "options": [
+      "Ne change jamais",
+      "Modifiable sans requalification",
+      "Toujours requalifiée",
+      "Optionnelle"
+    ],
+    "answer": "Option B",
+    "explanation": "Ex: marque du poste, débit de gaz. Documenté comme révision.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Rôle du superviseur de soudage selon CSA W47.1?",
+    "options": [
+      "Souder les joints",
+      "Superviser, approuver WPS, assurer conformité",
+      "Inspecter",
+      "Former"
+    ],
+    "answer": "Option B",
+    "explanation": "Gère la technique : approbation WPS, surveillance, contrôle qualité. Niveaux 1, 2 ou 3.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Porosité sur soudure d'angle selon CSA W59?",
+    "options": [
+      "Aucune permise",
+      "≤3mm si espacement ≥25mm",
+      "≤1.5mm sans limite",
+      "Toute acceptable"
+    ],
+    "answer": "Option B",
+    "explanation": "Porosité surface ≤3mm, espacement ≥25mm acceptée. Alignées = rejet.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Portée de CSA W47.1?",
+    "options": [
+      "Certification individuelle",
+      "Certification des compagnies de soudage en acier",
+      "Conception",
+      "Sécurité"
+    ],
+    "answer": "Option B",
+    "explanation": "W47.1 = acier. Aluminium = W47.2, Inox = W47.3.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quand un WPQ est-il requis?",
+    "options": [
+      "Qualifier une procédure",
+      "Démontrer la capacité du soudeur selon une WPS",
+      "Certifier le poste",
+      "Valider le gaz"
+    ],
+    "answer": "Option B",
+    "explanation": "Le WPQ teste le soudeur par des essais : pliage, macrographie, parfois traction.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Validité de la certification QBQ?",
+    "options": [
+      "1 an",
+      "2 ans",
+      "3 ans",
+      "5 ans"
+    ],
+    "answer": "Option B",
+    "explanation": "2 ans, avec 8 heures de formation continue par an.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Préchauffage obligatoire selon CSA W59?",
+    "options": [
+      "Épaisseur >12mm",
+      "Épaisseur >25mm ou T°<5°C ou humidité",
+      "Toujours",
+      "Jamais"
+    ],
+    "answer": "Option B",
+    "explanation": "Obligatoire si >25mm, T°<5°C, ou présence d'humidité.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Contenu obligatoire d'un WPQ?",
+    "options": [
+      "Date et nom",
+      "WPS, coupon, résultats, identification du soudeur",
+      "CV",
+      "Facture"
+    ],
+    "answer": "Option B",
+    "explanation": "Le WPQ lie le soudeur à une WPS, procédé, position, épaisseur, métal.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Fonction de CSA W117.2?",
+    "options": [
+      "Soudage des structures",
+      "Sécurité en soudage (EPI, ventilation, incendie)",
+      "Certification",
+      "Inspection"
+    ],
+    "answer": "Option B",
+    "explanation": "CSA W117.2 règle la sécurité : équipement, ventilation, prévention d'incendie.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Rôle du BNQ dans QBQ?",
+    "options": [
+      "Développer les normes CSA",
+      "Administrer examens et certifier les soudeurs",
+      "Inspecter les structures",
+      "Vendre l'équipement"
+    ],
+    "answer": "Option B",
+    "explanation": "Le BNQ développe les examens, certifie, tient le registre des certifications QBQ.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Responsabilité de l'employeur selon CSA W47.1?",
+    "options": [
+      "Payer les salaires",
+      "S'assurer que les soudeurs sont certifiés pour le travail",
+      "Fournir le lunch",
+      "Sécurité incendie"
+    ],
+    "answer": "Option B",
+    "explanation": "L'employeur vérifie les certifications QBQ valides et la disponibilité des WPS.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Norme vs Code en soudage?",
+    "options": [
+      "Identiques",
+      "Norme=spécifications; Code=exigence légale adoptée",
+      "Code=international; Norme=canadien",
+      "Code=soudage; Norme=inspection"
+    ],
+    "answer": "Option B",
+    "explanation": "Ex: CSA W59 (norme) est incorporée par référence dans le Code de construction.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Limites des variables essentielles pour l'épaisseur selon CSA W47.1?",
+    "options": [
+      "±10%",
+      "0.5× à 1.1× l'épaisseur qualifiée",
+      "Variable non-essentielle",
+      "Toute variation requiert requalification"
+    ],
+    "answer": "Option B",
+    "explanation": "Une WPS qualifiée à T couvre 0.5T à 1.1T. Au-delà de 1.1T, nouvelle PQR.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Essais minimum pour qualifier une WPS en acier selon CSA W59?",
+    "options": [
+      "Visuel, dimensionnel, pliage",
+      "Pliage face/racine, traction transversale, macrographie",
+      "RT, UT, MT",
+      "Dureté seulement"
+    ],
+    "answer": "Option B",
+    "explanation": "Pliage guidé (face et racine), traction transversale, macrographie.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Utilisation d'un WPQ existant pour une nouvelle WPS?",
+    "options": [
+      "Toujours",
+      "Si les variables essentielles sont dans le champ du WPQ",
+      "Jamais",
+      "Avec approbation client"
+    ],
+    "answer": "Option B",
+    "explanation": "Le WPQ est valide si la nouvelle WPS est dans son champ (même procédé, position, métal, épaisseur).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Supervision requise pour Division 1 selon CSA W47.1?",
+    "options": [
+      "Niveau 1",
+      "Niveau 2 ou 3",
+      "Aucun",
+      "Ingénieur"
+    ],
+    "answer": "Option B",
+    "explanation": "Div 1 = superviseur niv2/3. Div 2 = niv1 avec expérience. Div 3 = niv1.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Période de transition lors d'un changement d'employeur pour un soudeur QBQ?",
+    "options": [
+      "Nouvelle certification",
+      "Valide jusqu'à expiration",
+      "30 jours de grâce",
+      "6 mois"
+    ],
+    "answer": "Option B",
+    "explanation": "La certification QBQ est personnelle et suit le soudeur jusqu'à l'expiration.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Règle du 0.5× à 2× pour les WPQ?",
+    "options": [
+      "Épaisseur qualifiée = 0.5× à 2× l'épaisseur testée",
+      "Distance inspecteur = 0.5-2m",
+      "Temps = 0.5-2h",
+      "Angle = 0.5-2°"
+    ],
+    "answer": "Option A",
+    "explanation": "WPQ rainuré sur épaisseur T qualifie pour 0.5T à 2T.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Porosité interne en radiographie selon CSA W59?",
+    "options": [
+      "Aucune permise",
+      "≤3mm individuelle, surface ≤3% projetée",
+      "≤6mm",
+      "RT non requise"
+    ],
+    "answer": "Option B",
+    "explanation": "Porosité ≤3mm par défaut, surface totale ≤3% de la zone radiographiée.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "WPQ vs attestation d'expérience?",
+    "options": [
+      "Identiques",
+      "WPQ = essais destructifs standardisés; attestation = déclaratif",
+      "Attestation = mieux",
+      "WPQ = théorique"
+    ],
+    "answer": "Option B",
+    "explanation": "Le WPQ exige des essais destructifs (pliage, macrographie). L'attestation est déclarative.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Procédure après échec d'un WPQ selon CSA W47.1?",
+    "options": [
+      "Renvoi immédiat",
+      "Retest après correction et formation",
+      "Interdiction de retest",
+      "Rien, facultatif"
+    ],
+    "answer": "Option B",
+    "explanation": "Le soudeur peut être retesté après correction des défauts et formation.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est le rôle du responsable du contrôle qualité (CQ) selon CSA W47.1?",
+    "options": [
+      "Souder les joints critiques",
+      "Vérifier la conformité des soudures, documenter les résultats, gérer les non-conformités",
+      "Former les soudeurs",
+      "Acheter l'équipement"
+    ],
+    "answer": "Option B",
+    "explanation": "Le CQ vérifie la conformité aux WPS, inspecte les soudures, documente et gère les non-conformités.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Teinte de lentille pour 50-100 A?",
+    "options": [
+      "#7-8",
+      "#9",
+      "#10",
+      "#12"
+    ],
+    "answer": "Option B",
+    "explanation": "#9 <100A, #10=100-200A, #11=200-300A, #12=300-400A, #13>400A.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "EPI obligatoire pour soudage à l'arc?",
+    "options": [
+      "Lunettes seulement",
+      "Casque+teinte, gants cuir, vêtements ignifuges, souliers sécurité",
+      "Tablier caoutchouc",
+      "Protection auditive"
+    ],
+    "answer": "Option B",
+    "explanation": "Casque (teinte 9-13), gants de cuir longs, vêtements ignifuges, souliers à embout d'acier.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Surveillance après soudage pour feu couvant?",
+    "options": [
+      "10 min",
+      "15 min",
+      "30 min",
+      "60 min"
+    ],
+    "answer": "Option C",
+    "explanation": "Au moins 30 min de surveillance après la fin du soudage.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Extincteur pour feu électrique (classe C)?",
+    "options": [
+      "Eau",
+      "Mousse",
+      "CO₂ ou poudre ABC",
+      "Eau déminéralisée"
+    ],
+    "answer": "Option C",
+    "explanation": "Ne jamais utiliser d'eau sur un feu électrique.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Distance des matières combustibles du poste?",
+    "options": [
+      "3 m",
+      "6 m (20 pi)",
+      "10 m",
+      "15 m"
+    ],
+    "answer": "Option B",
+    "explanation": "Dégagement de 6 m minimum. Écrans pare-étincelles requis pour zones adjacentes.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Principal danger des fumées d'acier galvanisé?",
+    "options": [
+      "Intoxication au plomb",
+      "Fièvre des métaux (oxyde de zinc)",
+      "Brûlures chimiques",
+      "Cancer"
+    ],
+    "answer": "Option B",
+    "explanation": "L'oxyde de zinc cause la fièvre des métaux (symptômes grippaux). Masque à cartouche obligatoire.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "VLE du chrome hexavalent (Cr VI)?",
+    "options": [
+      "0.5 mg/m³",
+      "0.05 mg/m³",
+      "0.005 mg/m³",
+      "5 mg/m³"
+    ],
+    "answer": "Option B",
+    "explanation": "VLE = 0.05 mg/m³. Cancérigène puissant, présent dans le soudage de l'inox.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Teinte de lentille pour >400 A?",
+    "options": [
+      "#10",
+      "#11",
+      "#12",
+      "#13"
+    ],
+    "answer": "Option D",
+    "explanation": "Pour >400 A, teinte #13 minimum. Plus le courant est élevé, plus la teinte est foncée.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Gants appropriés pour GMAW?",
+    "options": [
+      "Caoutchouc",
+      "Cuir avec manchettes longues",
+      "Kevlar anti-coupure",
+      "Coton"
+    ],
+    "answer": "Option B",
+    "explanation": "Les gants de cuir longs protègent des UV et projections de métal fondu.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "VEMP du manganèse fumées de soudage?",
+    "options": [
+      "5 mg/m³",
+      "1 mg/m³",
+      "0.2 mg/m³",
+      "0.02 mg/m³"
+    ],
+    "answer": "Option C",
+    "explanation": "VEMP=0.2 mg/m³ RSST. L'excès cause des troubles neurologiques (parkinsonisme).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Meilleure méthode de ventilation en soudage?",
+    "options": [
+      "Ventilateur plancher",
+      "Aspiration à la source (torche aspirante)",
+      "Portes ouvertes",
+      "Masque O₂"
+    ],
+    "answer": "Option B",
+    "explanation": "L'aspiration à la source est la plus efficace, surtout en espace confiné.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Fréquence de test d'un espace confiné?",
+    "options": [
+      "1×/jour",
+      "Avant chaque entrée et continu",
+      "1×/semaine",
+      "Sur odeur"
+    ],
+    "answer": "Option B",
+    "explanation": "Test avant entrée + continu. O₂ 19.5-23%, LIE, CO, H₂S.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Risque du soudage sur contenants ayant contenu liquides inflammables?",
+    "options": [
+      "Électrocution",
+      "Explosion vapeurs résiduelles",
+      "Brûlure",
+      "Asphyxie"
+    ],
+    "answer": "Option B",
+    "explanation": "Vider, purger, inerté ou remplir d'eau avant soudage.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Procédure pour arc eye (kératite UV)?",
+    "options": [
+      "Pommade antibiotique",
+      "Repos obscurité, larmes artificielles, consultation",
+      "Rincer eau froide",
+      "Bandage"
+    ],
+    "answer": "Option B",
+    "explanation": "Douleur intense 4-8h après. Repos, larmes artificielles, consultation médicale.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Catégorie SIMDUT des fumées de soudage?",
+    "options": [
+      "D1 — toxiques",
+      "B2 — inflammables",
+      "E — corrosifs",
+      "F — réactifs"
+    ],
+    "answer": "Option A",
+    "explanation": "Les fumées sont classées D1. Fiches signalétiques (FDS) obligatoires.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Risque d'un câble de soudage endommagé?",
+    "options": [
+      "Aucun",
+      "Choc électrique mortel et incendie",
+      "Surpression",
+      "Projections"
+    ],
+    "answer": "Option B",
+    "explanation": "Câble endommagé = conducteur nu = électrocution. Inspection quotidienne obligatoire.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Niveau sonore du soudage et protection?",
+    "options": [
+      "50-60dB, aucune",
+      "75-95dB, protection recommandée",
+      "100-120dB, obligatoire",
+      ">140dB, spéciale"
+    ],
+    "answer": "Option B",
+    "explanation": "75-95dB (meulage 105dB). Protection auditive obligatoire >85dB au Québec.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Symptômes intoxication à l'ozone (GTAW)?",
+    "options": [
+      "Irritation yeux/voies respiratoires, toux",
+      "Maux de tête",
+      "Nausées",
+      "Éruption cutanée"
+    ],
+    "answer": "Option A",
+    "explanation": "L'ozone est produit par les UV du TIG sur l'oxygène.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Règle Lockout/Tagout en soudage?",
+    "options": [
+      "Verrouiller casier",
+      "Cadenasser/étiqueter équipement avant entretien",
+      "Verrouiller portes",
+      "Étiqueter pièces"
+    ],
+    "answer": "Option B",
+    "explanation": "Le cadenassage isole l'énergie avant toute réparation du poste.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Danger des revêtements anticorrosion sur pièces à souder?",
+    "options": [
+      "Glissance",
+      "Fumées toxiques (Zn, Pb, Cd, Cr)",
+      "Arc instable",
+      "Défaut pénétration"
+    ],
+    "answer": "Option B",
+    "explanation": "Enlever le revêtement sur ≥25 mm de chaque côté du joint avant soudage.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "EPI requis pour le meulage?",
+    "options": [
+      "Lunettes",
+      "Écran facial + lunettes + gants + protection auditive",
+      "Casque soudage",
+      "Aucun"
+    ],
+    "answer": "Option B",
+    "explanation": "Écran facial anti-projections, lunettes dessous, gants, protection auditive.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Fréquence d'inspection des câbles de soudage?",
+    "options": [
+      "1×/mois",
+      "Quotidienne avant usage",
+      "1×/an",
+      "Jamais"
+    ],
+    "answer": "Option B",
+    "explanation": "Inspection visuelle quotidienne : coupures, brûlures, connexions, isolation.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Risque de souder assis/sur le sol?",
+    "options": [
+      "Confort",
+      "Risque électrique augmenté (contact sol conducteur)",
+      "Meilleur arc",
+      "Aucun"
+    ],
+    "answer": "Option B",
+    "explanation": "Sol conducteur = chemin vers la terre. Tapis isolant ou chaussures diélectriques.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Facteur de protection minimal selon CSA W117.2?",
+    "options": [
+      "#5",
+      "#10 (teinte 10)",
+      "#8",
+      "#13"
+    ],
+    "answer": "Option B",
+    "explanation": "Teinte #10 minimum pour 100-200 A. Protection UV et IR requise.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Débit d'air requis en ventilation d'atelier?",
+    "options": [
+      "0.5 m³/min/soudeur",
+      "1.5",
+      "2.8",
+      "5"
+    ],
+    "answer": "Option C",
+    "explanation": "2.8 m³/min/soudeur. Espace confiné: 20-40 changements d'air/h.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Seuil alarme O₂ en espace confiné?",
+    "options": [
+      "<22% >25%",
+      "<19.5% >23%",
+      "<18% >25%",
+      "<21% >22%"
+    ],
+    "answer": "Option B",
+    "explanation": "<19.5% = asphyxie, >23% = explosion. Normal = 20.9%.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Distance bouteille gaz — source de chaleur?",
+    "options": [
+      "1 m",
+      "3 m",
+      "6 m (20 pi)",
+      "10 m"
+    ],
+    "answer": "Option C",
+    "explanation": "Minimum 6 m. Bouteilles verticales et chaînées en tout temps.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Conservation E7018 après ouverture?",
+    "options": [
+      "Air libre",
+      "Four 120-150°C (étuve portative)",
+      "Boîte origine",
+      "Réfrigérateur"
+    ],
+    "answer": "Option B",
+    "explanation": "Étuve à 120-150°C. Exposition max 4h à l'air libre. Re-séchage possible 1×.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Limite d'humidité enrobage électrode basique?",
+    "options": [
+      "1%",
+      "0.2-0.4%",
+      "5%",
+      "10%"
+    ],
+    "answer": "Option B",
+    "explanation": "0.2-0.4% selon le type. Au-dessus = risque fissuration hydrogène.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Traitement inhalation grave fumées soudage?",
+    "options": [
+      "Air frais + consultation médicale",
+      "Boire du lait",
+      "Antihistaminiques",
+      "Aucun"
+    ],
+    "answer": "Option A",
+    "explanation": "Air frais, oxygène si dispo, consultation. Symptômes parfois retardés.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Procédure sécuritaire détendeur de gaz?",
+    "options": [
+      "Ouvrir valve brusquement",
+      "Ouvrir lentement, vérifier étanchéité, purger avant connexion",
+      "Fermer après chaque soudure",
+      "Ne jamais utiliser"
+    ],
+    "answer": "Option B",
+    "explanation": "Ouvrir lentement, détecteur de fuites, purger le raccord avant de serrer.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Limite d'exposition aux fumées de soudage selon RSST?",
+    "options": [
+      "Valeur plafond non-dépassable",
+      "Moyenne pondérée sur 8h (VEMP)",
+      "Valeur sur 15 min",
+      "Aucune limite"
+    ],
+    "answer": "Option B",
+    "explanation": "La VEMP est la concentration moyenne maximale sur 8 heures selon le RSST.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la limite VEMP pour les fumées de soudage totales (particules inhalables) selon le RSST?",
+    "options": [
+      "1 mg/m³",
+      "5 mg/m³",
+      "10 mg/m³",
+      "20 mg/m³"
+    ],
+    "answer": "Option C",
+    "explanation": "VEMP pour fumées totales = 10 mg/m³ (particules inhalables). Pour les particules alvéolaires, c'est 3 mg/m³.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Symbole sous la ligne de référence AWS?",
+    "options": [
+      "Soudure côté flèche",
+      "Soudure côté opposé",
+      "Des deux côtés",
+      "Périphérique"
+    ],
+    "answer": "Option A",
+    "explanation": "Sous la ligne = côté flèche. Sur la ligne = côté opposé. Deux côtés = double.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie le drapeau (flag) au symbole de soudage?",
+    "options": [
+      "Périphérique",
+      "Soudure sur chantier (field weld)",
+      "Temporaire",
+      "À inspecter"
+    ],
+    "answer": "Option B",
+    "explanation": "Le drapeau = soudure sur chantier. Le cercle (○) = périphérique.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Dans 5×3(6), que représente 6?",
+    "options": [
+      "Longueur segment",
+      "Nombre segments",
+      "Espacement centre-à-centre (pitch)",
+      "Taille soudure"
+    ],
+    "answer": "Option C",
+    "explanation": "n×L(e): n=segments, L=longueur, e=espacement. 5×3(6)=5 segments de 3po espacés 6po.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle position 6G en tuyauterie?",
+    "options": [
+      "À plat",
+      "Horizontale fixe",
+      "Verticale",
+      "Tuyau à 45° fixe combinant toutes positions"
+    ],
+    "answer": "Option D",
+    "explanation": "6G = tuyau incliné 45° fixe = toutes positions combinées. Position 6GR avec anneau = +difficile.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "À droite du symbole de rainure en V sur un plan, quelle information?",
+    "options": [
+      "Angle de chanfrein",
+      "Talon (root face)",
+      "Espacement racine",
+      "Taille soudure"
+    ],
+    "answer": "Option B",
+    "explanation": "Droite = talon (root face). Gauche = espacement racine. Dessus/dessous = angle.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie le cercle (○) à l'intersection flèche-ligne de référence?",
+    "options": [
+      "Soudure sur chantier",
+      "Soudure périphérique (tout autour)",
+      "Soudure invisible",
+      "Soudure à contrôler"
+    ],
+    "answer": "Option B",
+    "explanation": "Le cercle indique une soudure continue autour de la pièce (périphérique/all around).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Sur un symbole de soudure, où s'indique la taille de la soudure d'angle?",
+    "options": [
+      "À gauche du symbole",
+      "À droite du symbole",
+      "Au-dessus du symbole",
+      "À gauche de la flèche"
+    ],
+    "answer": "Option A",
+    "explanation": "La taille de la soudure d'angle (gorge ou jambe) est à gauche du symbole de soudure.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie '3/8 1/2' sur un symbole de soudure d'angle double?",
+    "options": [
+      "3/8=gorge, 1/2=longueur",
+      "3/8=côté flèche, 1/2=côté opposé",
+      "3/8=largeur, 1/2=hauteur",
+      "3/8=espacement, 1/2=pitch"
+    ],
+    "answer": "Option B",
+    "explanation": "Pour double soudure: gauche = côté flèche, droite = côté opposé.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'est-ce que la ligne d'attache (reference line) en symboles AWS?",
+    "options": [
+      "La flèche",
+      "La ligne horizontale principale où se placent les symboles",
+      "La ligne pointillée",
+      "La queue"
+    ],
+    "answer": "Option B",
+    "explanation": "La ligne de référence est horizontale. Les symboles se placent dessus (côté opposé) ou dessous (côté flèche).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie la queue (tail) du symbole de soudage?",
+    "options": [
+      "La position",
+      "Informations supplémentaires (procédé, norme, spécifications)",
+      "La dimension",
+      "L'angle"
+    ],
+    "answer": "Option B",
+    "explanation": "La queue contient des infos supplémentaires comme la spécification du procédé, la norme, ou la référence WPS.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Symbole AWS pour une soudure en chanfrein en V simple (single V-groove)?",
+    "options": [
+      "/",
+      "V",
+      "U",
+      "J"
+    ],
+    "answer": "Option B",
+    "explanation": "Le V simple représente un chanfrein en V. Le / (angle aigu) = chanfrein biseau. U = chanfrein en U.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Sur plan, symbole '3/8' sous ligne de référence signifie?",
+    "options": [
+      "Soudure 3/8 po côté opposé",
+      "Soudure 3/8 po côté flèche",
+      "Épaisseur 3/8 po du métal",
+      "3/8 segments"
+    ],
+    "answer": "Option B",
+    "explanation": "Sous la ligne = côté flèche. La dimension 3/8 po = taille de la soudure d'angle.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Différence position 1G et 2G pour tôles?",
+    "options": [
+      "1G=vertical, 2G=plafond",
+      "1G=à plat, 2G=horizontale",
+      "1G=plafond, 2G=vertical",
+      "1G=horizontale, 2G=plafond"
+    ],
+    "answer": "Option B",
+    "explanation": "1G (groove) = à plat, 2G = horizontale, 3G = verticale, 4G = plafond.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Symbole AWS pour soudure de rainure en U?",
+    "options": [
+      "V",
+      "J",
+      "U",
+      "L"
+    ],
+    "answer": "Option C",
+    "explanation": "Le symbole de rainure en U ressemble à un U. Il indique un chanfrein à fond arrondi.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Sur symbole AWS, où s'indique la longueur d'une soudure intermittente?",
+    "options": [
+      "À gauche de la dimension",
+      "À droite du symbole",
+      "Dans la queue",
+      "Sur la flèche"
+    ],
+    "answer": "Option B",
+    "explanation": "Longueur à droite du symbole de soudure. Notation: n×L(e) où L = longueur.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie une soudure avec symbole des deux côtés de la ligne?",
+    "options": [
+      "Soudure alternative",
+      "Soudure des deux côtés du joint",
+      "Soudure temporaire",
+      "Soudure de renfort"
+    ],
+    "answer": "Option B",
+    "explanation": "Symbole des deux côtés de la ligne = soudure double face (both sides).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Symbole AWS pour soudure au point (spot weld)?",
+    "options": [
+      "Cercle plein ou ovale",
+      "X",
+      "V",
+      "Ligne pointillée"
+    ],
+    "answer": "Option A",
+    "explanation": "Le symbole de soudure par point est un cercle ou ovale sur la ligne de référence.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'indique une ligne de référence en pointillé?",
+    "options": [
+      "Soudure temporaire",
+      "Soudure en atelier",
+      "Soudure sur chantier",
+      "La pièce est cachée"
+    ],
+    "answer": "Option C",
+    "explanation": "La ligne pointillée indique que la soudure est faite sur le chantier (field weld).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "En notation symbolique, qu'est-ce que la dimension de gorge (throat)?",
+    "options": [
+      "L'épaisseur de la plaque",
+      "La distance de la racine à la face de la soudure d'angle",
+      "La hauteur du cordon",
+      "La largeur"
+    ],
+    "answer": "Option B",
+    "explanation": "La gorge (throat) est la distance perpendiculaire de la racine à la face de la soudure d'angle.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Symbole AWS pour le meulage à ras (flush contour)?",
+    "options": [
+      "---",
+      "——",
+      "~",
+      "===="
+    ],
+    "answer": "Option A",
+    "explanation": "Une ligne droite (---) indique une surface meulée à ras. ~ = convex, === = concave.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie l'angle indiqué au-dessus du symbole de rainure en V?",
+    "options": [
+      "L'angle d'inclinaison de la pièce",
+      "L'angle du chanfrein (inclus)",
+      "L'angle de l'électrode",
+      "L'angle de la flèche"
+    ],
+    "answer": "Option B",
+    "explanation": "L'angle au-dessus du symbole de rainure est l'angle inclus du chanfrein (ex: 60°).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Différence entre symbole de soudure AWS et ISO?",
+    "options": [
+      "Aucune différence",
+      "AWS place symbole côté flèche sous ligne; ISO utilise lignes continues/discontinues",
+      "ISO = plus petit",
+      "AWS = français"
+    ],
+    "answer": "Option B",
+    "explanation": "AWS: sous ligne = côté flèche. ISO: ligne continue = côté flèche, ligne discontinue = côté opposé.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Sur plan, que signifie la cote entre parenthèses après la dimension?",
+    "options": [
+      "Longueur totale",
+      "Profondeur de chanfrein",
+      "Espacement (pitch) centre-à-centre",
+      "Nombre de passes"
+    ],
+    "answer": "Option C",
+    "explanation": "La cote entre parenthèses est le pitch (espacement centre-à-centre) des soudures intermittentes.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'indique un symbole de soudure avec 'CJP' dans la queue?",
+    "options": [
+      "Canadian Joint Procedure",
+      "Complete Joint Penetration (pénétration complète)",
+      "Controlled Joint Position",
+      "Certified Job Procedure"
+    ],
+    "answer": "Option B",
+    "explanation": "CJP = Complete Joint Penetration. La soudure doit fusionner toute l'épaisseur du joint.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Symbole AWS pour une soudure en biseau simple avec talon (J-groove)?",
+    "options": [
+      "V",
+      "J",
+      "U",
+      "L"
+    ],
+    "answer": "Option B",
+    "explanation": "Le J-groove (rainure en J) a un symbole en forme de J, indiquant un chanfrein arrondi d'un seul côté.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Différence entre la dimension de jambe (leg) et gorge (throat)?",
+    "options": [
+      "Identiques",
+      "Jambe = côté du triangle, gorge = perpendiculaire de racine à face",
+      "Gorge = jambe × 2",
+      "Jambe = gorge × 1.5"
+    ],
+    "answer": "Option B",
+    "explanation": "Jambe = côté du triangle soudé. Gorge = distance de racine à face = jambe × sin(45°) ≈ 0.707×jambe.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "En AWS, symbole '3/8' sur ligne + '1/4' sous ligne?",
+    "options": [
+      "3/8 côté opposé, 1/4 côté flèche",
+      "3/8=taille, 1/4=longueur",
+      "3/8=largeur, 1/4=hauteur",
+      "3/8=segment, 1/4=espacement"
+    ],
+    "answer": "Option A",
+    "explanation": "Sur la ligne = côté opposé (3/8). Sous la ligne = côté flèche (1/4).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie un symbole de soudure avec 'M' dans la queue?",
+    "options": [
+      "Marteau",
+      "Soudure de maintien (tack weld)",
+      "Métal",
+      "Moyen"
+    ],
+    "answer": "Option B",
+    "explanation": "'M' dans la queue indique une soudure de maintien (tack weld) temporaire.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "En tuyauterie, différence entre symbole AWS 5G et 6G?",
+    "options": [
+      "5G=tuyau horizontal fixe; 6G=tuyau à 45° fixe",
+      "5G=vertical; 6G=horizontal",
+      "5G=rotatif; 6G=fixe",
+      "5G=acier; 6G=inox"
+    ],
+    "answer": "Option A",
+    "explanation": "5G = tube horizontal sans rotation. 6G = tube à 45° fixe (la plus exigeante).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'est-ce que le 'backing strip' sur un symbole de soudure?",
+    "options": [
+      "Support temporaire",
+      "Barre-support sous la racine, indiquée par un R dans la queue",
+      "Renfort arrière",
+      "Plaque d'essai"
+    ],
+    "answer": "Option B",
+    "explanation": "Le R dans la queue indique un backing strip (barre-support) sous la racine.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Symbole AWS pour soudure par bossage (stud weld)?",
+    "options": [
+      "Cercle avec X",
+      "Losange",
+      "Éclair (╘)",
+      "Carré"
+    ],
+    "answer": "Option A",
+    "explanation": "Le symbole du soudage par goujon (stud weld) est un cercle avec un X intérieur.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "En symboles AWS, que signifie une dimension de soudure en caractère gras?",
+    "options": [
+      "Soudure critique",
+      "Soudure d'atelier",
+      "Dimension de la soudure après meulage",
+      "Soudure temporaire"
+    ],
+    "answer": "Option C",
+    "explanation": "La dimension en gras (ou soulignée) indique la dimension finale après meulage ou finition.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Dans le système AWS, que signifie une soudure d'angle avec dimension sur la flèche et au-dessus de la ligne?",
+    "options": [
+      "Dimension sur flèche = côté flèche, dimension au-dessus = côté opposé",
+      "Même dimension partout",
+      "Dimension = gorge partout",
+      "Seulement côté flèche"
+    ],
+    "answer": "Option A",
+    "explanation": "La dimension sous la ligne = côté flèche, sur la ligne = côté opposé. Si une seule valeur, c'est la même des deux côtés.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la zone affectée thermiquement (ZAT/HAZ)?",
+    "options": [
+      "Métal fondu",
+      "Zone du métal de base modifiée par la chaleur sans avoir fondu",
+      "Zone de liaison",
+      "Métal de base non affecté"
+    ],
+    "answer": "Option B",
+    "explanation": "La ZAT (HAZ) s'étend de 1-5 mm du cordon. Sa microstructure est modifiée par la chaleur sans fusion.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Coefficient de dilatation linéaire typique de l'acier au carbone?",
+    "options": [
+      "11-13 × 10⁻⁶/°C",
+      "23-24 × 10⁻⁶/°C",
+      "5-7 × 10⁻⁶/°C",
+      "17-18 × 10⁻⁶/°C"
+    ],
+    "answer": "Option A",
+    "explanation": "Acier = 11-13. Aluminium = 23-24 (2× plus). Tôle 1m à 1500°C se dilate ≈17.8mm.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Formule du carbone équivalent (CE)?",
+    "options": [
+      "CE = %C+(%Mn/6)+((%Cr+%Mo+%V)/5)+((%Ni+%Cu)/15)",
+      "CE = %C+%Mn+%Cr+%Mo",
+      "CE = (%C+%Mn)/10",
+      "CE = %C+(%Mn/10)+%Cr"
+    ],
+    "answer": "Option A",
+    "explanation": "CE<0.35 = excellente soudabilité. CE>0.55 = difficile, préchauffage important requis.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Triangle de la fissuration à froid (hydrogène): quels 3 facteurs?",
+    "options": [
+      "Chaleur, pression, vitesse",
+      "Hydrogène, microstructure fragile, contraintes traction",
+      "Oxygène, carbone, soufre",
+      "Humidité, vent, courant d'air"
+    ],
+    "answer": "Option B",
+    "explanation": "Éliminer un seul facteur suffit à prévenir la fissuration. L'hydrogène est le plus contrôlable.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Température minimale de séchage des E7018?",
+    "options": [
+      "100-150°C",
+      "200-250°C",
+      "300-400°C",
+      "450-500°C"
+    ],
+    "answer": "Option C",
+    "explanation": "300-400°C pendant 1h. Conservation à 120-150°C. Air libre max 4h.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la martensite en soudage?",
+    "options": [
+      "Microstructure dure et fragile formée par refroidissement rapide",
+      "Structure équilibrée",
+      "Précipité mou",
+      "Phase gazeuse"
+    ],
+    "answer": "Option A",
+    "explanation": "La martensite est très dure (400-700 HV), fragile, et sensible à la fissuration par hydrogène.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "CE < 0.35 indique quoi sur la soudabilité?",
+    "options": [
+      "Excellente soudabilité",
+      "Soudabilité difficile",
+      "Préchauffage obligatoire",
+      "Acier non soudable"
+    ],
+    "answer": "Option A",
+    "explanation": "Plus le CE est bas, meilleure est la soudabilité. CE<0.35 = aucun préchauffage nécessaire.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que le 'grain growth' dans la ZAT?",
+    "options": [
+      "Croissance des grains sous l'effet de la chaleur, réduisant la ténacité",
+      "Diminution des grains",
+      "Formation de martensite",
+      "Précipitation de carbures"
+    ],
+    "answer": "Option A",
+    "explanation": "La température élevée dans la ZAT (1100-1500°C) cause une croissance des grains austénitiques, réduisant la résistance aux chocs.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Comment contrôle-t-on la distorsion en soudage?",
+    "options": [
+      "Préchauffage seulement",
+      "Contre-flèche, séquence de soudage, bridage, préchauffage, refroidissement contrôlé",
+      "Post-refroidissement rapide",
+      "Aucune méthode efficace"
+    ],
+    "answer": "Option B",
+    "explanation": "La distorsion est causée par la dilatation/contraction inégale. Contre-flèche et séquence équilibrée sont les plus efficaces.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle température de préchauffage pour un acier avec CE=0.50?",
+    "options": [
+      "Aucun préchauffage",
+      "50-100°C",
+      "100-200°C",
+      "300-400°C"
+    ],
+    "answer": "Option C",
+    "explanation": "CE 0.45-0.55 = préchauffage 100-200°C. CE>0.55 = 200-300°C+. La température exacte dépend de l'épaisseur.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel phénomène peut causer la fissuration à chaud (hot cracking)?",
+    "options": [
+      "Présence de soufre et phosphore dans le métal fondu",
+      "Hydrogène",
+      "Refroidissement trop lent",
+      "Préchauffage trop élevé"
+    ],
+    "answer": "Option A",
+    "explanation": "La fissuration à chaud se produit pendant la solidification (>1000°C). Le S et P forment des eutectiques à bas point de fusion.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Température de transformation A1 et A3 de l'acier?",
+    "options": [
+      "500°C et 600°C",
+      "723°C et 830-910°C selon %C",
+      "1000°C et 1200°C",
+      "300°C et 500°C"
+    ],
+    "answer": "Option B",
+    "explanation": "A1=723°C (eutectoïde), A3=830-910°C (fin transformation austénite). Entre A1 et A3 = zone critique.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Rôle du préchauffage en soudage?",
+    "options": [
+      "Accélérer le soudage",
+      "Ralentir le refroidissement, réduire la trempe martensitique et l'hydrogène",
+      "Augmenter la pénétration",
+      "Nettoyer les bords"
+    ],
+    "answer": "Option B",
+    "explanation": "Le préchauffage ralentit le refroidissement, permettant à l'hydrogène de diffuser hors du métal et évite la martensite.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que le PWHT (Post Weld Heat Treatment)?",
+    "options": [
+      "Chauffage après soudage pour réduire les contraintes résiduelles",
+      "Refroidissement rapide",
+      "Préchauffage",
+      "Meulage du cordon"
+    ],
+    "answer": "Option A",
+    "explanation": "Le PWHT chauffe la soudure à 550-650°C (acier) pour relaxer les contraintes, améliorer la ténacité et réduire la dureté.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la relation entre la vitesse de refroidissement et la dureté de la ZAT?",
+    "options": [
+      "Plus rapide = plus dur (martensitique)",
+      "Plus lent = plus dur",
+      "Aucune relation",
+      "Plus rapide = plus mou"
+    ],
+    "answer": "Option A",
+    "explanation": "Refroidissement rapide = trempe = martensite = dureté élevée (400-700 HV). Lent = perlite/ferrite = plus doux.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la zone à gros grains (coarse-grained HAZ)?",
+    "options": [
+      "Zone la plus proche du bain, >1100°C, grains grossiers",
+      "Zone éloignée, <500°C",
+      "Zone de liaison",
+      "Métal fondu"
+    ],
+    "answer": "Option A",
+    "explanation": "Zone adjacente au bain de fusion (>1100°C), où les grains d'austénite grossissent, réduisant la ténacité.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce qu'un acier HSS (Haute Résistance / HSLA)?",
+    "options": [
+      "Acier inoxydable",
+      "Acier à faible teneur en carbone avec micro-alliages pour résistance élevée",
+      "Acier très dur",
+      "Acier galvanisé"
+    ],
+    "answer": "Option B",
+    "explanation": "Les aciers HSS (High Strength Low Alloy) ont CE=0.35-0.50. Ils nécessitent un contrôle de l'apport de chaleur.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est l'effet d'un apport de chaleur trop élevé sur la ZAT?",
+    "options": [
+      "ZAT plus large, grains grossiers, ténacité réduite",
+      "ZAT plus étroite, meilleure ténacité",
+      "Aucun effet",
+      "Diminution de la dureté excessive"
+    ],
+    "answer": "Option A",
+    "explanation": "Trop de chaleur = ZAT large = grains grossiers = ténacité réduite. Trop peu = martensite fragile.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la 'fissuration sous-cordonal' (underbead cracking)?",
+    "options": [
+      "Fissure dans le métal fondu",
+      "Fissure dans la ZAT sous le cordon, causée par l'hydrogène",
+      "Fissure en surface",
+      "Fissure de fatigue"
+    ],
+    "answer": "Option B",
+    "explanation": "Cette fissure se forme dans la ZAT à gros grains sous le cordon, invisible en surface. Causée par H₂ + contraintes.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Température de préchauffage minimale quand humidité est présente?",
+    "options": [
+      "Aucune, annuler le soudage",
+      "Minimum 50°C au-dessus du point de rosée, au moins 25°C",
+      "100°C fixe",
+      "150°C"
+    ],
+    "answer": "Option B",
+    "explanation": "Chauffer la pièce à ≥50°C au-dessus du point de rosée. Température minimale de travail ≥25°C selon CSA W59.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la zone de liaison (bond line)?",
+    "options": [
+      "La soudure complète",
+      "L'interface entre le métal fondu et la ZAT",
+      "La surface extérieure",
+      "Le centre du cordon"
+    ],
+    "answer": "Option B",
+    "explanation": "La zone de liaison est la frontière où le métal de base a partiellement fondu. C'est une zone hétérogène critique.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel type de microstructure donne la meilleure ténacité?",
+    "options": [
+      "Martensite",
+      "Perlite fine",
+      "Bainite inférieure",
+      "Ferrite+perlite grossière"
+    ],
+    "answer": "Option C",
+    "explanation": "La bainite inférieure offre le meilleur équilibre résistance/ténacité. La martensite est très dure mais fragile.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est l'effet du manganèse (Mn) dans l'acier?",
+    "options": [
+      "Augmente la fragilité",
+      "Augmente la résistance et abaisse la température de transition ductile-fragile",
+      "Diminue la dureté",
+      "Aucun effet"
+    ],
+    "answer": "Option B",
+    "explanation": "Le Mn (1-1.6% dans les aciers de construction) améliore la résistance et la ténacité. Rapport Mn/C ≥ 3 pour éviter la fragilisation au soufre.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Calculer CE pour acier: C=0.20, Mn=1.20, Cr=0.10, Mo=0.05, Ni=0.10, Cu=0.10?",
+    "options": [
+      "0.30",
+      "0.43",
+      "0.55",
+      "0.65"
+    ],
+    "answer": "Option B",
+    "explanation": "CE = 0.20 + (1.20/6) + ((0.10+0.05+0)/5) + ((0.10+0.10)/15) = 0.20+0.20+0.03+0.013 = 0.443 ≈ 0.43.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Température de préchauffage approximative pour CE=0.55, épaisseur 40mm?",
+    "options": [
+      "Aucun",
+      "75°C",
+      "175-200°C",
+      "350°C"
+    ],
+    "answer": "Option C",
+    "explanation": "CE>0.50 + épaisseur>25mm nécessite préchauffage ≥150°C. Formule: T(°C)=350×√(CE-0.25)×épaisseur/25.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que le test de dureté maximum dans la ZAT selon CSA W59?",
+    "options": [
+      "Dureté max 350 HV",
+      "Dureté max 400 HV",
+      "Dureté max 450 HV",
+      "Aucune limite"
+    ],
+    "answer": "Option B",
+    "explanation": "CSA W59 limite la dureté de la ZAT à 400 HV (Vickers) pour les aciers de construction. >400 = risque de fissuration.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Que se passe-t-il lors du revenu (tempering) après soudage?",
+    "options": [
+      "La martensite se décompose en ferrite+carbures, réduisant dureté et augmentant ténacité",
+      "La dureté augmente",
+      "Rien ne change",
+      "Grains grossissent davantage"
+    ],
+    "answer": "Option A",
+    "explanation": "Le revenu (200-600°C) transforme la martensite dure en martensite revenue (ferrite + carbures), plus tenace.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que le effet de 'notch toughness' et pourquoi important?",
+    "options": [
+      "Résistance aux chocs d'une entaille, mesurée par essai Charpy",
+      "Dureté de surface",
+      "Résistance à la traction",
+      "Allongement"
+    ],
+    "answer": "Option A",
+    "explanation": "La résilience Charpy (Joules) mesure la ténacité à une entaille. Essentielle pour les structures à basse température.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Formule de détermination de la température de préchauffage minimale selon la méthode AWS?",
+    "options": [
+      "T(°C) = 100×CE",
+      "T(°C) = 700×(CE-0.15)×(épaisseur/25)^0.33",
+      "T(°C) = CE×200",
+      "T(°C) = 50×√CE"
+    ],
+    "answer": "Option B",
+    "explanation": "Formule AWS D1.1: T(°C) = 700×(CE-0.15)×(épaisseur en mm/25)^0.33. Plafond à 250°C.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est l'effet du vanadium (V) dans les aciers micro-alliés HSS?",
+    "options": [
+      "Forme des précipités de V(C,N) qui augmentent la résistance par affinage du grain",
+      "Réduit la résistance",
+      "Augmente la fragilité",
+      "Aucun effet"
+    ],
+    "answer": "Option A",
+    "explanation": "Le V (0.02-0.10%) forme des carbonitrures qui affinent le grain et augmentent la résistance par précipitation.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la 'fissuration par déchirure lamellaire' (lamellar tearing)?",
+    "options": [
+      "Fissure dans le métal fondu",
+      "Déchirure dans le métal de base sous la ZAT, parallèle au laminage, causée par les inclusions",
+      "Fissure de fatigue",
+      "Fissure de corrosion"
+    ],
+    "answer": "Option B",
+    "explanation": "Déchirure sous la ZAT, parallèle au sens de laminage, causée par les contraintes de retrait sur des inclusions allongées (sulfures).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle température de PWHT pour un acier C-Mn typique?",
+    "options": [
+      "200-300°C",
+      "550-650°C",
+      "750-850°C",
+      "900-1000°C"
+    ],
+    "answer": "Option B",
+    "explanation": "PWHT pour acier C-Mn: 550-650°C, temps = 1h/25mm d'épaisseur. Refroidissement lent à l'air calme.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est l'effet du nickel (Ni) sur les propriétés de l'acier soudé?",
+    "options": [
+      "Réduit la résistance",
+      "Améliore la ténacité à basse température",
+      "Augmente la dureté excessive",
+      "Aucun effet"
+    ],
+    "answer": "Option B",
+    "explanation": "Le Ni (0.5-5%) améliore la ténacité à basse température (température de transition ductile-fragile plus basse). Essentiel pour structures nordiques.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Que signifie 'E7018' en classification AWS?",
+    "options": [
+      "Électrode, 70ksi, toutes positions, basique poudre de fer",
+      "Électrode, 70kgf/mm², plat, rutile",
+      "Électrode, 70MPa, horizontal, basique",
+      "Électrode, 70ksi, vertical, rutile"
+    ],
+    "answer": "Option A",
+    "explanation": "E=électrode, 70=70ksi, 1=toutes positions, 8=basique poudre de fer (low hydrogen). Électrode la plus utilisée au Québec.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Polarité généralement utilisée avec E7018?",
+    "options": [
+      "DCEN (DC-)",
+      "DCEP (DC+)",
+      "AC uniquement",
+      "DCEN ou AC"
+    ],
+    "answer": "Option B",
+    "explanation": "E7018 s'utilise en DCEP (DC+, électrode positive). Bonne pénétration, bon taux de dépôt.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Courant recommandé pour E7018 diamètre 1/8 po (3.2 mm)?",
+    "options": [
+      "50-80 A",
+      "80-110 A",
+      "110-160 A",
+      "190-250 A"
+    ],
+    "answer": "Option C",
+    "explanation": "Pour E7018 3.2mm: 110-160 A. C'est le diamètre le plus utilisé pour l'examen pratique QBQ.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Défaut caractérisé par un sillon dans le métal de base adjacent au cordon?",
+    "options": [
+      "Porosité",
+      "Contre-dépouille (undercut)",
+      "Manque de fusion",
+      "Inclusion laitier"
+    ],
+    "answer": "Option B",
+    "explanation": "Undercut causé par courant trop élevé, vitesse trop rapide, mauvais angle. Max 0.8mm selon CSA W59.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Exposition max E7018 à l'air libre après séchage?",
+    "options": [
+      "1h",
+      "2h",
+      "4h",
+      "8h"
+    ],
+    "answer": "Option C",
+    "explanation": "Max 4h à l'air libre. Après, re-séchage possible (1 seule fois) ou rejet.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Que signifie E6010?",
+    "options": [
+      "Électrode 60ksi, toutes positions, cellulosique sodium",
+      "Électrode 60kgf, plat",
+      "Engineering 6010",
+      "Électrode 60MPa"
+    ],
+    "answer": "Option A",
+    "explanation": "E=électrode, 60=60ksi, 1=toutes positions, 0=cellulosique sodium. Pénétration profonde, DC+ seulement.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel type d'électrode E6011?",
+    "options": [
+      "Basique poudre de fer",
+      "Cellulosique potassium (AC ou DC)",
+      "Rutile fer",
+      "Inox"
+    ],
+    "answer": "Option B",
+    "explanation": "E6011: cellulosique potassium. Fonctionne en AC et DC, contrairement à l'E6010 (DC seulement).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Courant pour E7018 diamètre 5/32 po (4.0 mm)?",
+    "options": [
+      "80-120 A",
+      "120-150 A",
+      "150-220 A",
+      "250-350 A"
+    ],
+    "answer": "Option C",
+    "explanation": "Pour E7018 4.0mm: 150-220 A. Le courant augmente avec le diamètre de l'électrode.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Technique stringer (cordon droit) vs weave (tressage)?",
+    "options": [
+      "Stringer = mouvement linéaire sans oscillation; Weave = mouvement latéral pour cordon plus large",
+      "Stringer = large; Weave = étroit",
+      "Stringer = vertical; Weave = horizontal",
+      "Stringer = AC; Weave = DC"
+    ],
+    "answer": "Option A",
+    "explanation": "Le stringer donne un cordon étroit avec pénétration profonde. Le weave élargit le cordon et réduit l'apport de chaleur par passe.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Différence entre électrode rutile et basique?",
+    "options": [
+      "Rutile=arc doux, bon aspect; Basique=basse teneur H₂, meilleure résistance mécanique",
+      "Rutile=acier; Basique=alu",
+      "Rutile=DC; Basique=AC",
+      "Identiques"
+    ],
+    "answer": "Option A",
+    "explanation": "Rutile (E6013): facile à utiliser, bel aspect. Basique (E7018): faible H₂ (<16mL/100g), meilleures propriétés mécaniques.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Qu'est-ce que la technique 'drag' (traîner) en SMAW?",
+    "options": [
+      "Souder en poussant l'électrode",
+      "Faire glisser l'enrobage sur la pièce pour maintenir arc court",
+      "Arc très long",
+      "Oscillation rapide"
+    ],
+    "answer": "Option B",
+    "explanation": "La technique drag maintient un arc très court en faisant glisser l'enrobage. Utilisée avec E6010/E6011 pour pénétration.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Que signifie le chiffre '8' dans E7018?",
+    "options": [
+      "Pénétration 8mm",
+      "8=basique poudre de fer, faible teneur en hydrogène",
+      "Diamètre 3/32 po",
+      "Angle 8°"
+    ],
+    "answer": "Option B",
+    "explanation": "Les deux derniers chiffres indiquent le type d'enrobage. 8=basique poudre de fer. 0=cellulosique. 1=rutile.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Courant recommandé E6010 diamètre 3/16 po (4.8 mm)?",
+    "options": [
+      "80-130 A",
+      "150-200 A",
+      "200-300 A",
+      "350-450 A"
+    ],
+    "answer": "Option C",
+    "explanation": "E6010 4.8mm: 200-300 A. Les E6010/E6011 utilisent des courants plus élevés que les E7018 au même diamètre.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Défaut d'inclusion de laitier: cause principale?",
+    "options": [
+      "Mauvais nettoyage entre passes",
+      "Courant trop élevé",
+      "Gaz incorrect",
+      "Mauvaise polarité"
+    ],
+    "answer": "Option A",
+    "explanation": "Le laitier doit être complètement enlevé entre les passes. Causes: mauvais angle, passes trop larges, nettoyage insuffisant.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Que signifie 'position 1' dans la classification des électrodes?",
+    "options": [
+      "Position à plat seulement",
+      "Toutes positions (à plat, horizontal, vertical, overhead)",
+      "Verticale seulement",
+      "Horizontale seulement"
+    ],
+    "answer": "Option B",
+    "explanation": "Le 2e chiffre: 1=toutes positions, 2=plat+horizontal, 3=plat seulement, 4=vertical descendant+autres.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Comment réduire la pénétration en SMAW?",
+    "options": [
+      "Augmenter le courant",
+      "Réduire le courant ou augmenter la vitesse",
+      "Utiliser DC+",
+      "Utiliser une électrode plus grosse"
+    ],
+    "answer": "Option B",
+    "explanation": "Moins de courant = moins de pénétration. Vitesse plus élevée réduit aussi l'apport de chaleur.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle électrode SMAW est préférée pour l'acier inoxydable?",
+    "options": [
+      "E6010",
+      "E7018",
+      "E308L/AWS A5.4",
+      "E7024"
+    ],
+    "answer": "Option C",
+    "explanation": "E308L pour acier inox 304. E309L pour inox 309 (acier-inox). E316L pour inox 316 (acide).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Stockage correct des électrodes E7018?",
+    "options": [
+      "Air libre",
+      "Étuve à 120-150°C",
+      "Réfrigérateur",
+      "Tout contenant scellé"
+    ],
+    "answer": "Option B",
+    "explanation": "Après séchage (300-400°C), stockage à 120-150°C. Distribution en porte-électrode chauffant.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le défaut 'manque de fusion' (lack of fusion)?",
+    "options": [
+      "Le métal d'apport ne fusionne pas avec le métal de base ou entre passes",
+      "Trou dans le cordon",
+      "Cordon trop large",
+      "Laitier piégé"
+    ],
+    "answer": "Option A",
+    "explanation": "Causes: courant trop bas, angle incorrect, vitesse trop rapide, métal de base froid.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Qu'est-ce que la porosité en soudage?",
+    "options": [
+      "Cavités gazeuses dans le métal fondu solidifié",
+      "Manque de métal",
+      "Cordon trop haut",
+      "Projections"
+    ],
+    "answer": "Option A",
+    "explanation": "Causes: humidité, courants d'air, arc long, pièce sale (huile, peinture, rouille).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Effet de l'humidité sur les électrodes basiques?",
+    "options": [
+      "Améliore la fluidité",
+      "Augmente l'hydrogène diffusible = risque de fissuration à froid",
+      "Aucun effet",
+      "Réduit les projections"
+    ],
+    "answer": "Option B",
+    "explanation": "L'humidité dans l'enrobage se dissocie dans l'arc en H₂ atomique, qui diffuse dans le métal et cause la fissuration.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle électrode pour tôles minces < 3 mm?",
+    "options": [
+      "E7018",
+      "E6013 (rutile)",
+      "E6010",
+      "E7024"
+    ],
+    "answer": "Option B",
+    "explanation": "E6013 (rutile) a un arc doux adapté aux tôles minces. E6010 pénètre trop profondément.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Comment amorcer l'arc en SMAW?",
+    "options": [
+      "Frapper comme une allumette (scratch start) ou tapoter (tap start)",
+      "Appuyer puis relâcher",
+      "Haute fréquence",
+      "Chauffer l'électrode"
+    ],
+    "answer": "Option A",
+    "explanation": "Le scratch start (frotter) est le plus commun. Le tap start évite de coller l'électrode.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le taux de dépôt typique E7018 3.2mm?",
+    "options": [
+      "0.5-1 kg/h",
+      "1.5-2.5 kg/h",
+      "4-6 kg/h",
+      "8-10 kg/h"
+    ],
+    "answer": "Option B",
+    "explanation": "E7018 3.2mm dépose environ 1.5-2.5 kg/h. Le taux augmente avec le courant et le diamètre.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Courant en fonction de l'épaisseur pour E7018?",
+    "options": [
+      "200-250 A pour 25mm",
+      "100 A pour 3mm + 8 A/mm additionnels",
+      "50 A fixe",
+      "Courant = épaisseur × 5"
+    ],
+    "answer": "Option B",
+    "explanation": "Règle: 100 A pour 3mm d'épaisseur + 8 A/mm supplémentaire. 25mm: ≈100+22×8=276 A.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Teneur en hydrogène diffusible max des électrodes basiques?",
+    "options": [
+      "<5 mL/100g",
+      "<16 mL/100g (H16) ou <8 mL/100g (H8)",
+      "<50 mL/100g",
+      "<100 mL/100g"
+    ],
+    "answer": "Option B",
+    "explanation": "E7018 standard: H16 (<16mL H₂/100g métal déposé). E7018-H8: <8mL. Plus bas = meilleur pour éviter fissuration.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Largeur max d'un cordon SMAW par rapport au diamètre?",
+    "options": [
+      "2× diamètre électrode",
+      "3× diamètre",
+      "4× diamètre",
+      "Pas de limite"
+    ],
+    "answer": "Option B",
+    "explanation": "Cordon max 3× le Ø de l'électrode. Plus large crée des inclusions de laitier et manque de fusion.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Angle d'électrode recommandé en position verticale montante SMAW?",
+    "options": [
+      "0-5° vers le haut",
+      "5-15° vers le haut (poussant)",
+      "15-30° vers le bas",
+      "45° fixe"
+    ],
+    "answer": "Option B",
+    "explanation": "Angle poussant 5-15° vers le haut. Le weave en forme de U ou V pour contrôler le bain.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Diamètre de l'électrode soudant à 90 A en SMAW?",
+    "options": [
+      "1/16 po (1.6mm)",
+      "3/32 po (2.4mm)",
+      "1/8 po (3.2mm)",
+      "5/32 po (4.0mm)"
+    ],
+    "answer": "Option B",
+    "explanation": "À 90 A, 3/32 po (2.4mm) est approprié. 1/8 po (3.2mm) nécessite 110-160 A.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Comment l'enrobage E7018 réduit-il l'hydrogène?",
+    "options": [
+      "Par absorption",
+      "Enrobage basique avec carbonates (CaCO₃) qui neutralisent H₂O en CO₂",
+      "Par évaporation",
+      "Par filtration"
+    ],
+    "answer": "Option B",
+    "explanation": "Les carbonates dans l'enrobage (CaCO₃, CaF₂) réagissent avec l'humidité pour former CO₂ et HF, réduisant l'H₂ disponible.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Différence entre E7024 et E7018?",
+    "options": [
+      "E7024=fer lourd (poudre Fe), taux dépôt élevé, position à plat/horizontal; E7018=toutes positions",
+      "E7024=acier inox",
+      "E7024=alu",
+      "Identiques"
+    ],
+    "answer": "Option A",
+    "explanation": "E7024 (fer lourd) dépose 50-70% plus de métal qu'E7018 mais seulement à plat/horizontal.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Nombre de passes typiques pour joint rainuré 10mm avec E7018 3.2mm?",
+    "options": [
+      "1 passe",
+      "2-3 passes",
+      "5-7 passes",
+      "10-12 passes"
+    ],
+    "answer": "Option B",
+    "explanation": "Passe racine (3.2mm) + 1-2 passes de remplissage + couverture. Chaque passe dépose ≈2-4mm d'épaisseur.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Que signifie la lettre 'H' après E7018 (ex: E7018-H4R)?",
+    "options": [
+      "Haute pénétration",
+      "Teneur hydrogène ≤4mL/100g + résistant à l'humidité (R)",
+      "Haute vitesse",
+      "Hard (dur)"
+    ],
+    "answer": "Option B",
+    "explanation": "H4 = hydrogène diffusible ≤4mL/100g. R = résistant à l'humidité (moins de re-séchage nécessaire).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Meilleur compromis qualité/coût pour gaz GMAW acier carbone?",
+    "options": [
+      "100% CO₂",
+      "75% Ar/25% CO₂",
+      "100% Ar",
+      "95% Ar/5% O₂"
+    ],
+    "answer": "Option B",
+    "explanation": "75%Ar/25%CO₂ = arc stable, moins de projections, bonne pénétration, coût raisonnable.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Mode de transfert GMAW à faible apport de chaleur pour tôles minces?",
+    "options": [
+      "Spray",
+      "Court-circuit (Short Circuit/GMAW-S)",
+      "Globulaire",
+      "Pulsé"
+    ],
+    "answer": "Option B",
+    "explanation": "GMAW-S: 0.5-1.5 kJ/mm. Fil touche le bain 30-200×/sec. Idéal tôles 1-5mm et positions verticale/overhead.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Différence principale entre FCAW et GMAW?",
+    "options": [
+      "FCAW = fil tubulaire avec flux; GMAW = fil plein",
+      "FCAW = vertical seulement",
+      "FCAW = toujours gaz externe",
+      "FCAW = moins de dépôt"
+    ],
+    "answer": "Option A",
+    "explanation": "FCAW: fil rempli de flux, taux dépôt 3-12 kg/h. Auto-protégé (FCAW-S) sans gaz externe possible.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Stickout recommandé pour fil ER70S-6 diamètre 0.045 po (1.2mm)?",
+    "options": [
+      "5-8 mm",
+      "12-16 mm",
+      "20-25 mm",
+      "25-30 mm"
+    ],
+    "answer": "Option B",
+    "explanation": "Stickout 12-16mm (1/2-5/8 po). Trop court = tube contact chauffe. Trop long = arc instable.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "% min d'Argon pour transfert spray en GMAW?",
+    "options": [
+      "50%",
+      "75%",
+      "85%",
+      "95%"
+    ],
+    "answer": "Option C",
+    "explanation": "≥85% Ar pour spray. CO₂ pur ne permet pas le spray. En dessous de 85% = globulaire.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel gaz pour GMAW sur aluminium?",
+    "options": [
+      "100% CO₂",
+      "100% Argon",
+      "75% Ar/25% CO₂",
+      "95% Ar/5% O₂"
+    ],
+    "answer": "Option B",
+    "explanation": "Aluminium = 100% Ar (ou Ar/He). Les gaz actifs (CO₂, O₂) causeraient de l'oxydation.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Classification AWS pour fil plein GMAW acier carbone?",
+    "options": [
+      "E6010",
+      "ER70S-6",
+      "E7018",
+      "E71T-1"
+    ],
+    "answer": "Option B",
+    "explanation": "ER70S-6: ER=électrode/baguette, 70=70ksi, S=plein (solid), -6=désoxydation élevée (Si+Mn).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Mode transfert spray: tension et courant typiques pour fil 1.2mm?",
+    "options": [
+      "18V, 100A",
+      "22V, 150A",
+      "26-32V, 200-350A",
+      "35-40V, 400-500A"
+    ],
+    "answer": "Option C",
+    "explanation": "Spray: 26-32V, 200-350A pour 1.2mm. Gouttelettes < fil, transférées axialement à >200×/sec.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Débit de gaz typique pour GMAW en atelier?",
+    "options": [
+      "5-8 L/min",
+      "12-18 L/min",
+      "25-35 L/min",
+      "40-50 L/min"
+    ],
+    "answer": "Option B",
+    "explanation": "Débit recommandé: 12-18 L/min (25-35 pi³/h). Trop bas = porosité. Trop haut = turbulence, aspiration d'air.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Que signifie ER70S-6?",
+    "options": [
+      "Électrode/Baguette, 70ksi, plein, haut Si+Mn désoxydation",
+      "Engineering Rod, 70mm, solid",
+      "Électrode Rutile 70, solide",
+      "Acier inox"
+    ],
+    "answer": "Option A",
+    "explanation": "ER=électrode/baguette, 70=70ksi, S=plein (solid), -6=type désoxydation le plus élevé (bon sur tôle rouillée).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que le mode transfert globulaire?",
+    "options": [
+      "Grosses gouttelettes irrégulières, beaucoup de projections",
+      "Gouttelettes fines",
+      "Contact fil-bain",
+      "Arc pulsé"
+    ],
+    "answer": "Option A",
+    "explanation": "Globulaire: gouttes de Ø>fil, irrégulières. Beaucoup de projections. Se produit entre court-circuit et spray.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que le FCAW-S (self-shielded)?",
+    "options": [
+      "Fil fourré auto-protégé, sans gaz externe",
+      "FCAW avec protection spéciale",
+      "Sous-marin",
+      "Submerged arc"
+    ],
+    "answer": "Option A",
+    "explanation": "FCAW-S utilise les gaz produits par le flux du fil pour protéger le bain. Pas de bouteille de gaz nécessaire.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Effet du CO₂ pur vs Ar/CO₂ en GMAW?",
+    "options": [
+      "CO₂ pur = arc dur, projections, bonne pénétration; Ar/CO₂ = arc doux, moins projections",
+      "CO₂ = meilleur aspect",
+      "CO₂ = sans projections",
+      "Ar/CO₂ = pénétration meilleure"
+    ],
+    "answer": "Option A",
+    "explanation": "CO₂ pur coûte moins cher mais donne plus de projections et un arc moins stable. Ar/CO₂ est plus cher mais de meilleure qualité.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que le mode transfert pulsé (pulsed spray)?",
+    "options": [
+      "Arc s'arrête périodiquement",
+      "Courant pulse entre spray (pic) et faible (base) pour contrôler l'apport de chaleur",
+      "Court-circuit continu",
+      "Arc alterné"
+    ],
+    "answer": "Option B",
+    "explanation": "Le mode pulsé alterne: courant élevé (spray-transfer) et courant faible (refroidissement bain). Permet le spray dans toutes positions.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Vitesse de dévidage typique pour fil 0.035 po (0.9mm)?",
+    "options": [
+      "1-2 m/min",
+      "3-5 m/min",
+      "6-12 m/min",
+      "15-20 m/min"
+    ],
+    "answer": "Option C",
+    "explanation": "Fil 0.9mm: 6-12 m/min (200-400 ipm). La vitesse de dévidage contrôle le courant: plus vite = plus d'ampérage.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Différence entre fil E71T-1 et E71T-8 (FCAW)?",
+    "options": [
+      "E71T-1 = toutes positions avec CO₂; E71T-8 = auto-protégé, vertical descendant",
+      "E71T-1 = inox",
+      "E71T-8 = alu",
+      "Identiques"
+    ],
+    "answer": "Option A",
+    "explanation": "E71T-1: gaz CO₂, toutes positions, usage général. E71T-8: auto-protégé (FCAW-S), basse température, pipelines.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que le 'burn-back' en GMAW?",
+    "options": [
+      "Fil fond dans le tube contact",
+      "Projections excessives",
+      "Arc instable",
+      "Porosité"
+    ],
+    "answer": "Option A",
+    "explanation": "Burn-back: le fil fond et colle dans le tube contact. Causes: distance de travail trop courte, vitesse trop lente, mauvais réglage.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Polarité recommandée pour FCAW avec gaz?",
+    "options": [
+      "DCEN (DC-)",
+      "DCEP (DC+)",
+      "AC",
+      "DC+ ou DC-"
+    ],
+    "answer": "Option B",
+    "explanation": "FCAW avec gaz = DC+ (électrode positive). FCAW auto-protégé = DC- généralement.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Avantage du fil E71T-1 vs fil plein ER70S-6?",
+    "options": [
+      "Taux dépôt plus élevé, meilleure pénétration, tolérant à la rouille",
+      "Plus propre, moins fumées",
+      "Moins cher",
+      "Toutes positions impossible"
+    ],
+    "answer": "Option A",
+    "explanation": "E71T-1 dépose jusqu'à 5-8 kg/h (vs 3-5 pour fil plein). Plus tolérant aux surfaces sales.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel gaz pour acier inoxydable en GMAW?",
+    "options": [
+      "100% CO₂",
+      "98% Ar/2% O₂ ou 90% He/7.5% Ar/2.5% CO₂",
+      "100% Ar seulement",
+      "75% Ar/25% CO₂"
+    ],
+    "answer": "Option B",
+    "explanation": "Mélange ternaire (He/Ar/CO₂) pour inox: meilleur contrôle de l'apport de chaleur et aspect du cordon.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que la 'tige de soudage' ou 'cold wire'?",
+    "options": [
+      "Fil froid ajouté au bain de fusion pour augmenter le taux de dépôt",
+      "Électrode non alimentée",
+      "Fil trop froid",
+      "Acier réfrigéré"
+    ],
+    "answer": "Option A",
+    "explanation": "Le cold wire feed ajoute du fil non-énergisé dans le bain, augmentant le dépôt sans augmenter l'apport de chaleur ni le courant.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Mode de transfert à éviter pour tôles minces?",
+    "options": [
+      "Court-circuit",
+      "Spray (trop chaud, trop pénétrant)",
+      "Pulsé",
+      "Tous acceptables"
+    ],
+    "answer": "Option B",
+    "explanation": "Le spray a un apport de chaleur élevé (2-5 kJ/mm) qui brûle les tôles minces. Court-circuit est meilleur.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Tension et courant de transition spray pour fil 0.045po (1.2mm) en Ar/CO₂?",
+    "options": [
+      "20V, 150A",
+      "24V, 180A",
+      "26-28V, 200-220A (seuil spray)",
+      "32V, 300A"
+    ],
+    "answer": "Option C",
+    "explanation": "Le seuil spray pour 1.2mm est ≈200-220A en Ar/CO₂ (85/15). En dessous = globulaire, au-dessus = spray.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Formule de calcul du taux de dépôt GMAW?",
+    "options": [
+      "Dépôt (kg/h)= vitesse fil (m/min)×densité(kg/m³)×π×(Ø/2)²×60/1000",
+      "Dépôt = courant×tension",
+      "Dépôt = vitesse fil×10",
+      "Dépôt = épaisseur×vitesse"
+    ],
+    "answer": "Option A",
+    "explanation": "Ex: 1.2mm, 8m/min: ≈8×7850×π×0.00036×60/1000 ≈ 4.25 kg/h. Densité acier=7850kg/m³.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que l'effet 'burn-off rate' en GMAW?",
+    "options": [
+      "Vitesse à laquelle le fil fond dans l'arc, dépendant du courant",
+      "Taux de combustion du gaz",
+      "Vitesse de refroidissement",
+      "Usure du tube contact"
+    ],
+    "answer": "Option A",
+    "explanation": "Le burn-off rate (taux de fusion) = fonction du courant. Équilibré avec la vitesse de dévidage pour maintenir la longueur d'arc.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Stickout optimal pour FCAW auto-protégé vs GMAW?",
+    "options": [
+      "FCAW-S: 20-30mm (plus long pour préchauffer le flux); GMAW: 12-20mm",
+      "Identique",
+      "FCAW-S: 5-10mm",
+      "GMAW: 25-35mm"
+    ],
+    "answer": "Option A",
+    "explanation": "FCAW-S nécessite un stickout plus long (20-30mm) pour préchauffer le flux et assurer une bonne protection gazeuse.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Différence entre fil E81T1-Ni1 et E71T-1?",
+    "options": [
+      "E81T1-Ni1=80ksi, avec nickel pour basse température; E71T-1=70ksi standard",
+      "E81T1=aluminium",
+      "E71T-1=acier inox",
+      "Identiques"
+    ],
+    "answer": "Option A",
+    "explanation": "E81T1-Ni1: 80ksi, 1% Ni pour ténacité à basse température (-40°C). Pour charpentes nordiques et pipelines.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Courant de transition entre court-circuit et spray pour fil 0.035po (0.9mm)?",
+    "options": [
+      "100A",
+      "140-160A",
+      "200-220A",
+      "300A"
+    ],
+    "answer": "Option B",
+    "explanation": "Pour fil 0.9mm: transition court-circuit→spray vers 140-160A (en Ar/CO₂ 85/15).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que le CTWD (Contact Tip to Work Distance)?",
+    "options": [
+      "Distance tube contact-pièce = stickout + longueur d'arc",
+      "Distance de coupe",
+      "Distance électrode-pièce en SMAW",
+      "Longueur du câble"
+    ],
+    "answer": "Option A",
+    "explanation": "CTWD = stickout + longueur d'arc. En GMAW, typiquement 15-25mm. Plus court = plus de courant pour même vitesse de fil.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Caractéristiques du transfert spray pulsé vs spray continu?",
+    "options": [
+      "Pulsé = apport chaleur moyen réduit, toutes positions; Continu = apport élevé, plat/horizontal seulement",
+      "Continu = meilleur partout",
+      "Pulsé = pire qualité",
+      "Identiques"
+    ],
+    "answer": "Option A",
+    "explanation": "Le pulsé réduit l'apport de chaleur moyen, permettant le spray dans toutes positions. Le spray continu est limité au plat/horizontal.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Pourquoi ajouter 2-5% O₂ au gaz GMAW pour acier?",
+    "options": [
+      "Améliore la fluidité du bain, stabilise l'arc, meilleur aspect du cordon",
+      "Réduit les coûts",
+      "Protège mieux",
+      "Éteint l'arc"
+    ],
+    "answer": "Option A",
+    "explanation": "L'O₂ à 2-5% améliore la fluidité du bain et stabilise l'arc. Trop = oxydation. Interdit sur inox (perte Cr).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la tension de fonctionnement typique pour le mode court-circuit avec fil 0.035po (0.9mm) en GMAW?",
+    "options": [
+      "12-14 V",
+      "15-22 V",
+      "24-28 V",
+      "30-35 V"
+    ],
+    "answer": "Option B",
+    "explanation": "GMAW-S: 15-22 V pour fil 0.9mm. Tension plus basse que le spray (26-32V). Arc doux adapté aux tôles minces.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que la 'pseudo-alloy' ou 'synergic line' dans les postes GMAW modernes?",
+    "options": [
+      "Ligne de programme qui couple tension et vitesse de fil pour un gaz/diamètre donné",
+      "Alliage de fil spécial",
+      "Gaz synthétique",
+      "Programme d'entretien"
+    ],
+    "answer": "Option A",
+    "explanation": "Les postes synergiques ajustent automatiquement la tension en fonction de la vitesse de fil selon une courbe préprogrammée pour chaque combinaison gaz/diamètre.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Méthode END la plus courante et obligatoire?",
+    "options": [
+      "Radiographie (RT)",
+      "Ultrasons (UT)",
+      "Inspection visuelle (VT)",
+      "Ressuage (PT)"
+    ],
+    "answer": "Option C",
+    "explanation": "VT = 80-90% des inspections. Obligatoire avant, pendant et après le soudage.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Critère d'acceptation pour une fissure selon CSA W59?",
+    "options": [
+      "Max 3mm",
+      "Max 6mm",
+      "Aucune fissure acceptable",
+      "≤1mm profondeur"
+    ],
+    "answer": "Option C",
+    "explanation": "Aucune fissure n'est acceptable, toutes catégories confondues. Rejet immédiat.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Critère d'acceptation essai de pliage guidé?",
+    "options": [
+      "Aucune fissure visible",
+      "Aucune fissure >3mm dans toute direction",
+      "Aucune fissure >1mm",
+      "Fissure ≤6mm acceptable"
+    ],
+    "answer": "Option B",
+    "explanation": "Après pliage 180°, aucune fissure >3mm. Petites fissures aux extrémités <3mm ignorées.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel END utilise un liquide pénétrant + révélateur?",
+    "options": [
+      "Magnétoscopie (MT)",
+      "Ressuage (PT)",
+      "Courants de Foucault (ET)",
+      "Thermographie (IRT)"
+    ],
+    "answer": "Option B",
+    "explanation": "PT: liquide pénètre dans les discontinuités débouchant en surface, révélateur aspire le pénétrant.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Profondeur max undercut Catégorie A selon CSA W59?",
+    "options": [
+      "0.8 mm (1/32 po)",
+      "1.2 mm (3/64 po)",
+      "1.6 mm (1/16 po)",
+      "2.0 mm"
+    ],
+    "answer": "Option A",
+    "explanation": "Cat A=0.8mm. Cat B=1.2mm. Cat C/D=1.6mm.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Différence entre discontinuité et défaut?",
+    "options": [
+      "Identiques",
+      "Discontinuité = imperfection pouvant être acceptable; Défaut = discontinuité hors critères = rejet",
+      "Défaut = acceptable",
+      "Discontinuité = toujours rejet"
+    ],
+    "answer": "Option B",
+    "explanation": "Toute soudure a des discontinuités. Un défaut est une discontinuité qui dépasse les critères d'acceptation.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel essai mesure la résistance à la traction d'une soudure?",
+    "options": [
+      "Pliage",
+      "Traction transversale (tensile test)",
+      "Dureté",
+      "Macrographie"
+    ],
+    "answer": "Option B",
+    "explanation": "L'essai de traction mesure la résistance ultime (Rm). Critère: Rm ≥ résistance minimale du métal de base selon la WPS.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que la magnétoscopie (MT)?",
+    "options": [
+      "END pour discontinuités de surface et sub-surface dans matériaux ferromagnétiques",
+      "Pour tous matériaux",
+      "Pour verifications d'épaisseur",
+      "Test de dureté"
+    ],
+    "answer": "Option A",
+    "explanation": "MT: aimante la pièce, applique particules (humides/sèches). Les fuites de flux aux discontinuités attirent les particules.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Principe de la radiographie (RT)?",
+    "options": [
+      "Rayons X/γ traversent la soudure, film numérique capte l'absorption différentielle",
+      "Ondes sonores",
+      "Courants électriques",
+      "Champs magnétiques"
+    ],
+    "answer": "Option A",
+    "explanation": "Les défauts (porosités, inclusions) absorbent moins les rayons → zones plus foncées sur le film.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Principe des ultrasons (UT)?",
+    "options": [
+      "Ondes acoustiques haute fréquence réfléchies par les discontinuités",
+      "Rayons X",
+      "Particules magnétiques",
+      "Liquide pénétrant"
+    ],
+    "answer": "Option A",
+    "explanation": "UT: sonde émet des ondes (2-10 MHz). Le temps de retour indique la profondeur du défaut.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel END détecte les fissurations de fatigue en service?",
+    "options": [
+      "VT seulement",
+      "Ressuage (PT) ou magnétoscopie (MT)",
+      "Radiographie",
+      "Aucun"
+    ],
+    "answer": "Option B",
+    "explanation": "PT et MT sont sensibles aux fissures de surface. MT détecte aussi les fissures sub-surface.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Critères d'acceptation CSA W59 pour soufflure (blowhole)?",
+    "options": [
+      ">3mm=rejet",
+      "Soufflure seule ≤3mm, espacement ≥25mm",
+      "Toute taille acceptée",
+      "≤6mm accepté"
+    ],
+    "answer": "Option B",
+    "explanation": "Même critère que porosité: ≤3mm si espacement ≥25mm. Alignées=rejet.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que l'essai de macrographie?",
+    "options": [
+      "Examen visuel d'une section polie et attaquée à l'acide, souvent à la loupe (10×)",
+      "Essai de pliage",
+      "Mesure de dureté",
+      "Analyse chimique"
+    ],
+    "answer": "Option A",
+    "explanation": "La macrographie révèle: pénétration, nombre de passes, porosité interne, inclusions, structure.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que la courbe de correction (calibration) pour UT?",
+    "options": [
+      "Courbe distance-amplitude (DAC) pour calibrer la sensibilité selon la profondeur",
+      "Courbe de dureté",
+      "Graphique de refroidissement",
+      "Courbe de traction"
+    ],
+    "answer": "Option A",
+    "explanation": "La DAC (Distance Amplitude Correction) compense l'atténuation du son avec la distance, essentielle pour une détection fiable.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle END est optimale pour détecter une fissure de fatigue en surface?",
+    "options": [
+      "Radiographie (RT)",
+      "Ressuage (PT)",
+      "Ultrasons (UT)",
+      "Inspection visuelle (VT)"
+    ],
+    "answer": "Option B",
+    "explanation": "PT est très sensible aux fissures débouchant en surface. La radiographie peut manquer les fissures serrées perpendiculaires au film.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Avantage de la radiographie numérique (DR) vs film?",
+    "options": [
+      "Traitement instantané, manipulation, stockage numérique, dosage réduit",
+      "Film = meilleure résolution",
+      "Film = moins cher",
+      "DR = pas portable"
+    ],
+    "answer": "Option A",
+    "explanation": "La DR (Digital Radiography) permet un traitement immédiat, aucun chimique, stockage facile, et moins d'exposition.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que l'essai de pliage racine (root bend)?",
+    "options": [
+      "Plie la face extérieure de la racine pour la mettre en tension",
+      "Plie le dessus du cordon",
+      "Plie toute la soudure",
+      "Plie le métal de base"
+    ],
+    "answer": "Option A",
+    "explanation": "Le root bend expose la racine en tension, vérifiant la fusion complète et l'absence de défauts à la racine.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quels défauts la radiographie détecte-t-elle le mieux?",
+    "options": [
+      "Porosité, inclusions, fissures, manque de fusion volumineux",
+      "Seulement la surface",
+      "Fissures fermées",
+      "Défauts d'angle"
+    ],
+    "answer": "Option A",
+    "explanation": "RT excelle pour les défauts volumétriques (porosité, inclusions). Moins efficace pour fissures très fines ou parallèles au faisceau.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quels défauts les UT détectent-ils le mieux?",
+    "options": [
+      "Fissures planes, manque de fusion, défauts orientés perpendiculairement aux ondes",
+      "Porosité seulement",
+      "Défauts de surface seulement",
+      "Défauts cosmétiques"
+    ],
+    "answer": "Option A",
+    "explanation": "UT est excellent pour les fissures planes (manque de fusion, fissures). Moins bon pour porosité ronde.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Différence entre essai destructif (DT) et non destructif (NDT)?",
+    "options": [
+      "DT=éprouvette détruite (traction, pliage); NDT=pièce intacte (RT, UT, PT, MT, VT)",
+      "DT=plus précis",
+      "NDT=destructif",
+      "Identiques"
+    ],
+    "answer": "Option A",
+    "explanation": "Les essais destructifs (traction, pliage, macrographie, dureté) sont faits sur coupons témoins. Les NDT sur la production.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que la norme CSA W59 exige pour l'acceptation d'une soudure d'angle?",
+    "options": [
+      "Gorge ≥ dimension spécifiée, convexité ≤ 1mm au-delà de la gorge",
+      "Gorge + convexité = dimension",
+      "Seulement l'aspect",
+      "Aucun critère"
+    ],
+    "answer": "Option A",
+    "explanation": "Gorge mesurée ≥ dimension spécifiée. Convexité max = 1mm. Jonction cordon-métal de base sans undercut excessif.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que le test de pliage libre (free bend)?",
+    "options": [
+      "Éprouvette pliée librement sans mandrin guide",
+      "Pliage guidé par mandrin",
+      "Pliage à froid",
+      "Pliage mécanique"
+    ],
+    "answer": "Option A",
+    "explanation": "Free bend: éprouvette pliée progressivement sans gabarit, mesurant l'allongement du métal déposé.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Principe de l'inspection par courants de Foucault (ET)?",
+    "options": [
+      "Courant alternatif dans une bobine induit des courants dans la pièce; les défauts perturbent le champ",
+      "Ultrasons",
+      "Rayons X",
+      "Particules magnétiques"
+    ],
+    "answer": "Option A",
+    "explanation": "ET (Eddy Current) détecte les défauts de surface/sub-surface dans les matériaux conducteurs, surtout en tubes.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Épaisseur max admissible d'une soudure d'angle convexe selon CSA W59?",
+    "options": [
+      "0.5mm",
+      "1mm au-delà de la gorge spécifiée",
+      "2mm",
+      "Pas de limite"
+    ],
+    "answer": "Option B",
+    "explanation": "Convexité max = 1mm (1/32 po). Mesurée de la face théorique (ligne hypothénuse) à la surface réelle.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que le rapport signal-bruit en UT?",
+    "options": [
+      "Ratio amplitude défaut/amplitude bruit de fond; min 2:1 pour détection valide",
+      "Volume sonore",
+      "Fréquence d'onde",
+      "Distance"
+    ],
+    "answer": "Option A",
+    "explanation": "Signal-to-noise ≥ 2:1 pour UT. En dessous, le défaut ne peut être distingué du bruit de fond du matériau.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle qualification est nécessaire pour un inspecteur NDT au Québec?",
+    "options": [
+      "Certification selon CSA W178 / BNQ 178 ou ASNT SNT-TC-1A niveau II",
+      "Diplôme secondaire",
+      "Carte de soudeur",
+      "Aucune certification"
+    ],
+    "answer": "Option A",
+    "explanation": "Les inspecteurs doivent être certifiés niveau II selon CSA W178 ou BNQ 178 (ou ASNT) pour le méthode utilisée.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Critère d'acceptation pour inclusion de laitier en RT selon CSA W59?",
+    "options": [
+      "Aucune inclusion",
+      "Inclusion ≤3mm, espacement ≥6× la plus longue dimension",
+      "Inclusion ≤6mm",
+      "Toute inclusion acceptée"
+    ],
+    "answer": "Option B",
+    "explanation": "Inclusion: longueur ≤3mm, espacement ≥6× la plus grande dimension. Les inclusions alignées sont rejetées.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que la fenêtre de tir en radiographie?",
+    "options": [
+      "Distance source-film pour netteté",
+      "Période de l'année",
+      "Heure de l'examen",
+      "Temps de pause"
+    ],
+    "answer": "Option A",
+    "explanation": "La distance source-film (DFF) affecte la netteté géométrique. Plus la distance est grande, meilleure est la résolution d'image.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Critère d'acceptation dureté maximum CSA W59 pour acier carbone?",
+    "options": [
+      "350 HV",
+      "400 HV",
+      "450 HV",
+      "500 HV"
+    ],
+    "answer": "Option B",
+    "explanation": "Dureté max ZAT = 400 HV (ou 380 HV pour certaines applications). Au-delà, risque de fissuration à froid.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que le test de pliage par choc (impact test / Charpy)?",
+    "options": [
+      "Mesure l'énergie absorbée pour briser une éprouvette entaillée à basse température",
+      "Pliage lent",
+      "Mesure de dureté",
+      "Test de fatigue"
+    ],
+    "answer": "Option A",
+    "explanation": "Charpy V-notch: énergie (J) absorbée. Critères typiques CSA: ≥27J à -30°C pour acier de charpente.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que la PT (penetrant testing) méthode A vs C?",
+    "options": [
+      "A=colorant visible (rouge), C=fluorescent (UV). A pour inspection générale, C plus sensible",
+      "A=eau, C=huile",
+      "A=chaud, C=froid",
+      "Identiques"
+    ],
+    "answer": "Option A",
+    "explanation": "Méthode A (colorant rouge): lumière blanche, inspection générale. Méthode C (fluorescent): UV, plus sensible, pour inspection critique.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Critère d'acceptation pour allongement en essai de traction?",
+    "options": [
+      "≥15% pour la plupart des aciers de construction",
+      "≥5%",
+      "≥30%",
+      "Aucun critère"
+    ],
+    "answer": "Option A",
+    "explanation": "L'allongement (% elongation) mesure la ductilité. Selon CSA W59, ≥15% sur 50mm pour acier de construction typique.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que le coefficient d'atténuation en UT?",
+    "options": [
+      "Mesure de la réduction d'amplitude d'onde par unité de distance dans le matériau",
+      "Gain de l'appareil",
+      "Fréquence de la sonde",
+      "Diamètre du cristal"
+    ],
+    "answer": "Option A",
+    "explanation": "L'atténuation (dB/mm) dépend de la fréquence, du matériau (gros grains = forte atténuation). Limite la profondeur d'inspection.",
+    "difficulty": "HARD"
+  }
+]

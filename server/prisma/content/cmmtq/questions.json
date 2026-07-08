@@ -1,0 +1,322 @@
+[
+  {
+    "chapter": 1,
+    "question": "Quel type de cuivre est le plus couramment utilisé au Québec pour les installations d'eau potable résidentielles?",
+    "options": ["Type M (rouge)", "Type L (bleu)", "Type K (vert)", "Type DWV (jaune)"],
+    "answer": "B",
+    "explanation": "Le cuivre Type L (paroi moyenne, code couleur bleu) est le type le plus couramment utilisé au Québec pour les installations résidentielles d'eau potable. Le Type M (rouge) est plus mince et le Type K (vert) est plus épais, réservé aux applications souterraines.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel matériau de tuyauterie est le plus résistant au gel et peut se dilater sans se rompre?",
+    "options": ["Cuivre Type L", "PVC Schedule 40", "PEX (polyéthylène réticulé)", "Acier galvanisé"],
+    "answer": "C",
+    "explanation": "Le PEX (polyéthylène réticulé) peut se dilater sous l'effet du gel sans se rompre, contrairement au cuivre et à l'acier galvanisé qui éclatent. Le PVC se fragilise et casse également sous l'effet du gel.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la bonne méthode d'assemblage pour des tuyaux ABS?",
+    "options": ["Colle à solvant PVC standard", "Colle à solvant ABS spécifique sans primer", "Soudure à l'étain", "Raccords à compression avec ruban de Téflon"],
+    "answer": "B",
+    "explanation": "Les tuyaux ABS (noirs) s'assemblent avec une colle à solvant spécifique pour ABS (ciment ABS) sans primer. Le PVC nécessite un primer suivi de colle PVC. La confusion entre les deux types de colle est une erreur fréquente sur les chantiers.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la température maximale de service pour un tuyau PVC utilisé en évacuation?",
+    "options": ["40 °C", "60 °C", "80 °C", "100 °C"],
+    "answer": "B",
+    "explanation": "La température maximale de service pour le PVC est de 60 °C. Au-delà, le matériau se ramollit et perd sa résistance mécanique. C'est pourquoi le PVC ne convient PAS pour l'eau potable chaude.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est l'unité de mesure normalisée utilisée au Québec pour calculer la charge d'un appareil sanitaire dans un réseau d'évacuation?",
+    "options": ["UBI (Unité de branchement d'évacuation)", "GPM (Gallons par minute)", "LPM (Litres par minute)", "PSI (Livres par pouce carré)"],
+    "answer": "A",
+    "explanation": "L'UBI (Unité de branchement d'évacuation) est l'unité de mesure normalisée du Code de plomberie du Québec. Chaque appareil se voit attribuer une valeur en UBI (par ex., une toilette = 4 UBI) pour dimensionner correctement les tuyaux d'évacuation.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est l'organisme responsable de délivrer les licences aux entrepreneurs en plomberie au Québec?",
+    "options": ["CMMTQ (Corporation des maîtres mécaniciens en tuyauterie du Québec)", "RBQ (Régie du bâtiment du Québec)", "CSST (Commission de la santé et de la sécurité du travail)", "APCHQ (Association des professionnels de la construction et de l'habitation du Québec)"],
+    "answer": "B",
+    "explanation": "La RBQ (Régie du bâtiment du Québec) est l'organisme gouvernemental qui délivre les licences aux entrepreneurs en plomberie. La CMMTQ est l'ordre professionnel qui regroupe les entrepreneurs, mais ce n'est pas elle qui délivre les licences officielles.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la profondeur minimale d'enfouissement pour une conduite d'eau enterrée au Québec, selon le Code de plomberie?",
+    "options": ["0,6 mètre (2 pieds)", "0,9 mètre (3 pieds)", "1,2 mètre (4 pieds)", "1,5 mètre (5 pieds)"],
+    "answer": "C",
+    "explanation": "Le Code de plomberie du Québec exige que les conduites d'eau enterrées soient installées à une profondeur minimale de 1,2 mètre (4 pieds) sous le niveau du sol pour les protéger contre le gel, compte tenu des conditions climatiques québécoises.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la pente minimale requise pour un tuyau d'évacuation de 2 pouces de diamètre?",
+    "options": ["1/8 po par pied (1 %)", "1/4 po par pied (2 %)", "1/2 po par pied (4 %)", "1 po par pied (8 %)"],
+    "answer": "B",
+    "explanation": "La pente minimale pour un tuyau d'évacuation de 2 pouces (50 mm) est de 1/4 po par pied (2 %). Pour les tuyaux de 3 pouces et plus, la pente minimale est réduite à 1/8 po par pied (1 %).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel type de permis est requis pour des travaux de réparation d'urgence de plomberie?",
+    "options": ["Permis de construction", "Permis de rénovation", "Permis de réparation", "Permis de branchement"],
+    "answer": "C",
+    "explanation": "Le permis de réparation est délivré pour les réparations d'urgence ou le remplacement d'un appareil sanitaire. Le délai de délivrance est généralement de 1 à 5 jours, plus rapide que les permis de construction (10-30 jours).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la durée de la garantie de conformité exigée par la RBQ pour les travaux de plomberie dans un bâtiment neuf?",
+    "options": ["1 an", "3 ans", "5 ans", "10 ans"],
+    "answer": "C",
+    "explanation": "La garantie de conformité exigée par la RBQ couvre les travaux pour 5 ans dans le cas des bâtiments neufs et 3 ans pour les rénovations majeures. Cette garantie est une condition obligatoire pour l'obtention de la licence d'entrepreneur.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Combien d'unités de branchement (UB) représente une toilette standard avec réservoir?",
+    "options": ["1 UB", "2 UB", "3 UB", "6 UB"],
+    "answer": "C",
+    "explanation": "Une toilette standard avec réservoir correspond à 3 UB (unités de branchement). Une toilette avec chasse à soupape (flushometer) correspond à 6 UB. Les UB servent à dimensionner les conduites d'alimentation en eau potable.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "À partir de quelle pression est-il recommandé d'installer un réducteur de pression sur l'alimentation en eau d'une résidence?",
+    "options": ["50 PSI (345 kPa)", "60 PSI (415 kPa)", "70 PSI (485 kPa)", "80 PSI (550 kPa)"],
+    "answer": "D",
+    "explanation": "Lorsque la pression d'eau dépasse 80 PSI (550 kPa), un réducteur de pression (PRV) doit être installé pour éviter les coups de bélier et l'usure prématurée des robinets et des joints. La pression idéale se situe entre 50 et 60 PSI.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel dispositif de protection antirefoulement est requis pour un système d'irrigation résidentiel selon le Code de plomberie du Québec?",
+    "options": ["Simple clapet antiretour", "Rupture de charge atmosphérique", "Disconnecteur à zone de pression réduite (RPZ)", "Anti-siphon intégré au robinet"],
+    "answer": "C",
+    "explanation": "Un disconnecteur à zone de pression réduite (RPZ) est obligatoire pour les systèmes d'irrigation résidentiels. Le RPZ offre le plus haut niveau de protection contre le refoulement car l'irrigation est considérée comme un risque élevé de contamination.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel phénomène est causé par l'arrêt brusque de l'écoulement d'eau dans une canalisation?",
+    "options": ["Siphonnage", "Cavitation", "Coup de bélier (water hammer)", "Refoulement"],
+    "answer": "C",
+    "explanation": "Le coup de bélier (water hammer) est un choc hydraulique causé par l'arrêt brusque de l'écoulement, souvent par la fermeture rapide d'une valve solénoïde (laveuse ou lave-vaisselle). On installe des anti-béliers pour absorber ce choc.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Pour une maison unifamiliale typique avec 2 salles de bain, quel est le diamètre recommandé pour l'entrée d'eau principale?",
+    "options": ["1/2 po", "3/4 po ou 1 po", "1 1/4 po", "2 po"],
+    "answer": "B",
+    "explanation": "Pour une maison unifamiliale typique au Québec avec 2 salles de bain, cuisine et buanderie, l'entrée d'eau principale est généralement de 3/4 po ou 1 po selon la distance et le nombre d'étages. Les branchements individuels sont généralement en 1/2 po.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la garde d'eau minimale exigée par le Code de plomberie du Québec pour un piège (siphon)?",
+    "options": ["25 mm (1 po)", "38 mm (1 1/2 po)", "50 mm (2 po)", "75 mm (3 po)"],
+    "answer": "C",
+    "explanation": "La garde d'eau minimale est de 50 mm (2 pouces) et la maximale est de 100 mm (4 pouces). Une garde insuffisante laisse passer les gaz d'égout; une garde excessive est sujette au siphonage.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel diamètre d'évacuation est requis pour une toilette standard?",
+    "options": ["1 1/2 po (38 mm)", "2 po (51 mm)", "3 po (76 mm)", "4 po (102 mm)"],
+    "answer": "C",
+    "explanation": "Une toilette standard nécessite un tuyau d'évacuation d'au moins 3 pouces (76 mm) de diamètre. Cela correspond à 4 UBE (unités de branchement d'évacuation) pour une toilette avec réservoir.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la distance maximale entre le piège d'un lavabo (1 1/4 po) et sa colonne de ventilation?",
+    "options": ["0,9 mètre (3 pieds)", "1,5 mètre (5 pieds)", "2,4 mètres (8 pieds)", "3,0 mètres (10 pieds)"],
+    "answer": "B",
+    "explanation": "Pour une évacuation de 1 1/4 po (32 mm), la distance maximale entre le piège et sa colonne de ventilation est de 1,5 mètre (5 pieds). Cette distance augmente avec le diamètre du tuyau.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "À quelle hauteur minimale au-dessus du toit la sortie d'un évent de plomberie doit-elle se trouver?",
+    "options": ["75 mm (3 po)", "150 mm (6 po)", "300 mm (12 po)", "600 mm (24 po)"],
+    "answer": "B",
+    "explanation": "La sortie d'un évent de plomberie doit dépasser le toit d'au moins 150 mm (6 pouces). De plus, elle doit être à au moins 3 mètres (10 pieds) de toute fenêtre, porte ou prise d'air de ventilation.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "À quelle fréquence maximale doit-on installer des bouches de nettoyage (cleanouts) sur un collecteur horizontal d'évacuation?",
+    "options": ["Tous les 7,5 m (25 pi)", "Tous les 15 m (50 pi)", "Tous les 30 m (100 pi)", "Tous les 45 m (150 pi)"],
+    "answer": "B",
+    "explanation": "Le Code exige une bouche de nettoyage à tous les 15 mètres (50 pieds) maximum sur un collecteur horizontal d'évacuation. De plus, une bouche de nettoyage est requise au pied de chaque colonne de chute et à chaque changement de direction de plus de 45°.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la distance standard entre le mur arrière fini et le centre de la bride (flange) d'une toilette?",
+    "options": ["203 mm (8 po)", "254 mm (10 po)", "305 mm (12 po)", "356 mm (14 po)"],
+    "answer": "C",
+    "explanation": "La distance standard pour une toilette est de 305 mm (12 pouces) entre le mur fini et le centre de la bride. Certains modèles compacts utilisent 254 mm (10 po). C'est une mesure critique lors de l'installation du rough-in.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le débit maximal d'eau par chasse pour une toilette neuve selon les normes en vigueur au Canada?",
+    "options": ["3 litres", "4,8 litres", "6 litres", "9 litres"],
+    "answer": "C",
+    "explanation": "Les toilettes neuves au Canada ne doivent pas dépasser 6 litres par chasse. Les modèles à double chasse (3/6 L) sont maintenant la norme, permettant d'économiser l'eau pour les déchets liquides.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le diamètre d'évacuation minimal requis pour un évier de cuisine équipé d'un broyeur à déchets?",
+    "options": ["1 1/4 po (32 mm)", "1 1/2 po (38 mm)", "2 po (51 mm)", "3 po (76 mm)"],
+    "answer": "C",
+    "explanation": "Lorsqu'un évier de cuisine est équipé d'un broyeur à déchets (disposer), le diamètre de l'évacuation doit être d'au moins 2 pouces (51 mm). Sans broyeur, le diamètre minimal est de 1 1/2 po (38 mm).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle température maximale d'eau chaude est autorisée aux points d'utilisation dans les bâtiments publics au Québec?",
+    "options": ["38 °C (100 °F)", "43 °C (110 °F)", "49 °C (120 °F)", "60 °C (140 °F)"],
+    "answer": "C",
+    "explanation": "Dans les bâtiments publics, la température de l'eau chaude aux points d'utilisation est limitée à 49 °C (120 °F) maximum pour prévenir les brûlures. À 60 °C, une brûlure au 3e degré peut survenir en 5 secondes.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel type de mitigeur est obligatoire pour l'installation d'une douche selon la norme CSA B125?",
+    "options": ["Mitigeur mécanique à poignée unique", "Mitigeur thermostatique", "Robinets à compression séparés", "Mitigeur à détection infrarouge"],
+    "answer": "B",
+    "explanation": "Un mitigeur thermostatique est obligatoire pour les douches selon la norme CSA B125. Il maintient une température constante même en cas de fluctuations de pression (ex. : chasse d'eau dans une toilette voisine), évitant ainsi les risques de brûlure.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel type de chauffe-eau est le plus répandu dans les résidences québécoises?",
+    "options": ["Chauffe-eau au gaz à réservoir", "Chauffe-eau électrique à réservoir", "Chauffe-eau sans réservoir (au moment)", "Chauffe-eau solaire"],
+    "answer": "B",
+    "explanation": "Le chauffe-eau électrique à réservoir est le plus répandu au Québec, représentant environ 70 % des installations résidentielles. Cela s'explique par le coût relativement bas de l'électricité au Québec par rapport au gaz.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la durée de vie typique d'un chauffe-eau électrique à réservoir?",
+    "options": ["5-8 ans", "10-15 ans", "15-20 ans", "20-25 ans"],
+    "answer": "B",
+    "explanation": "La durée de vie typique d'un chauffe-eau électrique à réservoir est de 10 à 15 ans. Pour un chauffe-eau au gaz, elle est légèrement inférieure (8-12 ans). Les chauffe-eau sans réservoir peuvent durer 20 ans et plus.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Qu'est-ce que la soupape T&P (température et pression) sur un chauffe-eau?",
+    "options": ["Une valve qui règle la température de l'eau", "Un dispositif de sécurité qui s'ouvre si la pression ou la température devient trop élevée", "Un robinet de vidange pour l'entretien", "Une valve qui mélange l'eau chaude et froide"],
+    "answer": "B",
+    "explanation": "La soupape T&P (Temperature & Pressure relief valve) est un dispositif de sécurité obligatoire qui s'ouvre automatiquement si la pression dépasse 150 PSI ou la température 99 °C pour éviter l'explosion du réservoir. Elle doit être actionnée manuellement au moins une fois par an.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Dans quelle situation l'installation d'un réservoir d'expansion (expansion tank) est-elle obligatoire?",
+    "options": ["Toujours obligatoire", "Seulement pour les chauffe-eau au gaz", "Lorsqu'un clapet antiretour est présent sur l'alimentation d'eau", "Seulement pour les chauffe-eau sans réservoir"],
+    "answer": "C",
+    "explanation": "Un réservoir d'expansion est obligatoire lorsqu'un clapet antiretour (check valve) est installé sur l'alimentation d'eau principale. Sans ce réservoir, la dilatation thermique de l'eau chaude crée une augmentation de pression qui peut endommager le chauffe-eau et la tuyauterie.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la taille de réservoir recommandée pour une maison unifamiliale de 3-4 chambres?",
+    "options": ["135 L (30 gal)", "180 L (40 gal)", "225 L (50 gal)", "300 L (80 gal)"],
+    "answer": "C",
+    "explanation": "Pour une maison de 3-4 chambres, un réservoir de 225 L (50 gallons) est recommandé, avec un FHR (First Hour Rating) d'environ 280 L. Pour 2-3 chambres, 180 L (40 gal) suffisent.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la différence fondamentale entre le gaz naturel et le propane en matière de sécurité?",
+    "options": ["Le gaz naturel est toxique, le propane ne l'est pas", "Le gaz naturel (plus léger que l'air) monte, tandis que le propane (plus lourd que l'air) descend et s'accumule au sol", "Le gaz naturel est inodore, le propane a une odeur", "Le propane est plus sécuritaire que le gaz naturel"],
+    "answer": "B",
+    "explanation": "Le gaz naturel a une densité d'environ 0,6 (plus léger que l'air) — en cas de fuite, il monte vers le plafond. Le propane a une densité d'environ 1,5 (plus lourd que l'air) — en cas de fuite, il descend et s'accumule au niveau du sol. Les détecteurs doivent donc être positionnés différemment.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la norme canadienne de référence pour l'installation des appareils au gaz?",
+    "options": ["CSA B125", "CSA B137", "CSA B149.1", "CSA B51"],
+    "answer": "C",
+    "explanation": "La CSA B149.1 — Code sur le gaz naturel et le propane — est la norme de référence pour l'installation des canalisations de gaz, le dimensionnement des conduites, la ventilation des appareils et les exigences de sécurité au Canada.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel matériau est INTERDIT pour la tuyauterie de gaz?",
+    "options": ["Acier noir (black iron)", "Cuivre Type L", "Acier galvanisé", "CSST (tuyau métallique flexible ondulé)"],
+    "answer": "C",
+    "explanation": "L'acier galvanisé est interdit pour la tuyauterie de gaz car le zinc (revêtement galvanisé) se détériore chimiquement au contact du soufre présent dans le gaz naturel, créant des particules qui obstruent les valves et les brûleurs.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression minimale de test d'étanchéité pour une nouvelle installation de gaz?",
+    "options": ["5 PSI pendant 15 minutes", "10 PSI pendant 20 minutes", "15 PSI pendant 30 minutes", "20 PSI pendant 60 minutes"],
+    "answer": "C",
+    "explanation": "La norme CSA B149.1 exige un test d'étanchéité à une pression d'au moins 15 PSI (103 kPa) maintenue pendant 30 minutes, sans perte de pression, avant la mise en service de la tuyauterie de gaz.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Pourquoi le CSST (tuyau métallique flexible ondulé) doit-il être muni d'une barrette de liaison équipotentielle (bonding clamp)?",
+    "options": ["Pour éviter les chocs électriques", "Pour prévenir la perforation par la foudre", "Pour assurer une mise à la terre adéquate de l'appareil", "Pour éviter la corrosion galvanique"],
+    "answer": "B",
+    "explanation": "Le CSST (corrugated stainless steel tubing) doit être mis à la terre avec une barrette de liaison équipotentielle pour prévenir la perforation de la paroi mince du tuyau en cas de coup de foudre. Sans cette liaison, la foudre peut perforer le CSST et causer une fuite de gaz explosive.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de système de gicleurs est le plus couramment installé dans les bâtiments?",
+    "options": ["Système à tuyaux secs (dry pipe)", "Système à tuyaux mouillés (wet pipe)", "Système préaction", "Système déluge"],
+    "answer": "B",
+    "explanation": "Le système à tuyaux mouillés (wet pipe system) représente environ 90 % des installations de gicleurs. Les tuyaux sont constamment remplis d'eau sous pression, assurant une réponse immédiate dès l'activation d'une tête de gicleur.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la température d'activation standard d'une tête de gicleur pour usage résidentiel ou commercial général?",
+    "options": ["57-77 °C (135-170 °F)", "79-107 °C (175-225 °F)", "121-149 °C (250-300 °F)", "163-191 °C (325-375 °F)"],
+    "answer": "A",
+    "explanation": "La classification ordinaire (57-77 °C, ampoule rouge ou orange) est la température standard pour les gicleurs résidentiels et commerciaux généraux. Les têtes près de sources de chaleur utilisent des températures d'activation plus élevées.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de système de gicleurs est utilisé dans les espaces non chauffés comme les parkings intérieurs?",
+    "options": ["Système à tuyaux secs (dry pipe)", "Système à tuyaux mouillés (wet pipe)", "Système à brouillard d'eau", "Système à mousse"],
+    "answer": "A",
+    "explanation": "Le système à tuyaux secs (dry pipe) est utilisé dans les espaces non chauffés où l'eau risquerait de geler. Les tuyaux contiennent de l'air sous pression. Lorsqu'un gicleur s'active, la pression d'air chute et la valve s'ouvre, laissant l'eau entrer dans les tuyaux.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la norme d'inspection et d'entretien des systèmes de gicleurs?",
+    "options": ["NFPA 13", "NFPA 13D", "NFPA 14", "NFPA 25"],
+    "answer": "D",
+    "explanation": "La NFPA 25 — Standard for the Inspection, Testing, and Maintenance of Water-Based Fire Protection Systems — est la norme qui régit l'inspection et l'entretien périodique des systèmes de gicleurs. La NFPA 13 est la norme d'installation, et la NFPA 14 concerne les colonnes montantes.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Une licence RBQ de quelle sous-catégorie est requise pour effectuer des travaux d'installation de systèmes de gicleurs?",
+    "options": ["Sous-catégorie 15 (Plomberie, chauffage)", "Sous-catégorie 16 (Gaz)", "Sous-catégorie 17 (Protection-incendie)", "Sous-catégorie 18 (Électricité)"],
+    "answer": "C",
+    "explanation": "La sous-catégorie 17 — Protection-incendie de la licence RBQ est requise pour les travaux d'installation, d'entretien et de réparation des systèmes de gicleurs et de protection incendie. Le plombier général (sous-catégorie 15) n'est pas autorisé à installer des gicleurs.",
+    "difficulty": "HARD"
+  }
+]

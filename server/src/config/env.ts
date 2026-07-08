@@ -28,6 +28,7 @@ export const env = {
   STRIPE_LIFETIME_PRICE_ID: optionalEnv('STRIPE_LIFETIME_PRICE_ID', ''),
   RESEND_API_KEY: optionalEnv('RESEND_API_KEY', 're_placeholder'),
   TURNSTILE_SECRET_KEY: optionalEnv('TURNSTILE_SECRET_KEY', ''),
+  DEEPSEEK_API_KEY: optionalEnv('DEEPSEEK_API_KEY', ''),
 } as const;
 
 export type Env = typeof env;

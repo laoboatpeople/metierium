@@ -1,0 +1,322 @@
+[
+  {
+    "chapter": 1,
+    "question": "Quel procédé de soudage utilise une électrode enrobée consommable et ne nécessite pas de gaz de protection externe?",
+    "options": ["GMAW (MIG/MAG)", "SMAW (Soudage à la baguette)", "GTAW (TIG)", "FCAW (Fil fourré)"],
+    "answer": "B",
+    "explanation": "Le SMAW (Shielded Metal Arc Welding), aussi appelé soudage à la baguette, utilise une électrode enrobée dont l'enrobage se décompose pour former le gaz protecteur et le laitier. Il ne nécessite pas de bouteille de gaz externe.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle température peut atteindre un arc électrique de soudage?",
+    "options": ["500-1 000 °C", "1 500-2 000 °C", "3 000-20 000 °C", "100-500 °C"],
+    "answer": "C",
+    "explanation": "Un arc électrique de soudage peut atteindre des températures de 3 000 à 20 000 °C, ce qui est suffisant pour faire fondre tous les métaux courants (l'acier fond à environ 1 500 °C).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel procédé de soudage est reconnu comme offrant la meilleure qualité de soudure et le meilleur contrôle du bain de fusion?",
+    "options": ["SMAW", "GMAW", "GTAW (TIG)", "FCAW"],
+    "answer": "C",
+    "explanation": "Le GTAW (Gas Tungsten Arc Welding), communément appelé TIG, offre une qualité de soudure exceptionnelle grâce à l'électrode de tungstène non consommable et au contrôle précis du bain de fusion. C'est le procédé le plus propre mais aussi le plus difficile à maîtriser.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle position de soudage est considérée comme la plus difficile et est codée 4G selon AWS?",
+    "options": ["À plat (Flat)", "Horizontale", "Verticale", "Au-dessus de la tête (Overhead)"],
+    "answer": "D",
+    "explanation": "La position 4G (Overhead ou au-dessus de la tête) est considérée comme la plus difficile car le soudeur doit souder par le dessous, ce qui rend le contrôle du bain de fusion particulièrement exigeant à cause de la gravité.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel pourcentage de facteur de marche (duty cycle) à 250 A sur 10 minutes signifie que le poste peut souder en continu pendant combien de minutes?",
+    "options": ["6 minutes", "4 minutes", "10 minutes", "2.5 minutes"],
+    "answer": "A",
+    "explanation": "Un facteur de marche de 60% à 250 A sur un cycle de 10 minutes signifie que le poste peut souder à 250 A pendant 6 minutes (60% de 10 min), suivi de 4 minutes de repos obligatoire pour le refroidissement.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle norme CSA régit la certification des compagnies de soudage de structures en acier au Canada?",
+    "options": ["CSA W59", "CSA W47.1", "CSA W178", "CSA Z462"],
+    "answer": "B",
+    "explanation": "La norme CSA W47.1 établit les règles de certification des compagnies de soudage des structures en acier. Elle définit trois divisions de certification (1, 2 et 3) selon le niveau de responsabilité et les exigences de contrôle qualité.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "À partir de quelle épaisseur d'acier au carbone le préchauffage est-il généralement obligatoire selon la norme CSA W59?",
+    "options": ["12 mm (1/2 po)", "25 mm (1 po)", "50 mm (2 po)", "6 mm (1/4 po)"],
+    "answer": "B",
+    "explanation": "Selon CSA W59, le préchauffage est généralement obligatoire lorsque l'épaisseur de l'acier au carbone dépasse 25 mm (1 po). D'autres conditions comme la température ambiante < 5 °C ou la présence d'humidité peuvent aussi rendre le préchauffage nécessaire.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Que signifie l'abréviation WPS en soudage?",
+    "options": ["Welding Procedure Specification", "Welding Position Standard", "Weld Preparation Specification", "Weld Performance Sheet"],
+    "answer": "A",
+    "explanation": "WPS signifie Welding Procedure Specification (Procédure de Soudage). C'est un document décrivant tous les paramètres de soudage : procédé, électrode/fil, gaz, paramètres électriques, préchauffage, etc. Toute soudure selon CSA doit être faite selon une WPS qualifiée.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Dans la norme CSA W47.1, quelles sont les trois divisions de certification pour les compagnies de soudage?",
+    "options": ["A, B et C", "1, 2 et 3", "Or, Argent et Bronze", "I, II et III"],
+    "answer": "B",
+    "explanation": "CSA W47.1 définit trois divisions : Division 1 (haute responsabilité — WPS qualifiées, superviseur niveau 2 ou 3, essais complets), Division 2 (responsabilité modérée) et Division 3 (usage général).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon le programme QBQ, quelle est la validité de la certification d'un soudeur avant de devoir se recertifier?",
+    "options": ["1 an", "2 ans", "5 ans", "10 ans"],
+    "answer": "B",
+    "explanation": "La certification QBQ doit être renouvelée tous les 2 ans. Le soudeur doit également suivre au moins 8 heures de formation continue par année pour maintenir sa certification à jour.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la teinte de lentille filtrante recommandée pour un casque de soudage lorsque le courant est entre 100 et 200 A?",
+    "options": ["Teinte #9", "Teinte #10", "Teinte #12", "Teinte #13"],
+    "answer": "B",
+    "explanation": "Pour un courant entre 100 et 200 A, la teinte recommandée est #10. La règle générale est : #9 pour < 100 A, #10 pour 100-200 A, #11 pour 200-300 A, #12 pour 300-400 A, #13 pour > 400 A.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la distance minimale de dégagement des matières combustibles autour d'un poste de soudage?",
+    "options": ["3 mètres (10 pieds)", "6 mètres (20 pieds)", "10 mètres (33 pieds)", "15 mètres (50 pieds)"],
+    "answer": "B",
+    "explanation": "La zone de soudage doit être dégagée de toute matière combustible dans un rayon de 6 mètres (20 pieds) autour du poste de travail. Des écrans pare-étincelles doivent également être utilisés pour protéger les zones adjacentes.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la valeur d'exposition moyenne pondérée (VEMP) pour le manganèse dans les fumées de soudage?",
+    "options": ["5 mg/m³", "1 mg/m³", "0.2 mg/m³", "0.05 mg/m³"],
+    "answer": "C",
+    "explanation": "La VEMP pour le manganèse est de 0.2 mg/m³ selon le RSST. Le manganèse est présent dans les fumées de soudage des aciers HSS et des électrodes E7018. Une exposition excessive peut causer des troubles neurologiques.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Combien de temps faut-il surveiller la zone de travail après la fin du soudage pour détecter un feu couvant?",
+    "options": ["10 minutes", "15 minutes", "30 minutes", "60 minutes"],
+    "answer": "C",
+    "explanation": "Une personne doit surveiller la zone de travail pendant au moins 30 minutes après la fin du soudage. Les étincelles peuvent enflammer des matériaux qui couvent lentement avant de s'enflammer visiblement.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Selon le RSST du Québec, quel type d'extincteur est approprié pour un incendie d'origine électrique (classe C)?",
+    "options": ["Extincteur à eau", "Extincteur à mousse", "Extincteur CO₂ ou poudre ABC", "Extincteur à eau déminéralisée"],
+    "answer": "C",
+    "explanation": "Pour les feux de classe C (équipement électrique), il faut utiliser un extincteur au CO₂ ou à poudre ABC. Ne JAMAIS utiliser d'eau sur un feu électrique — risque d'électrocution et d'aggravation du feu.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Dans un symbole de soudage AWS, que signifie un symbole placé sous la ligne de référence?",
+    "options": ["Soudure du côté de la flèche", "Soudure du côté opposé à la flèche", "Soudure des deux côtés", "Soudure périphérique"],
+    "answer": "A",
+    "explanation": "Un symbole placé sous la ligne de référence indique que la soudure doit être faite du côté de la flèche (le côté où pointe la flèche). Sur la ligne de référence = côté opposé. Des deux côtés = soudure double.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie le symbole du drapeau (◤) à l'intersection de la flèche et de la ligne de référence sur un symbole de soudage?",
+    "options": ["Soudure périphérique", "Soudure sur chantier (field weld)", "Soudure temporaire", "Soudure à inspecter"],
+    "answer": "B",
+    "explanation": "Le drapeau indique une soudure à exécuter sur le chantier (field weld), par opposition à une soudure en atelier. Le cercle (○) indique une soudure périphérique (tout autour de la pièce).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Dans un symbole de soudure intermittente noté « 5 × 3 (6) », que représente le chiffre 6?",
+    "options": ["La longueur de chaque segment", "Le nombre de segments", "L'espacement centre-à-centre (pitch)", "La taille de la soudure"],
+    "answer": "C",
+    "explanation": "Dans la notation « n × L (e) », n = nombre de segments, L = longueur de chaque segment, et e = espacement centre-à-centre (pitch). Donc « 5 × 3 (6) » signifie 5 segments de 3 po de long espacés de 6 po centre-à-centre.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la position de soudage la plus exigeante pour un soudeur de tuyauterie, combinant toutes les positions?",
+    "options": ["1G", "5G", "6G", "4G"],
+    "answer": "C",
+    "explanation": "La position 6G (tuyau incliné à 45° fixe) est la plus difficile car elle combine toutes les positions de soudage (à plat, horizontale, verticale, overhead) sur un seul joint. La position 6GR (avec anneau de restriction) est encore plus exigeante.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Sur un symbole de joint rainuré en V, quel élément est indiqué à droite du symbole de rainure?",
+    "options": ["L'angle de chanfrein", "Le talon (root face)", "L'espacement à la racine (root opening)", "La taille de la soudure"],
+    "answer": "B",
+    "explanation": "À droite du symbole de rainure, on trouve le talon (root face) — l'épaisseur du méplat conservé à la racine. L'espacement à la racine (root opening) est à gauche, et l'angle de chanfrein est au-dessus ou en dessous du symbole.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la zone d'un joint soudé où la microstructure a été modifiée par la chaleur sans que le métal ait fondu?",
+    "options": ["Le métal fondu", "La zone de liaison", "La zone affectée thermiquement (ZAT)", "Le métal de base non affecté"],
+    "answer": "C",
+    "explanation": "La ZAT (Zone Affectée Thermiquement) ou HAZ (Heat Affected Zone) est la zone du métal de base adjacente à la soudure qui n'a pas fondu mais dont la microstructure a été modifiée par la chaleur. Elle peut s'étendre de 1 à 5 mm de chaque côté du cordon.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le coefficient de dilatation linéaire typique de l'acier au carbone?",
+    "options": ["11-13 × 10⁻⁶ /°C", "23-24 × 10⁻⁶ /°C", "5-7 × 10⁻⁶ /°C", "17-18 × 10⁻⁶ /°C"],
+    "answer": "A",
+    "explanation": "L'acier au carbone a un coefficient de dilatation de 11-13 × 10⁻⁶ /°C. C'est environ la moitié de celui de l'aluminium (23-24 × 10⁻⁶ /°C). Une tôle d'acier de 1 m chauffée à 1 500 °C se dilate d'environ 17.8 mm.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la formule de calcul du carbone équivalent (CE) pour évaluer la soudabilité d'un acier?",
+    "options": ["CE = %C + (%Mn/6) + ((%Cr+%Mo+%V)/5) + ((%Ni+%Cu)/15)", "CE = %C + %Mn + %Cr + %Mo", "CE = (%C + %Mn)/10", "CE = %C + (%Mn/10) + %Cr"],
+    "answer": "A",
+    "explanation": "La formule standard du carbone équivalent est : CE = %C + (%Mn/6) + (%Cr+%Mo+%V)/5 + (%Ni+%Cu)/15. Un CE < 0.35 indique une excellente soudabilité, tandis qu'un CE > 0.55 indique une soudabilité difficile nécessitant un préchauffage important.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Quels sont les trois facteurs nécessaires à la fissuration à froid (hydrogène) en soudage?",
+    "options": ["Chaleur, pression et vitesse", "Hydrogène, microstructure fragile et contraintes de traction", "Oxygène, carbone et soufre", "Humidité, vent et courant d'air"],
+    "answer": "B",
+    "explanation": "La fissuration à froid (cold cracking) requiert trois facteurs simultanés, appelés le triangle de la fissuration : 1) de l'hydrogène dans le métal fondu, 2) une microstructure fragile (martensite), et 3) des contraintes de traction résiduelles. Éliminer un seul facteur suffit à prévenir la fissuration.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la température minimale de séchage des électrodes basiques E7018 avant utilisation?",
+    "options": ["100-150 °C", "200-250 °C", "300-400 °C", "450-500 °C"],
+    "answer": "C",
+    "explanation": "Les électrodes basiques E7018 doivent être séchées à 300-400 °C pendant 1 heure minimum avant utilisation pour éliminer l'humidité absorbée. Après séchage, elles doivent être conservées à 120-150 °C dans une étuve portative. L'exposition à l'air libre ne doit pas dépasser 4 heures.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Que signifie la classification AWS « E7018 »?",
+    "options": ["Électrode, 70 000 psi, toutes positions, basique poudre de fer", "Électrode, 70 kgf/mm², position à plat, rutile", "Électrode, 70 MPa, position horizontale, basique", "Électrode, 70 000 psi, position verticale, rutile"],
+    "answer": "A",
+    "explanation": "E = Électrode, 70 = 70 000 psi de résistance à la traction, 1 = toutes positions, 8 = enrobage basique à poudre de fer (low hydrogen). C'est l'électrode la plus utilisée au Québec pour la construction métallique.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle polarité est généralement utilisée avec l'électrode E7018 en SMAW?",
+    "options": ["DCEN (DC-)", "DCEP (DC+)", "AC uniquement", "DCEN ou AC"],
+    "answer": "B",
+    "explanation": "L'électrode E7018 s'utilise généralement en DCEP (DC+) — soit électrode positive, pièce négative. Cette polarité offre une bonne pénétration et un taux de dépôt élevé. L'électrode E7018 peut aussi fonctionner en AC, mais DCEP est préféré.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le courant recommandé pour une électrode E7018 de diamètre 1/8 po (3.2 mm)?",
+    "options": ["50-80 A", "80-120 A", "110-160 A", "190-250 A"],
+    "answer": "C",
+    "explanation": "Pour une électrode E7018 de 1/8 po (3.2 mm), le courant recommandé est de 110-160 A. C'est le diamètre le plus couramment utilisé en construction métallique et pour l'examen pratique QBQ.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel défaut de soudure se caractérise par un sillon creusé dans le métal de base adjacent au cordon?",
+    "options": ["Porosité", "Contre-dépouille (undercut)", "Manque de fusion", "Inclusion de laitier"],
+    "answer": "B",
+    "explanation": "La contre-dépouille (undercut) est un sillon creusé dans le métal de base le long du cordon. Elle est causée par un courant trop élevé, une vitesse trop rapide ou un mauvais angle d'électrode. Selon CSA W59, la profondeur maximale admissible est de 0.8 mm (1/32 po) pour les structures critiques.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Pendant combien de temps maximum une électrode E7018 séchée peut-elle être exposée à l'air libre avant de devoir être re-séchée?",
+    "options": ["1 heure", "2 heures", "4 heures", "8 heures"],
+    "answer": "C",
+    "explanation": "Une électrode E7018 (basique) peut être exposée à l'air libre pendant maximum 4 heures avant d'absorber suffisamment d'humidité pour causer des problèmes de fissuration par l'hydrogène. Après 4 heures, elle doit être re-séchée (une seule fois) ou rejetée.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel gaz de protection est considéré comme le meilleur compromis qualité/coût pour le soudage GMAW de l'acier au carbone?",
+    "options": ["100% CO₂", "75% Argon / 25% CO₂", "100% Argon", "95% Argon / 5% Oxygène"],
+    "answer": "B",
+    "explanation": "Le mélange 75% Ar / 25% CO₂ est le meilleur compromis qualité/coût pour l'acier au carbone. Il offre un arc plus stable que le CO₂ pur, moins de projections, une bonne pénétration et un coût raisonnable. C'est le mélange recommandé pour l'examen QBQ.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel mode de transfert GMAW est caractérisé par un faible apport de chaleur (0.5-1.5 kJ/mm) et est idéal pour les tôles minces et les positions verticale et overhead?",
+    "options": ["Transfert par pulvérisation (Spray)", "Transfert par court-circuit (Short Circuit)", "Transfert globulaire", "Transfert pulsé (Pulsed Spray)"],
+    "answer": "B",
+    "explanation": "Le transfert par court-circuit (GMAW-S) a un faible apport de chaleur (0.5-1.5 kJ/mm) et un arc doux, ce qui le rend idéal pour les tôles minces (1-5 mm) et les positions difficiles (verticale, overhead). Le fil touche le bain 30-200 fois par seconde.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la différence principale entre le FCAW et le GMAW?",
+    "options": ["Le FCAW utilise un fil tubulaire contenant du flux", "Le FCAW ne peut pas être utilisé en position verticale", "Le FCAW nécessite toujours un gaz de protection", "Le FCAW a un taux de dépôt plus faible"],
+    "answer": "A",
+    "explanation": "Le FCAW (Flux Cored Arc Welding) utilise un fil tubulaire rempli de flux, contrairement au GMAW qui utilise un fil plein. Le flux offre une protection supplémentaire et permet le soudage auto-protégé (FCAW-S) sans gaz externe. Le FCAW a généralement un taux de dépôt plus élevé (3-12 kg/h).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le stickout recommandé pour un fil GMAW ER70S-6 de diamètre 0.045 po (1.2 mm)?",
+    "options": ["5-8 mm", "12-16 mm", "20-25 mm", "25-30 mm"],
+    "answer": "B",
+    "explanation": "Pour un fil de 0.045 po (1.2 mm), le stickout recommandé est de 12-16 mm (1/2-5/8 po). Un stickout trop court chauffe le tube contact, trop long rend l'arc instable et réduit la protection gazeuse.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Dans le procédé GMAW en mode spray, quel est le pourcentage minimum d'Argon nécessaire dans le gaz de protection?",
+    "options": ["50%", "75%", "85%", "95%"],
+    "answer": "C",
+    "explanation": "Le transfert par pulvérisation (spray arc) nécessite un gaz contenant au moins 85% d'Argon. En dessous de ce seuil, le transfert devient globulaire avec beaucoup de projections. Le CO₂ pur ne permet pas d'atteindre le mode spray.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle méthode d'essai non destructif (END) est la plus couramment utilisée et est obligatoire pour pratiquement toutes les soudures?",
+    "options": ["Radiographie (RT)", "Ultrasons (UT)", "Inspection visuelle (VT)", "Ressuage (PT)"],
+    "answer": "C",
+    "explanation": "L'inspection visuelle (VT) est la méthode d'END la plus utilisée, représentant 80-90% des inspections. Elle est obligatoire pour pratiquement toutes les soudures et constitue la première ligne de contrôle qualité. Elle doit être effectuée avant, pendant et après le soudage.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Selon la norme CSA W59, quel est le critère d'acceptation pour une fissure détectée dans une soudure de Catégorie A?",
+    "options": ["Longueur maximale de 3 mm", "Longueur maximale de 6 mm", "Aucune fissure acceptable", "Fissure acceptable jusqu'à 1 mm de profondeur"],
+    "answer": "C",
+    "explanation": "Pour toutes les catégories de soudure (A, B, C, D) selon CSA W59, aucune fissure n'est acceptable dans une soudure. La fissure est un défaut critique qui entraîne le rejet immédiat de la soudure, quelle que soit sa taille.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est le critère d'acceptation pour un essai de pliage (guided bend test) d'une éprouvette de soudure?",
+    "options": ["Aucune fissure visible", "Aucune fissure > 3 mm dans n'importe quelle direction", "Aucune fissure > 1 mm", "Fissure jusqu'à 6 mm acceptable"],
+    "answer": "B",
+    "explanation": "Pour l'essai de pliage, le critère d'acceptation est qu'aucune fissure ne dépasse 3 mm dans n'importe quelle direction après pliage à 180°. Les petites fissures aux extrémités de l'éprouvette (< 3 mm) sont ignorées.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type d'essai non destructif utilise un liquide pénétrant et un révélateur pour détecter les discontinuités débouchant en surface?",
+    "options": ["Magnétoscopie (MT)", "Ressuage (PT)", "Courants de Foucault (ET)", "Thermographie (IRT)"],
+    "answer": "B",
+    "explanation": "Le ressuage (Penetrant Testing — PT) utilise un liquide pénétrant qui s'infiltre dans les discontinuités débouchant en surface, suivi d'un révélateur qui aspire le pénétrant pour rendre le défaut visible. C'est une méthode simple, économique et applicable à tous les matériaux.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la profondeur maximale admissible de contre-dépouille (undercut) pour une soudure de Catégorie A selon CSA W59?",
+    "options": ["0.8 mm (1/32 po)", "1.2 mm (3/64 po)", "1.6 mm (1/16 po)", "2.0 mm (5/64 po)"],
+    "answer": "A",
+    "explanation": "Pour une soudure de Catégorie A (critique), la contre-dépouille maximale admissible est de 0.8 mm (1/32 po). Pour la Catégorie B c'est 1.2 mm, et pour la Catégorie C/D c'est 1.6 mm (1/16 po).",
+    "difficulty": "HARD"
+  }
+]
