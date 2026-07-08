@@ -246,6 +246,24 @@ export default function LandingPage() {
                 {t('heroDesc')}
               </p>
 
+              {/* Trade acronym badges */}
+              <div className="flex flex-wrap gap-2 justify-center lg:justify-start mb-6">
+                {[
+                  { label: 'CMEQ', color: 'from-[#3B82F6] to-[#06B6D4]' },
+                  { label: 'CMMTQ', color: 'from-[#06B6D4] to-[#0E7490]' },
+                  { label: 'QBQ', color: 'from-[#8B5CF6] to-[#7C3AED]' },
+                  { label: 'HVAC', color: 'from-[#F59E0B] to-[#D97706]' },
+                  { label: 'MVL', color: 'from-[#10B981] to-[#059669]' },
+                ].map((item, i) => (
+                  <span
+                    key={i}
+                    className={`px-3 py-1 rounded-full text-xs font-semibold bg-gradient-to-r ${item.color} text-white`}
+                  >
+                    {item.label}
+                  </span>
+                ))}
+              </div>
+
               <div className="flex flex-wrap gap-3 justify-center lg:justify-start mb-8">
                 {[
                   { icon: Sparkles, key: 'heroPillTheory' },
@@ -277,21 +295,30 @@ export default function LandingPage() {
                 <div className="absolute inset-0 bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] rounded-3xl rotate-6 opacity-20" />
                 <div className="absolute inset-0 bg-gradient-to-br from-[#06B6D4] to-[#3B82F6] rounded-3xl -rotate-3 opacity-30" />
                 <div className="relative w-full h-full bg-[#1A2035] rounded-3xl border border-[#2D3A52] flex items-center justify-center backdrop-blur-sm">
-                  <div className="text-center p-8">
-                    <div className="w-20 h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center">
-                      <GraduationCap className="w-10 h-10 text-white" />
+                  <div className="text-left p-6 w-full">
+                    <div className="flex items-center gap-2 mb-3">
+                      <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center">
+                        <GraduationCap className="w-5 h-5 text-white" />
+                      </div>
+                      <span className="text-xs font-semibold text-[#3B82F6]">Exemple de question</span>
                     </div>
-                    <h3 className="text-xl font-bold text-[#F8FAFC] mb-2">{t('heroTitle')}</h3>
-                    <p className="text-sm text-[#94A3B8]">{t('heroBadge')}</p>
-                    <div className="mt-4 flex justify-center gap-1">
-                      {[0, 1, 2, 3].map((i) => (
-                        <div
-                          key={i}
-                          className="w-2 h-2 rounded-full bg-[#3B82F6] animate-pulse"
-                          style={{ animationDelay: `${i * 0.15}s` }}
-                        />
+                    <p className="text-sm text-[#F8FAFC] font-medium mb-3 leading-relaxed">
+                      Quel composant du cycle de réfrigération augmente la pression du réfrigérant ?
+                    </p>
+                    <div className="space-y-1.5">
+                      {['Évaporateur', 'Détendeur', 'Compresseur', 'Condenseur'].map((opt, i) => (
+                        <div key={i} className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs ${i === 2 ? 'bg-[#3B82F6]/20 border border-[#3B82F6]/40 text-[#3B82F6]' : 'bg-white/5 text-[#94A3B8]'}`}>
+                          <span className="font-mono w-4">{String.fromCharCode(65 + i)}.</span>
+                          <span>{opt}</span>
+                          {i === 2 && (
+                            <svg className="w-3.5 h-3.5 ml-auto text-[#10B981]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" /></svg>
+                          )}
+                        </div>
                       ))}
                     </div>
+                    <p className="text-xs text-[#64748B] mt-3 text-center">
+                      Plus de 2 400 questions dans 5 métiers
+                    </p>
                   </div>
                 </div>
               </div>

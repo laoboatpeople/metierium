@@ -49,9 +49,9 @@ const fr: Record<string, unknown> = {
   navSignUp: 'Inscription',
 
   // Landing page - Hero
-  heroBadge: 'Préparation aux examens de métiers',
+  heroBadge: 'Préparation aux examens de métiers — CMEQ, CMMTQ, QBQ, HVAC, MVL',
   heroTitle: 'Certification Québec',
-  heroTagline: 'Réussissez votre examen de métier',
+  heroTagline: 'Réussissez votre examen CMEQ, CMMTQ, QBQ, HVAC ou MVL',
   heroDesc: 'Accédez à du contenu théorique complet, des examens blancs et un suivi personnalisé pour maximiser vos chances de réussite à l\'examen de certification.',
   heroPillTheory: 'Théorie complète',
   heroPillExams: 'Examens blancs',
@@ -239,9 +239,9 @@ const en: Record<string, string> = {
   navSignUp: 'Sign Up',
 
   // Landing page - Hero
-  heroBadge: 'Trade Exam Preparation',
+  heroBadge: 'Trade Exam Preparation — CMEQ, CMMTQ, QBQ, HVAC, MVL',
   heroTitle: 'Certification Québec',
-  heroTagline: 'Pass your trade exam',
+  heroTagline: 'Pass your CMEQ, CMMTQ, QBQ, HVAC or MVL exam',
   heroDesc: 'Access complete theoretical content, practice exams, and personalized tracking to maximize your chances of passing the certification exam.',
   heroPillTheory: 'Complete Theory',
   heroPillExams: 'Practice Exams',
