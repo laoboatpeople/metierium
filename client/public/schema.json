@@ -1,0 +1,111 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "EducationalOrganization",
+      "@id": "https://certificationquebec.com/#organization",
+      "name": "Certification Québec",
+      "description": "Préparation aux examens de métiers au Québec — CMEQ, CMMTQ, QBQ",
+      "url": "https://certificationquebec.com",
+      "logo": "https://certificationquebec.com/favicon.ico",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "Québec",
+        "addressCountry": "CA"
+      },
+      "offers": {
+        "@type": "Offer",
+        "description": "Préparation aux examens de certification",
+        "offeredBy": { "@type": "Organization", "name": "Certification Québec" }
+      },
+      "hasCourse": [
+        { "@type": "Course", "name": "Préparation Examen Électricien CMEQ", "description": "Préparation à l'examen de certification des maîtres électriciens du Québec — théorie complète et examens blancs", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+        { "@type": "Course", "name": "Préparation Examen Plombier CMMTQ", "description": "Préparation à l'examen de certification en plomberie — Code de plomberie, tuyauterie et normes", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+        { "@type": "Course", "name": "Préparation Examen Soudeur QBQ", "description": "Préparation à l'examen de certification en soudage — SMAW, GMAW, FCAW et normes CSA", "provider": { "@type": "Organization", "name": "Certification Québec" } }
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://certificationquebec.com/#website",
+      "url": "https://certificationquebec.com",
+      "name": "Certification Québec",
+      "description": "Préparation aux examens de métiers au Québec",
+      "inLanguage": "fr-CA",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://certificationquebec.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://certificationquebec.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Qu'est-ce que l'examen CMEQ pour électricien ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'examen CMEQ (Corporation des maîtres électriciens du Québec) est l'examen de certification obligatoire pour devenir électricien au Québec. Il couvre le Code de construction du Québec — Chapitre V (électricité), les calculs de charge, les circuits, la protection, les moteurs et les normes de sécurité."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien de questions y a-t-il à l'examen d'électricien CMEQ ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "L'examen CMEQ contient généralement entre 50 et 100 questions à choix multiples. Les questions portent sur le Code de l'électricité (CCE), les calculs de charge résidentielle et commerciale, la protection des circuits, les moteurs, la mise à la terre, et les méthodes de câblage."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Comment se préparer à l'examen de plomberie CMMTQ ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pour se préparer à l'examen CMMTQ (Corporation des maîtres mécaniciens en tuyauterie du Québec), il faut étudier le Code de plomberie du Québec, les méthodes d'installation des tuyaux (cuivre, PVC, ABS, PEX), l'alimentation en eau potable, l'évacuation et la ventilation, les appareils sanitaires, le chauffage de l'eau et les systèmes de gaz (CSA B149)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quel est le taux de réussite pour passer l'examen de métier au Québec ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Le seuil de réussite pour les examens de métier au Québec est de 70 %. Il est essentiel de bien se préparer avec du contenu théorique complet et des examens blancs pour maximiser ses chances de succès."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "La certification QBQ pour soudeur est-elle reconnue au Québec ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Oui, la certification QBQ (Québec Board of Trades) est la certification officielle pour les soudeurs au Québec. Les normes CSA W47.1 (acier) et CSA W59 (construction soudée) sont les références. Les soudeurs doivent réussir un examen théorique et pratique, et la certification est valide 2 ans."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Quels sont les prérequis pour passer l'examen d'électricien au Québec ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Pour passer l'examen d'électricien au Québec, il faut généralement avoir complété un DEP en électricité (1 800 heures), accumulé les heures d'apprentissage requises, et être inscrit à la Commission de la construction du Québec (CCQ)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Combien coûte l'examen de certification de soudeur QBQ ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les frais d'examen pour la certification QBQ varient selon le type de certificat. Les plans de préparation en ligne commencent à partir de 29$/mois pour l'accès complet à la théorie, aux examens blancs et au suivi de progression."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Où puis-je passer l'examen de métier au Québec ?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Les examens de métier au Québec sont administrés par la CCQ (Commission de la construction du Québec), la RBQ (Régie du bâtiment du Québec), le QBQ (Québec Board of Trades) et les corporations respectives (CMEQ pour les électriciens, CMMTQ pour les plombiers). La préparation peut se faire en ligne via des plateformes comme Certification Québec qui offrent théorie complète et examens blancs."
+          }
+        }
+      ]
+    }
+  ]
+}
