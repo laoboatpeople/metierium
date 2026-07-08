@@ -89,6 +89,10 @@ const fr: Record<string, unknown> = {
   tradePlombierDesc: 'Préparation à l\'examen de certification en plomberie.',
   tradeSoudeur: 'Soudeur (QBQ)',
   tradeSoudeurDesc: 'Préparation à l\'examen de certification en soudage.',
+  tradeHvac: 'Chauffage-Climatisation (CMMTQ)',
+  tradeHvacDesc: 'Préparation à l\'examen de certification en systèmes de chauffage, ventilation et climatisation.',
+  tradeMvl: 'Mécanicien véhicules lourds (CCQ)',
+  tradeMvlDesc: 'Préparation à l\'examen de certification en mécanique de véhicules lourds et équipements diesel.',
   comingSoon: 'À Venir',
 
   // Landing page - Pricing
@@ -275,6 +279,10 @@ const en: Record<string, string> = {
   tradePlombierDesc: 'Preparation for the plumbing certification exam.',
   tradeSoudeur: 'Welder (QBQ)',
   tradeSoudeurDesc: 'Preparation for the welding certification exam.',
+  tradeHvac: 'HVAC Technician (CMMTQ)',
+  tradeHvacDesc: 'Preparation for the heating, ventilation, and air conditioning systems certification exam.',
+  tradeMvl: 'Heavy Vehicle Mechanic (CCQ)',
+  tradeMvlDesc: 'Preparation for the heavy vehicle and diesel equipment mechanics certification exam.',
   comingSoon: 'Coming Soon',
 
   // Landing page - Pricing

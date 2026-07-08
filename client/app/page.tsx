@@ -20,6 +20,8 @@ import {
   Globe,
   Menu,
   X,
+  Thermometer,
+  Truck,
 } from 'lucide-react';
 import { useState } from 'react';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -54,7 +56,9 @@ export default function LandingPage() {
               "hasCourse": [
                 { "@type": "Course", "name": "Préparation Examen Électricien CMEQ", "description": "Préparation à l'examen de certification des maîtres électriciens du Québec — théorie complète et examens blancs", "provider": { "@type": "Organization", "name": "Certification Québec" } },
                 { "@type": "Course", "name": "Préparation Examen Plombier CMMTQ", "description": "Préparation à l'examen de certification en plomberie — Code de plomberie, tuyauterie et normes", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Soudeur QBQ", "description": "Préparation à l'examen de certification en soudage — SMAW, GMAW, FCAW et normes CSA", "provider": { "@type": "Organization", "name": "Certification Québec" } }
+                { "@type": "Course", "name": "Préparation Examen Soudeur QBQ", "description": "Préparation à l'examen de certification en soudage — SMAW, GMAW, FCAW et normes CSA", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+                { "@type": "Course", "name": "Préparation Examen HVAC CMMTQ", "description": "Préparation à l'examen de certification en chauffage-climatisation — thermodynamique, CVC et réfrigération", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+                { "@type": "Course", "name": "Préparation Examen Mécanicien Véhicules Lourds CCQ", "description": "Préparation à l'examen de certification en mécanique de véhicules lourds — moteurs diesel, transmissions et hydraulique", "provider": { "@type": "Organization", "name": "Certification Québec" } }
               ]
             },
             {
@@ -296,6 +300,130 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* ===== TRADES SECTION ===== */}
+      <section id="trades" className="py-20 px-6 relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#06B6D4]/5 to-transparent" />
+        <div className="relative z-10 max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent">
+                {t('tradesTitle')}
+              </span>
+            </h2>
+            <p className="text-[#94A3B8] max-w-2xl mx-auto">
+              {t('tradesSubtitle')}
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            {/* Électricien (CMEQ) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#3B82F6]/10 to-[#06B6D4]/10 border border-[#3B82F6]/20 hover:border-[#3B82F6]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center mb-4">
+                <Zap className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#3B82F6] transition-colors">
+                {t('tradeElectricien')}
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeElectricienDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#3B82F6]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#3B82F6] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Plombier (CMMTQ) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#06B6D4]/10 to-[#0E7490]/10 border border-[#06B6D4]/20 hover:border-[#06B6D4]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#06B6D4] to-[#0E7490] flex items-center justify-center mb-4">
+                <Wrench className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#06B6D4] transition-colors">
+                <Link href="/trade/cmmtq">{t('tradePlombier')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradePlombierDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#06B6D4]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#06B6D4] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Soudeur (QBQ) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#8B5CF6]/10 to-[#7C3AED]/10 border border-[#8B5CF6]/20 hover:border-[#8B5CF6]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#7C3AED] flex items-center justify-center mb-4">
+                <Shield className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#8B5CF6] transition-colors">
+                <Link href="/trade/qbq">{t('tradeSoudeur')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeSoudeurDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#8B5CF6]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#8B5CF6] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* HVAC (CMMTQ) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#F59E0B]/10 to-[#D97706]/10 border border-[#F59E0B]/20 hover:border-[#F59E0B]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#F59E0B] to-[#D97706] flex items-center justify-center mb-4">
+                <Thermometer className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#F59E0B] transition-colors">
+                <Link href="/trade/hvac">{t('tradeHvac')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeHvacDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#F59E0B]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#F59E0B] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Mécanicien véhicules lourds (CCQ) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#10B981]/10 to-[#059669]/10 border border-[#10B981]/20 hover:border-[#10B981]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#10B981] to-[#059669] flex items-center justify-center mb-4">
+                <Truck className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#10B981] transition-colors">
+                <Link href="/trade/mvl">{t('tradeMvl')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeMvlDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#10B981]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#10B981] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== HOW IT WORKS SECTION (NEW) ===== */}
       <section className="py-20 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#06B6D4]/5 to-transparent" />
@@ -406,87 +534,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ===== TRADES SECTION ===== */}
-      <section id="trades" className="py-20 px-6 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#06B6D4]/5 to-transparent" />
-        <div className="relative z-10 max-w-7xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              <span className="bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent">
-                {t('tradesTitle')}
-              </span>
-            </h2>
-            <p className="text-[#94A3B8] max-w-2xl mx-auto">
-              {t('tradesSubtitle')}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            {/* Électricien (CMEQ) - Active */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#3B82F6]/10 to-[#06B6D4]/10 border border-[#3B82F6]/20 hover:border-[#3B82F6]/50 transition-all duration-300 group">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center mb-4">
-                <Zap className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#3B82F6] transition-colors">
-                {t('tradeElectricien')}
-              </h3>
-              <p className="text-sm text-[#94A3B8] mb-4">
-                {t('tradeElectricienDesc')}
-              </p>
-              <div className="flex items-center gap-2 text-xs text-[#3B82F6]">
-                <Check size={14} />
-                <span>{t('tradeTheoryComplete')}</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs text-[#3B82F6] mt-1">
-                <Check size={14} />
-                <span>{t('tradeExamQuestions')}</span>
-              </div>
-            </div>
-
-            {/* CMMTQ Plombier — Full Feature */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#06B6D4]/10 to-[#0E7490]/10 border border-[#06B6D4]/20 hover:border-[#06B6D4]/50 transition-all duration-300 group">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#06B6D4] to-[#0E7490] flex items-center justify-center mb-4">
-                <Wrench className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#06B6D4] transition-colors">
-                <Link href="/trade/cmmtq">{t('tradePlombier')}</Link>
-              </h3>
-              <p className="text-sm text-[#94A3B8] mb-4">
-                {t('tradePlombierDesc')}
-              </p>
-              <div className="flex items-center gap-2 text-xs text-[#06B6D4]">
-                <Check size={14} />
-                <span>{t('tradeTheoryComplete')}</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs text-[#06B6D4] mt-1">
-                <Check size={14} />
-                <span>{t('tradeExamQuestions')}</span>
-              </div>
-            </div>
-
-            {/* QBQ Soudeur — Full Feature */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#8B5CF6]/10 to-[#7C3AED]/10 border border-[#8B5CF6]/20 hover:border-[#8B5CF6]/50 transition-all duration-300 group">
-              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#7C3AED] flex items-center justify-center mb-4">
-                <Shield className="w-7 h-7 text-white" />
-              </div>
-              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#8B5CF6] transition-colors">
-                <Link href="/trade/qbq">{t('tradeSoudeur')}</Link>
-              </h3>
-              <p className="text-sm text-[#94A3B8] mb-4">
-                {t('tradeSoudeurDesc')}
-              </p>
-              <div className="flex items-center gap-2 text-xs text-[#8B5CF6]">
-                <Check size={14} />
-                <span>{t('tradeTheoryComplete')}</span>
-              </div>
-              <div className="flex items-center gap-2 text-xs text-[#8B5CF6] mt-1">
-                <Check size={14} />
-                <span>{t('tradeExamQuestions')}</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ===== PRICING SECTION (NEW) ===== */}
       <section id="pricing" className="py-20 px-6 relative">
@@ -728,6 +775,12 @@ export default function LandingPage() {
                 </li>
                 <li>
                   <span className="text-sm text-[#64748B] opacity-60">{t('tradeSoudeur')}</span>
+                </li>
+                <li>
+                  <span className="text-sm text-[#64748B] opacity-60">{t('tradeHvac')}</span>
+                </li>
+                <li>
+                  <span className="text-sm text-[#64748B] opacity-60">{t('tradeMvl')}</span>
                 </li>
               </ul>
             </div>

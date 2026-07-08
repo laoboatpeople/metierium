@@ -10,6 +10,8 @@ const TRADES: Record<string, { name: string; desc: string; color: string }> = {
   cmeq: { name: 'CMEQ', desc: 'Électricien — Corporation des maîtres électriciens du Québec', color: '#3B82F6' },
   cmmtq: { name: 'CMMTQ', desc: 'Plombier — Corporation des maîtres mécaniciens en tuyauterie du Québec', color: '#06B6D4' },
   qbq: { name: 'QBQ', desc: 'Soudeur — Québec Board of Trades', color: '#8B5CF6' },
+  hvac: { name: 'CMMTQ', desc: 'Technicien en chauffage-climatisation — HVAC', color: '#F59E0B' },
+  mvl: { name: 'CCQ', desc: 'Mécanicien de véhicules lourds — CCQ', color: '#10B981' },
 };
 
 export default function TradePillarPage() {
