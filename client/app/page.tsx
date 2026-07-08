@@ -1,5 +1,6 @@
 'use client';
 
+import PracticeQuestionWidget from '@/components/PracticeQuestionWidget';
 import Link from 'next/link';
 import Script from 'next/script';
 import {
@@ -505,6 +506,8 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      <PracticeQuestionWidget />
 
       {/* ===== FEATURES SECTION ===== */}
       <section id="features" className="py-20 px-6 relative">
