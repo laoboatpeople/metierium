@@ -1,0 +1,853 @@
+[
+  {
+    "chapter": 1,
+    "question": "Quelle est la couleur du code d'identification du cuivre de Type K?",
+    "options": [
+      "Rouge",
+      "Bleu",
+      "Vert",
+      "Jaune"
+    ],
+    "answer": "C",
+    "explanation": "Le cuivre Type K (paroi épaisse) est identifié par la couleur verte. Il est utilisé pour les applications souterraines et commerciales où une résistance accrue est requise.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel type de cuivre est recommandé pour une conduite d'eau enterrée reliant le réseau municipal à un bâtiment?",
+    "options": [
+      "Type M (rouge)",
+      "Type L (bleu)",
+      "Type K (vert)",
+      "Type DWV (jaune)"
+    ],
+    "answer": "C",
+    "explanation": "Le Type K est le plus épais et le plus résistant des trois types de cuivre (K, L, M). Sa paroi épaisse le rend approprié pour les installations souterraines où la pression du sol et les conditions d'enfouissement exigent une plus grande résistance mécanique.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est l'avantage principal du PEX par rapport au cuivre pour une installation résidentielle en région froide comme le Québec?",
+    "options": [
+      "Meilleure conductivité thermique",
+      "Résistance au gel sans rupture",
+      "Pression nominale plus élevée",
+      "Meilleure résistance aux UV"
+    ],
+    "answer": "B",
+    "explanation": "Le PEX peut se dilater sous l'effet du gel sans se rompre, contrairement au cuivre qui éclate. C'est un avantage important dans les régions froides comme le Québec où les risques de gel sont plus élevés dans les vides sanitaires et les sous-sols.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la différence principale entre le PVC Schedule 40 et le PVC Schedule 80?",
+    "options": [
+      "La couleur du tuyau",
+      "L'épaisseur de paroi et la pression nominale",
+      "Le diamètre extérieur",
+      "Le type de colle à utiliser"
+    ],
+    "answer": "B",
+    "explanation": "Le PVC Schedule 80 a une paroi plus épaisse que le Schedule 40, ce qui lui confère une pression nominale plus élevée. Le Schedule 80 est souvent de couleur grise et le Schedule 40 est blanc. Le diamètre extérieur reste le même, mais le diamètre intérieur diffère.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel outil est utilisé pour couper proprement un tuyau de cuivre en vue d'une soudure?",
+    "options": [
+      "Scie à métaux",
+      "Coupe-tube (cutter)",
+      "Scie sabre",
+      "Cisailles à tuyau"
+    ],
+    "answer": "B",
+    "explanation": "Le coupe-tube (tube cutter) est l'outil recommandé pour couper le cuivre. Il produit une coupe nette et droite, essentielle pour une bonne soudure. La scie à métaux peut être utilisée mais laisse des bavures qui nécessitent plus d'ébavurage.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le rôle de l'ébavurage (reaming) après la coupe d'un tuyau de cuivre?",
+    "options": [
+      "Décorer l'extrémité du tuyau",
+      "Enlever les bavures à l'intérieur et à l'extérieur",
+      "Agrandir le diamètre du tuyau",
+      "Chauffer l'extrémité pour faciliter la soudure"
+    ],
+    "answer": "B",
+    "explanation": "L'ébavurage enlève les bavures à l'intérieur et à l'extérieur du tuyau après la coupe. Les bavures internes peuvent restreindre le débit, créer de la turbulence et favoriser la corrosion. Les bavures externes empêchent un bon ajustement du raccord.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la température approximative de la soudure à l'étain (soldering) pour le cuivre?",
+    "options": [
+      "100-150 °C",
+      "200-250 °C",
+      "400-500 °C",
+      "700-800 °C"
+    ],
+    "answer": "B",
+    "explanation": "La soudure à l'étain (soldering) s'effectue à une température d'environ 200-250 °C. L'alliage étain-plomb ou étain-cuivre fond à cette température. Le chalumeau utilisant le propane ou le MAPP est la source de chaleur typique.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la principale différence entre le soudage à l'étain (soldering) et le brasage fort (brazing)?",
+    "options": [
+      "La couleur du métal d'apport",
+      "La température à laquelle le métal d'apport fond",
+      "Le type de chalumeau utilisé",
+      "La pression du gaz"
+    ],
+    "answer": "B",
+    "explanation": "Le soudage à l'étain (soldering) se fait avec un métal d'apport qui fond sous les 450 °C (environ 200-250 °C), tandis que le brasage fort (brazing) utilise un métal d'apport qui fond au-dessus de 450 °C. Le brasage donne un joint plus résistant mécaniquement.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Dans quelle situation doit-on utiliser le brasage fort (brazing) plutôt que la soudure à l'étain pour assembler le cuivre?",
+    "options": [
+      "Pour les conduites d'eau potable en général",
+      "Pour les conduites de gaz propane",
+      "Pour les petites réparations domestiques",
+      "Pour les joints de vidange d'évier"
+    ],
+    "answer": "B",
+    "explanation": "Le brasage fort est requis pour les conduites de gaz propane et de gaz naturel en raison de la pression plus élevée et des risques de fuite. Le joint brasé est beaucoup plus résistant mécaniquement et peut supporter des températures et pressions plus élevées que le soudage à l'étain.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel type de raccord est utilisé pour joindre deux tuyaux de cuivre de même diamètre bout à bout?",
+    "options": [
+      "Coude (elbow)",
+      "Té (tee)",
+      "Manchon (coupling)",
+      "Réducteur (reducer)"
+    ],
+    "answer": "C",
+    "explanation": "Le manchon (coupling) est le raccord utilisé pour joindre deux tuyaux de même diamètre bout à bout. Il est de forme cylindrique et s'insère à cheval sur les deux extrémités à assembler.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel raccord permet de changer la direction d'une conduite à 90 degrés?",
+    "options": [
+      "Manchon (coupling)",
+      "Té (tee)",
+      "Coude (elbow)",
+      "Bouchon (cap)"
+    ],
+    "answer": "C",
+    "explanation": "Le coude (elbow) est le raccord utilisé pour changer la direction d'une conduite, typiquement à 90 degrés ou 45 degrés. Il existe en version à soudure, filetée ou à compression selon le type de tuyau.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel raccord permet de diviser un flux d'eau en deux directions?",
+    "options": [
+      "Coude (elbow)",
+      "Té (tee)",
+      "Manchon (coupling)",
+      "Raccord en croix (cross)"
+    ],
+    "answer": "B",
+    "explanation": "Le té (tee) est le raccord qui permet de diviser un flux d'eau en deux directions. Il a une forme de T avec une entrée et deux sorties, ou vice versa. Il est couramment utilisé pour créer des branchements dans les réseaux de plomberie.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce qu'un réducteur (reducer) et quand l'utilise-t-on?",
+    "options": [
+      "Raccord qui unit deux tuyaux de même diamètre",
+      "Raccord qui permet de passer d'un diamètre à un autre",
+      "Outil pour réduire la pression de l'eau",
+      "Valve qui réduit le débit"
+    ],
+    "answer": "B",
+    "explanation": "Un réducteur (reducer) est un raccord qui permet de passer d'un diamètre de tuyau à un diamètre plus petit. Par exemple, pour passer d'une conduite de 1 po à 3/4 po, on utilise un réducteur. Il peut être concentrique ou excentrique.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la fonction de la pâte à joint (pipe dope) sur un raccord fileté?",
+    "options": [
+      "Coller les pièces ensemble",
+      "Lubrifier et assurer l'étanchéité des filets",
+      "Nettoyer les filets avant assemblage",
+      "Empêcher la rouille"
+    ],
+    "answer": "B",
+    "explanation": "La pâte à joint (pipe dope) lubrifie les filets pour faciliter l'assemblage et remplit les interstices entre les filets pour assurer l'étanchéité. Elle doit être appliquée sur les filets mâles seulement, en évitant les premières spires.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la différence d'application entre le ruban de Téflon (PTFE) et la pâte à joint?",
+    "options": [
+      "Le ruban est utilisé sur le cuivre, la pâte sur l'acier",
+      "Le ruban est pour les filets coniques (NPT), la pâte pour les filets droits",
+      "Les deux sont interchangeables dans toutes les applications",
+      "Le ruban convient mieux aux filets fins et la pâte aux gros filets"
+    ],
+    "answer": "A",
+    "explanation": "Le ruban de Téflon est recommandé sur les filets coniques (NPT) des raccords — il est plus facile à appliquer proprement et offre une excellente étanchéité. La pâte à joint est préférable sur les gros filets (acier, fonte) et dans les applications à haute pression. Les deux ne sont pas interchangeables dans toutes les situations.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Combien de tours de ruban de Téflon doit-on appliquer sur un filetage standard de 1/2 po?",
+    "options": [
+      "1 à 2 tours",
+      "3 à 5 tours",
+      "6 à 8 tours",
+      "10 à 12 tours"
+    ],
+    "answer": "B",
+    "explanation": "Pour un filetage standard de 1/2 po, on applique généralement 3 à 5 tours de ruban de Téflon enroulés dans le sens des filets (sens horaire). Trop de tours peut empêcher le raccord de bien visser et trop peu peut causer des fuites.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est l'espacement maximal recommandé entre les supports de tuyauterie pour un tuyau de cuivre de 3/4 po en position horizontale?",
+    "options": [
+      "4 pieds (1,2 m)",
+      "6 pieds (1,8 m)",
+      "8 pieds (2,4 m)",
+      "10 pieds (3,0 m)"
+    ],
+    "answer": "B",
+    "explanation": "L'espacement maximal entre les supports pour un tuyau de cuivre de 3/4 po en position horizontale est d'environ 6 pieds (1,8 m). Pour un tuyau de 1/2 po, l'espacement est de 4 pieds, et pour 1 po, il est de 8 pieds. Les supports doivent être placés à chaque changement de direction.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est l'espacement maximal entre les supports pour un tuyau de cuivre de 1/2 po en position verticale?",
+    "options": [
+      "4 pieds (1,2 m)",
+      "6 pieds (1,8 m)",
+      "8 pieds (2,4 m)",
+      "10 pieds (3,0 m)"
+    ],
+    "answer": "D",
+    "explanation": "Pour un tuyau de cuivre de 1/2 po en position verticale, l'espacement maximal entre les supports est de 10 pieds (3,0 m). La gravité travaille dans le même axe que la tuyauterie verticale, ce qui permet un espacement plus grand qu'en horizontal où le poids du tuyau et de l'eau crée une flexion.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la fonction principale d'un outil à évaser (flaring tool)?",
+    "parameters": [
+      "Couper le tuyau de cuivre",
+      "Évaser l'extrémité du tuyau pour un raccord à évasement",
+      "Souder le raccord au tuyau",
+      "Dévisser les raccords filetés"
+    ],
+    "options": [
+      "Couper le tuyau de cuivre",
+      "Évaser l'extrémité du tuyau pour un raccord à évasement",
+      "Souder le raccord au tuyau",
+      "Dévisser les raccords filetés"
+    ],
+    "answer": "B",
+    "explanation": "L'outil à évaser (flaring tool) sert à évaser l'extrémité d'un tuyau de cuivre en forme de cône. Cette extrémité évasée s'insère dans un raccord à évasement (flare fitting) et est maintenue par un écrou. Cette méthode est utilisée pour les conduites de gaz et les raccords sans soudure.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la principale utilisation du tuyau ABS en plomberie au Québec?",
+    "options": [
+      "Conduites d'eau potable",
+      "Conduites d'évacuation et de ventilation (DWV)",
+      "Conduites de gaz",
+      "Conduites d'eau chaude sous pression"
+    ],
+    "answer": "B",
+    "explanation": "Le tuyau ABS (noir) est principalement utilisé pour les systèmes d'évacuation et de ventilation (DWV — Drain, Waste, Vent). Il n'est pas utilisé pour l'eau potable sous pression ni pour le gaz. Son assemblage se fait avec une colle à solvant spécifique ABS sans primer.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la pression nominale typique d'un tuyau PVC Schedule 40 de 2 po?",
+    "options": [
+      "100 PSI",
+      "150 PSI",
+      "280 PSI",
+      "450 PSI"
+    ],
+    "answer": "C",
+    "explanation": "Un tuyau PVC Schedule 40 de 2 po a une pression nominale d'environ 280 PSI. Le Schedule 80 du même diamètre a une pression nominale d'environ 400 PSI. La pression nominale diminue avec l'augmentation du diamètre et de la température de l'eau.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelles précautions doit-on prendre lors de l'utilisation du ruban de Téflon sur un filetage?",
+    "options": [
+      "L'appliquer dans le sens antihoraire",
+      "L'appliquer dans le sens horaire en suivant les filets",
+      "L'appliquer seulement sur les filets femelles",
+      "Ne pas l'utiliser sur les raccords en laiton"
+    ],
+    "answer": "B",
+    "explanation": "Le ruban de Téflon doit être appliqué dans le sens horaire (sens des filets) pour éviter qu'il ne se déroule lors du vissage. Il s'applique sur les filets mâles seulement. Il peut être utilisé sur le laiton, l'acier et le plastique, mais pas sur les joints coniques type flare.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel type de chalumeau est généralement utilisé pour la soudure à l'étain en plomberie résidentielle?",
+    "options": [
+      "Chalumeau oxyacétylénique",
+      "Chalumeau au propane ou MAPP",
+      "Chalumeau au butane",
+      "Chalumeau à hydrogène"
+    ],
+    "answer": "B",
+    "explanation": "Le chalumeau au propane ou au MAPP (méthylacétylène-propadiene) est le plus couramment utilisé pour la soudure à l'étain en plomberie résidentielle. Le propane est suffisant pour la plupart des travaux sur tuyaux de 1/2 po à 1 po, tandis que le MAPP offre une flamme plus chaude pour les gros diamètres.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la fonction du flux (décapant) lors de la soudure du cuivre?",
+    "options": [
+      "Refroidir le tuyau",
+      "Nettoyer et protéger le métal de l'oxydation pendant le chauffage",
+      "Ajouter de la couleur à la soudure",
+      "Faire fondre l'étain plus rapidement"
+    ],
+    "answer": "B",
+    "explanation": "Le flux (décapant) nettoie la surface du cuivre et empêche l'oxydation pendant le chauffage. Il permet à la soudure de bien adhérer au métal en éliminant les oxydes qui se forment à la surface du cuivre lorsqu'il est chauffé. Sans flux, la soudure ne peut pas bien adhérer.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quels équipements de sécurité sont essentiels lors de la soudure à l'étain?",
+    "options": [
+      "Casque de chantier et gants isolants",
+      "Lunettes de protection et gants résistants à la chaleur",
+      "Masque respiratoire complet et combinaison",
+      "Bottes à embout d'acier et harnais"
+    ],
+    "answer": "B",
+    "explanation": "Les lunettes de protection (contre les projections de flux et de soudure chaude) et des gants résistants à la chaleur sont essentiels lors de la soudure à l'étain. Un extincteur à portée de main est également recommandé. Le travail doit être fait dans un espace bien ventilé.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce qu'un raccord diélectrique et pourquoi l'utilise-t-on?",
+    "options": [
+      "Raccord pour l'électricité",
+      "Raccord isolant entre métaux différents pour prévenir la corrosion galvanique",
+      "Raccord qui conduit l'électricité",
+      "Raccord chauffant"
+    ],
+    "answer": "B",
+    "explanation": "Un raccord diélectrique est utilisé pour séparer deux métaux différents (ex: cuivre et acier galvanisé) dans un système de plomberie. Sans ce raccord isolant, la corrosion galvanique se produit au point de contact entre les deux métaux, ce qui accélère la détérioration de la tuyauterie.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel type de tuyau est généralement utilisé pour les conduites d'eau chaude d'un système de chauffage hydronique?",
+    "options": [
+      "PVC Schedule 40",
+      "ABS",
+      "PEX ou cuivre",
+      "PVC Schedule 80"
+    ],
+    "answer": "C",
+    "explanation": "Le PEX et le cuivre sont les matériaux couramment utilisés pour les systèmes de chauffage hydronique. Le PVC n'est pas adapté aux températures élevées de l'eau chaude (au-dessus de 60 °C). Le PEX résiste bien aux températures et pressions des systèmes de chauffage et le cuivre est un excellent conducteur thermique.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la température maximale de service recommandée pour un tuyau PEX standard?",
+    "options": [
+      "60 °C (140 °F)",
+      "82 °C (180 °F)",
+      "95 °C (203 °F)",
+      "110 °C (230 °F)"
+    ],
+    "answer": "C",
+    "explanation": "La température maximale de service pour le PEX standard est d'environ 95 °C (203 °F) à des pressions réduites, avec une température nominale continue de 82 °C (180 °F) pour les systèmes résidentiels standard. Au-delà, la dégradation du matériau s'accélère significativement.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le principal inconvénient du tuyau PEX par rapport au cuivre?",
+    "options": [
+      "Son coût beaucoup plus élevé",
+      "Sa dégradation par les UV et le gel",
+      "Sa dégradation par les UV et son potentiel de perméation à l'oxygène",
+      "Son poids excessif"
+    ],
+    "answer": "C",
+    "explanation": "Le PEX se dégrade sous l'exposition aux rayons UV, ce qui limite son utilisation extérieure. De plus, le PEX standard permet une certaine perméation à l'oxygène, ce qui peut nécessiter un PEX barrière à l'oxygène (EVOH) pour les systèmes de chauffage hydronique afin de protéger les composants métalliques du circuit.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Dans quel cas utilise-t-on une clé à tuyau (pipe wrench)?",
+    "options": [
+      "Pour serrer les raccords filetés de gros diamètre",
+      "Pour couper les tuyaux de cuivre",
+      "Pour souder les raccords",
+      "Pour mesurer le diamètre des tuyaux"
+    ],
+    "answer": "A",
+    "explanation": "La clé à tuyau (pipe wrench) est utilisée pour serrer et desserrer les raccords filetés de gros diamètre, particulièrement sur les tuyaux d'acier galvanisé ou de fonte. Ses mâchoires dentelées permettent une prise ferme sur les surfaces rondes. Elle ne doit pas être utilisée sur les raccords chromés car elle endommagerait la finition.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le bon ordre des étapes pour souder un raccord sur un tuyau de cuivre?",
+    "options": [
+      "Couper - Nettoyer - Appliquer le flux - Chauffer - Appliquer la soudure - Refroidir",
+      "Couper - Appliquer le flux - Chauffer - Souder - Nettoyer",
+      "Couper - Chauffer - Appliquer le flux - Souder",
+      "Appliquer le flux - Couper - Chauffer - Souder"
+    ],
+    "answer": "A",
+    "explanation": "L'ordre correct est: 1) Couper le tuyau à la bonne longueur, 2) Nettoyer l'intérieur du raccord et l'extérieur du tuyau avec de la laine d'acier, 3) Appliquer le flux sur les surfaces à assembler, 4) Chauffer le raccord uniformément, 5) Appliquer la soudure à l'entrée du joint, 6) Laisser refroidir puis nettoyer l'excès de flux.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le principal avantage d'une clé à molette par rapport à une clé à tuyau pour les travaux de finition?",
+    "options": [
+      "Elle est plus légère",
+      "Elle n'endommage pas les surfaces chromées ou finies",
+      "Elle s'ajuste automatiquement",
+      "Elle a une meilleure prise"
+    ],
+    "answer": "B",
+    "explanation": "La clé à molette (à mâchoires lisses) n'endommage pas les surfaces chromées ou finies contrairement à la clé à tuyau (mâchoires dentelées). Elle est donc préférée pour les travaux de finition sur les écrous chromés, les robinets et les raccords apparents.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la différence entre un tuyau PEX-A et un tuyau PEX-B?",
+    "options": [
+      "La couleur seulement",
+      "Le procédé de fabrication et la flexibilité",
+      "Le diamètre intérieur",
+      "La pression nominale"
+    ],
+    "answer": "B",
+    "explanation": "Le PEX-A est fabriqué par la méthode Engel (peroxyde) et est plus flexible, ce qui facilite l'installation. Il a une meilleure mémoire de forme lorsqu'il est déplié. Le PEX-B est fabriqué par la méthode du silane et est légèrement plus rigide, mais moins cher. Les deux sont performants pour la plomberie.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Sur quel code national le Code de plomberie du Québec est-il basé?",
+    "options": [
+      "Code national du bâtiment (CNB) — Chapitre Plomberie",
+      "Code national de la plomberie du Canada (CNP)",
+      "Uniform Plumbing Code (UPC) américain",
+      "International Plumbing Code (IPC)"
+    ],
+    "answer": "B",
+    "explanation": "Le Code de plomberie du Québec est basé sur le Code national de la plomberie du Canada (CNP) avec des modifications et des ajouts propres au Québec. Il fait partie intégrante du Code de construction du Québec, Chapitre III — Plomberie.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel organisme délivre les licences d'entrepreneur en plomberie au Québec?",
+    "options": [
+      "CMMTQ",
+      "RBQ (Régie du bâtiment du Québec)",
+      "CNESST",
+      "APCHQ"
+    ],
+    "answer": "B",
+    "explanation": "La RBQ (Régie du bâtiment du Québec) est l'organisme gouvernemental responsable de la délivrance des licences d'entrepreneur en plomberie. La CMMTQ est l'association professionnelle des maîtres mécaniciens en tuyauterie, mais ce n'est pas elle qui délivre les licences.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Dans quelle sous-catégorie de licence RBQ un entrepreneur doit-il être classé pour effectuer des travaux de plomberie générale?",
+    "options": [
+      "Sous-catégorie 14",
+      "Sous-catégorie 15",
+      "Sous-catégorie 16",
+      "Sous-catégorie 17"
+    ],
+    "answer": "B",
+    "explanation": "La sous-catégorie 15 — Plomberie, chauffage et climatisation est la licence requise pour les travaux de plomberie générale. La sous-catégorie 16 est pour le gaz et la sous-catégorie 17 pour la protection-incendie.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quand un permis de construction est-il requis pour des travaux de plomberie au Québec?",
+    "options": [
+      "Pour tous les travaux de plomberie, peu importe leur nature",
+      "Uniquement pour les travaux de construction neuve",
+      "Lorsque la valeur des travaux dépasse un seuil établi par la municipalité ou selon la nature des travaux",
+      "Uniquement pour les travaux commerciaux"
+    ],
+    "answer": "C",
+    "explanation": "Un permis de construction est requis lorsque la valeur des travaux dépasse un seuil déterminé par la réglementation municipale (généralement 5 000 $ en matériaux et main-d'œuvre) ou selon la nature des travaux. Les réparations mineures (ex: changer un robinet) ne requièrent généralement pas de permis.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "À quel moment la première inspection RBQ est-elle généralement effectuée pour un projet de plomberie?",
+    "options": [
+      "Après la finition complète des travaux",
+      "Avant l'enfouissement des conduites ou la fermeture des murs (rough-in)",
+      "Au début du chantier, avant tout travail",
+      "À la fin de la période de garantie"
+    ],
+    "answer": "B",
+    "explanation": "La première inspection a lieu au stade du rough-in, c'est-à-dire après l'installation des conduites mais avant leur recouvrement par les murs, plafonds ou dalles. Cela permet à l'inspecteur de vérifier la conformité des travaux avant qu'ils ne soient cachés.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon le Code de plomberie du Québec, quelle est la pente minimale pour un tuyau d'évacuation de 2 po?",
+    "options": [
+      "1/8 po par pied",
+      "1/4 po par pied",
+      "1/2 po par pied",
+      "3/4 po par pied"
+    ],
+    "answer": "B",
+    "explanation": "La pente minimale pour un tuyau d'évacuation de 2 po est de 1/4 po par pied (2,08 % ou 20,8 mm/m). Cette pente assure un écoulement suffisant pour transporter les solides sans que l'eau ne s'écoule trop rapidement en laissant les solides derrière.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Pour un tuyau d'évacuation de 3 po, quelle est la pente minimale selon le Code?",
+    "options": [
+      "1/8 po par pied (1,04 %)",
+      "1/4 po par pied (2,08 %)",
+      "3/8 po par pied (3,12 %)",
+      "1/2 po par pied (4,16 %)"
+    ],
+    "answer": "A",
+    "explanation": "Pour un tuyau de 3 po et plus (3 po, 4 po, 6 po), la pente minimale est de 1/8 po par pied (1,04 %). Pour les tuyaux de 2 po et moins, la pente minimale est de 1/4 po par pied.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la profondeur minimale d'enfouissement d'une conduite d'eau à l'extérieur au Québec pour la protéger du gel?",
+    "options": [
+      "1,2 m (4 pi)",
+      "1,5 m (5 pi)",
+      "1,8 m (6 pi)",
+      "2,1 m (7 pi)"
+    ],
+    "answer": "C",
+    "explanation": "La profondeur minimale d'enfouissement au Québec est de 1,8 m (6 pieds) en raison du gel profond du sol pendant les hivers québécois. Cette profondeur peut varier selon les régions, les municipalités pouvant exiger des profondeurs plus grandes.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est le rôle d'un piège (siphon/trap) dans un système de plomberie?",
+    "options": [
+      "Ralentir l'écoulement de l'eau",
+      "Empêcher les gaz d'égout de pénétrer dans le bâtiment",
+      "Augmenter la pression dans la conduite",
+      "Filtrer les déchets solides"
+    ],
+    "answer": "B",
+    "explanation": "Le piège (trap) retient une certaine quantité d'eau qui forme un joint hydraulique. Cette eau fait barrière entre l'intérieur du bâtiment et les gaz d'égout provenant du réseau d'évacuation. Tout appareil sanitaire doit être muni d'un piège conforme au Code.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la profondeur maximale du joint hydraulique (water seal) d'un piège selon le Code de plomberie?",
+    "options": [
+      "50 mm (2 po)",
+      "75 mm (3 po)",
+      "100 mm (4 po)",
+      "150 mm (6 po)"
+    ],
+    "answer": "C",
+    "explanation": "La profondeur maximale du joint hydraulique d'un piège est de 100 mm (4 po). Un joint plus profond pourrait causer des problèmes d'auto-siphonnage et de dépôt de sédiments. La profondeur minimale est de 50 mm (2 po) pour la plupart des appareils résidentiels.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la distance horizontale maximale entre un appareil sanitaire et son évent de ventilation (vent)?",
+    "options": [
+      "La longueur maximale est calculée selon le diamètre du tuyau, généralement 1,2 m (4 pi) pour un tuyau de 1 1/4 po",
+      "2 m (6,5 pi)",
+      "3 m (10 pi)",
+      "Il n'y a pas de limite de distance"
+    ],
+    "answer": "A",
+    "explanation": "Selon le Code de plomberie, la distance horizontale maximale entre le piège d'un appareil et son évent de ventilation dépend du diamètre du tuyau. Pour un tuyau de 1 1/4 po, elle est de 1,2 m (4 pi). Pour 1 1/2 po, elle est de 1,5 m (5 pi), et pour 2 po, elle est de 1,8 m (6 pi).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel type d'intercepteur est requis pour une cuisine commerciale produisant des graisses?",
+    "options": [
+      "Intercepteur à sédiments",
+      "Intercepteur à graisses (grease interceptor)",
+      "Séparateur d'huile",
+      "Filtre à particules"
+    ],
+    "answer": "B",
+    "explanation": "Un intercepteur à graisses (grease interceptor) est requis dans les cuisines commerciales pour capter les graisses et huiles avant qu'elles n'entrent dans le réseau d'égout. Cela empêche l'accumulation de graisse dans les conduites qui cause des obstructions et des refoulements.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel type d'intercepteur est requis pour un lave-auto commercial?",
+    "options": [
+      "Intercepteur à graisses",
+      "Séparateur d'huile et de sédiments (oil/grit separator)",
+      "Intercepteur à cheveux",
+      "Filtre à charbon"
+    ],
+    "answer": "B",
+    "explanation": "Un lave-auto commercial doit être équipé d'un séparateur d'huile et de sédiments (oil/grit separator) pour capturer les hydrocarbures, l'huile, les sédiments et autres contaminants avant le rejet à l'égout. Ceci est requis par le Code de plomberie et les règlements environnementaux.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon le Code de plomberie, un tuyau d'évent (vent) doit-il être installé avec une pente?",
+    "options": [
+      "Non, les évents doivent être verticaux ou horizontaux sans pente",
+      "Oui, avec une pente minimale de 1/8 po/pi vers la colonne d'évacuation",
+      "Oui, avec une pente minimale de 1/4 po/pi vers l'appareil",
+      "Non, la pente est interdite pour les évents"
+    ],
+    "answer": "B",
+    "explanation": "Les tuyaux d'évent doivent être installés avec une pente minimale de 1/8 po par pied (1 %) vers la colonne d'évacuation pour permettre à la condensation et à l'humidité de s'écouler par gravité vers le système d'évacuation, empêchant ainsi l'accumulation d'eau dans l'évent.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est le diamètre minimal d'un tuyau d'évent principal (main vent) pour une colonne de chute (soil stack)?",
+    "options": [
+      "1 1/4 po",
+      "1 1/2 po",
+      "2 po",
+      "La moitié du diamètre de la colonne de chute"
+    ],
+    "answer": "D",
+    "explanation": "Le diamètre minimal d'un évent principal est d'au moins la moitié du diamètre de la colonne de chute (soil stack) qu'il dessert. Par exemple, une colonne de chute de 4 po nécessite un évent d'au moins 2 po de diamètre. L'évent ne peut jamais être plus petit que 1 1/4 po.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelles sont les trois étapes d'inspection typiques d'un projet de plomberie par la RBQ?",
+    "options": [
+      "Pré-travaux, Mi-travaux, Post-travaux",
+      "Rough-in (avant fermeture), Pression/étanchéité, Final (après finition)",
+      "Fondation, Structure, Toiture",
+      "Électricité, Plomberie, Ventilation"
+    ],
+    "answer": "B",
+    "explanation": "Les trois inspections typiques sont: 1) Rough-in — après l'installation des conduites mais avant la fermeture des murs, 2) Pression/étanchéité — test de pression du système avant raccordement final, 3) Final — après la finition complète, vérification du fonctionnement de tous les appareils.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la pression de test minimale requise pour un essai d'étanchéité d'un système de plomberie selon le Code?",
+    "options": [
+      "50 PSI (345 kPa) pendant 15 minutes",
+      "100 PSI (690 kPa) pendant 1 heure",
+      "La pression de service multipliée par 1,5, ou 50 PSI, selon la plus élevée des deux",
+      "200 PSI (1380 kPa) pendant 30 minutes"
+    ],
+    "answer": "C",
+    "explanation": "Le Code exige que le test d'étanchéité soit effectué à une pression d'au moins 1,5 fois la pression de service maximale, ou 50 PSI (345 kPa), la plus élevée des deux. Le système doit maintenir cette pression sans chute significative pendant au moins 15 à 30 minutes selon le type de système testé.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon le Code de plomberie, quelle est la distance minimale entre une toilette et son évent?",
+    "options": [
+      "Il n'y a pas de distance minimale spécifique, la distance maximale est réglementée",
+      "1 m (3 pi)",
+      "2 m (6,5 pi)",
+      "3 m (10 pi)"
+    ],
+    "answer": "A",
+    "explanation": "Le Code de plomberie réglemente la distance maximale (basée sur le diamètre du tuyau), mais il n'y a pas de distance minimale spécifique entre un appareil et son évent. La distance maximale pour une toilette (3 po) est généralement de 1,8 m (6 pi). L'évent doit être aussi près que possible du piège.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Dans quel cas un clapet antichoc (water hammer arrester) est-il requis par le Code?",
+    "options": [
+      "Toujours, sur toutes les installations",
+      "Sur les robinets à fermeture rapide (toilettes à chasse à soupape, robinets automatiques) ou lorsque la vélocité dépasse 2,4 m/s",
+      "Uniquement sur les chauffe-eau",
+      "Jamais requis, c'est une option"
+    ],
+    "answer": "B",
+    "explanation": "Le Code de plomberie exige l'installation de clapets antichocs (ou de colonnes d'air) sur les robinets à fermeture rapide comme les toilettes à chasse à soupape, les robinets automatiques, ou lorsque la vitesse de l'eau dans la tuyauterie dépasse 2,4 m/s (8 pi/s). Le coup de bélier peut endommager la tuyauterie.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la hauteur minimale de dégagement devant un appareil sanitaire selon le Code?",
+    "options": [
+      "450 mm (18 po)",
+      "600 mm (24 po)",
+      "750 mm (30 po)",
+      "900 mm (36 po)"
+    ],
+    "answer": "B",
+    "explanation": "Le Code de plomberie exige un dégagement minimal de 600 mm (24 po) devant tout appareil sanitaire pour permettre son utilisation et son entretien. Ce dégagement s'applique à la fois aux résidences et aux bâtiments publics.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est l'espacement minimal entre le centre de deux toilettes adjacentes?",
+    "options": [
+      "300 mm (12 po)",
+      "400 mm (16 po)",
+      "500 mm (20 po)",
+      "600 mm (24 po)"
+    ],
+    "answer": "B",
+    "explanation": "Le Code exige un espacement minimal de 400 mm (16 po) d'axe en axe entre deux toilettes adjacentes. De plus, la distance du centre de la toilette au mur adjacent doit être d'au moins 300 mm (12 po).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Une conduite d'évacuation de 4 po sur une distance horizontale de 30 pieds doit avoir quelle différence de hauteur entre ses extrémités?",
+    "options": [
+      "3,75 po (95 mm)",
+      "7,5 po (190 mm)",
+      "3,0 po (76 mm)",
+      "15 po (380 mm)"
+    ],
+    "answer": "A",
+    "explanation": "Pour un tuyau de 4 po, la pente minimale est de 1/8 po par pied. Sur 30 pieds: 30 × 1/8 = 3,75 po (95 mm). La différence de hauteur entre les deux extrémités doit donc être d'au moins 3,75 po.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon le Code, un tuyau d'évacuation de 2 po sur une course de 12 pieds doit avoir une pente minimale de 1/4 po/pi. Quelle est la différence de hauteur minimale requise?",
+    "options": [
+      "1,5 po (38 mm)",
+      "2 po (51 mm)",
+      "3 po (76 mm)",
+      "4 po (102 mm)"
+    ],
+    "answer": "C",
+    "explanation": "Pour un tuyau de 2 po, la pente minimale est de 1/4 po par pied. Sur 12 pieds: 12 × 1/4 = 3 po (76 mm). La différence de hauteur doit être d'au moins 3 po. C'est une question pratique courante sur les chantiers pour calculer la pente des conduites d'évacuation.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce qu'un dispositif anti-refoulement (backflow preventer) et quand est-il requis?",
+    "options": [
+      "Dispositif pour augmenter la pression, requis partout",
+      "Dispositif empêchant l'eau contaminée de revenir dans l'eau potable, requis sur les branchements à risque de contamination",
+      "Valve de vidange pour l'hiver",
+      "Filtre à eau obligatoire sur toutes les entrées"
+    ],
+    "answer": "B",
+    "explanation": "Un dispositif anti-refoulement (backflow preventer) empêche l'eau contaminée de refluer dans le réseau d'eau potable en cas de pression négative (contre-pression ou siphonnage). Il est requis sur les branchements où il y a un risque de contamination croisée, comme les systèmes d'arrosage, les chauffe-eau, et les branchements industriels.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon le Code de plomberie du Québec, quel est le type de dispositif anti-refoulement le plus courant pour un système d'arrosage résidentiel?",
+    "options": [
+      "Clapet de retenue simple",
+      "Disconnecteur à réduction de pression (RPZ)",
+      "Ensemble anti-refoulement à double clapet (DCVA)",
+      "Dispositif anti-refoulement à zone de pression réduite (RPBA)"
+    ],
+    "answer": "C",
+    "explanation": "Le dispositif anti-refoulement à double clapet (DCVA — Double Check Valve Assembly) ou l'ensemble anti-refoulement à zone de pression réduite (RPBA) sont couramment utilisés pour les systèmes d'arrosage résidentiels. Le type exact dépend du niveau de risque évalué selon le Code.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la température maximale de l'eau chaude à la sortie d'un chauffe-eau dans un bâtiment public selon le Code?",
+    "options": [
+      "43 °C (110 °F)",
+      "49 °C (120 °F)",
+      "55 °C (131 °F)",
+      "60 °C (140 °F)"
+    ],
+    "answer": "B",
+    "explanation": "Le Code de plomberie limite la température de l'eau chaude à 49 °C (120 °F) dans les bâtiments publics pour prévenir les brûlures. À 49 °C, une brûlure au troisième degré prend environ 10 minutes, tandis qu'à 60 °C, elle survient en 5 secondes.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Un plombier installe une conduite d'évacuation de 3 po sur 20 pieds. Quelle est la pente minimale et quelle différence de hauteur cela représente-t-il?",
+    "options": [
+      "1/4 po/pi = 5 po de différence",
+      "1/8 po/pi = 2,5 po de différence",
+      "1/2 po/pi = 10 po de différence",
+      "3/8 po/pi = 7,5 po de différence"
+    ],
+    "answer": "B",
+    "explanation": "Pour un tuyau d'évacuation de 3 po, la pente minimale est de 1/8 po par pied. Sur 20 pieds: 20 × 1/8 = 2,5 po (63,5 mm) de différence de hauteur entre les extrémités.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la période de validité typique d'un permis de construction pour des travaux de plomberie résidentielle au Québec?",
+    "options": [
+      "6 mois",
+      "1 an",
+      "2 ans",
+      "5 ans"
+    ],
+    "answer": "B",
+    "explanation": "La période de validité typique d'un permis de construction pour des travaux de plomberie résidentielle est d'un an. Des prolongations peuvent être demandées moyennant des frais supplémentaires. Le délai exact peut varier selon la municipalité.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la hauteur minimale de la bouche de nettoyage (cleanout) par rapport au plancher fini?",
+    "options": [
+      "Aucune exigence spécifique",
+      "Entre 150 mm (6 po) et 300 mm (12 po) du plancher",
+      "Entre 450 mm (18 po) et 600 mm (24 po) du plancher",
+      "Au niveau du plancher"
+    ],
+    "answer": "B",
+    "explanation": "Les bouches de nettoyage doivent être installées à une hauteur accessible, généralement entre 150 mm (6 po) et 300 mm (12 po) au-dessus du plancher fini. Elles doivent être facilement accessibles pour permettre l'inspection et le débouchage des conduites.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est l'espacement maximal entre les bouches de nettoyage (cleanouts) sur une conduite d'évacuation horizontale selon le Code?",
+    "options": [
+      "Tous les 10 m (33 pi)",
+      "Tous les 15 m (50 pi)",
+      "Tous les 22,5 m (75 pi)",
+      "Tous les 30 m (100 pi)"
+    ],
+    "answer": "C",
+    "explanation": "Le Code de plomberie exige une bouche de nettoyage à tous les 22,5 m (75 pi) sur une conduite d'évacuation horizontale. De plus, une bouche de nettoyage est requise à chaque changement de direction de plus de 45 degrés et à la base de chaque colonne de chute.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon le Code de plomberie du Québec, une soude de lessive (laundry tray) doit être installée à quelle hauteur minimale au-dessus du plancher?",
+    "options": [
+      "150 mm (6 po)",
+      "200 mm (8 po)",
+      "300 mm (12 po)",
+      "450 mm (18 po)"
+    ],
+    "answer": "B",
+    "explanation": "Une soude de lessive doit être installée à au moins 200 mm (8 po) au-dessus du plancher fini pour permettre le raccordement d'un tuyau de vidange de laveuse. Son piège doit être conforme aux exigences du Code.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la hauteur recommandée pour l'installation d'un robinet extérieur (sillcock/hose bibb) par rapport au sol?",
+    "options": [
+      "150-300 mm (6-12 po)",
+      "300-600 mm (12-24 po)",
+      "600-900 mm (24-36 po)",
+      "900-1200 mm (36-48 po)"
+    ],
+    "answer": "A",
+    "explanation": "Un robinet extérieur doit être installé à environ 150-300 mm (6-12 po) au-dessus du sol fini pour permettre le raccordement d'un tuyau d'arrosage tout en étant suffisamment haut pour éviter la contamination par les eaux de ruissellement. Au Québec, il doit également être muni d'un dispositif anti-refoulement.",
+    "difficulty": "MEDIUM"
+  }
+]

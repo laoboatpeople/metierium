@@ -1,0 +1,3902 @@
+[
+  {
+    "chapter": 1,
+    "question": "Combien de tours de ruban de téflon sont généralement recommandés sur un filetage NPT de 1/2 pouce?",
+    "options": [
+      "1-2 tours",
+      "3-4 tours",
+      "5-6 tours",
+      "7-8 tours"
+    ],
+    "answer": "C",
+    "explanation": "Pour un filetage NPT de 1/2 pouce, on applique généralement 5 à 6 tours de ruban de téflon, enroulés dans le sens des filets pour éviter qu'il ne se déroule lors du serrage.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Comment doit-on appliquer le flux lors du soudage d'un raccord de cuivre?",
+    "options": [
+      "Sur le tuyau seulement",
+      "Sur le raccord seulement",
+      "Sur le tuyau et à l'intérieur du raccord",
+      "Sur l'extérieur du raccord"
+    ],
+    "answer": "C",
+    "explanation": "Le flux doit être appliqué sur le tuyau et à l'intérieur du raccord pour assurer une bonne étanchéité et empêcher l'oxydation pendant le chauffage.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Dans le soudage du cuivre, quelle est la couleur de flamme idéale du chalumeau au propane?",
+    "options": [
+      "Flamme jaune",
+      "Flamme bleue avec cône intérieur distinct",
+      "Flamme rouge",
+      "Flamme verte"
+    ],
+    "answer": "B",
+    "explanation": "La flamme bleue avec un cône intérieur distinct indique un mélange air-propane optimal pour le soudage du cuivre. Une flamme jaune indique une combustion incomplète.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Dans un assemblage à compression, que signifie le terme \"olive\" ou \"ferrule\"?",
+    "options": [
+      "Le corps du raccord",
+      "L'écrou de serrage",
+      "La bague qui comprime le tube",
+      "Le joint torique"
+    ],
+    "answer": "C",
+    "explanation": "L'olive (ferrule) est la bague métallique qui se déforme et comprime le tube lorsque l'écrou est serré, créant l'étanchéité dans un raccord à compression.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Est-il permis d'utiliser du PVC pour l'eau chaude?",
+    "options": [
+      "Oui, toujours",
+      "Oui, jusqu'à 140°F",
+      "Non, jamais",
+      "Oui, pour les applications commerciales seulement"
+    ],
+    "answer": "B",
+    "explanation": "Le PVC standard est limité à 140°F (60°C). Pour l'eau chaude sanitaire qui peut atteindre 180°F, on utilise le CPVC qui résiste jusqu'à 200°F.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Le PVC Sch 80 est utilisé de préférence au Sch 40 dans quelles applications?",
+    "options": [
+      "Évacuation sanitaire",
+      "Eau potable sous pression",
+      "Conduits électriques",
+      "Gouttières"
+    ],
+    "answer": "B",
+    "explanation": "Le PVC Sch 80 a une paroi plus épaisse et une pression nominale plus élevée (environ 400 psi pour 2 pouces), ce qui le rend adapté aux applications d'eau potable sous pression.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Le pipe dope (pâte à joint) est utilisé de préférence au ruban de téflon dans quelles situations?",
+    "options": [
+      "Raccords en plastique",
+      "Raccords à gaz",
+      "Raccords hydroniques à haute température",
+      "Raccords à compression"
+    ],
+    "answer": "C",
+    "explanation": "Le pipe dope est préférable au ruban de téflon pour les raccords hydroniques à haute température car il résiste mieux aux températures élevées et ne se dégrade pas comme le ruban de téflon.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Pourquoi le ruban de téflon n'est-il pas recommandé sur les raccords filetés à gaz?",
+    "options": [
+      "Il contient du plomb",
+      "Il peut se fragmenter et obstruer les orifices",
+      "Il réagit avec le gaz",
+      "Il n'est pas assez résistant"
+    ],
+    "answer": "B",
+    "explanation": "Le ruban de téflon standard n'est pas recommandé sur les raccords à gaz car des fragments peuvent se détacher et obstruer les orifices des brûleurs. Un pipe dope homologué pour gaz est préférable.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel alliage de brasage est recommandé pour les raccords de cuivre en plomberie potable?",
+    "options": [
+      "Étain-plomb (50/50)",
+      "Laiton",
+      "Cuivre-phosphore (BCuP) avec minimum 5% argent",
+      "Aluminium"
+    ],
+    "answer": "C",
+    "explanation": "Le BCuP (cuivre-phosphore) avec minimum 5% d'argent est recommandé pour le brasage des raccords de cuivre en plomberie potable. Il offre une excellente résistance et ne contient pas de plomb.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel diamètre de tuyau en PVC Sch 40 est généralement utilisé pour l'évacuation des toilettes?",
+    "options": [
+      "2 pouces",
+      "3 pouces",
+      "4 pouces",
+      "6 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le PVC Sch 40 de 3 pouces est le minimum requis pour l'évacuation des toilettes selon la plupart des codes. Certaines installations utilisent du 4 pouces pour les toilettes commerciales.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est l'avantage du tuyau PEX par rapport au cuivre pour les rénovations?",
+    "options": [
+      "Moins cher à long terme",
+      "Plus facile à installer dans les murs existants",
+      "Résiste mieux aux UV",
+      "Peut être recyclé plus facilement"
+    ],
+    "answer": "B",
+    "explanation": "Le PEX est beaucoup plus flexible que le cuivre, ce qui facilite l'installation dans les murs existants lors de rénovations. Il nécessite moins de raccords et peut contourner les obstacles.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le couple de serrage recommandé pour un raccord à compression sur un tube de cuivre de 1/2 pouce?",
+    "options": [
+      "10-15 lb·po",
+      "20-30 lb·po",
+      "40-50 lb·po",
+      "60-75 lb·po"
+    ],
+    "answer": "B",
+    "explanation": "Pour un raccord à compression sur cuivre 1/2 po, le couple recommandé est généralement de 20 à 30 lb·po. Un serrage excessif peut endommager le tube ou l'écrou.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le diamètre minimum de coude dans un tuyau PEX pour éviter de restreindre le débit?",
+    "options": [
+      "2x le diamètre du tuyau",
+      "3x le diamètre du tuyau",
+      "4x le diamètre du tuyau",
+      "6x le diamètre du tuyau"
+    ],
+    "answer": "D",
+    "explanation": "Pour le PEX, le rayon de courbure minimum est généralement de 6x le diamètre du tuyau. Par exemple, pour un PEX de 3/4 po, le rayon minimum est de 4.5 po.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le rayon de courbure minimum d'un tube de cuivre recuit de 3/4 pouce?",
+    "options": [
+      "2.5 pouces",
+      "3 pouces",
+      "4 pouces",
+      "5 pouces"
+    ],
+    "answer": "C",
+    "explanation": "Le rayon de courbure minimum pour un tube de cuivre recuit de 3/4 po est d'environ 4 pouces (environ 5-6x le diamètre). Le tube recuit est plus flexible que le tube rigide.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel outil est utilisé pour enlever les bavures à l'intérieur d'un tuyau de cuivre après l'avoir coupé?",
+    "options": [
+      "Coupe-tube",
+      "Ébarbeur (reamer)",
+      "Lime plate",
+      "Papier sablé"
+    ],
+    "answer": "B",
+    "explanation": "L'ébarbeur (reamer) est l'outil spécifique pour enlever les bavures à l'intérieur d'un tuyau de cuivre après la coupe. Les bavures peuvent causer des turbulences et de la corrosion.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel type de cuivre est le plus couramment utilisé pour les canalisations d'eau potable résidentielles?",
+    "options": [
+      "Cuivre type K",
+      "Cuivre type L",
+      "Cuivre type M",
+      "Cuivre type DWV"
+    ],
+    "answer": "B",
+    "explanation": "Le cuivre type L est le plus couramment utilisé pour les canalisations d'eau potable résidentielles. Il offre un bon équilibre entre coût et durabilité.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel type de raccord PEX est incompatible avec les autres marques?",
+    "options": [
+      "Raccord à crimp",
+      "Raccord à expansion",
+      "Raccord à glissement",
+      "Aucun, ils sont tous compatibles"
+    ],
+    "answer": "B",
+    "explanation": "Les systèmes à expansion PEX-A sont généralement propriétaires à chaque fabricant (Uponor, Rehau, etc.). Les bagues et outils d'expansion ne sont pas interchangeables entre marques.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel type de raccord PEX offre le meilleur débit intérieur?",
+    "options": [
+      "Raccord à crimp",
+      "Raccord à expansion",
+      "Raccord à compression",
+      "Raccord fileté"
+    ],
+    "answer": "B",
+    "explanation": "Le raccord à expansion (PEX-A) offre le meilleur débit car il utilise le principe de mémoire de forme du PEX. Le raccord ne réduit pas le diamètre intérieur du tuyau contrairement au système à crimp.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel type de raccord est utilisé pour assembler les tuyaux ABS?",
+    "options": [
+      "Raccord à compression",
+      "Raccord à coller",
+      "Raccord à souder",
+      "Raccord fileté"
+    ],
+    "answer": "B",
+    "explanation": "Les tuyaux ABS sont assemblés à l'aide d'un ciment-solvant (collage) spécifique pour ABS. Le solvant fusionne chimiquement les pièces ensemble.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel type de tuyau ABS convient pour les installations hors terre?",
+    "options": [
+      "ABS standard",
+      "ABS protégé contre les UV",
+      "ABS renforcé",
+      "Tous les types d'ABS"
+    ],
+    "answer": "B",
+    "explanation": "L'ABS standard se dégrade sous l'effet des rayons UV. Pour les installations hors terre, on doit utiliser de l'ABS avec protection UV ou peindre l'ABS standard avec une peinture adaptée.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la capacité de charge typique du PVC Sch 40 de 4 pouces pour l'évacuation sanitaire?",
+    "options": [
+      "160 unités de raccordement",
+      "240 unités de raccordement",
+      "320 unités de raccordement",
+      "480 unités de raccordement"
+    ],
+    "answer": "C",
+    "explanation": "Le PVC Sch 40 de 4 pouces peut évacuer jusqu'à 320 unités de raccordement (UR) selon le code de plomberie. C'est pourquoi il est utilisé pour les colonnes principales.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la différence entre la soudure et le brasage pour le cuivre?",
+    "options": [
+      "La soudure chauffe moins et fond à moins de 840°F",
+      "Le brasage est utilisé seulement pour les gros diamètres",
+      "La soudure utilise de l'argent et le brasage de l'étain",
+      "Il n'y a aucune différence"
+    ],
+    "answer": "A",
+    "explanation": "La soudure (étain/plomb sans plomb) fond sous 840°F (450°C), tandis que le brasage utilise des températures au-dessus de 840°F avec un alliage à plus haute résistance.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la différence entre le PEX-A et le PEX-B?",
+    "options": [
+      "Le PEX-A est pour l'eau chaude, le PEX-B pour l'eau froide",
+      "Le PEX-A utilise la méthode d'expansion, le PEX-B la méthode à crimp",
+      "Le PEX-A est rouge, le PEX-B est bleu",
+      "Le PEX-A est plus flexible et se rétracte mieux"
+    ],
+    "answer": "B",
+    "explanation": "Le PEX-A utilise la méthode d'expansion (bagues en PEX qui se rétractent) tandis que le PEX-B utilise la méthode traditionnelle à crimp avec bagues en cuivre.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la durée de vie typique du système de plomberie en cuivre?",
+    "options": [
+      "10-15 ans",
+      "20-30 ans",
+      "50-70 ans",
+      "100+ ans"
+    ],
+    "answer": "C",
+    "explanation": "Un système de plomberie en cuivre bien installé peut durer de 50 à 70 ans. Le cuivre résiste bien à la corrosion si l'eau n'est pas trop acide.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la fonction d'un coupe-tube?",
+    "options": [
+      "Sertir les raccords",
+      "Couper et ébarber les tuyaux",
+      "Couper les tuyaux en métal et plastique",
+      "Couper les tuyaux métalliques par rotation et pression"
+    ],
+    "answer": "D",
+    "explanation": "Le coupe-tube est conçu pour couper les tuyaux métalliques (cuivre, laiton, acier) par une rotation autour du tuyau avec une pression progressive de la molette de coupe. Il ne coupe pas le plastique.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la longueur standard de tuyau de cuivre rigide?",
+    "options": [
+      "10 pieds",
+      "12 pieds",
+      "20 pieds",
+      "25 pieds"
+    ],
+    "answer": "C",
+    "explanation": "Le cuivre rigide est généralement vendu en longueur standard de 20 pieds (6 mètres). Il est aussi disponible en 12 pieds dans certaines quincailleries.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la méthode d'assemblage recommandée pour le tuyau ABS en plomberie résidentielle?",
+    "options": [
+      "Sertissage",
+      "Soudure à froid",
+      "Ciment-solvant pour ABS",
+      "Filetage"
+    ],
+    "answer": "C",
+    "explanation": "L'ABS s'assemble avec un ciment-solvant spécifique pour ABS. Ce ciment dissout chimiquement la surface du tuyau et du raccord, créant une liaison permanente par fusion.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la norme ASTM pour le tuyau de cuivre type L?",
+    "options": [
+      "ASTM B88",
+      "ASTM B75",
+      "ASTM B42",
+      "ASTM D1785"
+    ],
+    "answer": "A",
+    "explanation": "La norme ASTM B88 régit les tuyaux de cuivre types K, L et M pour la plomberie. ASTM D1785 est la norme pour le PVC.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la pression d'épreuve typique pour un système de plomberie en cuivre en résidentiel?",
+    "options": [
+      "50 psi",
+      "100 psi",
+      "150 psi",
+      "200 psi"
+    ],
+    "answer": "C",
+    "explanation": "La pression d'épreuve typique pour un système de plomberie résidentiel en cuivre est de 150 psi, soit environ 1.5 fois la pression de service maximale.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la pression de service maximale recommandée pour le PVC Sch 40 de 1 pouce à 73°F?",
+    "options": [
+      "200 psi",
+      "300 psi",
+      "450 psi",
+      "600 psi"
+    ],
+    "answer": "C",
+    "explanation": "Le PVC Sch 40 de 1 pouce a une pression de service maximale d'environ 450 psi à 73°F. Cette pression chute significativement avec la température.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la pression nominale du PVC Sch 40 de 2 pouces?",
+    "options": [
+      "100 psi",
+      "150 psi",
+      "200 psi",
+      "280 psi"
+    ],
+    "answer": "D",
+    "explanation": "Le PVC Sch 40 de 2 pouces a une pression nominale d'environ 280 psi à 73°F. Cette pression diminue avec l'augmentation de la température.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la principale différence d'épaisseur de paroi entre le cuivre type M et le cuivre type L?",
+    "options": [
+      "Le type M a une paroi plus épaisse que le type L",
+      "Le type L a une paroi plus épaisse que le type M",
+      "Le type M et L ont la même épaisseur",
+      "Le type L est en acier inoxydable"
+    ],
+    "answer": "B",
+    "explanation": "Le cuivre type L a une paroi plus épaisse que le type M. Le type M est plus léger et moins coûteux, utilisé principalement pour les applications résidentielles à pression standard.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la principale différence entre le PVC et le CPVC?",
+    "options": [
+      "Le CPVC coûte moins cher",
+      "Le CPVC résiste à des températures plus élevées",
+      "Le PVC est plus résistant",
+      "Le CPVC est bleu"
+    ],
+    "answer": "B",
+    "explanation": "Le CPVC (PVC chloré) résiste à des températures plus élevées que le PVC standard (jusqu'à 200°F contre 140°F). Il est utilisé pour les conduites d'eau chaude.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la profondeur minimale d'enfouissement recommandée pour une conduite d'eau en cuivre?",
+    "options": [
+      "12 pouces",
+      "18 pouces",
+      "24 pouces",
+      "36 pouces"
+    ],
+    "answer": "D",
+    "explanation": "Au Québec, une conduite d'eau en cuivre doit être enfouie à au moins 36 pouces (1 mètre) pour être sous la ligne de gel. Dans certains sols, une profondeur de 48 pouces peut être requise.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la température de fusion de la soudure sans plomb (étain) typique?",
+    "options": [
+      "250-350°F",
+      "400-500°F",
+      "600-700°F",
+      "800-900°F"
+    ],
+    "answer": "B",
+    "explanation": "La soudure sans plomb (95% étain, 5% antimoine) fond généralement entre 400°F et 500°F (204-260°C). C'est pourquoi on utilise un chalumeau au propane pour chauffer le raccord.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la température maximale de service recommandée pour le tuyau PEX?",
+    "options": [
+      "140°F (60°C)",
+      "180°F (82°C)",
+      "200°F (93°C)",
+      "212°F (100°C)"
+    ],
+    "answer": "C",
+    "explanation": "Le PEX a une température de service maximale recommandée de 200°F (93°C) à des pressions réduites. À 180°F, il peut supporter la pression de service standard.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 1,
+    "question": "Quels sont les deux principaux types de systèmes d'assemblage PEX?",
+    "options": [
+      "Soudage et brasage",
+      "Crimp et expansion",
+      "Collage et filetage",
+      "Compression et bride"
+    ],
+    "answer": "B",
+    "explanation": "Les deux principaux systèmes d'assemblage PEX sont le système à crimp (bagues en cuivre) et le système à expansion (bagues en PEX). Le système à expansion offre généralement un meilleur débit.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 1,
+    "question": "À quelle pression maximale le cuivre type K est-il généralement évalué?",
+    "options": [
+      "100 psi",
+      "200 psi",
+      "300 psi",
+      "400 psi"
+    ],
+    "answer": "C",
+    "explanation": "Le cuivre type K, ayant la paroi la plus épaisse, est généralement évalué jusqu'à 300 psi, ce qui le rend adapté pour les conduites souterraines et les applications à haute pression.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Combien d'unités de raccordement (UR) peut accepter une colonne d'évacuation de 4 pouces sur 3 étages?",
+    "options": [
+      "160 UR",
+      "240 UR",
+      "320 UR",
+      "400 UR"
+    ],
+    "answer": "C",
+    "explanation": "Une colonne d'évacuation de 4 pouces peut accepter jusqu'à 320 UR sur 3 étages. Le nombre d'UR diminue avec le nombre d'étages.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Pour un essai d'étanchéité du système d'évacuation, quelle pression doit être maintenue?",
+    "options": [
+      "3 psi pendant 15 minutes",
+      "5 psi (34 kPa) pendant 15 minutes",
+      "10 psi pendant 30 minutes",
+      "Pression d'eau de la ville"
+    ],
+    "answer": "B",
+    "explanation": "L'essai d'étanchéité du système d'évacuation est effectué à 5 psi (34 kPa) pendant au moins 15 minutes. La pression pneumatique ou hydrostatique doit être stable.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel article du Code de plomberie traite de la protection des siphons (trap priming)?",
+    "options": [
+      "Article 2.4.5.1",
+      "Article 2.5.6.3",
+      "Article 2.6.3.1",
+      "Article 2.7.4.2"
+    ],
+    "answer": "C",
+    "explanation": "L'article 2.6.3.1 du Code de plomberie traite de la protection des siphons contre le dessèchement, incluant les dispositifs de trap priming pour maintenir la garde d'eau des siphons rarement utilisés.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel article du code québécois définit les exigences pour la ventilation des siphons?",
+    "options": [
+      "Article 2.5.7.1",
+      "Article 2.4.8.1",
+      "Article 2.6.2.1",
+      "Article 2.7.6.1"
+    ],
+    "answer": "A",
+    "explanation": "L'article 2.5.7.1 du Code de plomberie du Québec définit les exigences générales pour les systèmes de ventilation, incluant le diamètre minimum et la distance au siphon.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel document doit être fourni à l'inspecteur lors de l'inspection des conduites à découvert?",
+    "options": [
+      "La facture des matériaux",
+      "Le permis de construction",
+      "Le plan de plomberie (isométrique)",
+      "La garantie des appareils"
+    ],
+    "answer": "C",
+    "explanation": "Lors de l'inspection des conduites à découvert, l'entrepreneur doit fournir le plan de plomberie isométrique montrant l'emplacement et le dimensionnement de toutes les conduites d'évacuation, de ventilation et d'alimentation.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel document doit être soumis à la municipalité avant le début des travaux de plomberie?",
+    "options": [
+      "Plan architectural",
+      "Plan de plomberie isométrique",
+      "Certificat de conformité",
+      "Rapport d'inspection"
+    ],
+    "answer": "B",
+    "explanation": "Un plan de plomberie isométrique doit être soumis à la municipalité avec la demande de permis pour démontrer la conformité au code.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est le diamètre minimal d'un tuyau de ventilation utilisé pour 4 UR?",
+    "options": [
+      "1.25 pouce",
+      "1.5 pouce",
+      "2 pouces",
+      "2.5 pouces"
+    ],
+    "answer": "A",
+    "explanation": "Pour 4 unités de raccordement, un tuyau de ventilation de 1.25 pouce (32 mm) est le minimum requis, mais la pratique courante est d'utiliser 1.5 pouce.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est le délai maximal entre la délivrance du permis et le début des travaux de plomberie?",
+    "options": [
+      "6 mois",
+      "12 mois",
+      "18 mois",
+      "24 mois"
+    ],
+    "answer": "B",
+    "explanation": "Le permis doit être débuté dans les 12 mois suivant sa délivrance. Une prolongation peut être demandée moyennant des frais supplémentaires.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est le nombre d'unités de raccordement pour un évier de cuisine résidentiel avec broyeur à déchets?",
+    "options": [
+      "1.0 UR",
+      "1.5 UR",
+      "2.0 UR",
+      "2.5 UR"
+    ],
+    "answer": "C",
+    "explanation": "Un évier de cuisine résidentiel avec broyeur à déchets compte pour 2.0 UR. Sans broyeur, il compte pour 1.5 UR.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est le nombre maximum d'étages permis pour un bâtiment utilisant une colonne d'évacuation de 3 pouces selon le code?",
+    "options": [
+      "3 étages",
+      "6 étages",
+      "8 étages",
+      "12 étages"
+    ],
+    "answer": "B",
+    "explanation": "Une colonne d'évacuation de 3 pouces peut généralement desservir jusqu'à 6 étages selon le Code de plomberie, sous réserve du nombre total d'UR. Au-delà, un diamètre plus grand est requis.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est le nombre minimum d'inspections requises pour un projet de plomberie résidentiel neuf?",
+    "options": [
+      "1 inspection",
+      "2 inspections",
+      "3 inspections",
+      "4 inspections"
+    ],
+    "answer": "C",
+    "explanation": "Au minimum, 3 inspections sont requises : (1) inspection des conduites à découvert, (2) essai d'étanchéité, (3) inspection finale. Certaines municipalités en exigent plus.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel organisme publie le Code de plomberie au Québec?",
+    "options": [
+      "CSA (Canadian Standards Association)",
+      "RBQ (Régie du bâtiment du Québec)",
+      "CMMTQ",
+      "ACQ"
+    ],
+    "answer": "B",
+    "explanation": "Le Code de plomberie du Québec est édicté par la Régie du bâtiment du Québec (RBQ), qui adapte le Code national du bâtiment (CNB) pour les besoins du Québec.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel type d'appareil nécessite un tuyau d'évent individuel (individual vent) selon le code?",
+    "options": [
+      "Lavabo de salle de bain",
+      "Baignoire",
+      "Toilette sur une île (island sink)",
+      "Évier de cuisine"
+    ],
+    "answer": "C",
+    "explanation": "Une toilette ou un lavabo situé sur une île (îlot) nécessite un évent individuel en raison de la distance au mur. L'évent doit être installé avec un dégagement approprié.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel type d'intercepteur est requis pour un lave-vaisselle commercial?",
+    "options": [
+      "Intercepteur à graisse",
+      "Intercepteur à solides",
+      "Intercepteur à amalgame",
+      "Aucun intercepteur"
+    ],
+    "answer": "A",
+    "explanation": "Un lave-vaisselle commercial doit être raccordé à un intercepteur à graisse dimensionné selon le débit et la charge de graisse de l'appareil.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel type de permis est requis pour installer un système de plomberie dans une nouvelle construction résidentielle au Québec?",
+    "options": [
+      "Permis de construction seulement",
+      "Permis de plomberie seul",
+      "Permis de construction incluant la plomberie",
+      "Aucun permis n'est requis"
+    ],
+    "answer": "C",
+    "explanation": "Dans la plupart des municipalités québécoises, un permis de construction est requis qui couvre tous les travaux, incluant la plomberie. Cependant, certains travaux de plomberie majeurs peuvent nécessiter un permis distinct.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle distance horizontale maximale entre un siphon et la colonne de ventilation principale?",
+    "options": [
+      "5 pieds",
+      "8 pieds",
+      "10 pieds",
+      "15 pieds"
+    ],
+    "answer": "C",
+    "explanation": "La distance horizontale maximale entre un siphon et la colonne de ventilation principale ne doit pas excéder 10 pieds (3 m) selon le code, à moins de prévoir un évent supplémentaire.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle distance minimale doit séparer un regard d'égout d'une fenêtre de sous-sol?",
+    "options": [
+      "2 pieds",
+      "3 pieds",
+      "5 pieds",
+      "10 pieds"
+    ],
+    "answer": "C",
+    "explanation": "Selon le Code de plomberie, un regard d'égout doit être situé à au moins 5 pieds (1.5 m) d'une fenêtre de sous-sol pour éviter les infiltrations d'odeurs et de gaz.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la dimension minimale d'un tuyau d'évent principal?",
+    "options": [
+      "1.25 pouce",
+      "1.5 pouce",
+      "2 pouces",
+      "3 pouces"
+    ],
+    "answer": "D",
+    "explanation": "Le tuyau d'évent principal (main vent) doit avoir un diamètre minimum de 3 pouces selon le Code de plomberie. Il doit traverser le toit avec au moins 6 pouces de dégagement.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la distance maximale entre un siphon et sa ventilation correspondante?",
+    "options": [
+      "2 pieds",
+      "3 pieds",
+      "4 pieds",
+      "5 pieds"
+    ],
+    "answer": "B",
+    "explanation": "La distance maximale entre le siphon et la ventilation est de 3 pieds (900 mm) selon le Code de plomberie, mesurée horizontalement le long de la conduite d'évacuation.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la distance minimale entre un puisard et une conduite d'eau potable?",
+    "options": [
+      "5 pieds",
+      "10 pieds",
+      "15 pieds",
+      "20 pieds"
+    ],
+    "answer": "C",
+    "explanation": "Selon le Code de plomberie, un puisard doit être à au moins 15 pieds d'une conduite d'eau potable pour prévenir la contamination.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la garde d'eau minimale d'un siphon selon le Code de plomberie du Québec?",
+    "options": [
+      "1 pouce",
+      "2 pouces",
+      "3 pouces",
+      "4 pouces"
+    ],
+    "answer": "B",
+    "explanation": "La garde d'eau minimale d'un siphon doit être de 2 pouces (50 mm) selon le Code de plomberie du Québec. Cette garde d'eau empêche les gaz d'égout de pénétrer dans le bâtiment.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la hauteur libre minimale requise sous une selle de cabinet d'aisance selon le Code de plomberie?",
+    "options": [
+      "6 pouces",
+      "8 pouces",
+      "10 pouces",
+      "12 pouces"
+    ],
+    "answer": "D",
+    "explanation": "Selon le Code de plomberie, un dégagement libre d'au moins 12 pouces (300 mm) est requis sous la selle de la cuvette pour permettre le nettoyage et l'entretien.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la hauteur minimale d'un regard d'égout dans une cour?",
+    "options": [
+      "Au niveau du sol",
+      "2 pouces au-dessus du sol",
+      "4 pouces au-dessus du sol",
+      "6 pouces au-dessus du sol"
+    ],
+    "answer": "B",
+    "explanation": "Le regard d'égout doit avoir son couvercle à au moins 2 pouces au-dessus du sol fini pour éviter l'infiltration d'eau de surface.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la hauteur minimale d'un évent de toit au-dessus de la surface du toit?",
+    "options": [
+      "4 pouces",
+      "6 pouces",
+      "8 pouces",
+      "12 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Un évent de toit doit dépasser d'au moins 6 pouces (150 mm) au-dessus de la surface du toit. S'il est situé près d'une fenêtre ou d'une prise d'air, il doit être plus haut.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la méthode de dimensionnement des conduites d'évacuation selon le Code de plomberie du Québec?",
+    "options": [
+      "Par le nombre d'appareils",
+      "Par les unités de raccordement (UR)",
+      "Par le débit en GPM",
+      "Par la pression disponible"
+    ],
+    "answer": "B",
+    "explanation": "Le Code de plomberie utilise le système d'unités de raccordement (UR) pour dimensionner les conduites d'évacuation. Chaque type d'appareil se voit attribuer une valeur UR.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la pente en pourcentage pour une conduite de 4 pouces avec la pente minimale de 1/8 po par pied?",
+    "options": [
+      "0.5%",
+      "1%",
+      "1.5%",
+      "2%"
+    ],
+    "answer": "B",
+    "explanation": "1/8 de pouce par pied = 0.125 ÷ 12 × 100 = 1.04%, ce qui est arrondi à 1% de pente minimale pour les conduites de 4 pouces et plus.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la pente exprimée en pourcentage pour une conduite de 3 pouces avec la pente minimale requise?",
+    "options": [
+      "1%",
+      "2%",
+      "3%",
+      "4%"
+    ],
+    "answer": "B",
+    "explanation": "1/4 de pouce par pied équivaut à 2% (0.25 po ÷ 12 po × 100 = 2.08%, arrondi à 2%). C'est la pente minimale pour les conduites de 3 pouces et moins.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la pente minimale requise pour une conduite d'évacuation de 3 pouces selon le code du Québec?",
+    "options": [
+      "1/16 po par pied",
+      "1/8 po par pied",
+      "1/4 po par pied",
+      "1/2 po par pied"
+    ],
+    "answer": "C",
+    "explanation": "Selon le code, la pente minimale pour une conduite d'évacuation de 3 pouces et moins est de 1/4 po par pied (2%). Pour les conduites de 4 pouces et plus, elle peut être réduite à 1/8 po par pied.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la procédure d'essai d'étanchéité pour une conduite d'alimentation en eau?",
+    "options": [
+      "Pression de 50 psi pendant 1 heure",
+      "Pression de service x 1.5 pendant 2 heures",
+      "Pression de 100 psi pendant 30 minutes",
+      "Pression de la ville pendant 24 heures"
+    ],
+    "answer": "B",
+    "explanation": "L'essai d'étanchéité d'une conduite d'alimentation en eau se fait à 1.5 fois la pression de service, maintenue pendant au moins 2 heures avec une baisse de pression maximale de 5 psi autorisée.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la profondeur maximale de la garde d'eau d'un siphon selon le code?",
+    "options": [
+      "2 pouces",
+      "3 pouces",
+      "4 pouces",
+      "6 pouces"
+    ],
+    "answer": "C",
+    "explanation": "La garde d'eau maximale d'un siphon est de 4 pouces (100 mm) selon le Code de plomberie. Au-delà, le siphon pourrait être sujet au colmatage et à un auto-siphonnage.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon le Code de plomberie du Québec, comment sont dimensionnés les intercepteurs de graisse?",
+    "options": [
+      "Selon le nombre d'employés",
+      "Selon le débit des éviers et la capacité de rétention",
+      "Selon le nombre d'appareils sanitaires",
+      "Selon le volume de la cuisine"
+    ],
+    "answer": "B",
+    "explanation": "Les intercepteurs de graisse sont dimensionnés selon le débit maximal des éviers raccordés et leur capacité de rétention de graisse, exprimée en livres. Le calcul tient compte du volume d'eau et du temps de rétention.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon le code, les tuyaux de PVC peuvent-ils être utilisés pour la ventilation des appareils sanitaires?",
+    "options": [
+      "Non, jamais",
+      "Oui, pour toutes les applications",
+      "Oui, pour les applications hors de la fondation",
+      "Oui, mais seulement le PVC Sch 80"
+    ],
+    "answer": "C",
+    "explanation": "Le PVC est permis pour la ventilation des appareils sanitaires seulement pour les parties hors de la fondation. Dans les murs intérieurs, le PVC doit respecter les limitations du code quant aux matériaux combustibles.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon le code, quel diamètre de ventilation est requis pour 12 UR?",
+    "options": [
+      "1.25 pouce",
+      "1.5 pouce",
+      "2 pouces",
+      "2.5 pouces"
+    ],
+    "answer": "C",
+    "explanation": "Pour 12 unités de raccordement, un tuyau de ventilation de 2 pouces est requis selon le tableau de dimensionnement des ventilations du Code de plomberie.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon le code, quel est le nombre minimum d'unités de raccordement (UR) assigné à un lavabo de salle de bain résidentiel?",
+    "options": [
+      "0.5 UR",
+      "1 UR",
+      "1.5 UR",
+      "2 UR"
+    ],
+    "answer": "B",
+    "explanation": "Un lavabo de salle de bain résidentiel est compté comme 1 unité de raccordement (UR) selon le Code de plomberie. Une cuisine peut être 1.5 UR selon la configuration.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon le code, à quelle distance d'un mur une toilette doit-elle être installée (entraxe)?",
+    "options": [
+      "10 pouces",
+      "12 pouces",
+      "14 pouces",
+      "16 pouces"
+    ],
+    "answer": "B",
+    "explanation": "L'entraxe standard pour une toilette est de 12 pouces (300 mm) du mur fini au centre du trou de la bride. C'est ce qu'on appelle le rough-in de 12 pouces.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "Sur quelle base le Code de plomberie du Québec est-il fondé?",
+    "options": [
+      "Code national de la plomberie du Canada (CNP)",
+      "Uniform Plumbing Code (UPC)",
+      "International Plumbing Code (IPC)",
+      "Code de la construction du Québec"
+    ],
+    "answer": "A",
+    "explanation": "Le Code de plomberie du Québec est principalement fondé sur le Code national de la plomberie du Canada (CNP) publié par la Commission canadienne des codes du bâtiment et de prévention des incendies.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "À partir de quel diamètre la pente minimale peut-elle être réduite à 1/8 de pouce par pied?",
+    "options": [
+      "2 pouces",
+      "3 pouces",
+      "4 pouces",
+      "5 pouces"
+    ],
+    "answer": "C",
+    "explanation": "Selon le Code de plomberie, les conduites de 4 pouces et plus peuvent avoir une pente minimale de 1/8 de pouce par pied (1%). Les diamètres plus petits nécessitent 1/4 de pouce par pied.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 2,
+    "question": "À quelles étapes de la construction une inspection de plomberie est-elle généralement requise?",
+    "options": [
+      "Uniquement à la fin",
+      "Avant l'installation des appareils",
+      "Après l'essai d'étanchéité seulement",
+      "À l'étape des conduites à découvert, à l'essai d'étanchéité et à l'inspection finale"
+    ],
+    "answer": "D",
+    "explanation": "Les inspections de plomberie sont requises à plusieurs étapes : (1) conduites à découvert avant la fermeture des murs, (2) essai d'étanchéité du système d'évacuation, (3) inspection finale après installation des appareils.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Comment calcule-t-on la demande en eau d'un bâtiment à l'aide des unités de raccordement (UR)?",
+    "options": [
+      "En additionnant les UR de tous les appareils",
+      "En multipliant le nombre d'appareils par 2",
+      "En utilisant les tableaux du Code de plomberie qui convertissent les UR en GPM",
+      "En mesurant le débit de chaque appareil"
+    ],
+    "answer": "C",
+    "explanation": "La demande en eau est calculée en utilisant les tableaux du Code de plomberie qui convertissent le nombre total d'unités de raccordement (UR) en débit probable en GPM.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Comment calcule-t-on la pression statique au point d'utilisation?",
+    "options": [
+      "Pression d'entrée - (hauteur × 0.434 psi/pi) + pertes de friction",
+      "Pression d'entrée + (hauteur × 0.434 psi/pi) - pertes de friction",
+      "Pression d'entrée - (hauteur × 0.434 psi/pi) - pertes de friction",
+      "Pression d'entrée × hauteur"
+    ],
+    "answer": "C",
+    "explanation": "Pression statique = Pression d'entrée - (hauteur × 0.434 psi/pi) - pertes de friction, où la hauteur est la différence de niveau entre l'entrée et le point d'utilisation le plus élevé.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Comment dimensionne-t-on la conduite d'alimentation d'un bâtiment?",
+    "options": [
+      "Par le nombre d'appareils",
+      "Par le débit probable en GPM",
+      "Par le nombre d'étages",
+      "Par le nombre d'occupants"
+    ],
+    "answer": "B",
+    "explanation": "La conduite d'alimentation est dimensionnée selon le débit probable en GPM, calculé à partir des unités de raccordement et des tables de conversion du code.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel dispositif antirefoulement offre une protection contre le refoulement et la contre-pression?",
+    "options": [
+      "Vanne à rupture de vide (AVB)",
+      "Double clapet (DCVA)",
+      "Clapet simple",
+      "Brise-vide"
+    ],
+    "answer": "B",
+    "explanation": "Le double clapet (DCVA) protège à la fois contre le refoulement (back-siphonage) et la contre-pression (back-pressure).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel dispositif protège contre les coups de bélier?",
+    "options": [
+      "Réducteur de pression",
+      "Anti-bélier (coup de bélier)",
+      "Vanne de retenue",
+      "Robinet d'arrêt"
+    ],
+    "answer": "B",
+    "explanation": "L'anti-bélier (water hammer arrestor) absorbe l'onde de choc lorsque les valves se ferment brusquement, protégeant les tuyaux des coups de bélier.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le composant qui abaisse la pression de l'eau provenant du réseau municipal?",
+    "options": [
+      "Régulateur de pression",
+      "Vanne de retenue",
+      "Robinet d'arrêt",
+      "Clapet antiretour"
+    ],
+    "answer": "A",
+    "explanation": "Le régulateur de pression réduit la pression élevée du réseau municipal à une pression sécuritaire pour la plomberie intérieure.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le composant qui empêche le retour d'eau (backflow) dans une installation résidentielle?",
+    "options": [
+      "Clapet antiretour",
+      "Dispositif anti-refoulement",
+      "Robinet d'arrêt",
+      "Réducteur de pression"
+    ],
+    "answer": "B",
+    "explanation": "Le dispositif anti-refoulement (backflow preventer) empêche l'eau contaminée de retourner dans le réseau d'eau potable.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le diamètre de tuyau recommandé pour alimenter 4 appareils (lavabo, toilette, douche, baignoire) simultanément?",
+    "options": [
+      "1/2 pouce",
+      "3/4 pouce",
+      "1 pouce",
+      "1 1/4 pouce"
+    ],
+    "answer": "C",
+    "explanation": "Pour 4 appareils, un tuyau de 1 pouce est généralement recommandé, car le débit simultané peut atteindre 10-12 GPM et les pertes de charge sur 3/4 po seraient trop élevées.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le diamètre minimal de la conduite d'alimentation en eau d'une résidence unifamiliale selon le code du Québec?",
+    "options": [
+      "1/2 pouce",
+      "3/4 pouce",
+      "1 pouce",
+      "1 1/4 pouce"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre minimal de la conduite d'alimentation en eau d'une résidence unifamiliale est de 3/4 de pouce.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le débit d'un robinet de lavabo résidentiel standard?",
+    "options": [
+      "1.0 GPM",
+      "1.5 GPM",
+      "2.2 GPM",
+      "3.0 GPM"
+    ],
+    "answer": "C",
+    "explanation": "Le débit standard d'un robinet de lavabo résidentiel moderne est limité à 2.2 GPM (8.3 LPM) selon les normes de conservation de l'eau.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le débit typique d'un robinet de baignoire résidentielle (en GPM)?",
+    "options": [
+      "2-3 GPM",
+      "4-6 GPM",
+      "6-8 GPM",
+      "8-10 GPM"
+    ],
+    "answer": "B",
+    "explanation": "Le débit typique d'un robinet de baignoire résidentielle est de 4 à 6 GPM.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le nombre d'unités de raccordement pour un lavabo de salle de bain dans le calcul de l'alimentation en eau?",
+    "options": [
+      "0.5 UF",
+      "1.0 UF",
+      "1.5 UF",
+      "2.0 UF"
+    ],
+    "answer": "B",
+    "explanation": "Un lavabo de salle de bain compte pour 1 unité de raccordement (UF) dans les tables de dimensionnement des conduites d'eau.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le type de dispositif antirefoulement requis pour une résidence avec système d'arrosage?",
+    "options": [
+      "Double clapet (DCVA)",
+      "Séparateur d'air",
+      "Vanne à rupture de vide (AVB)",
+      "Disconnecteur à zone de pression réduite (RPZ)"
+    ],
+    "answer": "A",
+    "explanation": "Le double clapet antiretour (DCVA) est généralement requis pour protéger le réseau potable contre un système d'arrosage. Il offre une protection modérée contre le refoulement.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le volume d'expansion de l'eau lorsqu'elle est chauffée de 50°F à 140°F dans un chauffe-eau de 40 gallons?",
+    "options": [
+      "0.3 gallon",
+      "0.8 gallon",
+      "1.2 gallons",
+      "1.8 gallons"
+    ],
+    "answer": "B",
+    "explanation": "L'eau se dilate d'environ 2% lorsqu'elle est chauffée de 50°F à 140°F. Pour 40 gallons, le volume d'expansion est d'environ 0.8 gallon.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel type de valve de retenue est considéré comme le plus sûr pour la protection contre le refoulement?",
+    "options": [
+      "Double clapet",
+      "Disconnecteur à zone de pression réduite (RPZ)",
+      "Vanne à rupture de vide",
+      "Clapet simple"
+    ],
+    "answer": "B",
+    "explanation": "Le disconnecteur à zone de pression réduite (RPZ) offre le plus haut niveau de protection. Il est requis pour les installations à risque élevé comme les systèmes d'incendie.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel type de vanne antirefoulement est requis pour une borne-fontaine extérieure?",
+    "options": [
+      "RPZ",
+      "Double clapet",
+      "Vanne à rupture de vide (AVB)",
+      "Clapet simple"
+    ],
+    "answer": "C",
+    "explanation": "Une vanne à rupture de vide atmosphérique (AVB) est généralement requise pour une borne-fontaine extérieure pour empêcher le refoulement.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel type de vanne doit être installé avant chaque appareil sanitaire?",
+    "options": [
+      "Vanne de retenue",
+      "Robinet d'arrêt individuel",
+      "Vanne de vidange",
+      "Régulateur de pression"
+    ],
+    "answer": "B",
+    "explanation": "Un robinet d'arrêt individuel doit être installé avant chaque appareil sanitaire pour permettre l'entretien sans couper l'eau à tout le bâtiment.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la capacité d'un réservoir d'expansion thermique pour un chauffe-eau de 60 gallons?",
+    "options": [
+      "1 gallon",
+      "2 gallons",
+      "3 gallons",
+      "5 gallons"
+    ],
+    "answer": "B",
+    "explanation": "Pour un chauffe-eau de 60 gallons, un réservoir d'expansion de 2 gallons est généralement suffisant, calculé selon le volume de dilatation anticipé (environ 2% à 140°F).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la différence entre un régulateur de pression et un réducteur de pression?",
+    "options": [
+      "Aucune, c'est le même appareil",
+      "Le régulateur contrôle la pression amont",
+      "Le réducteur réduit la pression et maintient une pression constante en aval",
+      "Le régulateur est utilisé pour les gaz"
+    ],
+    "answer": "C",
+    "explanation": "Le réducteur de pression réduit la pression d'entrée à une pression de sortie constante, indépendamment des variations de pression en amont.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la fonction d'un collecteur (manifold) en plomberie?",
+    "options": [
+      "Distribuer l'eau aux points de puisage",
+      "Filtrer l'eau",
+      "Augmenter la pression",
+      "Réguler la température"
+    ],
+    "answer": "A",
+    "explanation": "Un collecteur (manifold) distribue l'eau du réseau principal aux différents points de puisage, chaque sortie ayant un robinet d'arrêt indépendant.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la fonction d'une vanne de retenue (check valve)?",
+    "options": [
+      "Réguler la pression",
+      "Permettre l'écoulement dans un seul sens",
+      "Fermer l'eau en cas d'urgence",
+      "Réduire la vitesse de l'eau"
+    ],
+    "answer": "B",
+    "explanation": "La vanne de retenue permet à l'eau de circuler dans un seul sens, empêchant le refoulement ou le retour d'eau non désiré.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la fonction du brise-vide (vacuum breaker)?",
+    "options": [
+      "Créer une dépression",
+      "Empêcher le refoulement par siphonnage",
+      "Augmenter la pression",
+      "Réguler la température"
+    ],
+    "answer": "B",
+    "explanation": "Le brise-vide empêche le refoulement par siphonnage (back-siphonage) en introduisant de l'air dans la conduite lorsqu'une dépression se crée.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la fonction du réservoir d'expansion thermique?",
+    "options": [
+      "Augmenter la pression de l'eau",
+      "Réduire la consommation d'eau",
+      "Absorber l'augmentation de pression due à la dilatation de l'eau chaude",
+      "Filtrer l'eau"
+    ],
+    "answer": "C",
+    "explanation": "Le réservoir d'expansion thermique absorbe l'augmentation de volume de l'eau lorsqu'elle est chauffée, empêchant les coups de bélier et protégeant la plomberie.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la fréquence recommandée d'entretien d'un RPZ?",
+    "options": [
+      "Jamais",
+      "Aux 6 mois",
+      "Une fois par année",
+      "Aux 5 ans"
+    ],
+    "answer": "C",
+    "explanation": "Un disconnecteur à zone de pression réduite (RPZ) doit être testé et entretenu au moins une fois par année par un technicien certifié.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la perte de charge typique par 100 pieds pour un tuyau de cuivre type L de 3/4 pouce à 8 GPM?",
+    "options": [
+      "2 psi",
+      "4.5 psi",
+      "7.5 psi",
+      "12 psi"
+    ],
+    "answer": "C",
+    "explanation": "D'après les tables de perte de charge, un tuyau de cuivre type L de 3/4 po à 8 GPM a une perte de charge d'environ 7.5 psi par 100 pieds.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la perte de charge typique à travers un compteur d'eau résidentiel de 5/8 pouce à 15 GPM?",
+    "options": [
+      "5-8 psi",
+      "8-12 psi",
+      "12-15 psi",
+      "15-20 psi"
+    ],
+    "answer": "C",
+    "explanation": "Un compteur d'eau résidentiel de 5/8 po à 15 GPM a une perte de charge d'environ 12-15 psi, ce qui doit être considéré dans le calcul de la pression disponible.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la pression d'un réseau d'aqueduc municipal typique?",
+    "options": [
+      "25-40 psi",
+      "40-60 psi",
+      "60-80 psi",
+      "80-100 psi"
+    ],
+    "answer": "C",
+    "explanation": "La pression typique d'un réseau d'aqueduc municipal se situe entre 60 et 80 psi pour assurer un service adéquat aux résidences.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la pression de service typique d'un réducteur de pression résidentiel?",
+    "options": [
+      "30-40 psi",
+      "45-55 psi",
+      "50-70 psi",
+      "75-80 psi"
+    ],
+    "answer": "C",
+    "explanation": "Un réducteur de pression résidentiel est généralement réglé pour fournir une pression de sortie de 50 à 70 psi (345-480 kPa).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la pression maximale recommandée pour un système de plomberie résidentiel?",
+    "options": [
+      "60 psi",
+      "80 psi",
+      "100 psi",
+      "120 psi"
+    ],
+    "answer": "B",
+    "explanation": "La pression maximale recommandée pour un système résidentiel est de 80 psi. Au-delà, des dommages aux appareils et aux joints peuvent survenir.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la pression minimale recommandée à l'étage le plus élevé d'un immeuble de 4 étages avec une hauteur de 12 pi par étage?",
+    "options": [
+      "25 psi",
+      "30 psi",
+      "35 psi",
+      "40 psi"
+    ],
+    "answer": "C",
+    "explanation": "Pression approximative = 50 psi - perte statique (4 étages × 12 pi × 0.43 psi/pi = 20.6 psi) - pertes de friction. Donc, la pression résiduelle minimale recommandée à l'étage le plus élevé est d'environ 35 psi.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la pression minimale requise pour un réseau d'alimentation en eau potable résidentiel?",
+    "options": [
+      "30 psi",
+      "40 psi",
+      "50 psi",
+      "60 psi"
+    ],
+    "answer": "C",
+    "explanation": "La pression minimale recommandée est de 50 psi (345 kPa) pour un réseau d'alimentation en eau potable résidentiel.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la pression réelle au dernier étage d'un immeuble de 6 étages avec une hauteur de 12 pi par étage si la pression à l'entrée est de 80 psi?",
+    "options": [
+      "45 psi",
+      "49 psi",
+      "55 psi",
+      "65 psi"
+    ],
+    "answer": "B",
+    "explanation": "Pression à l'arrivée = 80 psi - (6 × 12 pi × 0.43 psi/pi) = 80 psi - 30.96 psi ≈ 49 psi.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la procédure d'installation d'un disconnecteur RPZ?",
+    "options": [
+      "À l'intérieur, sans drain",
+      "À l'extérieur ou dans un local drainé, avec dégagement pour entretien",
+      "Directement enterré",
+      "Dans le plafond"
+    ],
+    "answer": "B",
+    "explanation": "Un RPZ doit être installé dans un endroit accessible avec drain au sol en cas de décharge. Il doit être à l'extérieur ou dans un local technique avec dégagement suffisant.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la vitesse maximale recommandée de l'eau dans une tuyauterie de plomberie résidentielle?",
+    "options": [
+      "4 pi/s",
+      "6 pi/s",
+      "8 pi/s",
+      "10 pi/s"
+    ],
+    "answer": "C",
+    "explanation": "La vitesse maximale recommandée est de 8 pi/s. Au-delà, l'érosion des tuyaux et le bruit (coup de bélier) deviennent problématiques.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle pression d'air doit-on avoir dans un réservoir d'expansion thermique non chauffé?",
+    "options": [
+      "Même pression que la pression statique du réseau",
+      "50 psi",
+      "80 psi",
+      "Pression atmosphérique"
+    ],
+    "answer": "A",
+    "explanation": "La pression d'air dans un réservoir d'expansion thermique doit être égale à la pression statique du réseau d'eau pour fonctionner correctement.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle pression perd-on par pied de hauteur statique d'eau?",
+    "options": [
+      "0.43 psi/pi",
+      "0.5 psi/pi",
+      "1 psi/pi",
+      "0.33 psi/pi"
+    ],
+    "answer": "A",
+    "explanation": "La perte de pression statique est d'environ 0.43 psi par pied de hauteur (2.31 pi = 1 psi).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 3,
+    "question": "Si une conduite d'alimentation en eau de 100 pieds en cuivre 3/4 po transporte 10 GPM avec une perte de 9.4 psi/100 pi, quelle est la pression à l'arrivée si la pression au départ est de 65 psi?",
+    "options": [
+      "55.6 psi",
+      "60.3 psi",
+      "50.2 psi",
+      "65.0 psi"
+    ],
+    "answer": "A",
+    "explanation": "Pression à l'arrivée = 65 psi - 9.4 psi = 55.6 psi. Il faut aussi soustraire les pertes locales des raccords et du compteur.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 3,
+    "question": "Un bâtiment de 6 logements a une demande totale de 60 UR. Quel est le débit probable selon le Code?",
+    "options": [
+      "20-25 GPM",
+      "30-35 GPM",
+      "40-45 GPM",
+      "50-55 GPM"
+    ],
+    "answer": "B",
+    "explanation": "Selon les tables de conversion, 60 UR correspondent à un débit probable d'environ 30-35 GPM.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Combien d'UR un tuyau d'évacuation de 2 pouces peut-il transporter à une pente de 1/4 po par pied?",
+    "options": [
+      "3 UR",
+      "6 UR",
+      "10 UR",
+      "21 UR"
+    ],
+    "answer": "D",
+    "explanation": "Un tuyau d'évacuation de 2 pouces à une pente de 1/4 po par pied peut transporter jusqu'à 21 UR selon les tableaux du code.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Combien de changements de direction à 90° peut-on avoir entre deux nettoyages?",
+    "options": [
+      "1 changement",
+      "2 changements",
+      "3 changements",
+      "4 changements"
+    ],
+    "answer": "B",
+    "explanation": "Entre deux nettoyages, on peut avoir au maximum 2 changements de direction de 90° pour permettre le passage d'un câble de dégorgement.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Comment calcule-t-on la capacité d'une colonne d'évacuation?",
+    "options": [
+      "Par le nombre d'appareils",
+      "Par les UR totales et le nombre d'étages",
+      "Par le débit des pompes",
+      "Par la hauteur du bâtiment"
+    ],
+    "answer": "B",
+    "explanation": "La capacité d'une colonne d'évacuation est calculée selon les unités de raccordement totales et le nombre d'étages desservis, en utilisant les tableaux du code.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'est-ce qu'un branchement (branch interval)?",
+    "options": [
+      "La distance entre deux regards",
+      "L'étage où une colonne d'évacuation reçoit les branchements des appareils",
+      "La connexion entre l'égoût municipal et le bâtiment",
+      "La jonction entre deux tuyaux"
+    ],
+    "answer": "B",
+    "explanation": "Le branchement (branch interval) est l'étage où la colonne d'évacuation reçoit les conduites de dérivation des appareils sanitaires d'un étage.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'est-ce qu'un branchement de colonne (stack) ?",
+    "options": [
+      "Le raccordement entre la colonne et le collecteur principal",
+      "La section horizontale de la colonne",
+      "La section verticale de la colonne",
+      "Le chapeau de la colonne"
+    ],
+    "answer": "A",
+    "explanation": "Le branchement de colonne est le raccordement entre la partie inférieure de la colonne d'évacuation et le collecteur principal horizontal.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'est-ce qu'un évent de circuit (circuit vent)?",
+    "options": [
+      "Un évent qui sert plusieurs appareils sur une même branche",
+      "Un évent individuel pour chaque appareil",
+      "Un évent qui contourne un obstacle",
+      "Un évent qui sert de drainage de secours"
+    ],
+    "answer": "A",
+    "explanation": "Un évent de circuit (circuit vent) dessert plusieurs appareils sanitaires situés sur la même conduite de dérivation, permettant une ventilation collective.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'est-ce qu'un évent principal (main vent)?",
+    "options": [
+      "Le plus grand évent du système",
+      "L'évent qui dessert tous les appareils d'un étage",
+      "La colonne de ventilation principale qui traverse le toit",
+      "Un évent installé au sous-sol"
+    ],
+    "answer": "C",
+    "explanation": "L'évent principal (main vent) est la colonne de ventilation principale qui s'élève à travers les étages et traverse le toit. Tous les autres évents y sont raccordés.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'est-ce que l'effet de siphonnage dans une colonne d'évacuation?",
+    "options": [
+      "La création d'une dépression qui peut vider les siphons",
+      "L'écoulement normal des eaux usées",
+      "Le bruit dans les tuyaux",
+      "La montée des gaz d'égout"
+    ],
+    "answer": "A",
+    "explanation": "L'effet de siphonnage se produit lorsque le débit dans la colonne crée une dépression qui aspire l'eau des siphons, brisant la barrière contre les gaz d'égout.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'est-ce que la ventilation en circuit (circuit venting)?",
+    "options": [
+      "Un circuit fermé de ventilation",
+      "Un évent qui sert un groupe d'appareils sur une même branche",
+      "Un évent qui fait le tour du bâtiment",
+      "Un évent intérieur et extérieur combiné"
+    ],
+    "answer": "B",
+    "explanation": "La ventilation en circuit permet à un seul tuyau d'évent de desservir plusieurs appareils sur une même branche d'évacuation, réduisant le nombre de traversées de toit.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre de la conduite d'évacuation pour une baignoire résidentielle standard?",
+    "options": [
+      "1.25 pouce",
+      "1.5 pouce",
+      "2 pouces",
+      "2.5 pouces"
+    ],
+    "answer": "B",
+    "explanation": "La conduite d'évacuation d'une baignoire résidentielle standard est de 1.5 pouce (38 mm).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre de siphon minimal pour une douche résidentielle?",
+    "options": [
+      "1.5 pouce",
+      "2 pouces",
+      "2.5 pouces",
+      "3 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre de siphon minimal pour une douche résidentielle est de 2 pouces (50 mm), contrairement au lavabo et à l'évier de cuisine.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre de siphon requis pour un lavabo de salle de bain selon le code?",
+    "options": [
+      "1 pouce",
+      "1.25 pouce",
+      "1.5 pouce",
+      "2 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre de siphon minimal pour un lavabo de salle de bain est de 1.25 pouce (32 mm) selon le Code de plomberie.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre de siphon requis pour un évier de cuisine?",
+    "options": [
+      "1.25 pouce",
+      "1.5 pouce",
+      "2 pouces",
+      "2.5 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre de siphon requis pour un évier de cuisine est de 1.5 pouce (38 mm).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre minimal d'une conduite d'évacuation pour un groupe de 2 toilettes, 2 lavabos, 1 douche et 1 baignoire?",
+    "options": [
+      "3 pouces",
+      "4 pouces",
+      "5 pouces",
+      "6 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le total d'UR pour ce groupe est d'environ 11-12 UR. Une conduite de 4 pouces peut transporter jusqu'à 180 UR sur une pente de 1/4 po par pied.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre minimal de la colonne d'évacuation d'une toilette?",
+    "options": [
+      "2 pouces",
+      "3 pouces",
+      "4 pouces",
+      "5 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre minimal de la colonne d'évacuation d'une toilette est de 3 pouces.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre minimum d'une colonne d'évacuation pour un bâtiment de 2 étages avec 20 UR par étage?",
+    "options": [
+      "2 pouces",
+      "3 pouces",
+      "4 pouces",
+      "5 pouces"
+    ],
+    "answer": "C",
+    "explanation": "Pour 40 UR total sur 2 étages, une colonne d'évacuation de 4 pouces est généralement requise selon les tables du code.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre minimum d'une colonne de ventilation principale?",
+    "options": [
+      "2 pouces",
+      "3 pouces",
+      "4 pouces",
+      "6 pouces"
+    ],
+    "answer": "B",
+    "explanation": "La colonne de ventilation principale doit avoir un diamètre minimum de 3 pouces pour assurer une ventilation adéquate du système d'évacuation.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre recommandé pour une colonne d'évacuation de toilettes sur 4 étages?",
+    "options": [
+      "3 pouces",
+      "4 pouces",
+      "5 pouces",
+      "6 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Pour une colonne desservant des toilettes sur 4 étages, le diamètre recommandé est de 4 pouces pour assurer un débit suffisant et éviter les obstructions.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le nombre d'UR maximal pour une conduite d'évacuation de 3 pouces à 1/4 po/pi?",
+    "options": [
+      "20 UR",
+      "30 UR",
+      "50 UR",
+      "60 UR"
+    ],
+    "answer": "D",
+    "explanation": "Une conduite d'évacuation de 3 pouces avec une pente de 1/4 po/pi peut évacuer jusqu'à 60 UR selon les tableaux du code.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le nombre d'étages maximum qu'une colonne d'évacuation de 4 pouces peut desservir?",
+    "options": [
+      "8 étages",
+      "10 étages",
+      "12 étages",
+      "16 étages"
+    ],
+    "answer": "C",
+    "explanation": "Une colonne d'évacuation de 4 pouces peut desservir jusqu'à 12 étages selon le code, avec un maximum de 240 UR par étage.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le nombre maximum d'appareils qu'un wet vent de 2 pouces peut ventiler?",
+    "options": [
+      "2 appareils",
+      "3 appareils",
+      "4 appareils",
+      "6 appareils"
+    ],
+    "answer": "C",
+    "explanation": "Un wet vent de 2 pouces peut ventiler jusqu'à 4 appareils sanitaires selon le code, sous réserve des règles de distance et de pente.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le principe du wet venting (ventilation humide)?",
+    "options": [
+      "Un tuyau d'évacuation qui sert également de ventilation",
+      "Un tuyau qui achemine l'eau chaude",
+      "Un tuyau qui se remplit d'eau en permanence",
+      "Un système de ventilation avec humidificateur"
+    ],
+    "answer": "A",
+    "explanation": "Le wet venting (ventilation humide) permet à un tuyau de servir à la fois pour l'évacuation des eaux usées et pour la ventilation des autres appareils.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le terme désignant la ventilation qui raccorde un siphon à la colonne de ventilation principale?",
+    "options": [
+      "Évent de toit",
+      "Évent individuel",
+      "Évent de branchement",
+      "Évent principal"
+    ],
+    "answer": "B",
+    "explanation": "L'évent individuel (individual vent) est le tuyau de ventilation qui raccorde directement le siphon d'un appareil à la colonne de ventilation principale.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel type d'évent est requis pour un appareil situé à plus de 3 pieds du mur?",
+    "options": [
+      "Évent individuel prolongé",
+      "Évent de circuit",
+      "Évent mécanique",
+      "Aucun évent supplémentaire"
+    ],
+    "answer": "A",
+    "explanation": "Un évent individuel prolongé est requis lorsque l'appareil est à plus de 3 pieds du mur, afin de maintenir la distance maximale entre le siphon et l'évent.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la différence entre un évent de secours (relief vent) et un évent de circuit?",
+    "options": [
+      "L'évent de secours protège le siphon d'un appareil supplémentaire lorsque l'évent de circuit est insuffisant",
+      "L'évent de secours est pour les eaux pluviales",
+      "L'évent de secours est plus petit",
+      "Il n'y a aucune différence"
+    ],
+    "answer": "A",
+    "explanation": "L'évent de secours (relief vent) est installé en aval du dernier raccordement d'un évent de circuit pour protéger les siphons lorsque la charge hydraulique dépasse la capacité de l'évent de circuit.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la différence entre un évent humide et un évent sec?",
+    "options": [
+      "L'évent humide transporte des eaux usées, l'évent sec ne transporte que de l'air",
+      "L'évent humide est installé à l'extérieur",
+      "L'évent sec est plus grand",
+      "L'évent humide contient de l'eau en permanence"
+    ],
+    "answer": "A",
+    "explanation": "L'évent humide (wet vent) transporte à la fois des eaux usées et de l'air de ventilation. L'évent sec (dry vent) ne transporte que de l'air et ne reçoit jamais d'eaux usées.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la distance maximale entre un siphon de douche et l'évent?",
+    "options": [
+      "3 pieds",
+      "4 pieds",
+      "5 pieds",
+      "8 pieds"
+    ],
+    "answer": "A",
+    "explanation": "La distance maximale entre le siphon d'une douche et son évent est de 3 pieds mesurés le long de la conduite d'évacuation.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la fonction d'un regard d'égout (cleanout) sur une conduite d'évacuation?",
+    "options": [
+      "Inspecter le débit",
+      "Permettre l'accès pour le nettoyage",
+      "Aérer le système",
+      "Échantillonner les eaux usées"
+    ],
+    "answer": "B",
+    "explanation": "Le regard d'égout (cleanout) permet d'accéder à la conduite pour le dégorgement et le nettoyage en cas d'obstruction.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la hauteur minimale d'une boucle de ventilation (loop vent)?",
+    "options": [
+      "3 pieds",
+      "4 pieds",
+      "6 pieds",
+      "8 pieds"
+    ],
+    "answer": "C",
+    "explanation": "Une boucle de ventilation doit s'élever à au moins 6 pieds au-dessus du plancher de l'étage le plus élevé qu'elle dessert.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la hauteur minimale d'une colonne de ventilation au-dessus de la ligne de débordement du plus haut appareil?",
+    "options": [
+      "2 pieds",
+      "3 pieds",
+      "4 pieds",
+      "6 pieds"
+    ],
+    "answer": "D",
+    "explanation": "La colonne de ventilation doit s'élever d'au moins 6 pieds au-dessus de la ligne de débordement du plus haut appareil desservi avant de redescendre horizontalement.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la longueur maximale d'une conduite d'évacuation de 3 pouces avec une pente de 1/4 po/pi avant de nécessiter un nettoyage?",
+    "options": [
+      "25 pieds",
+      "50 pieds",
+      "75 pieds",
+      "100 pieds"
+    ],
+    "answer": "C",
+    "explanation": "La distance maximale entre nettoyages pour une conduite de 3 pouces est de 75 pieds selon le code, afin de permettre le dégorgement.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la pente maximale recommandée pour une conduite d'évacuation?",
+    "options": [
+      "1/2 po par pied",
+      "3/4 po par pied",
+      "1 po par pied",
+      "Il n'y a pas de maximum"
+    ],
+    "answer": "A",
+    "explanation": "La pente maximale recommandée est de 1/2 po par pied (4%). Au-delà, l'eau s'écoule trop rapidement, laissant les solides derrière, ce qui peut causer des obstructions.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la pente minimale en pourcentage pour une conduite d'évacuation de 4 pouces?",
+    "options": [
+      "0.5%",
+      "1%",
+      "1.5%",
+      "2%"
+    ],
+    "answer": "B",
+    "explanation": "La pente minimale pour une conduite d'évacuation de 4 pouces et plus est de 1/8 po/pied, ce qui équivaut à 1% (0.125 ÷ 12 × 100 ≈ 1.04%).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la pente minimale requise pour une conduite d'évacuation de 2 pouces?",
+    "options": [
+      "1/8 po par pied",
+      "1/4 po par pied",
+      "1/2 po par pied",
+      "3/4 po par pied"
+    ],
+    "answer": "B",
+    "explanation": "La pente minimale pour les conduites de 3 pouces et moins est de 1/4 po par pied (2%). Donc, pour une conduite de 2 pouces, c'est aussi 1/4 po par pied.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la perte de charge dans une colonne d'évacuation avec un débit de pointe?",
+    "options": [
+      "Négligeable",
+      "Environ 2 psi",
+      "Environ 5 psi",
+      "Environ 10 psi"
+    ],
+    "answer": "A",
+    "explanation": "La perte de charge dans une colonne d'évacuation est généralement négligeable en raison de l'écoulement par gravité et de la pente. La ventilation adéquate prévient les variations de pression.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la profondeur minimale d'un puisard?",
+    "options": [
+      "3 pieds",
+      "5 pieds",
+      "6 pieds",
+      "8 pieds"
+    ],
+    "answer": "B",
+    "explanation": "Un puisard doit avoir une profondeur minimale de 5 pieds (1.5 m) pour assurer une filtration adéquate des eaux.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la ventilation adéquate pour un îlot central avec évier (kitchen island)?",
+    "options": [
+      "Évent individuel jusqu'au toit",
+      "Boucle de ventilation avec un évent traversant le toit",
+      "Évent mécanique seulement",
+      "Aucun évent n'est requis"
+    ],
+    "answer": "B",
+    "explanation": "Un îlot central nécessite une boucle de ventilation ou un système d'évent modifié (loop vent) car l'évent ne peut pas monter directement au toit.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 4,
+    "question": "À quelle distance maximale du point de départ d'une conduite d'évacuation horizontale doit-on installer un nettoyage?",
+    "options": [
+      "25 pieds",
+      "50 pieds",
+      "75 pieds",
+      "100 pieds"
+    ],
+    "answer": "B",
+    "explanation": "Un nettoyage doit être installé à au plus 50 pieds du point de départ d'une conduite d'évacuation horizontale selon le code.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le diamètre de drain pour un urinoir?",
+    "options": [
+      "1.25 pouce",
+      "1.5 pouce",
+      "2 pouces",
+      "3 pouces"
+    ],
+    "answer": "C",
+    "explanation": "Le diamètre de drain pour un urinoir est de 2 pouces (50 mm), avec un siphon intégré ou séparé.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le diamètre de la bonde d'une baignoire standard?",
+    "options": [
+      "1.25 pouce",
+      "1.5 pouce",
+      "2 pouces",
+      "2.5 pouces"
+    ],
+    "answer": "B",
+    "explanation": "La bonde d'une baignoire standard a un diamètre de 1.5 pouce (38 mm).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le diamètre de siphon pour un évier de cuisine?",
+    "options": [
+      "1.25 pouce",
+      "1.5 pouce",
+      "2 pouces",
+      "2.5 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre de siphon pour un évier de cuisine est de 1.5 pouce (38 mm).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le diamètre de siphon requis pour un lavabo de salle de bain?",
+    "options": [
+      "1 pouce",
+      "1.25 pouce",
+      "1.5 pouce",
+      "2 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre de siphon requis pour un lavabo de salle de bain est de 1.25 pouce (32 mm).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le diamètre minimal de drain pour une douche résidentielle?",
+    "options": [
+      "1.5 pouce",
+      "2 pouces",
+      "2.5 pouces",
+      "3 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre minimal de drain pour une douche résidentielle est de 2 pouces (50 mm).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le débit d'un robinet de buanderie (bac à laver)?",
+    "options": [
+      "2-3 GPM",
+      "3-4 GPM",
+      "4-5 GPM",
+      "5-6 GPM"
+    ],
+    "answer": "C",
+    "explanation": "Le débit d'un robinet de buanderie est généralement de 4 à 5 GPM pour permettre le remplissage rapide des seaux.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le débit standard d'un pommeau de douche résidentiel moderne?",
+    "options": [
+      "1.5 GPM",
+      "2.0 GPM",
+      "2.5 GPM",
+      "3.0 GPM"
+    ],
+    "answer": "C",
+    "explanation": "Le débit standard d'un pommeau de douche résidentiel moderne est limité à 2.5 GPM (9.5 LPM) selon les normes de conservation de l'eau.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le dégagement latéral minimal entre le centre d'une toilette et un mur?",
+    "options": [
+      "12 pouces",
+      "15 pouces",
+      "18 pouces",
+      "21 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le dégagement latéral minimal entre le centre d'une toilette et un mur est de 15 pouces (380 mm). Entre deux toilettes, le minimum est de 30 pouces centre à centre.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le dégagement minimal devant un lavabo selon le code?",
+    "options": [
+      "18 pouces",
+      "20 pouces",
+      "24 pouces",
+      "30 pouces"
+    ],
+    "answer": "C",
+    "explanation": "Le dégagement minimal devant un lavabo est de 24 pouces (610 mm) de la face avant du lavabo au mur opposé.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le dégagement minimal devant une toilette selon le code?",
+    "options": [
+      "18 pouces",
+      "21 pouces",
+      "24 pouces",
+      "30 pouces"
+    ],
+    "answer": "C",
+    "explanation": "Le dégagement minimal devant une toilette doit être d'au moins 24 pouces (610 mm) pour permettre l'accès.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le matériau le plus couramment utilisé pour les éviers de cuisine résidentiels?",
+    "options": [
+      "Porcelaine",
+      "Acier inoxydable",
+      "Fonte émaillée",
+      "Composite de granit"
+    ],
+    "answer": "B",
+    "explanation": "L'acier inoxydable est le matériau le plus couramment utilisé pour les éviers de cuisine en raison de sa durabilité, de son coût abordable et de sa résistance aux taches.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le nombre d'UR pour un lave-vaisselle résidentiel?",
+    "options": [
+      "1 UR",
+      "2 UR",
+      "3 UR",
+      "4 UR"
+    ],
+    "answer": "B",
+    "explanation": "Un lave-vaisselle résidentiel compte pour 2 unités de raccordement (UR).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le nombre d'UR pour un urinoir?",
+    "options": [
+      "1 UR",
+      "2 UR",
+      "3 UR",
+      "4 UR"
+    ],
+    "answer": "B",
+    "explanation": "Un urinoir compte pour 2 unités de raccordement (UR) selon le Code de plomberie.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le nombre d'UR pour un évier de buanderie?",
+    "options": [
+      "1 UR",
+      "2 UR",
+      "3 UR",
+      "4 UR"
+    ],
+    "answer": "B",
+    "explanation": "Un évier de buanderie (bac à laver) compte pour 2 unités de raccordement (UR).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le nombre d'UR pour une baignoire avec douche?",
+    "options": [
+      "1 UR",
+      "2 UR",
+      "3 UR",
+      "4 UR"
+    ],
+    "answer": "B",
+    "explanation": "Une baignoire avec douche compte pour 2 unités de raccordement (UR).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le nombre d'UR pour une pompe de vidange (sump pump)?",
+    "options": [
+      "0 UR",
+      "1 UR",
+      "2 UR",
+      "3 UR"
+    ],
+    "answer": "A",
+    "explanation": "Une pompe de vidange (sump pump) n'est généralement pas comptée en UR puisqu'elle évacue les eaux claires, mais son raccordement doit respecter les règles du code.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le nombre d'UR pour une toilette résidentielle standard?",
+    "options": [
+      "2 UR",
+      "3 UR",
+      "4 UR",
+      "5 UR"
+    ],
+    "answer": "C",
+    "explanation": "Une toilette résidentielle standard compte pour 4 unités de raccordement (UR) selon le Code de plomberie.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le rough-in standard d'une toilette résidentielle au Québec?",
+    "options": [
+      "10 pouces",
+      "12 pouces",
+      "14 pouces",
+      "16 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le rough-in standard d'une toilette résidentielle au Québec est de 12 pouces (300 mm) du mur fini au centre de la bride.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le temps de remplissage maximal recommandé pour une baignoire?",
+    "options": [
+      "5 minutes",
+      "10 minutes",
+      "15 minutes",
+      "20 minutes"
+    ],
+    "answer": "C",
+    "explanation": "Le temps de remplissage maximal recommandé pour une baignoire standard est d'environ 15 minutes pour 30-40 gallons à un débit de 4-6 GPM.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le volume maximal de chasse d'eau pour une toilette résidentielle standard?",
+    "options": [
+      "1.2 GPF (4.5 LPF)",
+      "1.6 GPF (6 LPF)",
+      "2.0 GPF (7.5 LPF)",
+      "3.5 GPF (13 LPF)"
+    ],
+    "answer": "B",
+    "explanation": "Le volume maximal permis pour une toilette résidentielle standard est de 1.6 gallons par chasse (6 litres par chasse).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel type de raccordement d'alimentation est requis pour un lave-vaisselle encastré?",
+    "options": [
+      "Raccordement rigide en cuivre",
+      "Tuyau flexible avec clapet anti-retour",
+      "Raccordement PEX",
+      "Raccordement ABS"
+    ],
+    "answer": "B",
+    "explanation": "Un lave-vaisselle encastré doit être raccordé avec un tuyau flexible muni d'un clapet anti-retour pour prévenir tout refoulement.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel type de robinet est requis pour un lavabo accessible?",
+    "options": [
+      "Robinet à croisille",
+      "Robinet à levier ou sans contact",
+      "Robinet à clé",
+      "Robinet à deux poignées"
+    ],
+    "answer": "B",
+    "explanation": "Pour un lavabo accessible, un robinet à levier ou sans contact (capteur) est requis pour faciliter l'utilisation par les personnes à mobilité réduite.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel type de siphon est le plus couramment utilisé pour un lavabo de salle de bain?",
+    "options": [
+      "Siphon en P",
+      "Siphon en S",
+      "Siphon en U",
+      "Siphon en J"
+    ],
+    "answer": "A",
+    "explanation": "Le siphon en P est le plus couramment utilisé pour un lavabo de salle de bain car il maintient une garde d'eau adéquate tout en étant compact.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel type de vidange est requis pour un évier de cuisine avec broyeur à déchets?",
+    "options": [
+      "Vidange par dessus",
+      "Vidange continue",
+      "Vidange par le côté",
+      "Vidange indépendante"
+    ],
+    "answer": "B",
+    "explanation": "Un évier de cuisine avec broyeur à déchets nécessite une vidange continue (continuous waste) qui raccorde les deux bacs de l'évier au broyeur, puis au siphon.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel équipement est essentiel pour une baignoire en ce qui concerne le trop-plein?",
+    "options": [
+      "Un trop-plein avec raccordement au siphon",
+      "Un trop-plein séparé à l'égout",
+      "Un trop-plein avec clapet",
+      "Aucun trop-plein n'est requis"
+    ],
+    "answer": "A",
+    "explanation": "Une baignoire doit avoir un trop-plein (overflow) raccordé au siphon de la baignoire pour éviter le débordement.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la capacité typique d'une baignoire standard en gallons?",
+    "options": [
+      "20-30 gallons",
+      "30-40 gallons",
+      "40-50 gallons",
+      "50-60 gallons"
+    ],
+    "answer": "B",
+    "explanation": "Une baignoire standard a une capacité typique de 30 à 40 gallons (114-151 litres).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la dimension minimale d'une salle de bain complète (avec toilette, lavabo, baignoire ou douche)?",
+    "options": [
+      "30 pi²",
+      "35 pi²",
+      "40 pi²",
+      "45 pi²"
+    ],
+    "answer": "C",
+    "explanation": "Une salle de bain complète doit avoir une surface minimale d'environ 40 pi² pour respecter les dégagements requis autour des appareils.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la dimension recommandée pour un lavabo accessible en hauteur pour personnes à mobilité réduite?",
+    "options": [
+      "28 pouces",
+      "30 pouces",
+      "32 pouces",
+      "34 pouces"
+    ],
+    "answer": "D",
+    "explanation": "Pour l'accessibilité, le lavabo doit être installé à une hauteur maximale de 34 pouces (864 mm) et permettre le passage d'un fauteuil roulant en dessous, avec un dégagement d'au moins 29 pouces du plancher.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la distance minimale entre le fond d'un évier de cuisine et le siphon?",
+    "options": [
+      "6 pouces",
+      "8 pouces",
+      "12 pouces",
+      "18 pouces"
+    ],
+    "answer": "C",
+    "explanation": "La distance minimale entre le fond de l'évier de cuisine et le siphon est de 12 pouces (300 mm) pour permettre l'installation du broyeur à déchets si nécessaire.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la distance minimale entre un évier de cuisine et une cuisinière à gaz selon le code du bâtiment?",
+    "options": [
+      "12 pouces",
+      "18 pouces",
+      "24 pouces",
+      "30 pouces"
+    ],
+    "answer": "C",
+    "explanation": "La distance minimale recommandée entre un évier et une cuisinière est de 24 pouces pour des raisons de sécurité et de fonctionnalité.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la hauteur d'installation d'un pommeau de douche fixe standard?",
+    "options": [
+      "60 pouces",
+      "66 pouces",
+      "72 pouces",
+      "78 pouces"
+    ],
+    "answer": "C",
+    "explanation": "La hauteur d'installation standard d'un pommeau de douche fixe est de 72 pouces (183 cm) du plancher de la douche.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la hauteur d'installation d'une tringle à serviettes près d'un lavabo?",
+    "options": [
+      "36 pouces",
+      "42 pouces",
+      "48 pouces",
+      "54 pouces"
+    ],
+    "answer": "B",
+    "explanation": "La hauteur recommandée d'une tringle à serviettes près d'un lavabo est d'environ 42 pouces (107 cm) du plancher fini.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la hauteur d'installation recommandée pour une toilette accessible selon l'ADA?",
+    "options": [
+      "14-15 pouces",
+      "15-16 pouces",
+      "17-19 pouces",
+      "20-22 pouces"
+    ],
+    "answer": "C",
+    "explanation": "Selon les normes d'accessibilité (ADA), la hauteur de la cuvette d'une toilette accessible doit être de 17 à 19 pouces du plancher fini au sommet de la selle.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la hauteur de robinet recommandée au-dessus d'un évier de cuisine?",
+    "options": [
+      "4-6 pouces",
+      "6-8 pouces",
+      "8-10 pouces",
+      "10-12 pouces"
+    ],
+    "answer": "C",
+    "explanation": "La hauteur recommandée du robinet au-dessus de l'évier de cuisine est de 8 à 10 pouces (200-250 mm) pour permettre le nettoyage de grandes casseroles.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la hauteur recommandée d'un robinet de baignoire au-dessus du bord de la baignoire?",
+    "options": [
+      "4 pouces",
+      "6 pouces",
+      "8 pouces",
+      "10 pouces"
+    ],
+    "answer": "B",
+    "explanation": "La hauteur recommandée d'un robinet de baignoire au-dessus du bord est d'environ 6 pouces (150 mm).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la hauteur standard d'un lavabo de salle de bain (bord supérieur)?",
+    "options": [
+      "30 pouces",
+      "32 pouces",
+      "34 pouces",
+      "36 pouces"
+    ],
+    "answer": "C",
+    "explanation": "La hauteur standard du bord supérieur d'un lavabo de salle de bain est de 34 pouces (864 mm) du plancher fini.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la longueur maximale du tuyau d'alimentation flexible pour une toilette?",
+    "options": [
+      "12 pouces",
+      "18 pouces",
+      "20 pouces",
+      "24 pouces"
+    ],
+    "answer": "C",
+    "explanation": "La longueur maximale du tuyau d'alimentation flexible pour une toilette est généralement de 20 pouces (500 mm).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la pente requise pour la bonde de la baignoire vers le siphon?",
+    "options": [
+      "1/8 po par pied",
+      "1/4 po par pied",
+      "1/2 po par pied",
+      "3/4 po par pied"
+    ],
+    "answer": "B",
+    "explanation": "La bonde de la baignoire vers le siphon doit avoir une pente d'au moins 1/4 po par pied (2%).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Comment dimensionne-t-on un réservoir d'expansion thermique pour un chauffe-eau de 80 gallons?",
+    "options": [
+      "1 gallon",
+      "2 gallons",
+      "3 gallons",
+      "5 gallons"
+    ],
+    "answer": "C",
+    "explanation": "Pour un chauffe-eau de 80 gallons, un réservoir d'expansion de 3 gallons est généralement recommandé. La règle générale est 1 gallon pour chaque 25-30 gallons de capacité du chauffe-eau.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Qu'est-ce qu'un chauffe-eau à chauffage indirect (indirect fired)?",
+    "options": [
+      "Un chauffe-eau qui utilise l'électricité",
+      "Un chauffe-eau qui utilise la chaleur d'une chaudière",
+      "Un chauffe-eau solaire",
+      "Un chauffe-eau qui recycle les gaz d'échappement"
+    ],
+    "answer": "B",
+    "explanation": "Un chauffe-eau à chauffage indirect utilise la chaleur produite par une chaudière (eau chaude de la chaudière circule dans un échangeur à l'intérieur du réservoir).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Qu'est-ce que le First Hour Rating (FHR) d'un chauffe-eau?",
+    "options": [
+      "La température maximale",
+      "Le nombre de gallons d'eau chaude fournis pendant la première heure d'utilisation",
+      "La première heure de chauffe",
+      "Le rendement énergétique de la première heure"
+    ],
+    "answer": "B",
+    "explanation": "Le First Hour Rating (FHR) est le nombre de gallons d'eau chaude que le chauffe-eau peut fournir pendant la première heure d'utilisation intense.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Qu'est-ce que le mode \"vacation\" sur un chauffe-eau?",
+    "options": [
+      "Un mode qui vide le réservoir",
+      "Un mode qui maintient l'eau à une température minimale pour économiser l'énergie pendant l'absence",
+      "Un mode qui accélère la chauffe",
+      "Un mode qui désinfecte le réservoir"
+    ],
+    "answer": "B",
+    "explanation": "Le mode \"vacation\" maintient l'eau à une température minimale (généralement 50-60°F) pendant une absence prolongée pour économiser l'énergie tout en évitant le gel.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel diamètre de tuyau doit avoir la sortie de la valve T&P?",
+    "options": [
+      "1/2 pouce",
+      "3/4 pouce",
+      "1 pouce",
+      "1 1/4 pouce"
+    ],
+    "answer": "B",
+    "explanation": "La sortie de la valve T&P doit avoir un diamètre d'au moins 3/4 de pouce et se terminer à un maximum de 6 pouces du sol.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est l'ampérage d'un chauffe-eau électrique de 4500W à 240V?",
+    "options": [
+      "15 A",
+      "18.75 A",
+      "20 A",
+      "25 A"
+    ],
+    "answer": "B",
+    "explanation": "I = P / V = 4500W / 240V = 18.75 A. Un disjoncteur de 30 A est généralement requis (10 AWG).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le calibre de fil requis pour un chauffe-eau électrique de 4500W à 240V?",
+    "options": [
+      "14 AWG",
+      "12 AWG",
+      "10 AWG",
+      "8 AWG"
+    ],
+    "answer": "C",
+    "explanation": "Un chauffe-eau électrique de 4500W à 240V (18.75 A) nécessite un fil de calibre 10 AWG avec un disjoncteur de 30 A.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le coefficient d'efficacité énergétique (UEF) minimum pour un chauffe-eau au gaz résidentiel moderne?",
+    "options": [
+      "0.50-0.55",
+      "0.60-0.65",
+      "0.67-0.70",
+      "0.75-0.80"
+    ],
+    "answer": "C",
+    "explanation": "Le UEF minimum pour un chauffe-eau au gaz moderne est d'environ 0.67-0.70. Les modèles à condensation atteignent 0.90+.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le nombre de BTU nécessaires pour chauffer 1 gallon d'eau de 40°F à 140°F?",
+    "options": [
+      "834 BTU",
+      "1000 BTU",
+      "1200 BTU",
+      "1500 BTU"
+    ],
+    "answer": "A",
+    "explanation": "1 gallon d'eau = 8.34 lb. Pour chauffer 1 gallon de 100°F: 8.34 × 100 = 834 BTU.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le taux de récupération typique d'un chauffe-eau au gaz de 40 000 BTU/h?",
+    "options": [
+      "25-30 GPH",
+      "30-35 GPH",
+      "35-40 GPH",
+      "40-45 GPH"
+    ],
+    "answer": "C",
+    "explanation": "Un chauffe-eau au gaz de 40 000 BTU/h a un taux de récupération d'environ 35-40 gallons par heure (GPH).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le taux de récupération typique d'un chauffe-eau électrique de 50 gallons avec 4500W?",
+    "options": [
+      "12-15 GPH",
+      "18-21 GPH",
+      "24-27 GPH",
+      "30-35 GPH"
+    ],
+    "answer": "B",
+    "explanation": "Le taux de récupération d'un chauffe-eau électrique de 50 gallons avec 4500W est d'environ 18 à 21 gallons par heure (GPH).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le temps de récupération d'un chauffe-eau électrique de 40 gallons avec deux éléments de 4500W?",
+    "options": [
+      "45 minutes",
+      "60 minutes",
+      "75 minutes",
+      "90 minutes"
+    ],
+    "answer": "C",
+    "explanation": "Le temps de récupération d'un chauffe-eau électrique de 40 gallons avec deux éléments de 4500W est d'environ 60 à 75 minutes pour chauffer l'eau de 40°F à 140°F.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel pourcentage de la capacité du chauffe-eau doit être considéré pour le calcul du réservoir d'expansion?",
+    "options": [
+      "1%",
+      "2%",
+      "3%",
+      "5%"
+    ],
+    "answer": "B",
+    "explanation": "L'eau se dilate d'environ 2% lorsqu'elle est chauffée de 50°F à 140°F. Le réservoir d'expansion doit pouvoir absorber ce volume de dilatation.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel type de chauffe-eau est le plus approprié pour un climat nordique avec eau très froide (40°F)?",
+    "options": [
+      "Chauffe-eau électrique standard",
+      "Chauffe-eau à condensation",
+      "Chauffe-eau solaire",
+      "Chauffe-eau à thermopompe"
+    ],
+    "answer": "B",
+    "explanation": "Un chauffe-eau à condensation (gaz) est plus approprié pour l'eau très froide car il offre un meilleur taux de récupération et une efficacité supérieure avec des températures d'entrée basses.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel type de chauffe-eau sans réservoir (on-demand) est le plus efficace?",
+    "options": [
+      "Électrique",
+      "Au gaz",
+      "Au propane",
+      "À granules"
+    ],
+    "answer": "B",
+    "explanation": "Les chauffe-eau sans réservoir au gaz sont généralement les plus efficaces car ils peuvent fournir un débit élevé (jusqu'à 8-10 GPM) et ont un rendement énergétique élevé.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle doit être la distance entre un chauffe-eau au gaz et un mur combustible?",
+    "options": [
+      "6 pouces",
+      "12 pouces",
+      "18 pouces",
+      "24 pouces"
+    ],
+    "answer": "C",
+    "explanation": "Un chauffe-eau au gaz doit être installé à au moins 18 pouces (450 mm) d'un mur combustible.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle doit être la distance entre un chauffe-eau électrique et un mur combustible?",
+    "options": [
+      "0 pouce (contact direct permis)",
+      "6 pouces",
+      "12 pouces",
+      "18 pouces"
+    ],
+    "answer": "C",
+    "explanation": "Un chauffe-eau électrique doit être installé à au moins 12 pouces (300 mm) d'un mur combustible pour permettre la circulation d'air et l'accès pour l'entretien.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la capacité de stockage recommandée pour un chauffe-eau à accumulation (réservoir) dans une résidence de 2 chambres?",
+    "options": [
+      "30 gallons",
+      "40 gallons",
+      "50 gallons",
+      "60 gallons"
+    ],
+    "answer": "B",
+    "explanation": "Pour une résidence de 2 chambres (2-3 personnes), un chauffe-eau de 40 gallons est généralement suffisant.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la capacité typique d'un chauffe-eau résidentiel pour une famille de 4 personnes?",
+    "options": [
+      "30 gallons",
+      "40 gallons",
+      "50 gallons",
+      "60 gallons"
+    ],
+    "answer": "C",
+    "explanation": "Pour une famille de 4 personnes, un chauffe-eau de 50 gallons est généralement recommandé pour répondre à la demande en eau chaude.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la différence entre les facteurs EF (Energy Factor) et UEF (Uniform Energy Factor)?",
+    "options": [
+      "EF est pour les chauffe-eau électriques seulement",
+      "UEF est la norme plus récente qui remplace EF",
+      "EF est plus précis que UEF",
+      "Il n'y a aucune différence"
+    ],
+    "answer": "B",
+    "explanation": "L'UEF (Uniform Energy Factor) est la norme plus récente (2017) qui remplace l'EF (Energy Factor). Elle utilise des profils de consommation standardisés pour évaluer l'efficacité.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la différence entre un chauffe-eau à accumulation et un chauffe-eau instantané?",
+    "options": [
+      "Le chauffe-eau à accumulation stocke l'eau chaude, l'instantané chauffe l'eau au passage",
+      "L'instantané est toujours plus efficace",
+      "L'accumulation ne produit que de l'eau froide",
+      "Il n'y a aucune différence"
+    ],
+    "answer": "A",
+    "explanation": "Un chauffe-eau à accumulation chauffe et stocke l'eau dans un réservoir. Un chauffe-eau instantané (sans réservoir) chauffe l'eau uniquement lorsqu'elle est demandée.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la différence entre un chauffe-eau à condensation et un chauffe-eau standard?",
+    "options": [
+      "Le chauffe-eau à condensation utilise un échangeur de chaleur secondaire pour capturer la chaleur des gaz d'échappement",
+      "Le chauffe-eau à condensation est plus petit",
+      "Le chauffe-eau à condensation ne produit pas d'eau chaude",
+      "Le chauffe-eau à condensation est moins cher"
+    ],
+    "answer": "A",
+    "explanation": "Un chauffe-eau à condensation récupère la chaleur des gaz d'échappement via un échangeur secondaire, ce qui augmente son efficacité à 90%+ contre 80% pour un modèle standard.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la différence entre un élément chauffant à immersion et un élément à circulation?",
+    "options": [
+      "L'élément à immersion chauffe l'eau dans le réservoir, l'élément à circulation chauffe l'eau en continu",
+      "L'élément à immersion est plus efficace",
+      "L'élément à circulation est plus silencieux",
+      "Il n'y a pas de différence"
+    ],
+    "answer": "A",
+    "explanation": "L'élément chauffant à immersion est immergé dans l'eau du réservoir et la chauffe par accumulation. L'élément à circulation chauffe l'eau au fur et à mesure qu'elle passe à travers lui.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la durée de vie typique d'un chauffe-eau au gaz résidentiel?",
+    "options": [
+      "5-7 ans",
+      "8-12 ans",
+      "15-20 ans",
+      "20-25 ans"
+    ],
+    "answer": "B",
+    "explanation": "La durée de vie typique d'un chauffe-eau au gaz résidentiel est de 8 à 12 ans, selon la qualité de l'eau et l'entretien.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la durée de vie typique d'un chauffe-eau électrique résidentiel?",
+    "options": [
+      "5-8 ans",
+      "10-15 ans",
+      "15-20 ans",
+      "20-25 ans"
+    ],
+    "answer": "B",
+    "explanation": "La durée de vie typique d'un chauffe-eau électrique résidentiel est de 10 à 15 ans, généralement plus longue que celle d'un chauffe-eau au gaz.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la fonction d'un mitigeur thermostatique (thermostatic mixing valve)?",
+    "options": [
+      "Mélanger l'eau chaude et froide à une température constante",
+      "Réguler la pression",
+      "Empêcher le gel",
+      "Filtrer l'eau"
+    ],
+    "answer": "A",
+    "explanation": "Le mitigeur thermostatique mélange l'eau chaude et froide pour maintenir une température de sortie constante, même si la pression d'alimentation varie.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la fonction de la tige d'anode dans un chauffe-eau?",
+    "options": [
+      "Chauffer l'eau",
+      "Protéger le réservoir contre la corrosion",
+      "Réguler la pression",
+      "Filtrer l'eau"
+    ],
+    "answer": "B",
+    "explanation": "La tige d'anode (anode sacrificielle) protège le réservoir du chauffe-eau contre la corrosion en attirant les éléments corrosifs. Elle doit être remplacée périodiquement.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la fonction de la valve T&P (Temperature & Pressure Relief)?",
+    "options": [
+      "Réguler la température",
+      "Relâcher la pression et la température excessives dans le chauffe-eau",
+      "Empêcher la corrosion",
+      "Contrôler le débit"
+    ],
+    "answer": "B",
+    "explanation": "La valve T&P (température et pression) relâche automatiquement l'eau si la pression ou la température à l'intérieur du chauffe-eau dépasse les seuils limites.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la hauteur d'un chauffe-eau de 50 gallons standard?",
+    "options": [
+      "48-52 pouces",
+      "52-56 pouces",
+      "56-60 pouces",
+      "60-64 pouces"
+    ],
+    "answer": "C",
+    "explanation": "La hauteur d'un chauffe-eau de 50 gallons standard est généralement de 56 à 60 pouces (142-152 cm).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la pression d'air recommandée dans un réservoir d'expansion thermique?",
+    "options": [
+      "Même pression que la pression statique du réseau d'eau",
+      "50 psi",
+      "100 psi",
+      "Pression atmosphérique"
+    ],
+    "answer": "A",
+    "explanation": "La pression d'air dans le réservoir d'expansion doit être égale à la pression statique du réseau d'eau pour que la membrane fonctionne correctement.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la puissance en BTU équivalente d'un élément chauffant électrique de 4500W?",
+    "options": [
+      "10 000 BTU/h",
+      "12 500 BTU/h",
+      "15 350 BTU/h",
+      "18 000 BTU/h"
+    ],
+    "answer": "C",
+    "explanation": "1 W = 3.412 BTU/h. Donc, 4500W × 3.412 = 15 354 BTU/h.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la puissance typique d'un chauffe-eau au gaz résidentiel en BTU/h?",
+    "options": [
+      "20 000 - 30 000 BTU/h",
+      "30 000 - 40 000 BTU/h",
+      "40 000 - 75 000 BTU/h",
+      "75 000 - 100 000 BTU/h"
+    ],
+    "answer": "C",
+    "explanation": "La puissance typique d'un chauffe-eau au gaz résidentiel est de 40 000 à 75 000 BTU/h.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la puissance typique d'un chauffe-eau électrique résidentiel standard?",
+    "options": [
+      "3000W/120V",
+      "4500W/240V",
+      "6000W/240V",
+      "7500W/240V"
+    ],
+    "answer": "B",
+    "explanation": "La puissance typique d'un chauffe-eau électrique résidentiel standard est de 4500W à 240V, avec deux éléments de 4500W chacun.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la température d'eau recommandée à la sortie d'un mitigeur thermostatique pour douche?",
+    "options": [
+      "100°F (38°C)",
+      "105°F (41°C)",
+      "110°F (43°C)",
+      "115°F (46°C)"
+    ],
+    "answer": "A",
+    "explanation": "La température recommandée à la sortie d'un mitigeur thermostatique pour douche est d'environ 100°F (38°C) pour le confort et la sécurité.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la température de l'eau à la sortie d'un chauffe-eau électrique typique?",
+    "options": [
+      "110-115°F",
+      "120-125°F",
+      "130-140°F",
+      "145-150°F"
+    ],
+    "answer": "C",
+    "explanation": "La température de consigne typique d'un chauffe-eau électrique est de 130-140°F (54-60°C). Un mélangeur (thermostatic mixing valve) est recommandé pour abaisser la température aux points de puisage.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la température maximale de consigne d'un chauffe-eau résidentiel recommandée pour la sécurité?",
+    "options": [
+      "110°F (43°C)",
+      "120°F (49°C)",
+      "130°F (54°C)",
+      "140°F (60°C)"
+    ],
+    "answer": "B",
+    "explanation": "La température maximale recommandée est de 120°F (49°C) pour la sécurité. Au-delà, il y a un risque de brûlure, surtout pour les enfants et les personnes âgées.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la température maximale de l'eau à la sortie d'un chauffe-eau sans réservoir (on-demand)?",
+    "options": [
+      "120°F (49°C)",
+      "130°F (54°C)",
+      "140°F (60°C)",
+      "160°F (71°C)"
+    ],
+    "answer": "C",
+    "explanation": "La température maximale à la sortie d'un chauffe-eau sans réservoir est généralement de 140°F (60°C), réglable selon les besoins.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 6,
+    "question": "À quelle température et pression la valve T&P (Temperature & Pressure Relief) s'active-t-elle?",
+    "options": [
+      "200°F, 120 psi",
+      "210°F, 150 psi",
+      "212°F, 100 psi",
+      "220°F, 175 psi"
+    ],
+    "answer": "B",
+    "explanation": "La valve T&P s'active lorsque la température atteint 210°F (99°C) ou la pression atteint 150 psi (1034 kPa).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Comment calcule-t-on la longueur équivalente d'une conduite de gaz?",
+    "options": [
+      "Longueur réelle + longueur équivalente des raccords et coudes",
+      "Longueur réelle × 1.5",
+      "Longueur réelle + 10%",
+      "Longueur réelle seulement"
+    ],
+    "answer": "A",
+    "explanation": "La longueur équivalente = longueur réelle du tuyau + somme des longueurs équivalentes de tous les raccords, coudes et vannes selon les tables de conversion.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Comment dimensionne-t-on une conduite de gaz pour plusieurs appareils?",
+    "options": [
+      "En additionnant les BTU de tous les appareils et en utilisant la longueur équivalente",
+      "En prenant le plus gros appareil seulement",
+      "En prenant la moyenne des BTU",
+      "En utilisant le nombre d'appareils"
+    ],
+    "answer": "A",
+    "explanation": "On additionne les BTU de tous les appareils et on utilise la longueur équivalente (longueur réelle + longueur équivalente des raccords) pour dimensionner la conduite selon les tables.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce qu'un ballon de stockage de propane orphelin (orphan tank)?",
+    "options": [
+      "Un réservoir hors terre",
+      "Un réservoir non enregistré",
+      "Un réservoir abandonné sans propriétaire",
+      "Un réservoir de petit format"
+    ],
+    "answer": "C",
+    "explanation": "Un réservoir orphelin est un réservoir de propane abandonné dont le propriétaire est inconnu ou introuvable. Il doit être retiré ou sécurisé selon les règles.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce qu'un drip leg (poche de condensation) dans une installation au gaz?",
+    "options": [
+      "Un tuyau vertical qui recueille les condensats et les impuretés",
+      "Un raccord flexible",
+      "Un régulateur de pression",
+      "Un filtre à gaz"
+    ],
+    "answer": "A",
+    "explanation": "Un drip leg (poche de condensation ou sediment trap) est un tuyau vertical installé à la base d'une colonne montante de gaz pour recueillir les condensats, l'humidité et les particules.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce qu'un raccord diélectrique dans une installation de gaz?",
+    "options": [
+      "Un raccord qui empêche la corrosion galvanique entre métaux différents",
+      "Un raccord flexible",
+      "Un raccord isolant thermique",
+      "Un raccord de transition"
+    ],
+    "answer": "A",
+    "explanation": "Un raccord diélectrique empêche la corrosion galvanique entre deux métaux différents (ex: acier et cuivre) dans le réseau de gaz.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce qu'un régulateur 2 étages (2-stage regulator) dans une installation au gaz propane?",
+    "options": [
+      "Un régulateur avec deux sorties",
+      "Un régulateur qui réduit la pression en deux étapes",
+      "Un régulateur qui fonctionne à deux températures",
+      "Un régulateur pour deux appareils"
+    ],
+    "answer": "B",
+    "explanation": "Un régulateur 2 étages réduit la pression en deux étapes : d'abord de la haute pression (réservoir) à une pression intermédiaire, puis de la pression intermédiaire à la pression d'utilisation.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce qu'un sediment trap (piège à sédiments) dans une installation au gaz?",
+    "options": [
+      "Un filtre à gaz",
+      "Un tuyau en T avec un bouchon à la base pour recueillir les impuretés",
+      "Un régulateur",
+      "Une valve de sécurité"
+    ],
+    "answer": "B",
+    "explanation": "Un sediment trap (piège à sédiments) est un raccord en T installé à la base d'une colonne montante de gaz avec un bouchon à l'extrémité pour recueillir les particules et les impuretés.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est l'avantage du CSST par rapport au tuyau d'accier noir pour le gaz?",
+    "options": [
+      "Moins cher",
+      "Plus flexible et plus rapide à installer",
+      "Plus résistant à la corrosion",
+      "Plus léger"
+    ],
+    "answer": "B",
+    "explanation": "Le CSST est beaucoup plus flexible que l'acier noir, ce qui permet une installation plus rapide avec moins de raccords et de coudes.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le calibre de la conduite de gaz pour un chauffe-eau de 50 000 BTU/h à 30 pieds?",
+    "options": [
+      "1/2 pouce",
+      "3/4 pouce",
+      "1 pouce",
+      "1 1/4 pouce"
+    ],
+    "answer": "B",
+    "explanation": "Pour 50 000 BTU/h à 30 pieds, une conduite de 3/4 pouce est généralement recommandée selon les tables de dimensionnement.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le diamètre minimal d'un tuyau de gaz naturel pour une cuisinière de 60 000 BTU/h à 20 pieds?",
+    "options": [
+      "1/2 pouce",
+      "3/4 pouce",
+      "1 pouce",
+      "1 1/4 pouce"
+    ],
+    "answer": "A",
+    "explanation": "Pour une cuisinière de 60 000 BTU/h à 20 pieds, un tuyau de 1/2 pouce est généralement suffisant selon les tables de dimensionnement.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le débit maximal d'un tuyau d'acier de 1 po Schedule 40 sur 50 pieds avec une chute de pression de 0.5 po WC?",
+    "options": [
+      "150 000 BTU/h",
+      "200 000 BTU/h",
+      "250 000 BTU/h",
+      "300 000 BTU/h"
+    ],
+    "answer": "C",
+    "explanation": "Selon les tables de dimensionnement, un tuyau d'acier de 1 po Sch 40 sur 50 pieds peut transporter environ 250 000 BTU/h avec une chute de pression de 0.5 po WC.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le nombre maximum de coudes 90° équivalent dans une conduite de gaz de 50 pieds?",
+    "options": [
+      "2 coudes",
+      "3 coudes",
+      "4 coudes",
+      "5 coudes"
+    ],
+    "answer": "C",
+    "explanation": "Chaque coude 90° ajoute environ 3-5 pieds de longueur équivalente. Dans une conduite de 50 pieds, on recommande un maximum de 4 coudes 90° pour éviter une chute de pression excessive.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le type de tuyau flexible jaune utilisé pour les installations de gaz intérieures?",
+    "options": [
+      "Tuyau cuivre",
+      "Tuyau PE",
+      "CSST (Corrugated Stainless Steel Tubing)",
+      "Tuyau PEX"
+    ],
+    "answer": "C",
+    "explanation": "Le CSST (Corrugated Stainless Steel Tubing) est un tuyau flexible en acier inoxydable ondulé de couleur jaune, utilisé pour les installations de gaz intérieures.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel raccord est interdit pour le gaz?",
+    "options": [
+      "Raccord fileté NPT",
+      "Raccord à compression",
+      "Raccord soudé",
+      "Raccord à bride"
+    ],
+    "answer": "B",
+    "explanation": "Les raccords à compression sont généralement interdits pour les installations de gaz en raison du risque de fuite. Les raccords filetés NPT avec pipe dope homologué sont requis.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel type de pipe dope (pâte à joint) est requis pour les raccords de gaz?",
+    "options": [
+      "Ruban de téflon blanc",
+      "Pâte à joint homologuée pour le gaz",
+      "Ruban de téflon jaune ou pâte homologuée gaz",
+      "Silicone"
+    ],
+    "answer": "C",
+    "explanation": "Pour les raccords de gaz, on utilise soit du ruban de téflon jaune (spécifique pour le gaz) ou une pâte à joint homologuée pour le gaz. Le ruban blanc standard n'est pas recommandé.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la capacité d'un compteur de gaz résidentiel standard en CFH?",
+    "options": [
+      "150-175 CFH",
+      "175-250 CFH",
+      "250-400 CFH",
+      "400-600 CFH"
+    ],
+    "answer": "C",
+    "explanation": "Un compteur de gaz résidentiel standard a une capacité de 250 à 400 CFH (pieds cubes par heure).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la consommation typique de gaz d'une fournaise résidentielle?",
+    "options": [
+      "40 000-60 000 BTU/h",
+      "60 000-100 000 BTU/h",
+      "100 000-150 000 BTU/h",
+      "150 000-200 000 BTU/h"
+    ],
+    "answer": "B",
+    "explanation": "La consommation typique d'une fournaise résidentielle au gaz est de 60 000 à 100 000 BTU/h, selon la taille de la maison.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la distance minimale entre un compteur de gaz et une source d'inflammation?",
+    "options": [
+      "3 pieds",
+      "5 pieds",
+      "10 pieds",
+      "15 pieds"
+    ],
+    "answer": "A",
+    "explanation": "La distance minimale entre un compteur de gaz et une source d'inflammation (chauffe-eau, panneau électrique) est de 3 pieds (1 mètre).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la distance minimale entre un réservoir de propane hors terre (500 gallons) et une habitation?",
+    "options": [
+      "5 pieds",
+      "10 pieds",
+      "15 pieds",
+      "20 pieds"
+    ],
+    "answer": "B",
+    "explanation": "Un réservoir de propane de 500 gallons doit être installé à au moins 10 pieds (3 mètres) d'une habitation ou d'une propriété adjacente.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la fonction d'une vanne d'arrêt d'urgence (excess flow valve) dans une installation de propane?",
+    "options": [
+      "Réguler la pression",
+      "Arrêter le débit en cas de bris de conduite",
+      "Fermer le gaz manuellement",
+      "Réduire la consommation"
+    ],
+    "answer": "B",
+    "explanation": "Une vanne d'arrêt d'urgence (excess flow valve) ferme automatiquement le débit de gaz en cas de rupture de conduite ou de débit excessif.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la fonction du gazomètre (compteur à gaz)?",
+    "options": [
+      "Réguler la pression du gaz",
+      "Mesurer le volume de gaz consommé",
+      "Arrêter le gaz en cas d'urgence",
+      "Filtrer le gaz"
+    ],
+    "answer": "B",
+    "explanation": "Le gazomètre (compteur à gaz) mesure le volume de gaz consommé en pieds cubes (pi³) ou en mètres cubes.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la longueur maximale d'un tuyau CSST de 3/4 po pour une chute de pression de 0.5 po WC avec un débit de 100 000 BTU/h?",
+    "options": [
+      "30 pieds",
+      "50 pieds",
+      "60 pieds",
+      "75 pieds"
+    ],
+    "answer": "C",
+    "explanation": "Selon les tables de dimensionnement CSST, un tuyau de 3/4 po peut transporter 100 000 BTU/h sur environ 60 pieds avec une chute de pression de 0.5 po WC.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la longueur maximale non supportée d'un tuyau CSST de 3/4 po?",
+    "options": [
+      "4 pieds",
+      "6 pieds",
+      "8 pieds",
+      "10 pieds"
+    ],
+    "answer": "B",
+    "explanation": "La longueur maximale non supportée d'un CSST de 3/4 po est de 6 pieds. Des supports additionnels sont requis au-delà.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression d'alimentation typique pour un système de gaz naturel résidentiel?",
+    "options": [
+      "5-7 pouces de colonne d'eau (WC)",
+      "7-14 pouces WC",
+      "1-2 psi",
+      "5-10 psi"
+    ],
+    "answer": "B",
+    "explanation": "La pression d'alimentation typique du gaz naturel résidentiel est de 7 à 14 pouces de colonne d'eau (WC).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression d'essai pour un système de gaz 2 étapes (2-stage) avec une pression de 15 psi?",
+    "options": [
+      "15 psi",
+      "30 psi",
+      "45 psi",
+      "60 psi"
+    ],
+    "answer": "C",
+    "explanation": "Pour un système 2 étapes à 15 psi, l'essai de pression est à 1.5 fois la pression de service : 15 psi × 1.5 = 22.5 psi (arrondi à 25 psi dans certaines provinces). Dans le code, la pression d'essai requise est de 45 psi pour les systèmes à 15 psi.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression d'essai pour un système de gaz à basse pression (7-14 po WC)?",
+    "options": [
+      "3 psi (69 po WC)",
+      "5 psi (138 po WC)",
+      "7.5 psi (207 po WC)",
+      "10 psi (276 po WC)"
+    ],
+    "answer": "A",
+    "explanation": "Pour un système de gaz à basse pression, l'essai de pression est effectué à 3 psi (environ 69 po WC) pendant au moins 15 minutes.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression de sortie typique d'un régulateur de 2e étage (2nd stage regulator)?",
+    "options": [
+      "7 po WC pour gaz naturel, 11 po WC pour propane",
+      "14 po WC pour tous",
+      "5 po WC pour gaz naturel",
+      "10 po WC pour propane"
+    ],
+    "answer": "A",
+    "explanation": "Le régulateur de 2e étage réduit la pression à 7 po WC pour le gaz naturel et 11 po WC pour le propane.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression du gaz à l'entrée d'un appareil résidentiel typique?",
+    "options": [
+      "3.5 po WC pour le gaz naturel, 11 po WC pour le propane",
+      "7 po WC pour le gaz naturel, 11 po WC pour le propane",
+      "11 po WC pour les deux",
+      "14 po WC pour le gaz naturel, 7 po WC pour le propane"
+    ],
+    "answer": "B",
+    "explanation": "La pression standard à l'entrée d'un appareil est de 7 po WC pour le gaz naturel et de 11 po WC pour le propane.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression maximale d'essai pour un système de gaz à basse pression?",
+    "options": [
+      "3 psi (69 po WC)",
+      "5 psi (138 po WC)",
+      "7.5 psi (207 po WC)",
+      "10 psi (276 po WC)"
+    ],
+    "answer": "A",
+    "explanation": "Pour un système à basse pression, la pression d'essai est de 3 psi (environ 69 po WC) maintenue pendant au moins 15 minutes.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression maximale du gaz avant le régulateur dans un système résidentiel?",
+    "options": [
+      "2 psi",
+      "5 psi",
+      "10 psi",
+      "15 psi"
+    ],
+    "answer": "A",
+    "explanation": "Dans un système résidentiel, la pression avant le régulateur est limitée à 2 psi. Pour les systèmes 2 étapes (2-stage), elle peut atteindre 15 psi.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression type d'un réservoir de propane?",
+    "options": [
+      "50-70 psi",
+      "100-150 psi",
+      "150-200 psi",
+      "200-250 psi"
+    ],
+    "answer": "C",
+    "explanation": "La pression dans un réservoir de propane varie avec la température, mais est généralement de 150 à 200 psi à température ambiante.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la procédure de test de pression pour une nouvelle installation de gaz?",
+    "options": [
+      "Pression d'air de 3 psi pour basse pression, maintenue 15 minutes",
+      "Pression d'eau de 50 psi",
+      "Pression de gaz de 1 po WC",
+      "Aucun test requis"
+    ],
+    "answer": "A",
+    "explanation": "Pour une nouvelle installation de gaz à basse pression, on applique une pression d'air de 3 psi (69 po WC) maintenue pendant au moins 15 minutes sans chute de pression.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la puissance en BTU d'un gallon de propane?",
+    "options": [
+      "75 000 BTU/gallon",
+      "91 500 BTU/gallon",
+      "100 000 BTU/gallon",
+      "120 000 BTU/gallon"
+    ],
+    "answer": "B",
+    "explanation": "Un gallon de propane contient environ 91 500 BTU d'énergie.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la valeur calorifique typique du gaz naturel?",
+    "options": [
+      "500 BTU/pi³",
+      "1000 BTU/pi³",
+      "1500 BTU/pi³",
+      "2000 BTU/pi³"
+    ],
+    "answer": "B",
+    "explanation": "Le gaz naturel a une valeur calorifique typique d'environ 1000 BTU par pied cube (pi³).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la valeur calorifique typique du propane?",
+    "options": [
+      "1500 BTU/pi³",
+      "2000 BTU/pi³",
+      "2500 BTU/pi³",
+      "3000 BTU/pi³"
+    ],
+    "answer": "C",
+    "explanation": "Le propane a une valeur calorifique d'environ 2500 BTU par pied cube (pi³), soit environ 2.5 fois celle du gaz naturel.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la valeur d'un coude 90° en longueur équivalente pour un tuyau d'acier de 1 pouce?",
+    "options": [
+      "1 pied",
+      "2 pieds",
+      "3 pieds",
+      "4 pieds"
+    ],
+    "answer": "C",
+    "explanation": "Un coude 90° pour un tuyau d'acier de 1 pouce ajoute environ 3 pieds de longueur équivalente dans le calcul de la chute de pression.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle norme CSA régit l'installation des appareils au gaz au Canada?",
+    "options": [
+      "CSA B149.1",
+      "CSA B150.1",
+      "CSA B151.1",
+      "CSA C22.1"
+    ],
+    "answer": "A",
+    "explanation": "La norme CSA B149.1 (Code d'installation du gaz naturel et du propane) régit l'installation de tous les appareils au gaz au Canada.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 7,
+    "question": "À quelle distance d'un appareil au gaz doit-on installer un drip leg?",
+    "options": [
+      "À moins de 3 pieds de l'appareil",
+      "À moins de 6 pieds de l'appareil",
+      "Directement à l'entrée de l'appareil",
+      "À au moins 10 pieds de l'appareil"
+    ],
+    "answer": "A",
+    "explanation": "Un drip leg doit être installé à moins de 3 pieds (1 mètre) de chaque appareil au gaz, directement à la base de la colonne montante.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 8,
+    "question": "Comment dimensionne-t-on une pompe à incendie (fire pump)?",
+    "options": [
+      "Selon la hauteur du bâtiment seulement",
+      "Selon le débit requis en GPM et la pression nécessaire en psi",
+      "Selon le nombre d'étages",
+      "Selon la superficie du bâtiment"
+    ],
+    "answer": "B",
+    "explanation": "Une pompe à incendie est dimensionnée selon le débit requis (GPM) et la pression nécessaire (psi) pour alimenter le système de gicleurs et les colonnes montantes.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce qu'un Riser (colonne montante de gicleurs)?",
+    "options": [
+      "La colonne verticale d'alimentation du système de gicleurs",
+      "Le drain du système",
+      "Le réservoir d'eau",
+      "La pompe"
+    ],
+    "answer": "A",
+    "explanation": "Le riser (colonne montante) est la conduite verticale qui alimente les branches horizontales du système de gicleurs à chaque étage.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce qu'un gicleur à réponse rapide (quick response)?",
+    "options": [
+      "Un gicleur qui se déclenche plus rapidement que les gicleurs standards",
+      "Un gicleur qui pulvérise plus d'eau",
+      "Un gicleur qui tourne",
+      "Un gicleur avec un orifice plus grand"
+    ],
+    "answer": "A",
+    "explanation": "Un gicleur à réponse rapide (quick response) a un bulbe thermosensible qui se brise plus rapidement qu'un gicleur standard, idéal pour les résidences et les hôtels.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce qu'un standpipe (colonne montante d'incendie)?",
+    "options": [
+      "Un tuyau qui alimente en eau les étages pour les combattants d'incendie",
+      "Un tuyau de drainage",
+      "Une colonne d'eau potable",
+      "Un réservoir d'eau"
+    ],
+    "answer": "A",
+    "explanation": "Un standpipe (colonne montante d'incendie) est un réseau de tuyaux verticaux qui alimente en eau les étages d'un bâtiment pour les combattants d'incendie.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce qu'un système de gicleurs à pré-action (pre-action)?",
+    "options": [
+      "Un système où l'eau n'entre dans les tuyaux qu'après détection d'incendie par un système de détection",
+      "Un système qui s'active manuellement",
+      "Un système qui utilise de la mousse",
+      "Un système temporaire"
+    ],
+    "answer": "A",
+    "explanation": "Un système à pré-action retient l'eau par une valve électrique ou pneumatique. L'eau n'entre dans les tuyaux qu'après la détection d'incendie par un système de détection séparé.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce qu'un système déluge (deluge system)?",
+    "options": [
+      "Un système où toutes les têtes sont ouvertes et l'eau est retenue par une valve principale",
+      "Un système à action retardée",
+      "Un système qui utilise de l'eau chaude",
+      "Un système avec des têtes fermées"
+    ],
+    "answer": "A",
+    "explanation": "Un système déluge a des têtes de gicleurs ouvertes (sans bulbe). L'eau est retenue par une valve principale qui s'ouvre lors de la détection d'incendie.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est l'espacement maximal entre les têtes de gicleurs dans un bâtiment à risque ordinaire (NFPA 13)?",
+    "options": [
+      "10 pi × 10 pi",
+      "12 pi × 12 pi",
+      "15 pi × 15 pi",
+      "20 pi × 20 pi"
+    ],
+    "answer": "C",
+    "explanation": "Pour un bâtiment à risque ordinaire selon NFPA 13, l'espacement maximal entre les têtes de gicleurs est de 15 pi × 15 pi (225 pi² par tête).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est le coefficient de décharge (K-factor) typique d'une tête de gicleur résidentielle?",
+    "options": [
+      "K=2.8",
+      "K=4.2",
+      "K=5.6",
+      "K=8.0"
+    ],
+    "answer": "C",
+    "explanation": "Le K-factor typique d'une tête de gicleur résidentielle est de 5.6 (US) ou 80 (métrique). Il détermine le débit en fonction de la pression.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est le diamètre minimum d'une colonne montante d'incendie (standpipe) de classe I?",
+    "options": [
+      "3 pouces",
+      "4 pouces",
+      "5 pouces",
+      "6 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre minimum d'une colonne montante d'incendie de classe I est de 4 pouces (100 mm).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est le débit d'une colonne montante d'incendie de classe I de 4 pouces pour 3 étages?",
+    "options": [
+      "250 GPM",
+      "500 GPM",
+      "750 GPM",
+      "1000 GPM"
+    ],
+    "answer": "B",
+    "explanation": "Une colonne montante d'incendie de classe I de 4 pouces doit fournir un débit de 500 GPM pour les 3 premiers étages, plus 250 GPM par étage supplémentaire.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est le débit d'une pompe à incendie typique pour un bâtiment de 6 étages?",
+    "options": [
+      "500 GPM à 100 psi",
+      "750 GPM à 100 psi",
+      "1000 GPM à 100 psi",
+      "1500 GPM à 100 psi"
+    ],
+    "answer": "C",
+    "explanation": "Pour un bâtiment de 6 étages, une pompe à incendie de 1000 GPM à 100 psi est généralement requise pour alimenter les gicleurs et les colonnes montantes.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est le débit minimum par tête de gicleur dans un système résidentiel (NFPA 13D)?",
+    "options": [
+      "10 GPM",
+      "13 GPM",
+      "15 GPM",
+      "18 GPM"
+    ],
+    "answer": "B",
+    "explanation": "Selon NFPA 13D, le débit minimum par tête de gicleur est de 13 GPM pour l'espace vital principal.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est le temps de fonctionnement minimal d'une pompe à incendie à pleine charge?",
+    "options": [
+      "15 minutes",
+      "30 minutes",
+      "45 minutes",
+      "60 minutes"
+    ],
+    "answer": "B",
+    "explanation": "Une pompe à incendie doit pouvoir fonctionner à pleine charge pendant au moins 30 minutes selon les normes.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de système de gicleurs est utilisé dans les entrepôts frigorifiques?",
+    "options": [
+      "Système humide",
+      "Système sec (dry pipe)",
+      "Système à pré-action",
+      "Système déluge"
+    ],
+    "answer": "B",
+    "explanation": "Un système sec (dry pipe) est utilisé dans les environnements où les tuyaux pourraient geler, comme les entrepôts frigorifiques. Les tuyaux contiennent de l'air pressurisé.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de tête de gicleur est installé avec la face vers le bas, le bulbe exposé?",
+    "options": [
+      "Pendent",
+      "Upright",
+      "Sidewall",
+      "Caché (concealed)"
+    ],
+    "answer": "A",
+    "explanation": "La tête de gicleur pendent (pendant) est installée avec la face vers le bas, le bulbe thermosensible exposé vers le sol.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de tête de gicleur est installé avec la face vers le haut, utilisée dans les espaces où les tuyaux sont visibles?",
+    "options": [
+      "Pendent",
+      "Upright",
+      "Sidewall",
+      "Caché"
+    ],
+    "answer": "B",
+    "explanation": "La tête de gicleur upright est installée avec la face vers le haut, utilisée dans les entrepôts, garages et espaces où les tuyaux sont exposés.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de tête de gicleur est installé sur un mur latéral pour protéger une pièce?",
+    "options": [
+      "Pendent",
+      "Upright",
+      "Sidewall",
+      "Caché"
+    ],
+    "answer": "C",
+    "explanation": "La tête sidewall est installée sur un mur latéral, souvent utilisée dans les corridors, les petits bureaux ou sous les soffites.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de tête de gicleur est requis dans les chambres à coucher selon NFPA 13D?",
+    "options": [
+      "Gicleur standard",
+      "Gicleur à réponse rapide (quick response)",
+      "Gicleur à haute température",
+      "Gicleur caché"
+    ],
+    "answer": "B",
+    "explanation": "Selon NFPA 13D, un gicleur à réponse rapide (quick response) est requis dans les chambres à coucher pour assurer une activation rapide en cas d'incendie.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la classification de risque pour un bureau commercial selon NFPA 13?",
+    "options": [
+      "Risque léger (Light Hazard)",
+      "Risque ordinaire (Ordinary Hazard)",
+      "Risque élevé (Extra Hazard)",
+      "Risque extrême"
+    ],
+    "answer": "A",
+    "explanation": "Un bureau commercial est classé comme risque léger (Light Hazard) selon NFPA 13.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la classification de risque pour un entrepôt selon NFPA 13?",
+    "options": [
+      "Risque léger",
+      "Risque ordinaire",
+      "Risque élevé",
+      "Dépend de la hauteur d'entreposage et des matériaux"
+    ],
+    "answer": "D",
+    "explanation": "La classification d'un entrepôt dépend de la hauteur d'entreposage, des matériaux stockés et du type d'étagères.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la couleur du bulbe d'une tête de gicleur standard (155°F/68°C)?",
+    "options": [
+      "Orange ou rouge",
+      "Bleu",
+      "Vert",
+      "Jaune"
+    ],
+    "answer": "A",
+    "explanation": "La couleur du bulbe d'une tête de gicleur standard (155°F/68°C) est orange ou rouge. Le bleu indique une température plus élevée (286°F/141°C).",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la distance minimale entre une tête de gicleur et un mur?",
+    "options": [
+      "2 pouces",
+      "4 pouces",
+      "6 pouces",
+      "8 pouces"
+    ],
+    "answer": "B",
+    "explanation": "La distance minimale entre une tête de gicleur et un mur est de 4 pouces (100 mm). La distance maximale est généralement de 7 pieds 6 pouces.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la pression d'essai d'un système de gicleurs (hydrostatique)?",
+    "options": [
+      "100 psi",
+      "150 psi",
+      "200 psi",
+      "250 psi"
+    ],
+    "answer": "C",
+    "explanation": "L'essai hydrostatique d'un système de gicleurs est effectué à 200 psi (1379 kPa) pendant 2 heures selon NFPA 13.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la pression minimale au niveau du raccord le plus élevé d'un standpipe de classe I?",
+    "options": [
+      "50 psi",
+      "65 psi",
+      "75 psi",
+      "100 psi"
+    ],
+    "answer": "B",
+    "explanation": "La pression minimale au niveau du raccord le plus élevé d'un standpipe de classe I est de 65 psi (450 kPa).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la pression résiduelle minimale à l'entrée d'un système de gicleurs (NFPA 13)?",
+    "options": [
+      "50 psi",
+      "75 psi",
+      "100 psi",
+      "125 psi"
+    ],
+    "answer": "C",
+    "explanation": "Selon NFPA 13, la pression résiduelle minimale à l'entrée d'un système de gicleurs à risque ordinaire est de 100 psi (690 kPa).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la superficie maximale par étage protégée par un système NFPA 13R?",
+    "options": [
+      "12 000 pi²",
+      "15 000 pi²",
+      "18 000 pi²",
+      "20 000 pi²"
+    ],
+    "answer": "A",
+    "explanation": "Selon NFPA 13R, la superficie maximale par étage est de 12 000 pi² pour un système résidentiel.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la surface maximale couverte par une tête de gicleur standard?",
+    "options": [
+      "100 pi²",
+      "150 pi²",
+      "200 pi²",
+      "225 pi²"
+    ],
+    "answer": "D",
+    "explanation": "La surface maximale couverte par une tête de gicleur standard est de 225 pi² (15 pi × 15 pi) pour un risque ordinaire.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la température de déclenchement d'une tête de gicleur à haute température (bleue)?",
+    "options": [
+      "200°F (93°C)",
+      "286°F (141°C)",
+      "360°F (182°C)",
+      "400°F (204°C)"
+    ],
+    "answer": "B",
+    "explanation": "Une tête de gicleur à haute température (bulbe bleu) se déclenche à 286°F (141°C), utilisée près des sources de chaleur comme les chaudières.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la température de déclenchement standard d'une tête de gicleur (bulbe rouge ou orange)?",
+    "options": [
+      "135°F (57°C)",
+      "155°F (68°C)",
+      "175°F (79°C)",
+      "200°F (93°C)"
+    ],
+    "answer": "B",
+    "explanation": "La température standard de déclenchement est de 155°F (68°C) pour les têtes de gicleur avec bulbe rouge ou orange.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la température maximale ambiante pour une tête de gicleur standard (155°F/68°C)?",
+    "options": [
+      "100°F (38°C)",
+      "120°F (49°C)",
+      "130°F (54°C)",
+      "150°F (66°C)"
+    ],
+    "answer": "A",
+    "explanation": "La température ambiante maximale pour une tête de gicleur standard (155°F) est de 100°F (38°C). Au-delà, le bulbe risquerait de se briser prématurément.",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle norme NFPA régit l'installation des systèmes de gicleurs commerciaux?",
+    "options": [
+      "NFPA 13",
+      "NFPA 13R",
+      "NFPA 13D",
+      "NFPA 14"
+    ],
+    "answer": "A",
+    "explanation": "La norme NFPA 13 (Standard for the Installation of Sprinkler Systems) régit les systèmes de gicleurs commerciaux et industriels.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle norme NFPA régit l'installation des systèmes de gicleurs dans les bâtiments résidentiels de plus de 4 logements?",
+    "options": [
+      "NFPA 13",
+      "NFPA 13R",
+      "NFPA 13D",
+      "NFPA 14"
+    ],
+    "answer": "B",
+    "explanation": "La norme NFPA 13R régit les systèmes de gicleurs dans les bâtiments résidentiels de 4 étages et moins (incluant les condos et appartements).",
+    "difficulty": "MOYEN"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle norme NFPA régit l'installation des systèmes de gicleurs résidentiels?",
+    "options": [
+      "NFPA 13",
+      "NFPA 13R",
+      "NFPA 13D",
+      "NFPA 14"
+    ],
+    "answer": "C",
+    "explanation": "La norme NFPA 13D (Standard for the Installation of Sprinkler Systems in One- and Two-Family Dwellings) régit les systèmes résidentiels unifamiliaux.",
+    "difficulty": "FACILE"
+  },
+  {
+    "chapter": 8,
+    "question": "Quels sont les trois types de systèmes de standpipe (classe I, II, III)?",
+    "options": [
+      "Classe I: usage pompiers, Classe II: usage occupants, Classe III: les deux",
+      "Classe I: intérieur, Classe II: extérieur, Classe III: souterrain",
+      "Classe I: résidentiel, Classe II: commercial, Classe III: industriel",
+      "Classe I: eau, Classe II: mousse, Classe III: chimique"
+    ],
+    "answer": "A",
+    "explanation": "Classe I : raccord de 2.5 po pour usage des pompiers. Classe II : tuyau de 1.5 po pour usage des occupants. Classe III : combine les deux.",
+    "difficulty": "MOYEN"
+  }
+]

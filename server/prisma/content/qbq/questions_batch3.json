@@ -1,0 +1,3954 @@
+[
+  {
+    "chapter": 1,
+    "question": "Quel procédé de soudage utilise un arc électrique entre une électrode de tungstène non consommable et la pièce à souder?",
+    "options": [
+      "SMAW",
+      "GMAW",
+      "GTAW (TIG)",
+      "FCAW"
+    ],
+    "answer": "C",
+    "explanation": "Le GTAW (Gas Tungsten Arc Welding) ou TIG utilise une électrode de tungstène non consommable et un gaz de protection inerte.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Dans quelle position de soudage la pièce est-elle inclinée à 45 degrés et le cordon est réalisé sur un plan incliné?",
+    "options": [
+      "Position 1G",
+      "Position 2G",
+      "Position 3G",
+      "Position 6G"
+    ],
+    "answer": "D",
+    "explanation": "La position 6G est une position de tuyau inclinée à 45 degrés, combinant les défis des positions 2G, 5G et horizontale.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce que le facteur de marche (duty cycle) d'une source de courant de soudage?",
+    "options": [
+      "Le pourcentage de temps pendant lequel la source peut fonctionner à son courant nominal sur un cycle de 10 minutes",
+      "Le nombre d'heures de fonctionnement avant entretien",
+      "La tension maximale que la source peut fournir",
+      "Le rendement énergétique de la source en pourcentage"
+    ],
+    "answer": "A",
+    "explanation": "Le facteur de marche est le pourcentage de temps sur une période de 10 minutes pendant lequel la source peut débiter son courant nominal sans surchauffe.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel type de source de courant convertit le courant alternatif en courant continu par un processus électronique à haute fréquence?",
+    "options": [
+      "Transformateur",
+      "Redresseur",
+      "Inverseur (inverter)",
+      "Génératrice"
+    ],
+    "answer": "C",
+    "explanation": "Une source à inverseur (inverter) convertit le CA en CC à haute fréquence, offrant un meilleur rendement, un poids réduit et un contrôle précis de l'arc.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel courant de soudage est recommandé pour souder l'aluminium au procédé GTAW?",
+    "options": [
+      "CC+ (DCEN)",
+      "CC- (DCEP)",
+      "CA (alternatif)",
+      "Pulsé CC"
+    ],
+    "answer": "C",
+    "explanation": "Le courant alternatif (CA) est utilisé pour le soudage GTAW de l'aluminium car il combine le nettoyage par ions positifs et la pénétration par électrons négatifs.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la fonction principale du dévidoir dans un poste GMAW?",
+    "options": [
+      "Régler la tension de soudage",
+      "Acheminer le fil d'apport de la bobine jusqu'à la torche",
+      "Filtrer le gaz de protection",
+      "Refroidir la torche"
+    ],
+    "answer": "B",
+    "explanation": "Le dévidoir (wire feeder) achemine le fil d'apport de la bobine jusqu'à la torche à une vitesse constante et réglable.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Dans quel procédé le fil d'apport est-il alimenté en continu à l'intérieur d'une torche et ne nécessite pas de gaz de protection externe?",
+    "options": [
+      "SMAW",
+      "GMAW",
+      "FCAW auto-protégé",
+      "GTAW"
+    ],
+    "answer": "C",
+    "explanation": "Le FCAW auto-protégé (self-shielded) contient des substances dans le flux du fil qui génèrent un gaz de protection lors de la combustion.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la principale différence entre le procédé GMAW et le procédé FCAW?",
+    "options": [
+      "Le GMAW utilise un fil plein et un gaz externe, le FCAW utilise un fil fourré",
+      "Le GMAW est manuel, le FCAW est automatique",
+      "Le GMAW ne peut souder que l'acier, le FCAW tous les métaux",
+      "Le GMAW nécessite un préchauffage, pas le FCAW"
+    ],
+    "answer": "A",
+    "explanation": "Le GMAW utilise un fil plein avec un gaz de protection externe, tandis que le FCAW utilise un fil fourré contenant un flux qui peut être auto-protégé ou nécessiter un gaz.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la position de soudage la plus difficile pour un soudeur?",
+    "options": [
+      "À plat (1G)",
+      "Horizontale (2G)",
+      "Verticale (3G)",
+      "Au-dessus de la tête (4G)"
+    ],
+    "answer": "D",
+    "explanation": "La position au-dessus de la tête (4G/4F) est considérée comme la plus difficile car la gravité fait couler le métal en fusion vers le bas.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le rôle du serre-câble de masse (ground clamp) dans un circuit de soudage?",
+    "options": [
+      "Isoler le soudeur du courant",
+      "Compléter le circuit électrique en retournant le courant à la source",
+      "Régler l'intensité du courant",
+      "Protéger contre les surtensions"
+    ],
+    "answer": "B",
+    "explanation": "Le serre-câble de masse complète le circuit électrique en retournant le courant de la pièce vers la source de courant de soudage.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la fonction du revêtement (enrobage) sur une électrode SMAW?",
+    "options": [
+      "Conduire le courant électrique",
+      "Protéger le bain de fusion de l'atmosphère et stabiliser l'arc",
+      "Empêcher la rouille",
+      "Augmenter la vitesse de dépôt"
+    ],
+    "answer": "B",
+    "explanation": "L'enrobage de l'électrode SMAW fond pour créer un gaz de protection et du laitier qui protègent le bain de fusion de l'oxygène et de l'azote de l'air.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Dans le soudage GMAW, quel gaz de protection est généralement recommandé pour le soudage de l'acier au carbone avec transfert par court-circuit?",
+    "options": [
+      "Argon pur",
+      "Hélium pur",
+      "Mélange Ar/CO2 75%/25%",
+      "CO2 pur"
+    ],
+    "answer": "C",
+    "explanation": "Le mélange Ar/CO2 75%/25% est couramment utilisé pour le soudage GMAW de l'acier au carbone en transfert par court-circuit car il offre un bon équilibre entre pénétration et stabilité de l'arc.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la plage d'ampérage typique pour une électrode SMAW de 1/8 de pouce (3,2 mm)?",
+    "options": [
+      "50-80 A",
+      "90-140 A",
+      "150-200 A",
+      "200-300 A"
+    ],
+    "answer": "B",
+    "explanation": "Pour une électrode SMAW de 1/8 pouce (3,2 mm), la plage d'ampérage recommandée est généralement de 90 à 140 ampères selon le type d'électrode.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la fonction d'un transformateur dans une source de courant de soudage?",
+    "options": [
+      "Convertir le CA en CC",
+      "Augmenter le voltage et diminuer le courant",
+      "Réduire la tension du réseau à une tension adaptée au soudage",
+      "Stocker l'énergie électrique"
+    ],
+    "answer": "C",
+    "explanation": "Le transformateur réduit la tension du réseau électrique (120V, 208V, 240V, etc.) à une tension adaptée au soudage (généralement 15-40V à l'arc).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le principal avantage d'une source à inverseur (inverter) comparé à un transformateur-redresseur traditionnel?",
+    "options": [
+      "Prix plus bas",
+      "Poids et taille réduits avec meilleur rendement énergétique",
+      "Puissance plus élevée",
+      "Durée de vie plus longue"
+    ],
+    "answer": "B",
+    "explanation": "Les sources à inverseur sont beaucoup plus légères et compactes car elles fonctionnent à haute fréquence, ce qui permet d'utiliser un transformateur beaucoup plus petit avec un meilleur rendement énergétique.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce que la polarité DCEP (Direct Current Electrode Positive)?",
+    "options": [
+      "L'électrode est connectée au positif, la pièce au négatif",
+      "L'électrode est connectée au négatif, la pièce au positif",
+      "Le courant alterne entre positif et négatif",
+      "La polarité est inversée automatiquement"
+    ],
+    "answer": "A",
+    "explanation": "En DCEP (CC+), l'électrode est connectée à la borne positive. Cela concentre la chaleur sur l'électrode, utile pour SMAW et GMAW.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la position de soudage 5G?",
+    "options": [
+      "Tuyau horizontal soudé en position verticale fixe",
+      "Tuyau à 45 degrés",
+      "Soudage à plat",
+      "Soudage vertical descendant"
+    ],
+    "answer": "A",
+    "explanation": "La position 5G est celle d'un tuyau en position horizontale (axe horizontal) qui est soudé sans rotation, le soudeur se déplaçant autour du joint.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est l'effet d'une augmentation de la longueur de l'arc en SMAW?",
+    "options": [
+      "Augmentation de la pénétration",
+      "Diminution de la pénétration et augmentation des projections",
+      "Arc plus stable",
+      "Meilleur contrôle du bain de fusion"
+    ],
+    "answer": "B",
+    "explanation": "Un arc trop long diminue la pénétration, augmente les projections et peut causer de la porosité. L'arc doit être maintenu à une longueur égale au diamètre de l'électrode.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Dans quel procédé de soudage utilise-t-on une pédale pour contrôler l'intensité du courant?",
+    "options": [
+      "SMAW",
+      "GMAW",
+      "GTAW (TIG)",
+      "FCAW"
+    ],
+    "answer": "C",
+    "explanation": "En GTAW (TIG), une pédale de commande permet au soudeur de contrôler l'intensité du courant en temps réel pendant le soudage.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la fonction du laitier (slag) formé lors du soudage SMAW?",
+    "options": [
+      "Augmenter la vitesse de soudage",
+      "Protéger le cordon en refroidissement contre l'oxydation et ralentir le refroidissement",
+      "Augmenter la résistance mécanique",
+      "Améliorer la conductivité électrique"
+    ],
+    "answer": "B",
+    "explanation": "Le laitier protège le métal en fusion et en refroidissement contre l'oxydation atmosphérique et ralentit la vitesse de refroidissement, ce qui favorise une meilleure microstructure.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce que le stick-out en soudage GMAW?",
+    "options": [
+      "La distance entre le tube contact et la pièce",
+      "La longueur du fil qui dépasse du tube contact",
+      "La distance entre la buse de gaz et la pièce",
+      "La longueur du bain de fusion"
+    ],
+    "answer": "B",
+    "explanation": "Le stick-out (ou extension d'électrode) est la longueur de fil qui dépasse du tube contact. Il est généralement de 10 à 20 mm en GMAW.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le principal avantage d'un redresseur par rapport à un transformateur simple?",
+    "options": [
+      "Il produit du courant alternatif",
+      "Il convertit le CA en CC, permettant le soudage en courant continu",
+      "Il augmente la fréquence du courant",
+      "Il réduit le poids de la machine"
+    ],
+    "answer": "B",
+    "explanation": "Le redresseur convertit le courant alternatif en courant continu, ce qui offre un arc plus stable et plus de flexibilité dans le choix des électrodes.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Pour une source de courant de 300 ampères avec un facteur de marche de 60%, quel est le courant maximal en utilisation continue?",
+    "options": [
+      "180 A",
+      "232 A",
+      "300 A",
+      "500 A"
+    ],
+    "answer": "B",
+    "explanation": "Le courant nominal en utilisation continue = 300 A × √(0,6) ≈ 232 A. Alternativement, la source peut fournir 300A pendant 6 minutes sur un cycle de 10 minutes.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel type de câble de soudage est généralement utilisé pour connecter le porte-électrode à la source de courant?",
+    "options": [
+      "Câble coaxial",
+      "Câble souple isolé en caoutchouc de haute flexibilité",
+      "Fil de cuivre rigide",
+      "Câble blindé"
+    ],
+    "answer": "B",
+    "explanation": "Les câbles de soudage sont des câbles souples isolés en caoutchouc (néoprène) conçus pour résister aux conditions difficiles et à la flexibilité requise en soudage.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la fonction d'une pince de masse dans le circuit de soudage?",
+    "options": [
+      "Maintenir la pièce en place",
+      "Établir une connexion électrique entre la pièce et la source de courant",
+      "Mesurer le courant de soudage",
+      "Protéger le soudeur des chocs électriques"
+    ],
+    "answer": "B",
+    "explanation": "La pince de masse (ground clamp) établit une connexion électrique fiable entre la pièce à souder et la source de courant pour fermer le circuit.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le principal inconvénient du soudage en position verticale montante (3G up)?",
+    "options": [
+      "Faible pénétration",
+      "Risque de coulure du métal en fusion",
+      "Vitesse de soudage plus lente",
+      "Nécessite plus de gaz de protection"
+    ],
+    "answer": "B",
+    "explanation": "En position verticale montante, la gravité attire le métal en fusion vers le bas, créant un risque de coulure. Le soudeur doit contrôler soigneusement le bain de fusion.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la plage de tension typique pour le soudage GMAW en court-circuit sur acier mince?",
+    "options": [
+      "10-14 V",
+      "14-22 V",
+      "24-30 V",
+      "30-40 V"
+    ],
+    "answer": "B",
+    "explanation": "Le transfert par court-circuit en GMAW se fait généralement entre 14 et 22 volts, ce qui donne un arc court et une faible pénétration adaptée aux aciers minces.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le rôle de la buse de gaz dans une torche GMAW ou GTAW?",
+    "options": [
+      "Guider le fil d'apport",
+      "Diriger le gaz de protection vers le bain de fusion",
+      "Conduire le courant électrique",
+      "Refroidir la torche"
+    ],
+    "answer": "B",
+    "explanation": "La buse de gaz dirige le gaz de protection autour de l'arc et du bain de fusion pour les protéger de la contamination atmosphérique.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Comment s'appelle la partie du joint où les pièces sont alignées avant le soudage?",
+    "options": [
+      "La racine (root)",
+      "Le talon (land)",
+      "L'angle d'ouverture",
+      "La face de la racine (root face)"
+    ],
+    "answer": "A",
+    "explanation": "La racine (root) est la partie inférieure du joint où les pièces se rencontrent. Une bonne préparation de la racine est essentielle pour une pénétration complète.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce que l'angle d'attaque (travel angle) en soudage?",
+    "options": [
+      "L'angle entre l'électrode et la ligne de joint dans le plan de déplacement",
+      "L'angle entre l'électrode et la pièce perpendiculairement au joint",
+      "L'angle d'ouverture du joint",
+      "L'angle des bords de la pièce"
+    ],
+    "answer": "A",
+    "explanation": "L'angle d'attaque est l'angle entre l'électrode/fil et la ligne de joint, mesuré dans le plan de déplacement. Il influence la pénétration et la forme du cordon.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est le principal avantage du soudage semi-automatique GMAW par rapport au soudage manuel SMAW?",
+    "options": [
+      "Coût réduit",
+      "Aucun gaz nécessaire",
+      "Taux de dépôt plus élevé et continuité du cordon",
+      "Meilleur pour les travaux extérieurs"
+    ],
+    "answer": "C",
+    "explanation": "Le GMAW semi-automatique offre un taux de dépôt plus élevé et une continuité du cordon car l'alimentation du fil est continue, sans arrêt pour changer d'électrode.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Dans quel procédé de soudage utilise-t-on un gaz de protection à base d'argon ou d'hélium exclusivement?",
+    "options": [
+      "SMAW",
+      "GMAW sur acier",
+      "GTAW (TIG)",
+      "FCAW"
+    ],
+    "answer": "C",
+    "explanation": "Le GTAW utilise exclusivement des gaz inertes comme l'argon ou l'hélium pour protéger l'électrode de tungstène et le bain de fusion.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel courant est recommandé pour souder une tôle mince avec l'électrode E6013?",
+    "options": [
+      "Courant élevé et vitesse rapide",
+      "Courant faible pour éviter de brûler la tôle",
+      "Courant alternatif seulement",
+      "Courant maximum de la machine"
+    ],
+    "answer": "B",
+    "explanation": "Pour les tôles minces, un courant faible est nécessaire pour éviter de brûler à travers le métal. L'E6013 avec un faible ampérage convient bien aux tôles minces.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la séquence correcte pour démarrer un arc en SMAW?",
+    "options": [
+      "Toucher la pièce et soulever rapidement l'électrode",
+      "Appuyer l'électrode contre la pièce pendant 3 secondes",
+      "Frotter l'électrode comme une allumette sur la pièce",
+      "Les deux techniques de grattage et de tapotement sont valables"
+    ],
+    "answer": "D",
+    "explanation": "Les deux techniques d'amorçage de l'arc — le grattage (scratch start) et le tapotement (tap start) — sont valables. Le choix dépend de la préférence du soudeur et de la situation.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Qu'est-ce que l'angle de travail (work angle) en soudage?",
+    "options": [
+      "L'angle entre l'électrode et la ligne de joint dans le plan de déplacement",
+      "L'angle entre l'électrode et la pièce perpendiculairement à la direction de soudage",
+      "L'angle de chanfrein du joint",
+      "L'angle du biseau"
+    ],
+    "answer": "B",
+    "explanation": "L'angle de travail est l'angle entre l'électrode et la pièce, mesuré perpendiculairement à la direction de soudage. Il influence la répartition du métal entre les deux pièces.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 1,
+    "question": "Pour le soudage SMAW des assemblages en T en position à plat, quel angle de travail recommande-t-on généralement?",
+    "options": [
+      "30 degrés",
+      "45 degrés",
+      "60 degrés",
+      "90 degrés"
+    ],
+    "answer": "B",
+    "explanation": "Pour un assemblage en T, l'angle de travail est généralement de 45 degrés pour répartir également la chaleur et le métal d'apport entre les deux pièces.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quel est l'effet d'un stick-out trop long en GMAW?",
+    "options": [
+      "Arc plus stable",
+      "Diminution du courant de soudage et arc instable",
+      "Augmentation de la pénétration",
+      "Meilleur aspect du cordon"
+    ],
+    "answer": "B",
+    "explanation": "Un stick-out trop long augmente la résistance électrique dans le fil, ce qui réduit le courant de soudage disponible à l'arc et rend l'arc instable.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 1,
+    "question": "Quelle est la norme CSA qui définit les symboles de soudage au Canada?",
+    "options": [
+      "CSA W47.1",
+      "CSA W59",
+      "CSA W117.2",
+      "CSA W186"
+    ],
+    "answer": "B",
+    "explanation": "La norme CSA W186 fait référence aux symboles de soudage. Cependant, le Canada utilise généralement AWS A2.4 comme référence pour les symboles de soudage.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle norme canadienne régit la certification des entreprises de soudage?",
+    "options": [
+      "CSA W59",
+      "CSA W47.1",
+      "CSA W117.2",
+      "CSA W178.1"
+    ],
+    "answer": "B",
+    "explanation": "La CSA W47.1 est la norme de certification des entreprises de soudage par fusion au Canada, avec ses divisions 1, 2 et 3 selon le niveau de responsabilité.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Que signifie l'acronyme WPS?",
+    "options": [
+      "Welding Performance Standard",
+      "Welding Procedure Specification",
+      "Welding Process Sheet",
+      "Welding Parameter Specification"
+    ],
+    "answer": "B",
+    "explanation": "WPS signifie Welding Procedure Specification (Spécification de la Procédure de Soudage), un document détaillant les paramètres et variables pour une procédure de soudage spécifique.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce qu'un WPQR?",
+    "options": [
+      "Welding Procedure Qualification Record",
+      "Welding Performance Quality Report",
+      "Welding Process Quality Requirement",
+      "Welding Parameter Quick Reference"
+    ],
+    "answer": "A",
+    "explanation": "WPQR signifie Welding Procedure Qualification Record (Enregistrement de Qualification de Procédure de Soudage), qui valide que la WPS produit des soudures conformes.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle division de la CSA W47.1 est requise pour le soudage de structures critiques classées?",
+    "options": [
+      "Division 1",
+      "Division 2",
+      "Division 3",
+      "Division 4"
+    ],
+    "answer": "A",
+    "explanation": "La Division 1 de CSA W47.1 est requise pour les structures critiques et les travaux les plus exigeants où la sécurité est primordiale.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la différence principale entre la Division 2 et la Division 3 de la CSA W47.1?",
+    "options": [
+      "Division 2 permet le soudage sur acier seulement, Division 3 sur tous les métaux",
+      "Division 2 est pour les composants non structuraux, Division 3 pour les structures",
+      "Division 2 couvre les structures non critiques, Division 3 les composants non structuraux légers",
+      "Division 2 exige un inspecteur à temps plein, Division 3 non"
+    ],
+    "answer": "C",
+    "explanation": "La Division 2 est pour les structures non critiques et les composants porteurs secondaires. La Division 3 est pour les composants non structuraux légers sans exigences de résistance élevées.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle norme régit les critères d'acceptation des soudures dans les structures en acier au Canada?",
+    "options": [
+      "CSA W47.1",
+      "CSA W59",
+      "AWS D1.1",
+      "CSA W178.1"
+    ],
+    "answer": "B",
+    "explanation": "La CSA W59 est la norme canadienne pour le soudage des structures en acier, incluant les critères d'acceptation des soudures.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Que signifie l'acronyme PQR?",
+    "options": [
+      "Process Qualification Record",
+      "Procedure Qualification Record",
+      "Production Quality Report",
+      "Preheating Qualification Record"
+    ],
+    "answer": "B",
+    "explanation": "PQR signifie Procedure Qualification Record, le document qui enregistre les résultats des essais de qualification d'une procédure de soudage.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce qu'une variable essentielle dans le contexte d'une WPS?",
+    "options": [
+      "Une variable qui affecte les propriétés mécaniques de la soudure et dont le changement nécessite une requalification",
+      "Une variable optionnelle qui peut être modifiée librement",
+      "La vitesse de soudage uniquement",
+      "Le type de courant seulement"
+    ],
+    "answer": "A",
+    "explanation": "Une variable essentielle est un paramètre qui, s'il est modifié au-delà des tolérances établies, nécessite une requalification complète de la procédure de soudage.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Parmi les éléments suivants, lequel est une variable essentielle pour la qualification d'une procédure de soudage?",
+    "options": [
+      "La marque de la soudeuse",
+      "Le métal de base",
+      "La couleur de l'électrode",
+      "Le nom du soudeur"
+    ],
+    "answer": "B",
+    "explanation": "Le métal de base est une variable essentielle. Changer de groupe de métal de base (ex: acier au carbone vers acier inoxydable) nécessite une requalification de la procédure.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon la CSA W47.1, qui peut superviser les activités de soudage dans une entreprise certifiée?",
+    "options": [
+      "N'importe quel employé",
+      "Un superviseur de soudage qualifié selon la norme",
+      "Un ingénieur civil",
+      "Le propriétaire de l'entreprise"
+    ],
+    "answer": "B",
+    "explanation": "La CSA W47.1 exige qu'un superviseur de soudage qualifié supervise les activités de soudage. Cette personne doit avoir les compétences et connaissances appropriées.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce que la préchauffe (preheat) comme variable essentielle?",
+    "options": [
+      "La température minimale du métal de base avant le soudage",
+      "La température de l'atelier",
+      "La température de l'électrode",
+      "La température de la flamme"
+    ],
+    "answer": "A",
+    "explanation": "La température de préchauffe est la température minimale à laquelle le métal de base doit être porté avant le soudage. C'est une variable essentielle car elle affecte la vitesse de refroidissement.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la différence entre une WPS préqualifiée et une WPS qualifiée par essai?",
+    "options": [
+      "La WPS préqualifiée est basée sur des données publiées sans essais, la WPS qualifiée est validée par des essais",
+      "Il n'y a aucune différence",
+      "La WPS préqualifiée est plus restrictive",
+      "La WPS qualifiée est moins chère"
+    ],
+    "answer": "A",
+    "explanation": "Une WPS préqualifiée s'appuie sur des données de soudage éprouvées publiées dans les normes. Une WPS qualifiée nécessite des essais destructifs et non destructifs pour validation.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon la CSA W59, quel est le critère d'acceptation pour une porosité visible dans une soudure d'angle?",
+    "options": [
+      "Aucune porosité n'est acceptée",
+      "Les pores ne doivent pas dépasser 1/16 po (1,6 mm) de diamètre",
+      "Jusqu'à 5 pores par pouce linéaire",
+      "La porosité est toujours acceptable"
+    ],
+    "answer": "B",
+    "explanation": "Selon la CSA W59, les pores visibles dans une soudure d'angle ne doivent généralement pas dépasser 1/16 de pouce (1,6 mm) de diamètre.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce qu'un essai de pliage (bend test) dans le cadre d'un WPQR?",
+    "options": [
+      "Un test de flexibilité du métal de base",
+      "Un essai destructif qui vérifie la ductilité et la santé de la soudure",
+      "Un test non destructif par ultrasons",
+      "Une inspection visuelle du cordon"
+    ],
+    "answer": "B",
+    "explanation": "L'essai de pliage est un essai destructif qui plie l'échantillon de soudure à 180 degrés pour vérifier la ductilité et détecter des défauts internes comme le manque de fusion ou les criques.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon CSA W178.1, quels sont les trois niveaux d'inspecteur en soudage?",
+    "options": [
+      "Niveau 1, 2 et 3",
+      "Niveau A, B et C",
+      "Junior, Senior et Master",
+      "Inspecteur général, spécialiste et superviseur"
+    ],
+    "answer": "A",
+    "explanation": "La CSA W178.1 définit trois niveaux d'inspecteur en soudage : Niveau 1 (junior), Niveau 2 (intermédiaire) et Niveau 3 (senior/avancé).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la durée de validité typique d'un WPQR selon les normes CSA?",
+    "options": [
+      "1 an",
+      "5 ans",
+      "La procédure reste valide tant que les conditions ne changent pas",
+      "10 ans"
+    ],
+    "answer": "C",
+    "explanation": "Un WPQR reste valide tant que les conditions de fabrication et les variables essentielles restent dans les limites qualifiées. Il n'a pas de date d'expiration fixe si les conditions sont maintenues.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est le but principal d'un WPS?",
+    "options": [
+      "Fournir des instructions détaillées au soudeur pour produire une soudure conforme",
+      "Certifier le soudeur",
+      "Calculer le coût du soudage",
+      "Évaluer la qualité du métal de base"
+    ],
+    "answer": "A",
+    "explanation": "Le WPS fournit des instructions détaillées et normalisées au soudeur, incluant tous les paramètres de soudage nécessaires pour produire une soudure conforme aux exigences.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Dans le cadre du WPQR, combien d'éprouvettes de pliage sont généralement nécessaires?",
+    "options": [
+      "1 éprouvette",
+      "2 éprouvettes (face et racine)",
+      "4 éprouvettes (2 face et 2 racine)",
+      "6 éprouvettes"
+    ],
+    "answer": "C",
+    "explanation": "Typiquement, 4 éprouvettes de pliage sont nécessaires : 2 en pliage de la face et 2 en pliage de la racine pour une tôle, ou 4 pliages latéraux pour une tôle épaisse.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce qu'une variable non essentielle dans une WPS?",
+    "options": [
+      "Une variable qui ne peut jamais être modifiée",
+      "Une variable qui peut être modifiée sans requalification de la procédure",
+      "Une variable qui n'affecte que l'apparence",
+      "Une variable qui nécessite l'approbation du client"
+    ],
+    "answer": "B",
+    "explanation": "Une variable non essentielle peut être modifiée sans requalification de la procédure de soudage. Elle est documentée sur le WPS mais son changement ne remet pas en cause la qualification.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est le rôle du métal d'apport dans les variables essentielles?",
+    "options": [
+      "Il n'est pas considéré comme une variable essentielle",
+      "Le groupe et le type de métal d'apport sont des variables essentielles",
+      "Seule la marque est essentielle",
+      "Seul le diamètre est essentiel"
+    ],
+    "answer": "B",
+    "explanation": "Le groupe et le type de métal d'apport (classification de l'électrode ou du fil) sont des variables essentielles. Changer de classification nécessite une requalification.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Que signifie le terme «PWHT» dans le contexte du soudage?",
+    "options": [
+      "Pre-Weld Heat Treatment",
+      "Post-Weld Heat Treatment",
+      "Progressive Welding Hardness Test",
+      "Pressure Welding High Temperature"
+    ],
+    "answer": "B",
+    "explanation": "PWHT signifie Post-Weld Heat Treatment (Traitement Thermique Après Soudage). C'est une variable essentielle car elle affecte les propriétés mécaniques et la microstructure de la soudure.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon CSA W47.1, quelle division exige que l'entreprise ait un ingénieur en soudage?",
+    "options": [
+      "Division 1 seulement",
+      "Division 1 et 2",
+      "Division 3 seulement",
+      "Aucune division n'exige d'ingénieur"
+    ],
+    "answer": "A",
+    "explanation": "La Division 1 de CSA W47.1 exige que l'entreprise certifiée ait un ingénieur en soudage qualifié pour superviser les activités techniques de soudage.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce qu'un joint design (conception du joint) comme variable essentielle?",
+    "options": [
+      "Le type de joint (en T, à recouvrement, bout à bout) et la préparation des bords",
+      "La longueur du joint",
+      "La couleur de la peinture sur le joint",
+      "Le nombre de passes"
+    ],
+    "answer": "A",
+    "explanation": "Le type de joint (bout à bout, en T, à recouvrement) et la préparation des bords (angle de chanfrein, talon, espacement) sont des variables essentielles de la WPS.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est l'épaisseur maximale qualifiée par un WPQR sur une tôle de 1 pouce (25 mm)?",
+    "options": [
+      "1 po",
+      "1,5 po",
+      "2 po",
+      "Illimité"
+    ],
+    "answer": "C",
+    "explanation": "Généralement, l'épaisseur maximale qualifiée est le double de l'épaisseur de la tôle qualifiée. Donc pour 1 po, on qualifie jusqu'à 2 po d'épaisseur.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la fonction du numéro A (A-Number) dans la classification du métal d'apport?",
+    "options": [
+      "Indiquer la couleur de l'électrode",
+      "Classer le métal d'apport par composition chimique du métal déposé",
+      "Indiquer la dureté du métal déposé",
+      "Donner le prix du métal d'apport"
+    ],
+    "answer": "B",
+    "explanation": "Le numéro A (A-Number) classe le métal d'apport selon la composition chimique du métal déposé, permettant d'établir les équivalences entre différentes classifications.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce qu'un PQR (Procedure Qualification Record)?",
+    "options": [
+      "Le même document qu'un WPS",
+      "Le document qui enregistre les paramètres réels utilisés et les résultats des tests de qualification",
+      "Un permis de souder",
+      "Un certificat de naissance du soudeur"
+    ],
+    "answer": "B",
+    "explanation": "Le PQR enregistre les paramètres réels utilisés pendant l'essai de qualification de la procédure, ainsi que les résultats des essais destructifs et non destructifs.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel type d'essai destructif est généralement requis pour qualifier une WPS sur acier au carbone d'épaisseur 3/8 po (10 mm)?",
+    "options": [
+      "Inspection visuelle seulement",
+      "Essais de traction et de pliage",
+      "Essai de dureté seulement",
+      "Analyse chimique seulement"
+    ],
+    "answer": "B",
+    "explanation": "Pour qualifier une WPS, des essais de traction (pour la résistance) et de pliage (pour la ductilité) sont généralement requis, en plus des essais non destructifs.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Dans le cadre de la CSA W59, qu'est-ce qu'une soudure pleine pénétration (full penetration)?",
+    "options": [
+      "Une soudure qui pénètre 50% de l'épaisseur",
+      "Une soudure où le métal d'apport fusionne complètement l'épaisseur du joint",
+      "Une soudure qui traverse complètement la pièce",
+      "Une soudure avec une pénétration minimale de 1/8 po"
+    ],
+    "answer": "B",
+    "explanation": "Une soudure pleine pénétration signifie que le métal d'apport et la fusion traversent complètement l'épaisseur du joint jusqu'à la racine.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Quelle est la durée de validité typique d'une certification de soudeur selon CSA W47.1?",
+    "options": [
+      "6 mois",
+      "2 ans",
+      "5 ans",
+      "À vie"
+    ],
+    "answer": "B",
+    "explanation": "Selon CSA W47.1, la certification d'un soudeur est généralement valide pour 2 ans, après quoi une requalification est nécessaire.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce qu'un essai de macro-attaque (macroetch) dans le cadre d'un WPQR?",
+    "options": [
+      "Un test microscopique à 1000x",
+      "Un test qui révèle la structure macroscopique de la soudure après attaque chimique",
+      "Un test de dureté",
+      "Un test de traction"
+    ],
+    "answer": "B",
+    "explanation": "L'essai de macro-attaque utilise un acide pour révéler la structure macroscopique de la soudure, montrant les zones de fusion, la ZAT et les défauts éventuels.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est l'effet d'un changement du métal de base du groupe I au groupe II sur la qualification d'une WPS?",
+    "options": [
+      "Aucun effet",
+      "Changement de polarité seulement",
+      "C'est un changement de variable essentielle qui nécessite une requalification",
+      "Seulement si l'épaisseur change aussi"
+    ],
+    "answer": "C",
+    "explanation": "Changer le groupe de métal de base (ex: d'acier au carbone groupe I à acier à haute résistance groupe II) est un changement de variable essentielle qui requiert une requalification de la WPS.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce que la portée de qualification (range of qualification) d'un WPQR?",
+    "options": [
+      "Les limites acceptables des variables autour des valeurs testées",
+      "La zone géographique où la procédure s'applique",
+      "Le nombre de soudeurs qui peuvent utiliser la procédure",
+      "La durée de vie de la procédure"
+    ],
+    "answer": "A",
+    "explanation": "La portée de qualification définit les limites (épaisseur, diamètre, position, etc.) dans lesquelles la procédure de soudage qualifiée peut être utilisée sans requalification.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Qui est responsable de la préparation et de la maintenance des WPS dans une entreprise certifiée CSA W47.1?",
+    "options": [
+      "N'importe quel soudeur",
+      "L'ingénieur en soudage ou le superviseur de soudage qualifié",
+      "Le client",
+      "Le fournisseur de métal d'apport"
+    ],
+    "answer": "B",
+    "explanation": "L'ingénieur en soudage ou le superviseur de soudage qualifié est responsable de la préparation, de la validation et de la maintenance des WPS dans l'entreprise.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 2,
+    "question": "Que signifie la mention «préqualified WPS» dans le contexte des normes CSA?",
+    "options": [
+      "Une WPS qui n'a pas besoin de qualification par essais car elle respecte des paramètres standards éprouvés",
+      "Une WPS expirée",
+      "Une WPS préparée par le client",
+      "Une WPS qui ne s'applique qu'aux essais"
+    ],
+    "answer": "A",
+    "explanation": "Une WPS préqualifiée suit des paramètres standards établis dans la norme et ne nécessite pas d'essais de qualification destructifs, ce qui économise du temps et des ressources.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est le critère d'acceptation pour un essai de pliage selon CSA W59?",
+    "options": [
+      "Aucune fissure de plus de 1/8 po (3 mm) dans n'importe quelle direction",
+      "Aucune fissure quelle que soit sa taille",
+      "Maximum 3 fissures",
+      "Les fissures de moins de 1/16 po (1,6 mm) sont acceptables"
+    ],
+    "answer": "A",
+    "explanation": "Selon CSA W59, un essai de pliage est acceptable si aucune fissure ou discontinuité dans le métal fondu ou à la ligne de fusion ne dépasse 1/8 po (3 mm) dans n'importe quelle direction.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la norme canadienne qui régit la sécurité en soudage?",
+    "options": [
+      "CSA W47.1",
+      "CSA W59",
+      "CSA W117.2",
+      "CSA Z462"
+    ],
+    "answer": "C",
+    "explanation": "La CSA W117.2 est la norme canadienne traitant de la sécurité en soudage, couvrage, coupage et procédés connexes.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel numéro de teinte de casque de soudage est recommandé pour le soudage SMAW à 150 ampères?",
+    "options": [
+      "Teinte 8",
+      "Teinte 10",
+      "Teinte 12",
+      "Teinte 14"
+    ],
+    "answer": "B",
+    "explanation": "Pour le soudage SMAW entre 100 et 175 A, la teinte de verre recommandée est 10. Les teintes augmentent avec l'intensité du courant.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le phénomène appelé «coup d'arc» (arc flash ou arc eye)?",
+    "options": [
+      "Une brûlure thermique causée par le métal chaud",
+      "Une inflammation de la rétine causée par les rayons UV et infrarouges de l'arc",
+      "Un choc électrique",
+      "Une réaction allergique aux fumées"
+    ],
+    "answer": "B",
+    "explanation": "Le coup d'arc est une brûlure de la cornée et de la conjonctive causée par l'exposition aux rayons ultraviolets (UV) intenses de l'arc de soudage.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Combien de temps après l'exposition les symptômes du coup d'arc apparaissent-ils généralement?",
+    "options": [
+      "Immédiatement",
+      "6 à 12 heures après l'exposition",
+      "24 à 48 heures",
+      "1 semaine"
+    ],
+    "answer": "B",
+    "explanation": "Les symptômes du coup d'arc (flash burn) apparaissent généralement 6 à 12 heures après l'exposition aux rayons UV de l'arc de soudage.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel type de gants est obligatoire pour le soudage?",
+    "options": [
+      "Gants en coton",
+      "Gants en latex",
+      "Gants en cuir isolant",
+      "Gants en caoutchouc ménager"
+    ],
+    "answer": "C",
+    "explanation": "Des gants en cuir isolant et résistant à la chaleur sont obligatoires pour le soudage afin de protéger les mains des brûlures, des étincelles et des chocs électriques.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le nombre minimal de renouvellements d'air par heure recommandé dans un espace confiné où l'on soude?",
+    "options": [
+      "2 renouvellements/heure",
+      "4-6 renouvellements/heure",
+      "10-12 renouvellements/heure",
+      "15 renouvellements/heure"
+    ],
+    "answer": "B",
+    "explanation": "La norme CSA W117.2 recommande 4 à 6 renouvellements d'air par heure pour la ventilation générale des espaces de soudage intérieurs.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel gaz toxique est produit lors du soudage de l'acier inoxydable?",
+    "options": [
+      "Monoxyde de carbone",
+      "Chrome hexavalent (Cr-VI)",
+      "Dioxyde de soufre",
+      "Ozone"
+    ],
+    "answer": "B",
+    "explanation": "Le chrome hexavalent (Cr-VI) est un composé cancérigène produit lors du soudage des aciers inoxydables contenant du chrome.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Qu'est-ce que la «fièvre du métal» ou «zinc oxide fever»?",
+    "options": [
+      "Une réaction allergique au métal",
+      "Une fièvre causée par l'inhalation de vapeurs d'oxyde de zinc",
+      "Une infection bactérienne",
+      "Une intoxication au plomb"
+    ],
+    "answer": "B",
+    "explanation": "La fièvre des fondeurs (zinc oxide fever) est causée par l'inhalation de vapeurs d'oxyde de zinc, produites lors du soudage de métaux galvanisés.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la durée minimale pendant laquelle un surveillant de feu (fire watch) doit rester après la fin des opérations de soudage?",
+    "options": [
+      "5 minutes",
+      "15 minutes",
+      "30 minutes",
+      "1 heure"
+    ],
+    "answer": "C",
+    "explanation": "Selon les normes de sécurité (CSA W117.2), un surveillant de feu doit rester sur place au moins 30 minutes après la fin des opérations de soudage.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle teinte de verre de casque est recommandée pour le soudage GTAW à faible ampérage (moins de 50A)?",
+    "options": [
+      "Teinte 8",
+      "Teinte 10",
+      "Teinte 12",
+      "Teinte 14"
+    ],
+    "answer": "A",
+    "explanation": "Pour le soudage GTAW à faible ampérage (moins de 50A), une teinte 8 est recommandée car l'arc est moins intense qu'à plus fort ampérage.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Qu'est-ce que la limite d'exposition pondérée (LEP) ou TLV pour les fumées de soudage?",
+    "options": [
+      "La dose létale de fumées",
+      "La concentration maximale moyenne pondérée dans le temps à laquelle un travailleur peut être exposé sans effet nocif",
+      "La concentration minimale détectable",
+      "La limite de visibilité dans l'atelier"
+    ],
+    "answer": "B",
+    "explanation": "La LEP (Threshold Limit Value) est la concentration maximale moyenne pondérée sur 8 heures à laquelle un travailleur peut être exposé sans risque pour la santé.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel type de vêtement est recommandé pour le soudage?",
+    "options": [
+      "Vêtements en coton ou en laine traités ignifuges",
+      "Vêtements en polyester",
+      "Vêtements en nylon",
+      "Vêtements en acrylique"
+    ],
+    "answer": "A",
+    "explanation": "Les vêtements ignifuges (FR - Fire Resistant) en coton ou en laine traités sont recommandés car ils ne fondent pas au contact des étincelles et protègent des brûlures.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le principal risque lié au soudage dans un espace confiné?",
+    "options": [
+      "Bruit excessif",
+      "Manque d'oxygène et accumulation de gaz toxiques",
+      "Température trop basse",
+      "Visibilité réduite"
+    ],
+    "answer": "B",
+    "explanation": "Dans un espace confiné, le soudage consomme de l'oxygène et produit des gaz toxiques qui peuvent s'accumuler, créant un risque d'asphyxie et d'intoxication.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la tension de sécurité maximale recommandée pour le soudage en environnement humide?",
+    "options": [
+      "12 V",
+      "24 V",
+      "48 V",
+      "120 V"
+    ],
+    "answer": "A",
+    "explanation": "En environnement humide, la tension de sécurité maximale recommandée est de 12 V pour réduire le risque d'électrocution.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel équipement de protection respiratoire est recommandé pour le soudage de l'acier inoxydable en espace confiné?",
+    "options": [
+      "Masque chirurgical",
+      "Respirateur àépuration d'air avec cartouche pour fumées métalliques",
+      "Lunettes de sécurité",
+      "Aucun, la ventilation naturelle suffit"
+    ],
+    "answer": "B",
+    "explanation": "Le soudage de l'acier inoxydable produit du chrome hexavalent cancérigène. En espace confiné, un respirateur avec cartouche appropriée est essentiel.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quels sont les trois éléments du triangle de feu?",
+    "options": [
+      "Chaleur, fumée, gaz",
+      "Combustible, chaleur, oxygène",
+      "Étincelle, métal, air",
+      "Carburant, laitier, arc"
+    ],
+    "answer": "B",
+    "explanation": "Le triangle de feu comprend trois éléments essentiels : un combustible, une source de chaleur et de l'oxygène. La suppression d'un seul élément éteint le feu.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel type d'extincteur est approprié pour un feu électrique impliquant une soudeuse?",
+    "options": [
+      "Eau",
+      "Mousse",
+      "CO2 ou poudre chimique ABC",
+      "Sable"
+    ],
+    "answer": "C",
+    "explanation": "Pour un feu électrique, on utilise un extincteur à CO2 ou à poudre chimique (classe C) car l'eau conduit l'électricité et présente un risque d'électrocution.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle distance minimale doit-on maintenir entre les bouteilles de gaz et les sources de chaleur?",
+    "options": [
+      "1 mètre (3 pi)",
+      "3 mètres (10 pi)",
+      "6 mètres (20 pi)",
+      "10 mètres (30 pi)"
+    ],
+    "answer": "B",
+    "explanation": "Les bouteilles de gaz doivent être maintenues à au moins 3 mètres (10 pieds) des sources de chaleur, flammes nues ou étincelles de soudage.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le risque principal lié au soudage de métaux galvanisés?",
+    "options": [
+      "Brûlures thermiques",
+      "Corrosion accélérée",
+      "Inhalation de vapeurs d'oxyde de zinc causant la fièvre des fondeurs",
+      "Fragilisation du métal"
+    ],
+    "answer": "C",
+    "explanation": "Le soudage de métaux galvanisés produit des vapeurs d'oxyde de zinc qui, lorsqu'elles sont inhalées, causent la fièvre des fondeurs avec symptômes pseudo-grippaux.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la procédure correcte pour ouvrir une bouteille de gaz comprimé?",
+    "options": [
+      "Ouvrir complètement la vanne d'un coup sec",
+      "Ouvrir lentement et positionner l'ouverture de la bouteille loin des personnes",
+      "Ouvrir à moitié seulement",
+      "Ne jamais ouvrir sans détendeur"
+    ],
+    "answer": "B",
+    "explanation": "Il faut ouvrir la vanne lentement en se tenant du côté opposé au détendeur, et toujours pointer l'ouverture loin des personnes pour éviter les accidents.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le niveau sonore maximal permis sans protection auditive dans un atelier de soudage au Québec?",
+    "options": [
+      "75 dB(A)",
+      "85 dB(A) sur 8 heures",
+      "90 dB(A) sur 8 heures",
+      "100 dB(A)"
+    ],
+    "answer": "B",
+    "explanation": "Au Québec, selon la SANTÉ et sécurité du travail, l'exposition maximale sans protection est de 85 dB(A) sur 8 heures (moyenne pondérée).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Que doit-on vérifier avant d'utiliser un câble de soudage?",
+    "options": [
+      "La couleur du câble",
+      "L'absence de coupures, d'effilochage ou de connexions exposées",
+      "La longueur du câble",
+      "La marque du câble"
+    ],
+    "answer": "B",
+    "explanation": "Avant utilisation, il faut inspecter visuellement le câble pour détecter toute détérioration de l'isolant, coupures, connexions desserrées ou fils exposés.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Pourquoi ne faut-il jamais regarder un arc de soudage sans protection oculaire adéquate?",
+    "options": [
+      "À cause de la chaleur intense",
+      "À cause des projections de métal",
+      "À cause des rayons UV et infrarouges qui peuvent brûler la rétine",
+      "À cause de l'éblouissement"
+    ],
+    "answer": "C",
+    "explanation": "L'arc de soudage émet des rayons ultraviolets (UV) et infrarouges (IR) intenses qui peuvent causer des brûlures irréversibles à la rétine et à la cornée en quelques secondes.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la procédure de sécurité pour le soudage à proximité de matériaux inflammables?",
+    "options": [
+      "Souder normalement, les matériaux sont protégés",
+      "Utiliser un extincteur à portée de main seulement",
+      "Déplacer les matériaux inflammables à au moins 11 mètres (35 pi) ou utiliser des écrans coupe-feu",
+      "Arroser les matériaux avant de souder"
+    ],
+    "answer": "C",
+    "explanation": "Les matériaux inflammables doivent être déplacés à au moins 11 mètres (35 pieds) de la zone de soudage, ou protégés par des écrans coupe-feu appropriés.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel équipement de protection individuelle (EPI) est minimal pour un soudeur SMAW?",
+    "options": [
+      "Casque de soudage, gants en cuir, vêtements ignifuges et bottes de sécurité",
+      "Lunettes de sécurité seulement",
+      "Casque de chantier et gants en latex",
+      "Tablier en caoutchouc et masque chirurgical"
+    ],
+    "answer": "A",
+    "explanation": "L'EPI minimal pour le soudage comprend un casque de soudage avec verre filtrant, des gants en cuir isolant, des vêtements ignifuges (FR) et des bottes de sécurité.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Qu'est-ce que la norme CSA Z462 traite?",
+    "options": [
+      "La sécurité en soudage",
+      "La sécurité électrique sur les lieux de travail",
+      "Les normes de construction",
+      "Les symboles de soudage"
+    ],
+    "answer": "B",
+    "explanation": "La CSA Z462 traite de la sécurité électrique sur les lieux de travail, incluant les risques d'arc électrique et de choc électrique, applicable aux soudeuses.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le danger principal des fumées de soudage sur les aciers peints ou avec revêtement anticorrosion?",
+    "options": [
+      "Fumées plus denses",
+      "Production de gaz toxiques comme le phosgène ou le chlorure d'hydrogène",
+      "Réduction de la visibilité",
+      "Odeur désagréable"
+    ],
+    "answer": "B",
+    "explanation": "Le soudage de métaux peints ou avec revêtement peut produire des gaz toxiques comme le phosgène (à partir de solvants chlorés) et le chlorure d'hydrogène.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle doit être la position des bouteilles de gaz lorsqu'elles ne sont pas utilisées ou en déplacement?",
+    "options": [
+      "Posées à plat sur le sol",
+      "Debout et solidement attachées pour éviter de tomber",
+      "Inclinées à 45 degrés",
+      "Suspendues au mur"
+    ],
+    "answer": "B",
+    "explanation": "Les bouteilles de gaz doivent toujours être maintenues en position verticale et solidement attachées (chaînée) pour éviter qu'elles ne tombent, ce qui pourrait endommager la vanne.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le risque de souder un contenant qui a contenu des liquides inflammables?",
+    "options": [
+      "Aucun risque si le contenant est vide",
+      "Risque d'explosion dû aux vapeurs résiduelles",
+      "Risque de contamination du métal",
+      "Risque de corrosion"
+    ],
+    "answer": "B",
+    "explanation": "Les contenants ayant contenu des liquides inflammables peuvent contenir des vapeurs résiduelles explosives. Le soudage peut enflammer ces vapeurs et causer une explosion.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la valeur limite d'exposition (TLV-TWA) pour le manganèse dans les fumées de soudage?",
+    "options": [
+      "5 mg/m³",
+      "0,2 mg/m³",
+      "0,02 mg/m³",
+      "10 mg/m³"
+    ],
+    "answer": "B",
+    "explanation": "La valeur limite d'exposition pour le manganèse dans les fumées de soudage est d'environ 0,2 mg/m³ en moyenne pondérée sur 8 heures (ACGIH).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la zone de danger autour du poste de soudage pour les autres travailleurs non protégés?",
+    "options": [
+      "1 mètre",
+      "3 mètres",
+      "5 mètres",
+      "10 mètres"
+    ],
+    "answer": "C",
+    "explanation": "Un rayon de 5 mètres (environ 16 pieds) autour du poste de soudage est considéré comme une zone de danger où les travailleurs non protégés peuvent subir des lésions oculaires dues aux UV.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Pourquoi doit-on enlever tout produit inflammable de ses poches avant de souder?",
+    "options": [
+      "Pour être plus à l'aise",
+      "Les étincelles peuvent enflammer les allumettes, briquets ou chiffons dans les poches",
+      "Pour éviter de perdre ses effets personnels",
+      "Pour la circulation d'air"
+    ],
+    "answer": "B",
+    "explanation": "Les étincelles de soudage peuvent tomber dans les poches et enflammer des allumettes, briquets, chiffons ou autres matériaux combustibles, causant des brûlures graves.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle norme régit les symboles de soudage en Amérique du Nord?",
+    "options": [
+      "CSA W47.1",
+      "AWS A2.4",
+      "ISO 2553",
+      "CSA W59"
+    ],
+    "answer": "B",
+    "explanation": "L'AWS A2.4 est la norme américaine pour les symboles de soudage, largement utilisée au Canada et aux États-Unis.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Sur un symbole de soudage, que représente le côté flèche (arrow side)?",
+    "options": [
+      "Le côté où l'on commence à souder",
+      "Le côté du joint où la flèche pointe directement",
+      "Le côté opposé de la soudure",
+      "Le côté de la pièce le plus épais"
+    ],
+    "answer": "B",
+    "explanation": "Le côté flèche (arrow side) est le côté du joint vers lequel la flèche du symbole de soudage pointe directement.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel symbole représente une soudure d'angle (fillet weld)?",
+    "options": [
+      "Un triangle",
+      "Un cercle",
+      "Un carré",
+      "Un V"
+    ],
+    "answer": "A",
+    "explanation": "Le symbole de la soudure d'angle (fillet weld) est représenté par un triangle placé sur la ligne de référence.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie un cercle à la jonction de la flèche et de la ligne de référence?",
+    "options": [
+      "Soudure d'angle",
+      "Soudure tout autour (all around)",
+      "Soudure en continu",
+      "Soudure en cercle"
+    ],
+    "answer": "B",
+    "explanation": "Un cercle à la jonction de la flèche et de la ligne de référence indique que la soudure doit être réalisée tout autour (all around) du joint.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie un drapeau (flag) à la jonction de la flèche et de la ligne de référence?",
+    "options": [
+      "Soudure sur chantier (field weld)",
+      "Soudure d'angle",
+      "Soudure de chantier naval",
+      "Soudure verticale"
+    ],
+    "answer": "A",
+    "explanation": "Le drapeau (field weld flag) à la jonction de la flèche et de la ligne de référence signifie que la soudure doit être réalisée sur le chantier, pas en atelier.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Sur un symbole de soudure en V (groove weld), où se trouve l'information sur l'angle d'ouverture?",
+    "options": [
+      "Au-dessus de la ligne de référence",
+      "En dessous de la ligne de référence",
+      "À gauche du symbole",
+      "À l'intérieur du symbole de soudure"
+    ],
+    "answer": "C",
+    "explanation": "L'angle d'ouverture du chanfrein (groove angle) est inscrit à gauche du symbole de soudure, entre le symbole et la ligne de référence.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Que représente le symbole d'une soudure en U?",
+    "options": [
+      "Un symbole en forme de U",
+      "Un symbole en forme de V",
+      "Un symbole en forme de J",
+      "Un carré"
+    ],
+    "answer": "A",
+    "explanation": "Le symbole de la soudure en U est une forme de U qui indique une préparation des bords avec un fond arrondi en forme de U.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie la lettre C au-dessus ou en dessous du symbole de soudure d'angle?",
+    "options": [
+      "C = chipping (piquage)",
+      "Contour",
+      "C = complet",
+      "C = continu"
+    ],
+    "answer": "B",
+    "explanation": "La lettre C indique le contour par piquage (chipping) après soudage. G = meulage (grinding), M = usinage (machining).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Sur un symbole de soudage, où sont indiquées les dimensions de la soudure (taille et longueur)?",
+    "options": [
+      "À gauche du symbole",
+      "À droite du symbole",
+      "Au-dessus de la ligne de référence",
+      "Sous la ligne de référence"
+    ],
+    "answer": "B",
+    "explanation": "Les dimensions (taille, longueur, pas) sont indiquées à droite du symbole de soudure sur la ligne de référence.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le symbole pour une soudure en biseau (bevel groove weld)?",
+    "options": [
+      "Une forme de V",
+      "Une ligne oblique (/) avec une ligne horizontale en bas",
+      "Un U",
+      "Un J"
+    ],
+    "answer": "B",
+    "explanation": "Le symbole du chanfrein en biseau (bevel) est représenté par une ligne oblique avec une ligne horizontale en bas, indiquant qu'une seule pièce est chanfreinée.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Comment indique-t-on une soudure par points (spot weld) sur un symbole?",
+    "options": [
+      "Un cercle sur la ligne de référence",
+      "Un rond plein (●) sur la ligne de référence",
+      "Un triangle",
+      "Un V"
+    ],
+    "answer": "B",
+    "explanation": "Une soudure par points (spot weld) est représentée par un cercle plein (●) positionné sur la ligne de référence.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie l'absence de symbole de soudure d'un côté de la ligne de référence?",
+    "options": [
+      "Qu'il n'y a pas de soudure de ce côté",
+      "Que la soudure est identique des deux côtés",
+      "Que la soudure est sur le côté flèche seulement",
+      "Que la soudure est terminée"
+    ],
+    "answer": "A",
+    "explanation": "Si un côté de la ligne de référence n'a pas de symbole, cela signifie qu'aucune soudure n'est requise de ce côté du joint.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie un nombre à gauche du symbole de soudure sur un symbole de soudure en V?",
+    "options": [
+      "La taille de la soudure",
+      "L'angle d'ouverture en degrés",
+      "La longueur de la soudure",
+      "Le nombre de passes"
+    ],
+    "answer": "B",
+    "explanation": "Le nombre à gauche du symbole de soudure en V indique l'angle d'ouverture du chanfrein en degrés (ex: 60 signifie 60 degrés d'angle d'ouverture total).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie la notation 5/16 × 2 - 4 sur un symbole de soudure d'angle?",
+    "options": [
+      "5/16 po de diamètre, 2 pouces de long, 4 passes",
+      "Taille 5/16 po, longueur 2 po, espacement de 4 po entre cordons",
+      "5/16 po de pénétration, 2 de large, 4 pouces de long",
+      "5/16 po par 2 po, 4 soudures"
+    ],
+    "answer": "B",
+    "explanation": "Sur un symbole de soudure d'angle, la notation taille × longueur - pas (5/16 × 2 - 4) signifie une soudure de 5/16 po de jambe, 2 po de long, avec un espacement de 4 po entre cordons.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le symbole de soudage pour une soudure en V simple (single V-groove)?",
+    "options": [
+      "Un V",
+      "Un triangle",
+      "Un carré",
+      "Un cercle"
+    ],
+    "answer": "A",
+    "explanation": "La soudure en V simple (single V-groove) est représentée par un symbole en forme de V sur la ligne de référence.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Comment indique-t-on que la soudure doit être réalisée sur le côté opposé (other side)?",
+    "options": [
+      "En plaçant le symbole sous la ligne de référence",
+      "En plaçant le symbole au-dessus de la ligne de référence",
+      "En utilisant une flèche en pointillé",
+      "En ajoutant un cercle"
+    ],
+    "answer": "A",
+    "explanation": "Le symbole placé sous la ligne de référence indique que la soudure doit être réalisée du côté opposé (other side) du joint par rapport à la flèche.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie un symbole de soudure à la fois au-dessus ET en dessous de la ligne de référence?",
+    "options": [
+      "Une soudure en deux passes",
+      "Une soudure des deux côtés du joint",
+      "Une soudure d'angle et une soudure en V",
+      "Une erreur de dessin"
+    ],
+    "answer": "B",
+    "explanation": "Un symbole des deux côtés de la ligne de référence indique une soudure bilatérale, réalisée des deux côtés du joint.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie la lettre G sur un symbole de soudure?",
+    "options": [
+      "G = grinding (meulage)",
+      "G = gaz",
+      "G = grand",
+      "G = gauche"
+    ],
+    "answer": "A",
+    "explanation": "La lettre G dans le symbole de contour indique que la finition du cordon doit être faite par meulage (grinding).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Que représente un symbole de soudure en J (J-groove)?",
+    "options": [
+      "Un symbole en forme de J indiquant un chanfrein arrondi sur une seule pièce",
+      "Un joint en quart de cercle",
+      "Un joint à 90 degrés",
+      "Une soudure en J inversé"
+    ],
+    "answer": "A",
+    "explanation": "Le symbole de soudure en J représente un chanfrein arrondi sur une seule pièce, en forme de J, permettant une bonne pénétration à la racine.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Dans un symbole de soudure, comment indique-t-on la profondeur de pénétration pour une soudure à pleine pénétration?",
+    "options": [
+      "Avec une dimension spécifique entre parenthèses",
+      "Avec un symbole de soudure en V avec indication de pénétration",
+      "En écrivant '100%' sur la ligne de référence",
+      "Avec une flèche double"
+    ],
+    "answer": "A",
+    "explanation": "La profondeur de pénétration est indiquée entre parenthèses à gauche du symbole de soudure, ou par une dimension spécifique dans la note de soudage.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie le symbole d'une soudure en carré (square groove)?",
+    "options": [
+      "Un carré représentant un joint sans chanfrein",
+      "Un V",
+      "Un rectangle",
+      "Un cercle"
+    ],
+    "answer": "A",
+    "explanation": "La soudure en carré (square groove) est représentée par deux lignes verticales indiquant un joint bout à bout sans préparation des bords.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Comment indique-t-on une soudure avec face de racine (root face) sur un symbole?",
+    "options": [
+      "Par un nombre indiquant l'épaisseur de la face, positionné à l'intérieur du symbole",
+      "Par une note séparée",
+      "Par un cercle",
+      "Par une lettre R"
+    ],
+    "answer": "A",
+    "explanation": "La face de racine (root face) est indiquée par un nombre à l'intérieur du symbole de chanfrein, représentant l'épaisseur de la face non chanfreinée.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le symbole pour une soudure en V double (double V-groove)?",
+    "options": [
+      "Deux V opposés",
+      "Deux V dos à dos",
+      "Deux triangles",
+      "Deux cercles"
+    ],
+    "answer": "B",
+    "explanation": "La soudure en V double est représentée par deux symboles en V dos à dos, un de chaque côté de la ligne de référence.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie le symbole d'une soudure par bosse (stud weld)?",
+    "options": [
+      "Un cercle avec une croix",
+      "Un triangle",
+      "Un carré",
+      "Un cercle plein"
+    ],
+    "answer": "A",
+    "explanation": "Le symbole de soudure par bosse (stud welding) est représenté par un cercle avec une croix à l'intérieur, placé sur la ligne de référence.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Sur un dessin technique, que signifie l'absence de ligne de référence sur un symbole de soudage?",
+    "options": [
+      "Soudure tout autour",
+      "Soudure d'atelier",
+      "Il n'y a pas de symbole de soudage sans ligne de référence",
+      "Soudure temporaire"
+    ],
+    "answer": "C",
+    "explanation": "Un symbole de soudage valide comprend toujours une ligne de référence. L'absence de ligne de référence signifie qu'il ne s'agit pas d'un symbole de soudage standard.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le symbole pour une soudure en V avec talon (bevel with root face)?",
+    "options": [
+      "Un V avec une ligne horizontale à la base",
+      "Un V régulier",
+      "Un triangle",
+      "Un U"
+    ],
+    "answer": "A",
+    "explanation": "La soudure en V avec talon est représentée par un V avec une petite ligne horizontale à la base, indiquant la présence d'une face de racine.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Comment indique-t-on la taille de gorge (throat) d'une soudure d'angle?",
+    "options": [
+      "Avec un nombre à droite du symbole",
+      "Avec un nombre à gauche du symbole",
+      "Avec la mention T précédant la dimension",
+      "La taille de jambe (leg) est utilisée par défaut"
+    ],
+    "answer": "C",
+    "explanation": "La taille de gorge (throat) peut être indiquée en précédant la dimension par la lettre T, sinon la dimension donnée est celle de la jambe (leg).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie un symbole de soudure avec un contour convexe?",
+    "options": [
+      "La soudure doit être bombée (convexe)",
+      "La soudure doit être plate",
+      "La soudure doit être concave",
+      "La soudure a une forme irrégulière"
+    ],
+    "answer": "A",
+    "explanation": "Un symbole de contour convexe au-dessus du symbole de soudure indique que le cordon de soudure doit avoir une forme bombée (convexe).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Comment indique-t-on une soudure intermittente sur un symbole?",
+    "options": [
+      "En utilisant une ligne en pointillé",
+      "En ajoutant une note 'intermittent'",
+      "Par la notation taille × longueur - espacement à droite du symbole",
+      "Par un cercle barré"
+    ],
+    "answer": "C",
+    "explanation": "La soudure intermittente est indiquée par la notation taille × longueur - espacement (ex: 1/4 × 2 - 4) à droite du symbole de soudure.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel symbole est utilisé pour indiquer une soudure en bordure (edge weld)?",
+    "options": [
+      "Un triangle",
+      "Deux lignes parallèles",
+      "Un cercle",
+      "Un V"
+    ],
+    "answer": "B",
+    "explanation": "La soudure en bordure (edge weld) est représentée par deux lignes parallèles indiquant la fusion des bords de deux pièces adjacentes.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie la notation 1/4 sur un symbole de soudure d'angle sans autre dimension?",
+    "options": [
+      "1/4 po de diamètre de la soudure",
+      "1/4 po de jambe (taille de la soudure d'angle)",
+      "1/4 po de longueur",
+      "1/4 po de profondeur"
+    ],
+    "answer": "B",
+    "explanation": "Sur un symbole de soudure d'angle, une seule dimension à droite indique la taille de la jambe (leg size) de la soudure d'angle.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le rôle principal de la ligne de référence dans un symbole de soudage?",
+    "options": [
+      "Indiquer l'épaisseur de la pièce",
+      "Servir de base pour positionner tous les autres éléments du symbole",
+      "Montrer la direction du soudage",
+      "Indiquer la position du soudeur"
+    ],
+    "answer": "B",
+    "explanation": "La ligne de référence (reference line) est l'élément horizontal principal du symbole de soudage sur lequel tous les autres éléments sont positionnés.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelles sont les quatre zones principales de la zone affectée thermiquement (ZAT/HAZ)?",
+    "options": [
+      "Fusion, grain grossi, recristallisation, transformation",
+      "Chauffage, refroidissement, fusion, solidification",
+      "Supérieure, inférieure, centrale, latérale",
+      "Chaude, tiède, froide, ambiante"
+    ],
+    "answer": "A",
+    "explanation": "La ZAT se divise en quatre zones : la ligne de fusion, la zone de grain grossi, la zone de recristallisation (grain fin) et la zone de transformation partielle.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la formule de calcul de l'équivalent carbone (CE)?",
+    "options": [
+      "CE = C + Mn/6 + (Cr+Mo+V)/5 + (Ni+Cu)/15",
+      "CE = C + Mn/10 + Cr/5",
+      "CE = C + Si/4 + Mn/6",
+      "CE = Mn/6 + Cr/5 + Ni/15"
+    ],
+    "answer": "A",
+    "explanation": "La formule standard de l'équivalent carbone est CE = C + Mn/6 + (Cr+Mo+V)/5 + (Ni+Cu)/15, utilisée pour évaluer la soudabilité des aciers.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est l'effet d'un équivalent carbone (CE) élevé sur la soudabilité d'un acier?",
+    "options": [
+      "Meilleure soudabilité",
+      "Risque accru de fissuration à froid",
+      "Meilleure ductilité",
+      "Réduction de la dureté"
+    ],
+    "answer": "B",
+    "explanation": "Un CE élevé indique une plus grande trempabilité, ce qui augmente le risque de formation de martensite fragile et de fissuration à froid dans la ZAT.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle température de préchauffe est généralement recommandée pour un acier avec un CE de 0,50?",
+    "options": [
+      "Aucune préchauffe nécessaire",
+      "100-150°C (200-300°F)",
+      "200-300°C (400-570°F)",
+      "350-400°C (660-750°F)"
+    ],
+    "answer": "B",
+    "explanation": "Pour un CE de 0,45 à 0,60, une préchauffe de 100 à 150°C est généralement recommandée pour ralentir le refroidissement et éviter la formation de martensite.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la martensite et pourquoi est-elle problématique dans une soudure?",
+    "options": [
+      "Une structure dure et fragile qui peut causer des fissures",
+      "Une structure ductile idéale pour le soudage",
+      "Un gaz dissous dans le métal",
+      "Un type de laitier"
+    ],
+    "answer": "A",
+    "explanation": "La martensite est une microstructure très dure et fragile qui se forme lors d'un refroidissement rapide de l'acier. Elle est susceptible de fissurer sous contrainte.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la fissuration à froid (hydrogen-induced cracking)?",
+    "options": [
+      "Une fissure qui apparaît pendant le soudage",
+      "Une fissure qui se développe après refroidissement, causée par l'hydrogène et les contraintes",
+      "Une fissure due au gel",
+      "Une fissure de fatigue"
+    ],
+    "answer": "B",
+    "explanation": "La fissuration à froid (HIC) se produit après le soudage lorsque l'hydrogène, les contraintes de traction et une microstructure fragile (martensite) sont combinés.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelles sont les trois conditions nécessaires à la fissuration par hydrogène?",
+    "options": [
+      "Hydrogène, contrainte de traction, microstructure sensible",
+      "Chaleur, oxygène, carbone",
+      "Humidité, froid, pression",
+      "Nickel, chrome, molybdène"
+    ],
+    "answer": "A",
+    "explanation": "La fissuration par hydrogène nécessite trois conditions : la présence d'hydrogène, une contrainte de traction suffisante et une microstructure sensible (martensite).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la zone de grain grossi dans la ZAT?",
+    "options": [
+      "La zone la plus proche du bain de fusion où les grains austénitiques ont beaucoup grossi",
+      "La zone loin de la soudure",
+      "La zone de métal fondu",
+      "La zone de recristallisation"
+    ],
+    "answer": "A",
+    "explanation": "La zone de grain grossi (coarse grain HAZ) est située juste à côté de la ligne de fusion. Les hautes températures font croître les grains, ce qui réduit la ténacité.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel élément d'alliage est le plus efficace pour augmenter la trempabilité d'un acier?",
+    "options": [
+      "Carbone",
+      "Soufre",
+      "Phosphore",
+      "Silicium"
+    ],
+    "answer": "A",
+    "explanation": "Le carbone est l'élément le plus influent sur la trempabilité. Sa teneur détermine en grande partie la dureté maximale et la fragilité potentielle de la ZAT.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Comment la préchauffe réduit-elle le risque de fissuration?",
+    "options": [
+      "En augmentant la vitesse de refroidissement",
+      "En ralentissant le refroidissement, ce qui permet à l'hydrogène de diffuser hors du métal",
+      "En diluant l'hydrogène",
+      "En augmentant la dureté"
+    ],
+    "answer": "B",
+    "explanation": "La préchauffe ralentit la vitesse de refroidissement, permettant à l'hydrogène de diffuser hors du métal et évitant la formation de martensite fragile.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que le martelage (peening) et quel est son effet sur la distorsion?",
+    "options": [
+      "Chauffer la pièce après soudage",
+      "Marteler le cordon de soudure pour créer des contraintes de compression qui réduisent la distorsion",
+      "Refroidir rapidement la soudure",
+      "Ajouter du métal d'apport"
+    ],
+    "answer": "B",
+    "explanation": "Le martelage (peening) consiste à marteler le cordon de soudure pour y introduire des contraintes résiduelles de compression, ce qui réduit la distorsion et les contraintes de traction.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la distorsion angulaire (angular distortion)?",
+    "options": [
+      "Un rétrécissement du métal",
+      "Une déformation en angle causée par le retrait inégal du métal de soudure",
+      "Une torsion de la pièce",
+      "Un allongement de la pièce"
+    ],
+    "answer": "B",
+    "explanation": "La distorsion angulaire est une déformation où les pièces soudées forment un angle non désiré, causée par le retrait inégal du métal de soudure en refroidissant.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que le pré-positionnement (preset ou pre-bending) comme méthode de contrôle de la distorsion?",
+    "options": [
+      "Serrer les pièces dans un gabarit",
+      "Positionner les pièces avec un angle initial opposé à la distorsion prévue",
+      "Souder à basse température",
+      "Utiliser un métal d'apport spécial"
+    ],
+    "answer": "B",
+    "explanation": "Le pré-positionnement consiste à incliner les pièces avant soudage dans le sens opposé à la distorsion anticipée, de sorte que le retrait ramène les pièces à l'angle désiré.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la soudure par retrait progressif (backstep welding) contre la distorsion?",
+    "options": [
+      "Souder de droite à gauche",
+      "Souder en segments dans la direction opposée à la progression générale",
+      "Souder en une seule passe continue",
+      "Souder en cercle"
+    ],
+    "answer": "B",
+    "explanation": "Le backstep welding consiste à souder de courts segments dans la direction opposée à la progression générale du joint, ce qui répartit la chaleur et réduit la distorsion.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est l'effet du carbone sur la dureté de la ZAT?",
+    "options": [
+      "Diminue la dureté",
+      "Augmente la dureté et la fragilité potentielle",
+      "N'a aucun effet",
+      "Améliore la ductilité"
+    ],
+    "answer": "B",
+    "explanation": "Le carbone augmente la trempabilité; plus il y a de carbone, plus la ZAT peut devenir dure et fragile lors du refroidissement rapide, augmentant le risque de fissuration.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la contrainte résiduelle dans une soudure?",
+    "options": [
+      "La contrainte appliquée pendant le soudage",
+      "La contrainte qui reste dans la pièce après soudage et refroidissement",
+      "La contrainte de service",
+      "La contrainte due au poids de la pièce"
+    ],
+    "answer": "B",
+    "explanation": "Les contraintes résiduelles sont les contraintes mécaniques qui restent dans la soudure et la pièce après refroidissement complet, dues au retrait thermique non uniforme.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la zone affectée thermiquement (ZAT)?",
+    "options": [
+      "La zone où le métal a fondu",
+      "La zone du métal de base dont les propriétés ont été modifiées par la chaleur du soudage sans avoir fondu",
+      "La zone refroidie par l'eau",
+      "La zone de découpage thermique"
+    ],
+    "answer": "B",
+    "explanation": "La ZAT est la région du métal de base adjacente à la soudure qui n'a pas fondu mais dont la microstructure et les propriétés ont été modifiées par la chaleur.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel microconstituant est formé dans la ZAT lors d'un refroidissement très lent?",
+    "options": [
+      "Martensite",
+      "Perlite et ferrite",
+      "Austénite",
+      "Cémentite"
+    ],
+    "answer": "B",
+    "explanation": "Un refroidissement lent favorise la formation de perlite et de ferrite, qui sont des microstructures plus ductiles que la martensite, dans la ZAT.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la soudabilité (weldability) d'un matériau?",
+    "options": [
+      "La facilité avec laquelle un matériau peut être soudé dans des conditions de fabrication satisfaisantes",
+      "La vitesse de soudage maximale",
+      "La température de fusion du matériau",
+      "La conductivité thermique"
+    ],
+    "answer": "A",
+    "explanation": "La soudabilité est la capacité d'un matériau à être soudé pour produire un assemblage répondant aux exigences de service dans des conditions de fabrication économiques.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Pourquoi la zone de grain fin dans la ZAT est-elle généralement plus résistante que le métal de base initial?",
+    "options": [
+      "Parce qu'elle contient plus de carbone",
+      "Parce que les grains fins augmentent la résistance selon la loi de Hall-Petch",
+      "Parce qu'elle refroidit plus vite",
+      "Parce qu'elle contient plus d'éléments d'alliage"
+    ],
+    "answer": "B",
+    "explanation": "La zone de recristallisation forme des grains austénitiques fins, ce qui améliore la résistance et la ténacité par rapport aux gros grains du métal de base selon la relation Hall-Petch.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelles sont les principales techniques de contrôle de la distorsion?",
+    "options": [
+      "Préchauffe, pré-positionnement, backstep welding, martelage",
+      "Refroidissement rapide, trempe, martelage",
+      "Chauffage, pliage, martelage",
+      "Meulage, polissage, martelage"
+    ],
+    "answer": "A",
+    "explanation": "Les principales techniques de contrôle de la distorsion incluent le pré-positionnement (preset), le préchauffage, le backstep welding et le martelage (peening).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est l'effet d'une augmentation de l'apport thermique (heat input) sur la ZAT?",
+    "options": [
+      "Réduit la taille de la ZAT",
+      "Élargit la ZAT et peut améliorer les propriétés mécaniques si contrôlé",
+      "N'a aucun effet",
+      "Augmente la vitesse de soudage"
+    ],
+    "answer": "B",
+    "explanation": "Un apport thermique plus élevé élargit la ZAT et ralentit la vitesse de refroidissement, ce qui peut réduire la dureté et améliorer la ductilité si bien contrôlé.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la ligne de liaison (fusion line)?",
+    "options": [
+      "La limite entre deux passes de soudure",
+      "La frontière entre le métal fondu et le métal de base non fondu",
+      "La surface extérieure de la soudure",
+      "La ligne de joint"
+    ],
+    "answer": "B",
+    "explanation": "La ligne de liaison est la frontière métallurgique où le métal de base a partiellement fondu et s'est mélangé au métal d'apport, séparant la zone fondue de la ZAT.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Comment l'hydrogène pénètre-t-il dans une soudure pendant le soudage?",
+    "options": [
+      "Par le métal de base",
+      "Par l'humidité présente dans l'enrobage de l'électrode, la contamination ou l'air humide",
+      "Par le gaz de protection",
+      "Par la peinture sur la pièce"
+    ],
+    "answer": "B",
+    "explanation": "L'hydrogène provient principalement de l'humidité dans l'enrobage des électrodes, des contaminants sur la pièce (huile, graisse, rouille) ou de l'humidité atmosphérique.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quels sont les symptômes de la fissuration à chaud (hot cracking)?",
+    "options": [
+      "Fissures qui apparaissent immédiatement après refroidissement complet",
+      "Fissures qui se forment pendant la solidification à haute température (généralement interdendritiques)",
+      "Fissures dues à l'hydrogène",
+      "Fissures de fatigue"
+    ],
+    "answer": "B",
+    "explanation": "La fissuration à chaud se produit pendant la solidification du métal fondu, à haute température, le long des joints de grains ou des dendrites, souvent due aux impuretés.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la relation entre l'apport thermique (heat input) et la vitesse de refroidissement?",
+    "options": [
+      "Plus l'apport thermique est élevé, plus le refroidissement est rapide",
+      "Plus l'apport thermique est élevé, plus le refroidissement est lent",
+      "Aucune relation",
+      "L'apport thermique n'affecte que le métal fondu"
+    ],
+    "answer": "B",
+    "explanation": "Un apport thermique élevé signifie plus de chaleur dans la pièce, donc un refroidissement plus lent. Un apport thermique faible refroidit plus rapidement.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la précipitation de carbures dans la ZAT des aciers inoxydables?",
+    "options": [
+      "Un phénomène bénéfique qui augmente la résistance",
+      "La formation de carbures de chrome aux joints de grains entre 500°C et 800°C, réduisant la résistance à la corrosion",
+      "La formation de martensite",
+      "La formation de perlite"
+    ],
+    "answer": "B",
+    "explanation": "La précipitation de carbures (sensibilisation) se produit dans les aciers inoxydables entre 500°C et 800°C, où le carbone se combine au chrome aux joints de grains, appauvrissant la zone en chrome.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est l'effet du soufre et du phosphore sur la fissuration à chaud?",
+    "options": [
+      "Ils améliorent la résistance à la fissuration",
+      "Ils augmentent le risque de fissuration à chaud en formant des composés à bas point de fusion",
+      "Ils n'ont aucun effet",
+      "Ils réduisent la dureté"
+    ],
+    "answer": "B",
+    "explanation": "Le soufre et le phosphore forment des composés à bas point de fusion qui restent liquides aux joints de grains pendant la solidification, causant la fissuration à chaud.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Comment calcule-t-on la température de préchauffe à partir de l'équivalent carbone?",
+    "options": [
+      "Il n'existe pas de relation directe",
+      "Des formules empiriques comme T(°C) = 350 × (CE - 0,25)^0,5 peuvent être utilisées",
+      "Préchauffe = CE × 100",
+      "Préchauffe = CE + 200"
+    ],
+    "answer": "B",
+    "explanation": "Plusieurs formules empiriques existent, comme celle de l'IIW: T(°C) = 350 × √(CE - 0,25). Pour CE < 0,45, aucune préchauffe n'est généralement requise.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la transformation de phase dans la ZAT?",
+    "options": [
+      "Le changement de structure cristalline du métal lors du refroidissement (ex: austénite → martensite/perlite/ferrite)",
+      "La fusion du métal",
+      "L'évaporation du métal",
+      "La formation de laitier"
+    ],
+    "answer": "A",
+    "explanation": "La transformation de phase est le changement de la structure cristalline du métal lors du chauffage et du refroidissement, par exemple la transformation de l'austénite en martensite, perlite ou ferrite.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quels sont les deux types principaux de distorsion en soudage?",
+    "options": [
+      "Distorsion longitudinale et transversale",
+      "Distorsion angulaire et distorsion par retrait",
+      "Distorsion verticale et horizontale",
+      "Distorsion thermique et mécanique"
+    ],
+    "answer": "B",
+    "explanation": "Les deux principaux types de distorsion sont la distorsion angulaire (changement d'angle) et la distorsion par retrait (contraction du métal dans les directions longitudinale et transversale).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le rôle de la vitesse de refroidissement sur la microstructure de la ZAT?",
+    "options": [
+      "Un refroidissement rapide donne une structure plus dure (martensite), un refroidissement lent donne une structure plus douce (perlite/ferrite)",
+      "La vitesse de refroidissement n'affecte pas la microstructure",
+      "Un refroidissement lent donne de la martensite",
+      "Un refroidissement rapide donne de la perlite"
+    ],
+    "answer": "A",
+    "explanation": "La vitesse de refroidissement détermine la microstructure de la ZAT : rapide → martensite (dure, fragile), lent → perlite + ferrite (plus ductile).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que le carbone équivalent d'un acier avec 0,20% C, 1,2% Mn, 0,4% Cr, 0,2% Mo, 0,1% Ni?",
+    "options": [
+      "0,20",
+      "0,45",
+      "0,52",
+      "0,65"
+    ],
+    "answer": "C",
+    "explanation": "CE = 0,20 + 1,2/6 + (0,4+0,2+0)/5 + (0,1+0)/15 = 0,20 + 0,20 + 0,12 + 0,007 = 0,527. Donc environ 0,52.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Que signifie la classification E6010 pour une électrode SMAW?",
+    "options": [
+      "60 000 psi de résistance à la traction, toutes positions, électrode à cellulose-sodium",
+      "60 000 psi, position à plat seulement, enrobage rutile",
+      "60 000 psi, toutes positions, enrobage basique",
+      "60 000 psi, position verticale seulement, enrobage acide"
+    ],
+    "answer": "A",
+    "explanation": "E = électrode, 60 = 60 000 psi de résistance à la traction, 1 = toutes positions, 0 = électrode à cellulose-sodium (DC+).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle électrode SMAW est recommandée pour le soudage de tuyaux en position 6G?",
+    "options": [
+      "E6012",
+      "E6010",
+      "E7024",
+      "E6027"
+    ],
+    "answer": "B",
+    "explanation": "L'E6010 est couramment utilisée pour le soudage de tuyaux (pipe welding) en position 6G en raison de sa pénétration profonde et de sa capacité à souder dans toutes les positions.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la principale différence entre l'E6010 et l'E6011?",
+    "options": [
+      "L'E6010 fonctionne en DC+ seulement, l'E6011 peut fonctionner en AC et DC",
+      "L'E6010 est pour l'acier inoxydable, l'E6011 pour l'acier au carbone",
+      "L'E6010 a une résistance de 60 ksi, l'E6011 de 70 ksi",
+      "L'E6010 est une électrode basique, l'E6011 est rutile"
+    ],
+    "answer": "A",
+    "explanation": "L'E6010 fonctionne uniquement en courant continu avec polarité positive (DC+), tandis que l'E6011 est conçue pour fonctionner aussi bien en AC qu'en DC.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Que signifie le chiffre 8 dans la classification E7018?",
+    "options": [
+      "8 = fer pulvérulent basique (low hydrogen iron powder)",
+      "8 = 80 000 psi",
+      "8 = position verticale seulement",
+      "8 = 8/10 de pouce de diamètre"
+    ],
+    "answer": "A",
+    "explanation": "Dans E7018, le 8 indique le type d'enrobage : fer pulvérulent basique (low hydrogen iron powder). Ces électrodes produisent un laitier protecteur et un arc stable.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la résistance à la traction minimale d'une électrode E7018?",
+    "options": [
+      "60 000 psi (414 MPa)",
+      "70 000 psi (483 MPa)",
+      "80 000 psi (552 MPa)",
+      "90 000 psi (620 MPa)"
+    ],
+    "answer": "B",
+    "explanation": "Le 70 dans E7018 indique une résistance à la traction minimale de 70 000 psi (483 MPa) pour le métal déposé.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Dans quelles positions une électrode de classification E7024 peut-elle être utilisée?",
+    "options": [
+      "Toutes les positions",
+      "Position à plat et fillet horizontal seulement",
+      "Position verticale seulement",
+      "Position au-dessus de la tête seulement"
+    ],
+    "answer": "B",
+    "explanation": "Le chiffre 2 dans E7024 indique que l'électrode est limitée aux positions à plat (1G/1F) et fillet horizontal (2F).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la température de stockage recommandée pour les électrodes E7018?",
+    "options": [
+      "Température ambiante",
+      "50-80°C (120-175°F)",
+      "100-150°C (212-300°F)",
+      "200-300°C (390-570°F)"
+    ],
+    "answer": "C",
+    "explanation": "Les électrodes basiques comme l'E7018 doivent être stockées dans un four à électrodes à 100-150°C (212-300°F) pour les maintenir sèches et éviter l'absorption d'humidité.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la température de reconditionnement (baking) pour les électrodes E7018 qui ont absorbé de l'humidité?",
+    "options": [
+      "150-200°C (300-390°F)",
+      "300-400°C (570-750°F)",
+      "400-500°C (750-930°F)",
+      "500-600°C (930-1110°F)"
+    ],
+    "answer": "B",
+    "explanation": "Les électrodes E7018 qui ont absorbé de l'humidité peuvent être reconditionnées en les chauffant à 300-400°C (570-750°F) pendant 1 à 2 heures.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est l'ampérage recommandé pour une électrode E7018 de 1/8 po (3,2 mm)?",
+    "options": [
+      "60-90 A",
+      "90-140 A",
+      "140-180 A",
+      "180-220 A"
+    ],
+    "answer": "B",
+    "explanation": "Pour une électrode E7018 de 1/8 po (3,2 mm), l'ampérage recommandé est généralement de 90 à 140 ampères.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle électrode SMAW est caractérisée par une pénétration profonde et un arc perçant, idéale pour le soudage de tuyaux en position?",
+    "options": [
+      "E6012",
+      "E6010",
+      "E7014",
+      "E7024"
+    ],
+    "answer": "B",
+    "explanation": "L'E6010 produit un arc perçant (digging arc) avec une pénétration profonde, ce qui la rend idéale pour le soudage de tuyaux, particulièrement pour les passes de racine.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la polarité recommandée pour le soudage avec l'électrode E6010?",
+    "options": [
+      "DCEN (CC-)",
+      "DCEP (CC+)",
+      "CA (alternatif)",
+      "Indifférent"
+    ],
+    "answer": "B",
+    "explanation": "L'électrode E6010 est conçue pour fonctionner exclusivement en DCEP (CC+, électrode positive) pour obtenir ses caractéristiques d'arc perçant et de pénétration profonde.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle électrode SMAW est la mieux adaptée pour le soudage de l'acier à haute résistance nécessitant une faible teneur en hydrogène?",
+    "options": [
+      "E6010",
+      "E6011",
+      "E6013",
+      "E7018"
+    ],
+    "answer": "D",
+    "explanation": "L'E7018 est une électrode basique à faible teneur en hydrogène, idéale pour le soudage des aciers à haute résistance où le risque de fissuration par hydrogène est élevé.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est l'effet d'une électrode humide sur la qualité de la soudure à l'arc avec une E7018?",
+    "options": [
+      "Aucun effet significatif",
+      "Augmentation de la porosité et risque de fissuration par hydrogène",
+      "Arc plus stable",
+      "Meilleure pénétration"
+    ],
+    "answer": "B",
+    "explanation": "L'humidité dans l'enrobage des électrodes basiques (E7018) se décompose dans l'arc, libérant de l'hydrogène qui cause porosité et augmente le risque de fissuration.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle électrode SMAW est généralement utilisée pour le soudage de l'acier galvanisé?",
+    "options": [
+      "E6010",
+      "E6011",
+      "E6012",
+      "E7018"
+    ],
+    "answer": "A",
+    "explanation": "L'E6010, avec son arc perçant, est souvent recommandée pour le soudage de l'acier galvanisé car elle peut brûler à travers le revêtement de zinc.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Que signifie le nombre 1 dans la classification E6010 (première position après la résistance)?",
+    "options": [
+      "Position à plat seulement",
+      "Toutes les positions",
+      "Position horizontale seulement",
+      "Position verticale seulement"
+    ],
+    "answer": "B",
+    "explanation": "Le chiffre 1 dans E6010 (avant-dernier chiffre) indique que l'électrode est qualifiée pour toutes les positions de soudage : à plat, horizontale, verticale et au-dessus de la tête.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la principale caractéristique d'une électrode E6012?",
+    "options": [
+      "Pénétration profonde, arc perçant",
+      "Pénétration moyenne, bonne pour les joints à faible espacement et les tôles minces",
+      "Arc froid, idéal pour acier inoxydable",
+      "Haute résistance, faible hydrogène"
+    ],
+    "answer": "B",
+    "explanation": "L'E6012 produit un arc doux avec une pénétration moyenne, adaptée aux joints à faible espacement. Elle est souvent utilisée pour le soudage des tôles minces et les joints à recouvrement.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est l'ampérage recommandé pour une électrode E7018 de 5/32 po (4,0 mm)?",
+    "options": [
+      "80-120 A",
+      "130-180 A",
+      "190-240 A",
+      "250-300 A"
+    ],
+    "answer": "B",
+    "explanation": "Pour une électrode E7018 de 5/32 po (4,0 mm), la plage d'ampérage recommandée est généralement de 130 à 180 ampères.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Qu'est-ce que l'enrobage rutile dans les électrodes SMAW?",
+    "options": [
+      "Un enrobage à base de cellulose",
+      "Un enrobage contenant du dioxyde de titane (rutile) produisant un arc stable et un bon aspect du cordon",
+      "Un enrobage basique à faible hydrogène",
+      "Un enrobage à base de fer"
+    ],
+    "answer": "B",
+    "explanation": "L'enrobage rutile contient du dioxyde de titane (TiO2), qui produit un arc stable et fluide avec un bon aspect du cordon et un laitier facile à enlever.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la différence entre une électrode E7018 et une E7018-1?",
+    "options": [
+      "L'E7018-1 a une meilleure résistance aux chocs à basse température (-50°F/-45°C vs -20°F/-29°C)",
+      "L'E7018-1 a une résistance à la traction plus élevée",
+      "L'E7018-1 ne peut être utilisée qu'en AC",
+      "Il n'y a aucune différence"
+    ],
+    "answer": "A",
+    "explanation": "L'E7018-1 a une résilience améliorée aux basses températures, avec une exigence de résilience Charpy V-notch à -50°F (-45°C), contre -20°F (-29°C) pour l'E7018 standard.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle électrode SMAW est la plus appropriée pour assembler des tôles d'acier doux de 1/4 po (6 mm) en position à plat?",
+    "options": [
+      "E6010 3/32 po",
+      "E6013 1/8 po",
+      "E7018 3/16 po",
+      "E6027 1/4 po"
+    ],
+    "answer": "B",
+    "explanation": "L'E6013 de 1/8 po convient bien pour l'acier doux de 1/4 po en position à plat. C'est une électrode polyvalente qui produit un arc doux et un beau cordon.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Comment doit-on manipuler les électrodes E7018 après les avoir sorties du four?",
+    "options": [
+      "Les laisser à l'air libre",
+      "Les utiliser dans les 2 à 4 heures ou les remettre au four",
+      "Les mettre au réfrigérateur",
+      "Les exposer à l'air humide pour améliorer l'arc"
+    ],
+    "answer": "B",
+    "explanation": "Les électrodes E7018 doivent être utilisées dans les 2 à 4 heures après avoir été sorties du four de stockage, sinon elles doivent être remises au four ou reconditionnées.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le principal avantage de l'enrobage à la cellulose (E6010, E6011)?",
+    "options": [
+      "Faible production de fumée",
+      "Arc perçant avec pénétration profonde et bonne pour les passes de racine",
+      "Aspect esthétique du cordon",
+      "Faible prix"
+    ],
+    "answer": "B",
+    "explanation": "L'enrobage à la cellulose produit un gaz de protection qui génère un arc perçant (digging arc) avec une pénétration profonde, idéal pour les passes de racine et le soudage en position.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle électrode SMAW produit le plus de laitier (slag)?",
+    "options": [
+      "E6010",
+      "E6013",
+      "E7024 (fer pulvérulent)",
+      "E7018"
+    ],
+    "answer": "C",
+    "explanation": "L'E7024 (électrode au fer pulvérulent) produit une grande quantité de laitier en raison de la forte teneur en fer dans l'enrobage, ce qui augmente le taux de dépôt.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Pourquoi les électrodes E6010 sont-elles souvent utilisées pour la passe de racine en soudage de tuyaux?",
+    "options": [
+      "Parce qu'elles sont moins chères",
+      "Parce que l'arc perçant brûle à travers les oxydes et assure une bonne pénétration à la racine",
+      "Parce qu'elles produisent un beau cordon",
+      "Parce qu'elles ne nécessitent pas de décochage"
+    ],
+    "answer": "B",
+    "explanation": "L'arc perçant de l'E6010 pénètre profondément et brûle les oxydes, assurant une fusion complète à la racine du joint. C'est essentiel pour les soudures de tuyaux.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est l'effet de la vitesse de déplacement (travel speed) sur la pénétration en SMAW?",
+    "options": [
+      "Une vitesse lente augmente la pénétration",
+      "Une vitesse rapide augmente la pénétration",
+      "La vitesse n'affecte pas la pénétration",
+      "Seul l'ampérage affecte la pénétration"
+    ],
+    "answer": "A",
+    "explanation": "Une vitesse de déplacement plus lente permet à l'arc de rester plus longtemps au même endroit, ce qui augmente l'apport thermique et donc la pénétration.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle électrode SMAW est classée comme «low hydrogen» (faible hydrogène)?",
+    "options": [
+      "E6010 et E6011",
+      "E6012 et E6013",
+      "E7015, E7016 et E7018",
+      "E6024 et E6027"
+    ],
+    "answer": "C",
+    "explanation": "Les électrodes de la série XX15, XX16 et XX18 sont des électrodes basiques à faible teneur en hydrogène, dont la plus courante est l'E7018.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la procédure correcte pour le décochage (slag removal) d'une électrode E7018?",
+    "options": [
+      "Le laitier s'enlève généralement facilement avec un marteau à piquer",
+      "Le laitier ne s'enlève pas",
+      "Il faut utiliser une meuleuse",
+      "Le laitier tombe tout seul"
+    ],
+    "answer": "A",
+    "explanation": "Le laitier des électrodes E7018 s'enlève généralement facilement au marteau à piquer (chipping hammer) car il se rétracte légèrement en refroidissant.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la plage d'ampérage pour une électrode E6010 de 3/32 po (2,4 mm)?",
+    "options": [
+      "40-70 A",
+      "60-100 A",
+      "90-140 A",
+      "110-160 A"
+    ],
+    "answer": "B",
+    "explanation": "Pour une électrode E6010 de 3/32 po (2,4 mm), l'ampérage recommandé se situe généralement entre 60 et 100 ampères.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Que signifie le dernier chiffre (le 2) dans la classification E6012?",
+    "options": [
+      "Position verticale seulement",
+      "Position à plat et fillet horizontal seulement",
+      "Toutes les positions",
+      "2 = 20 000 psi supplémentaires"
+    ],
+    "answer": "B",
+    "explanation": "Le chiffre 2 dans E6012 (l'avant-dernier chiffre) indique que l'électrode est limitée aux positions à plat (1G/1F) et fillet horizontal (2F).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le principal inconvénient des électrodes E6010 par rapport aux E7018?",
+    "options": [
+      "Résistance inférieure",
+      "Arc instable",
+      "Production élevée de fumées et d'hydrogène, vitesse de soudage plus lente",
+      "Ne peut souder que l'aluminium"
+    ],
+    "answer": "C",
+    "explanation": "L'E6010 produit plus de fumées et a un taux de dépôt plus faible que l'E7018. De plus, sa teneur élevée en hydrogène la rend inadaptée aux aciers à haute résistance.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la plage d'ampérage pour une électrode E7018 de 3/16 po (4,8 mm)?",
+    "options": [
+      "100-150 A",
+      "150-200 A",
+      "180-240 A",
+      "250-350 A"
+    ],
+    "answer": "C",
+    "explanation": "Pour une électrode E7018 de 3/16 po (4,8 mm), la plage d'ampérage recommandée est de 180 à 240 ampères.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle électrode SMAW est la meilleure pour le soudage de tôles minces (sheet metal)?",
+    "options": [
+      "E6010",
+      "E6013",
+      "E7024",
+      "E7018"
+    ],
+    "answer": "B",
+    "explanation": "L'E6013 est idéale pour les tôles minces car elle produit un arc doux avec moins de pénétration, réduisant le risque de brûler à travers la tôle.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Qu'est-ce que le principe de la cellule d'hydrogène (hydrogen cell) dans une électrode E7018?",
+    "options": [
+      "Une cellule dans l'enrobage qui absorbe l'hydrogène",
+      "La réaction de l'enrobage qui produit de l'hydrogène",
+      "La capacité de l'enrobage à maintenir une faible teneur en hydrogène grâce à des composés basiques",
+      "Un type d'électrode pour la production d'hydrogène"
+    ],
+    "answer": "C",
+    "explanation": "L'enrobage basique de l'E7018 contient des carbonates et des fluorures qui réagissent pour maintenir une faible teneur en hydrogène dans l'arc, réduisant le risque de fissuration.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la technique de soudage recommandée pour minimiser la distorsion avec l'E7018?",
+    "options": [
+      "Souder en une seule passe rapide",
+      "Utiliser un courant très élevé",
+      "Utiliser la technique de soudage par passes multiples alternées (skip welding) et par retrait",
+      "Souder sans arrêt du début à la fin"
+    ],
+    "answer": "C",
+    "explanation": "Le soudage par passes courtes alternées (skip welding) et par retrait (backstep) répartit la chaleur plus uniformément et minimise la distorsion.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le diamètre d'électrode le plus couramment utilisé pour le soudage général en atelier?",
+    "options": [
+      "3/32 po (2,4 mm)",
+      "1/8 po (3,2 mm)",
+      "5/32 po (4,0 mm)",
+      "3/16 po (4,8 mm)"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre de 1/8 po (3,2 mm) est le plus couramment utilisé pour le soudage général car il offre un bon équilibre entre pénétration, taux de dépôt et maniabilité.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel gaz de protection assure la pénétration la plus profonde en GMAW?",
+    "options": [
+      "Argon pur",
+      "CO2 pur",
+      "Hélium pur",
+      "Mélange Ar/He"
+    ],
+    "answer": "B",
+    "explanation": "Le CO2 pur produit la pénétration la plus profonde en GMAW car il se dissocie dans l'arc, créant un arc chaud et concentré.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel mode de transfert métallique en GMAW est caractérisé par un faible courant et un court-circuit fréquent entre le fil et la pièce?",
+    "options": [
+      "Transfert par spray (pulvérisation axiale)",
+      "Transfert par court-circuit (short circuit)",
+      "Transfert globulaire",
+      "Transfert pulsé"
+    ],
+    "answer": "B",
+    "explanation": "Le transfert par court-circuit (short-circuit/ dip transfer) se produit à bas courant (<200A) où le fil touche la pièce jusqu'à 200 fois par seconde.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel débit de gaz de protection est généralement recommandé pour le soudage GMAW en atelier?",
+    "options": [
+      "5-10 CFH (pieds cubes/heure)",
+      "15-25 CFH",
+      "30-50 CFH",
+      "60-80 CFH"
+    ],
+    "answer": "B",
+    "explanation": "Le débit de gaz recommandé pour le GMAW en atelier est de 15 à 25 CFH (pieds cubes par heure), soit environ 7 à 12 litres par minute.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel gaz de protection est recommandé pour le soudage GMAW de l'aluminium?",
+    "options": [
+      "CO2 pur",
+      "Argon pur",
+      "Mélange Ar/CO2 75/25",
+      "Oxygène pur"
+    ],
+    "answer": "B",
+    "explanation": "L'argon pur est recommandé pour le soudage GMAW de l'aluminium car il assure un nettoyage par ionisation et un arc stable sur ce métal non ferreux.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le principal avantage du transfert par spray (spray arc) en GMAW?",
+    "options": [
+      "Faible apport thermique",
+      "Taux de dépôt élevé avec un arc stable et sans projections",
+      "Convient aux tôles minces",
+      "Ne nécessite pas de gaz de protection"
+    ],
+    "answer": "B",
+    "explanation": "Le transfert par spray produit de fines gouttelettes de métal projetées axialement, offrant un arc stable, un taux de dépôt élevé et pratiquement aucune projection.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le courant minimum approximatif pour obtenir un transfert par spray en GMAW avec un fil de 1,2 mm (0,045 po)?",
+    "options": [
+      "150 A",
+      "200 A",
+      "220-250 A",
+      "300 A"
+    ],
+    "answer": "C",
+    "explanation": "Le courant de transition spray pour un fil d'acier de 1,2 mm (0,045 po) se situe généralement autour de 220-250 A, selon le gaz de protection utilisé.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel gaz de protection est le meilleur pour le soudage GMAW du acier au carbone avec transfert par spray?",
+    "options": [
+      "CO2 pur",
+      "Argon pur",
+      "Mélange Ar/CO2 85-90%/15-10%",
+      "Mélange Ar/O2 98/2%"
+    ],
+    "answer": "C",
+    "explanation": "Le mélange Ar/CO2 avec 85-90% d'argon et 10-15% de CO2 est optimal pour le transfert par spray sur acier au carbone, offrant stabilité de l'arc et bonnes propriétés mécaniques.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la vitesse de dévidage (wire feed speed) typique pour le soudage GMAW avec un fil de 0,035 po (0,9 mm)?",
+    "options": [
+      "1-2 m/min",
+      "3-8 m/min",
+      "12-18 m/min",
+      "20-30 m/min"
+    ],
+    "answer": "B",
+    "explanation": "La vitesse de dévidage typique pour un fil GMAW de 0,035 po (0,9 mm) est de 3 à 8 mètres par minute, selon l'épaisseur et la position de soudage.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le stick-out recommandé en GMAW pour la plupart des applications?",
+    "options": [
+      "5-8 mm (1/4-5/16 po)",
+      "10-20 mm (3/8-3/4 po)",
+      "25-35 mm (1-1,5 po)",
+      "40-50 mm (1,5-2 po)"
+    ],
+    "answer": "B",
+    "explanation": "Le stick-out (extension du fil) recommandé en GMAW est de 10 à 20 mm (3/8 à 3/4 de pouce). Trop court cause des brûlures du tube contact, trop long donne un arc instable.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel mode de transfert GMAW est idéal pour le soudage de l'aluminium?",
+    "options": [
+      "Court-circuit",
+      "Globulaire",
+      "Pulsé (pulsed spray)",
+      "Spray continu"
+    ],
+    "answer": "C",
+    "explanation": "Le transfert pulsé (pulsed MIG) est idéal pour l'aluminium car il combine les avantages du spray (bon transfert) avec un apport thermique moyen, contrôlant la distorsion.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que le transfert globulaire en GMAW?",
+    "options": [
+      "Un transfert à faible courant avec de grosses gouttelettes irrégulières",
+      "Un transfert à haute vitesse",
+      "Un transfert sans gaz",
+      "Un transfert par pulvérisation fine"
+    ],
+    "answer": "A",
+    "explanation": "Le transfert globulaire se produit à courant moyen entre le court-circuit et le spray, avec de grosses gouttelettes de métal qui tombent par gravité, créant des projections.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est l'effet d'une augmentation de la tension en GMAW?",
+    "options": [
+      "Augmente la vitesse de dévidage",
+      "Allonge l'arc et aplatit le cordon",
+      "Diminue la pénétration",
+      "Réduit les projections"
+    ],
+    "answer": "B",
+    "explanation": "L'augmentation de la tension allonge l'arc, ce qui aplatit le cordon de soudure et augmente la largeur du bain de fusion.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel gaz de protection est utilisé pour le soudage FCAW auto-protégé (sans gaz externe)?",
+    "options": [
+      "Argon",
+      "CO2",
+      "Aucun — le flux contenu dans le fil génère son propre gaz",
+      "Hélium"
+    ],
+    "answer": "C",
+    "explanation": "Le FCAW auto-protégé (self-shielded) ne nécessite pas de gaz externe. Les composés dans le flux du fil génèrent un gaz de protection lors de la combustion de l'arc.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est l'avantage du FCAW par rapport au GMAW pour le soudage en extérieur?",
+    "options": [
+      "Moins cher",
+      "Plus rapide",
+      "Meilleure résistance au vent grâce au flux protecteur",
+      "Ne nécessite pas d'électricité"
+    ],
+    "answer": "C",
+    "explanation": "Le FCAW résiste mieux au vent que le GMAW car le flux fournit une protection supplémentaire qui n'est pas facilement dispersée par les courants d'air.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la fonction du tube contact (contact tip) en GMAW?",
+    "options": [
+      "Guider le gaz de protection",
+      "Transmettre le courant électrique au fil d'apport",
+      "Refroidir la torche",
+      "Régler la vitesse de dévidage"
+    ],
+    "answer": "B",
+    "explanation": "Le tube contact (contact tip) transmet le courant électrique au fil d'apport. Il est généralement en cuivre et doit être remplacé lorsqu'il est usé.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est l'effet d'un débit de gaz trop élevé en GMAW?",
+    "options": [
+      "Meilleure protection",
+      "Arc plus stable",
+      "Turbulence qui peut aspirer de l'air et contaminer la soudure",
+      "Augmentation de la pénétration"
+    ],
+    "answer": "C",
+    "explanation": "Un débit de gaz trop élevé crée des turbulences qui peuvent aspirer l'air ambiant dans le flux de gaz, contaminant la soudure avec de l'oxygène et de l'azote.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le diamètre de fil GMAW le plus couramment utilisé pour le soudage général de l'acier?",
+    "options": [
+      "0,023 po (0,6 mm)",
+      "0,030 po (0,8 mm)",
+      "0,035 po (0,9 mm)",
+      "0,045 po (1,2 mm)"
+    ],
+    "answer": "C",
+    "explanation": "Le fil de 0,035 po (0,9 mm) est le plus polyvalent pour le soudage GMAW général de l'acier, offrant un bon équilibre entre taux de dépôt et contrôle.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que la polarité recommandée pour le soudage FCAW avec gaz (gaz-shielded flux-cored)?",
+    "options": [
+      "DCEN (CC-)",
+      "DCEP (CC+)",
+      "CA (alternatif)",
+      "Indifférent"
+    ],
+    "answer": "B",
+    "explanation": "Le FCAW avec gaz utilise généralement la polarité DCEP (CC+) pour une bonne pénétration et un transfert stable du métal en fusion.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel mélange gazeux est le plus utilisé pour le soudage GMAW de l'acier au carbone en atelier?",
+    "options": [
+      "Argon pur",
+      "CO2 pur",
+      "Ar/CO2 75%/25%",
+      "Ar/He 50/50"
+    ],
+    "answer": "C",
+    "explanation": "Le mélange Ar/CO2 75%/25% est le plus utilisé pour le soudage GMAW de l'acier au carbone car il offre un bon équilibre entre stabilité de l'arc, pénétration et coût.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel défaut est le plus fréquent en GMAW avec un stick-out trop long?",
+    "options": [
+      "Porosité",
+      "Manque de fusion",
+      "Pénétration excessive",
+      "Sous-coupe"
+    ],
+    "answer": "B",
+    "explanation": "Un stick-out trop long réduit le courant de soudage effectif, ce qui peut causer un manque de fusion (lack of fusion) car l'apport thermique est insuffisant.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que la vitesse de dévidage (WFS) contrôle principalement?",
+    "options": [
+      "La tension de l'arc",
+      "Le courant de soudage",
+      "La largeur du cordon",
+      "La vitesse de refroidissement"
+    ],
+    "answer": "B",
+    "explanation": "En GMAW, la vitesse de dévidage (wire feed speed) contrôle principalement le courant de soudage. Plus le fil est dévidé rapidement, plus le courant est élevé.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la principale différence entre les fils GMAW ER70S-3 et ER70S-6?",
+    "options": [
+      "L'ER70S-6 contient plus de désoxydants (Mn et Si), offrant une meilleure tolérance à la rouille et aux contaminants",
+      "L'ER70S-3 est pour l'aluminium",
+      "L'ER70S-6 a une résistance plus élevée",
+      "Il n'y a pas de différence"
+    ],
+    "answer": "A",
+    "explanation": "L'ER70S-6 contient des niveaux plus élevés de manganèse et de silicium que l'ER70S-3, ce qui lui confère de meilleures propriétés désoxydantes sur l'acier légèrement rouillé.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est l'angle de torche recommandé en GMAW pour le soudage à plat avec transfert par court-circuit?",
+    "options": [
+      "Angle de poussée (push) de 10-15 degrés",
+      "Angle de traînée (drag) de 10-15 degrés",
+      "Angle de 45 degrés",
+      "Angle de 90 degrés"
+    ],
+    "answer": "A",
+    "explanation": "En GMAW, l'angle de poussée (push technique) de 10 à 15 degrés est recommandé pour le soudage à plat car il permet un meilleur contrôle du bain de fusion et une meilleure protection gazeuse.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que l'effet de l'orientation de la torche (push vs pull) sur la pénétration en GMAW?",
+    "options": [
+      "La technique push donne une pénétration plus large et moins profonde, la technique pull (drag) donne une pénétration plus profonde",
+      "Push donne plus de pénétration",
+      "Aucune différence",
+      "Pull donne un cordon plus large"
+    ],
+    "answer": "A",
+    "explanation": "La technique push (pousser) donne un cordon plus large avec moins de pénétration (pénétration peu profonde et large). La technique pull/traînée donne une pénétration plus étroite et profonde.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quels sont les symptômes d'un débit de gaz insuffisant en GMAW?",
+    "options": [
+      "Arc trop brillant",
+      "Porosité dans le cordon de soudure",
+      "Excès de pénétration",
+      "Cordon trop large"
+    ],
+    "answer": "B",
+    "explanation": "Un débit de gaz insuffisant permet à l'air ambiant de contaminer le bain de fusion, ce qui produit de la porosité visible dans le cordon de soudure.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce que le transfert métallique par spray pulsé (pulsed spray)?",
+    "options": [
+      "Un transfert où le courant alterne entre un niveau de pic élevé (spray) et un courant de fond faible",
+      "Un transfert par court-circuit",
+      "Un transfert globulaire",
+      "Un transfert à courant constant"
+    ],
+    "answer": "A",
+    "explanation": "Le transfert pulsé alterne entre un courant de pic élevé (qui détache une gouttelette en spray) et un courant de fond faible (qui maintient l'arc sans transfert).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Pourquoi utilise-t-on un mélange Argon/Hélium pour le soudage GMAW des métaux épais?",
+    "options": [
+      "Pour réduire le coût",
+      "Pour augmenter l'apport thermique grâce à la conductivité thermique élevée de l'hélium",
+      "Pour réduire la pénétration",
+      "Pour améliorer l'aspect du cordon"
+    ],
+    "answer": "B",
+    "explanation": "L'hélium a une conductivité thermique élevée qui transfère plus de chaleur à la pièce, ce qui est avantageux pour le soudage des métaux épais et des alliages à haute conductivité thermique.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel problème est associé au transfert globulaire en GMAW?",
+    "options": [
+      "Arc stable",
+      "Projections excessives et arc instable",
+      "Faible taux de dépôt",
+      "Aucune projection"
+    ],
+    "answer": "B",
+    "explanation": "Le transfert globulaire produit de grosses gouttelettes irrégulières qui causent des projections excessives, un arc instable et une mauvaise qualité de soudure.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la différence entre le FCAW à gaz (gas-shielded) et le FCAW auto-protégé (self-shielded)?",
+    "options": [
+      "Le FCAW à gaz nécessite un gaz externe, le FCAW auto-protégé utilise le flux interne pour la protection",
+      "Le FCAW auto-protégé est plus rapide",
+      "Le FCAW à gaz ne peut souder que l'acier inoxydable",
+      "Il n'y a pas de différence"
+    ],
+    "answer": "A",
+    "explanation": "Le FCAW à gaz (FCAW-G) nécessite un gaz de protection externe (souvent CO2 ou Ar/CO2), tandis que le FCAW auto-protégé (FCAW-S) utilise les composés du flux à l'intérieur du fil.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est l'effet de l'ajout d'oxygène (2-5%) dans un mélange Ar/CO2 pour le GMAW?",
+    "options": [
+      "Réduit la pénétration",
+      "Améliore la mouillabilité et la fluidité du bain de fusion sur acier inoxydable",
+      "Réduit les fumées",
+      "Augmente la porosité"
+    ],
+    "answer": "B",
+    "explanation": "L'ajout d'une petite quantité d'oxygène (2-5%) au mélange de gaz améliore la mouillabilité et la fluidité du bain de fusion, particulièrement pour le soudage de l'acier inoxydable.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le courant de soudage typique pour le transfert par spray en GMAW sur acier de 1/2 po (12 mm) avec fil de 1,2 mm?",
+    "options": [
+      "150-200 A",
+      "250-350 A",
+      "400-450 A",
+      "500-600 A"
+    ],
+    "answer": "B",
+    "explanation": "Pour le transfert par spray sur acier de 1/2 po (12 mm) avec fil de 1,2 mm, le courant se situe généralement entre 250 et 350 A.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Que signifie ER70S-6 dans la classification d'un fil GMAW?",
+    "options": [
+      "ER = Electrode/ Rod, 70 = 70 000 psi, S = plein (solid), 6 = type de désoxydation",
+      "ER = Extra Resistant, 70 = diamètre, S = speed",
+      "ER = Electrode Rutile, 70 = dureté",
+      "ER = Electric Rod, 70 = 70 mm de long"
+    ],
+    "answer": "A",
+    "explanation": "ER = Electrode/Rod, 70 = 70 000 psi de résistance à la traction, S = fil plein (solid), 6 = niveau de désoxydation (Mn et Si).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel gaz de protection est le plus économique pour le soudage GMAW en production?",
+    "options": [
+      "Argon pur",
+      "CO2 pur",
+      "Mélange Ar/He",
+      "Mélange Ar/O2"
+    ],
+    "answer": "B",
+    "explanation": "Le CO2 pur est le gaz de protection le moins cher pour le GMAW, ce qui le rend économique pour la production. Cependant, il produit plus de projections que les mélanges Ar/CO2.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle méthode d'inspection non destructive utilise un champ magnétique et des particules de fer pour détecter les défauts de surface?",
+    "options": [
+      "VT (Visuel)",
+      "PT (Ressuage)",
+      "MT (Magnétoscopie)",
+      "RT (Radiographie)"
+    ],
+    "answer": "C",
+    "explanation": "La magnétoscopie (MT - Magnetic Particle Testing) utilise un champ magnétique et des particules de fer pour révéler les discontinuités de surface et sub-surface dans les matériaux ferromagnétiques.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle méthode d'inspection est limitée aux matériaux ferromagnétiques (acier au carbone)?",
+    "options": [
+      "VT",
+      "PT",
+      "MT",
+      "RT"
+    ],
+    "answer": "C",
+    "explanation": "La magnétoscopie (MT) ne fonctionne que sur les matériaux ferromagnétiques car elle nécessite un champ magnétique. L'acier inoxydable austénitique et l'aluminium ne sont pas testables par MT.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de défaut est le mieux détecté par radiographie (RT)?",
+    "options": [
+      "Fissures planes (planar defects)",
+      "Défauts volumétriques comme la porosité et les inclusions de laitier",
+      "Fissures de fatigue",
+      "Sous-coupe"
+    ],
+    "answer": "B",
+    "explanation": "La radiographie (RT) est excellente pour détecter les défauts volumétriques (porosité, inclusions de laitier) car elle montre les variations d'épaisseur. Les fissures planes sont mieux détectées par UT.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de défaut est le mieux détecté par ultrasons (UT)?",
+    "options": [
+      "Défauts volumétriques (porosité)",
+      "Défauts plans (criques, manque de fusion)",
+      "Défauts de surface uniquement",
+      "Défauts de couleur"
+    ],
+    "answer": "B",
+    "explanation": "Les ultrasons (UT) sont particulièrement efficaces pour détecter les défauts plans (cracks, lack of fusion) orientés perpendiculairement au faisceau ultrasonore.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que l'essai de ressuage (PT - Dye Penetrant Testing)?",
+    "options": [
+      "Un test utilisant un liquide pénétrant pour révéler les défauts ouverts en surface",
+      "Un test magnétique",
+      "Un test aux ultrasons",
+      "Un test de dureté"
+    ],
+    "answer": "A",
+    "explanation": "Le ressuage (PT) utilise un liquide pénétrant coloré ou fluorescent qui s'infiltre dans les défauts ouverts en surface, puis un révélateur fait ressortir le défaut par contraste.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la différence entre l'essai de pliage de la face (face bend) et l'essai de pliage de la racine (root bend)?",
+    "options": [
+      "Face bend place la face en traction, root bend place la racine en traction",
+      "Face bend est plus sévère",
+      "Root bend teste la pénétration seulement",
+      "Il n'y a pas de différence"
+    ],
+    "answer": "A",
+    "explanation": "L'essai de pliage de la face (face bend) met la face de la soudure en traction. L'essai de pliage de la racine (root bend) met la racine en traction, testant ainsi la qualité de la pénétration à la racine.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est l'angle de pliage typique pour un essai de pliage de soudure?",
+    "options": [
+      "90 degrés",
+      "180 degrés",
+      "360 degrés",
+      "45 degrés"
+    ],
+    "answer": "B",
+    "explanation": "Les essais de pliage (bend test) sont généralement pliés à 180 degrés (complètement repliés sur eux-mêmes) selon un mandrin de diamètre spécifié.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce qu'une inspection visuelle (VT) permet de détecter?",
+    "options": [
+      "Défauts internes seulement",
+      "Défauts de surface comme la sous-coupe, les cratères, les porosités et les fissures visibles",
+      "Défauts de dureté",
+      "Défauts de composition chimique"
+    ],
+    "answer": "B",
+    "explanation": "L'inspection visuelle (VT) permet de détecter les défauts visibles en surface : sous-coupe (undercut), cratères, porosité de surface, fissures, recouvrement (overlap) et profil incorrect du cordon.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que l'essai de traction (tensile test) en soudage?",
+    "options": [
+      "Un test qui étire l'échantillon jusqu'à rupture pour mesurer la résistance et l'allongement",
+      "Un test qui comprime la soudure",
+      "Un test de pliage",
+      "Un test de dureté"
+    ],
+    "answer": "A",
+    "explanation": "L'essai de traction mesure la résistance à la traction, la limite d'élasticité et l'allongement de la soudure en étirant l'éprouvette jusqu'à rupture.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce qu'un essai de macro-attaque (macroetch test)?",
+    "options": [
+      "Un test microscopique à haute puissance",
+      "Une attaque chimique de la surface polie d'un échantillon pour révéler la macrostructure de la soudure",
+      "Un test de dureté",
+      "Un test de pliage"
+    ],
+    "answer": "B",
+    "explanation": "L'essai de macro-attaque utilise un acide (comme le nital) sur une surface polie pour révéler les zones de la soudure : métal fondu, ZAT, lignes de fusion et la pénétration.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Selon CSA W59, quelle est la profondeur maximale acceptable de sous-coupe (undercut) dans une soudure?",
+    "options": [
+      "1/32 po (0,8 mm)",
+      "1/16 po (1,6 mm)",
+      "1/8 po (3,2 mm)",
+      "3/16 po (4,8 mm)"
+    ],
+    "answer": "A",
+    "explanation": "Selon CSA W59, la sous-coupe ne doit pas dépasser 1/32 po (0,8 mm) de profondeur dans les structures en acier. Au-delà, la soudure est considérée comme non conforme.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type d'essai non destructif utilise des rayonnements ionisants (rayons X ou gamma)?",
+    "options": [
+      "MT",
+      "PT",
+      "RT",
+      "UT"
+    ],
+    "answer": "C",
+    "explanation": "La radiographie (RT) utilise des rayons X (tube à rayons X) ou des rayons gamma (source radioactive) pour traverser la soudure et créer une image sur film ou détecteur numérique.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la principale limitation de l'inspection par ressuage (PT)?",
+    "options": [
+      "Ne détecte que les défauts de surface ouverts",
+      "Ne fonctionne que sur l'acier",
+      "Est très coûteuse",
+      "Nécessite un équipement lourd"
+    ],
+    "answer": "A",
+    "explanation": "Le ressuage (PT) ne peut détecter que les défauts qui sont ouverts à la surface de la pièce. Les défauts sous-cutanés ou internes ne sont pas détectés.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Dans un essai de pliage latéral (side bend), quel côté de la soudure est testé?",
+    "options": [
+      "La face seulement",
+      "La racine seulement",
+      "Toute l'épaisseur de la soudure (coupe transversale)",
+      "Uniquement la ZAT"
+    ],
+    "answer": "C",
+    "explanation": "Le pliage latéral (side bend test) utilise une tranche transversale de la soudure, testant ainsi toute l'épaisseur du joint, idéal pour les fortes épaisseurs (> 3/4 po).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de défaut est une inclusion de laitier (slag inclusion)?",
+    "options": [
+      "Un gaz emprisonné dans la soudure",
+      "Du laitier non métallique emprisonné entre les passes de soudure",
+      "Une fissure dans le métal de base",
+      "Une porosité localisée"
+    ],
+    "answer": "B",
+    "explanation": "Les inclusions de laitier sont des particules de laitier (non métalliques) emprisonnées entre les passes de soudure, généralement causées par un mauvais nettoyage entre les passes.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que la porosité en soudage?",
+    "options": [
+      "Des fissures dans la soudure",
+      "Des bulles de gaz emprisonnées dans le métal fondu solidifié",
+      "Des inclusions de laitier",
+      "Des oxydes dans le métal"
+    ],
+    "answer": "B",
+    "explanation": "La porosité est la présence de cavités formées par des bulles de gaz (CO, N2, H2) emprisonnées dans le métal fondu lors de la solidification de la soudure.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Pourquoi la magnétoscopie (MT) ne peut-elle pas être utilisée sur l'acier inoxydable austénitique?",
+    "options": [
+      "Parce qu'il est trop dur",
+      "Parce qu'il n'est pas ferromagnétique (non magnétique)",
+      "Parce qu'il est trop résistant à la corrosion",
+      "Parce qu'il est trop cher"
+    ],
+    "answer": "B",
+    "explanation": "L'acier inoxydable austénitique n'est pas ferromagnétique, donc il ne peut pas être magnétisé pour l'inspection MT. Le ressuage (PT) est utilisé pour ces matériaux.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que la sous-coupe (undercut) dans une soudure?",
+    "options": [
+      "Un manque de métal à la racine",
+      "Une rainure à l'orteil du cordon, dans le métal de base adjacent à la soudure",
+      "Une fissure dans le cordon",
+      "Un excès de pénétration"
+    ],
+    "answer": "B",
+    "explanation": "La sous-coupe est une rainure fondue dans le métal de base à l'orteil (toe) du cordon de soudure, non remplie par le métal d'apport. Elle réduit l'épaisseur effective.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "À quelle fréquence les appareils de radiographie doivent-ils être inspectés et certifiés?",
+    "options": [
+      "Tous les mois",
+      "Tous les ans",
+      "Tous les 5 ans",
+      "Ils n'ont pas besoin de certification"
+    ],
+    "answer": "B",
+    "explanation": "Les appareils de radiographie doivent être inspectés et certifiés annuellement conformément aux normes de sécurité radiologique applicables.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que le manque de fusion (lack of fusion)?",
+    "options": [
+      "L'absence de liaison entre le métal de soudure et le métal de base ou entre passes",
+      "L'absence de pénétration",
+      "Un excès de métal",
+      "Un espace dans le joint"
+    ],
+    "answer": "A",
+    "explanation": "Le manque de fusion est l'absence de liaison métallurgique entre le métal d'apport et le métal de base, ou entre les passes de soudure successives.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel essai destructif est le plus approprié pour vérifier la ductilité d'une soudure?",
+    "options": [
+      "Essai de traction",
+      "Essai de pliage (bend test)",
+      "Essai de dureté",
+      "Analyse chimique"
+    ],
+    "answer": "B",
+    "explanation": "L'essai de pliage est le mieux adapté pour vérifier la ductilité de la soudure. Un bon pliage à 180° sans fissure indique une ductilité adéquate.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce qu'une fissure longitudinale dans une soudure?",
+    "options": [
+      "Une fissure parallèle à la direction de soudage",
+      "Une fissure perpendiculaire à la direction de soudage",
+      "Une fissure dans le métal de base",
+      "Une fissure dans la ZAT"
+    ],
+    "answer": "A",
+    "explanation": "Une fissure longitudinale est orientée parallèlement à l'axe de la soudure (direction de déplacement), souvent causée par des contraintes de retrait élevées.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle méthode d'essai non destructif nécessite un couplant (gel ou eau) entre la sonde et la pièce?",
+    "options": [
+      "RT",
+      "PT",
+      "UT",
+      "MT"
+    ],
+    "answer": "C",
+    "explanation": "Les ultrasons (UT) nécessitent un couplant (gel, eau ou glycérine) entre la sonde et la pièce pour transmettre efficacement les ondes ultrasonores sans interface d'air.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Selon CSA W59, quelle est la hauteur de renforcement (reinforcement) maximale acceptable pour une soudure bout à bout?",
+    "options": [
+      "1/32 po (0,8 mm)",
+      "1/16 po (1,6 mm)",
+      "1/8 po (3,2 mm)",
+      "1/4 po (6,4 mm)"
+    ],
+    "answer": "B",
+    "explanation": "Selon CSA W59, le renforcement maximal pour une soudure bout à bout est généralement de 1/16 po (1,6 mm), avec un maximum de 1/8 po (3,2 mm) pour certaines épaisseurs spécifiques.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Comment s'appelle la fissure qui se forme à la base du cordon de soudure, dans la zone de la racine?",
+    "options": [
+      "Fissure longitudinale",
+      "Fissure de cratère",
+      "Fissure de racine (root crack)",
+      "Fissure transversale"
+    ],
+    "answer": "C",
+    "explanation": "La fissure de racine (root crack) se forme à la racine de la soudure, souvent due à une contrainte de traction élevée et à une microstructure fragile dans cette zone.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que l'essai de dureté (hardness test) dans le contexte du soudage?",
+    "options": [
+      "Un test pour mesurer la résistance à l'usure",
+      "Un test qui mesure la résistance à la pénétration d'un pénétrateur, utilisé pour évaluer la fragilité de la ZAT",
+      "Un test de pliage",
+      "Un test de fatigue"
+    ],
+    "answer": "B",
+    "explanation": "L'essai de dureté (souvent Vickers ou Rockwell) mesure la résistance à la pénétration. Il est utilisé pour évaluer la dureté de la ZAT, une dureté excessive indiquant un risque de fissuration.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est le principal avantage de l'UT par rapport à la RT?",
+    "options": [
+      "L'UT est meilleur pour les défauts volumétriques",
+      "L'UT est meilleur pour détecter les fissures planes et ne nécessite pas de radioprotection",
+      "L'UT est moins cher pour les grandes surfaces",
+      "L'UT ne nécessite pas de préparation"
+    ],
+    "answer": "B",
+    "explanation": "L'UT est supérieur pour détecter les fissures planes (planar defects) orientées perpendiculairement au faisceau. De plus, il ne nécessite pas de mesures de radioprotection contrairement à la RT.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce qu'une fissure de cratère (crater crack)?",
+    "options": [
+      "Une fissure dans le métal de base",
+      "Une fissure qui se forme dans le cratère à l'extrémité du cordon de soudure",
+      "Une fissure transversale",
+      "Une fissure dans la ZAT"
+    ],
+    "answer": "B",
+    "explanation": "La fissure de cratère se forme dans le cratère à la fin du cordon de soudure, généralement en forme d'étoile, due au retrait du métal en fin de passe sans remplissage adéquat.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la meilleure méthode pour détecter une fissure de fatigue dans une soudure?",
+    "options": [
+      "VT",
+      "PT ou MT (surface) combiné à UT (sub-surface)",
+      "RT seulement",
+      "Essai de traction"
+    ],
+    "answer": "B",
+    "explanation": "Les fissures de fatigue débutent souvent en surface. Le PT ou MT détectent les fissures de surface ouvertes. Pour les fissures sous-cutanées, l'UT est plus approprié.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Que signifie une indication sur un film radiographique montrant des points ou des lignes sombres?",
+    "options": [
+      "Excès de métal",
+      "Porosité ou inclusions de laitier (zones de moindre absorption des rayons)",
+      "Dureté élevée",
+      "Bonne pénétration"
+    ],
+    "answer": "B",
+    "explanation": "Sur un film radiographique, les zones sombres indiquent une moindre absorption des rayons, ce qui correspond à des vides comme la porosité ou des inclusions de laitier.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que le critère d'acceptation 2% pour la porosité selon CSA W59?",
+    "options": [
+      "Maximum 2% de la surface de la soudure peut être affectée par la porosité",
+      "2% de la longueur de la soudure",
+      "2 pores par pouce carré",
+      "2% de l'épaisseur"
+    ],
+    "answer": "A",
+    "explanation": "Selon CSA W59, la porosité ne doit pas dépasser 2% de la surface projetée de la soudure, avec un diamètre de pores limité selon l'épaisseur.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Quels outils sont essentiels pour une inspection visuelle de soudure?",
+    "options": [
+      "Caméra thermique",
+      "Jauge de soudure (weld gauge), pied à coulisse, loupe, règle",
+      "Microscope électronique",
+      "Détecteur de gaz"
+    ],
+    "answer": "B",
+    "explanation": "Les outils essentiels pour l'inspection visuelle comprennent une jauge de soudure (weld gauge), un pied à coulisse, une loupe, une règle et une source de lumière.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce qu'un défaut de ligne de liaison (lack of fusion at root)?",
+    "options": [
+      "Un excès de pénétration",
+      "L'absence de fusion entre le métal d'apport et le métal de base à la racine du joint",
+      "Un excès de métal à la racine",
+      "Une fissure longitudinale"
+    ],
+    "answer": "B",
+    "explanation": "Le manque de fusion à la racine est l'absence de liaison métallurgique entre le métal d'apport de la passe de racine et le métal de base à la racine du joint.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que la pénétration excessive (excessive penetration ou melt-through)?",
+    "options": [
+      "Un manque de métal à la racine",
+      "Un excès de métal s'écoulant à travers la racine du joint",
+      "Un cordon trop large",
+      "Un excès de renforcement"
+    ],
+    "answer": "B",
+    "explanation": "La pénétration excessive se produit quand le métal fondu traverse complètement le joint et s'écoule de l'autre côté, formant une protubérance à la racine.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Dans l'essai de traction d'une soudure, où doit se produire la rupture pour que le test soit valide?",
+    "options": [
+      "Dans le métal de base",
+      "Dans la soudure",
+      "Dans la ZAT",
+      "N'importe où"
+    ],
+    "answer": "A",
+    "explanation": "Idéalement, la rupture doit se produire dans le métal de base, indiquant que la soudure est plus résistante que le métal de base. Une rupture dans la soudure indique une faiblesse.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 2,
+    "question": "Selon CSA W47.1, quelle est la période maximale pendant laquelle un soudeur peut être inactif avant de perdre sa certification?",
+    "options": [
+      "1 mois",
+      "3 mois",
+      "6 mois",
+      "12 mois"
+    ],
+    "answer": "C",
+    "explanation": "Selon CSA W47.1, un soudeur qui n'a pas soudé depuis plus de 6 mois doit être requalifié avant de reprendre le soudage de production.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Qu'est-ce que la portée d'épaisseur qualifiée par un WPQR sur une tôle de 3/8 po (10 mm)?",
+    "options": [
+      "1/8 à 1/2 po",
+      "1/16 à 3/4 po",
+      "3/8 à 3/4 po",
+      "1/16 à 1 po"
+    ],
+    "answer": "B",
+    "explanation": "Pour une tôle de 3/8 po (10 mm), l'épaisseur minimale qualifiée est généralement 1/16 po (2 mm) et l'épaisseur maximale est 3/4 po (20 mm), soit le double.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 2,
+    "question": "Quel est le but du coupon de qualification dans un WPQR?",
+    "options": [
+      "Réduire le coût du soudage",
+      "Tester la procédure de soudage dans des conditions représentatives de la production",
+      "Former les soudeurs",
+      "Vérifier le matériel"
+    ],
+    "answer": "B",
+    "explanation": "Le coupon de qualification est une plaque d'essai soudée selon la WPS proposée, dans des conditions représentatives, pour valider que la procédure produit des soudures conformes.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la procédure à suivre en cas de déversement de gaz comprimé?",
+    "options": [
+      "Ignorer le déversement",
+      "Évacuer la zone, ventiler et contacter le superviseur",
+      "Toucher la bouteille pour vérifier la fuite",
+      "Utiliser un briquet pour détecter la fuite"
+    ],
+    "answer": "B",
+    "explanation": "En cas de déversement de gaz comprimé, il faut évacuer la zone immédiatement, bien ventiler et contacter le superviseur ou l'équipe d'urgence.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la concentration minimale d'oxygène nécessaire pour travailler en espace confiné?",
+    "options": [
+      "15%",
+      "19,5%",
+      "21%",
+      "23,5%"
+    ],
+    "answer": "B",
+    "explanation": "La concentration minimale d'oxygène pour travailler en espace confiné est de 19,5%. En dessous, il y a risque d'asphyxie.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la distance de sécurité entre les bouteilles d'oxygène et d'acétylène?",
+    "options": [
+      "1 mètre",
+      "3 mètres",
+      "5 mètres",
+      "Elles peuvent être ensemble"
+    ],
+    "answer": "D",
+    "explanation": "Contrairement à une croyance populaire, les bouteilles d'oxygène et d'acétylène peuvent être stockées ensemble, mais doivent être à 3 mètres des matériaux combustibles.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le danger de souder en présence de solvants chlorés?",
+    "options": [
+      "Formation de phosgène (gaz toxique mortel)",
+      "Corrosion accélérée",
+      "Faible pénétration",
+      "Projections excessives"
+    ],
+    "answer": "A",
+    "explanation": "Les rayons UV de l'arc de soudage peuvent décomposer les vapeurs de solvants chlorés pour former du phosgène, un gaz hautement toxique.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la norme pour les verres filtrants en soudage?",
+    "options": [
+      "CSA Z94.3",
+      "CSA W117.2",
+      "ANSI Z87.1",
+      "ISO 9001"
+    ],
+    "answer": "B",
+    "explanation": "La CSA W117.2 spécifie les exigences pour les verres filtrants de soudage, incluant les numéros de teinte selon l'intensité du courant.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Pourquoi ne faut-il jamais utiliser d'oxygène pour ventiler un espace confiné?",
+    "options": [
+      "Parce que c'est trop coûteux",
+      "Parce que l'oxygène enrichit l'air et augmente considérablement les risques d'incendie",
+      "Parce que l'oxygène est toxique",
+      "Parce que l'oxygène est trop lourd"
+    ],
+    "answer": "B",
+    "explanation": "L'oxygène ne doit jamais être utilisé pour ventiler car il enrichit l'atmosphère, rendant les matériaux normalement ininflammables extrêmement combustibles.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Sur un symbole de soudage, que signifie une flèche brisée (avec un coude)?",
+    "options": [
+      "Soudure sur chantier",
+      "Soudure temporaire",
+      "Le côté flèche n'est pas celui qui reçoit le chanfrein",
+      "Soudure d'atelier"
+    ],
+    "answer": "C",
+    "explanation": "Une flèche brisée indique que le côté flèche n'est pas celui qui reçoit le chanfrein, utilisé pour les joints en J ou en U sur une seule pièce.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Comment indique-t-on le nombre de points de soudure sur un symbole?",
+    "options": [
+      "Avec un nombre à droite du symbole",
+      "Avec un nombre à gauche du symbole",
+      "Avec une note séparée",
+      "Avec des X sur la ligne de référence"
+    ],
+    "answer": "A",
+    "explanation": "Le nombre de points de soudure est indiqué à droite du symbole, dans la même position que les dimensions pour les soudures continues.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie la mention CJP sur un dessin de soudure?",
+    "options": [
+      "Complete Joint Penetration (pleine pénétration)",
+      "Canadian Joint Procedure",
+      "Circular Joint Pattern",
+      "Continuous Joint Pass"
+    ],
+    "answer": "A",
+    "explanation": "CJP signifie Complete Joint Penetration, indiquant que la soudure doit pénétrer complètement l'épaisseur du joint.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel symbole est utilisé pour une soudure de bouchon (plug weld)?",
+    "options": [
+      "Un rectangle",
+      "Un cercle barré d'une ligne horizontale",
+      "Un triangle",
+      "Un V"
+    ],
+    "answer": "B",
+    "explanation": "La soudure de bouchon (plug weld) est représentée par un cercle barré d'une ligne horizontale, placé sur la ligne de référence.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Dans un symbole de soudure, quel côté est le côté opposé (other side)?",
+    "options": [
+      "Le côté où la flèche pointe",
+      "Le côté opposé au côté flèche",
+      "Le dessous de la pièce",
+      "Le côté droit du joint"
+    ],
+    "answer": "B",
+    "explanation": "Le côté opposé (other side) est le côté du joint qui est à l'opposé du côté vers lequel la flèche pointe.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Que signifie une dimension entre parenthèses dans un symbole de soudure?",
+    "options": [
+      "Dimension approximative",
+      "Dimension optionnelle",
+      "Dimension supplémentaire ou profondeur de pénétration",
+      "Dimension en millimètres"
+    ],
+    "answer": "C",
+    "explanation": "Les dimensions entre parenthèses dans un symbole de soudure indiquent généralement une dimension supplémentaire comme la profondeur de pénétration requise.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est l'effet du molybdène sur la trempabilité d'un acier?",
+    "options": [
+      "Il réduit la trempabilité",
+      "Il augmente la trempabilité et améliore la résistance au revenu",
+      "N'a aucun effet",
+      "Il fragilise l'acier"
+    ],
+    "answer": "B",
+    "explanation": "Le molybdène (Mo) augmente la trempabilité et améliore la résistance au revenu (temper resistance), ce qui est bénéfique pour les aciers soumis à des températures élevées.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que le revenu (tempering) appliqué à une soudure?",
+    "options": [
+      "Un chauffage après soudage à une température inférieure à la transformation pour réduire la dureté",
+      "Un refroidissement rapide",
+      "Un allongement de la pièce",
+      "Une trempe"
+    ],
+    "answer": "A",
+    "explanation": "Le revenu est un traitement thermique appliqué après soudage à une température inférieure à A1, qui réduit la dureté de la martensite et améliore la ténacité.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que la zone de liaison (bond line) dans une soudure?",
+    "options": [
+      "La surface entre le métal fondu et le métal de base où il y a fusion",
+      "La ligne de joint avant soudage",
+      "La limite entre deux passes",
+      "La surface extérieure du cordon"
+    ],
+    "answer": "A",
+    "explanation": "La zone de liaison (bond line) est l'interface métallurgique où le métal d'apport fondu et le métal de base partiellement fondu se sont mélangés et solidifiés.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Comment la vitesse de soudage affecte-t-elle l'apport thermique?",
+    "options": [
+      "Une vitesse plus rapide augmente l'apport thermique",
+      "Une vitesse plus rapide réduit l'apport thermique",
+      "La vitesse n'affecte pas l'apport thermique",
+      "Seul l'ampérage compte"
+    ],
+    "answer": "B",
+    "explanation": "L'apport thermique = (tension × courant × 60) / vitesse de déplacement. Donc plus la vitesse est élevée, plus l'apport thermique est faible.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Qu'est-ce que le cycle thermique en soudage?",
+    "options": [
+      "La séquence des températures atteintes en un point donné pendant le chauffage et le refroidissement",
+      "Le cycle d'ouverture de la soudeuse",
+      "Le cycle de nettoyage",
+      "Le cycle de remplissage du gaz"
+    ],
+    "answer": "A",
+    "explanation": "Le cycle thermique décrit la variation de température en fonction du temps en un point de la pièce, incluant le chauffage rapide par l'arc et le refroidissement progressif.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle électrode SMAW est la meilleure pour le soudage en position verticale descendante?",
+    "options": [
+      "E6010",
+      "E6011",
+      "E6013",
+      "E7018"
+    ],
+    "answer": "C",
+    "explanation": "L'E6013 est souvent préférée pour le soudage vertical descendant car son laitier se solidifie rapidement, supportant le bain de fusion.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Pourquoi les électrodes E7018 produisent-elles moins d'hydrogène dans l'arc?",
+    "options": [
+      "Parce qu'elles contiennent de la cellulose qui absorbe l'hydrogène",
+      "Parce que l'enrobage basique contient des carbonates et fluorures qui réduisent la teneur en hydrogène",
+      "Parce qu'elles sont plus chaudes",
+      "Parce qu'elles sont plus petites"
+    ],
+    "answer": "B",
+    "explanation": "L'enrobage basique des E7018 contient des carbonates de calcium et des fluorures qui réagissent pour former des composés stables avec l'hydrogène, réduisant sa disponibilité dans l'arc.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est l'effet d'un courant trop élevé sur une électrode SMAW?",
+    "options": [
+      "Arc plus stable",
+      "Cordon plus esthétique",
+      "Surchauffe de l'électrode, enrobage qui se dégrade et projections excessives",
+      "Meilleure pénétration sans inconvénient"
+    ],
+    "answer": "C",
+    "explanation": "Un courant trop élevé surchauffe l'électrode, fait brûler ou craqueler l'enrobage, augmente les projections et peut causer de la sous-coupe.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le rôle du canal de gaz (gas diffuser) dans une torche GMAW?",
+    "options": [
+      "Régler la vitesse du fil",
+      "Distribuer uniformément le gaz de protection autour de l'arc",
+      "Refroidir la torche",
+      "Conduire le courant"
+    ],
+    "answer": "B",
+    "explanation": "Le diffuseur de gaz (gas diffuser) distribue le gaz de protection de façon uniforme autour de l'arc pour une protection optimale du bain de fusion.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel phénomène se produit lorsque le stick-out est trop court en GMAW?",
+    "options": [
+      "Arc instable",
+      "Surchauffe et usure prématurée du tube contact",
+      "Meilleure pénétration",
+      "Moins de projections"
+    ],
+    "answer": "B",
+    "explanation": "Un stick-out trop court rapproche le tube contact de l'arc, ce qui le surchauffe et accélère son usure, causant un mauvais contact électrique.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le principal avantage du soudage FCAW sur le GMAW pour les fortes épaisseurs?",
+    "options": [
+      "Coût réduit",
+      "Taux de dépôt plus élevé et meilleure pénétration",
+      "Arc plus silencieux",
+      "Moins de fumées"
+    ],
+    "answer": "B",
+    "explanation": "Le FCAW offre un taux de dépôt plus élevé et une meilleure pénétration que le GMAW pour les fortes épaisseurs, grâce au flux qui concentre la chaleur.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la polarité recommandée pour le soudage FCAW auto-protégé?",
+    "options": [
+      "DCEP (CC+)",
+      "DCEN (CC-)",
+      "CA",
+      "Indifférent"
+    ],
+    "answer": "B",
+    "explanation": "Le FCAW auto-protégé utilise généralement la polarité DCEN (CC-) pour obtenir un bon taux de dépôt et une pénétration adéquate.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Pourquoi le mélange Ar/CO2 75/25% est-il préféré au CO2 pur en GMAW?",
+    "options": [
+      "Il est moins cher",
+      "Il produit moins de projections et un arc plus stable",
+      "Il pénètre plus profondément",
+      "Il est plus léger"
+    ],
+    "answer": "B",
+    "explanation": "Le mélange Ar/CO2 75/25% produit moins de projections et un arc plus stable que le CO2 pur, tout en offrant une bonne pénétration à un coût raisonnable.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Qu'est-ce que la norme CSA W178.1 spécifie concernant les inspecteurs en soudage?",
+    "options": [
+      "Les salaires des inspecteurs",
+      "La qualification et la certification des inspecteurs en soudage",
+      "Les méthodes d'inspection",
+      "Les critères d'acceptation"
+    ],
+    "answer": "B",
+    "explanation": "La CSA W178.1 spécifie les exigences de qualification et de certification des inspecteurs en soudage, incluant les niveaux 1, 2 et 3.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel défaut est caractérisé par une protubérance de métal qui déborde sur le métal de base sans fusion (overlap)?",
+    "options": [
+      "Sous-coupe",
+      "Recouvrement (overlap)",
+      "Porosité",
+      "Pénétration excessive"
+    ],
+    "answer": "B",
+    "explanation": "Le recouvrement (overlap) est un excès de métal d'apport qui s'étale sur le métal de base sans y être fusionné, créant une discontinuité angulaire.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la méthode d'inspection non destructive la plus sensible pour détecter les fissures de fatigue en surface?",
+    "options": [
+      "VT (visuelle)",
+      "PT (ressuage) ou MT (magnétoscopie)",
+      "RT (radiographie)",
+      "UT (ultrasons)"
+    ],
+    "answer": "B",
+    "explanation": "Le ressuage (PT) et la magnétoscopie (MT) sont les méthodes les plus sensibles pour détecter les fissures de fatigue ouvertes en surface.",
+    "difficulty": "MEDIUM"
+  }
+]

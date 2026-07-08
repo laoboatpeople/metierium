@@ -1,0 +1,860 @@
+[
+  {
+    "chapter": 3,
+    "question": "Quelle est la pression minimale recommandée pour un réseau d'alimentation en eau potable résidentiel au Québec?",
+    "options": [
+      "30 psi",
+      "40 psi",
+      "50 psi",
+      "60 psi"
+    ],
+    "answer": "C",
+    "explanation": "La pression minimale recommandée pour un réseau d'alimentation en eau potable résidentiel est de 50 psi (345 kPa) afin d'assurer un débit adéquat à tous les appareils.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel dispositif est utilisé pour empêcher le refoulement d'eau contaminée dans le réseau d'eau potable lorsque le risque est élevé?",
+    "options": [
+      "Clapet anti-retour",
+      "Disconnecteur RPZ",
+      "Ventouse atmosphérique",
+      "Réducteur de pression"
+    ],
+    "answer": "B",
+    "explanation": "Le disconnecteur à zone de pression réduite (RPZ) est utilisé pour les risques élevés de contamination. Il offre la protection la plus complète contre le refoulement.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "À quoi sert un réducteur de pression (PRV) dans une installation d'eau potable?",
+    "options": [
+      "Augmenter la pression d'eau",
+      "Réduire la pression d'eau en aval",
+      "Empêcher le gel des tuyaux",
+      "Mesurer le débit d'eau"
+    ],
+    "answer": "B",
+    "explanation": "Le réducteur de pression (PRV) réduit la pression d'eau en aval pour protéger la plomberie domestique d'une pression excessive provenant du réseau municipal.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le rôle d'un réservoir d'expansion thermique dans un système d'eau potable?",
+    "options": [
+      "Chauffer l'eau",
+      "Augmenter la pression",
+      "Absorber l'augmentation de volume due au chauffage de l'eau",
+      "Filtrer l'eau"
+    ],
+    "answer": "C",
+    "explanation": "Le réservoir d'expansion thermique absorbe l'augmentation de volume causée par le chauffage de l'eau dans le chauffe-eau, empêchant les surpressions dans le système.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Un lavabo privé a une valeur de 1 UF (unité de robinetterie). Combien d'UF total pour 5 lavabos privés selon le code de plomberie?",
+    "options": [
+      "3 UF",
+      "5 UF",
+      "6 UF",
+      "8 UF"
+    ],
+    "answer": "B",
+    "explanation": "Chaque lavabo privé = 1 UF. Pour 5 lavabos, le total est de 5 UF. Les valeurs d'UF sont additives pour le dimensionnement des conduites d'alimentation.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Une toilette résidentielle à réservoir a une valeur approximative de combien d'UF (unités de robinetterie)?",
+    "options": [
+      "1 UF",
+      "2 UF",
+      "3 UF",
+      "4 UF"
+    ],
+    "answer": "C",
+    "explanation": "Une toilette résidentielle à réservoir est généralement évaluée à 3 UF selon les tables de dimensionnement du code de plomberie.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le type de clapet anti-retour le plus simple et le moins coûteux?",
+    "options": [
+      "Disconnecteur RPZ",
+      "Double clapet anti-retour",
+      "Clapet simple à ressort",
+      "Ventouse double"
+    ],
+    "answer": "C",
+    "explanation": "Le clapet simple à ressort est le type de clapet anti-retour le plus simple et le moins coûteux. Il utilise un ressort pour fermer le clapet en cas de refoulement.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Qu'est-ce qu'un coup de bélier dans une installation de plomberie?",
+    "options": [
+      "Un bruit causé par l'air dans les tuyaux",
+      "Une surpression soudaine due à l'arrêt rapide de l'écoulement",
+      "Une fuite dans une conduite",
+      "La vibration d'un moteur de pompe"
+    ],
+    "answer": "B",
+    "explanation": "Le coup de bélier est une surpression soudaine causée par l'arrêt rapide de l'eau en mouvement, par exemple lors de la fermeture brusque d'une électrovanne.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel dispositif est installé pour prévenir les dommages causés par le coup de bélier?",
+    "options": [
+      "Un réducteur de pression",
+      "Un anti-bélier (water hammer arrestor)",
+      "Un clapet anti-retour",
+      "Un réservoir d'expansion"
+    ],
+    "answer": "B",
+    "explanation": "L'anti-bélier (water hammer arrestor) absorbe l'onde de choc créée par l'arrêt brusque de l'écoulement d'eau, empêchant les dommages aux tuyauteries.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Où doit-on installer un anti-bélier dans une installation résidentielle?",
+    "options": [
+      "Au sous-sol près du compteur",
+      "Près des appareils à fermeture rapide (laveuse, lave-vaisselle)",
+      "Sur la conduite d'eau froide seulement",
+      "Au point le plus haut du système"
+    ],
+    "answer": "B",
+    "explanation": "L'anti-bélier doit être installé près des appareils à fermeture rapide, comme la laveuse ou le lave-vaisselle, là où le coup de bélier est le plus susceptible de se produire.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la fonction d'un disconnecteur double clapet (double check valve)?",
+    "options": [
+      "Réduire la pression",
+      "Empêcher le refoulement pour les risques modérés",
+      "Filtrer les sédiments",
+      "Chauffer l'eau"
+    ],
+    "answer": "B",
+    "explanation": "Le disconnecteur double clapet (double check valve) empêche le refoulement pour les risques modérés de contamination. Il utilise deux clapets en série avec des orifices de test.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la différence principale entre un disconnecteur RPZ et un double clapet anti-retour?",
+    "options": [
+      "Le RPZ coûte moins cher",
+      "Le RPZ a une zone de pression réduite entre les deux clapets",
+      "Le double clapet est plus fiable",
+      "Il n'y a pas de différence"
+    ],
+    "answer": "B",
+    "explanation": "Le RPZ possède une zone de pression réduite entre ses deux clapets, avec une soupape de décharge qui s'ouvre si la pression dans cette zone devient trop élevée, offrant une protection supérieure.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "À quel endroit installe-t-on une ventouse atmosphérique (AAV - Atmospheric Vacuum Breaker)?",
+    "options": [
+      "En aval de la vanne, au moins 6 pouces au-dessus du point le plus haut",
+      "Au point le plus bas du système",
+      "Sur la conduite d'égout",
+      "À l'intérieur du chauffe-eau"
+    ],
+    "answer": "A",
+    "explanation": "Une ventouse atmosphérique doit être installée en aval de la vanne de contrôle, au moins 6 pouces (150 mm) au-dessus du point de branchement le plus élevé pour fonctionner correctement.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Un bain (baignoire) résidentiel a une valeur approximative de combien d'UF?",
+    "options": [
+      "1 UF",
+      "2 UF",
+      "3 UF",
+      "4 UF"
+    ],
+    "answer": "B",
+    "explanation": "Un bain résidentiel est généralement évalué à 2 UF selon les tables de dimensionnement du code de plomberie.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la pression maximale recommandée pour une installation résidentielle avant d'installer un réducteur de pression?",
+    "options": [
+      "60 psi",
+      "70 psi",
+      "80 psi",
+      "100 psi"
+    ],
+    "answer": "C",
+    "explanation": "Lorsque la pression d'alimentation dépasse 80 psi (550 kPa), un réducteur de pression doit être installé pour protéger les appareils et la tuyauterie.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Un évier de cuisine résidentiel a une valeur de combien d'UF?",
+    "options": [
+      "1 UF",
+      "1,5 UF",
+      "2 UF",
+      "3 UF"
+    ],
+    "answer": "B",
+    "explanation": "Un évier de cuisine résidentiel est généralement évalué à 1,5 UF selon les tables de dimensionnement du code.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est le diamètre minimal de la conduite d'alimentation en eau potable d'une maison unifamiliale?",
+    "options": [
+      "1/2 po",
+      "3/4 po",
+      "1 po",
+      "1 1/4 po"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre minimal de la conduite d'alimentation en eau potable d'une maison unifamiliale est de 3/4 po (19 mm) pour assurer un débit suffisant.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Qu'est-ce qu'une unité de robinetterie (UF)?",
+    "options": [
+      "Une mesure de la pression d'eau",
+      "Un facteur de charge basé sur le débit probable des appareils",
+      "Le diamètre du robinet",
+      "La longueur de la conduite"
+    ],
+    "answer": "B",
+    "explanation": "L'unité de robinetterie (UF) est un facteur de charge qui représente le débit probable d'un appareil sanitaire, utilisé pour dimensionner les conduites d'alimentation en eau.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la valeur en UF d'une douche résidentielle?",
+    "options": [
+      "1 UF",
+      "1,5 UF",
+      "2 UF",
+      "3 UF"
+    ],
+    "answer": "C",
+    "explanation": "Une douche résidentielle est généralement évaluée à 2 UF selon les tables de dimensionnement du code de plomberie.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "À quelle fréquence un disconnecteur RPZ doit-il être testé selon le code de plomberie?",
+    "options": [
+      "Tous les mois",
+      "Tous les 6 mois",
+      "Annuellement",
+      "Aux 2 ans"
+    ],
+    "answer": "C",
+    "explanation": "Un disconnecteur RPZ doit être testé annuellement par un technicien certifié pour s'assurer de son bon fonctionnement.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel dispositif est obligatoire lors de l'installation d'un chauffe-eau pour éviter les surpressions?",
+    "options": [
+      "Un réducteur de pression",
+      "Une soupape de sûreté et de décharge (T&P valve)",
+      "Un anti-bélier",
+      "Un clapet anti-retour"
+    ],
+    "answer": "B",
+    "explanation": "Une soupape de sûreté et de décharge (Temperature & Pressure relief valve) est obligatoire sur tout chauffe-eau pour évacuer l'excès de pression ou de température.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Dans le calcul des pertes de charge par friction, quel facteur influence le plus la perte de pression dans une conduite?",
+    "options": [
+      "La couleur du tuyau",
+      "Le diamètre et la rugosité du tuyau",
+      "La marque du fabricant",
+      "L'âge de l'installation"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre intérieur et la rugosité du tuyau sont les facteurs qui influencent le plus les pertes de charge par friction dans une conduite d'eau.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la pression statique typique fournie par un réseau municipal?",
+    "options": [
+      "20 à 40 psi",
+      "40 à 80 psi",
+      "80 à 120 psi",
+      "120 à 160 psi"
+    ],
+    "answer": "B",
+    "explanation": "La pression statique typique d'un réseau municipal se situe entre 40 et 80 psi (275 à 550 kPa).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Qu'arrive-t-il à la pression disponible lorsque l'on ajoute des étages à un bâtiment?",
+    "options": [
+      "Elle augmente",
+      "Elle diminue en raison de la hauteur et des pertes de charge",
+      "Elle reste constante",
+      "Elle double"
+    ],
+    "answer": "B",
+    "explanation": "La pression disponible diminue à chaque étage en raison de la perte de charge due à la hauteur (2,31 pi/psi) et aux pertes par friction dans les conduites.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Un robinet d'arrosage extérieur (bibbit) doit être protégé contre le refoulement par quel dispositif?",
+    "options": [
+      "Un clapet anti-retord simple",
+      "Un disconnecteur RPZ",
+      "Un anti-siphon ou ventouse intégrée",
+      "Un réducteur de pression"
+    ],
+    "answer": "C",
+    "explanation": "Un robinet d'arrosage extérieur doit être muni d'un anti-siphon (ventouse atmosphérique intégrée) pour empêcher le refoulement d'eau possiblement contaminée dans le réseau.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la valeur en UF d'un appareil UF combiné (lave-vaisselle et évier partageant la même alimentation)?",
+    "options": [
+      "1,5 UF",
+      "2 UF",
+      "2,5 UF",
+      "3 UF"
+    ],
+    "answer": "C",
+    "explanation": "Un évier de cuisine (1,5 UF) combiné avec un lave-vaisselle (1 UF additionnel si alimenté séparément) donne environ 2,5 UF selon les règles de calcul combiné.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel est l'effet d'un rétrécissement soudain du diamètre d'une conduite sur la pression?",
+    "options": [
+      "La pression augmente",
+      "La pression diminue localement (effet Venturi)",
+      "La pression reste inchangée",
+      "Le débit double"
+    ],
+    "answer": "B",
+    "explanation": "Un rétrécissement soudain provoque une augmentation de la vélocité et une diminution locale de la pression (effet Venturi), ce qui peut causer de la cavitation.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la perte de pression approximative par pied de hauteur d'eau dans une colonne montante?",
+    "options": [
+      "0,433 psi/pi",
+      "0,5 psi/pi",
+      "1 psi/pi",
+      "2 psi/pi"
+    ],
+    "answer": "A",
+    "explanation": "La perte de pression due à la hauteur est d'environ 0,433 psi par pied de colonne d'eau (ou 2,31 pieds par psi).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Un bâtiment de 3 étages a une pression au rez-de-chaussée de 60 psi. Quelle est la pression approximative au 3e étage (30 pieds de haut)?",
+    "options": [
+      "60 psi",
+      "55 psi",
+      "47 psi",
+      "40 psi"
+    ],
+    "answer": "C",
+    "explanation": "Perte = 30 pi × 0,433 psi/pi = 12,99 psi. Pression au 3e étage ≈ 60 - 13 = 47 psi. Il faut aussi soustraire les pertes de charge des tuyauteries.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la fonction d'un clapet anti-retour (check valve) dans l'alimentation en eau potable?",
+    "options": [
+      "Réguler le débit",
+      "Permettre l'écoulement dans un seul sens",
+      "Filtrer l'eau",
+      "Diminuer la pression"
+    ],
+    "answer": "B",
+    "explanation": "Le clapet anti-retour permet l'écoulement de l'eau dans un seul sens et se ferme automatiquement en cas de refoulement pour empêcher le retour d'eau.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Quel pourcentage de la pression d'alimentation est perdu approximativement dans un réducteur de pression (PRV) en fonctionnement normal?",
+    "options": [
+      "5 à 10 psi",
+      "15 à 25 psi",
+      "30 à 40 psi",
+      "Aucune perte"
+    ],
+    "answer": "A",
+    "explanation": "Un réducteur de pression bien réglé a une perte de charge d'environ 5 à 10 psi en fonctionnement normal au débit nominal.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 3,
+    "question": "Quelle est la valeur en UF d'une laveuse résidentielle?",
+    "options": [
+      "1 UF",
+      "2 UF",
+      "3 UF",
+      "4 UF"
+    ],
+    "answer": "B",
+    "explanation": "Une laveuse résidentielle est généralement évaluée à 2 UF selon les tables de dimensionnement du code de plomberie.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 3,
+    "question": "Un lave-vaisselle domestique a une valeur de combien d'UF?",
+    "options": [
+      "0,5 UF",
+      "1 UF",
+      "1,5 UF",
+      "2 UF"
+    ],
+    "answer": "B",
+    "explanation": "Un lave-vaisselle domestique est généralement évalué à 1 UF selon les tables de dimensionnement.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la pente minimale requise pour une conduite d'évacuation de 3 pouces de diamètre ou moins?",
+    "options": [
+      "1/8 po par pied",
+      "1/4 po par pied",
+      "1/2 po par pied",
+      "3/4 po par pied"
+    ],
+    "answer": "B",
+    "explanation": "Pour les conduites d'évacuation de 3 pouces de diamètre et moins, la pente minimale est de 1/4 po par pied (20,8 mm/m).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la pente minimale requise pour une conduite d'évacuation de 4 pouces de diamètre et plus?",
+    "options": [
+      "1/8 po par pied",
+      "1/4 po par pied",
+      "1/2 po par pied",
+      "3/4 po par pied"
+    ],
+    "answer": "A",
+    "explanation": "Pour les conduites de 4 pouces de diamètre et plus, la pente minimale est de 1/8 po par pied (10,4 mm/m).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre minimal du siphon pour un lavabo?",
+    "options": [
+      "1 po",
+      "1 1/4 po",
+      "1 1/2 po",
+      "2 po"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre minimal du siphon pour un lavabo est de 1 1/4 po (32 mm).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre minimal du siphon pour un évier de cuisine?",
+    "options": [
+      "1 po",
+      "1 1/4 po",
+      "1 1/2 po",
+      "2 po"
+    ],
+    "answer": "C",
+    "explanation": "Le diamètre minimal du siphon pour un évier de cuisine est de 1 1/2 po (38 mm).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre minimal du siphon pour une douche?",
+    "options": [
+      "1 1/4 po",
+      "1 1/2 po",
+      "2 po",
+      "3 po"
+    ],
+    "answer": "C",
+    "explanation": "Le diamètre minimal du siphon pour une douche est de 2 po (50 mm).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la profondeur minimale de la garde d'eau d'un siphon (trap seal)?",
+    "options": [
+      "1 po",
+      "1 1/2 po",
+      "2 po",
+      "3 po"
+    ],
+    "answer": "C",
+    "explanation": "La garde d'eau minimale d'un siphon est de 2 po (50 mm) pour empêcher les gaz d'égout de pénétrer dans le bâtiment.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la profondeur maximale de la garde d'eau d'un siphon (trap seal)?",
+    "options": [
+      "2 po",
+      "3 po",
+      "4 po",
+      "6 po"
+    ],
+    "answer": "C",
+    "explanation": "La garde d'eau maximale d'un siphon est de 4 po (100 mm). Au-delà, l'écoulement peut être ralenti et causer des obstructions.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'est-ce qu'un intervalle de branchement (branch interval) dans un système d'évacuation?",
+    "options": [
+      "La distance entre deux siphons",
+      "La distance entre deux étages où se raccordent des branchements à une colonne d'évacuation",
+      "L'espacement entre les supports de tuyaux",
+      "La distance entre le siphon et l'évent"
+    ],
+    "answer": "B",
+    "explanation": "Un intervalle de branchement est la distance entre deux étages consécutifs où des branchements d'appareils se raccordent à la colonne d'évacuation.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Tous les combien d'étages retrouve-t-on un intervalle de branchement (branch interval) typique?",
+    "options": [
+      "1 étage",
+      "2 étages",
+      "3 étages",
+      "4 étages"
+    ],
+    "answer": "B",
+    "explanation": "Un intervalle de branchement correspond généralement à 2 étages consécutifs où des branchements d'appareils sont raccordés à la colonne d'évacuation.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le rôle d'un évent de circuit (circuit vent) dans un système de plomberie?",
+    "options": [
+      "Évacuer les eaux usées",
+      "Ventiler plusieurs appareils sur un même branchement horizontal",
+      "Augmenter la pression",
+      "Chauffer les conduites"
+    ],
+    "answer": "B",
+    "explanation": "L'évent de circuit permet de ventiler plusieurs appareils sanitaires installés sur un même branchement horizontal, évitant ainsi le siphonnage de la garde d'eau.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'est-ce qu'un évent de secours (relief vent)?",
+    "options": [
+      "Un évent installé en cas d'urgence",
+      "Un évent supplémentaire qui relie une colonne d'évacuation à une colonne de ventilation",
+      "Un évent de toit standard",
+      "Un évent mécanique"
+    ],
+    "answer": "B",
+    "explanation": "L'évent de secours (relief vent) est un évent supplémentaire qui relie la colonne d'évacuation à la colonne de ventilation pour équilibrer la pression lors de débits élevés.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Pour une toilette avec un tuyau d'évacuation de 3 po, quelle est la longueur maximale entre la toilette et la colonne d'évacuation si la pente est de 1/4 po par pied?",
+    "options": [
+      "6 pi",
+      "8 pi",
+      "10 pi",
+      "12 pi"
+    ],
+    "answer": "B",
+    "explanation": "Pour une toilette de 3 po avec pente de 1/4 po/pi, la distance maximale est généralement de 8 pi selon les tables de distance maximale du code.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre minimal d'une colonne d'évacuation (stack) pour un bâtiment résidentiel de 2 étages avec 2 salles de bain complètes?",
+    "options": [
+      "2 po",
+      "3 po",
+      "4 po",
+      "6 po"
+    ],
+    "answer": "C",
+    "explanation": "Pour un bâtiment de 2 étages avec 2 salles de bain complètes, le diamètre minimal de la colonne d'évacuation est généralement de 4 po (100 mm).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Comment calcule-t-on le nombre d'UF pour les appareils sanitaires dans le dimensionnement des évacuations?",
+    "options": [
+      "On additionne les UF de tous les appareils",
+      "On prend la valeur la plus élevée seulement",
+      "On utilise la moyenne des UF",
+      "On multiplie les UF par le nombre d'étages"
+    ],
+    "answer": "A",
+    "explanation": "Le nombre total d'UF (unités de robinetterie) est obtenu en additionnant les valeurs UF de tous les appareils sanitaires raccordés au système d'évacuation.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Une toilette résidentielle avec réservoir de chasse a une valeur de combien d'UF pour le dimensionnement des évacuations?",
+    "options": [
+      "3 UF",
+      "4 UF",
+      "5 UF",
+      "6 UF"
+    ],
+    "answer": "B",
+    "explanation": "Une toilette résidentielle à réservoir a généralement une valeur de 4 UF pour le dimensionnement des systèmes d'évacuation.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le nombre maximal d'UF que peut desservir un tuyau d'évacuation de 3 po avec une pente de 1/4 po par pied?",
+    "options": [
+      "20 UF",
+      "30 UF",
+      "36 UF",
+      "48 UF"
+    ],
+    "answer": "C",
+    "explanation": "Un tuyau d'évacuation de 3 po avec une pente de 1/4 po/pi peut desservir jusqu'à 36 UF selon les tables du code de plomberie.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le nombre maximal d'UF que peut desservir un tuyau d'évacuation de 4 po avec une pente de 1/8 po par pied?",
+    "options": [
+      "90 UF",
+      "120 UF",
+      "160 UF",
+      "180 UF"
+    ],
+    "answer": "C",
+    "explanation": "Un tuyau d'évacuation de 4 po avec une pente de 1/8 po/pi peut desservir jusqu'à 160 UF selon les tables du code.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'est-ce que le ventage humide (wet venting)?",
+    "options": [
+      "Un tuyau d'évent exposé à l'humidité",
+      "Une section de tuyau qui sert à la fois d'évacuation et de ventilation",
+      "Un évent installé sous terre",
+      "Un évent avec un filtre à eau"
+    ],
+    "answer": "B",
+    "explanation": "Le ventage humide (wet venting) utilise une section de tuyau qui sert à la fois de conduite d'évacuation pour certains appareils et d'évent pour d'autres appareils.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le nombre maximal d'appareils sanitaires qui peuvent être raccordés à un ventage humide?",
+    "options": [
+      "2 appareils",
+      "3 appareils",
+      "4 appareils",
+      "6 appareils"
+    ],
+    "answer": "C",
+    "explanation": "Un ventage humide peut généralement desservir un maximum de 4 appareils sanitaires consécutifs selon les règles du code de plomberie.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la dimension minimale d'une colonne de ventilation (vent stack) dans un bâtiment résidentiel?",
+    "options": [
+      "1 1/4 po",
+      "1 1/2 po",
+      "2 po",
+      "3 po"
+    ],
+    "answer": "A",
+    "explanation": "La dimension minimale d'une colonne de ventilation est de 1 1/4 po (32 mm) de diamètre pour les bâtiments résidentiels.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "À quelle hauteur minimale au-dessus du toit doit s'élever une colonne de ventilation?",
+    "options": [
+      "6 po",
+      "12 po",
+      "18 po",
+      "24 po"
+    ],
+    "answer": "B",
+    "explanation": "Une colonne de ventilation doit s'élever d'au moins 12 po (300 mm) au-dessus du toit pour assurer une dispersion adéquate des gaz.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la distance minimale entre l'ouverture d'une colonne de ventilation et une fenêtre ou une prise d'air?",
+    "options": [
+      "3 pi",
+      "5 pi",
+      "10 pi",
+      "15 pi"
+    ],
+    "answer": "C",
+    "explanation": "L'ouverture d'une colonne de ventilation doit être à au moins 10 pi (3 m) de toute fenêtre, porte ou prise d'air extérieure pour éviter le retour des gaz.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le nombre minimal d'appareils sanitaires requis pour justifier l'installation d'un évent de circuit?",
+    "options": [
+      "1 appareil",
+      "2 appareils",
+      "3 appareils",
+      "4 appareils"
+    ],
+    "answer": "B",
+    "explanation": "Un évent de circuit est requis lorsqu'au moins 2 appareils sanitaires (et jusqu'à 8) sont raccordés à un même branchement horizontal.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Qu'est-ce qu'un évent mécanique (mechanical vent / air admittance valve)?",
+    "options": [
+      "Un évent motorisé",
+      "Une valve qui permet l'entrée d'air sans laisser sortir les gaz",
+      "Un évent avec ventilateur",
+      "Un évent qui se ferme automatiquement en hiver"
+    ],
+    "answer": "B",
+    "explanation": "L'évent mécanique (AAV) est une valve qui permet l'entrée d'air dans le système d'évacuation pour équilibrer la pression, mais empêche la sortie des gaz d'égout.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre minimal du tuyau d'évacuation pour un bain (baignoire)?",
+    "options": [
+      "1 1/4 po",
+      "1 1/2 po",
+      "2 po",
+      "3 po"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre minimal du tuyau d'évacuation pour un bain est de 1 1/2 po (38 mm).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre minimal de l'évacuation pour une toilette?",
+    "options": [
+      "2 po",
+      "3 po",
+      "4 po",
+      "6 po"
+    ],
+    "answer": "B",
+    "explanation": "Le diamètre minimal du tuyau d'évacuation pour une toilette est de 3 po (76 mm).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le nombre maximal d'UF (unités de robinetterie) que peut desservir un collecteur principal d'égout (building drain) de 4 po avec une pente de 1/4 po par pied?",
+    "options": [
+      "180 UF",
+      "216 UF",
+      "250 UF",
+      "300 UF"
+    ],
+    "answer": "B",
+    "explanation": "Un collecteur principal (building drain) de 4 po avec une pente de 1/4 po/pi peut desservir jusqu'à 216 UF selon les tables du code de plomberie.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Quel est le diamètre minimal d'un évent individuel pour un appareil sanitaire?",
+    "options": [
+      "1/2 de la dimension du siphon ou 1 1/4 po minimum",
+      "Même dimension que le siphon",
+      "1 po minimum",
+      "2 po minimum"
+    ],
+    "answer": "A",
+    "explanation": "Un évent individuel doit avoir un diamètre d'au moins la moitié de la dimension du siphon qu'il dessert, avec un minimum de 1 1/4 po (32 mm).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "À quelle distance maximale d'un siphon l'évent doit-il être raccordé?",
+    "options": [
+      "La distance est égale à la dimension du tuyau d'évacuation",
+      "Toujours à moins de 5 pi",
+      "La distance n'est pas réglementée",
+      "À n'importe quelle distance"
+    ],
+    "answer": "A",
+    "explanation": "La distance maximale entre le siphon et l'évent est limitée à la dimension du tuyau d'évacuation. Par exemple, pour un tuyau de 3 po, la distance max. est de 3 pi.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 4,
+    "question": "Un immeuble a 2 salles de bain complètes au 1er étage (chacune: lavabo=1 UF, toilette=4 UF, douche=2 UF) et 2 éviers de cuisine (1,5 UF chacun). Quel est le total d'UF pour le dimensionnement de l'évacuation?",
+    "options": [
+      "13 UF",
+      "15 UF",
+      "17 UF",
+      "19 UF"
+    ],
+    "answer": "C",
+    "explanation": "(1+4+2) × 2 salles de bain = 14 UF, + (1,5 × 2) éviers = 3 UF. Total = 14 + 3 = 17 UF.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la profondeur d'eau minimale exigée dans un siphon de sol (floor drain)?",
+    "options": [
+      "1 po",
+      "1 1/2 po",
+      "2 po",
+      "3 po"
+    ],
+    "answer": "C",
+    "explanation": "La garde d'eau minimale d'un siphon de sol est de 2 po (50 mm), comme pour tous les autres siphons.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la différence entre une colonne d'évacuation et une colonne de ventilation?",
+    "options": [
+      "Il n'y a pas de différence",
+      "La colonne d'évacuation transporte les eaux usées, la colonne de ventilation permet la circulation de l'air",
+      "La colonne de ventilation est plus grosse",
+      "La colonne d'évacuation est toujours verticale"
+    ],
+    "answer": "B",
+    "explanation": "La colonne d'évacuation (soil stack) transporte les eaux usées vers l'égout, tandis que la colonne de ventilation (vent stack) permet la circulation de l'air pour équilibrer les pressions.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 4,
+    "question": "Quelle est la pente minimale pour un tuyau d'évacuation de 6 po de diamètre?",
+    "options": [
+      "1/16 po par pied",
+      "1/8 po par pied",
+      "1/4 po par pied",
+      "1/2 po par pied"
+    ],
+    "answer": "B",
+    "explanation": "Pour les tuyaux de 4 po et plus (incluant 6 po), la pente minimale est de 1/8 po par pied (10,4 mm/m).",
+    "difficulty": "MEDIUM"
+  }
+]

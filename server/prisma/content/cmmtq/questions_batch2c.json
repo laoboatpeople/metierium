@@ -1,0 +1,860 @@
+[
+  {
+    "chapter": 5,
+    "question": "Quelle est la distance d'ébauche (rough-in) standard pour une toilette résidentielle au Québec?",
+    "options": [
+      "10 pouces",
+      "12 pouces",
+      "14 pouces",
+      "16 pouces"
+    ],
+    "answer": "B",
+    "explanation": "La distance d'ébauche standard pour une toilette résidentielle est de 12 pouces (305 mm), mesurée du mur fini au centre de la bride d'égout.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le débit maximal par chasse d'une toilette conforme aux normes actuelles au Québec?",
+    "options": [
+      "1,2 GPF (4,5 LPF)",
+      "1,6 GPF (6 LPF)",
+      "2,0 GPF (7,6 LPF)",
+      "3,0 GPF (11,4 LPF)"
+    ],
+    "answer": "B",
+    "explanation": "Les toilettes résidentielles doivent avoir un débit maximal de 1,6 gallon par chasse (6 litres par chasse) conformément aux normes de plomberie et aux codes du bâtiment.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la dimension minimale du siphon d'un lavabo?",
+    "options": [
+      "1 ¼ pouce",
+      "1 ½ pouce",
+      "2 pouces",
+      "1 ⅛ pouce"
+    ],
+    "answer": "A",
+    "explanation": "Le siphon d'un lavabo doit avoir un diamètre minimum de 1 ¼ pouce (32 mm) selon le code de plomberie.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la dimension minimale du siphon d'un évier de cuisine?",
+    "options": [
+      "1 ¼ pouce",
+      "1 ½ pouce",
+      "2 pouces",
+      "2 ½ pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le siphon d'un évier de cuisine doit avoir un diamètre minimum de 1 ½ pouce (38 mm).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le diamètre minimal du drain d'une douche?",
+    "options": [
+      "1 ½ pouce",
+      "2 pouces",
+      "2 ½ pouces",
+      "3 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le drain d'une douche doit avoir un diamètre minimal de 2 pouces (51 mm) pour assurer un écoulement adéquat et éviter les refoulements.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la dimension minimale du siphon d'une baignoire?",
+    "options": [
+      "1 ¼ pouce",
+      "1 ½ pouce",
+      "2 pouces",
+      "2 ½ pouces"
+    ],
+    "answer": "B",
+    "explanation": "Le siphon d'une baignoire doit avoir un diamètre minimum de 1 ½ pouce (38 mm).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Selon les normes d'accessibilité ADA, quelle est la hauteur acceptable d'un siège de toilette?",
+    "options": [
+      "12 à 14 pouces",
+      "15 à 19 pouces",
+      "20 à 24 pouces",
+      "10 à 13 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Selon les normes ADA (Americans with Disabilities Act), la hauteur du siège de toilette doit être entre 15 et 19 pouces (380-485 mm) du sol fini.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la hauteur maximale d'un comptoir de salle de bain selon les normes d'accessibilité ADA?",
+    "options": [
+      "30 pouces",
+      "32 pouces",
+      "34 pouces",
+      "36 pouces"
+    ],
+    "answer": "C",
+    "explanation": "La hauteur maximale d'un comptoir de salle de bain conforme aux normes ADA est de 34 pouces (864 mm) du sol fini.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel type de robinetterie est obligatoire pour un urinoir public?",
+    "options": [
+      "Robinets à compression",
+      "Robinets à tournant sphérique",
+      "Soupape de chasse (flush valve)",
+      "Robinets à disque céramique"
+    ],
+    "answer": "C",
+    "explanation": "Les urinoirs publics doivent être équipés d'une soupape de chasse (flush valve) à commande automatique ou manuelle pour assurer un rinçage efficace et hygiénique.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le diamètre minimal d'un drain de plancher dans une salle de bain commerciale?",
+    "options": [
+      "2 pouces",
+      "3 pouces",
+      "4 pouces",
+      "1 ½ pouce"
+    ],
+    "answer": "A",
+    "explanation": "Le drain de plancher doit avoir un diamètre minimal de 2 pouces (51 mm) dans une salle de bain commerciale pour assurer un drainage adéquat.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Comment doit être évacué le refoulement d'un lave-vaisselle?",
+    "options": [
+      "Directement dans le drain de l'évier",
+      "Par un vidange indirect avec un entrefer",
+      "Par un raccordement direct au siphon",
+      "Par une pompe de relevage"
+    ],
+    "answer": "B",
+    "explanation": "Le lave-vaisselle doit être évacué par un vidange indirect (indirect waste) avec un entrefer pour empêcher le refoulement d'eau usée dans l'appareil, conformément au code de plomberie.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la fonction principale d'un bidet?",
+    "options": [
+      "Laver les mains",
+      "Le nettoyage hygiénique des parties intimes",
+      "Laver les légumes",
+      "Nettoyer les outils de plomberie"
+    ],
+    "answer": "B",
+    "explanation": "Le bidet est un appareil sanitaire conçu pour le nettoyage hygiénique des parties intimes après l'utilisation des toilettes.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel raccordement d'eau est requis pour un bidet?",
+    "options": [
+      "Eau chaude seulement",
+      "Eau froide seulement",
+      "Eau chaude et eau froide",
+      "Aucun raccordement d'eau nécessaire"
+    ],
+    "answer": "C",
+    "explanation": "Un bidet nécessite à la fois un raccordement d'eau chaude et d'eau froide pour permettre un réglage confortable de la température.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la consommation d'eau maximale autorisée pour une toilette à faible débit?",
+    "options": [
+      "1,0 GPF (3,8 LPF)",
+      "1,6 GPF (6 LPF)",
+      "1,28 GPF (4,8 LPF)",
+      "2,0 GPF (7,6 LPF)"
+    ],
+    "answer": "C",
+    "explanation": "Les toilettes à faible débit (high-efficiency toilets) ont une consommation maximale de 1,28 gallon par chasse (4,8 litres par chasse), ce qui est encore plus économe que la norme standard de 1,6 GPF.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la hauteur minimale libre devant une toilette pour respecter l'accessibilité?",
+    "options": [
+      "24 pouces",
+      "30 pouces",
+      "36 pouces",
+      "48 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Un dégagement minimal de 30 pouces (762 mm) devant la toilette est requis pour respecter les normes d'accessibilité.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel type de siphon est généralement recommandé pour un évier de cuisine double?",
+    "options": [
+      "Siphon en P simple",
+      "Siphon en S",
+      "Siphon en P double avec raccordement en T",
+      "Siphon à bouteille"
+    ],
+    "answer": "C",
+    "explanation": "Un évier double nécessite un siphon en P double avec un raccordement en T pour connecter les deux bacs au même drain. Cela permet de drainer les deux côtés de l'évier simultanément avec un seul siphon.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le rôle de l'entrefer (air gap) dans un système de vidange indirect?",
+    "options": [
+      "Augmenter le débit d'eau",
+      "Empêcher le refoulement d'eau contaminée",
+      "Réduire le bruit de l'écoulement",
+      "Faciliter l'installation du tuyau"
+    ],
+    "answer": "B",
+    "explanation": "L'entrefer (air gap) dans un vidange indirect empêche le refoulement d'eau contaminée dans l'appareil en créant un espace d'air entre la sortie de l'appareil et le niveau de débordement du réceptacle.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle distance minimale doit séparer le centre de la bride de toilette du mur adjacent?",
+    "options": [
+      "10 pouces",
+      "12 pouces",
+      "15 pouces",
+      "18 pouces"
+    ],
+    "answer": "C",
+    "explanation": "La distance minimale du centre de la bride de toilette au mur adjacent est de 15 pouces (381 mm) pour respecter le dégagement latéral requis.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est l'avantage principal d'une toilette à double chasse?",
+    "options": [
+      "Installation plus facile",
+      "Économie d'eau avec deux options de débit",
+      "Durée de vie plus longue",
+      "Moins d'entretien"
+    ],
+    "answer": "B",
+    "explanation": "La toilette à double chasse offre deux options : un petit volume pour les liquides (environ 3 L) et un grand volume pour les solides (environ 6 L), permettant une économie d'eau significative.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la pente minimale recommandée pour un tuyau de drainage d'un lavabo vers la colonne?",
+    "options": [
+      "1/8 pouce par pied",
+      "1/4 pouce par pied",
+      "1/2 pouce par pied",
+      "1 pouce par pied"
+    ],
+    "answer": "B",
+    "explanation": "La pente minimale recommandée pour un tuyau de drainage est de 1/4 pouce par pied (2% de pente) pour assurer un bon écoulement des eaux usées.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le matériau le plus couramment utilisé pour les brides de toilette?",
+    "options": [
+      "Acier inoxydable",
+      "Fonte",
+      "PVC ou ABS",
+      "Cuivre"
+    ],
+    "answer": "C",
+    "explanation": "Les brides de toilette modernes sont généralement fabriquées en PVC ou ABS, matériaux résistants à la corrosion et faciles à installer.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la fonction de la bride d'égout (toilet flange)?",
+    "options": [
+      "Réguler le débit d'eau",
+      "Fixer la toilette au sol et la raccorder au drain",
+      "Empêcher les odeurs",
+      "Réduire les vibrations"
+    ],
+    "answer": "B",
+    "explanation": "La bride d'égout sert à fixer la toilette au sol et à assurer l'étanchéité du raccordement entre la toilette et le tuyau d'évacuation.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel diamètre de tuyau d'évent est requis pour un groupe sanitaire comprenant toilette, lavabo et baignoire?",
+    "options": [
+      "1 ¼ pouce",
+      "1 ½ pouce",
+      "2 pouces",
+      "3 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Un tuyau d'évent de 1 ½ pouce (38 mm) est généralement requis pour ventiler adéquatement un groupe sanitaire standard.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "À quelle hauteur minimale doit être installé un robinet d'arrêt pour un lavabo accessible?",
+    "options": [
+      "12 pouces du sol",
+      "18 pouces du sol",
+      "24 pouces du sol",
+      "30 pouces du sol"
+    ],
+    "answer": "B",
+    "explanation": "Les robinets d'arrêt pour lavabo doivent être installés à environ 18 pouces (457 mm) du sol fini, mesurés au centre du robinet.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel type de joint est utilisé entre la toilette et la bride d'égout?",
+    "options": [
+      "Joint en caoutchouc",
+      "Joint de cire",
+      "Joint en téflon",
+      "Joint en silicone"
+    ],
+    "answer": "B",
+    "explanation": "Un joint de cire (wax ring) est traditionnellement utilisé pour créer un joint étanche entre la toilette et la bride d'égout, empêchant les fuites et les odeurs.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la pression d'eau minimale recommandée pour le fonctionnement optimal d'une soupape de chasse d'urinoir?",
+    "options": [
+      "15 PSI",
+      "25 PSI",
+      "35 PSI",
+      "50 PSI"
+    ],
+    "answer": "B",
+    "explanation": "Une pression minimale de 25 PSI est recommandée pour assurer le fonctionnement optimal d'une soupape de chasse d'urinoir.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est le dégagement latéral minimal requis de chaque côté d'une toilette selon le code de plomberie?",
+    "options": [
+      "10 pouces",
+      "12 pouces",
+      "15 pouces",
+      "18 pouces"
+    ],
+    "answer": "C",
+    "explanation": "Le code de plomberie exige un dégagement latéral minimal de 15 pouces (381 mm) de chaque côté de l'axe central de la toilette.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel appareil nécessite un drain de 2 pouces avec un siphon intégré pour éviter les odeurs?",
+    "options": [
+      "Lavabo",
+      "Évier de cuisine",
+      "Baignoire",
+      "Drain de plancher"
+    ],
+    "answer": "D",
+    "explanation": "Un drain de plancher doit avoir un diamètre minimal de 2 pouces et comporter un siphon intégré ou un piège à odeurs pour empêcher les émanations d'égout.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel est l'espace libre minimal requis devant un lavabo accessible en fauteuil roulant?",
+    "options": [
+      "24 pouces",
+      "30 pouces",
+      "36 pouces",
+      "48 pouces"
+    ],
+    "answer": "B",
+    "explanation": "Un espace libre minimal de 30 pouces (762 mm) devant un lavabo est requis pour permettre l'accès en fauteuil roulant.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la hauteur d'installation typique d'un robinet de lavabo de salle de bain?",
+    "options": [
+      "4 pouces au-dessus du bord du lavabo",
+      "6 pouces au-dessus du bord du lavabo",
+      "8 pouces au-dessus du bord du lavabo",
+      "Au niveau du bord du lavabo"
+    ],
+    "answer": "A",
+    "explanation": "Un robinet de lavabo est typiquement installé à environ 4 pouces (100 mm) au-dessus du bord supérieur du lavabo, ou selon les spécifications du fabricant.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quel type de siphon est interdit dans les installations sanitaires modernes au Québec?",
+    "options": [
+      "Siphon en P",
+      "Siphon en S",
+      "Siphon à bouteille",
+      "Siphon à tambour"
+    ],
+    "answer": "B",
+    "explanation": "Le siphon en S est interdit dans les installations modernes car il peut causer un auto-siphonnage qui vide le siphon et permet aux gaz d'égout de pénétrer dans le bâtiment.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle est la fonction d'un robinet d'arrêt (stop valve) sous un lavabo?",
+    "options": [
+      "Réguler la température de l'eau",
+      "Isoler l'alimentation en eau pour l'entretien",
+      "Augmenter la pression d'eau",
+      "Filtrer les impuretés"
+    ],
+    "answer": "B",
+    "explanation": "Le robinet d'arrêt permet d'isoler l'alimentation en eau d'un appareil sanitaire spécifique pour faciliter l'entretien ou les réparations sans couper l'eau de tout le bâtiment.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 5,
+    "question": "Quelle distance minimale doit séparer le bord supérieur d'un lavabo du plan de travail dans une salle de bain accessible?",
+    "options": [
+      "2 pouces",
+      "4 pouces",
+      "6 pouces",
+      "8 pouces"
+    ],
+    "answer": "A",
+    "explanation": "Dans une salle de bain accessible, le bord supérieur du lavabo doit être à un maximum de 34 pouces du sol, et un dégagement minimal pour les genoux de 27 pouces de hauteur est requis en dessous.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la puissance typique d'un élément chauffant d'un chauffe-eau électrique résidentiel de 40 gallons?",
+    "options": [
+      "3000 watts",
+      "4500 watts",
+      "5500 watts",
+      "6000 watts"
+    ],
+    "answer": "B",
+    "explanation": "La puissance typique d'un élément chauffant d'un chauffe-eau électrique résidentiel standard est de 4500 watts à 240 volts.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel calibre de fil est requis pour un chauffe-eau électrique de 4500W/240V?",
+    "options": [
+      "14 AWG",
+      "12 AWG",
+      "10 AWG",
+      "8 AWG"
+    ],
+    "answer": "C",
+    "explanation": "Un chauffe-eau électrique de 4500W/240V nécessite un fil de calibre 10 AWG (American Wire Gauge) pour supporter l'ampérage, qui est d'environ 18,75 A.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel disjoncteur est requis pour un chauffe-eau électrique de 4500W/240V?",
+    "options": [
+      "15 A",
+      "20 A",
+      "30 A",
+      "40 A"
+    ],
+    "answer": "C",
+    "explanation": "Un chauffe-eau électrique de 4500W/240V nécessite un disjoncteur bipolaire de 30 ampères. Le courant nominal est d'environ 18,75 A, et le disjoncteur doit être dimensionné à 125% de cette valeur.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la plage de puissance typique d'un chauffe-eau au gaz résidentiel?",
+    "options": [
+      "20 000 à 30 000 BTU/h",
+      "40 000 à 75 000 BTU/h",
+      "80 000 à 100 000 BTU/h",
+      "100 000 à 150 000 BTU/h"
+    ],
+    "answer": "B",
+    "explanation": "La plage de puissance typique d'un chauffe-eau au gaz résidentiel se situe entre 40 000 et 75 000 BTU/h (British Thermal Units per hour).",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Qu'est-ce qu'un chauffe-eau à chauffage indirect (indirect fired)?",
+    "options": [
+      "Un chauffe-eau électrique avec deux éléments",
+      "Un chauffe-eau qui utilise la chaleur d'une chaudière pour chauffer l'eau via un échangeur interne",
+      "Un chauffe-eau solaire sans réservoir",
+      "Un chauffe-eau au gaz à condensation"
+    ],
+    "answer": "B",
+    "explanation": "Un chauffe-eau à chauffage indirect utilise la chaleur produite par une chaudière (généralement au gaz ou au mazout) pour chauffer l'eau sanitaire via un échangeur de chaleur interne.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la capacité recommandée d'un chauffe-eau pour une famille de 4 personnes?",
+    "options": [
+      "30 gallons",
+      "40-50 gallons",
+      "60-80 gallons",
+      "80-100 gallons"
+    ],
+    "answer": "B",
+    "explanation": "Pour une famille de 4 personnes, un chauffe-eau d'une capacité de 40 à 50 gallons est généralement recommandé pour subvenir aux besoins quotidiens en eau chaude.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la capacité recommandée d'un chauffe-eau pour une famille de 6 personnes?",
+    "options": [
+      "30 gallons",
+      "40 gallons",
+      "50 gallons",
+      "80 gallons"
+    ],
+    "answer": "C",
+    "explanation": "Pour une famille de 6 personnes, un chauffe-eau de 50 gallons est généralement recommandé, bien que certains foyers à forte consommation puissent nécessiter un réservoir de 80 gallons.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Que signifie FHR (First Hour Rating) sur un chauffe-eau?",
+    "options": [
+      "Le temps de chauffe de la première heure",
+      "La quantité d'eau chaude disponible pendant la première heure d'utilisation maximale",
+      "La température de l'eau après une heure",
+      "Le rendement énergétique après une heure"
+    ],
+    "answer": "B",
+    "explanation": "Le FHR (First Hour Rating) indique la quantité d'eau chaude (en gallons) que le chauffe-eau peut fournir pendant la première heure d'utilisation maximale, en tenant compte de la capacité du réservoir et de la vitesse de récupération.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Qu'est-ce que le taux de récupération (recovery rate) d'un chauffe-eau?",
+    "options": [
+      "Le temps nécessaire pour vider le réservoir",
+      "La quantité d'eau chaude produite par heure à une température donnée",
+      "La quantité d'eau froide entrant dans le réservoir",
+      "Le temps pour que l'eau atteigne l'ébullition"
+    ],
+    "answer": "B",
+    "explanation": "Le taux de récupération est la quantité d'eau chaude (en gallons par heure) que le chauffe-eau peut produire à une température donnée, généralement exprimée avec une élévation de température de 90°F ou 100°F.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la température maximale de fonctionnement de la soupape T&P (Temperature and Pressure) d'un chauffe-eau?",
+    "options": [
+      "180°F (82°C)",
+      "210°F (99°C)",
+      "250°F (121°C)",
+      "300°F (149°C)"
+    ],
+    "answer": "B",
+    "explanation": "La soupape T&P (Temperature and Pressure Relief Valve) d'un chauffe-eau est conçue pour s'ouvrir lorsque la température de l'eau atteint 210°F (99°C), ce qui est juste en dessous du point d'ébullition.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la pression maximale de fonctionnement de la soupape T&P d'un chauffe-eau?",
+    "options": [
+      "100 PSI",
+      "125 PSI",
+      "150 PSI",
+      "200 PSI"
+    ],
+    "answer": "C",
+    "explanation": "La soupape T&P s'ouvre automatiquement lorsque la pression à l'intérieur du réservoir atteint 150 PSI (pounds per square inch) pour éviter une explosion.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la règle de dimensionnement pour un vase d'expansion (expansion tank) sur un chauffe-eau?",
+    "options": [
+      "1 gallon par 50 gallons de réservoir",
+      "1 gallon par 20 gallons de réservoir",
+      "2 gallons par 50 gallons de réservoir",
+      "1 gallon par 100 gallons de réservoir"
+    ],
+    "answer": "A",
+    "explanation": "La règle générale de dimensionnement est d'au moins 1 gallon de capacité du vase d'expansion par 50 gallons de capacité du réservoir du chauffe-eau.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Que signifie UEF (Uniform Energy Factor) pour un chauffe-eau?",
+    "options": [
+      "La tension d'alimentation requise",
+      "Le facteur d'efficacité énergétique d'un chauffe-eau selon les normes DOE",
+      "La capacité de stockage en gallons",
+      "Le diamètre du raccordement"
+    ],
+    "answer": "B",
+    "explanation": "L'UEF (Uniform Energy Factor) est une cote d'efficacité énergétique standardisée par le Département de l'Énergie (DOE) des États-Unis, qui mesure le rendement global d'un chauffe-eau. Plus la valeur est élevée, plus l'appareil est efficace.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Comment fonctionne un chauffe-eau thermodynamique (heat pump water heater)?",
+    "options": [
+      "Il utilise uniquement des résistances électriques",
+      "Il capte la chaleur de l'air ambiant pour chauffer l'eau via un cycle thermodynamique",
+      "Il utilise l'énergie solaire directement",
+      "Il fonctionne au gaz naturel"
+    ],
+    "answer": "B",
+    "explanation": "Un chauffe-eau thermodynamique (heat pump water heater) utilise une pompe à chaleur qui capte la chaleur de l'air ambiant (ou de l'air extérieur) et la transfère à l'eau via un cycle de réfrigération, ce qui le rend 2 à 3 fois plus efficace qu'un chauffe-eau électrique standard.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est l'avantage principal d'un chauffe-eau thermodynamique par rapport à un chauffe-eau électrique standard?",
+    "options": [
+      "Installation plus simple",
+      "Efficacité énergétique 2 à 3 fois supérieure",
+      "Durée de vie plus longue",
+      "Entretien moins fréquent"
+    ],
+    "answer": "B",
+    "explanation": "Le principal avantage d'un chauffe-eau thermodynamique est son efficacité énergétique 2 à 3 fois supérieure à celle d'un chauffe-eau électrique standard, pouvant réduire la consommation d'électricité de 50% à 70%.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la tension d'alimentation standard pour un chauffe-eau électrique résidentiel?",
+    "options": [
+      "120V",
+      "208V",
+      "240V",
+      "277V"
+    ],
+    "answer": "C",
+    "explanation": "La tension d'alimentation standard pour un chauffe-eau électrique résidentiel est de 240 volts en courant alternatif.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la durée de vie typique d'un chauffe-eau électrique résidentiel?",
+    "options": [
+      "5-7 ans",
+      "8-12 ans",
+      "15-20 ans",
+      "25-30 ans"
+    ],
+    "answer": "B",
+    "explanation": "La durée de vie typique d'un chauffe-eau électrique résidentiel est de 8 à 12 ans, selon la qualité de l'eau et l'entretien effectué.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la durée de vie typique d'un chauffe-eau au gaz résidentiel?",
+    "options": [
+      "5-7 ans",
+      "8-12 ans",
+      "15-20 ans",
+      "20-25 ans"
+    ],
+    "answer": "B",
+    "explanation": "La durée de vie typique d'un chauffe-eau au gaz résidentiel est de 8 à 12 ans, similaire à celle d'un chauffe-eau électrique.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Où doit être installée la soupape T&P d'un chauffe-eau?",
+    "options": [
+      "À l'entrée d'eau froide",
+      "Dans la partie supérieure du réservoir ou sur le raccord de sortie d'eau chaude",
+      "Au fond du réservoir",
+      "Sur la conduite de gaz"
+    ],
+    "answer": "B",
+    "explanation": "La soupape T&P doit être installée dans la partie supérieure du réservoir ou directement sur le raccord de sortie d'eau chaude pour détecter correctement les variations de température et de pression.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Où doit aboutir la décharge de la soupape T&P?",
+    "options": [
+      "Directement à l'égout",
+      "À l'extérieur ou dans un drain de plancher à proximité avec un entrefer",
+      "Dans le réservoir de rétention",
+      "Sur le toit"
+    ],
+    "answer": "B",
+    "explanation": "La décharge de la soupape T&P doit aboutir à l'extérieur du bâtiment ou dans un drain de plancher à proximité, avec un entrefer (air gap) pour éviter le refoulement.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la température de consigne recommandée pour un chauffe-eau résidentiel?",
+    "options": [
+      "100°F (38°C)",
+      "120°F (49°C)",
+      "140°F (60°C)",
+      "160°F (71°C)"
+    ],
+    "answer": "B",
+    "explanation": "La température de consigne recommandée pour un chauffe-eau résidentiel est de 120°F (49°C), ce qui est suffisamment chaud pour l'usage quotidien tout en réduisant les risques de brûlure et la prolifération bactérienne.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est l'ampérage approximatif d'un chauffe-eau électrique de 4500W à 240V?",
+    "options": [
+      "12,5 A",
+      "15 A",
+      "18,75 A",
+      "22,5 A"
+    ],
+    "answer": "C",
+    "explanation": "L'ampérage est calculé par la formule I = P/V, soit 4500W ÷ 240V = 18,75 ampères.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel type de câble est recommandé pour l'alimentation d'un chauffe-eau électrique?",
+    "options": [
+      "Câble NMD90 (Romex)",
+      "Câble armé (BX)",
+      "Câble TECK",
+      "Fil THHN dans un conduit"
+    ],
+    "answer": "A",
+    "explanation": "Le câble NMD90 (Romex) de calibre 10/2 avec fil de terre est le type de câble le plus couramment utilisé pour l'alimentation d'un chauffe-eau électrique résidentiel.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Qu'est-ce qu'un chauffe-eau sans réservoir (tankless)?",
+    "options": [
+      "Un chauffe-eau avec un très petit réservoir",
+      "Un chauffe-eau qui chauffe l'eau instantanément à la demande sans réservoir de stockage",
+      "Un chauffe-eau solaire",
+      "Un chauffe-eau à accumulation"
+    ],
+    "answer": "B",
+    "explanation": "Un chauffe-eau sans réservoir (tankless ou on-demand) chauffe l'eau instantanément lorsqu'un robinet est ouvert, sans stocker d'eau chaude, ce qui élimine les pertes thermiques par veille.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la capacité recommandée d'un chauffe-eau pour une petite famille de 2 personnes?",
+    "options": [
+      "20 gallons",
+      "30 gallons",
+      "40 gallons",
+      "50 gallons"
+    ],
+    "answer": "B",
+    "explanation": "Pour une famille de 2 personnes, un chauffe-eau de 30 gallons est généralement suffisant pour répondre aux besoins quotidiens en eau chaude.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la capacité recommandée d'un chauffe-eau pour une famille de 7 personnes ou plus?",
+    "options": [
+      "40 gallons",
+      "50 gallons",
+      "80 gallons",
+      "100 gallons"
+    ],
+    "answer": "C",
+    "explanation": "Pour une famille de 7 personnes ou plus, un chauffe-eau de 80 gallons ou plus est recommandé pour assurer une capacité suffisante.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est l'avantage d'un chauffe-eau au gaz à condensation par rapport à un modèle conventionnel?",
+    "options": [
+      "Prix d'achat moins élevé",
+      "Meilleure efficacité énergétique (UEF plus élevé)",
+      "Installation plus simple",
+      "Durée de vie plus longue"
+    ],
+    "answer": "B",
+    "explanation": "Un chauffe-eau au gaz à condensation récupère la chaleur des gaz d'échappement, ce qui lui confère un UEF (Uniform Energy Factor) plus élevé et une meilleure efficacité énergétique qu'un modèle conventionnel.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "À quelle fréquence devrait-on vidanger l'anode sacrificielle d'un chauffe-eau?",
+    "options": [
+      "Tous les mois",
+      "Tous les 6 mois",
+      "Tous les 1 à 3 ans",
+      "Tous les 10 ans"
+    ],
+    "answer": "C",
+    "explanation": "L'anode sacrificielle (ou tige d'anode) d'un chauffe-eau devrait être inspectée tous les 1 à 3 ans et remplacée si elle est fortement corrodée, car elle protège le réservoir contre la corrosion.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est le rôle de l'anode sacrificielle dans un chauffe-eau?",
+    "options": [
+      "Chauffer l'eau",
+      "Protéger le réservoir contre la corrosion en attirant les éléments corrosifs",
+      "Réguler la pression",
+      "Filtrer les impuretés"
+    ],
+    "answer": "B",
+    "explanation": "L'anode sacrificielle protège le réservoir du chauffe-eau contre la corrosion en attirant les éléments corrosifs qui, autrement, attaqueraient la paroi métallique du réservoir.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Pourquoi un vase d'expansion est-il nécessaire sur un chauffe-eau dans un système à circuit fermé?",
+    "options": [
+      "Pour augmenter la capacité de stockage",
+      "Pour absorber la dilatation thermique de l'eau et éviter les surpressions",
+      "Pour chauffer l'eau plus rapidement",
+      "Pour réduire le bruit"
+    ],
+    "answer": "B",
+    "explanation": "Dans un système à circuit fermé (avec clapet antiretour), l'eau qui se dilate en chauffant n'a nulle part où aller, ce qui crée une surpression. Le vase d'expansion absorbe cette dilatation et protège la plomberie.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quel est l'impact du UEF sur la facture énergétique d'un chauffe-eau?",
+    "options": [
+      "Un UEF plus élevé augmente la consommation",
+      "Un UEF plus élevé réduit la consommation d'énergie",
+      "Le UEF n'a aucun impact sur la consommation",
+      "Un UEF plus bas est plus efficace"
+    ],
+    "answer": "B",
+    "explanation": "Un UEF (Uniform Energy Factor) plus élevé indique un meilleur rendement énergétique, ce qui se traduit par une consommation d'énergie réduite et donc une facture moins élevée.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la différence principale entre un chauffe-eau électrique standard et un chauffe-eau thermodynamique en termes d'installation?",
+    "options": [
+      "Aucune différence",
+      "Le chauffe-eau thermodynamique nécessite un espace d'au moins 1000 pieds cubes d'air ambiant et un drain pour les condensats",
+      "Le chauffe-eau électrique est plus gros",
+      "Le chauffe-eau thermodynamique ne nécessite pas de raccordement électrique"
+    ],
+    "answer": "B",
+    "explanation": "Un chauffe-eau thermodynamique nécessite un volume d'air ambiant d'au moins 1000 pieds cubes (environ 28 m³) et un drain pour évacuer les condensats produits par le cycle thermodynamique.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 6,
+    "question": "Quelle est la température minimale recommandée pour un chauffe-eau afin de prévenir la prolifération des légionelles?",
+    "options": [
+      "100°F (38°C)",
+      "120°F (49°C)",
+      "140°F (60°C)",
+      "160°F (71°C)"
+    ],
+    "answer": "C",
+    "explanation": "Une température d'au moins 140°F (60°C) est recommandée périodiquement pour prévenir la prolifération des bactéries Legionella dans le réservoir. Cependant, la température de consigne courante est de 120°F, avec un cycle de désinfection périodique.",
+    "difficulty": "MEDIUM"
+  }
+]

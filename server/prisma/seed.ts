@@ -120,22 +120,34 @@ async function main() {
       createdChapters.push({ number: created.number, id: created.id });
     }
 
-    // Load questions
+    // Load questions — support batch files with suffixes
     const questions = loadJSON<QuestionData>(path.join(contentDir, 'questions.json'))
       .concat(loadJSON<QuestionData>(path.join(contentDir, 'questions_more.json')))
       .concat(loadJSON<QuestionData>(path.join(contentDir, 'questions_batch2.json')))
-      .concat(loadJSON<QuestionData>(path.join(contentDir, 'questions_batch3.json')));
+      .concat(loadJSON<QuestionData>(path.join(contentDir, 'questions_batch2a.json')))
+      .concat(loadJSON<QuestionData>(path.join(contentDir, 'questions_batch2b.json')))
+      .concat(loadJSON<QuestionData>(path.join(contentDir, 'questions_batch2c.json')))
+      .concat(loadJSON<QuestionData>(path.join(contentDir, 'questions_batch2d.json')))
+      .concat(loadJSON<QuestionData>(path.join(contentDir, 'questions_batch3.json')))
+      .concat(loadJSON<QuestionData>(path.join(contentDir, 'questions_batch4.json')));
 
     let totalQuestions = 0;
     for (const q of questions) {
       const chapter = createdChapters.find(c => c.number === q.chapter);
       if (!chapter) continue;
+      // Normalize difficulty to Prisma enum values
+      const diffMap: Record<string, string> = {
+        'facile': 'EASY', 'easy': 'EASY', 'facile (easy)': 'EASY',
+        'moyen': 'MEDIUM', 'medium': 'MEDIUM', 'moyenne': 'MEDIUM', 'moyen (medium)': 'MEDIUM',
+        'difficile': 'HARD', 'hard': 'HARD', 'difficile (hard)': 'HARD',
+      };
+      const difficulty = diffMap[q.difficulty.toLowerCase().trim()] || 'MEDIUM';
       await prisma.question.create({
         data: {
           tradeId,
           chapterId: chapter.id,
           type: 'MCQ',
-          difficulty: q.difficulty as any,
+          difficulty: difficulty as any,
           question: q.question,
           options: q.options,
           answer: q.answer,

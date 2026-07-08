@@ -1,0 +1,860 @@
+[
+  {
+    "chapter": 7,
+    "question": "Quel code régit l'installation des appareils au gaz naturel et au propane au Canada?",
+    "options": [
+      "CSA B149.1",
+      "NFPA 54",
+      "CSA B139",
+      "IPC"
+    ],
+    "answer": "A",
+    "explanation": "Le Code CSA B149.1 est le code canadien régissant l'installation du gaz naturel et du propane.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le matériau du tuyau ondulé flexible en acier inoxydable utilisé pour le gaz, reconnaissable par sa gaine jaune?",
+    "options": [
+      "PE (polyéthylène)",
+      "CSST (Corrugated Stainless Steel Tubing)",
+      "PEX-AL-PEX",
+      "Cuivre de type K"
+    ],
+    "answer": "B",
+    "explanation": "Le CSST (tube ondulé en acier inoxydable) est un tube flexible à gaine jaune utilisé pour les installations de gaz.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Dans un système de régulation à deux étages pour le gaz naturel, quelle est la pression après le deuxième étage?",
+    "options": [
+      "2 psi",
+      "7 pouces de colonne d'eau (po WC)",
+      "11 po WC",
+      "14 po WC"
+    ],
+    "answer": "B",
+    "explanation": "Le régulateur à deux étages réduit la pression de 2 psi (premier étage) à 7 po WC (deuxième étage) pour l'alimentation des appareils.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression du premier étage dans un système de régulation à deux étages pour le gaz?",
+    "options": [
+      "7 po WC",
+      "11 po WC",
+      "2 psi",
+      "5 psi"
+    ],
+    "answer": "C",
+    "explanation": "Le premier étage d'un régulateur à deux étages réduit la pression à 2 psi avant que le deuxième étage ne la réduise à 7 po WC.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Où doit-on installer un raccord en T de purge (drip leg / sediment trap) dans une installation de gaz?",
+    "options": [
+      "Au niveau du compteur de gaz",
+      "À chaque appareil utilisant du gaz",
+      "Uniquement à la sortie du régulateur",
+      "Au point d'entrée du bâtiment"
+    ],
+    "answer": "B",
+    "explanation": "Un raccord en T de purge (drip leg / sediment trap) doit être installé à chaque appareil pour recueillir les sédiments et l'humidité.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la consommation typique en BTU/h d'une fournaise résidentielle au gaz?",
+    "options": [
+      "40 000 BTU/h",
+      "65 000 BTU/h",
+      "100 000 BTU/h",
+      "35 000 BTU/h"
+    ],
+    "answer": "C",
+    "explanation": "Une fournaise résidentielle consomme typiquement 100 000 BTU/h.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la consommation typique en BTU/h d'un chauffe-eau résidentiel au gaz?",
+    "options": [
+      "100 000 BTU/h",
+      "65 000 BTU/h",
+      "40 000 BTU/h",
+      "35 000 BTU/h"
+    ],
+    "answer": "C",
+    "explanation": "Un chauffe-eau résidentiel consomme typiquement 40 000 BTU/h.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la consommation typique en BTU/h d'une cuisinière au gaz résidentielle?",
+    "options": [
+      "100 000 BTU/h",
+      "65 000 BTU/h",
+      "40 000 BTU/h",
+      "35 000 BTU/h"
+    ],
+    "answer": "B",
+    "explanation": "Une cuisinière au gaz résidentielle consomme typiquement 65 000 BTU/h.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la consommation typique en BTU/h d'une sécheuse au gaz résidentielle?",
+    "options": [
+      "100 000 BTU/h",
+      "65 000 BTU/h",
+      "40 000 BTU/h",
+      "35 000 BTU/h"
+    ],
+    "answer": "D",
+    "explanation": "Une sécheuse au gaz résidentielle consomme typiquement 35 000 BTU/h.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Une maison a une fournaise (100 000 BTU/h), un chauffe-eau (40 000 BTU/h), une cuisinière (65 000 BTU/h) et une sécheuse (35 000 BTU/h). Quel est le total de la charge en BTU/h?",
+    "options": [
+      "200 000 BTU/h",
+      "220 000 BTU/h",
+      "240 000 BTU/h",
+      "260 000 BTU/h"
+    ],
+    "answer": "C",
+    "explanation": "100 000 + 40 000 + 65 000 + 35 000 = 240 000 BTU/h de charge totale.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Pour un gazoduc d'une longueur de 50 pieds avec une charge totale de 200 000 BTU/h, quel diamètre de tuyau en acier est généralement requis (en se référant aux tables de dimensionnement standard)?",
+    "options": [
+      "1/2 po",
+      "3/4 po",
+      "1 po",
+      "1 1/4 po"
+    ],
+    "answer": "B",
+    "explanation": "Pour 50 pieds avec 200 000 BTU/h, les tables de dimensionnement standard indiquent qu'un tuyau de 3/4 po est suffisant.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Pour une course de gaz de 80 pieds avec une charge de 350 000 BTU/h, quel diamètre de tuyau est généralement requis selon les tables de dimensionnement?",
+    "options": [
+      "3/4 po",
+      "1 po",
+      "1 1/4 po",
+      "1 1/2 po"
+    ],
+    "answer": "C",
+    "explanation": "Pour 80 pieds avec 350 000 BTU/h, les tables de dimensionnement standard indiquent un tuyau de 1 1/4 po.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Une installation comporte un tronçon de 30 pieds avec une charge de 500 000 BTU/h. Quel diamètre de tuyau est requis?",
+    "options": [
+      "1/2 po",
+      "3/4 po",
+      "1 po",
+      "1 1/4 po"
+    ],
+    "answer": "C",
+    "explanation": "Pour 30 pieds avec 500 000 BTU/h, les tables indiquent un tuyau de 1 po.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression d'essai (test de pression) recommandée pour un système de gaz à basse pression?",
+    "options": [
+      "3,5 po WC",
+      "7 po WC",
+      "15 psi",
+      "2 psi"
+    ],
+    "answer": "B",
+    "explanation": "Pour un système à basse pression, le test de pression standard est de 7 po WC (environ 0,25 psi).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression d'essai recommandée pour un système de gaz à haute pression?",
+    "options": [
+      "7 po WC",
+      "2 psi",
+      "15 psi",
+      "30 psi"
+    ],
+    "answer": "C",
+    "explanation": "Pour un système à haute pression, le test de pression est de 15 psi.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression au collecteur (manifold pressure) pour un appareil au gaz naturel?",
+    "options": [
+      "3,5 po WC",
+      "7 po WC",
+      "11 po WC",
+      "2 psi"
+    ],
+    "answer": "A",
+    "explanation": "La pression au collecteur pour le gaz naturel est de 3,5 po WC.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la pression au collecteur (manifold pressure) pour un appareil au propane?",
+    "options": [
+      "3,5 po WC",
+      "7 po WC",
+      "11 po WC",
+      "14 po WC"
+    ],
+    "answer": "C",
+    "explanation": "La pression au collecteur pour le propane est de 11 po WC.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Pourquoi doit-on changer l'orifice (orifice) lorsqu'on convertit un appareil du gaz naturel au propane?",
+    "options": [
+      "Le propane a un pouvoir calorifique différent nécessitant un orifice plus petit",
+      "Le propane a une pression plus élevée",
+      "Le propane est plus lourd que l'air",
+      "L'orifice du gaz naturel est en laiton"
+    ],
+    "answer": "A",
+    "explanation": "Le propane a un pouvoir calorifique plus élevé par volume que le gaz naturel, donc un orifice plus petit est nécessaire pour maintenir le bon débit d'énergie.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la principale source d'air de combustion requise pour une chaudière au gaz dans un local technique?",
+    "options": [
+      "L'air extérieur uniquement",
+      "L'air ambiant du local",
+      "Une combinaison d'air intérieur et extérieur",
+      "Un ventilateur mécanique seulement"
+    ],
+    "answer": "C",
+    "explanation": "L'air de combustion provient d'une combinaison d'air intérieur et extérieur, calculée selon les exigences du code pour assurer une combustion complète.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Selon la CSA B149.1, quel volume d'air de combustion est requis par 1 000 BTU/h pour un local non confiné?",
+    "options": [
+      "20 pi³",
+      "35 pi³",
+      "50 pi³",
+      "100 pi³"
+    ],
+    "answer": "C",
+    "explanation": "La CSA B149.1 exige 50 pi³ d'air par 1 000 BTU/h pour un local non confiné.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Un local fermé contient une fournaise de 100 000 BTU/h et un chauffe-eau de 40 000 BTU/h. Quel volume minimal d'air de combustion est requis si le local est non confiné?",
+    "options": [
+      "5 000 pi³",
+      "7 000 pi³",
+      "10 000 pi³",
+      "12 000 pi³"
+    ],
+    "answer": "B",
+    "explanation": "Charge totale = 140 000 BTU/h. Volume requis = 140 × 50 = 7 000 pi³.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est le rôle principal d'un régulateur de pression de gaz?",
+    "options": [
+      "Augmenter la pression du gaz",
+      "Mesurer le débit de gaz",
+      "Réduire et stabiliser la pression du gaz",
+      "Filtrer les impuretés du gaz"
+    ],
+    "answer": "C",
+    "explanation": "Le régulateur de pression réduit et stabilise la pression du gaz en provenance de la source (compteur ou réservoir) pour l'adapter aux appareils.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel est l'avantage principal du CSST par rapport au tuyau d'accier noir traditionnel?",
+    "options": [
+      "Il est moins cher",
+      "Il est plus flexible et nécessite moins de raccords",
+      "Il supporte des pressions plus élevées",
+      "Il dure plus longtemps"
+    ],
+    "answer": "B",
+    "explanation": "Le CSST est flexible, ce qui permet des installations plus rapides avec moins de raccords que le tuyau d'acier noir rigide.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la bonne méthode pour dimensionner une tuyauterie de gaz?",
+    "options": [
+      "Basée sur la pression uniquement",
+      "Basée sur la longueur du tuyau et la charge totale en BTU",
+      "Basée sur le nombre d'appareils seulement",
+      "Basée sur la grosseur des orifices"
+    ],
+    "answer": "B",
+    "explanation": "Le dimensionnement d'une tuyauterie de gaz se fait selon la longueur de la course et la charge totale en BTU/h en utilisant les tables de dimensionnement appropriées.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle vanne doit être installée à chaque appareil au gaz pour permettre l'arrêt individuel?",
+    "options": [
+      "Vanne de non-retour",
+      "Vanne d'arrêt (shut-off valve)",
+      "Vanne de décharge",
+      "Vanne de régulation"
+    ],
+    "answer": "B",
+    "explanation": "Une vanne d'arrêt individuelle doit être installée près de chaque appareil pour permettre l'arrêt indépendant de l'alimentation en gaz.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Que signifie le terme 'pouces de colonne d'eau' (po WC) utilisé pour mesurer la pression du gaz?",
+    "options": [
+      "La pression équivalente à une hauteur d'eau en pouces",
+      "Le volume d'eau dans le gaz",
+      "La température de l'eau dans le système",
+      "Le débit d'eau nécessaire"
+    ],
+    "answer": "A",
+    "explanation": "Le pouce de colonne d'eau (po WC) est une unité de pression basée sur la hauteur d'une colonne d'eau, utilisée pour les basses pressions de gaz.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "À quelle distance minimale un compteur de gaz extérieur doit-il être situé d'une fenêtre ou d'une prise d'air?",
+    "options": [
+      "1 pied",
+      "3 pieds",
+      "5 pieds",
+      "10 pieds"
+    ],
+    "answer": "B",
+    "explanation": "Selon la CSA B149.1, un compteur de gaz doit être situé à au moins 3 pieds d'une fenêtre ou d'une prise d'air.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Quel type de joint ou de produit d'étanchéité est recommandé pour les raccords filetés de tuyauterie de gaz?",
+    "options": [
+      "Ruban de Téflon blanc",
+      "Ruban de Téflon jaune ou pâte à joint homologuée pour le gaz",
+      "Silicone ordinaire",
+      "Calfeutrage acrylique"
+    ],
+    "answer": "B",
+    "explanation": "Le ruban de Téflon jaune (plus épais, spécifique pour le gaz) ou la pâte à joint homologuée pour les raccords de gaz doivent être utilisés sur les filetages des raccords de gaz.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Que doit-on installer au point le plus bas d'une canalisation de gaz?",
+    "options": [
+      "Un régulateur",
+      "Un drain ou purge (drip leg)",
+      "Un compteur",
+      "Un filtre"
+    ],
+    "answer": "B",
+    "explanation": "Un drain de condensation (drip leg) doit être installé au point le plus bas de la canalisation pour recueillir l'humidité et les impuretés.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Qu'est-ce qui détermine la grosseur d'un orifice (orifice) dans un brûleur à gaz?",
+    "options": [
+      "La marque de l'appareil",
+      "Le type de gaz (naturel vs propane) et la pression d'alimentation",
+      "La couleur de la flamme",
+      "La température ambiante"
+    ],
+    "answer": "B",
+    "explanation": "La grosseur de l'orifice est déterminée par le type de gaz utilisé (naturel ou propane) et la pression d'alimentation au collecteur.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 7,
+    "question": "Un technicien convertit une fournaise du gaz naturel au propane. Quel changement doit-il apporter à l'orifice?",
+    "options": [
+      "Installer un orifice plus gros",
+      "Installer un orifice plus petit",
+      "Garder le même orifice",
+      "Installer deux orifices en parallèle"
+    ],
+    "answer": "B",
+    "explanation": "Lors de la conversion au propane, un orifice plus petit est requis car le propane a un contenu énergétique plus élevé par volume (environ 2 500 BTU/pi³ contre 1 000 BTU/pi³ pour le gaz naturel).",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la couleur de la flamme idéale d'un brûleur au gaz naturel bien réglé?",
+    "options": [
+      "Jaune avec pointes orange",
+      "Bleue avec un cône intérieur distinct",
+      "Rouge avec étincelles",
+      "Verte avec base blanche"
+    ],
+    "answer": "B",
+    "explanation": "Une flamme bleue avec un cône intérieur distinct indique une combustion complète et efficace du gaz naturel.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 7,
+    "question": "Quelle est la distance minimale entre un appareil au gaz et une source d'inflammation potentielle selon la CSA B149.1?",
+    "options": [
+      "1 pied",
+      "3 pieds",
+      "5 pieds",
+      "10 pieds"
+    ],
+    "answer": "B",
+    "explanation": "La CSA B149.1 exige une distance minimale de 3 pieds entre un appareil au gaz et une source d'inflammation potentielle.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle norme NFPA régit les systèmes de gicleurs commerciaux (sprinkler systems)?",
+    "options": [
+      "NFPA 13D",
+      "NFPA 13R",
+      "NFPA 13",
+      "NFPA 72"
+    ],
+    "answer": "C",
+    "explanation": "La NFPA 13 est la norme qui régit l'installation des systèmes de gicleurs dans les bâtiments commerciaux et industriels.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle norme NFPA régit les systèmes de gicleurs pour les bâtiments résidentiels allant jusqu'à 4 étages?",
+    "options": [
+      "NFPA 13",
+      "NFPA 13R",
+      "NFPA 13D",
+      "NFPA 72"
+    ],
+    "answer": "B",
+    "explanation": "La NFPA 13R s'applique aux systèmes de gicleurs dans les bâtiments résidentiels de 4 étages ou moins.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle norme NFPA régit les systèmes de gicleurs pour les maisons unifamiliales et bifamiliales?",
+    "options": [
+      "NFPA 13",
+      "NFPA 13R",
+      "NFPA 13D",
+      "NFPA 72"
+    ],
+    "answer": "C",
+    "explanation": "La NFPA 13D s'applique aux systèmes de gicleurs dans les habitations unifamiliales et bifamiliales.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de tête de gicleur (sprinkler head) est installé avec le déflecteur orienté vers le bas, généralement utilisé dans les espaces finis?",
+    "options": [
+      "Pendent (pendentif)",
+      "Upright (montant)",
+      "Sidewall (mural)",
+      "Concealed (caché)"
+    ],
+    "answer": "A",
+    "explanation": "Le gicleur de type pendent (pendentif) est installé avec le déflecteur vers le bas, idéal pour les plafonds finis.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de tête de gicleur est installé au-dessus des conduites avec le déflecteur vers le haut, utilisé dans les espaces non finis?",
+    "options": [
+      "Pendent",
+      "Upright",
+      "Sidewall",
+      "Concealed"
+    ],
+    "answer": "B",
+    "explanation": "Le gicleur de type upright (montant) est installé au-dessus de la tuyauterie avec le déflecteur vers le haut, conçu pour les espaces sans plafond fini.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de gicleur est monté sur un mur latéral pour protéger une pièce?",
+    "options": [
+      "Pendent",
+      "Upright",
+      "Sidewall",
+      "Concealed"
+    ],
+    "answer": "C",
+    "explanation": "Le gicleur sidewall (mural) est monté sur un mur latéral et projette l'eau en forme de quart de cercle.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de tête de gicleur est esthétique avec un capuchon qui se détache lors de l'activation?",
+    "options": [
+      "Pendent",
+      "Upright",
+      "Sidewall",
+      "Concealed (caché avec couvercle)"
+    ],
+    "answer": "D",
+    "explanation": "Le gicleur concealed (caché) possède un capuchon décoratif qui tombe lorsque la chaleur active le gicleur, offrant une apparence discrète.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la température de déclenchement standard pour un gicleur dans un espace commercial ordinaire?",
+    "options": [
+      "100°F (38°C)",
+      "155°F (68°C)",
+      "212°F (100°C)",
+      "286°F (141°C)"
+    ],
+    "answer": "B",
+    "explanation": "La température standard de déclenchement pour un gicleur ordinaire est de 155°F (68°C).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle température de déclenchement est utilisée pour les gicleurs dans les zones à haute température comme près d'une chaudière?",
+    "options": [
+      "155°F (68°C)",
+      "212°F (100°C)",
+      "286°F (141°C)",
+      "360°F (182°C)"
+    ],
+    "answer": "C",
+    "explanation": "Les gicleurs à haute température (286°F / 141°C) sont utilisés près des chaudières et dans les zones où la température ambiante est élevée.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle température de déclenchement est recommandée pour les gicleurs dans un grenier (attic)?",
+    "options": [
+      "155°F (68°C)",
+      "212°F (100°C)",
+      "286°F (141°C)",
+      "360°F (182°C)"
+    ],
+    "answer": "D",
+    "explanation": "Les gicleurs de grenier utilisent une température de déclenchement de 360°F (182°C) pour éviter les déclenchements intempestifs dans les espaces très chauds.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est l'espacement maximal entre les têtes de gicleurs pour un risque léger (light hazard) selon la NFPA 13?",
+    "options": [
+      "10 pieds",
+      "12 pieds",
+      "15 pieds",
+      "20 pieds"
+    ],
+    "answer": "C",
+    "explanation": "Pour un risque léger, l'espacement maximal entre les têtes de gicleurs est de 15 pieds selon la NFPA 13.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est l'espacement maximal entre les têtes de gicleurs pour un risque ordinaire (ordinary hazard) selon la NFPA 13?",
+    "options": [
+      "10 pieds",
+      "12 pieds",
+      "15 pieds",
+      "20 pieds"
+    ],
+    "answer": "B",
+    "explanation": "Pour un risque ordinaire, l'espacement maximal entre les têtes de gicleurs est de 12 pieds selon la NFPA 13.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle classe de colonne montante (standpipe) est conçue uniquement pour le raccordement des pompiers avec une sortie de 2,5 pouces?",
+    "options": [
+      "Classe I",
+      "Classe II",
+      "Classe III",
+      "Classe IV"
+    ],
+    "answer": "A",
+    "explanation": "La colonne montante de Classe I est réservée au service d'incendie avec des sorties de 2,5 pouces.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle classe de colonne montante (standpipe) est conçue pour l'utilisation par les occupants avec un tuyau de 1,5 pouce?",
+    "options": [
+      "Classe I",
+      "Classe II",
+      "Classe III",
+      "Classe IV"
+    ],
+    "answer": "B",
+    "explanation": "La colonne montante de Classe II est équipée de tuyaux de 1,5 pouce pour utilisation par les occupants du bâtiment.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle classe de colonne montante (standpipe) combine à la fois une sortie de 2,5 pouces pour les pompiers et un tuyau de 1,5 pouce pour les occupants?",
+    "options": [
+      "Classe I",
+      "Classe II",
+      "Classe III",
+      "Classe IV"
+    ],
+    "answer": "C",
+    "explanation": "La colonne montante de Classe III combine les fonctions des Classes I et II, avec des sorties de 2,5 pouces pour les pompiers et des tuyaux de 1,5 pouce pour les occupants.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel débit d'eau est généralement requis pour un système de gicleurs commercial typique?",
+    "options": [
+      "100-250 GPM",
+      "250-500 GPM",
+      "500-1 000 GPM",
+      "1 000-1 500 GPM"
+    ],
+    "answer": "C",
+    "explanation": "Un système de gicleurs commercial typique nécessite un débit d'eau de 500 à 1 000 GPM (gallons par minute).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle norme NFPA régit les systèmes d'alarme incendie et leur interface avec les gicleurs?",
+    "options": [
+      "NFPA 13",
+      "NFPA 13D",
+      "NFPA 72",
+      "NFPA 30"
+    ],
+    "answer": "C",
+    "explanation": "La NFPA 72 est le Code national d'alarme incendie qui régit la détection, le déclenchement et l'interface avec les systèmes de gicleurs.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel dispositif empêche le refoulement d'eau du système de gicleurs vers le réseau d'eau potable?",
+    "options": [
+      "Un clapet de retenue (check valve)",
+      "Un dispositif antirefoulement (backflow preventer)",
+      "Un régulateur de pression",
+      "Un filtre à eau"
+    ],
+    "answer": "B",
+    "explanation": "Un dispositif antirefoulement (backflow preventer) est requis sur les systèmes de gicleurs pour empêcher la contamination du réseau d'eau potable.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Que signifie l'acronyme GPM dans le contexte des systèmes de protection incendie?",
+    "options": [
+      "Gallons par minute (débit)",
+      "Gaz pour mousse",
+      "Gicleurs par mètre",
+      "Groupes de protection mécanique"
+    ],
+    "answer": "A",
+    "explanation": "GPM signifie Gallons Par Minute et mesure le débit d'eau dans les systèmes de gicleurs.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est le rôle d'une pompe à incendie (fire pump) dans un système de gicleurs?",
+    "options": [
+      "Augmenter la pression d'eau lorsque la pression municipale est insuffisante",
+      "Filtrer l'eau avant les gicleurs",
+      "Chauffer l'eau pour la protection contre le gel",
+      "Stocker l'eau en réserve"
+    ],
+    "answer": "A",
+    "explanation": "La pompe à incendie augmente la pression de l'eau lorsque la pression du réseau municipal est insuffisante pour alimenter correctement le système de gicleurs.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la couleur du bulbe en verre d'un gicleur standard à 155°F (68°C)?",
+    "options": [
+      "Orange ou rouge",
+      "Vert",
+      "Bleu",
+      "Jaune"
+    ],
+    "answer": "A",
+    "explanation": "Les gicleurs à 155°F (68°C) ont un bulbe en verre de couleur orange ou rouge (selon le fabricant).",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la couleur du bulbe en verre d'un gicleur à haute température de 286°F (141°C)?",
+    "options": [
+      "Rouge",
+      "Vert",
+      "Bleu",
+      "Noir"
+    ],
+    "answer": "C",
+    "explanation": "Les gicleurs à 286°F (141°C) ont un bulbe en verre de couleur bleue.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la superficie maximale qu'un seul gicleur peut protéger dans un système à risque ordinaire?",
+    "options": [
+      "100 pi²",
+      "130 pi²",
+      "200 pi²",
+      "225 pi²"
+    ],
+    "answer": "B",
+    "explanation": "Dans un système à risque ordinaire, la superficie maximale protégée par un seul gicleur est de 130 pi² selon la NFPA 13.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est le délai approximatif de réponse d'un gicleur standard (standard response) comparé à un gicleur à réponse rapide (quick response)?",
+    "options": [
+      "Identique",
+      "2 fois plus lent",
+      "4 à 6 fois plus lent",
+      "10 fois plus lent"
+    ],
+    "answer": "C",
+    "explanation": "Un gicleur standard response est environ 4 à 6 fois plus lent à s'activer qu'un gicleur quick response, car son élément thermique est plus massif.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Dans un bâtiment de 3 étages avec système de gicleurs résidentiels, quelle norme s'applique généralement?",
+    "options": [
+      "NFPA 13",
+      "NFPA 13R",
+      "NFPA 13D",
+      "NFPA 20"
+    ],
+    "answer": "B",
+    "explanation": "Un bâtiment résidentiel de 3 étages (4 étages ou moins) relève de la NFPA 13R.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle pression minimale est généralement requise à la tête de gicleur la plus défavorisée dans un système commercial?",
+    "options": [
+      "5 psi",
+      "7 psi",
+      "10 psi",
+      "15 psi"
+    ],
+    "answer": "B",
+    "explanation": "La pression minimale requise à la tête de gicleur la plus défavorisée est généralement de 7 psi selon la NFPA 13.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de système de gicleurs contient de l'eau sous pression dans les tuyaux en tout temps?",
+    "options": [
+      "Système sous vide (dry pipe)",
+      "Système humide (wet pipe)",
+      "Système à pré-action (pre-action)",
+      "Système à déluge (deluge)"
+    ],
+    "answer": "B",
+    "explanation": "Le système humide (wet pipe) maintient de l'eau sous pression dans les tuyaux en permanence, offrant la réponse la plus rapide.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel type de système de gicleurs est recommandé pour un parking extérieur non chauffé?",
+    "options": [
+      "Système humide (wet pipe)",
+      "Système sec (dry pipe)",
+      "Système à déluge",
+      "Système à mousse"
+    ],
+    "answer": "B",
+    "explanation": "Le système sec (dry pipe) est recommandé pour les zones non chauffées car les tuyaux contiennent de l'air sous pression et l'eau n'est libérée qu'en cas d'activation, évitant le gel.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la distance minimale entre un gicleur et un mur latéral selon la NFPA 13?",
+    "options": [
+      "2 pouces",
+      "4 pouces",
+      "6 pouces",
+      "12 pouces"
+    ],
+    "answer": "B",
+    "explanation": "La distance minimale entre un gicleur et un mur latéral est de 4 pouces selon la NFPA 13.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est le but du déflecteur (deflector) sur une tête de gicleur?",
+    "options": [
+      "Décorer le plafond",
+      "Distribuer l'eau selon un motif spécifique",
+      "Augmenter la pression de l'eau",
+      "Filtrer les particules"
+    ],
+    "answer": "B",
+    "explanation": "Le déflecteur brise le jet d'eau et le distribue selon un motif spécifique pour couvrir efficacement la zone protégée.",
+    "difficulty": "EASY"
+  },
+  {
+    "chapter": 8,
+    "question": "Quel est le temps de drainage moyen requis entre les gicleurs dans un système d'alarme incendie selon la NFPA 72?",
+    "options": [
+      "Aucun délai requis",
+      "10 secondes maximum",
+      "30 secondes maximum",
+      "60 secondes maximum"
+    ],
+    "answer": "C",
+    "explanation": "La NFPA 72 exige que les alarmes se déclenchent dans un délai maximal de 30 secondes après l'activation du détecteur ou du gicleur.",
+    "difficulty": "HARD"
+  },
+  {
+    "chapter": 8,
+    "question": "Un bâtiment commercial nécessite un système de gicleurs avec une pompe à incendie. Quel débit minimal est généralement requis?",
+    "options": [
+      "100 GPM",
+      "250 GPM",
+      "500 GPM",
+      "1 500 GPM"
+    ],
+    "answer": "C",
+    "explanation": "Un système commercial avec pompe à incendie nécessite généralement un débit minimal de 500 GPM.",
+    "difficulty": "MEDIUM"
+  },
+  {
+    "chapter": 8,
+    "question": "Quelle est la différence principale entre un gicleur pendent et un gicleur upright?",
+    "options": [
+      "La couleur du bulbe",
+      "La pression de fonctionnement",
+      "La direction du déflecteur et la zone de couverture",
+      "Le matériau de fabrication"
+    ],
+    "answer": "C",
+    "explanation": "Le gicleur pendent a le déflecteur vers le bas (installation au plafond), tandis que l'upright a le déflecteur vers le haut (installation au-dessus des conduites).",
+    "difficulty": "EASY"
+  }
+]
