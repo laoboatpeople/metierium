@@ -14,6 +14,8 @@ import {
   Monitor,
   Smartphone,
   Check,
+  Wrench,
+  Shield,
   ArrowRight,
   Globe,
   Menu,
@@ -441,30 +443,46 @@ export default function LandingPage() {
               </div>
             </div>
 
-            {/* Plombier (CMMTQ) - Coming Soon */}
-            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 opacity-60">
-              <div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-4">
-                <span className="text-[#64748B] text-sm font-medium">{t('comingSoon')}</span>
+            {/* CMMTQ Plombier — Full Feature */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#06B6D4]/10 to-[#0E7490]/10 border border-[#06B6D4]/20 hover:border-[#06B6D4]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#06B6D4] to-[#0E7490] flex items-center justify-center mb-4">
+                <Wrench className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-[#94A3B8] mb-2">
-                {t('tradePlombier')}
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#06B6D4] transition-colors">
+                <Link href="/trade/cmmtq">{t('tradePlombier')}</Link>
               </h3>
-              <p className="text-sm text-[#64748B]">
+              <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradePlombierDesc')}
               </p>
+              <div className="flex items-center gap-2 text-xs text-[#06B6D4]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#06B6D4] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
             </div>
 
-            {/* Soudeur (QBQ) - Coming Soon */}
-            <div className="p-6 rounded-2xl bg-white/5 border border-white/10 opacity-60">
-              <div className="w-14 h-14 rounded-xl bg-white/10 flex items-center justify-center mb-4">
-                <span className="text-[#64748B] text-sm font-medium">{t('comingSoon')}</span>
+            {/* QBQ Soudeur — Full Feature */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#8B5CF6]/10 to-[#7C3AED]/10 border border-[#8B5CF6]/20 hover:border-[#8B5CF6]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#7C3AED] flex items-center justify-center mb-4">
+                <Shield className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-[#94A3B8] mb-2">
-                {t('tradeSoudeur')}
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#8B5CF6] transition-colors">
+                <Link href="/trade/qbq">{t('tradeSoudeur')}</Link>
               </h3>
-              <p className="text-sm text-[#64748B]">
+              <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeSoudeurDesc')}
               </p>
+              <div className="flex items-center gap-2 text-xs text-[#8B5CF6]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#8B5CF6] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
             </div>
           </div>
         </div>
