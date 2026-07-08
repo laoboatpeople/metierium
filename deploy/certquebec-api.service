@@ -1,0 +1,16 @@
+[Unit]
+Description=Certification Québec API
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=chuck
+WorkingDirectory=/home/chuck/projects/certificationquebec/server
+ExecStart=/usr/bin/npx tsx src/index.ts
+Restart=always
+RestartSec=10
+Environment=NODE_ENV=production
+Environment=PORT=4006
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,105 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  ADMIN
+  STUDENT
+}
+
+enum Plan {
+  FREE
+  MONTHLY
+  LIFETIME
+}
+
+enum SubStatus {
+  ACTIVE
+  PAST_DUE
+  CANCELLED
+}
+
+enum QType {
+  MCQ
+  TRUEFALSE
+}
+
+enum Difficulty {
+  EASY
+  MEDIUM
+  HARD
+}
+
+model Trade {
+  id          String    @id @default(cuid())
+  code        String    @unique
+  name        String
+  nameFr      String
+  description String?
+  chapters    Chapter[]
+  questions   Question[]
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model Chapter {
+  id            String    @id @default(cuid())
+  tradeId       String
+  trade         Trade     @relation(fields: [tradeId], references: [id])
+  number        Int
+  name          String
+  nameFr        String
+  theoryContent String?
+  questions     Question[]
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
+}
+
+model Question {
+  id          String    @id @default(cuid())
+  tradeId     String
+  trade       Trade     @relation(fields: [tradeId], references: [id])
+  chapterId   String?
+  chapter     Chapter?  @relation(fields: [chapterId], references: [id])
+  type        QType     @default(MCQ)
+  difficulty  Difficulty @default(MEDIUM)
+  question    String
+  options     Json?
+  answer      String
+  explanation String?
+  locale      String    @default("fr")
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+}
+
+model User {
+  id            String       @id @default(cuid())
+  email         String       @unique
+  password      String
+  name          String?
+  role          Role         @default(STUDENT)
+  plan          Plan         @default(FREE)
+  subStatus     SubStatus?   @default(ACTIVE)
+  stripeId      String?
+  subscription  Subscription[]
+  createdAt     DateTime     @default(now())
+  updatedAt     DateTime     @updatedAt
+}
+
+model Subscription {
+  id            String     @id @default(cuid())
+  userId        String
+  user          User       @relation(fields: [userId], references: [id])
+  tradeId       String?
+  plan          Plan       @default(MONTHLY)
+  status        SubStatus  @default(ACTIVE)
+  stripeSubId   String?
+  currentPeriod DateTime?
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+}

@@ -1,0 +1,71 @@
+## 1.1 Services typiques au Québec
+
+Les capacités standard des entrées de service résidentielles au Québec sont :
+- **100 A / 240 V** (24 kVA) : résidence sans chauffage électrique
+- **200 A / 240 V** (48 kVA) : résidence avec chauffage électrique (maison unifamiliale typique)
+- **200 A minimum** (souvent 320 A / 400 A) : grande résidence avec spa, piscine, borne de recharge VE
+
+**Article 8-200(1)** : La capacité nominale de l'entrée de service ne doit pas être inférieure à 100 A pour une habitation unifamiliale.
+
+### 1.2 Conducteurs de service (Tableaux 1 à 4 du CCE)
+
+Le calibre des conducteurs d'entrée dépend directement du service requis :
+
+| Service (A) | Cuivre 75 °C | Aluminium 75 °C | Section minimale |
+|-------------|-------------|-----------------|-----------------|
+| 100 A | #3 AWG (85 A) → #1 AWG (100 A)* | #1 AWG | 42,4 mm² |
+| 125 A | #1 AWG | #2/0 AWG | 53,5 mm² |
+| 150 A | #1/0 AWG | #3/0 AWG | 67,4 mm² |
+| 200 A | #3/0 AWG | #250 kcmil | 85,0 mm² |
+| 400 A | #500 kcmil | #750 kcmil | 253 mm² |
+
+*Note : Le calibre #3 AWG cuivre à 75 °C est de 85 A, insuffisant pour 100 A. On utilise donc #1 AWG pour une entrée de service de 100 A au Québec. Voir le Tableau 2 pour les conducteurs à 75 °C.
+
+**Article 4-004** : Les conducteurs doivent être dimensionnés à la température nominale des terminaisons (75 °C pour la plupart des disjoncteurs et panneaux). Même si le conducteur est évalué à 90 °C, la limitation des terminaisons à 75 °C s'applique.
+
+### 1.3 Hauteur et dégagement du panneau
+
+Exigences du Code et de la RBQ :
+- Hauteur du centre du panneau : **1,5 m à 1,7 m** du sol fini
+- Dégagement minimal devant le panneau : **1 m** (art. 26-500)
+- Dégagement latéral : **750 mm** de chaque côté
+- **Interdiction** d'installer un panneau dans : salle de bain, placard, escalier, garde-robe
+- Le panneau doit être **accessible en tout temps** (pas d'obstruction par des meubles)
+- **Éclairage** : un luminaire doit éclairer le panneau (au moins 100 lux)
+
+## Section 2 — Types de câbles et conducteurs
+
+### 2.1 Câbles résidentiels les plus courants
+
+**NMD90 (cuivre)** — Le type de câble le plus répandu au Québec pour le câblage intérieur :
+- Conducteurs de cuivre isolés au PVC, gaine extérieure en PVC
+- Température maximale : 90 °C (d'où le « 90 » dans le nom)
+- Usage intérieur sec uniquement
+- Couleurs disponibles : blanc (14/2, 12/2), orange (10/2), jaune (12/3), bleu (14/3)
+
+| Calibre | Capacité à 90 °C | Protection max | Usage typique |
+|---------|-----------------|---------------|---------------|
+| 14 AWG (2 conducteurs + terre) | 15 A | 15 A | Éclairage, prises générales |
+| 12 AWG (2c + terre) | 25 A | 20 A | Cuisine, salle de bain, lave-vaisselle |
+| 10 AWG (2c + terre) | 35 A | 30 A | Sécheuse, climatiseur, chauffe-eau |
+| 8 AWG (3c + terre) | 50 A | 40 A | Cuisinière, entrée secondaire |
+| 6 AWG (3c + terre) | 70 A | 60 A | Service secondaire |
+
+**AC90 (armé)** — Câble blindé métallique :
+- Armure d'aluminium en spirale (offre une protection mécanique)
+- Usage intérieur : sous-sols non finis, garages, caves, buanderies
+- Aucun conduit requis (l'armure sert de mise à la terre si elle est correctement connectée)
+- Température max : 90 °C
+- Codes de couleur similaires au NMD90
+
+**TECK90** — Câble blindé étanche :
+- Armure d'aluminium avec gaine PVC extérieure étanche
+- Usage extérieur souterrain (entrée de service), branchement de thermopompe, génératrice
+- Résiste à l'humidité et aux UV
+- Peut être enterré directement (aucun conduit requis)
+
+**RW90 / RWU90** — Conducteurs individuels pour conduit :
+- RW90 : usage intérieur dans un conduit
+- RWU90 : usage intérieur et extérieur (humide), enterré
+- Température max : 90 °C
+- Utilisé pour les entrées de service (conduit EMT ou PVC), les branchements de panneaux
