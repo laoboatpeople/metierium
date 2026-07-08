@@ -1,0 +1,122 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { useParams } from 'next/navigation';
+import Link from 'next/link';
+import Script from 'next/script';
+import { BookOpen, HelpCircle, GraduationCap, ChevronRight, ArrowLeft, Loader2, FileText, Zap, Layers, Shield } from 'lucide-react';
+
+const TRADES: Record<string, { name: string; desc: string; color: string }> = {
+  cmeq: { name: 'CMEQ', desc: 'Électricien — Corporation des maîtres électriciens du Québec', color: '#3B82F6' },
+  cmmtq: { name: 'CMMTQ', desc: 'Plombier — Corporation des maîtres mécaniciens en tuyauterie du Québec', color: '#06B6D4' },
+  qbq: { name: 'QBQ', desc: 'Soudeur — Québec Board of Trades', color: '#8B5CF6' },
+};
+
+export default function TradePillarPage() {
+  const params = useParams();
+  const slug = params?.slug as string;
+  const trade = TRADES[slug];
+  const [faqEntries, setFaqEntries] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (slug) {
+      fetch('/faq-data.json')
+        .then(r => r.json())
+        .then((data: any[]) => setFaqEntries(data.filter(e => e.trade?.toLowerCase() === slug)))
+        .catch(() => {});
+    }
+  }, [slug]);
+
+  if (!trade) {
+    return (
+      <div className="min-h-screen bg-[#0A0E1A] flex items-center justify-center">
+        <p className="text-[#94A3B8]">Métier non trouvé.</p>
+      </div>
+    );
+  }
+
+  const categories = [...new Set(faqEntries.map(e => e.category))];
+  const faqByCat = categories.reduce((acc, cat) => {
+    acc[cat] = faqEntries.filter(e => e.category === cat);
+    return acc;
+  }, {} as Record<string, any[]>);
+
+  return (
+    <div className="min-h-screen bg-[#0A0E1A]">
+      <Script id="pillar-schema" type="application/ld+json" strategy="afterInteractive">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          "name": "${trade.name} — Certification Québec",
+          "description": "Guide complet pour l'examen ${trade.name} au Québec. Théorie, questions d'entraînement, FAQ et conseils.",
+          "about": { "@type": "Course", "name": "Préparation Examen ${trade.name}" }
+        }
+      `}</Script>
+
+      <div className="max-w-4xl mx-auto px-4 py-8">
+        <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
+          <Link href="/" className="hover:text-[#3B82F6]">Accueil</Link>
+          <ChevronRight size={12} />
+          <span className="text-[#94A3B8]">{trade.name}</span>
+        </nav>
+
+        {/* Hero */}
+        <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6 md:p-8 mb-6">
+          <div className="flex items-center gap-3 mb-3">
+            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${trade.color}20` }}>
+              <Zap size={20} style={{ color: trade.color }} />
+            </div>
+            <div>
+              <h1 className="text-2xl font-bold text-[#F8FAFC]">{trade.name}</h1>
+              <p className="text-sm text-[#94A3B8]">{trade.desc}</p>
+            </div>
+          </div>
+          <div className="grid grid-cols-3 gap-3 mt-4">
+            <Link href="/exams" className="bg-[#111827] rounded-lg p-3 text-center hover:border-[#3B82F6]/30 border border-[#2D3A52]">
+              <BookOpen size={18} className="mx-auto mb-1" style={{ color: trade.color }} />
+              <p className="text-xs text-[#F8FAFC] font-medium">Examens</p>
+              <p className="text-[10px] text-[#64748B]">Pratiquez</p>
+            </Link>
+            <Link href="/theory" className="bg-[#111827] rounded-lg p-3 text-center hover:border-[#3B82F6]/30 border border-[#2D3A52]">
+              <FileText size={18} className="mx-auto mb-1" style={{ color: trade.color }} />
+              <p className="text-xs text-[#F8FAFC] font-medium">Théorie</p>
+              <p className="text-[10px] text-[#64748B]">Chapitres complets</p>
+            </Link>
+            <Link href={`/faq?trade=${trade.name}`} className="bg-[#111827] rounded-lg p-3 text-center hover:border-[#3B82F6]/30 border border-[#2D3A52]">
+              <HelpCircle size={18} className="mx-auto mb-1" style={{ color: trade.color }} />
+              <p className="text-xs text-[#F8FAFC] font-medium">FAQ</p>
+              <p className="text-[10px] text-[#64748B]">{faqEntries.length} questions</p>
+            </Link>
+          </div>
+        </div>
+
+        {/* FAQ by category */}
+        {Object.entries(faqByCat).map(([cat, items]) => (
+          <div key={cat} className="mb-6">
+            <h2 className="text-sm font-semibold text-[#94A3B8] uppercase tracking-wider mb-3">{cat}</h2>
+            <div className="space-y-2">
+              {items.map((item: any) => (
+                <Link
+                  key={item.slug}
+                  href={`/faq/${item.slug}`}
+                  className="block bg-[#1A2035] border border-[#2D3A52] rounded-xl p-3 hover:border-[#3B82F6]/30 transition-all"
+                >
+                  <p className="text-sm text-[#F8FAFC]">{item.question}</p>
+                </Link>
+              ))}
+            </div>
+          </div>
+        ))}
+
+        {/* CTA */}
+        <div className="bg-gradient-to-r from-[#3B82F6]/10 to-[#06B6D4]/10 border border-[#3B82F6]/20 rounded-xl p-6 text-center mt-8">
+          <h2 className="text-lg font-semibold text-[#F8FAFC] mb-2">Prêt à réussir votre examen {trade.name} ?</h2>
+          <p className="text-sm text-[#94A3B8] mb-4">Accédez à la théorie complète, aux examens blancs et à votre tuteur IA.</p>
+          <Link href="/exams" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] rounded-lg text-white font-medium">
+            Commencer gratuitement <ArrowLeft size={14} className="rotate-180" />
+          </Link>
+        </div>
+      </div>
+    </div>
+  );
+}

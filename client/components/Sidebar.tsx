@@ -8,6 +8,8 @@ import {
   BookMarked,
   BookOpen,
   BarChart3,
+  HelpCircle,
+  Newspaper,
   MessageSquare,
   CreditCard,
   User,
@@ -17,13 +19,15 @@ import {
 } from 'lucide-react';
 
 const NAV_ITEMS = [
-  { href: '/app', label: 'Tableau de bord', icon: LayoutDashboard },
-  { href: '/theory', label: 'Théorie', icon: BookMarked },
-  { href: '/exams', label: 'Examens', icon: BookOpen },
-  { href: '/stats', label: 'Statistiques', icon: BarChart3 },
-  { href: '/tutor', label: 'Tuteur IA', icon: MessageSquare },
-  { href: '/subscription', label: 'Abonnement', icon: CreditCard },
-  { href: '/profile', label: 'Profil', icon: User },
+{ href: '/app', label: 'Tableau de bord', icon: LayoutDashboard },
+{ href: '/theory', label: 'Théorie', icon: BookMarked },
+{ href: '/exams', label: 'Examens', icon: BookOpen },
+{ href: '/stats', label: 'Statistiques', icon: BarChart3 },
+{ href: '/faq', label: 'FAQ', icon: HelpCircle },
+{ href: '/blog', label: 'Blog', icon: Newspaper },
+{ href: '/tutor', label: 'Tuteur IA', icon: MessageSquare },
+{ href: '/subscription', label: 'Abonnement', icon: CreditCard },
+{ href: '/profile', label: 'Profil', icon: User },
 ];
 
 export function Sidebar({ onClose }: { mobileOpen?: boolean; onClose?: () => void }) {
