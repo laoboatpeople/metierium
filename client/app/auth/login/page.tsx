@@ -103,6 +103,15 @@ export default function LoginPage() {
               </div>
             </div>
 
+            <div className="text-right -mt-2">
+              <Link
+                href="/auth/forgot-password"
+                className="text-xs text-[#64748B] hover:text-[#3B82F6] transition-colors"
+              >
+                Mot de passe oublié ?
+              </Link>
+            </div>
+
             <Captcha onVerify={(token) => setCaptchaToken(token)} onExpire={() => setCaptchaToken(null)} />
 
             <button
