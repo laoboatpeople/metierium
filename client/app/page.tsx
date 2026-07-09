@@ -248,10 +248,12 @@ export default function LandingPage() {
                 <span className="bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent">
                   {t('heroTitle')}
                 </span>
-                <br />
-                <span>
-                  {t('heroTagline')}
-                </span>
+                {t('heroTagline') && (
+                  <>
+                    <br />
+                    <span>{t('heroTagline')}</span>
+                  </>
+                )}
               </h1>
 
               <p className="text-lg md:text-xl text-[#94A3B8] mb-8 max-w-xl mx-auto lg:mx-0">
