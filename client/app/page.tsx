@@ -370,7 +370,7 @@ export default function LandingPage() {
                 <Zap className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#3B82F6] transition-colors">
-                {t('tradeElectricien')}
+                <Link href="/trade/cmeq">{t('tradeElectricien')}</Link>
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeElectricienDesc')}
