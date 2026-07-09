@@ -51,8 +51,8 @@ const fr: Record<string, unknown> = {
 
   // Landing page - Hero
   heroBadge: 'Préparation aux examens de métiers — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP, GAZ, ASCEN, REFRIG, CONSTR, INSPECT, SST',
-  heroTitle: 'Maîtrisez votre métier, réussissez votre certification',
-  heroTagline: '',
+  heroTitle: 'La référence en préparation aux examens de métiers',
+  heroTagline: 'Maîtrisez votre métier, réussissez votre certification',
   heroDesc: "Accédez à du contenu théorique complet, des simulations d'examen et un suivi personnalisé pour maximiser vos chances de réussite à l'examen de certification.",
   heroPillTheory: 'Théorie complète',
   heroPillExams: "Simulations d'examen",
@@ -264,8 +264,8 @@ const en: Record<string, string> = {
 
   // Landing page - Hero
   heroBadge: 'Trade Exam Preparation — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP, GAZ, ASCEN, REFRIG, CONSTR, INSPECT, SST',
-  heroTitle: 'Master your trade, pass your certification',
-  heroTagline: '',
+  heroTitle: 'The gold standard for trade exam preparation',
+  heroTagline: 'Master your trade, pass your certification',
   heroDesc: 'Access complete theoretical content, practice exams, and personalized tracking to maximize your chances of passing the certification exam.',
   heroPillTheory: 'Complete Theory',
   heroPillExams: 'Practice Exams',
