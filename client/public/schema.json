@@ -4,7 +4,7 @@
     {
       "@type": "EducationalOrganization",
       "@id": "https://metierium.com/#organization",
-      "name": "Certification Québec",
+      "name": "Metierium",
       "description": "Préparation aux examens de métiers au Québec — CMEQ, CMMTQ, QBQ",
       "url": "https://metierium.com",
       "logo": "https://metierium.com/favicon.ico",
@@ -16,19 +16,19 @@
       "offers": {
         "@type": "Offer",
         "description": "Préparation aux examens de certification",
-        "offeredBy": { "@type": "Organization", "name": "Certification Québec" }
+        "offeredBy": { "@type": "Organization", "name": "Metierium" }
       },
       "hasCourse": [
-        { "@type": "Course", "name": "Préparation Examen Électricien CMEQ", "description": "Préparation à l'examen de certification des maîtres électriciens du Québec — théorie complète et examens blancs", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-        { "@type": "Course", "name": "Préparation Examen Plombier CMMTQ", "description": "Préparation à l'examen de certification en plomberie — Code de plomberie, tuyauterie et normes", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-        { "@type": "Course", "name": "Préparation Examen Soudeur QBQ", "description": "Préparation à l'examen de certification en soudage — SMAW, GMAW, FCAW et normes CSA", "provider": { "@type": "Organization", "name": "Certification Québec" } }
+        { "@type": "Course", "name": "Préparation Examen Électricien CMEQ", "description": "Préparation à l'examen de certification des maîtres électriciens du Québec — théorie complète et examens blancs", "provider": { "@type": "Organization", "name": "Metierium" } },
+        { "@type": "Course", "name": "Préparation Examen Plombier CMMTQ", "description": "Préparation à l'examen de certification en plomberie — Code de plomberie, tuyauterie et normes", "provider": { "@type": "Organization", "name": "Metierium" } },
+        { "@type": "Course", "name": "Préparation Examen Soudeur QBQ", "description": "Préparation à l'examen de certification en soudage — SMAW, GMAW, FCAW et normes CSA", "provider": { "@type": "Organization", "name": "Metierium" } }
       ]
     },
     {
       "@type": "WebSite",
       "@id": "https://metierium.com/#website",
       "url": "https://metierium.com",
-      "name": "Certification Québec",
+      "name": "Metierium",
       "description": "Préparation aux examens de métiers au Québec",
       "inLanguage": "fr-CA",
       "potentialAction": {
@@ -102,7 +102,7 @@
           "name": "Où puis-je passer l'examen de métier au Québec ?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Les examens de métier au Québec sont administrés par la CCQ (Commission de la construction du Québec), la RBQ (Régie du bâtiment du Québec), le QBQ (Québec Board of Trades) et les corporations respectives (CMEQ pour les électriciens, CMMTQ pour les plombiers). La préparation peut se faire en ligne via des plateformes comme Certification Québec qui offrent théorie complète et examens blancs."
+            "text": "Les examens de métier au Québec sont administrés par la CCQ (Commission de la construction du Québec), la RBQ (Régie du bâtiment du Québec), le QBQ (Québec Board of Trades) et les corporations respectives (CMEQ pour les électriciens, CMMTQ pour les plombiers). La préparation peut se faire en ligne via des plateformes comme Metierium qui offrent théorie complète et examens blancs."
           }
         }
       ]

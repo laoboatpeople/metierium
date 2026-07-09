@@ -360,7 +360,7 @@ export default function TheoryPage() {
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    document.title = `${t('theory')} | Certification Québec`;
+    document.title = `${t('theory')} | Metierium`;
   }, [t]);
 
   async function fetchTheory() {
@@ -433,26 +433,26 @@ export default function TheoryPage() {
         {
           "@context": "https://schema.org",
           "@type": "ItemList",
-          "name": "Théorie — Certification Québec",
+          "name": "Théorie — Metierium",
           "description": "Contenu théorique pour la préparation aux examens de métiers au Québec — CMEQ, CMMTQ, QBQ",
           "itemListElement": [
             {
               "@type": "Article",
               "name": "Préparation Examen CMEQ — Électricien",
               "description": "10 chapitres de théorie sur le Code de construction du Québec, chapitre V — Électricité",
-              "author": { "@type": "Organization", "name": "Certification Québec" }
+              "author": { "@type": "Organization", "name": "Metierium" }
             },
             {
               "@type": "Article",
               "name": "Préparation Examen CMMTQ — Plombier",
               "description": "8 chapitres sur la plomberie, le Code de plomberie et les normes CSA B149",
-              "author": { "@type": "Organization", "name": "Certification Québec" }
+              "author": { "@type": "Organization", "name": "Metierium" }
             },
             {
               "@type": "Article",
               "name": "Préparation Examen QBQ — Soudeur",
               "description": "8 chapitres sur le soudage SMAW, GMAW, FCAW, GTAW et les normes CSA",
-              "author": { "@type": "Organization", "name": "Certification Québec" }
+              "author": { "@type": "Organization", "name": "Metierium" }
             }
           ]
         }

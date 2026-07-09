@@ -191,7 +191,7 @@ router.post('/forgot-password', async (req: Request, res: Response): Promise<voi
           body: JSON.stringify({
             from: 'Metierium <info@metierium.com>',
             to: email,
-            subject: 'Réinitialisation de mot de passe — Certification Québec',
+            subject: 'Réinitialisation de mot de passe — Metierium',
             html: `<div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;background:#0A0E1A;color:#F8FAFC;border-radius:12px">
               <h1 style="color:#3B82F6;font-size:22px">Réinitialisation de mot de passe</h1>
               <p style="color:#94A3B8;line-height:1.5">Vous avez demandé la réinitialisation de votre mot de passe.</p>

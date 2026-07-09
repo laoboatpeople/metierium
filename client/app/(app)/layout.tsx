@@ -122,7 +122,7 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
               <div className="w-8 h-8 rounded-lg bg-blue flex items-center justify-center">
                 <GraduationCap size={16} className="text-white" />
               </div>
-              <span className="text-lg font-bold text-text-primary">Certification Québec</span>
+              <span className="text-lg font-bold text-text-primary">Metierium</span>
             </Link>
             <button
               className="lg:hidden text-text-secondary hover:text-text-primary"

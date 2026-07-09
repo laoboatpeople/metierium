@@ -62,7 +62,7 @@ export default function BlogPostPage() {
           "headline": ${JSON.stringify(post.title)},
           "datePublished": "${post.date}",
           "author": { "@type": "Person", "name": "${post.author}" },
-          "publisher": { "@type": "Organization", "name": "Certification Québec" }
+          "publisher": { "@type": "Organization", "name": "Metierium" }
         }
       `}</Script>
 

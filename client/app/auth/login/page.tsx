@@ -49,7 +49,7 @@ export default function LoginPage() {
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center">
               <GraduationCap className="w-6 h-6 text-white" />
             </div>
-            <span className="text-xl font-bold text-[#F8FAFC]">Certification Québec</span>
+            <span className="text-xl font-bold text-[#F8FAFC]">Metierium</span>
           </Link>
         </div>
 

@@ -50,7 +50,7 @@ const fr: Record<string, unknown> = {
 
   // Landing page - Hero
   heroBadge: 'Préparation aux examens de métiers — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP, GAZ, ASCEN, REFRIG, CONSTR, INSPECT, SST',
-  heroTitle: 'Certification Québec',
+  heroTitle: 'Metierium',
   heroTagline: 'Réussissez votre examen CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP, GAZ, ASCEN, REFRIG, CONSTR, INSPECT ou SST',
   heroDesc: "Accédez à du contenu théorique complet, des simulations d'examen et un suivi personnalisé pour maximiser vos chances de réussite à l'examen de certification.",
   heroPillTheory: 'Théorie complète',
@@ -139,12 +139,12 @@ const fr: Record<string, unknown> = {
 
   // Landing page - CTA
   ctaTitle: 'Prêt à réussir votre examen ?',
-  ctaDesc: 'Rejoignez les travailleurs qui utilisent Certification Québec pour se préparer efficacement.',
+  ctaDesc: 'Rejoignez les travailleurs qui utilisent Metierium pour se préparer efficacement.',
   ctaButton: 'Commencer gratuitement',
 
   // Landing page - Footer
-  footerBrand: 'Certification Québec',
-  footerRights: '© {year} Certification Québec. Préparation aux examens de métiers.',
+  footerBrand: 'Metierium',
+  footerRights: '© {year} Metierium. Préparation aux examens de métiers.',
   footerLinkFeatures: 'Fonctionnalités',
   footerLinkTrades: 'Métiers',
   footerLinkPricing: 'Tarifs',
@@ -260,7 +260,7 @@ const en: Record<string, string> = {
 
   // Landing page - Hero
   heroBadge: 'Trade Exam Preparation — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP, GAZ, ASCEN, REFRIG, CONSTR, INSPECT, SST',
-  heroTitle: 'Certification Québec',
+  heroTitle: 'Metierium',
   heroTagline: 'Pass your CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP, GAZ, ASCEN, REFRIG, CONSTR, INSPECT or SST exam',
   heroDesc: 'Access complete theoretical content, practice exams, and personalized tracking to maximize your chances of passing the certification exam.',
   heroPillTheory: 'Complete Theory',
@@ -349,12 +349,12 @@ const en: Record<string, string> = {
 
   // Landing page - CTA
   ctaTitle: 'Ready to pass your exam?',
-  ctaDesc: 'Join the workers using Certification Québec to prepare effectively.',
+  ctaDesc: 'Join the workers using Metierium to prepare effectively.',
   ctaButton: 'Start for free',
 
   // Landing page - Footer
-  footerBrand: 'Certification Québec',
-  footerRights: '© {year} Certification Québec. Trade exam preparation.',
+  footerBrand: 'Metierium',
+  footerRights: '© {year} Metierium. Trade exam preparation.',
   footerLinkFeatures: 'Features',
   footerLinkTrades: 'Trades',
   footerLinkPricing: 'Pricing',

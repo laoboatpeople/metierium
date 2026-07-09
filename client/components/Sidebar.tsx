@@ -59,7 +59,7 @@ export function Sidebar({ onClose }: { mobileOpen?: boolean; onClose?: () => voi
             <GraduationCap className="w-4 h-4 text-white" />
           </div>
           <div>
-            <p className="text-sm font-semibold text-text-primary leading-none">Certification Québec</p>
+            <p className="text-sm font-semibold text-text-primary leading-none">Metierium</p>
             <p className="text-[10px] text-text-tertiary mt-0.5">Préparation aux examens</p>
           </div>
         </div>

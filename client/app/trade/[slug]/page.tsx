@@ -49,7 +49,7 @@ export default function TradePillarPage() {
         {
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "${trade.name} — Certification Québec",
+          "name": "${trade.name} — Metierium",
           "description": "Guide complet pour l'examen ${trade.name} au Québec. Théorie, questions d'entraînement, FAQ et conseils.",
           "about": { "@type": "Course", "name": "Préparation Examen ${trade.name}" }
         }

@@ -40,10 +40,10 @@ export default function LandingPage() {
           "@graph": [
             {
               "@type": "EducationalOrganization",
-              "@id": "https://certificationquebec.com/#organization",
-              "name": "Certification Québec",
+              "@id": "https://metierium.com/#organization",
+              "name": "Metierium",
               "description": "Préparation aux examens de métiers au Québec — CMEQ, CMMTQ, QBQ",
-              "url": "https://certificationquebec.com",
+              "url": "https://metierium.com",
               "address": {
                 "@type": "PostalAddress",
                 "addressRegion": "Québec",
@@ -52,42 +52,42 @@ export default function LandingPage() {
               "offers": {
                 "@type": "Offer",
                 "description": "Préparation aux examens de certification",
-                "offeredBy": { "@type": "Organization", "name": "Certification Québec" }
+                "offeredBy": { "@type": "Organization", "name": "Metierium" }
               },
               "hasCourse": [
-                { "@type": "Course", "name": "Préparation Examen Électricien CMEQ", "description": "Préparation à l'examen de certification des maîtres électriciens du Québec — théorie complète et examens blancs", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Plombier CMMTQ", "description": "Préparation à l'examen de certification en plomberie — Code de plomberie, tuyauterie et normes", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Soudeur QBQ", "description": "Préparation à l'examen de certification en soudage — SMAW, GMAW, FCAW et normes CSA", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen HVAC CMMTQ", "description": "Préparation à l'examen de certification en chauffage-climatisation — thermodynamique, CVC et réfrigération", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Mécanicien Véhicules Lourds CCQ", "description": "Préparation à l'examen de certification en mécanique de véhicules lourds — moteurs diesel, transmissions et hydraulique", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Technicien Sécurité Incendie RBQ", "description": "Préparation à l'examen de certification RBQ en sécurité incendie — alarmes, gicleurs, détection et signalisation", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Ferblantier Tôlier CCQ", "description": "Préparation à l'examen de certification CCQ en ferblanterie et tôlerie — ventilation, toiture, métaux en feuilles", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Briqueteur Maçon CCQ", "description": "Préparation à l'examen de certification CCQ en maçonnerie — brique, bloc, pierre, mortier", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Opérateur Équipement Lourd CCQ", "description": "Préparation à l'examen de certification CCQ en opération d'équipement lourd — pelles, bulldozers, niveleuses", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Technicien Gaz RBQ", "description": "Préparation à l'examen de certification RBQ en technique de gaz — CSA B149.1, B149.2, installation et sécurité", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Mécanicien Ascenseurs RBQ", "description": "Préparation à l'examen de certification RBQ en mécanique d'ascenseurs — CSA B44, installation et sécurité", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Opérateur Réfrigération RBQ", "description": "Préparation à l'examen de certification RBQ en opération de réfrigération — gaz frigorigènes, compresseurs, sécurité", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Constructeur Rénovateur RBQ", "description": "Préparation à l'examen de licence RBQ pour constructeur-rénovateur — gestion, code, contrats et sécurité", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Inspecteur Bâtiment RBQ", "description": "Préparation à l'examen de certification RBQ en inspection de bâtiments — code, structures, enveloppe et sécurité", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Coordonnateur SST ASP Construction", "description": "Préparation à l'examen de certification ASP Construction en coordination SST — prévention, IRSST, gestion de chantier", "provider": { "@type": "Organization", "name": "Certification Québec" } }
+                { "@type": "Course", "name": "Préparation Examen Électricien CMEQ", "description": "Préparation à l'examen de certification des maîtres électriciens du Québec — théorie complète et examens blancs", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Plombier CMMTQ", "description": "Préparation à l'examen de certification en plomberie — Code de plomberie, tuyauterie et normes", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Soudeur QBQ", "description": "Préparation à l'examen de certification en soudage — SMAW, GMAW, FCAW et normes CSA", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen HVAC CMMTQ", "description": "Préparation à l'examen de certification en chauffage-climatisation — thermodynamique, CVC et réfrigération", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Mécanicien Véhicules Lourds CCQ", "description": "Préparation à l'examen de certification en mécanique de véhicules lourds — moteurs diesel, transmissions et hydraulique", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Technicien Sécurité Incendie RBQ", "description": "Préparation à l'examen de certification RBQ en sécurité incendie — alarmes, gicleurs, détection et signalisation", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Ferblantier Tôlier CCQ", "description": "Préparation à l'examen de certification CCQ en ferblanterie et tôlerie — ventilation, toiture, métaux en feuilles", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Briqueteur Maçon CCQ", "description": "Préparation à l'examen de certification CCQ en maçonnerie — brique, bloc, pierre, mortier", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Opérateur Équipement Lourd CCQ", "description": "Préparation à l'examen de certification CCQ en opération d'équipement lourd — pelles, bulldozers, niveleuses", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Technicien Gaz RBQ", "description": "Préparation à l'examen de certification RBQ en technique de gaz — CSA B149.1, B149.2, installation et sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Mécanicien Ascenseurs RBQ", "description": "Préparation à l'examen de certification RBQ en mécanique d'ascenseurs — CSA B44, installation et sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Opérateur Réfrigération RBQ", "description": "Préparation à l'examen de certification RBQ en opération de réfrigération — gaz frigorigènes, compresseurs, sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Constructeur Rénovateur RBQ", "description": "Préparation à l'examen de licence RBQ pour constructeur-rénovateur — gestion, code, contrats et sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Inspecteur Bâtiment RBQ", "description": "Préparation à l'examen de certification RBQ en inspection de bâtiments — code, structures, enveloppe et sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Coordonnateur SST ASP Construction", "description": "Préparation à l'examen de certification ASP Construction en coordination SST — prévention, IRSST, gestion de chantier", "provider": { "@type": "Organization", "name": "Metierium" } }
               ]
             },
             {
               "@type": "WebSite",
-              "@id": "https://certificationquebec.com/#website",
-              "url": "https://certificationquebec.com",
-              "name": "Certification Québec",
+              "@id": "https://metierium.com/#website",
+              "url": "https://metierium.com",
+              "name": "Metierium",
               "description": "Préparation aux examens de métiers au Québec",
               "inLanguage": "fr-CA",
               "potentialAction": {
                 "@type": "SearchAction",
-                "target": "https://certificationquebec.com/search?q={search_term_string}",
+                "target": "https://metierium.com/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"
               }
             },
             {
               "@type": "FAQPage",
-              "@id": "https://certificationquebec.com/#faq",
+              "@id": "https://metierium.com/#faq",
               "mainEntity": [
                 {
                   "@type": "Question",
@@ -150,7 +150,7 @@ export default function LandingPage() {
                   "name": "Où puis-je passer l'examen de métier au Québec ?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Les examens de métier au Québec sont administrés par la CCQ (Commission de la construction du Québec), la RBQ (Régie du bâtiment du Québec), le QBQ (Québec Board of Trades) et les corporations respectives (CMEQ pour les électriciens, CMMTQ pour les plombiers). La préparation peut se faire en ligne via des plateformes comme Certification Québec qui offrent théorie complète et examens blancs."
+                    "text": "Les examens de métier au Québec sont administrés par la CCQ (Commission de la construction du Québec), la RBQ (Régie du bâtiment du Québec), le QBQ (Québec Board of Trades) et les corporations respectives (CMEQ pour les électriciens, CMMTQ pour les plombiers). La préparation peut se faire en ligne via des plateformes comme Metierium qui offrent théorie complète et examens blancs."
                   }
                 }
               ]
