@@ -210,6 +210,18 @@ const fr: Record<string, unknown> = {
   adminNoChapters: 'Aucun chapitre trouvé',
   adminNoQuestions: 'Aucune question trouvée',
   adminNoUsers: 'Aucun utilisateur trouvé',
+
+  // FAQ
+  faqTitle: 'Questions fréquentes',
+  faqSubtitle: '{count} réponses sur les examens de métier au Québec',
+  faqSearchPlaceholder: 'Rechercher une question...',
+  faqAllTrades: 'Tous les métiers',
+  faqNoResults: 'Aucun résultat pour votre recherche.',
+  faqNotFound: 'Question introuvable',
+  faqNotFoundDesc: 'Cette page FAQ n\'existe pas.',
+  faqViewAll: 'Voir toutes les FAQ',
+  faqHome: 'Accueil',
+  faqLabel: 'FAQ',
 };
 
 const en: Record<string, string> = {
@@ -423,6 +435,18 @@ const en: Record<string, string> = {
   adminNoChapters: 'No chapters found',
   adminNoQuestions: 'No questions found',
   adminNoUsers: 'No users found',
+
+  // FAQ
+  faqTitle: 'Frequently Asked Questions',
+  faqSubtitle: '{count} answers about trade exams in Quebec',
+  faqSearchPlaceholder: 'Search for a question...',
+  faqAllTrades: 'All trades',
+  faqNoResults: 'No results found for your search.',
+  faqNotFound: 'Question not found',
+  faqNotFoundDesc: 'This FAQ page does not exist.',
+  faqViewAll: 'View all FAQs',
+  faqHome: 'Home',
+  faqLabel: 'FAQ',
 };
 
 export type Locale = 'en' | 'fr';

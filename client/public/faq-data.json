@@ -1,5 +1,178 @@
 [
   {
+    "slug": "metierium-cest-quoi",
+    "question": "Qu'est-ce que Metierium ?",
+    "answer": "<p><strong>Metierium</strong> est une plateforme de préparation aux examens de certification des métiers réglementés au Québec. Nous couvrons <strong>16 métiers</strong> incluant CMEQ (électriciens), CMMTQ (plombiers), QBQ (soudeurs), RBQ (entrepreneurs généraux, gaz, ascenseurs, etc.), CCQ (ferblantiers, briqueteurs, opérateurs d'équipement lourd) et ASP Construction (SST).</p><p>Notre mission est de vous aider à réussir votre examen de certification avec du contenu théorique complet, des simulations d'examen et un suivi personnalisé.</p>",
+    "category": "Metierium",
+    "trade": "Général",
+    "keywords": [
+      "metierium",
+      "plateforme",
+      "préparation examens",
+      "métiers Québec",
+      "certification"
+    ]
+  },
+  {
+    "slug": "metierium-comment-ca-marche",
+    "question": "Comment fonctionne Metierium ?",
+    "answer": "<p>Metierium fonctionne en <strong>3 étapes simples</strong> :</p><ol><li><strong>Choisissez votre métier</strong> — Sélectionnez votre domaine parmi les 16 métiers disponibles (électricien, plombier, entrepreneur général, etc.)</li><li><strong>Étudiez la théorie</strong> — Consultez le contenu théorique complet pour chaque chapitre de votre examen</li><li><strong>Pratiquez avec des examens blancs</strong> — Testez vos connaissances avec des simulations d'examen chronométrées et obtenez des explications détaillées</li></ol><p>Vous pouvez suivre votre progression, identifier vos points faibles et vous améliorer à chaque tentative.</p>",
+    "category": "Metierium",
+    "trade": "Général",
+    "keywords": [
+      "comment ça marche",
+      "fonctionnement",
+      "inscription",
+      "étapes"
+    ]
+  },
+  {
+    "slug": "metierium-prix-abonnement",
+    "question": "Combien coûte Metierium ? Quels sont les abonnements disponibles ?",
+    "answer": "<p>Metierium propose <strong>3 formules</strong> :</p><ul><li><strong>Gratuit</strong> — Accès au premier chapitre de chaque métier pour découvrir la plateforme</li><li><strong>Mensuel</strong> — Accès complet à tout le contenu, paiement mensuel, annulable en tout temps</li><li><strong>À vie</strong> — Accès complet sans limite de temps, paiement unique</li></ul><p>Chaque formule inclut l'accès au contenu théorique, aux questions d'examen et au Tuteur IA. Voir la page <a href=\"/\">d'accueil</a> pour les prix actuels.</p>",
+    "category": "Metierium",
+    "trade": "Général",
+    "keywords": [
+      "prix",
+      "abonnement",
+      "tarif",
+      "combien ça coûte",
+      "gratuit",
+      "mensuel",
+      "à vie"
+    ]
+  },
+  {
+    "slug": "metierium-difference-gratuit-payant",
+    "question": "Quelle est la différence entre le plan gratuit et les plans payants ?",
+    "answer": "<p>Avec le <strong>plan gratuit</strong>, vous avez accès au premier chapitre de théorie et aux questions correspondantes pour chaque métier. C'est suffisant pour évaluer la plateforme.</p><p>Les <strong>plans payants</strong> (Mensuel ou À vie) débloquent :</p><ul><li>Tous les chapitres de théorie pour tous les métiers</li><li>Toutes les questions d'examen (des centaines par métier)</li><li>Le Tuteur IA pour vous aider à comprendre les concepts</li><li>Le suivi de progression détaillé</li><li>Les statistiques de performance</li></ul>",
+    "category": "Metierium",
+    "trade": "Général",
+    "keywords": [
+      "gratuit",
+      "payant",
+      "différence",
+      "plan",
+      "abonnement gratuit"
+    ]
+  },
+  {
+    "slug": "metierium-combien-questions",
+    "question": "Combien de questions d'examen sont disponibles sur Metierium ?",
+    "answer": "<p>Metierium propose actuellement <strong>plus de 8 000 questions</strong> à choix multiples réparties sur les 16 métiers. Chaque question est accompagnée d'une explication détaillée pour vous aider à comprendre la réponse.</p><p>Les questions sont classées par chapitre et par niveau de difficulté (Facile, Moyen, Difficile) pour un apprentissage progressif. De nouvelles questions sont ajoutées régulièrement.</p>",
+    "category": "Metierium",
+    "trade": "Général",
+    "keywords": [
+      "nombre de questions",
+      "combien de questions",
+      "base de questions",
+      "banque de questions"
+    ]
+  },
+  {
+    "slug": "metierium-tuteur-ia",
+    "question": "Comment fonctionne le Tuteur IA sur Metierium ?",
+    "answer": "<p>Le <strong>Tuteur IA</strong> est un assistant virtuel alimenté par l'intelligence artificielle qui peut :</p><ul><li>Répondre à vos questions théoriques sur les métiers</li><li>Vous expliquer des concepts difficiles en détail</li><li>Vous donner des exemples concrets adaptés au contexte québécois</li><li>Vous aider à comprendre pourquoi une réponse est correcte ou incorrecte</li></ul><p>Disponible sur tous les plans payants. Posez vos questions en langage naturel, comme vous le feriez avec un professeur.</p>",
+    "category": "Metierium",
+    "trade": "Général",
+    "keywords": [
+      "tuteur IA",
+      "intelligence artificielle",
+      "assistant",
+      "aide aux études",
+      "chat"
+    ]
+  },
+  {
+    "slug": "metierium-quiz-examen",
+    "question": "Comment se déroule une simulation d'examen sur Metierium ?",
+    "answer": "<p>Les simulations d'examen sur Metierium reproduisent les conditions réelles :</p><ul><li><strong>Chronomètre</strong> — Un temps limite similaire à l'examen officiel</li><li><strong>Questions à choix multiples</strong> — Format identique aux examens de certification</li><li><strong>Correction immédiate</strong> — Voyez votre score et les réponses détaillées à la fin</li><li><strong>Révision des réponses</strong> — Consultez les explications pour chaque question</li></ul><p>Vous pouvez choisir de pratiquer par chapitre, par difficulté, ou de faire un examen complet mélangeant toutes les sections.</p>",
+    "category": "Metierium",
+    "trade": "Général",
+    "keywords": [
+      "simulation",
+      "examen blanc",
+      "quiz",
+      "pratique",
+      "chronomètre",
+      "test"
+    ]
+  },
+  {
+    "slug": "metierium-acces-contenu",
+    "question": "Le contenu est-il accessible sur mobile et tablette ?",
+    "answer": "<p>Oui ! <strong>Metierium est entièrement responsive</strong> et fonctionne sur tous vos appareils :</p><ul><li><strong>Ordinateur</strong> — Navigation complète avec le menu latéral</li><li><strong>Tablette</strong> — Interface adaptée aux écrans moyens</li><li><strong>Téléphone mobile</strong> — Version mobile avec menu burger et contenu optimisé</li></ul><p>Connectez-vous simplement depuis votre navigateur, aucune application à télécharger. Votre progression est sauvegardée automatiquement et synchronisée entre tous vos appareils.</p>",
+    "category": "Metierium",
+    "trade": "Général",
+    "keywords": [
+      "mobile",
+      "tablette",
+      "application",
+      "responsive",
+      "téléphone"
+    ]
+  },
+  {
+    "slug": "metierium-comment-commencer",
+    "question": "Comment commencer à utiliser Metierium ?",
+    "answer": "<p>Pour commencer avec Metierium :</p><ol><li>Créez un compte gratuit sur <a href=\"/auth/register\">la page d'inscription</a></li><li>Explorez les 16 métiers disponibles</li><li>Choisissez un métier et commencez par le premier chapitre gratuit</li><li>Si vous souhaitez accéder à tout le contenu, choisissez un abonnement Mensuel ou À vie</li></ol><p>L'inscription ne prend qu'une minute et vous donne accès immédiat au contenu d'essai.</p>",
+    "category": "Metierium",
+    "trade": "Général",
+    "keywords": [
+      "commencer",
+      "débuter",
+      "inscription",
+      "premiers pas",
+      "guide"
+    ]
+  },
+  {
+    "slug": "metierium-types-metiers",
+    "question": "Quels sont les 16 métiers couverts par Metierium ?",
+    "answer": "<p>Metierium couvre les <strong>16 métiers</strong> suivants :</p><ol><li><strong>CMEQ</strong> — Électricien (Maître électricien)</li><li><strong>CMMTQ</strong> — Plombier (Maître plombier)</li><li><strong>QBQ</strong> — Soudeur (Québec Bureau de Qualification)</li><li><strong>HVAC</strong> — Chauffage-Climatisation (CMMTQ)</li><li><strong>MVL</strong> — Mécanicien Véhicules Lourds (CCQ)</li><li><strong>INCENDIE</strong> — Sécurité Incendie (RBQ)</li><li><strong>FERBLAN</strong> — Ferblantier-Tôlier (CCQ)</li><li><strong>BRIQUE</strong> — Briqueteur-Maçon (CCQ)</li><li><strong>OPEQUIP</strong> — Opérateur Équipement Lourd (CCQ)</li><li><strong>GAZ</strong> — Technicien Gaz (RBQ)</li><li><strong>ASCEN</strong> — Mécanicien Ascenseurs (RBQ)</li><li><strong>REFRIG</strong> — Réfrigération (RBQ)</li><li><strong>CONSTR</strong> — Constructeur-Rénovateur (RBQ)</li><li><strong>ENTGEN</strong> — Entrepreneur Général (RBQ)</li><li><strong>INSPECT</strong> — Inspecteur Bâtiment (RBQ)</li><li><strong>SST</strong> — Coordonnateur SST (ASP Construction)</li></ol>",
+    "category": "Metierium",
+    "trade": "Général",
+    "keywords": [
+      "métiers",
+      "liste métiers",
+      "CMEQ",
+      "CMMTQ",
+      "QBQ",
+      "RBQ",
+      "CCQ",
+      "SST"
+    ]
+  },
+  {
+    "slug": "metierium-annulation-remboursement",
+    "question": "Comment annuler mon abonnement ? Y a-t-il un remboursement ?",
+    "answer": "<p>Pour annuler votre abonnement mensuel : rendez-vous dans votre <strong>Profil</strong> → section <strong>Abonnement</strong> → cliquez sur <strong>Annuler l'abonnement</strong>. L'annulation prend effet à la fin de la période de facturation en cours, vous conservez l'accès jusqu'à cette date.</p><p>Pour le plan <strong>À vie</strong>, il s'agit d'un paiement unique. Aucun remboursement n'est possible après l'achat, mais vous conservez l'accès à vie comme convenu.</p><p>Si vous avez un problème, contactez-nous via la section Contact du site.</p>",
+    "category": "Metierium",
+    "trade": "Général",
+    "keywords": [
+      "annulation",
+      "remboursement",
+      "résilier",
+      "cancel",
+      "rembourser"
+    ]
+  },
+  {
+    "slug": "metierium-langue-francais-anglais",
+    "question": "Le contenu de Metierium est-il disponible en anglais ?",
+    "answer": "<p>Oui ! Metierium est une plateforme <strong>bilingue français/anglais</strong>. Vous pouvez basculer entre les deux langues à tout moment en cliquant sur le bouton FR/EN dans la barre de navigation ou dans le menu latéral de l'application.</p><p>Le contenu théorique, les questions d'examen, les explications et l'interface utilisateur sont tous disponibles dans les deux langues.</p>",
+    "category": "Metierium",
+    "trade": "Général",
+    "keywords": [
+      "anglais",
+      "français",
+      "langue",
+      "bilingue",
+      "language",
+      "english"
+    ]
+  },
+  {
     "slug": "cmeq-combien-questions-examen",
     "question": "Combien de questions à l'examen CMEQ ?",
     "answer": "<p>L'examen de certification CMEQ pour les électriciens du Québec comporte <strong>90 questions à choix multiples</strong>. Vous disposez de <strong>4 heures (240 minutes)</strong> pour compléter l'examen. La note de passage est fixée à <strong>60 %</strong>, ce qui signifie que vous devez obtenir au moins <strong>54 bonnes réponses</strong> sur 90.</p><p>L'examen couvre plusieurs sections du <strong>Code de construction du Québec, Chapitre V — Électricité</strong> (basé sur le Code canadien de l'électricité 2024). Les questions portent sur les méthodes de câblage, les calculs de charge, la protection des circuits, les moteurs, et les installations spéciales.</p><p>Les examens se déroulent dans les centres de service de la <strong>CMEQ</strong> à Montréal, Québec, et dans certaines régions. Vous pouvez vous inscrire en ligne via le portail CMEQ.</p>",

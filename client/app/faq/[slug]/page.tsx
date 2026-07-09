@@ -6,6 +6,7 @@ import Link from 'next/link';
 import Script from 'next/script';
 import { GraduationCap, ChevronRight, Search, HelpCircle, ArrowLeft, Loader2 } from 'lucide-react';
 import Nav from '@/components/Nav';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 interface FaqEntry {
   slug: string;
@@ -21,6 +22,7 @@ const FAQ_DATA: Record<string, FaqEntry> = {};
 
 // Dynamic import via fetch at runtime
 export default function FaqPage() {
+  const { t } = useLocale();
   const params = useParams();
   const slug = params?.slug as string;
   const [entry, setEntry] = useState<FaqEntry | null>(null);
@@ -52,9 +54,9 @@ export default function FaqPage() {
       <div className="min-h-screen bg-[#0A0E1A] flex items-center justify-center px-4">
         <div className="text-center max-w-md">
           <HelpCircle size={48} className="mx-auto text-[#64748B] mb-3" />
-          <h1 className="text-xl font-bold text-[#F8FAFC] mb-1">Question introuvable</h1>
-          <p className="text-sm text-[#94A3B8] mb-4">Cette page FAQ n'existe pas.</p>
-          <Link href="/faq" className="text-sm text-[#3B82F6] hover:underline">Voir toutes les FAQ</Link>
+          <h1 className="text-xl font-bold text-[#F8FAFC] mb-1">{t('faqNotFound')}</h1>
+          <p className="text-sm text-[#94A3B8] mb-4">{t('faqNotFoundDesc')}</p>
+          <Link href="/faq" className="text-sm text-[#3B82F6] hover:underline">{t('faqViewAll')}</Link>
         </div>
       </div>
     );
@@ -86,9 +88,9 @@ export default function FaqPage() {
       <div className="max-w-4xl mx-auto px-4 py-8">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
-          <Link href="/" className="hover:text-[#3B82F6]">Accueil</Link>
+          <Link href="/" className="hover:text-[#3B82F6]">{t('faqHome')}</Link>
           <ChevronRight size={12} />
-          <Link href="/faq" className="hover:text-[#3B82F6]">FAQ</Link>
+          <Link href="/faq" className="hover:text-[#3B82F6]">{t('faqLabel')}</Link>
           <ChevronRight size={12} />
           <span className="text-[#94A3B8] truncate max-w-[200px]">{entry.question}</span>
         </nav>
