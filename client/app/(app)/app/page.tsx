@@ -42,7 +42,7 @@ export default function Dashboard() {
       try {
         const token = localStorage.getItem('token');
         const res = await fetch(`${API_BASE}/api/trades`, {
-          headers: { Authorization: `Bearer ${token}` },
+                  headers: { Authorization: `Bearer ${token}` },
         });
         if (res.ok) {
           const data = await res.json();
