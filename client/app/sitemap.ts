@@ -3,7 +3,7 @@ import { readFileSync, existsSync } from 'fs';
 import { join } from 'path';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://certificationquebec.com';
+  const baseUrl = 'https://metierium.com';
 
   const entries: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },

@@ -19,6 +19,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/app/', '/admin/', '/api/'],
       },
     ],
-    sitemap: 'https://certificationquebec.com/sitemap.xml',
+    sitemap: 'https://metierium.com/sitemap.xml',
   };
 }

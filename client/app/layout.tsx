@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   robots: { index: true, follow: true },
   alternates: {
-    canonical: 'https://certificationquebec.com',
+    canonical: 'https://metierium.com',
   },
   other: {
     'application/ld+json': JSON.stringify({
@@ -36,10 +36,10 @@ export const metadata: Metadata = {
       '@type': 'BreadcrumbList',
       name: 'Certification Québec',
       itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://certificationquebec.com' },
-        { '@type': 'ListItem', position: 2, name: 'Théorie', item: 'https://certificationquebec.com/theory' },
-        { '@type': 'ListItem', position: 3, name: 'Examens', item: 'https://certificationquebec.com/exams' },
-        { '@type': 'ListItem', position: 4, name: 'Abonnement', item: 'https://certificationquebec.com/pricing' },
+        { '@type': 'ListItem', position: 1, name: 'Accueil', item: 'https://metierium.com' },
+        { '@type': 'ListItem', position: 2, name: 'Théorie', item: 'https://metierium.com/theory' },
+        { '@type': 'ListItem', position: 3, name: 'Examens', item: 'https://metierium.com/exams' },
+        { '@type': 'ListItem', position: 4, name: 'Abonnement', item: 'https://metierium.com/pricing' },
       ],
     }),
   },
