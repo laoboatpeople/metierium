@@ -47,6 +47,14 @@ const config: Config = {
     },
   },
   plugins: [],
+  safelist: [
+    'bg-green', 'bg-green/10', 'bg-green/20', 'bg-green/30', 'bg-green/40',
+    'bg-red', 'bg-red/10', 'bg-red/20', 'bg-red/30', 'bg-red/40',
+    'border-green', 'border-green/40', 'border-green/60', 'border-green/70',
+    'border-red', 'border-red/40', 'border-red/60', 'border-red/70',
+    'text-green', 'text-red',
+    'ring-green/40', 'ring-red/40',
+  ],
 };
 
 export default config;

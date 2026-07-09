@@ -177,9 +177,9 @@ export default function PracticeQuestionWidget() {
               if (!answered) {
                 optionStyle = 'border border-white/10 bg-white/[0.03] hover:border-[#3B82F6]/30 hover:bg-white/[0.06] cursor-pointer';
               } else if (idx === question.correctIndex) {
-                optionStyle = 'border border-green-500/50 bg-green-500/10';
+                optionStyle = 'border-2 border-green bg-green/30';
               } else if (idx === selectedIndex && !isCorrect) {
-                optionStyle = 'border border-red-500/50 bg-red-500/10';
+                optionStyle = 'border-2 border-red bg-red/30';
               } else {
                 optionStyle = 'border border-white/5 bg-white/[0.02] opacity-50';
               }
@@ -192,25 +192,36 @@ export default function PracticeQuestionWidget() {
                   className={`w-full text-left p-3 md:p-4 rounded-xl transition-all duration-200 ${optionStyle}`}
                 >
                   <div className="flex items-start gap-3">
-                    <span
-                      className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-xs font-bold flex-shrink-0 mt-0.5 ${
+                    <span className={`inline-flex items-center justify-center w-7 h-7 rounded-full text-xs font-bold flex-shrink-0 mt-0.5 ${
                         answered && idx === question.correctIndex
-                          ? 'bg-green-500 text-white'
+                          ? 'bg-green text-white ring-2 ring-green/40'
                           : answered && idx === selectedIndex && !isCorrect
-                          ? 'bg-red-500 text-white'
+                          ? 'bg-red text-white ring-2 ring-red/40'
                           : 'bg-white/10 text-[#94A3B8]'
                       }`}
                     >
                       {String.fromCharCode(65 + idx)}
                     </span>
-                    <span className="text-sm md:text-sm text-[#94A3B8] leading-relaxed">
+                    <span className={`text-sm md:text-sm leading-relaxed ${
+                        answered && idx === question.correctIndex
+                          ? 'text-green font-semibold'
+                          : answered && idx === selectedIndex && !isCorrect
+                          ? 'text-red font-semibold'
+                          : 'text-[#94A3B8]'
+                      }`}>
                       {opt}
                     </span>
                     {answered && idx === question.correctIndex && (
-                      <span className="text-green-500 text-sm flex-shrink-0 ml-auto font-bold">✓</span>
+                      <span className="flex items-center gap-1 ml-auto shrink-0">
+                        <span className="text-[10px] uppercase tracking-wider font-bold text-green">{isFr ? 'Bonne réponse' : 'Correct answer'}</span>
+                        <svg className="w-4 h-4 text-green" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M5 13l4 4L19 7" /></svg>
+                      </span>
                     )}
                     {answered && idx === selectedIndex && !isCorrect && (
-                      <span className="text-red-500 text-sm flex-shrink-0 ml-auto font-bold">✗</span>
+                      <span className="flex items-center gap-1 ml-auto shrink-0">
+                        <span className="text-[10px] uppercase tracking-wider font-bold text-red">{isFr ? 'Votre réponse' : 'Your answer'}</span>
+                        <svg className="w-4 h-4 text-red" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" /></svg>
+                      </span>
                     )}
                   </div>
                 </button>
@@ -229,11 +240,11 @@ export default function PracticeQuestionWidget() {
               <div
                 className={`p-4 rounded-xl mb-4 ${
                   isCorrect
-                    ? 'bg-green-500/10 border border-green-500/30'
-                    : 'bg-red-500/10 border border-red-500/30'
+                    ? 'bg-green/20 border-2 border-green/60'
+                    : 'bg-red/20 border-2 border-red/60'
                 }`}
               >
-                <p className={`font-semibold text-sm mb-1 ${isCorrect ? 'text-green-500' : 'text-red-500'}`}>
+                <p className={`font-semibold text-sm mb-1 ${isCorrect ? 'text-green' : 'text-red'}`}>
                   {isCorrect
                     ? (isFr ? '✅ Correct !' : '✅ Correct!')
                     : (isFr ? '❌ Pas tout à fait.' : '❌ Not quite.')}
