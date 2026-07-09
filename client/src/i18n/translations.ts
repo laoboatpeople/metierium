@@ -101,6 +101,8 @@ const fr: Record<string, unknown> = {
   tradeBriqueteurDesc: 'Préparation à l\'examen de certification CCQ en maçonnerie — brique, bloc, pierre, mortier.',
   tradeOpEquip: 'Opérateur d\'équipement lourd (CCQ)',
   tradeOpEquipDesc: 'Préparation à l\'examen de certification CCQ en opération d\'équipement lourd — pelles, bulldozers, niveleuses.',
+  rbqTitle: 'Reconnu par la RBQ',
+  rbqDesc: "La Régie du bâtiment du Québec (RBQ) est l'organisme gouvernemental qui délivre les licences d'entrepreneur, fait passer les examens de qualification, applique le Code de construction et le Code de sécurité, et veille à la sécurité des bâtiments et des installations — ascenseurs, gaz, électricité, et plus encore. Nos examens blancs suivent le programme officiel RBQ.",
   comingSoon: 'À Venir',
 
   // Landing page - Pricing
@@ -298,6 +300,8 @@ const en: Record<string, string> = {
   tradeBriqueteur: 'Bricklayer (CCQ)',
   tradeBriqueteurDesc: 'Preparation for the CCQ masonry certification exam — brick, block, stone, mortar.',
   tradeOpEquip: 'Heavy Equipment Operator (CCQ)',
+  rbqTitle: 'Recognized by the RBQ',
+  rbqDesc: 'The Régie du bâtiment du Québec (RBQ) is the government body that issues contractor licenses, administers qualification exams, enforces the Building Code and Safety Code, and oversees building safety — elevators, gas, electricity, and more. Our practice exams follow the official RBQ program.',
   tradeOpEquipDesc: 'Preparation for the CCQ heavy equipment operation certification exam — excavators, bulldozers, graders.',
   comingSoon: 'Coming Soon',
 
