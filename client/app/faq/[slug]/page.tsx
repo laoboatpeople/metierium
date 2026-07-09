@@ -15,14 +15,12 @@ interface FaqEntry {
   category: string;
   trade: string;
   keywords: string[];
+  locale?: string;
 }
-
-// FAQ data - loaded from static import for build-time availability
-const FAQ_DATA: Record<string, FaqEntry> = {};
 
 // Dynamic import via fetch at runtime
 export default function FaqPage() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const params = useParams();
   const slug = params?.slug as string;
   const [entry, setEntry] = useState<FaqEntry | null>(null);
@@ -34,12 +32,14 @@ export default function FaqPage() {
       .then(r => r.json())
       .then((data: FaqEntry[]) => {
         setAllEntries(data);
-        const found = data.find(e => e.slug === slug);
-        setEntry(found || null);
+        const currentLocale = locale || 'fr';
+        const found = data.find(e => e.slug === slug && (!e.locale || e.locale === currentLocale));
+        // Fallback: find by slug regardless of locale
+        setEntry(found || data.find(e => e.slug === slug) || null);
       })
       .catch(() => setEntry(null))
       .finally(() => setLoading(false));
-  }, [slug]);
+  }, [slug, locale]);
 
   if (loading) {
     return (
@@ -62,8 +62,9 @@ export default function FaqPage() {
     );
   }
 
+  const currentLocale = locale || 'fr';
   const related = allEntries
-    .filter(e => e.trade === entry.trade && e.slug !== slug)
+    .filter(e => e.trade === entry.trade && e.slug !== slug && (!e.locale || e.locale === currentLocale))
     .slice(0, 6);
 
   return (
@@ -127,7 +128,7 @@ export default function FaqPage() {
         {/* Related questions */}
         {related.length > 0 && (
           <div className="mt-8">
-            <h2 className="text-lg font-semibold text-[#F8FAFC] mb-3">Questions similaires</h2>
+            <h2 className="text-lg font-semibold text-[#F8FAFC] mb-3">{t('faqSimilar')}</h2>
             <div className="grid md:grid-cols-2 gap-3">
               {related.map(r => (
                 <Link
@@ -146,7 +147,7 @@ export default function FaqPage() {
         {/* Back link */}
         <div className="mt-6">
           <Link href="/faq" className="inline-flex items-center gap-2 text-sm text-[#3B82F6] hover:text-[#06B6D4]">
-            <ArrowLeft size={14} /> Toutes les questions fréquentes
+            <ArrowLeft size={14} /> {t('faqBack')}
           </Link>
         </div>
       </div>

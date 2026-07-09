@@ -222,6 +222,10 @@ const fr: Record<string, unknown> = {
   faqViewAll: 'Voir toutes les FAQ',
   faqHome: 'Accueil',
   faqLabel: 'FAQ',
+  faqSimilar: 'Related Questions',
+  faqBack: 'All frequently asked questions',
+  faqSimilar: 'Questions similaires',
+  faqBack: 'Toutes les questions fréquentes',
 };
 
 const en: Record<string, string> = {
@@ -447,6 +451,10 @@ const en: Record<string, string> = {
   faqViewAll: 'View all FAQs',
   faqHome: 'Home',
   faqLabel: 'FAQ',
+  faqSimilar: 'Related Questions',
+  faqBack: 'All frequently asked questions',
+  faqSimilar: 'Questions similaires',
+  faqBack: 'Toutes les questions fréquentes',
 };
 
 export type Locale = 'en' | 'fr';

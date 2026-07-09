@@ -13,10 +13,11 @@ interface FaqEntry {
   category: string;
   trade: string;
   keywords: string[];
+  locale?: string;
 }
 
 export default function FaqListing() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const [entries, setEntries] = useState<FaqEntry[]>([]);
   const [search, setSearch] = useState('');
   const [filterTrade, setFilterTrade] = useState('');
@@ -35,10 +36,12 @@ export default function FaqListing() {
       .finally(() => setLoading(false));
   }, []);
 
-  const trades = [...new Set(entries.map(e => e.trade))];
-  const categories = [...new Set(entries.map(e => e.category))];
+  const currentLocale = locale || 'fr';
+  const localized = entries.filter(e => !e.locale || e.locale === currentLocale);
+  const trades = [...new Set(localized.map(e => e.trade))];
+  const categories = [...new Set(localized.map(e => e.category))];
 
-  const filtered = entries.filter(e => {
+  const filtered = localized.filter(e => {
     const matchSearch = !search || 
       e.question.toLowerCase().includes(search.toLowerCase()) ||
       e.answer.toLowerCase().includes(search.toLowerCase()) ||

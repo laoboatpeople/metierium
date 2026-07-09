@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Script from 'next/script';
 import { BookOpen, HelpCircle, GraduationCap, ChevronRight, ArrowLeft, Loader2, FileText, Zap, Layers, Shield } from 'lucide-react';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 const TRADES: Record<string, { name: string; desc: string; color: string }> = {
   cmeq: { name: 'CMEQ', desc: 'Électricien — Corporation des maîtres électriciens du Québec', color: '#3B82F6' },
@@ -26,6 +27,7 @@ const TRADES: Record<string, { name: string; desc: string; color: string }> = {
 };
 
 export default function TradePillarPage() {
+  const { locale } = useLocale();
   const params = useParams();
   const slug = params?.slug as string;
   const trade = TRADES[slug];
@@ -33,12 +35,13 @@ export default function TradePillarPage() {
 
   useEffect(() => {
     if (slug) {
+      const currentLocale = locale || 'fr';
       fetch('/faq-data.json')
         .then(r => r.json())
-        .then((data: any[]) => setFaqEntries(data.filter(e => e.trade?.toLowerCase() === slug)))
+        .then((data: any[]) => setFaqEntries(data.filter(e => e.trade?.toLowerCase() === slug && (!e.locale || e.locale === currentLocale))))
         .catch(() => {});
     }
-  }, [slug]);
+  }, [slug, locale]);
 
   if (!trade) {
     return (
