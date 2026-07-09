@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Script from 'next/script';
 import { Calendar, Clock, ArrowLeft, ChevronRight, GraduationCap, Loader2 } from 'lucide-react';
+import Nav from '@/components/Nav';
 
 interface BlogPost {
   slug: string;
@@ -55,6 +56,7 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-[#0A0E1A]">
+      <Nav />
       <Script id="blog-article" type="application/ld+json" strategy="afterInteractive">{`
         {
           "@context": "https://schema.org",

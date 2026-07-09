@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Script from 'next/script';
 import { GraduationCap, ChevronRight, Search, HelpCircle, ArrowLeft, Loader2 } from 'lucide-react';
+import Nav from '@/components/Nav';
 
 interface FaqEntry {
   slug: string;
@@ -65,6 +66,7 @@ export default function FaqPage() {
 
   return (
     <div className="min-h-screen bg-[#0A0E1A]">
+      <Nav />
       {/* JSON-LD FAQPage for this specific question */}
       <Script id="faq-schema" type="application/ld+json" strategy="afterInteractive">{`
         {
