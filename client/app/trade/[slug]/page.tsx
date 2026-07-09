@@ -12,6 +12,17 @@ const TRADES: Record<string, { name: string; desc: string; color: string }> = {
   qbq: { name: 'QBQ', desc: 'Soudeur — Québec Board of Trades', color: '#8B5CF6' },
   hvac: { name: 'CMMTQ', desc: 'Technicien en chauffage-climatisation — HVAC', color: '#F59E0B' },
   mvl: { name: 'CCQ', desc: 'Mécanicien de véhicules lourds — CCQ', color: '#10B981' },
+  'securite-incendie': { name: 'RBQ', desc: 'Technicien en sécurité incendie — RBQ', color: '#EF4444' },
+  ferblantier: { name: 'CCQ', desc: 'Ferblantier / Tôlier — CCQ', color: '#8B5CF6' },
+  briqueteur: { name: 'CCQ', desc: 'Briqueteur-maçon — CCQ', color: '#F59E0B' },
+  'operateur-equipement-lourd': { name: 'CCQ', desc: 'Opérateur d\'équipement lourd — CCQ', color: '#06B6D4' },
+  gaz: { name: 'RBQ', desc: 'Technicien en gaz — RBQ', color: '#F59E0B' },
+  ascenseurs: { name: 'RBQ', desc: 'Mécanicien d\'ascenseurs — RBQ', color: '#10B981' },
+  refrigeration: { name: 'RBQ', desc: 'Opérateur de réfrigération — RBQ', color: '#0E7490' },
+  constructeur: { name: 'RBQ', desc: 'Constructeur-rénovateur — RBQ', color: '#7C3AED' },
+  'entrepreneur-general': { name: 'RBQ', desc: 'Entrepreneur général — RBQ', color: '#4F46E5' },
+  inspecteur: { name: 'RBQ', desc: 'Inspecteur en bâtiment — RBQ', color: '#0E7490' },
+  'coordonnateur-sst': { name: 'ASP Const.', desc: 'Coordonnateur SST — ASP Construction', color: '#DC2626' },
 };
 
 export default function TradePillarPage() {

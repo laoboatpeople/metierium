@@ -1,6 +1,6 @@
 #!/bin/bash
 # Insert chapters and questions for HVAC and MVL
-DB="sudo -u postgres psql -d certificationquebec"
+DB="sudo -u postgres psql -d metierium"
 
 # ---- HVAC CHAPTERS ----
 $DB <<SQL
@@ -204,4 +204,4 @@ SQL
 echo "=== Questions inserted ==="
 
 # Verify
-sudo -u postgres psql -d certificationquebec -c "SELECT t.code, t.\"nameFr\", (SELECT COUNT(*) FROM \"Chapter\" c WHERE c.\"tradeId\" = t.id) as chapitres, (SELECT COUNT(*) FROM \"Question\" q WHERE q.\"tradeId\" = t.id) as questions FROM \"Trade\" t ORDER BY t.code;"
+sudo -u postgres psql -d metierium -c "SELECT t.code, t.\"nameFr\", (SELECT COUNT(*) FROM \"Chapter\" c WHERE c.\"tradeId\" = t.id) as chapitres, (SELECT COUNT(*) FROM \"Question\" q WHERE q.\"tradeId\" = t.id) as questions FROM \"Trade\" t ORDER BY t.code;"

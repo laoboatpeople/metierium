@@ -1,11 +1,11 @@
 [Unit]
-Description=Certification Québec Client (Next.js)
+Description=Metierium Client (Next.js)
 After=network.target
 
 [Service]
 Type=simple
 User=chuck
-WorkingDirectory=/home/chuck/projects/certificationquebec/client
+WorkingDirectory=/home/chuck/projects/metierium/client
 ExecStart=/usr/bin/npm start -- -p 3006
 Restart=always
 RestartSec=10

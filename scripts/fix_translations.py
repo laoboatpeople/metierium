@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import re
 
-with open('/home/chuck/projects/certificationquebec/client/src/i18n/translations.ts', 'r') as f:
+with open('/home/chuck/projects/metierium/client/src/i18n/translations.ts', 'r') as f:
     content = f.read()
 
 # The broken pattern: 'Simulations d\\'examen' which is literally:
@@ -39,13 +39,13 @@ content = re.sub(
     content
 )
 
-with open('/home/chuck/projects/certificationquebec/client/src/i18n/translations.ts', 'w') as f:
+with open('/home/chuck/projects/metierium/client/src/i18n/translations.ts', 'w') as f:
     f.write(content)
 
 print("Fixed!")
 
 # Verify
-with open('/home/chuck/projects/certificationquebec/client/src/i18n/translations.ts', 'r') as f:
+with open('/home/chuck/projects/metierium/client/src/i18n/translations.ts', 'r') as f:
     for i, line in enumerate(f.readlines(), 1):
         if 'Simulation' in line or 'examen' in line:
             print(f"L{i}: {line.rstrip()}")

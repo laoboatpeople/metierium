@@ -68,6 +68,7 @@ export default function LandingPage() {
                 { "@type": "Course", "name": "Préparation Examen Mécanicien Ascenseurs RBQ", "description": "Préparation à l'examen de certification RBQ en mécanique d'ascenseurs — CSA B44, installation et sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
                 { "@type": "Course", "name": "Préparation Examen Opérateur Réfrigération RBQ", "description": "Préparation à l'examen de certification RBQ en opération de réfrigération — gaz frigorigènes, compresseurs, sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
                 { "@type": "Course", "name": "Préparation Examen Constructeur Rénovateur RBQ", "description": "Préparation à l'examen de licence RBQ pour constructeur-rénovateur — gestion, code, contrats et sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Entrepreneur Général RBQ", "description": "Préparation à l'examen de licence RBQ pour entrepreneur général — gestion de projets, code de construction et SST", "provider": { "@type": "Organization", "name": "Metierium" } },
                 { "@type": "Course", "name": "Préparation Examen Inspecteur Bâtiment RBQ", "description": "Préparation à l'examen de certification RBQ en inspection de bâtiments — code, structures, enveloppe et sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
                 { "@type": "Course", "name": "Préparation Examen Coordonnateur SST ASP Construction", "description": "Préparation à l'examen de certification ASP Construction en coordination SST — prévention, IRSST, gestion de chantier", "provider": { "@type": "Organization", "name": "Metierium" } }
               ]
@@ -273,6 +274,7 @@ export default function LandingPage() {
                   { label: 'ASCEN', color: 'from-[#10B981] to-[#059669]' },
                   { label: 'REFRIG', color: 'from-[#0E7490] to-[#0A5C70]' },
                   { label: 'CONSTR', color: 'from-[#7C3AED] to-[#6D28D9]' },
+                  { label: 'ENTGEN', color: 'from-[#4F46E5] to-[#4338CA]' },
                   { label: 'INSPECT', color: 'from-[#0E7490] to-[#0A5C70]' },
                   { label: 'SST', color: 'from-[#DC2626] to-[#B91C1C]' },
                 ].map((item, i) => (
@@ -632,6 +634,27 @@ export default function LandingPage() {
                 <span>{t('tradeTheoryComplete')}</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-[#7C3AED] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Entrepreneur général (ENTGEN) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#4F46E5]/10 to-[#4338CA]/10 border border-[#4F46E5]/20 hover:border-[#4F46E5]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#4F46E5] to-[#4338CA] flex items-center justify-center mb-4">
+                <Shield className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#4F46E5] transition-colors">
+                <Link href="/trade/entrepreneur-general">{t('tradeEntgen')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeEntgenDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#4F46E5]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#4F46E5] mt-1">
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>

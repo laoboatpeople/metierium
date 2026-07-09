@@ -2,10 +2,10 @@
 """Generate and insert chapters, theory content, and questions for HVAC and MVL trades."""
 import subprocess, json, uuid, sys, time
 
-DB_CMD = ["psql", "$(grep DATABASE_URL /home/chuck/projects/certificationquebec/server/.env | head -1 | cut -d= -f2-)"]
+DB_CMD = ["psql", "$(grep DATABASE_URL /home/chuck/projects/metierium/server/.env | head -1 | cut -d= -f2-)"]
 
 def run_sql(sql):
-    cmd = f'cd /home/chuck/projects/certificationquebec && psql "$(grep DATABASE_URL server/.env | head -1 | cut -d= -f2-)" -c {shq(sql)}'
+    cmd = f'cd /home/chuck/projects/metierium && psql "$(grep DATABASE_URL server/.env | head -1 | cut -d= -f2-)" -c {shq(sql)}'
     r = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=30)
     if r.returncode != 0:
         print(f"SQL ERROR: {r.stderr[:200]}")

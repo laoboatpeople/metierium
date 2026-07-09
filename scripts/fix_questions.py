@@ -1,6 +1,6 @@
 import re
 
-with open('/home/chuck/projects/certificationquebec/scripts/insert_hvac_mvl.py', 'r') as f:
+with open('/home/chuck/projects/metierium/scripts/insert_hvac_mvl.py', 'r') as f:
     content = f.read()
 
 # Fix: answer letter stuck inside options list after flattening
@@ -22,13 +22,13 @@ fixed = re2.sub(
     content
 )
 
-with open('/home/chuck/projects/certificationquebec/scripts/insert_hvac_mvl.py', 'w') as f:
+with open('/home/chuck/projects/metierium/scripts/insert_hvac_mvl.py', 'w') as f:
     f.write(fixed)
 
 # Verify
 import py_compile
 try:
-    py_compile.compile('/home/chuck/projects/certificationquebec/scripts/insert_hvac_mvl.py', doraise=True)
+    py_compile.compile('/home/chuck/projects/metierium/scripts/insert_hvac_mvl.py', doraise=True)
     print("SYNTAX OK")
 except py_compile.PyCompileError as e:
     print(f"Still error: {e}")

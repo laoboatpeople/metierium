@@ -1,11 +1,11 @@
 [Unit]
-Description=Certification Québec API
+Description=Metierium API
 After=network.target postgresql.service
 
 [Service]
 Type=simple
 User=chuck
-WorkingDirectory=/home/chuck/projects/certificationquebec/server
+WorkingDirectory=/home/chuck/projects/metierium/server
 ExecStart=/usr/bin/npx tsx src/index.ts
 Restart=always
 RestartSec=10

@@ -34,12 +34,12 @@ batch = "INSERT INTO \"Question\" (id,\"tradeId\",\"chapterId\",question,options
     ",\n".join(values) + ";"
 
 # Write to file and import
-with open("/home/chuck/projects/certificationquebec/scripts/seed_sst_bulk.sql", "w") as f:
+with open("/home/chuck/projects/metierium/scripts/seed_sst_bulk.sql", "w") as f:
     f.write(batch)
 
 r = subprocess.run(
-    ["sudo", "-u", "postgres", "psql", "-d", "certificationquebec", "-f",
-     "/home/chuck/projects/certificationquebec/scripts/seed_sst_bulk.sql"],
+    ["sudo", "-u", "postgres", "psql", "-d", "metierium", "-f",
+     "/home/chuck/projects/metierium/scripts/seed_sst_bulk.sql"],
     capture_output=True, text=True, timeout=30
 )
 print(r.stdout[-300:] if r.stdout else r.stderr[-300:])
