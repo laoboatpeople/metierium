@@ -63,7 +63,13 @@ export default function LandingPage() {
                 { "@type": "Course", "name": "Préparation Examen Technicien Sécurité Incendie RBQ", "description": "Préparation à l'examen de certification RBQ en sécurité incendie — alarmes, gicleurs, détection et signalisation", "provider": { "@type": "Organization", "name": "Certification Québec" } },
                 { "@type": "Course", "name": "Préparation Examen Ferblantier Tôlier CCQ", "description": "Préparation à l'examen de certification CCQ en ferblanterie et tôlerie — ventilation, toiture, métaux en feuilles", "provider": { "@type": "Organization", "name": "Certification Québec" } },
                 { "@type": "Course", "name": "Préparation Examen Briqueteur Maçon CCQ", "description": "Préparation à l'examen de certification CCQ en maçonnerie — brique, bloc, pierre, mortier", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Opérateur Équipement Lourd CCQ", "description": "Préparation à l'examen de certification CCQ en opération d'équipement lourd — pelles, bulldozers, niveleuses", "provider": { "@type": "Organization", "name": "Certification Québec" } }
+                { "@type": "Course", "name": "Préparation Examen Opérateur Équipement Lourd CCQ", "description": "Préparation à l'examen de certification CCQ en opération d'équipement lourd — pelles, bulldozers, niveleuses", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+                { "@type": "Course", "name": "Préparation Examen Technicien Gaz RBQ", "description": "Préparation à l'examen de certification RBQ en technique de gaz — CSA B149.1, B149.2, installation et sécurité", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+                { "@type": "Course", "name": "Préparation Examen Mécanicien Ascenseurs RBQ", "description": "Préparation à l'examen de certification RBQ en mécanique d'ascenseurs — CSA B44, installation et sécurité", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+                { "@type": "Course", "name": "Préparation Examen Opérateur Réfrigération RBQ", "description": "Préparation à l'examen de certification RBQ en opération de réfrigération — gaz frigorigènes, compresseurs, sécurité", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+                { "@type": "Course", "name": "Préparation Examen Constructeur Rénovateur RBQ", "description": "Préparation à l'examen de licence RBQ pour constructeur-rénovateur — gestion, code, contrats et sécurité", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+                { "@type": "Course", "name": "Préparation Examen Inspecteur Bâtiment RBQ", "description": "Préparation à l'examen de certification RBQ en inspection de bâtiments — code, structures, enveloppe et sécurité", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+                { "@type": "Course", "name": "Préparation Examen Coordonnateur SST ASP Construction", "description": "Préparation à l'examen de certification ASP Construction en coordination SST — prévention, IRSST, gestion de chantier", "provider": { "@type": "Organization", "name": "Certification Québec" } }
               ]
             },
             {
@@ -263,6 +269,12 @@ export default function LandingPage() {
                   { label: 'FERBLAN', color: 'from-[#8B5CF6] to-[#7C3AED]' },
                   { label: 'BRIQUE', color: 'from-[#F59E0B] to-[#D97706]' },
                   { label: 'OPEQUIP', color: 'from-[#06B6D4] to-[#0E7490]' },
+                  { label: 'GAZ', color: 'from-[#F59E0B] to-[#D97706]' },
+                  { label: 'ASCEN', color: 'from-[#10B981] to-[#059669]' },
+                  { label: 'REFRIG', color: 'from-[#0E7490] to-[#0A5C70]' },
+                  { label: 'CONSTR', color: 'from-[#7C3AED] to-[#6D28D9]' },
+                  { label: 'INSPECT', color: 'from-[#0E7490] to-[#0A5C70]' },
+                  { label: 'SST', color: 'from-[#DC2626] to-[#B91C1C]' },
                 ].map((item, i) => (
                   <span
                     key={i}
@@ -536,6 +548,132 @@ export default function LandingPage() {
                 <span>{t('tradeTheoryComplete')}</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-[#06B6D4] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Technicien en gaz (GAZ) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#F59E0B]/10 to-[#D97706]/10 border border-[#F59E0B]/20 hover:border-[#F59E0B]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#F59E0B] to-[#D97706] flex items-center justify-center mb-4">
+                <Thermometer className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#F59E0B] transition-colors">
+                <Link href="/trade/gaz">{t('tradeGaz')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeGazDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#F59E0B]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#F59E0B] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Mécanicien d'ascenseurs (ASCEN) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#10B981]/10 to-[#059669]/10 border border-[#10B981]/20 hover:border-[#10B981]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#10B981] to-[#059669] flex items-center justify-center mb-4">
+                <Wrench className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#10B981] transition-colors">
+                <Link href="/trade/ascenseurs">{t('tradeAscenseur')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeAscenseurDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#10B981]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#10B981] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Opérateur de réfrigération (REFRIG) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#0E7490]/10 to-[#0A5C70]/10 border border-[#0E7490]/20 hover:border-[#0E7490]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0E7490] to-[#0A5C70] flex items-center justify-center mb-4">
+                <Thermometer className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#0E7490] transition-colors">
+                <Link href="/trade/refrigeration">{t('tradeRefrig')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeRefrigDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#0E7490]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#0E7490] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Constructeur-rénovateur (CONSTR) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#7C3AED]/10 to-[#6D28D9]/10 border border-[#7C3AED]/20 hover:border-[#7C3AED]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] flex items-center justify-center mb-4">
+                <Wrench className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#7C3AED] transition-colors">
+                <Link href="/trade/constructeur">{t('tradeConstr')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeConstrDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#7C3AED]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#7C3AED] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Inspecteur en bâtiment (INSPECT) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#0E7490]/10 to-[#0A5C70]/10 border border-[#0E7490]/20 hover:border-[#0E7490]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0E7490] to-[#0A5C70] flex items-center justify-center mb-4">
+                <Shield className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#0E7490] transition-colors">
+                <Link href="/trade/inspecteur">{t('tradeInspect')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeInspectDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#0E7490]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#0E7490] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Coordonnateur SST (SST) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#DC2626]/10 to-[#B91C1C]/10 border border-[#DC2626]/20 hover:border-[#DC2626]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#DC2626] to-[#B91C1C] flex items-center justify-center mb-4">
+                <Shield className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#DC2626] transition-colors">
+                <Link href="/trade/coordonnateur-sst">{t('tradeSst')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeSstDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#DC2626]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#DC2626] mt-1">
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>

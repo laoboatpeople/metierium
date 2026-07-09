@@ -49,9 +49,9 @@ const fr: Record<string, unknown> = {
   navSignUp: 'Inscription',
 
   // Landing page - Hero
-  heroBadge: 'Préparation aux examens de métiers — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP',
+  heroBadge: 'Préparation aux examens de métiers — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP, GAZ, ASCEN, REFRIG, CONSTR, INSPECT, SST',
   heroTitle: 'Certification Québec',
-  heroTagline: 'Réussissez votre examen CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE ou OPEQUIP',
+  heroTagline: 'Réussissez votre examen CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP, GAZ, ASCEN, REFRIG, CONSTR, INSPECT ou SST',
   heroDesc: "Accédez à du contenu théorique complet, des simulations d'examen et un suivi personnalisé pour maximiser vos chances de réussite à l'examen de certification.",
   heroPillTheory: 'Théorie complète',
   heroPillExams: "Simulations d'examen",
@@ -101,6 +101,18 @@ const fr: Record<string, unknown> = {
   tradeBriqueteurDesc: 'Préparation à l\'examen de certification CCQ en maçonnerie — brique, bloc, pierre, mortier.',
   tradeOpEquip: 'Opérateur d\'équipement lourd (CCQ)',
   tradeOpEquipDesc: 'Préparation à l\'examen de certification CCQ en opération d\'équipement lourd — pelles, bulldozers, niveleuses.',
+  tradeGaz: 'Technicien en gaz (RBQ)',
+  tradeGazDesc: 'Préparation à l\'examen de certification RBQ en technique de gaz — CSA B149.1, B149.2, installation et sécurité.',
+  tradeAscenseur: 'Mécanicien d\'ascenseurs (RBQ)',
+  tradeAscenseurDesc: 'Préparation à l\'examen de certification RBQ en mécanique d\'ascenseurs — CSA B44, installation et sécurité.',
+  tradeRefrig: 'Opérateur de réfrigération (RBQ)',
+  tradeRefrigDesc: 'Préparation à l\'examen de certification RBQ en opération de réfrigération — gaz frigorigènes, compresseurs, sécurité.',
+  tradeConstr: 'Constructeur-rénovateur (RBQ)',
+  tradeConstrDesc: 'Préparation à l\'examen de licence RBQ pour constructeur-rénovateur — gestion, code, contrats et sécurité.',
+  tradeInspect: 'Inspecteur en bâtiment (RBQ)',
+  tradeInspectDesc: 'Préparation à l\'examen de certification RBQ en inspection de bâtiments — code, structures, enveloppe et sécurité.',
+  tradeSst: 'Coordonnateur SST (ASP Const.)',
+  tradeSstDesc: 'Préparation à l\'examen de certification ASP Construction en coordination SST — prévention, IRSST, gestion de chantier.',
   comingSoon: 'À Venir',
 
   // Landing page - Pricing
@@ -247,9 +259,9 @@ const en: Record<string, string> = {
   navSignUp: 'Sign Up',
 
   // Landing page - Hero
-  heroBadge: 'Trade Exam Preparation — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP',
+  heroBadge: 'Trade Exam Preparation — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP, GAZ, ASCEN, REFRIG, CONSTR, INSPECT, SST',
   heroTitle: 'Certification Québec',
-  heroTagline: 'Pass your CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE or OPEQUIP exam',
+  heroTagline: 'Pass your CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP, GAZ, ASCEN, REFRIG, CONSTR, INSPECT or SST exam',
   heroDesc: 'Access complete theoretical content, practice exams, and personalized tracking to maximize your chances of passing the certification exam.',
   heroPillTheory: 'Complete Theory',
   heroPillExams: 'Practice Exams',
@@ -299,6 +311,18 @@ const en: Record<string, string> = {
   tradeBriqueteurDesc: 'Preparation for the CCQ masonry certification exam — brick, block, stone, mortar.',
   tradeOpEquip: 'Heavy Equipment Operator (CCQ)',
   tradeOpEquipDesc: 'Preparation for the CCQ heavy equipment operation certification exam — excavators, bulldozers, graders.',
+  tradeGaz: 'Gas Technician (RBQ)',
+  tradeGazDesc: 'Preparation for the RBQ gas technician certification exam — CSA B149.1, B149.2, installation and safety.',
+  tradeAscenseur: 'Elevator Mechanic (RBQ)',
+  tradeAscenseurDesc: 'Preparation for the RBQ elevator mechanic certification exam — CSA B44, installation and safety.',
+  tradeRefrig: 'Refrigeration Operator (RBQ)',
+  tradeRefrigDesc: 'Preparation for the RBQ refrigeration operator certification exam — refrigerants, compressors, safety.',
+  tradeConstr: 'Builder-Renovator (RBQ)',
+  tradeConstrDesc: 'Preparation for the RBQ builder-renovator license exam — management, code, contracts and safety.',
+  tradeInspect: 'Building Inspector (RBQ)',
+  tradeInspectDesc: 'Preparation for the RBQ building inspection certification exam — code, structures, envelope and safety.',
+  tradeSst: 'Safety Coordinator (ASP Const.)',
+  tradeSstDesc: 'Preparation for the ASP Construction safety coordinator certification exam — prevention, IRSST, site management.',
   comingSoon: 'Coming Soon',
 
   // Landing page - Pricing
