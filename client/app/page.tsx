@@ -544,25 +544,6 @@ export default function LandingPage() {
         </div>
       </section>
 
-      {/* ===== RBQ CREDIBILITY SECTION ===== */}
-      <section className="py-16 px-6 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-[#3B82F6]/10 via-[#06B6D4]/10 to-[#3B82F6]/10" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#3B82F6]/5 rounded-full blur-[100px]" />
-        <div className="relative z-10 max-w-4xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-8 p-8 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-sm">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center shrink-0">
-              <svg className="w-8 h-8 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-              </svg>
-            </div>
-            <div className="flex-1 text-center md:text-left">
-              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2">{t('rbqTitle')}</h3>
-              <p className="text-sm text-[#94A3B8] leading-relaxed">{t('rbqDesc')}</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* ===== HOW IT WORKS SECTION (NEW) ===== */}
       <section className="py-20 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#06B6D4]/5 to-transparent" />
