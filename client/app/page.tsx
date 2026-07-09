@@ -60,7 +60,10 @@ export default function LandingPage() {
                 { "@type": "Course", "name": "Préparation Examen Soudeur QBQ", "description": "Préparation à l'examen de certification en soudage — SMAW, GMAW, FCAW et normes CSA", "provider": { "@type": "Organization", "name": "Certification Québec" } },
                 { "@type": "Course", "name": "Préparation Examen HVAC CMMTQ", "description": "Préparation à l'examen de certification en chauffage-climatisation — thermodynamique, CVC et réfrigération", "provider": { "@type": "Organization", "name": "Certification Québec" } },
                 { "@type": "Course", "name": "Préparation Examen Mécanicien Véhicules Lourds CCQ", "description": "Préparation à l'examen de certification en mécanique de véhicules lourds — moteurs diesel, transmissions et hydraulique", "provider": { "@type": "Organization", "name": "Certification Québec" } },
-                { "@type": "Course", "name": "Préparation Examen Technicien Sécurité Incendie RBQ", "description": "Préparation à l'examen de certification RBQ en sécurité incendie — alarmes, gicleurs, détection et signalisation", "provider": { "@type": "Organization", "name": "Certification Québec" } }
+                { "@type": "Course", "name": "Préparation Examen Technicien Sécurité Incendie RBQ", "description": "Préparation à l'examen de certification RBQ en sécurité incendie — alarmes, gicleurs, détection et signalisation", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+                { "@type": "Course", "name": "Préparation Examen Ferblantier Tôlier CCQ", "description": "Préparation à l'examen de certification CCQ en ferblanterie et tôlerie — ventilation, toiture, métaux en feuilles", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+                { "@type": "Course", "name": "Préparation Examen Briqueteur Maçon CCQ", "description": "Préparation à l'examen de certification CCQ en maçonnerie — brique, bloc, pierre, mortier", "provider": { "@type": "Organization", "name": "Certification Québec" } },
+                { "@type": "Course", "name": "Préparation Examen Opérateur Équipement Lourd CCQ", "description": "Préparation à l'examen de certification CCQ en opération d'équipement lourd — pelles, bulldozers, niveleuses", "provider": { "@type": "Organization", "name": "Certification Québec" } }
               ]
             },
             {
@@ -257,6 +260,9 @@ export default function LandingPage() {
                   { label: 'HVAC', color: 'from-[#F59E0B] to-[#D97706]' },
                   { label: 'MVL', color: 'from-[#10B981] to-[#059669]' },
                   { label: 'INCENDIE', color: 'from-[#EF4444] to-[#DC2626]' },
+                  { label: 'FERBLAN', color: 'from-[#8B5CF6] to-[#7C3AED]' },
+                  { label: 'BRIQUE', color: 'from-[#F59E0B] to-[#D97706]' },
+                  { label: 'OPEQUIP', color: 'from-[#06B6D4] to-[#0E7490]' },
                 ].map((item, i) => (
                   <span
                     key={i}
@@ -467,6 +473,69 @@ export default function LandingPage() {
                 <span>{t('tradeTheoryComplete')}</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-[#EF4444] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Ferblantier / Tôlier (FERBLAN) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#8B5CF6]/10 to-[#7C3AED]/10 border border-[#8B5CF6]/20 hover:border-[#8B5CF6]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#7C3AED] flex items-center justify-center mb-4">
+                <Wrench className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#8B5CF6] transition-colors">
+                <Link href="/trade/ferblantier">{t('tradeFerblantier')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeFerblantierDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#8B5CF6]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#8B5CF6] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Briqueteur-maçon (BRIQUE) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#F59E0B]/10 to-[#D97706]/10 border border-[#F59E0B]/20 hover:border-[#F59E0B]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#F59E0B] to-[#D97706] flex items-center justify-center mb-4">
+                <Wrench className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#F59E0B] transition-colors">
+                <Link href="/trade/briqueteur">{t('tradeBriqueteur')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeBriqueteurDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#F59E0B]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#F59E0B] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </div>
+
+            {/* Opérateur d'équipement lourd (OPEQUIP) */}
+            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#06B6D4]/10 to-[#0E7490]/10 border border-[#06B6D4]/20 hover:border-[#06B6D4]/50 transition-all duration-300 group">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#06B6D4] to-[#0E7490] flex items-center justify-center mb-4">
+                <Truck className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#06B6D4] transition-colors">
+                <Link href="/trade/operateur-equipement-lourd">{t('tradeOpEquip')}</Link>
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeOpEquipDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#06B6D4]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#06B6D4] mt-1">
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>

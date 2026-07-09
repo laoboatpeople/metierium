@@ -49,9 +49,9 @@ const fr: Record<string, unknown> = {
   navSignUp: 'Inscription',
 
   // Landing page - Hero
-  heroBadge: 'Préparation aux examens de métiers — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE',
+  heroBadge: 'Préparation aux examens de métiers — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP',
   heroTitle: 'Certification Québec',
-  heroTagline: 'Réussissez votre examen CMEQ, CMMTQ, QBQ, HVAC, MVL ou INCENDIE',
+  heroTagline: 'Réussissez votre examen CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE ou OPEQUIP',
   heroDesc: "Accédez à du contenu théorique complet, des simulations d'examen et un suivi personnalisé pour maximiser vos chances de réussite à l'examen de certification.",
   heroPillTheory: 'Théorie complète',
   heroPillExams: "Simulations d'examen",
@@ -95,6 +95,12 @@ const fr: Record<string, unknown> = {
   tradeMvlDesc: "Préparation à l'examen de certification en mécanique de véhicules lourds et équipements diesel.",
   tradeIncendie: 'Technicien en sécurité incendie (RBQ)',
   tradeIncendieDesc: "Préparation à l'examen de certification RBQ en sécurité incendie — alarmes, gicleurs, détection et signalisation.",
+  tradeFerblantier: 'Ferblantier / Tôlier (CCQ)',
+  tradeFerblantierDesc: 'Préparation à l\'examen de certification CCQ en ferblanterie et tôlerie — ventilation, toiture, métaux en feuilles.',
+  tradeBriqueteur: 'Briqueteur-maçon (CCQ)',
+  tradeBriqueteurDesc: 'Préparation à l\'examen de certification CCQ en maçonnerie — brique, bloc, pierre, mortier.',
+  tradeOpEquip: 'Opérateur d\'équipement lourd (CCQ)',
+  tradeOpEquipDesc: 'Préparation à l\'examen de certification CCQ en opération d\'équipement lourd — pelles, bulldozers, niveleuses.',
   comingSoon: 'À Venir',
 
   // Landing page - Pricing
@@ -241,9 +247,9 @@ const en: Record<string, string> = {
   navSignUp: 'Sign Up',
 
   // Landing page - Hero
-  heroBadge: 'Trade Exam Preparation — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE',
+  heroBadge: 'Trade Exam Preparation — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP',
   heroTitle: 'Certification Québec',
-  heroTagline: 'Pass your CMEQ, CMMTQ, QBQ, HVAC, MVL or INCENDIE exam',
+  heroTagline: 'Pass your CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE or OPEQUIP exam',
   heroDesc: 'Access complete theoretical content, practice exams, and personalized tracking to maximize your chances of passing the certification exam.',
   heroPillTheory: 'Complete Theory',
   heroPillExams: 'Practice Exams',
@@ -287,6 +293,12 @@ const en: Record<string, string> = {
   tradeMvlDesc: 'Preparation for the heavy vehicle and diesel equipment mechanics certification exam.',
   tradeIncendie: 'Fire Safety Technician (RBQ)',
   tradeIncendieDesc: 'Preparation for the RBQ fire safety certification exam — alarms, sprinklers, detection and signaling.',
+  tradeFerblantier: 'Sheet Metal Worker (CCQ)',
+  tradeFerblantierDesc: 'Preparation for the CCQ sheet metal work certification exam — ventilation, roofing, metal sheets.',
+  tradeBriqueteur: 'Bricklayer (CCQ)',
+  tradeBriqueteurDesc: 'Preparation for the CCQ masonry certification exam — brick, block, stone, mortar.',
+  tradeOpEquip: 'Heavy Equipment Operator (CCQ)',
+  tradeOpEquipDesc: 'Preparation for the CCQ heavy equipment operation certification exam — excavators, bulldozers, graders.',
   comingSoon: 'Coming Soon',
 
   // Landing page - Pricing
