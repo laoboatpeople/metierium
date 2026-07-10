@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Plus, Pencil, Trash2, Loader2, X, Check, AlertCircle, Briefcase } from 'lucide-react';
 import { authApi } from '@/lib/api';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 interface Trade {
   id: string;
@@ -12,6 +13,7 @@ interface Trade {
 }
 
 export default function AdminTrades() {
+  const { t, locale } = useLocale();
   const [trades, setTrades] = useState<Trade[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -30,7 +32,7 @@ export default function AdminTrades() {
       const data = await authApi('/api/admin/trades');
       setTrades(data.trades ?? data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Erreur de chargement');
+      setError(err instanceof Error ? err.message : t('adminLoadError'));
     } finally {
       setLoading(false);
     }
@@ -53,7 +55,7 @@ export default function AdminTrades() {
   async function handleSave(e: React.FormEvent) {
     e.preventDefault();
     if (!formData.name.trim()) {
-      setFormError('Le nom est requis');
+      setFormError(t('adminFormNameRequired'));
       return;
     }
     setSaving(true);
@@ -74,19 +76,19 @@ export default function AdminTrades() {
       setEditing(null);
       await fetchTrades();
     } catch (err) {
-      setFormError(err instanceof Error ? err.message : 'Erreur de sauvegarde');
+      setFormError(err instanceof Error ? err.message : t('adminSaveError'));
     } finally {
       setSaving(false);
     }
   }
 
   async function handleDelete(id: string) {
-    if (!confirm('Supprimer ce métier ?')) return;
+    if (!confirm(t('adminConfirmDeleteTrade'))) return;
     try {
       await authApi(`/api/admin/trades/${id}`, { method: 'DELETE' });
       await fetchTrades();
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Erreur de suppression');
+      setError(err instanceof Error ? err.message : t('adminDeleteError'));
     }
   }
 
@@ -105,16 +107,16 @@ export default function AdminTrades() {
         <div>
           <div className="flex items-center gap-3 mb-2">
             <Briefcase size={24} className="text-[#3B82F6]" />
-            <h1 className="text-2xl font-bold text-[#F8FAFC]">Métiers</h1>
+            <h1 className="text-2xl font-bold text-[#F8FAFC]">{t('adminTrades')}</h1>
           </div>
-          <p className="text-sm text-[#94A3B8]">Gérer les métiers de la plateforme</p>
+          <p className="text-sm text-[#94A3B8]">{t('adminTradesDesc')}</p>
         </div>
         <button
           onClick={openCreate}
           className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white rounded-lg text-sm font-semibold hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all"
         >
           <Plus size={16} />
-          Ajouter
+          {t('adminAdd')}
         </button>
       </div>
 
@@ -132,7 +134,7 @@ export default function AdminTrades() {
           <div className="bg-[#1A2035] border border-[#2D3A52] rounded-2xl w-full max-w-lg p-6">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-semibold text-[#F8FAFC]">
-                {editing ? 'Modifier le métier' : 'Ajouter un métier'}
+                {editing ? t('adminEditTrade') : t('adminAddTrade')}
               </h2>
               <button onClick={() => setShowForm(false)} className="text-[#94A3B8] hover:text-[#F8FAFC]">
                 <X size={20} />
@@ -148,37 +150,37 @@ export default function AdminTrades() {
 
             <form onSubmit={handleSave} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Nom</label>
+                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminName')}</label>
                 <input
                   type="text"
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="Électricien (CMEQ)"
+                  placeholder={t('adminFormNamePlaceholder')}
                   required
                   className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6]"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Description</label>
+                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminDescription')}</label>
                 <textarea
                   value={formData.description}
                   onChange={(e) => setFormData({ ...formData, description: e.target.value })}
-                  placeholder="Description du métier..."
+                  placeholder={t('adminFormDescriptionPlaceholder')}
                   rows={3}
                   className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] resize-none"
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Catégorie</label>
+                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminCategory')}</label>
                 <select
                   value={formData.category}
                   onChange={(e) => setFormData({ ...formData, category: e.target.value })}
                   className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
                 >
-                  <option value="common">Tronc Commun</option>
-                  <option value="m">Mécanique</option>
-                  <option value="e">Électricité</option>
-                  <option value="s">Sécurité</option>
+                  <option value="common">{t('adminFormCategoryCommon')}</option>
+                  <option value="m">{t('adminFormCategoryM')}</option>
+                  <option value="e">{t('adminFormCategoryE')}</option>
+                  <option value="s">{t('adminFormCategoryS')}</option>
                 </select>
               </div>
               <div className="flex justify-end gap-3 pt-2">
@@ -187,7 +189,7 @@ export default function AdminTrades() {
                   onClick={() => setShowForm(false)}
                   className="px-4 py-2.5 bg-[#2D3A52] text-[#94A3B8] rounded-lg text-sm font-medium hover:text-[#F8FAFC] transition-colors"
                 >
-                  Annuler
+                  {t('adminCancel')}
                 </button>
                 <button
                   type="submit"
@@ -195,7 +197,7 @@ export default function AdminTrades() {
                   className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white rounded-lg text-sm font-semibold disabled:opacity-50 transition-all"
                 >
                   {saving ? <Loader2 size={16} className="animate-spin" /> : <Check size={16} />}
-                  {saving ? 'Sauvegarde...' : 'Sauvegarder'}
+                  {saving ? t('adminFormSaving') : t('adminSave')}
                 </button>
               </div>
             </form>
@@ -209,17 +211,17 @@ export default function AdminTrades() {
           <table className="w-full">
             <thead>
               <tr className="border-b border-[#2D3A52]">
-                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Nom</th>
-                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Catégorie</th>
-                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Description</th>
-                <th className="text-right px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Actions</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminName')}</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminCategory')}</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminDescription')}</th>
+                <th className="text-right px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminActions')}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#2D3A52]">
               {trades.length === 0 ? (
                 <tr>
                   <td colSpan={4} className="px-6 py-12 text-center text-[#64748B] text-sm">
-                    Aucun métier trouvé
+                    {t('adminNoTrades')}
                   </td>
                 </tr>
               ) : (

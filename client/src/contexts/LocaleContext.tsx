@@ -14,7 +14,7 @@ interface LocaleContextType {
 
 const LocaleContext = createContext<LocaleContextType | undefined>(undefined);
 
-const STORAGE_KEY = 'certquebec:locale';
+const STORAGE_KEY = 'metierium:locale';
 
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>('fr');

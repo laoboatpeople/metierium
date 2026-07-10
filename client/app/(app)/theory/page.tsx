@@ -1,6 +1,7 @@
 'use client';
 
-import { useEffect, useState, useMemo } from 'react';
+import { useEffect, useState, useMemo, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import Script from 'next/script';
 import {
@@ -18,6 +19,13 @@ import {
   FileText,
   Sparkles,
   GraduationCap,
+  CheckCircle2,
+  ArrowUp,
+  XCircle,
+  Search,
+  Clock,
+  CheckCircle,
+  Loader2,
 } from 'lucide-react';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
@@ -32,6 +40,7 @@ interface TheoryChapter {
   questionCount: number;
   theoryContent: string | null;
   hasTheory: boolean;
+  tradeId: string;
 }
 
 interface TheoryCategory {
@@ -186,6 +195,7 @@ function ChapterSection({ chapter, color }: { chapter: TheoryChapter; color: Sec
   const [expanded, setExpanded] = useState(false);
   const colors = SECTION_STYLES[color];
   const { t } = useLocale();
+  const router = useRouter();
 
   if (chapter.questionCount === 0 && !chapter.hasTheory) return null;
 
@@ -235,6 +245,15 @@ function ChapterSection({ chapter, color }: { chapter: TheoryChapter; color: Sec
           >
             <div className="border-t border-border px-5 py-5">
               <TheoryRenderer content={chapter.theoryContent} color={color} />
+              <div className="mt-4 flex items-center justify-start">
+                <button
+                  onClick={() => router.push(`/exams?tradeId=${chapter.tradeId}&chapterId=${chapter.id}`)}
+                  className="flex items-center gap-1.5 text-xs font-medium text-green hover:text-green/80 transition-colors px-3 py-1.5 rounded-lg bg-green/10 hover:bg-green/20"
+                >
+                  <GraduationCap size={14} />
+                  {t('testChapter')}
+                </button>
+              </div>
             </div>
           </motion.div>
         )}
@@ -324,9 +343,9 @@ function CategoryCard({ category }: { category: TheoryCategory }) {
             className="overflow-hidden"
           >
             <div className="border-t border-border px-5 py-4 space-y-3">
-              {category.chapters.filter(ch => ch.questionCount > 0).length > 0 ? (
+              {category.chapters.filter(ch => ch.questionCount > 0 || ch.hasTheory).length > 0 ? (
                 category.chapters
-                  .filter(ch => ch.questionCount > 0)
+                  .filter(ch => ch.questionCount > 0 || ch.hasTheory)
                   .map((ch) => (
                     <ChapterSection key={ch.id} chapter={ch} color={color} />
                   ))
@@ -368,18 +387,49 @@ export default function TheoryPage() {
       setLoading(true);
       setError(null);
       const token = localStorage.getItem('token');
-      const res = await fetch(`${API_BASE}/api/theory?locale=${locale}`, {
-        headers: {
-          Authorization: `Bearer ${token}`,
-          'Content-Type': 'application/json',
-        },
-      });
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({ message: 'Request failed' }));
-        throw new Error(err.message || `HTTP ${res.status}`);
+      const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+      if (token) headers['Authorization'] = `Bearer ${token}`;
+
+      // First, load all trades
+      const tradesRes = await fetch(`${API_BASE}/api/trades?locale=${locale}`, { headers });
+      if (!tradesRes.ok) throw new Error('Failed to load trades');
+      const tradesData = await tradesRes.json();
+      const trades = Array.isArray(tradesData) ? tradesData : tradesData.data ?? [];
+
+      // Then load theory for each trade and group by category
+      const allCategories: TheoryCategory[] = [];
+      const seenCodes = new Set<string>();
+
+      for (const trade of trades) {
+        const theoryRes = await fetch(`${API_BASE}/api/theory?tradeId=${trade.id}&locale=${locale}`, { headers });
+        if (!theoryRes.ok) continue;
+        const theoryData = await theoryRes.json();
+        const chapters: TheoryChapter[] = (theoryData.data || []).map((ch: any) => ({
+          id: ch.id,
+          number: ch.number,
+          name: ch.name,
+          questionCount: ch.questionCount || 0,
+          theoryContent: ch.theoryContent || null,
+          hasTheory: !!ch.theoryContent,
+          tradeId: trade.id,
+        }));
+
+        if (chapters.length === 0) continue;
+
+        allCategories.push({
+          id: trade.id,
+          code: trade.code,
+          name: locale === 'fr' ? (trade.nameFr || trade.name) : trade.name,
+          description: trade.description || null,
+          country: 'CA',
+          licenseType: trade.code,
+          chapterCount: chapters.length,
+          questionCount: chapters.reduce((s: number, ch: TheoryChapter) => s + ch.questionCount, 0),
+          chapters,
+        });
       }
-      const json = await res.json();
-      setCategories(json.data);
+
+      setCategories(allCategories);
     } catch (err) {
       setError(err instanceof Error ? err.message : t('somethingWentWrong'));
     } finally {
@@ -512,44 +562,13 @@ export default function TheoryPage() {
       )}
 
       {/* Sections */}
-      {!loading && categories.length > 0 && LICENSE_SECTIONS.map((section) => {
-        const colors = SECTION_STYLES[section.color];
-        const filtered = categories.filter(c => section.codeFilter(c.code));
-        if (filtered.length === 0) return null;
-
-        const sectionTheory = filtered.reduce((s, c) => s + c.chapters.filter(ch => ch.hasTheory).length, 0);
-
-        return (
-          <section key={section.key}>
-            {/* Section header */}
-            <div className="flex items-start gap-4 mb-5">
-              <div className={`w-1 h-10 rounded-full ${colors.bar} shrink-0 mt-1`} />
-              <div className={`h-10 w-10 rounded-xl ${colors.bg} flex items-center justify-center shrink-0`}>
-                <span className={colors.text}>{SECTION_STYLES[section.color].icon}</span>
-              </div>
-              <div className="min-w-0 flex-1">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <h2 className="text-base font-semibold text-text-primary">{section.title}</h2>
-                  {sectionTheory > 0 && (
-                    <span className="text-[10px] font-medium px-2 py-0.5 rounded-full bg-blue/10 text-blue flex items-center gap-1">
-                      <Sparkles size={10} />
-                      {t('theoryWithTheory', { count: sectionTheory })}
-                    </span>
-                  )}
-                </div>
-                <p className="text-xs text-text-tertiary mt-0.5">{section.subtitle}</p>
-              </div>
-            </div>
-
-            {/* Category cards */}
-            <div className="space-y-3">
-              {filtered.map((cat) => (
-                <CategoryCard key={cat.id} category={cat} />
-              ))}
-            </div>
-          </section>
-        );
-      })}
+      {!loading && categories.length > 0 && (
+        <div className="space-y-6">
+          {categories.map((cat) => (
+            <CategoryCard key={cat.id} category={cat} />
+          ))}
+        </div>
+      )}
     </div>
   );
 }

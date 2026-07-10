@@ -55,6 +55,7 @@ model Chapter {
   name          String
   nameFr        String
   theoryContent String?
+  theoryContentEn String?
   questions     Question[]
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt

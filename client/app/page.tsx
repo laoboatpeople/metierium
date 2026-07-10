@@ -23,6 +23,7 @@ import {
   X,
   Thermometer,
   Truck,
+  Infinity,
 } from 'lucide-react';
 import { useState } from 'react';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -818,7 +819,7 @@ export default function LandingPage() {
       </section>
 
 
-      {/* ===== PRICING SECTION (NEW) ===== */}
+      {/* ===== PRICING SECTION (FULL 4 PLANS) ===== */}
       <section id="pricing" className="py-20 px-6 relative">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#3B82F6]/5 to-transparent" />
         <div className="relative z-10 max-w-7xl mx-auto">
@@ -833,91 +834,154 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            {/* FREE Plan */}
-            <div className="p-8 rounded-2xl bg-white/5 border border-white/10 hover:border-[#3B82F6]/30 transition-all duration-300">
-              <h3 className="text-lg font-semibold text-[#94A3B8] mb-1">{t('planFree')}</h3>
-              <p className="text-sm text-[#64748B] mb-6">{t('planFreeDesc')}</p>
-              <div className="mb-6">
-                <span className="text-sm text-[#94A3B8] align-top">$</span>
-                <span className="text-4xl font-bold text-[#F8FAFC]">{t('planFreePrice')}</span>
-                <span className="text-[#94A3B8] text-lg ml-1">{t('planPerMonth')}</span>
+          <div className="grid md:grid-cols-4 gap-4">
+            {/* GRATUIT */}
+            <div className="bg-[#1A2035] border border-[#2D3A52] hover:border-[#3B82F6]/30 rounded-2xl p-4 flex flex-col transition-all duration-300">
+              <div className="flex-1">
+                <h3 className="text-base font-semibold text-[#F8FAFC] mb-1">GRATUIT</h3>
+                <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">Pour découvrir la plateforme</p>
+                <div className="flex items-baseline gap-0.5 mb-5">
+                  <span className="text-3xl font-bold text-[#F8FAFC]">0</span>
+                  <span className="text-xs text-[#94A3B8]">$</span>
+                  <span className="text-xs text-[#64748B]">/mois</span>
+                </div>
+                <ul className="space-y-2 mb-5">
+                  {[
+                    { text: '1 métier au choix', inc: true },
+                    { text: 'Contenu théorique complet', inc: true },
+                    { text: 'Questions limitées', inc: true },
+                    { text: 'Examens illimités', inc: false },
+                    { text: 'Tuteur IA', inc: false },
+                  ].map((f) => (
+                    <li key={f.text} className="flex items-start gap-2">
+                      {f.inc ? (
+                        <Check size={14} className={`mt-0.5 shrink-0 ${f.highlight ? 'text-[#3B82F6]' : 'text-[#10B981]'}`} />
+                      ) : (
+                        <div className="w-3.5 h-3.5 mt-0.5 shrink-0" />
+                      )}
+                      <span className={`text-xs ${f.highlight ? 'text-[#3B82F6] font-medium' : (f.inc ? 'text-[#F8FAFC]' : 'text-[#64748B]')}`}>{f.text}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2 text-sm text-[#94A3B8]">
-                  <Check className="w-4 h-4 text-[#10B981] shrink-0" />
-                  {t('planFeatureTheory')}
-                </li>
-                <li className="flex items-center gap-2 text-sm text-[#94A3B8]">
-                  <Check className="w-4 h-4 text-[#10B981] shrink-0" />
-                  {t('planFeatureLimited')}
-                </li>
-                <li className="flex items-center gap-2 text-sm text-[#64748B]">
-                  <div className="w-4 h-4 shrink-0" />
-                  {t('planFeatureAiTutor')}
-                </li>
-                <li className="flex items-center gap-2 text-sm text-[#64748B]">
-                  <div className="w-4 h-4 shrink-0" />
-                  {t('planFeatureTracking')}
-                </li>
-              </ul>
               <Link
                 href="/auth/register"
-                className="block w-full text-center px-6 py-3 rounded-xl border border-white/10 text-[#F8FAFC] font-medium hover:bg-white/5 transition-all"
+                className="block w-full text-center py-2.5 rounded-xl bg-[#3B82F6] text-white text-sm font-semibold hover:bg-[#2563EB] transition-all"
               >
-                {t('planFreeCta')}
+                Commencer gratuitement
               </Link>
             </div>
 
-            {/* MONTHLY Plan */}
-            <div className="p-8 rounded-2xl bg-gradient-to-br from-[#3B82F6]/10 to-[#06B6D4]/10 border border-[#3B82F6]/30 hover:border-[#3B82F6]/50 transition-all duration-300 relative">
-              <div className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-xs font-semibold text-white">
-                {locale === 'fr' ? 'POPULAIRE' : 'POPULAR'}
+            {/* ESSENTIEL */}
+            <div className="bg-[#1A2035] border border-[#2D3A52] hover:border-[#3B82F6]/30 rounded-2xl p-4 flex flex-col transition-all duration-300">
+              <div className="flex-1">
+                <h3 className="text-base font-semibold text-[#3B82F6] mb-1">ESSENTIEL</h3>
+                <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">1 métier, accès complet</p>
+                <div className="flex items-baseline gap-0.5 mb-5">
+                  <span className="text-3xl font-bold text-[#F8FAFC]">29</span>
+                  <span className="text-xs text-[#94A3B8]">$</span>
+                  <span className="text-xs text-[#64748B]">/mois</span>
+                </div>
+                <ul className="space-y-2 mb-5">
+                  {[
+                    { text: '1 métier au choix', inc: true },
+                    { text: 'Contenu théorique complet', inc: true },
+                    { text: 'Questions illimitées', inc: true },
+                    { text: 'Examens illimités', inc: true },
+                    { text: 'Tuteur IA', inc: true },
+                    { text: '🔒 Métier verrouillé', inc: true, highlight: true },
+                  ].map((f) => (
+                    <li key={f.text} className="flex items-start gap-2">
+                      <Check size={14} className={`mt-0.5 shrink-0 ${f.highlight ? 'text-[#3B82F6]' : 'text-[#10B981]'}`} />
+                      <span className={`text-xs ${f.highlight ? 'text-[#3B82F6] font-medium' : 'text-[#F8FAFC]'}`}>{f.text}</span>
+                    </li>
+                  ))}
+                </ul>
               </div>
-              <h3 className="text-lg font-semibold text-[#F8FAFC] mb-1">{t('planMonthly')}</h3>
-              <p className="text-sm text-[#94A3B8] mb-6">{t('planMonthlyDesc')}</p>
-              <div className="mb-6">
-                <span className="text-sm text-[#94A3B8] align-top">$</span>
-                <span className="text-4xl font-bold text-[#F8FAFC]">{t('planMonthlyPrice')}</span>
-                <span className="text-[#94A3B8] text-lg ml-1">{t('planPerMonth')}</span>
-              </div>
-              <ul className="space-y-3 mb-8">
-                <li className="flex items-center gap-2 text-sm text-[#94A3B8]">
-                  <Check className="w-4 h-4 text-[#10B981] shrink-0" />
-                  {t('planFeatureTheory')}
-                </li>
-                <li className="flex items-center gap-2 text-sm text-[#94A3B8]">
-                  <Check className="w-4 h-4 text-[#10B981] shrink-0" />
-                  {t('planFeatureUnlimited')}
-                </li>
-                <li className="flex items-center gap-2 text-sm text-[#94A3B8]">
-                  <Check className="w-4 h-4 text-[#10B981] shrink-0" />
-                  {t('planFeatureExams')}
-                </li>
-                <li className="flex items-center gap-2 text-sm text-[#94A3B8]">
-                  <Check className="w-4 h-4 text-[#10B981] shrink-0" />
-                  {t('planFeatureAiTutor')}
-                </li>
-                <li className="flex items-center gap-2 text-sm text-[#94A3B8]">
-                  <Check className="w-4 h-4 text-[#10B981] shrink-0" />
-                  {t('planFeatureTracking')}
-                </li>
-                <li className="flex items-center gap-2 text-sm text-[#94A3B8]">
-                  <Check className="w-4 h-4 text-[#10B981] shrink-0" />
-                  {t('planFeatureStats')}
-                </li>
-              </ul>
               <Link
                 href="/pricing"
-                className="block w-full text-center px-6 py-3 rounded-xl bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white font-medium hover:shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300"
+                className="block w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white text-sm font-semibold hover:shadow-lg hover:shadow-[#3B82F6]/20 transition-all"
               >
-                {t('planMonthlyCta')}
+                S'abonner
               </Link>
-              <p className="text-xs text-[#64748B] text-center mt-4">
-                {t('planCancelAnytime')}
-              </p>
+            </div>
+
+            {/* PRO — popular */}
+            <div className="bg-[#1A2035] border border-[#3B82F6]/40 rounded-2xl p-4 flex flex-col shadow-[0_0_30px_rgba(59,130,246,0.15)] transition-all duration-300 relative">
+              <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                <span className="px-4 py-1 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white text-xs font-semibold rounded-full whitespace-nowrap">
+                  POPULAIRE
+                </span>
+              </div>
+              <div className="flex-1 pt-1">
+                <h3 className="text-base font-semibold text-[#8B5CF6] mb-1">PRO</h3>
+                <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">Tous les métiers, sans limites</p>
+                <div className="flex items-baseline gap-0.5 mb-5">
+                  <span className="text-3xl font-bold text-[#F8FAFC]">49</span>
+                  <span className="text-xs text-[#94A3B8]">$</span>
+                  <span className="text-xs text-[#64748B]">/mois</span>
+                </div>
+                <ul className="space-y-2 mb-5">
+                  {[
+                    { text: 'Tous les métiers', inc: true },
+                    { text: 'Contenu théorique complet', inc: true },
+                    { text: 'Questions illimitées', inc: true },
+                    { text: 'Examens illimités', inc: true },
+                    { text: 'Tuteur IA', inc: true },
+                    { text: 'Suivi de progression', inc: true },
+                  ].map((f) => (
+                    <li key={f.text} className="flex items-start gap-2">
+                      <Check size={14} className="mt-0.5 text-[#10B981] shrink-0" />
+                      <span className="text-xs text-[#F8FAFC]">{f.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Link
+                href="/pricing"
+                className="block w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white text-sm font-semibold hover:shadow-lg hover:shadow-[#3B82F6]/20 transition-all"
+              >
+                S'abonner
+              </Link>
+            </div>
+
+            {/* À VIE */}
+            <div className="bg-[#1A2035] border border-[#2D3A52] hover:border-[#F59E0B]/30 rounded-2xl p-4 flex flex-col transition-all duration-300">
+              <div className="flex-1">
+                <h3 className="text-base font-semibold text-[#F59E0B] mb-1">À VIE</h3>
+                <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">Tous les métiers, à vie</p>
+                <div className="flex items-baseline gap-0.5 mb-5">
+                  <span className="text-3xl font-bold text-[#F8FAFC]">559</span>
+                  <span className="text-xs text-[#94A3B8]">$</span>
+                </div>
+                <ul className="space-y-2 mb-5">
+                  {[
+                    { text: 'Tous les métiers', inc: true, highlight: true },
+                    { text: 'Contenu théorique complet', inc: true },
+                    { text: 'Questions illimitées', inc: true },
+                    { text: 'Examens illimités', inc: true },
+                    { text: 'Tuteur IA', inc: true },
+                    { text: 'Mises à jour incluses', inc: true },
+                  ].map((f) => (
+                    <li key={f.text} className="flex items-start gap-2">
+                      <Check size={14} className={`mt-0.5 shrink-0 ${f.highlight ? 'text-[#F59E0B]' : 'text-[#10B981]'}`} />
+                      <span className={`text-xs ${f.highlight ? 'text-[#F59E0B] font-medium' : 'text-[#F8FAFC]'}`}>{f.text}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <Link
+                href="/pricing"
+                className="block w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white text-sm font-semibold hover:shadow-lg hover:shadow-[#F59E0B]/20 transition-all"
+              >
+                Acheter à vie
+              </Link>
             </div>
           </div>
+
+          <p className="text-center text-sm text-[#64748B] mt-8">
+            {t('planCancelAnytime')}
+          </p>
         </div>
       </section>
 
@@ -986,7 +1050,7 @@ export default function LandingPage() {
               },
               {
                 q: "Combien coûte la préparation aux examens ?",
-                a: "Nos plans commencent à 0$ pour le plan GRATUIT (accès limité à un métier), 29$/mois pour le plan ESSENTIEL (théorie complète et examens blancs) et 49$/mois pour le plan PRO (tous les métiers). Un accès À VIE est disponible pour 249$."
+                a: "Nos plans commencent à 0$ pour le plan GRATUIT (accès limité à un métier), 29$/mois pour le plan ESSENTIEL (théorie complète et examens blancs) et 49$/mois pour le plan PRO (tous les métiers). Un accès À VIE est disponible pour 559$."
               },
               {
                 q: "Où puis-je passer l'examen de métier au Québec ?",

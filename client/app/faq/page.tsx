@@ -67,7 +67,7 @@ export default function FaqListing() {
           </div>
           <h1 className="text-2xl font-bold text-[#F8FAFC]">{t('faqTitle')}</h1>
           <p className="text-sm text-[#94A3B8] mt-1">
-            {t('faqSubtitle', { count: entries.length })}
+            {t('faqSubtitle', { count: localized.length })}
           </p>
         </div>
 

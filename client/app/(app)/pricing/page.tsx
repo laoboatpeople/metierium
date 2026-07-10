@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { useLocale } from '@/src/contexts/LocaleContext';
 import { Check, X, Sparkles, Loader2 } from 'lucide-react';
 
 interface Trade {
@@ -10,82 +11,82 @@ interface Trade {
   nameFr: string;
 }
 
-const plans = [
-  {
-    id: 'free',
-    name: 'GRATUIT',
-    price: '0',
-    period: '/mois',
-    desc: 'Pour découvrir la plateforme',
-    features: [
-      { text: '1 métier au choix', included: true },
-      { text: 'Contenu théorique limité', included: true },
-      { text: 'Questions limitées (10/jour)', included: true },
-      { text: 'Changez de métier librement', included: true },
-      { text: 'Examens blancs', included: false },
-      { text: 'Tuteur IA', included: false },
-    ],
-    cta: 'Commencer gratuitement',
-    popular: false,
-    type: 'free' as const,
-  },
-  {
-    id: 'essential',
-    name: 'ESSENTIEL',
-    price: '29',
-    period: '/mois',
-    desc: '1 métier, accès complet',
-    features: [
-      { text: '1 métier au choix', included: true },
-      { text: 'Contenu théorique complet', included: true },
-      { text: 'Questions illimitées', included: true },
-      { text: 'Examens blancs illimités', included: true },
-      { text: 'Tuteur IA', included: true },
-      { text: '🔒 Métier verrouillé', included: true, highlight: true },
-    ],
-    cta: "S'abonner",
-    popular: false,
-    type: 'single' as const,
-  },
-  {
-    id: 'pro',
-    name: 'PRO',
-    price: '49',
-    period: '/mois',
-    desc: 'Tous les métiers, sans limites',
-    features: [
-      { text: 'Tous les métiers', included: true },
-      { text: 'Contenu théorique complet', included: true },
-      { text: 'Questions illimitées', included: true },
-      { text: 'Examens blancs illimités', included: true },
-      { text: 'Tuteur IA', included: true },
-      { text: 'Suivi de progression', included: true },
-    ],
-    cta: "S'abonner",
-    popular: true,
-    type: 'all' as const,
-  },
-  {
-    id: 'lifetime',
-    name: 'À VIE TOUS',
-    price: '249',
-    period: '',
-    desc: 'Tous les métiers, à vie',
-    features: [
-      { text: 'Tous les métiers', included: true, highlight: true },
-      { text: 'Contenu théorique complet', included: true },
-      { text: 'Questions illimitées', included: true },
-      { text: 'Examens blancs illimités', included: true },
-      { text: 'Tuteur IA', included: true },
-      { text: 'Mises à jour incluses', included: true },
-    ],
-    cta: 'Acheter à vie',
-    popular: false,
-    type: 'all' as const,
-  },
-];
-
 export default function PricingPage() {
+  const { t } = useLocale();
+  const plans = [
+    {
+      id: 'free',
+      name: 'GRATUIT',
+      price: '0',
+      period: t('pricingPagePerMonth'),
+      desc: t('pricingPagePlanFreeDesc'),
+      features: [
+        { text: '1 métier au choix', included: true },
+        { text: 'Contenu théorique complet', included: true },
+        { text: 'Questions limitées', included: true },
+        { text: 'Changez de métier librement', included: true },
+        { text: 'Examens illimités', included: false },
+        { text: 'Tuteur IA', included: false },
+      ],
+      cta: t('pricingPageCtaFree'),
+      popular: false,
+      type: 'free' as const,
+    },
+    {
+      id: 'essential',
+      name: 'ESSENTIEL',
+      price: '29',
+      period: t('pricingPagePerMonth'),
+      desc: t('pricingPagePlanEssentialDesc'),
+      features: [
+        { text: '1 métier au choix', included: true },
+        { text: 'Contenu théorique complet', included: true },
+        { text: 'Questions illimitées', included: true },
+        { text: 'Examens illimités', included: true },
+        { text: 'Tuteur IA', included: true },
+        { text: '🔒 Métier verrouillé', included: true, highlight: true },
+      ],
+      cta: t('pricingPageCtaSubscribe'),
+      popular: false,
+      type: 'single' as const,
+    },
+    {
+      id: 'pro',
+      name: 'PRO',
+      price: '49',
+      period: t('pricingPagePerMonth'),
+      desc: t('pricingPagePlanProDesc'),
+      features: [
+        { text: 'Tous les métiers', included: true },
+        { text: 'Contenu théorique complet', included: true },
+        { text: 'Questions illimitées', included: true },
+        { text: 'Examens illimités', included: true },
+        { text: 'Tuteur IA', included: true },
+        { text: 'Suivi de progression', included: true },
+      ],
+      cta: t('pricingPageCtaSubscribe'),
+      popular: true,
+      type: 'all' as const,
+    },
+    {
+      id: 'lifetime',
+      name: 'À VIE',
+      price: '559',
+      period: '',
+      desc: t('pricingPagePlanLifetimeDesc'),
+      features: [
+        { text: 'Tous les métiers', included: true, highlight: true },
+        { text: 'Contenu théorique complet', included: true },
+        { text: 'Questions illimitées', included: true },
+        { text: 'Examens illimités', included: true },
+        { text: 'Tuteur IA', included: true },
+        { text: 'Mises à jour incluses', included: true },
+      ],
+      cta: t('pricingPageCtaLifetime'),
+      popular: false,
+      type: 'all' as const,
+    },
+  ];
   const [trades, setTrades] = useState<Trade[]>([]);
   const [selectedTrade, setSelectedTrade] = useState<Trade | null>(null);
   const [showTradePicker, setShowTradePicker] = useState(false);
@@ -93,8 +94,10 @@ export default function PricingPage() {
   const [loading, setLoading] = useState(true);
   const [subscribing, setSubscribing] = useState<string | null>(null);
   const [error, setError] = useState('');
+  const [currentPlan, setCurrentPlan] = useState<string | null>(null);
 
   useEffect(() => {
+    // Fetch trades
     fetch('/api/trades')
       .then(r => r.json())
       .then(d => {
@@ -104,6 +107,24 @@ export default function PricingPage() {
       })
       .catch(() => {})
       .finally(() => setLoading(false));
+
+    // Fetch current user subscription
+    const token = localStorage.getItem('token');
+    if (token) {
+      fetch('/api/auth/me', { headers: { Authorization: `Bearer ${token}` } })
+        .then(r => r.json())
+        .then(data => {
+          const plan = data.plan || data.subscription?.plan || 'FREE';
+          const map: Record<string, string> = {
+            'FREE': 'free',
+            'ESSENTIAL': 'essential',
+            'PRO': 'pro',
+            'LIFETIME': 'lifetime',
+          };
+          setCurrentPlan(map[plan] || null);
+        })
+        .catch(() => {});
+    }
   }, []);
 
   async function handleSubscribe(planId: string, tradeId?: string) {
@@ -132,7 +153,7 @@ export default function PricingPage() {
       const data = await res.json();
 
       if (!res.ok) {
-        throw new Error(data.message || 'Erreur de paiement');
+        throw new Error(data.message || t('pricingPageErrorPayment'));
       }
 
       // Redirect to Stripe Checkout
@@ -176,11 +197,11 @@ export default function PricingPage() {
         {/* Header */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-[#3B82F6]/10 border border-[#3B82F6]/20 rounded-full text-sm text-[#3B82F6] mb-4">
-            <Sparkles size={14} /><span>Forfaits simples et transparents</span>
+            <Sparkles size={14} /><span>{t('pricingPageBadge')}</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-[#F8FAFC] mb-4">Choisissez votre plan</h1>
+          <h1 className="text-4xl md:text-5xl font-bold text-[#F8FAFC] mb-4">{t('pricingPageTitle')}</h1>
           <p className="text-lg text-[#94A3B8] max-w-2xl mx-auto">
-            Accédez à tout le contenu théorique et aux outils d&apos;étude.
+            {t('pricingPageSubtitle')}
           </p>
         </div>
 
@@ -198,13 +219,22 @@ export default function PricingPage() {
               className={`relative flex flex-col rounded-2xl border transition-all duration-300 ${
                 plan.popular
                   ? 'bg-[#1A2035] border-[#3B82F6]/40 shadow-[0_0_30px_rgba(59,130,246,0.15)]'
+                  : currentPlan === plan.id
+                  ? 'bg-[#1A2035] border-[#22C55E]/40 shadow-[0_0_20px_rgba(34,197,94,0.1)]'
                   : 'bg-[#1A2035] border-[#2D3A52] hover:border-[#3B82F6]/30'
               }`}
             >
-              {plan.popular && (
+              {plan.popular && !currentPlan && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
                   <span className="px-4 py-1 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white text-xs font-semibold rounded-full whitespace-nowrap">
-                    POPULAIRE
+                    {t('pricingPagePopular')}
+                  </span>
+                </div>
+              )}
+              {currentPlan === plan.id && (
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
+                  <span className="px-4 py-1 bg-gradient-to-r from-[#22C55E] to-[#16A34A] text-white text-xs font-semibold rounded-full whitespace-nowrap shadow-lg shadow-green/20">
+                    ✓ Votre forfait actuel
                   </span>
                 </div>
               )}
@@ -237,17 +267,21 @@ export default function PricingPage() {
 
                 <button
                   onClick={() => handlePlanClick(plan.id)}
-                  disabled={subscribing === plan.id}
+                  disabled={subscribing === plan.id || currentPlan === plan.id}
                   className={`w-full py-2.5 rounded-xl text-sm font-semibold text-center transition-all flex items-center justify-center gap-2 ${
-                    plan.popular
+                    currentPlan === plan.id
+                      ? 'bg-[#22C55E]/10 border border-[#22C55E]/30 text-[#22C55E] cursor-default'
+                      : plan.popular
                       ? 'bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white hover:shadow-lg hover:shadow-[#3B82F6]/20'
                       : plan.type === 'free'
                       ? 'bg-[#3B82F6] text-white hover:bg-[#2563EB]'
                       : 'bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white hover:shadow-lg hover:shadow-[#3B82F6]/20'
                   } ${subscribing === plan.id ? 'opacity-70' : ''}`}
                 >
-                  {subscribing === plan.id ? (
-                    <><Loader2 size={14} className="animate-spin" /> Redirection...</>
+                  {currentPlan === plan.id ? (
+                    '✓ Actif'
+                  ) : subscribing === plan.id ? (
+                    <><Loader2 size={14} className="animate-spin" /> {t('pricingPageRedirecting')}</>
                   ) : (
                     plan.cta
                   )}
@@ -258,7 +292,7 @@ export default function PricingPage() {
         </div>
 
         <p className="text-center text-sm text-[#64748B] mt-12">
-          Vous pouvez annuler à tout moment. Aucune question, aucun engagement.
+          {t('pricingPageCancelAnytime')}
         </p>
       </div>
 
@@ -267,9 +301,9 @@ export default function PricingPage() {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
           <div className="absolute inset-0 bg-black/70" onClick={() => { setShowTradePicker(false); setPendingPlan(null); }} />
           <div className="relative bg-[#0A0E1A] border border-[#2D3A52] rounded-2xl p-6 w-full max-w-sm shadow-2xl">
-            <h3 className="text-lg font-bold text-[#F8FAFC] mb-1">Choisissez votre métier</h3>
+            <h3 className="text-lg font-bold text-[#F8FAFC] mb-1">{t('pricingPageModalTitle')}</h3>
             <p className="text-sm text-[#94A3B8] mb-5">
-              Le plan ESSENTIEL verrouille votre choix. Vous ne pourrez pas changer par la suite.
+              {t('pricingPageModalDesc')}
             </p>
 
             {loading ? (
@@ -307,7 +341,7 @@ export default function PricingPage() {
                 onClick={() => { setShowTradePicker(false); setPendingPlan(null); }}
                 className="flex-1 py-2.5 rounded-xl bg-[#1A2035] text-[#94A3B8] text-sm font-medium hover:bg-[#243047] transition-colors"
               >
-                Annuler
+                {t('pricingPageModalCancel')}
               </button>
               <button
                 onClick={confirmTradeSelection}
@@ -315,8 +349,8 @@ export default function PricingPage() {
                 className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white text-sm font-semibold hover:shadow-lg hover:shadow-[#3B82F6]/20 transition-all disabled:opacity-40"
               >
                 {subscribing === pendingPlan ? (
-                  <><Loader2 size={14} className="animate-spin inline mr-1" /> Redirection...</>
-                ) : 'Confirmer'}
+                  <><Loader2 size={14} className="animate-spin inline mr-1" /> {t('pricingPageRedirecting')}</>
+                ) : t('pricingPageModalConfirm')}
               </button>
             </div>
           </div>

@@ -23,7 +23,7 @@ export interface ExamRecord {
   reviewMode: boolean;
 }
 
-const STORAGE_KEY = 'certquebec_exam_history';
+const STORAGE_KEY = 'metierium_exam_history';
 const MAX_RECORDS = 100;
 
 export function saveExamResult(record: ExamRecord): void {

@@ -22,11 +22,11 @@ const NAV_ITEMS = [
 { href: '/app', label: 'Tableau de bord', icon: LayoutDashboard },
 { href: '/theory', label: 'Théorie', icon: BookMarked },
 { href: '/exams', label: 'Examens', icon: BookOpen },
-{ href: '/stats', label: 'Statistiques', icon: BarChart3 },
+{ href: '/app', label: 'Statistiques', icon: BarChart3 },
 { href: '/faq', label: 'FAQ', icon: HelpCircle },
 { href: '/blog', label: 'Blog', icon: Newspaper },
 { href: '/tutor', label: 'Tuteur IA', icon: MessageSquare },
-{ href: '/subscription', label: 'Abonnement', icon: CreditCard },
+{ href: '/pricing', label: 'Abonnement', icon: CreditCard },
 { href: '/profile', label: 'Profil', icon: User },
 ];
 

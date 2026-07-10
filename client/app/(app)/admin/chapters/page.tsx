@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { Plus, Pencil, Trash2, Loader2, X, Check, AlertCircle, BookOpen } from 'lucide-react';
 import { authApi } from '@/lib/api';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 interface Trade {
   id: string;
@@ -29,6 +30,7 @@ export default function AdminChapters() {
   const [formData, setFormData] = useState({ title: '', tradeId: '', theoryContent: '', order: 0 });
   const [saving, setSaving] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
+  const { t, locale } = useLocale();
 
   useEffect(() => {
     Promise.all([fetchChapters(), fetchTrades()]);
@@ -39,7 +41,7 @@ export default function AdminChapters() {
       const data = await authApi('/api/admin/chapters');
       setChapters(data.chapters ?? data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Erreur de chargement');
+      setError(err instanceof Error ? err.message : t('adminChaptersErrorLoading'));
     } finally {
       setLoading(false);
     }
@@ -80,7 +82,7 @@ export default function AdminChapters() {
   async function handleSave(e: React.FormEvent) {
     e.preventDefault();
     if (!formData.title.trim()) {
-      setFormError('Le titre est requis');
+      setFormError(t('adminChaptersTitleRequired'));
       return;
     }
     setSaving(true);
@@ -101,19 +103,19 @@ export default function AdminChapters() {
       setEditing(null);
       await fetchChapters();
     } catch (err) {
-      setFormError(err instanceof Error ? err.message : 'Erreur de sauvegarde');
+      setFormError(err instanceof Error ? err.message : t('adminChaptersSaveError'));
     } finally {
       setSaving(false);
     }
   }
 
   async function handleDelete(id: string) {
-    if (!confirm('Supprimer ce chapitre ?')) return;
+    if (!confirm(t('adminChaptersDeleteConfirm'))) return;
     try {
       await authApi(`/api/admin/chapters/${id}`, { method: 'DELETE' });
       await fetchChapters();
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Erreur de suppression');
+      setError(err instanceof Error ? err.message : t('adminChaptersDeleteError'));
     }
   }
 
@@ -132,16 +134,16 @@ export default function AdminChapters() {
         <div>
           <div className="flex items-center gap-3 mb-2">
             <BookOpen size={24} className="text-[#3B82F6]" />
-            <h1 className="text-2xl font-bold text-[#F8FAFC]">Chapitres</h1>
+            <h1 className="text-2xl font-bold text-[#F8FAFC]">{t('adminChapters')}</h1>
           </div>
-          <p className="text-sm text-[#94A3B8]">Gérer les chapitres et leur contenu théorique</p>
+          <p className="text-sm text-[#94A3B8]">{t('adminChaptersDesc')}</p>
         </div>
         <button
           onClick={openCreate}
           className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white rounded-lg text-sm font-semibold hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all"
         >
           <Plus size={16} />
-          Ajouter
+          {t('adminAdd')}
         </button>
       </div>
 
@@ -160,7 +162,7 @@ export default function AdminChapters() {
           onChange={(e) => setFilterTrade(e.target.value)}
           className="px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
         >
-          <option value="">Tous les métiers</option>
+          <option value="">{t('adminChaptersFilterAll')}</option>
           {trades.map((t) => (
             <option key={t.id} value={t.id}>{t.name}</option>
           ))}
@@ -173,7 +175,7 @@ export default function AdminChapters() {
           <div className="bg-[#1A2035] border border-[#2D3A52] rounded-2xl w-full max-w-2xl p-6 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-semibold text-[#F8FAFC]">
-                {editing ? 'Modifier le chapitre' : 'Ajouter un chapitre'}
+                {editing ? t('adminChaptersEditTitle') : t('adminChaptersAddTitle')}
               </h2>
               <button onClick={() => setShowForm(false)} className="text-[#94A3B8] hover:text-[#F8FAFC]">
                 <X size={20} />
@@ -190,18 +192,18 @@ export default function AdminChapters() {
             <form onSubmit={handleSave} className="space-y-4">
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Titre</label>
+                  <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminChaptersLabelTitle')}</label>
                   <input
                     type="text"
                     value={formData.title}
                     onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                    placeholder="Introduction à l'électricité"
+                    placeholder={t('adminChaptersPlaceholderTitle')}
                     required
                     className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6]"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Métier</label>
+                  <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminChaptersLabelTrade')}</label>
                   <select
                     value={formData.tradeId}
                     onChange={(e) => setFormData({ ...formData, tradeId: e.target.value })}
@@ -214,7 +216,7 @@ export default function AdminChapters() {
                 </div>
               </div>
               <div>
-                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Ordre</label>
+                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminChaptersLabelOrder')}</label>
                 <input
                   type="number"
                   value={formData.order}
@@ -224,11 +226,11 @@ export default function AdminChapters() {
                 />
               </div>
               <div>
-                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Contenu théorique (Markdown)</label>
+                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminChaptersLabelTheory')}</label>
                 <textarea
                   value={formData.theoryContent}
                   onChange={(e) => setFormData({ ...formData, theoryContent: e.target.value })}
-                  placeholder="Contenu théorique en markdown..."
+                  placeholder={t('adminChaptersPlaceholderTheory')}
                   rows={12}
                   className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] resize-none font-mono"
                 />
@@ -239,7 +241,7 @@ export default function AdminChapters() {
                   onClick={() => setShowForm(false)}
                   className="px-4 py-2.5 bg-[#2D3A52] text-[#94A3B8] rounded-lg text-sm font-medium hover:text-[#F8FAFC] transition-colors"
                 >
-                  Annuler
+                  {t('adminCancel')}
                 </button>
                 <button
                   type="submit"
@@ -247,7 +249,7 @@ export default function AdminChapters() {
                   className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white rounded-lg text-sm font-semibold disabled:opacity-50 transition-all"
                 >
                   {saving ? <Loader2 size={16} className="animate-spin" /> : <Check size={16} />}
-                  {saving ? 'Sauvegarde...' : 'Sauvegarder'}
+                  {saving ? t('adminChaptersSaving') : t('adminSave')}
                 </button>
               </div>
             </form>
@@ -261,18 +263,18 @@ export default function AdminChapters() {
           <table className="w-full">
             <thead>
               <tr className="border-b border-[#2D3A52]">
-                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Ordre</th>
-                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Titre</th>
-                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Métier</th>
-                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Théorie</th>
-                <th className="text-right px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Actions</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminChaptersTableOrder')}</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminChaptersTableTitle')}</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminChaptersTableTrade')}</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminChaptersTableTheory')}</th>
+                <th className="text-right px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminChaptersTableActions')}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#2D3A52]">
               {filteredChapters.length === 0 ? (
                 <tr>
                   <td colSpan={5} className="px-6 py-12 text-center text-[#64748B] text-sm">
-                    Aucun chapitre trouvé
+                    {t('adminNoChapters')}
                   </td>
                 </tr>
               ) : (
@@ -288,11 +290,11 @@ export default function AdminChapters() {
                     <td className="px-6 py-4">
                       {chapter.theoryContent ? (
                         <span className="px-2 py-0.5 bg-[#10B981]/10 text-[#10B981] text-xs rounded border border-[#10B981]/20">
-                          Publié
+                          {t('adminChaptersPublished')}
                         </span>
                       ) : (
                         <span className="px-2 py-0.5 bg-[#64748B]/10 text-[#64748B] text-xs rounded border border-[#64748B]/20">
-                          Vide
+                          {t('adminChaptersEmpty')}
                         </span>
                       )}
                     </td>

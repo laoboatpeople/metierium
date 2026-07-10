@@ -1,11 +1,13 @@
 import { Router, Request, Response } from 'express';
 import { prisma } from '../config/database';
+import { authenticate } from '../middleware/auth';
 
 const router = Router();
 
 /**
  * GET /api/questions
  * Return questions filtered by trade, chapter, difficulty, type, and locale.
+ * FREE users get only chapter 1 questions.
  *
  * Query params:
  *   - tradeId    (string, required): The trade ID
@@ -16,10 +18,10 @@ const router = Router();
  *   - limit      (number, default 10): Max questions to return
  *   - offset     (number, default 0): Pagination offset
  */
-router.get('/', async (req: Request, res: Response): Promise<void> => {
+router.get('/', authenticate, async (req: Request, res: Response): Promise<void> => {
   try {
     const { tradeId, chapterId, difficulty, type, locale } = req.query;
-    const limit = Math.min(100, Math.max(1, parseInt(req.query.limit as string) || 10));
+    const limit = Math.min(100, Math.max(1, parseInt(req.query.limit as string) || 20));
     const offset = Math.max(0, parseInt(req.query.offset as string) || 0);
 
     if (!tradeId) {
@@ -27,9 +29,23 @@ router.get('/', async (req: Request, res: Response): Promise<void> => {
       return;
     }
 
+    const user = (req as any).user;
+    const isFree = !user || user.plan === 'FREE';
+
     const where: Record<string, unknown> = {
       tradeId: tradeId as string,
     };
+
+    // FREE users: only chapter 1
+    if (isFree && !chapterId) {
+      // Get the first chapter for this trade
+      const firstChapter = await prisma.chapter.findFirst({
+        where: { tradeId: tradeId as string },
+        orderBy: { number: 'asc' },
+        select: { id: true },
+      });
+      if (firstChapter) where.chapterId = firstChapter.id;
+    }
 
     if (chapterId) where.chapterId = chapterId as string;
     if (difficulty) where.difficulty = difficulty as string;

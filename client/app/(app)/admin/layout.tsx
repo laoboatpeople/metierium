@@ -16,18 +16,21 @@ import {
   X,
   Shield,
 } from 'lucide-react';
-
-const ADMIN_NAV_ITEMS = [
-  { href: '/app/admin', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/app/admin/trades', label: 'Métiers', icon: Briefcase },
-  { href: '/app/admin/chapters', label: 'Chapitres', icon: BookOpen },
-  { href: '/app/admin/questions', label: 'Questions', icon: HelpCircle },
-  { href: '/app/admin/users', label: 'Utilisateurs', icon: Users },
-];
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 export default function AdminLayout({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
+  const { t } = useLocale();
+
+  const ADMIN_NAV_ITEMS = [
+    { href: '/app/admin', label: 'Dashboard', icon: LayoutDashboard },
+    { href: '/app/admin/trades', label: t('adminNavTrades'), icon: Briefcase },
+    { href: '/app/admin/chapters', label: 'Chapitres', icon: BookOpen },
+    { href: '/app/admin/questions', label: 'Questions', icon: HelpCircle },
+    { href: '/app/admin/users', label: 'Utilisateurs', icon: Users },
+  ];
+
   const [user, setUser] = useState<{ name: string; email: string; role?: string } | null>(null);
   const [authorized, setAuthorized] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -67,7 +70,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
       <div className="min-h-screen bg-[#0A0E1A] flex items-center justify-center">
         <div className="flex flex-col items-center gap-3">
           <Shield size={32} className="text-[#3B82F6] animate-pulse" />
-          <p className="text-[#94A3B8] text-sm">Vérification des accès...</p>
+          <p className="text-[#94A3B8] text-sm">{t('adminCheckingAccess')}</p>
         </div>
       </div>
     );
@@ -142,7 +145,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               className="flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#243047] transition-colors"
             >
               <GraduationCap size={18} />
-              <span>Retour à l&apos;app</span>
+              <span>{t('adminBackToApp')}</span>
             </Link>
           </div>
 
@@ -162,7 +165,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
               className="flex items-center gap-2 w-full px-3 py-2 rounded-lg text-sm text-[#94A3B8] hover:text-[#EF4444] hover:bg-[#EF4444]/5 transition-colors"
             >
               <LogOut size={16} />
-              <span>Déconnexion</span>
+              <span>{t('signOut')}</span>
             </button>
           </div>
         </div>

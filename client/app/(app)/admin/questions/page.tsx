@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { Plus, Pencil, Trash2, Loader2, X, Check, AlertCircle, HelpCircle } from 'lucide-react';
+import { useLocale } from '@/src/contexts/LocaleContext';
 import { authApi } from '@/lib/api';
 
 interface Trade {
@@ -26,6 +27,7 @@ interface Question {
 }
 
 export default function AdminQuestions() {
+  const { t, locale } = useLocale();
   const [questions, setQuestions] = useState<Question[]>([]);
   const [trades, setTrades] = useState<Trade[]>([]);
   const [chapters, setChapters] = useState<Chapter[]>([]);
@@ -54,7 +56,7 @@ export default function AdminQuestions() {
       const data = await authApi('/api/admin/questions');
       setQuestions(data.questions ?? data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Erreur de chargement');
+      setError(err instanceof Error ? err.message : t('adminQuestionsLoadError'));
     } finally {
       setLoading(false);
     }
@@ -120,15 +122,15 @@ export default function AdminQuestions() {
   async function handleSave(e: React.FormEvent) {
     e.preventDefault();
     if (!formData.text.trim()) {
-      setFormError('Le texte de la question est requis');
+      setFormError(t('adminQuestionsTextRequired'));
       return;
     }
     if (formData.options.some((o) => !o.trim())) {
-      setFormError('Toutes les options doivent être remplies');
+      setFormError(t('adminQuestionsOptionsRequired'));
       return;
     }
     if (!formData.chapterId) {
-      setFormError('Veuillez sélectionner un chapitre');
+      setFormError(t('adminQuestionsSelectChapter'));
       return;
     }
 
@@ -156,19 +158,19 @@ export default function AdminQuestions() {
       setShowForm(false);
       await fetchQuestions();
     } catch (err) {
-      setFormError(err instanceof Error ? err.message : 'Erreur de sauvegarde');
+      setFormError(err instanceof Error ? err.message : t('adminQuestionsSaveError'));
     } finally {
       setSaving(false);
     }
   }
 
   async function handleDelete(id: string) {
-    if (!confirm('Supprimer cette question ?')) return;
+    if (!confirm(t('adminQuestionsConfirmDeleteQuestion'))) return;
     try {
       await authApi(`/api/admin/questions/${id}`, { method: 'DELETE' });
       await fetchQuestions();
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Erreur de suppression');
+      setError(err instanceof Error ? err.message : t('adminQuestionsDeleteError'));
     }
   }
 
@@ -187,16 +189,16 @@ export default function AdminQuestions() {
         <div>
           <div className="flex items-center gap-3 mb-2">
             <HelpCircle size={24} className="text-[#3B82F6]" />
-            <h1 className="text-2xl font-bold text-[#F8FAFC]">Questions</h1>
+            <h1 className="text-2xl font-bold text-[#F8FAFC]">{t('adminQuestions')}</h1>
           </div>
-          <p className="text-sm text-[#94A3B8]">Gérer les questions à choix multiples</p>
+          <p className="text-sm text-[#94A3B8]">{t('adminQuestionsDesc')}</p>
         </div>
         <button
           onClick={openCreate}
           className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white rounded-lg text-sm font-semibold hover:shadow-[0_0_20px_rgba(59,130,246,0.3)] transition-all"
         >
           <Plus size={16} />
-          Ajouter
+          {t('adminAdd')}
         </button>
       </div>
 
@@ -221,7 +223,7 @@ export default function AdminQuestions() {
           }}
           className="px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
         >
-          <option value="">Tous les métiers</option>
+          <option value="">{t('adminQuestionsAllTrades')}</option>
           {trades.map((t) => (
             <option key={t.id} value={t.id}>{t.name}</option>
           ))}
@@ -231,7 +233,7 @@ export default function AdminQuestions() {
           onChange={(e) => setFilterChapter(e.target.value)}
           className="px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
         >
-          <option value="">Tous les chapitres</option>
+          <option value="">{t('adminQuestionsAllChapters')}</option>
           {availableChapters.map((ch) => (
             <option key={ch.id} value={ch.id}>{ch.title}</option>
           ))}
@@ -244,7 +246,7 @@ export default function AdminQuestions() {
           <div className="bg-[#1A2035] border border-[#2D3A52] rounded-2xl w-full max-w-2xl p-6 max-h-[90vh] overflow-y-auto">
             <div className="flex items-center justify-between mb-6">
               <h2 className="text-lg font-semibold text-[#F8FAFC]">
-                {editing ? 'Modifier la question' : 'Ajouter une question'}
+                {editing ? t('adminQuestionsEditTitle') : t('adminQuestionsAddTitle')}
               </h2>
               <button onClick={() => setShowForm(false)} className="text-[#94A3B8] hover:text-[#F8FAFC]">
                 <X size={20} />
@@ -260,11 +262,11 @@ export default function AdminQuestions() {
 
             <form onSubmit={handleSave} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Question</label>
+                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminQuestionsQuestionLabel')}</label>
                 <textarea
                   value={formData.text}
                   onChange={(e) => setFormData({ ...formData, text: e.target.value })}
-                  placeholder="Quelle est la couleur du fil de terre au Québec ?"
+                  placeholder={t('adminQuestionsTextPlaceholder')}
                   rows={3}
                   required
                   className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] resize-none"
@@ -273,7 +275,7 @@ export default function AdminQuestions() {
 
               <div className="grid grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Métier</label>
+                  <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminQuestionsTrade')}</label>
                   <select
                     value={formData.tradeId}
                     onChange={(e) => setFormData({ ...formData, tradeId: e.target.value, chapterId: '' })}
@@ -285,13 +287,13 @@ export default function AdminQuestions() {
                   </select>
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Chapitre</label>
+                  <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminQuestionsChapter')}</label>
                   <select
                     value={formData.chapterId}
                     onChange={(e) => setFormData({ ...formData, chapterId: e.target.value })}
                     className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
                   >
-                    <option value="">Sélectionner</option>
+                    <option value="">{t('adminQuestionsSelect')}</option>
                     {availableChapters.map((ch) => (
                       <option key={ch.id} value={ch.id}>{ch.title}</option>
                     ))}
@@ -301,7 +303,7 @@ export default function AdminQuestions() {
 
               {/* Options */}
               <div>
-                <label className="block text-sm font-medium text-[#94A3B8] mb-2">Options de réponse</label>
+                <label className="block text-sm font-medium text-[#94A3B8] mb-2">{t('adminQuestionsOptions')}</label>
                 {formData.options.map((opt, i) => (
                   <div key={i} className="flex items-center gap-3 mb-2">
                     <button
@@ -319,13 +321,13 @@ export default function AdminQuestions() {
                       type="text"
                       value={opt}
                       onChange={(e) => updateOption(i, e.target.value)}
-                      placeholder={`Option ${i + 1}`}
+                      placeholder={t('adminQuestionsOptionNumber', { number: i + 1 })}
                       className="flex-1 px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6]"
                     />
                   </div>
                 ))}
                 <p className="text-xs text-[#64748B] mt-1">
-                  Cliquez sur le numéro pour définir la bonne réponse
+                  {t('adminQuestionsOptionsHint')}
                 </p>
               </div>
 
@@ -335,7 +337,7 @@ export default function AdminQuestions() {
                   onClick={() => setShowForm(false)}
                   className="px-4 py-2.5 bg-[#2D3A52] text-[#94A3B8] rounded-lg text-sm font-medium hover:text-[#F8FAFC] transition-colors"
                 >
-                  Annuler
+                  {t('adminCancel')}
                 </button>
                 <button
                   type="submit"
@@ -343,7 +345,7 @@ export default function AdminQuestions() {
                   className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white rounded-lg text-sm font-semibold disabled:opacity-50 transition-all"
                 >
                   {saving ? <Loader2 size={16} className="animate-spin" /> : <Check size={16} />}
-                  {saving ? 'Sauvegarde...' : 'Sauvegarder'}
+                  {saving ? t('adminQuestionsSaving') : t('adminSave')}
                 </button>
               </div>
             </form>
@@ -357,17 +359,17 @@ export default function AdminQuestions() {
           <table className="w-full">
             <thead>
               <tr className="border-b border-[#2D3A52]">
-                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Question</th>
-                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Chapitre</th>
-                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Options</th>
-                <th className="text-right px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Actions</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminQuestionsColQuestion')}</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminQuestionsColChapter')}</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminQuestionsColOptions')}</th>
+                <th className="text-right px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminQuestionsColActions')}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#2D3A52]">
               {filteredQuestions.length === 0 ? (
                 <tr>
                   <td colSpan={4} className="px-6 py-12 text-center text-[#64748B] text-sm">
-                    Aucune question trouvée
+                    {t('adminNoQuestions')}
                   </td>
                 </tr>
               ) : (
@@ -380,7 +382,7 @@ export default function AdminQuestions() {
                       </span>
                     </td>
                     <td className="px-6 py-4 text-sm text-[#94A3B8]">
-                      {q.options.length} réponses
+                      {t('adminQuestionsCount', { count: q.options.length })}
                     </td>
                     <td className="px-6 py-4 text-right">
                       <div className="flex items-center justify-end gap-2">

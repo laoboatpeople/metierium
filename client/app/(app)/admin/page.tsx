@@ -10,6 +10,7 @@ import {
   Loader2,
 } from 'lucide-react';
 import { authApi } from '@/lib/api';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 interface Stats {
   totalUsers: number;
@@ -19,6 +20,7 @@ interface Stats {
 }
 
 export default function AdminDashboard() {
+  const { t, locale } = useLocale();
   const [stats, setStats] = useState<Stats | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -32,7 +34,7 @@ export default function AdminDashboard() {
       const data = await authApi('/api/admin/stats');
       setStats(data);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Erreur de chargement');
+      setError(err instanceof Error ? err.message : t('somethingWentWrong'));
     } finally {
       setLoading(false);
     }
@@ -55,10 +57,10 @@ export default function AdminDashboard() {
   }
 
   const cards = [
-    { label: 'Utilisateurs', value: stats?.totalUsers ?? 0, icon: Users, color: 'from-[#3B82F6] to-[#06B6D4]' },
-    { label: 'Métiers', value: stats?.totalTrades ?? 0, icon: Briefcase, color: 'from-[#10B981] to-[#059669]' },
-    { label: 'Chapitres', value: stats?.totalChapters ?? 0, icon: BookOpen, color: 'from-[#8B5CF6] to-[#7C3AED]' },
-    { label: 'Questions', value: stats?.totalQuestions ?? 0, icon: HelpCircle, color: 'from-[#F59E0B] to-[#D97706]' },
+    { label: t('adminTotalUsers'), value: stats?.totalUsers ?? 0, icon: Users, color: 'from-[#3B82F6] to-[#06B6D4]' },
+    { label: t('adminTotalTrades'), value: stats?.totalTrades ?? 0, icon: Briefcase, color: 'from-[#10B981] to-[#059669]' },
+    { label: t('adminTotalChapters'), value: stats?.totalChapters ?? 0, icon: BookOpen, color: 'from-[#8B5CF6] to-[#7C3AED]' },
+    { label: t('adminTotalQuestions'), value: stats?.totalQuestions ?? 0, icon: HelpCircle, color: 'from-[#F59E0B] to-[#D97706]' },
   ];
 
   return (
@@ -67,9 +69,9 @@ export default function AdminDashboard() {
       <div className="mb-8">
         <div className="flex items-center gap-3 mb-2">
           <TrendingUp size={24} className="text-[#3B82F6]" />
-          <h1 className="text-2xl font-bold text-[#F8FAFC]">Tableau de bord</h1>
+          <h1 className="text-2xl font-bold text-[#F8FAFC]">{t('adminDashboard')}</h1>
         </div>
-        <p className="text-sm text-[#94A3B8]">Aperçu général de la plateforme</p>
+        <p className="text-sm text-[#94A3B8]">{t('adminDashboardDesc')}</p>
       </div>
 
       {/* Stats cards */}

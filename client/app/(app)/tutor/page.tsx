@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { MessageSquare, Send, Bot, User, Loader2, Sparkles, AlertCircle } from 'lucide-react';
+import { MessageSquare, Send, Bot, User, Loader2, Sparkles, AlertCircle, ArrowLeft } from 'lucide-react';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 
@@ -28,12 +28,36 @@ export default function TutorPage() {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [returnUrl, setReturnUrl] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
+
+  // Read return URL from localStorage
+  useEffect(() => {
+    try {
+      const url = localStorage.getItem('tutorReturnUrl');
+      if (url) setReturnUrl(url);
+    } catch {}
+  }, []);
+
+  // Listen for exam context (from "Expliquer avec le tuteur IA" button)
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem('tutorContext');
+      if (stored) {
+        const ctx = JSON.parse(stored);
+        localStorage.removeItem('tutorContext');
+        if (ctx.question) {
+          const prompt = `Explique-moi en détail la question suivante, avec un ton professionnel et pédagogique:\n\nQuestion: ${ctx.question}\n\nExplique les concepts derrière cette question de façon claire et structurée.`;
+          setTimeout(() => sendMessage(prompt), 500);
+        }
+      }
+    } catch {}
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
   const sendMessage = async (text: string) => {
     if (!text.trim() || loading) return;
@@ -84,6 +108,18 @@ export default function TutorPage() {
     <div className="max-w-3xl mx-auto flex flex-col h-[calc(100vh-8rem)]">
       {/* Header */}
       <div className="flex items-center gap-3 mb-4">
+        {returnUrl && (
+          <button
+            onClick={() => {
+              localStorage.removeItem('tutorReturnUrl');
+              window.location.href = returnUrl;
+            }}
+            className="flex items-center gap-1 text-xs text-[#3B82F6] hover:text-[#06B6D4] transition-colors mr-1"
+          >
+            <ArrowLeft size={14} />
+            Retour
+          </button>
+        )}
         <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#8B5CF6] to-[#3B82F6] flex items-center justify-center">
           <Bot size={20} className="text-white" />
         </div>

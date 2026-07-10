@@ -16,7 +16,7 @@ const PLAN_PRICES: Record<PlanType, { priceId: string; label: string }> = {
 
 /**
  * POST /api/stripe/create-checkout-session
- * Creates a Stripe Checkout session for essential ($29/mois), pro ($49/mois) or lifetime ($249).
+ * Creates a Stripe Checkout session for essential ($29/mois), pro ($49/mois) or lifetime ($559).
  * Optionally accepts a tradeId for plan locking.
  */
 router.post('/create-checkout-session', authenticate, async (req: Request, res: Response): Promise<void> => {

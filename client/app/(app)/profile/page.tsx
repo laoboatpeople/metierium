@@ -4,11 +4,13 @@ import { useState, useEffect } from 'react';
 import { User, Mail, Shield, Calendar, CreditCard, BadgeCheck, LogOut, Loader2, ChevronRight } from 'lucide-react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 
 export default function ProfilePage() {
   const router = useRouter();
+  const { t } = useLocale();
   const [user, setUser] = useState<{ name: string; email: string; role?: string } | null>(null);
   const [loading, setLoading] = useState(true);
   const [subscription, setSubscription] = useState<{ plan: string; status: string; tradeName?: string } | null>(null);
@@ -42,8 +44,8 @@ export default function ProfilePage() {
       <div className="flex items-center gap-3">
         <User size={28} className="text-[#3B82F6]" />
         <div>
-          <h1 className="text-2xl font-bold text-[#F8FAFC]">Profil</h1>
-          <p className="text-sm text-[#94A3B8]">Gérez vos informations personnelles</p>
+          <h1 className="text-2xl font-bold text-[#F8FAFC]">{t('profile')}</h1>
+          <p className="text-sm text-[#94A3B8]">{t('profileSubtitle')}</p>
         </div>
       </div>
 
@@ -54,11 +56,11 @@ export default function ProfilePage() {
             {userInitial}
           </div>
           <div>
-            <h2 className="text-lg font-semibold text-[#F8FAFC]">{user?.name || 'Utilisateur'}</h2>
+            <h2 className="text-lg font-semibold text-[#F8FAFC]">{user?.name || t('profileDefaultName')}</h2>
             <p className="text-sm text-[#94A3B8]">{user?.email || ''}</p>
             <span className="inline-flex items-center gap-1 text-xs text-[#3B82F6] bg-[#3B82F6]/10 px-2 py-0.5 rounded-full mt-1">
               <BadgeCheck size={12} />
-              {user?.role === 'ADMIN' ? 'Administrateur' : 'Étudiant'}
+              {user?.role === 'ADMIN' ? t('profileRoleAdmin') : t('profileRoleStudent')}
             </span>
           </div>
         </div>
@@ -70,7 +72,7 @@ export default function ProfilePage() {
           </div>
           <div className="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-[#111827]">
             <Shield size={16} className="text-[#64748B]" />
-            <span className="text-sm text-[#94A3B8]">Rôle: {user?.role === 'ADMIN' ? 'Admin' : 'Étudiant'}</span>
+            <span className="text-sm text-[#94A3B8]">{t('profileRoleLabel')}: {user?.role === 'ADMIN' ? t('adminRoleAdmin') : t('adminRoleStudent')}</span>
           </div>
         </div>
       </div>
@@ -83,8 +85,8 @@ export default function ProfilePage() {
               <CreditCard size={20} className="text-[#F59E0B]" />
             </div>
             <div>
-              <p className="text-sm font-medium text-[#F8FAFC]">Abonnement</p>
-              <p className="text-xs text-[#94A3B8]">Gérez votre abonnement et votre facturation</p>
+              <p className="text-sm font-medium text-[#F8FAFC]">{t('subscription')}</p>
+              <p className="text-xs text-[#94A3B8]">{t('profileSubscriptionDesc')}</p>
             </div>
           </div>
           <ChevronRight size={18} className="text-[#64748B] group-hover:text-[#F8FAFC] transition-colors" />
@@ -97,7 +99,7 @@ export default function ProfilePage() {
         className="w-full flex items-center justify-center gap-2 py-3 bg-[#EF4444]/10 border border-[#EF4444]/20 rounded-xl text-[#EF4444] font-medium hover:bg-[#EF4444]/20 transition-colors"
       >
         <LogOut size={18} />
-        Déconnexion
+        {t('signOut')}
       </button>
     </div>
   );
