@@ -699,7 +699,7 @@ export default function DashboardPage() {
                         {statsData.strengths.map(s => (
                           <div key={s.chapterNumber}>
                             <div className="flex justify-between text-xs mb-0.5">
-                              <span className="text-[#94A3B8]">Chapitre {s.chapterNumber} — {s.chapterName}</span>
+                              <span className="text-[#94A3B8]">{s.tradeName ? `${s.tradeName} > ` : ''}{s.chapterName}</span>
                               <span className="text-[#22C55E] font-medium">{s.percentage}%</span>
                             </div>
                             <div className="w-full h-2 bg-[#111827] rounded-full overflow-hidden">
@@ -723,7 +723,7 @@ export default function DashboardPage() {
                         {statsData.weaknesses.map(s => (
                           <div key={s.chapterNumber}>
                             <div className="flex justify-between text-xs mb-0.5">
-                              <span className="text-[#94A3B8]">Chapitre {s.chapterNumber} — {s.chapterName}</span>
+                              <span className="text-[#94A3B8]">{s.tradeName ? `${s.tradeName} > ` : ''}{s.chapterName}</span>
                               <span className="text-[#EF4444] font-medium">{s.percentage}%</span>
                             </div>
                             <div className="w-full h-2 bg-[#111827] rounded-full overflow-hidden">
@@ -740,13 +740,13 @@ export default function DashboardPage() {
                       <div className="mt-3 pt-3 border-t border-[#2D3A52]">
                         <p className="text-xs text-[#94A3B8] mb-1">Chapitres à réviser</p>
                         <div className="flex flex-wrap gap-1.5">
-                          {statsData.needsReview.map(ch => (
+                          {statsData.needsReview.map((ch, i) => (
                             <Link
-                              key={ch}
-                              href="/theory"
-                              className="text-xs bg-[#EF4444]/10 border border-[#EF4444]/20 text-[#EF4444] px-2 py-0.5 rounded-full hover:bg-[#EF4444]/20"
+                              key={ch.chapterName || i}
+                              href={`/theory?tradeId=${ch.tradeId || ''}&chapterId=${ch.chapterId || ''}`}
+                              className="text-xs bg-[#EF4444]/10 border border-[#EF4444]/20 text-[#EF4444] px-2 py-0.5 rounded-full hover:bg-[#EF4444]/20 transition-colors"
                             >
-                              {ch}
+                              {ch.tradeName ? `${ch.tradeName} > ${ch.chapterName}` : ch.chapterName}
                             </Link>
                           ))}
                         </div>
@@ -768,7 +768,7 @@ export default function DashboardPage() {
                         return (
                           <div key={ch.chapterNumber}>
                             <div className="flex justify-between text-xs mb-1">
-                              <span className="text-[#F8FAFC] font-medium">Ch. {ch.chapterNumber} — {ch.chapterName}</span>
+                              <span className="text-[#F8FAFC] font-medium">{ch.tradeName ? `${ch.tradeName} > ` : ''}{ch.chapterName}</span>
                               <span className="font-medium" style={{ color }}>{ch.percentage}%</span>
                             </div>
                             <div className="flex items-center gap-2">
@@ -812,7 +812,7 @@ export default function DashboardPage() {
                           </div>
                           <div>
                             <p className="text-sm font-medium text-[#F8FAFC]">
-                              {record.passed ? 'Réussi' : 'Échec'} — {record.totalQuestions} questions
+                              {record.tradeName ? `${record.tradeName} > ` : ''}{record.passed ? 'Réussi' : 'Échec'} — {record.totalQuestions} questions
                             </p>
                             <p className="text-xs text-[#64748B]">
                               {new Date(record.date).toLocaleDateString('fr-CA', {

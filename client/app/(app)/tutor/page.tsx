@@ -1,13 +1,23 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
-import { MessageSquare, Send, Bot, User, Loader2, Sparkles, AlertCircle, ArrowLeft } from 'lucide-react';
+import {
+  MessageSquare, Send, Bot, User, Loader2, Sparkles,
+  AlertCircle, ArrowLeft, Plus, ChevronRight, Trash2,
+} from 'lucide-react';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 
 interface ChatMessage {
   role: 'user' | 'assistant';
   content: string;
+}
+
+interface ChatHistory {
+  id: string;
+  title: string;
+  messages: ChatMessage[];
+  timestamp: number;
 }
 
 const SUGGESTED_QUESTIONS = [
@@ -18,33 +28,69 @@ const SUGGESTED_QUESTIONS = [
   "Donne-moi un exemple de calcul de chute de tension",
 ];
 
+const STORAGE_KEY = 'tutorChatHistories';
+
+const INITIAL_MESSAGE: ChatMessage = {
+  role: 'assistant',
+  content:
+    "Bonjour ! Je suis votre tuteur IA spécialisé dans les métiers de la construction au Québec. Posez-moi une question sur la théorie, le Code de construction, ou les examens de certification.",
+};
+
+function generateId(): string {
+  return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
+}
+
 export default function TutorPage() {
-  const [messages, setMessages] = useState<ChatMessage[]>([
-    {
-      role: 'assistant',
-      content: "Bonjour ! Je suis votre tuteur IA spécialisé dans les métiers de la construction au Québec. Posez-moi une question sur la théorie, le Code de construction, ou les examens de certification.",
-    },
-  ]);
+  const [messages, setMessages] = useState<ChatMessage[]>([{ ...INITIAL_MESSAGE }]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [returnUrl, setReturnUrl] = useState<string | null>(null);
+  const [chatHistories, setChatHistories] = useState<ChatHistory[]>([]);
+  const [currentChatId, setCurrentChatId] = useState<string | null>(null);
+  const [sidebarOpen, setSidebarOpen] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const isRestoringRef = useRef(false);
 
+  // ── Load chat histories from localStorage ──
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      if (stored) {
+        const parsed = JSON.parse(stored) as ChatHistory[];
+        setChatHistories(parsed);
+      }
+    } catch {
+      /* localStorage unavailable */
+    }
+  }, []);
+
+  // ── Persist chat histories to localStorage ──
+  useEffect(() => {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(chatHistories));
+    } catch {
+      /* localStorage unavailable */
+    }
+  }, [chatHistories]);
+
+  // ── Scroll to bottom on new messages ──
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // Read return URL from localStorage
+  // ── Read return URL from localStorage ──
   useEffect(() => {
     try {
       const url = localStorage.getItem('tutorReturnUrl');
       if (url) setReturnUrl(url);
-    } catch {}
+    } catch {
+      /* localStorage unavailable */
+    }
   }, []);
 
-  // Listen for exam context (from "Expliquer avec le tuteur IA" button)
+  // ── Listen for exam context (from "Expliquer avec le tuteur IA" button) ──
   useEffect(() => {
     try {
       const stored = localStorage.getItem('tutorContext');
@@ -52,12 +98,49 @@ export default function TutorPage() {
         const ctx = JSON.parse(stored);
         localStorage.removeItem('tutorContext');
         if (ctx.question) {
-          const prompt = `Explique-moi en détail la question suivante, avec un ton professionnel et pédagogique:\n\nQuestion: ${ctx.question}\n\nExplique les concepts derrière cette question de façon claire et structurée.`;
+          const prompt = ctx.question;
           setTimeout(() => sendMessage(prompt), 500);
         }
       }
-    } catch {}
+    } catch {
+      /* localStorage unavailable */
+    }
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ── Save current messages to chat history (when not restoring) ──
+  useEffect(() => {
+    if (isRestoringRef.current) return;
+    if (loading) return;
+    if (messages.length <= 1) return;
+
+    const timer = setTimeout(() => {
+      saveCurrentChat(messages);
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [messages, loading]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // ────────────────────────────────────────────
+  //  HELPERS
+  // ────────────────────────────────────────────
+
+  const saveCurrentChat = (msgs: ChatMessage[]) => {
+    setChatHistories((prev) => {
+      const id = currentChatId || generateId();
+      if (!currentChatId) setCurrentChatId(id);
+      const firstUser = msgs.find((m) => m.role === 'user');
+      const title = firstUser
+        ? firstUser.content.slice(0, 60)
+        : 'Nouvelle conversation';
+      const entry: ChatHistory = {
+        id,
+        title: title.length > 40 ? title + '…' : title,
+        messages: msgs,
+        timestamp: Date.now(),
+      };
+      const filtered = prev.filter((c) => c.id !== id);
+      return [entry, ...filtered];
+    });
+  };
 
   const sendMessage = async (text: string) => {
     if (!text.trim() || loading) return;
@@ -83,13 +166,13 @@ export default function TutorPage() {
       const data = await res.json();
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', content: data.response || data.message || 'Je n\'ai pas de réponse pour le moment.' },
+        { role: 'assistant', content: data.response || data.message || "Je n'ai pas de réponse pour le moment." },
       ]);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'Erreur de connexion');
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', content: 'Désolé, je n\'ai pas pu traiter votre demande. Veuillez réessayer.' },
+        { role: 'assistant', content: "Désolé, je n'ai pas pu traiter votre demande. Veuillez réessayer." },
       ]);
     }
     setLoading(false);
@@ -104,119 +187,271 @@ export default function TutorPage() {
     sendMessage(q);
   };
 
+  // ── New Chat ──
+  const handleNewChat = () => {
+    setMessages([{ ...INITIAL_MESSAGE }]);
+    setCurrentChatId(null);
+    setError(null);
+    setInput('');
+  };
+
+  // ── Select a chat from history ──
+  const handleSelectChat = (chat: ChatHistory) => {
+    isRestoringRef.current = true;
+    setMessages(chat.messages);
+    setCurrentChatId(chat.id);
+    setError(null);
+    setInput('');
+    // Re-enable saving after a tick
+    setTimeout(() => {
+      isRestoringRef.current = false;
+    }, 0);
+  };
+
+  // ── Delete a chat from history ──
+  const handleDeleteChat = (e: React.MouseEvent, id: string) => {
+    e.stopPropagation();
+    setChatHistories((prev) => prev.filter((c) => c.id !== id));
+    if (currentChatId === id) {
+      handleNewChat();
+    }
+  };
+
+  // ── Go back ──
+  const handleGoBack = () => {
+    localStorage.removeItem('tutorReturnUrl');
+    localStorage.removeItem('tutorContext');
+    window.close();
+    setTimeout(() => {
+      window.history.back();
+    }, 200);
+  };
+
+  // ────────────────────────────────────────────
+  //  RENDER
+  // ────────────────────────────────────────────
+
   return (
-    <div className="max-w-3xl mx-auto flex flex-col h-[calc(100vh-8rem)]">
-      {/* Header */}
-      <div className="flex items-center gap-3 mb-4">
-        {returnUrl && (
+    <div className="flex h-[calc(100vh-4rem)]">
+      {/* ── Left Sidebar ── */}
+      <aside
+        className={`${
+          sidebarOpen ? 'w-[240px] min-w-[240px]' : 'w-0 min-w-0 overflow-hidden'
+        } bg-[#0D1117] border-r border-[#1E2D45] flex flex-col transition-all duration-200`}
+      >
+        {/* New Chat button */}
+        <div className="p-3 border-b border-[#1E2D45]">
           <button
-            onClick={() => {
-              localStorage.removeItem('tutorReturnUrl');
-              window.location.href = returnUrl;
-            }}
-            className="flex items-center gap-1 text-xs text-[#3B82F6] hover:text-[#06B6D4] transition-colors mr-1"
+            onClick={handleNewChat}
+            className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-[#3B82F6] hover:bg-[#2563EB] text-white text-sm font-medium rounded-lg transition-colors"
+          >
+            <Plus size={16} />
+            + New Chat
+          </button>
+        </div>
+
+        {/* Chat History list */}
+        <div className="flex-1 overflow-y-auto px-2 py-2 space-y-1">
+          {chatHistories.length > 0 && (
+            <p className="px-2 text-[10px] font-semibold uppercase tracking-wider text-[#64748B] mb-2">
+              CHAT HISTORY
+            </p>
+          )}
+          {chatHistories.map((chat) => {
+            const isActive = chat.id === currentChatId;
+            return (
+              <button
+                key={chat.id}
+                onClick={() => handleSelectChat(chat)}
+                className={`w-full text-left px-2.5 py-2 rounded-lg text-xs transition-all group relative ${
+                  isActive
+                    ? 'bg-[#1A2332] border border-[#3B82F6]/40 text-[#F8FAFC]'
+                    : 'text-[#94A3B8] hover:bg-[#111827] hover:text-[#F8FAFC]'
+                }`}
+              >
+                <div className="flex items-start gap-2">
+                  <MessageSquare
+                    size={14}
+                    className={`mt-0.5 flex-shrink-0 ${
+                      isActive ? 'text-[#3B82F6]' : 'text-[#64748B]'
+                    }`}
+                  />
+                  <div className="flex-1 min-w-0">
+                    <p className="text-sm font-medium truncate">{chat.title}</p>
+                    <p className="text-[10px] text-[#64748B] mt-0.5">messages</p>
+                  </div>
+                  {isActive && (
+                    <ChevronRight
+                      size={14}
+                      className="text-[#3B82F6] flex-shrink-0 mt-1"
+                    />
+                  )}
+                  <button
+                    onClick={(e) => handleDeleteChat(e, chat.id)}
+                    className="opacity-0 group-hover:opacity-100 absolute right-1.5 top-1/2 -translate-y-1/2 p-1 rounded hover:bg-[#2D3A52] text-[#64748B] hover:text-[#EF4444] transition-all"
+                  >
+                    <Trash2 size={12} />
+                  </button>
+                </div>
+              </button>
+            );
+          })}
+          {chatHistories.length === 0 && (
+            <p className="px-2 text-xs text-[#64748B] py-4 text-center italic">
+              Aucun historique
+            </p>
+          )}
+        </div>
+
+        {/* Back to Results */}
+        <div className="p-3 border-t border-[#1E2D45]">
+          <button
+            onClick={handleGoBack}
+            className="w-full flex items-center gap-2 px-3 py-2 text-xs text-[#94A3B8] border border-[#2D3A52] rounded-lg hover:border-[#3B82F6]/40 hover:text-[#F8FAFC] transition-all"
           >
             <ArrowLeft size={14} />
-            Retour
+            Back to Results
           </button>
-        )}
-        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[#8B5CF6] to-[#3B82F6] flex items-center justify-center">
-          <Bot size={20} className="text-white" />
         </div>
-        <div>
-          <h1 className="text-lg font-bold text-[#F8FAFC]">Tuteur IA</h1>
-          <p className="text-xs text-[#94A3B8]">Posez vos questions sur la théorie et les examens</p>
-        </div>
-      </div>
+      </aside>
 
-      {/* Messages */}
-      <div className="flex-1 overflow-y-auto space-y-3 mb-4 pr-1">
-        {messages.map((msg, idx) => (
-          <div key={idx} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-            <div className={`flex gap-2 max-w-[85%] ${msg.role === 'user' ? 'flex-row-reverse' : ''}`}>
-              <div className={`w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0 mt-1 ${
-                msg.role === 'user' ? 'bg-[#3B82F6]/20' : 'bg-[#8B5CF6]/20'
-              }`}>
-                {msg.role === 'user' ? (
-                  <User size={14} className="text-[#3B82F6]" />
-                ) : (
-                  <Bot size={14} className="text-[#8B5CF6]" />
-                )}
-              </div>
-              <div className={`rounded-xl px-4 py-2.5 text-sm ${
-                msg.role === 'user'
-                  ? 'bg-[#3B82F6] text-white'
-                  : 'bg-[#1A2035] border border-[#2D3A52] text-[#F8FAFC]'
-              }`}>
-                <div className="whitespace-pre-wrap">{msg.content}</div>
-              </div>
-            </div>
-          </div>
-        ))}
-
-        {loading && (
-          <div className="flex justify-start">
-            <div className="flex gap-2 max-w-[85%]">
-              <div className="w-7 h-7 rounded-full bg-[#8B5CF6]/20 flex items-center justify-center flex-shrink-0 mt-1">
-                <Bot size={14} className="text-[#8B5CF6]" />
-              </div>
-              <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl px-4 py-3">
-                <Loader2 size={16} className="animate-spin text-[#8B5CF6]" />
-              </div>
-            </div>
-          </div>
-        )}
-
-        {error && (
-          <div className="flex items-center gap-2 px-4 py-2.5 bg-[#EF4444]/10 border border-[#EF4444]/20 rounded-lg text-sm text-[#EF4444]">
-            <AlertCircle size={14} />
-            {error}
-          </div>
-        )}
-
-        <div ref={messagesEndRef} />
-      </div>
-
-      {/* Suggested questions */}
-      {messages.length === 1 && (
-        <div className="mb-3">
-          <p className="text-xs text-[#64748B] mb-2 flex items-center gap-1">
-            <Sparkles size={12} className="text-[#F59E0B]" />
-            Suggestions
-          </p>
-          <div className="flex flex-wrap gap-1.5">
-            {SUGGESTED_QUESTIONS.map((q) => (
-              <button
-                key={q}
-                onClick={() => handleSuggested(q)}
-                className="text-xs text-[#94A3B8] bg-[#111827] border border-[#2D3A52] px-2.5 py-1.5 rounded-lg hover:border-[#3B82F6]/40 hover:text-[#F8FAFC] transition-all"
-              >
-                {q}
-              </button>
-            ))}
-          </div>
-        </div>
+      {/* ── Toggle sidebar button (when closed) ── */}
+      {!sidebarOpen && (
+        <button
+          onClick={() => setSidebarOpen(true)}
+          className="absolute top-4 left-4 z-10 p-1.5 rounded-lg bg-[#111827] border border-[#2D3A52] text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#3B82F6]/40 transition-all"
+        >
+          <MessageSquare size={16} />
+        </button>
       )}
 
-      {/* Input */}
-      <form onSubmit={handleSubmit} className="flex gap-2">
-        <input
-          ref={inputRef}
-          type="text"
-          value={input}
-          onChange={(e) => setInput(e.target.value)}
-          placeholder="Posez votre question..."
-          disabled={loading}
-          className="flex-1 px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] focus:ring-1 focus:ring-[#3B82F6]/30 disabled:opacity-50"
-        />
+      {/* ── Close sidebar button (when open) ── */}
+      {sidebarOpen && (
         <button
-          type="submit"
-          disabled={!input.trim() || loading}
-          className="px-4 py-2.5 bg-gradient-to-r from-[#8B5CF6] to-[#3B82F6] rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed hover:shadow-[0_0_15px_rgba(139,92,246,0.3)] transition-all"
+          onClick={() => setSidebarOpen(false)}
+          className="absolute top-4 left-[252px] z-10 p-1.5 rounded-lg bg-[#111827] border border-[#2D3A52] text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#3B82F6]/40 transition-all"
         >
-          <Send size={18} />
+          <ChevronRight size={14} />
         </button>
-      </form>
+      )}
+
+      {/* ── Main Chat Area ── */}
+      <div className="flex-1 flex flex-col min-w-0">
+        {/* Header */}
+        <div className="flex items-center gap-3 px-6 py-3 border-b border-[#1E2D45]">
+          <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-[#8B5CF6] to-[#3B82F6] flex items-center justify-center flex-shrink-0">
+            <Bot size={18} className="text-white" />
+          </div>
+          <div>
+            <h1 className="text-base font-bold text-[#F8FAFC]">Tuteur IA</h1>
+            <p className="text-[11px] text-[#94A3B8]">
+              Posez vos questions sur la théorie et les examens
+            </p>
+          </div>
+        </div>
+
+        {/* Messages */}
+        <div className="flex-1 overflow-y-auto px-4 py-4 space-y-4">
+          {messages.map((msg, idx) => (
+            <div
+              key={idx}
+              className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}
+            >
+              {msg.role === 'user' ? (
+                /* ── User bubble: right-aligned, blue ── */
+                <div className="flex items-end gap-2 max-w-[80%] flex-row-reverse">
+                  <div className="w-7 h-7 rounded-full bg-[#3B82F6]/20 flex items-center justify-center flex-shrink-0">
+                    <User size={14} className="text-[#3B82F6]" />
+                  </div>
+                  <div className="bg-[#3B82F6] text-white rounded-2xl rounded-br-sm px-4 py-2.5 text-sm leading-relaxed">
+                    <div className="whitespace-pre-wrap">{msg.content}</div>
+                  </div>
+                </div>
+              ) : (
+                /* ── AI panel: left-aligned, dark with border ── */
+                <div className="flex items-start gap-2 max-w-[85%]">
+                  <div className="w-7 h-7 rounded-full bg-[#8B5CF6]/20 flex items-center justify-center flex-shrink-0 mt-1">
+                    <Bot size={14} className="text-[#8B5CF6]" />
+                  </div>
+                  <div className="bg-[#0D1117] border border-[#2D3A52] rounded-xl px-4 py-2.5 text-sm leading-relaxed text-[#F8FAFC]">
+                    <div className="whitespace-pre-wrap">{msg.content}</div>
+                  </div>
+                </div>
+              )}
+            </div>
+          ))}
+
+          {/* Loading indicator */}
+          {loading && (
+            <div className="flex justify-start">
+              <div className="flex items-start gap-2 max-w-[85%]">
+                <div className="w-7 h-7 rounded-full bg-[#8B5CF6]/20 flex items-center justify-center flex-shrink-0 mt-1">
+                  <Bot size={14} className="text-[#8B5CF6]" />
+                </div>
+                <div className="bg-[#0D1117] border border-[#2D3A52] rounded-xl px-4 py-3">
+                  <Loader2 size={16} className="animate-spin text-[#8B5CF6]" />
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Error banner */}
+          {error && (
+            <div className="flex items-center gap-2 px-4 py-2.5 bg-[#EF4444]/10 border border-[#EF4444]/20 rounded-lg text-sm text-[#EF4444]">
+              <AlertCircle size={14} />
+              {error}
+            </div>
+          )}
+
+          <div ref={messagesEndRef} />
+        </div>
+
+        {/* Suggested questions (only on initial state) */}
+        {messages.length === 1 && messages[0].role === 'assistant' && (
+          <div className="px-4 pb-2">
+            <p className="text-xs text-[#64748B] mb-2 flex items-center gap-1">
+              <Sparkles size={12} className="text-[#F59E0B]" />
+              Suggestions
+            </p>
+            <div className="flex flex-wrap gap-1.5">
+              {SUGGESTED_QUESTIONS.map((q) => (
+                <button
+                  key={q}
+                  onClick={() => handleSuggested(q)}
+                  className="text-xs text-[#94A3B8] bg-[#111827] border border-[#2D3A52] px-2.5 py-1.5 rounded-lg hover:border-[#3B82F6]/40 hover:text-[#F8FAFC] transition-all"
+                >
+                  {q}
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Input bar */}
+        <form
+          onSubmit={handleSubmit}
+          className="px-4 py-3 border-t border-[#1E2D45]"
+        >
+          <div className="flex gap-2 items-center">
+            <input
+              ref={inputRef}
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              placeholder="Ask a question..."
+              disabled={loading}
+              className="flex-1 px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] focus:ring-1 focus:ring-[#3B82F6]/30 disabled:opacity-50"
+            />
+            <button
+              type="submit"
+              disabled={!input.trim() || loading}
+              className="w-10 h-10 flex items-center justify-center bg-[#3B82F6] hover:bg-[#2563EB] rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+            >
+              <Send size={16} />
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

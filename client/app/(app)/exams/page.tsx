@@ -352,7 +352,7 @@ function ExamsPage() {
       const chId = q.chapterId || 'none';
       if (!chapterMap.has(chId)) {
         const ch = chapters.find((c) => c.id === chId);
-        chapterMap.set(chId, { correct: 0, total: 0, name: ch ? `Ch. ${ch.number} — ${ch.name}` : t('examsGeneral') });
+        chapterMap.set(chId, { correct: 0, total: 0, name: ch ? ch.name : t('examsGeneral') });
       }
       const entry = chapterMap.get(chId)!;
       entry.total++;
@@ -396,6 +396,8 @@ function ExamsPage() {
           chapterName: cb.chapterName,
           correct: cb.correct,
           total: cb.total,
+          tradeName: getTradeName(selectedTrade, trades),
+          chapterId: cb.chapterId || undefined,
         })),
         difficulty,
         passed: score >= PASS_THRESHOLD,

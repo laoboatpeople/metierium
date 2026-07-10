@@ -5,6 +5,8 @@ export interface ChapterResult {
   chapterName: string;
   correct: number;
   total: number;
+  tradeName?: string;
+  chapterId?: string;
 }
 
 export interface ExamRecord {
@@ -71,14 +73,21 @@ export function getTradeStats(tradeId: string) {
     ? recent[0].score - recent[recent.length - 1].score
     : 0;
 
+  const tradeName = history[0]?.tradeName || '';
+  const firstTradeId = history[0]?.tradeId || '';
+
   // Aggregate chapter performance
   const chapterMap = new Map<number, { name: string; correct: number; total: number }>();
+  const chapterIdMap = new Map<number, string>();
   for (const record of history) {
     for (const cr of record.chapterResults) {
       const existing = chapterMap.get(cr.chapterNumber) || { name: cr.chapterName, correct: 0, total: 0 };
       existing.correct += cr.correct;
       existing.total += cr.total;
       chapterMap.set(cr.chapterNumber, existing);
+      if (cr.chapterId && !chapterIdMap.has(cr.chapterNumber)) {
+        chapterIdMap.set(cr.chapterNumber, cr.chapterId);
+      }
     }
   }
 
@@ -89,13 +98,15 @@ export function getTradeStats(tradeId: string) {
       correct: data.correct,
       total: data.total,
       percentage: data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0,
+      tradeName,
+      tradeId: firstTradeId,
+      chapterId: chapterIdMap.get(num) || '',
     }))
     .sort((a, b) => a.chapterNumber - b.chapterNumber);
 
   const strengths = chapterPerformance.filter(c => c.total >= 5 && c.percentage >= 75).slice(0, 3);
   const weaknesses = chapterPerformance.filter(c => c.total >= 5 && c.percentage < 60).slice(0, 3);
-  const needsReview = chapterPerformance.filter(c => c.total >= 3 && c.percentage < 60)
-    .map(c => c.chapterName);
+  const needsReview = chapterPerformance.filter(c => c.total >= 3 && c.percentage < 60);
 
   return {
     totalExams,
