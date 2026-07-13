@@ -15,6 +15,14 @@ import {
   Menu,
   X,
   Shield,
+  Bell,
+  MessageSquare,
+  Settings,
+  Mail,
+  CreditCard,
+  BarChart3,
+  Sparkles,
+  UserCircle,
 } from 'lucide-react';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
@@ -29,6 +37,14 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     { href: '/app/admin/chapters', label: 'Chapitres', icon: BookOpen },
     { href: '/app/admin/questions', label: 'Questions', icon: HelpCircle },
     { href: '/app/admin/users', label: 'Utilisateurs', icon: Users },
+    { href: '/app/admin/notifications', label: 'Notifications', icon: Bell },
+    { href: '/app/admin/contact-messages', label: 'Contact', icon: MessageSquare },
+    { href: '/app/admin/settings', label: 'Settings', icon: Settings },
+    { href: '/app/admin/newsletter', label: 'Newsletter', icon: Mail },
+    { href: '/app/admin/subscriptions', label: 'Subscriptions', icon: CreditCard },
+    { href: '/app/admin/analytics', label: 'Analytics', icon: BarChart3 },
+    { href: '/app/admin/ai-generator', label: 'AI Generator', icon: Sparkles },
+    { href: '/app/admin/profile', label: 'Profile', icon: UserCircle },
   ];
 
   const [user, setUser] = useState<{ name: string; email: string; role?: string } | null>(null);

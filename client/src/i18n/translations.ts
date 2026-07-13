@@ -65,12 +65,23 @@ const fr: Record<string, unknown> = {
   // Landing page - Hero
   heroBadge: 'Préparation aux examens de métiers — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP, GAZ, ASCEN, REFRIG, CONSTR, INSPECT, SST',
   heroTitle: 'La référence en préparation aux examens de métiers',
-  heroTagline: 'Maîtrisez votre métier, réussissez votre certification',
-  heroDesc: "Accédez à du contenu théorique complet, des simulations d'examen et un suivi personnalisé pour maximiser vos chances de réussite à l'examen de certification.",
+  heroDesc: "Maîtrisez votre métier, réussissez votre certification. Accédez à du contenu théorique complet, des simulations d'examen et un suivi personnalisé pour maximiser vos chances de réussite à l'examen de certification.",
   heroPillTheory: 'Théorie complète',
   heroPillExams: "Simulations d'examen",
   heroPillTracking: 'Étudier partout',
   heroCta: 'Commencer',
+  heroWatchDemo: 'Voir la démo',
+  videoFallback: 'Votre navigateur ne supporte pas la vidéo.',
+
+  // Landing page - Question card
+  questionCardLabel: 'Exemple de question',
+  questionCardText: 'Quel composant du cycle de réfrigération augmente la pression du réfrigérant ?',
+  questionCardOptions: 'Évaporateur,Détendeur,Compresseur,Condenseur',
+  questionCardFooter: 'Plus de 2 400 questions dans 5 métiers',
+
+  // Nav
+  navFaq: 'FAQ',
+  navBlog: 'Blog',
 
   // Landing page - How it works
   howItWorksTitle: 'Comment ça marche',
@@ -315,6 +326,24 @@ const fr: Record<string, unknown> = {
   // FAQ
   faqTitle: 'Questions fréquentes',
   faqSubtitle: '{count} réponses sur les examens de métier au Québec',
+  // Landing page - FAQ questions & answers
+  faqQ1: "Qu'est-ce que l'examen CMEQ pour électricien ?",
+  faqA1: "L'examen CMEQ (Corporation des maîtres électriciens du Québec) est l'examen de certification obligatoire pour devenir électricien au Québec. Il couvre le Code de construction du Québec — Chapitre V (électricité), les calculs de charge, les circuits, la protection des circuits, les moteurs électriques et les normes de sécurité. Notre plateforme offre 950 questions d'entraînement couvrant l'ensemble des 10 chapitres du programme.",
+  faqQ2: "Combien de questions y a-t-il à l'examen d'électricien CMEQ ?",
+  faqA2: "L'examen CMEQ contient généralement entre 50 et 100 questions à choix multiples portant sur le Code de l'électricité (CCE), les calculs de charge résidentielle et commerciale, la protection des circuits, les moteurs, la mise à la terre et les méthodes de câblage. Le seuil de réussite est de 70 %.",
+  faqQ3: "Comment se préparer à l'examen de plomberie CMMTQ ?",
+  faqA3: "Pour vous préparer à l'examen CMMTQ, étudiez le Code de plomberie du Québec, les types de tuyaux (cuivre M/L/K, PVC, ABS, PEX), l'alimentation en eau potable, l'évacuation et la ventilation, les appareils sanitaires, le chauffage de l'eau, les systèmes de gaz (CSA B149) et la protection incendie. Notre plateforme couvre ces 8 chapitres avec plus de 600 questions d'entraînement.",
+  faqQ4: "Quel est le seuil de réussite aux examens de métier au Québec ?",
+  faqA4: "Le seuil de réussite pour les examens de métier au Québec est de 70 %. Une préparation adéquate avec du contenu théorique complet et des examens blancs est essentielle pour maximiser vos chances de succès dès la première tentative.",
+  faqQ5: "La certification QBQ pour soudeur est-elle reconnue au Québec ?",
+  faqA5: "Oui, la certification QBQ (Québec Board of Trades) est officielle et reconnue pour les soudeurs au Québec. Les normes CSA W47.1 (acier) et CSA W59 (construction soudée) sont les références. La certification est valide 2 ans et nécessite une réussite aux examens théorique et pratique.",
+  faqQ6: "Quels sont les prérequis pour l'examen d'électricien ?",
+  faqA6: "Pour passer l'examen d'électricien au Québec, il faut généralement avoir complété un DEP en électricité (1 800 heures), accumulé les heures d'apprentissage requises, et être inscrit à la Commission de la construction du Québec (CCQ).",
+  faqQ7: "Combien coûte la préparation aux examens ?",
+  faqA7: "Nos plans commencent à 0$ pour le plan GRATUIT (accès limité à un métier), 29$/mois pour le plan ESSENTIEL (théorie complète et examens blancs) et 49$/mois pour le plan PRO (tous les métiers). Un accès À VIE est disponible pour 559$.",
+  faqQ8: "Où puis-je passer l'examen de métier au Québec ?",
+  faqA8: "Les examens sont administrés par la CCQ, la RBQ, le QBQ et les corporations (CMEQ, CMMTQ). La préparation peut se faire en ligne via notre plateforme avec théorie complète, 2 161 questions d'entraînement et un tuteur IA pour vous accompagner.",
+
   faqSearchPlaceholder: 'Rechercher une question...',
   faqAllTrades: 'Tous les métiers',
   faqNoResults: 'Aucun résultat pour votre recherche.',
@@ -466,6 +495,23 @@ const fr: Record<string, unknown> = {
   pricingPageModalDesc: "Le plan ESSENTIEL verrouille votre choix. Vous ne pourrez pas changer par la suite.",
   pricingPageModalCancel: 'Annuler',
   pricingPageModalConfirm: 'Confirmer',
+  // Landing page - Pricing features (landing page)
+  pricingFeatOneTrade: '1 métier au choix',
+  pricingFeatTheory: 'Contenu théorique complet',
+  pricingFeatLimitedQ: 'Questions limitées',
+  pricingFeatUnlimitedQ: 'Questions illimitées',
+  pricingFeatUnlimitedExams: 'Examens illimités',
+  pricingFeatAiTutor: 'Tuteur IA',
+  pricingFeatLocked: '🔒 Métier verrouillé',
+  pricingFeatAllTrades: 'Tous les métiers',
+  pricingFeatUpdates: 'Mises à jour incluses',
+  pricingPlanNameFree: 'GRATUIT',
+  pricingPlanNameEssential: 'ESSENTIEL',
+  pricingPlanNamePro: 'PRO',
+  pricingPlanNameLifetime: 'À VIE',
+  pricingPopular: 'POPULAIRE',
+  pricingCancelAnytime: 'Vous pouvez annuler à tout moment. Aucune question, aucun engagement.',
+
 };
 
 const en: Record<string, string> = {
@@ -534,12 +580,23 @@ const en: Record<string, string> = {
   // Landing page - Hero
   heroBadge: 'Trade Exam Preparation — CMEQ, CMMTQ, QBQ, HVAC, MVL, INCENDIE, FERBLAN, BRIQUE, OPEQUIP, GAZ, ASCEN, REFRIG, CONSTR, INSPECT, SST',
   heroTitle: 'The gold standard for trade exam preparation',
-  heroTagline: 'Master your trade, pass your certification',
-  heroDesc: 'Access complete theoretical content, practice exams, and personalized tracking to maximize your chances of passing the certification exam.',
+  heroDesc: 'Master your trade, pass your certification. Access complete theoretical content, practice exams, and personalized tracking to maximize your chances of passing the certification exam.',
   heroPillTheory: 'Complete Theory',
   heroPillExams: 'Practice Exams',
   heroPillTracking: 'Study anywhere',
   heroCta: 'Get Started',
+  heroWatchDemo: 'Watch Demo',
+  videoFallback: 'Your browser does not support the video.',
+
+  // Landing page - Question card
+  questionCardLabel: 'Sample Question',
+  questionCardText: 'Which component of the refrigeration cycle increases the pressure of the refrigerant?',
+  questionCardOptions: 'Evaporator,Expansion Valve,Compressor,Condenser',
+  questionCardFooter: 'Over 2,400 questions across 16 trades',
+
+  // Nav
+  navFaq: 'FAQ',
+  navBlog: 'Blog',
 
   // Landing page - How it works
   howItWorksTitle: 'How It Works',
@@ -784,6 +841,24 @@ const en: Record<string, string> = {
   // FAQ
   faqTitle: 'Frequently Asked Questions',
   faqSubtitle: '{count} answers about trade exams in Quebec',
+  // Landing page - FAQ questions & answers
+  faqQ1: "What is the CMEQ exam for electricians?",
+  faqA1: "The CMEQ exam (Corporation des maîtres électriciens du Québec) is the mandatory certification exam to become an electrician in Quebec. It covers the Quebec Construction Code — Chapter V (electricity), load calculations, circuits, protection, motors, and safety standards. Our platform offers 950 practice questions covering all 10 chapters of the program.",
+  faqQ2: "How many questions are on the CMEQ electrician exam?",
+  faqA2: "The CMEQ exam typically contains between 50 and 100 multiple-choice questions covering the Electrical Code, residential and commercial load calculations, circuit protection, motors, grounding, and wiring methods. The passing score is 70%.",
+  faqQ3: "How do I prepare for the CMMTQ plumbing exam?",
+  faqA3: "To prepare for the CMMTQ exam, study the Quebec Plumbing Code, pipe types (copper M/L/K, PVC, ABS, PEX), potable water supply, drainage and venting, plumbing fixtures, water heating, gas systems (CSA B149), and fire protection. Our platform covers these 8 chapters with over 600 practice questions.",
+  faqQ4: "What is the passing score for trade exams in Quebec?",
+  faqA4: "The passing score for trade exams in Quebec is 70%. Proper preparation with complete theoretical content and practice exams is essential to maximize your chances of success on the first attempt.",
+  faqQ5: "Is the QBQ welding certification recognized in Quebec?",
+  faqA5: "Yes, the QBQ (Quebec Board of Trades) certification is the official certification for welders in Quebec. CSA W47.1 (steel) and CSA W59 (welded construction) standards are the references. The certification is valid for 2 years and requires passing both theoretical and practical exams.",
+  faqQ6: "What are the prerequisites for the electrician exam?",
+  faqA6: "To take the electrician exam in Quebec, you generally need to have completed a DEP in electricity (1,800 hours), accumulated the required apprenticeship hours, and be registered with the Commission de la construction du Québec (CCQ).",
+  faqQ7: "How much does exam preparation cost?",
+  faqA7: "Our plans start at $0 for the FREE plan (limited access to one trade), $29/month for the ESSENTIAL plan (complete theory and practice exams), $49/month for the PRO plan (all trades). A LIFETIME plan is available for $559.",
+  faqQ8: "Where can I take a trade exam in Quebec?",
+  faqA8: "Exams are administered by the CCQ, RBQ, QBQ, and trade corporations (CMEQ, CMMTQ). Online preparation is available through our platform with complete theory, 2,161 practice questions, and an AI tutor to guide you.",
+
   faqSearchPlaceholder: 'Search for a question...',
   faqAllTrades: 'All trades',
   faqNoResults: 'No results found for your search.',
@@ -935,6 +1010,23 @@ const en: Record<string, string> = {
   pricingPageModalDesc: 'The ESSENTIEL plan locks your choice. You will not be able to change it later.',
   pricingPageModalCancel: 'Cancel',
   pricingPageModalConfirm: 'Confirm',
+  // Landing page - Pricing features (landing page)
+  pricingFeatOneTrade: '1 trade of your choice',
+  pricingFeatTheory: 'Complete theoretical content',
+  pricingFeatLimitedQ: 'Limited questions',
+  pricingFeatUnlimitedQ: 'Unlimited questions',
+  pricingFeatUnlimitedExams: 'Unlimited practice exams',
+  pricingFeatAiTutor: 'AI Tutor',
+  pricingFeatLocked: '🔒 Trade locked',
+  pricingFeatAllTrades: 'All trades',
+  pricingFeatUpdates: 'Updates included',
+  pricingPlanNameFree: 'FREE',
+  pricingPlanNameEssential: 'ESSENTIAL',
+  pricingPlanNamePro: 'PRO',
+  pricingPlanNameLifetime: 'LIFETIME',
+  pricingPopular: 'POPULAR',
+  pricingCancelAnytime: 'Cancel anytime. No questions asked, no commitment.',
+
 };
 
 export type Locale = 'en' | 'fr';

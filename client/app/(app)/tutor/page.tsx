@@ -5,6 +5,7 @@ import {
   MessageSquare, Send, Bot, User, Loader2, Sparkles,
   AlertCircle, ArrowLeft, Plus, ChevronRight, Trash2,
 } from 'lucide-react';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 
@@ -20,7 +21,21 @@ interface ChatHistory {
   timestamp: number;
 }
 
-const SUGGESTED_QUESTIONS = [
+const STORAGE_KEY = 'tutorChatHistories';
+
+const INITIAL_MESSAGE_FR: ChatMessage = {
+  role: 'assistant',
+  content:
+    "Bonjour ! Je suis votre tuteur IA spécialisé dans les métiers de la construction au Québec. Posez-moi une question sur la théorie, le Code de construction, ou les examens de certification.",
+};
+
+const INITIAL_MESSAGE_EN: ChatMessage = {
+  role: 'assistant',
+  content:
+    "Hello! I am your AI tutor specialized in Quebec construction trades. Ask me a question about theory, the Construction Code, or certification exams.",
+};
+
+const SUGGESTED_FR = [
   "Explique-moi la loi d'Ohm simplement",
   "Quels sont les types de câbles résidentiels au Québec ?",
   "Comment calculer la charge d'un panneau électrique ?",
@@ -28,20 +43,22 @@ const SUGGESTED_QUESTIONS = [
   "Donne-moi un exemple de calcul de chute de tension",
 ];
 
-const STORAGE_KEY = 'tutorChatHistories';
-
-const INITIAL_MESSAGE: ChatMessage = {
-  role: 'assistant',
-  content:
-    "Bonjour ! Je suis votre tuteur IA spécialisé dans les métiers de la construction au Québec. Posez-moi une question sur la théorie, le Code de construction, ou les examens de certification.",
-};
+const SUGGESTED_EN = [
+  "Explain Ohm's law simply",
+  "What are the types of residential cables in Quebec?",
+  "How do you calculate an electrical panel load?",
+  "What is the difference between GFCI and AFCI?",
+  "Give me an example of voltage drop calculation",
+];
 
 function generateId(): string {
   return Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
 }
 
 export default function TutorPage() {
-  const [messages, setMessages] = useState<ChatMessage[]>([{ ...INITIAL_MESSAGE }]);
+  const { t, locale } = useLocale();
+  const isEn = locale === 'en';
+  const [messages, setMessages] = useState<ChatMessage[]>([{ ...(isEn ? INITIAL_MESSAGE_EN : INITIAL_MESSAGE_FR) }]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -189,10 +206,11 @@ export default function TutorPage() {
 
   // ── New Chat ──
   const handleNewChat = () => {
-    setMessages([{ ...INITIAL_MESSAGE }]);
+    setMessages([{ ...(isEn ? INITIAL_MESSAGE_EN : INITIAL_MESSAGE_FR) }]);
     setCurrentChatId(null);
     setError(null);
     setInput('');
+    setTimeout(() => inputRef.current?.focus(), 100);
   };
 
   // ── Select a chat from history ──
@@ -232,13 +250,24 @@ export default function TutorPage() {
   // ────────────────────────────────────────────
 
   return (
-    <div className="flex h-[calc(100vh-4rem)]">
-      {/* ── Left Sidebar ── */}
+    <div className="flex h-[calc(100vh-4rem)] relative">
+      {/* ── Left Sidebar (overlay on mobile, inline on desktop) ── */}
       <aside
         className={`${
-          sidebarOpen ? 'w-[240px] min-w-[240px]' : 'w-0 min-w-0 overflow-hidden'
-        } bg-[#0D1117] border-r border-[#1E2D45] flex flex-col transition-all duration-200`}
+          sidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        } fixed md:relative md:translate-x-0 z-20 w-[240px] min-w-[240px] bg-[#0D1117] border-r border-[#1E2D45] flex flex-col transition-all duration-200 h-[calc(100vh-4rem)]`}
       >
+        {/* Mobile close button */}
+        <div className="md:hidden flex items-center justify-between p-3 border-b border-[#1E2D45]">
+          <span className="text-xs font-semibold text-[#94A3B8] uppercase">Menu</span>
+          <button
+            onClick={() => setSidebarOpen(false)}
+            className="p-1 rounded-lg hover:bg-[#1E2D45] text-[#94A3B8] hover:text-[#F8FAFC] transition-all"
+          >
+            <ArrowLeft size={16} />
+          </button>
+        </div>
+
         {/* New Chat button */}
         <div className="p-3 border-b border-[#1E2D45]">
           <button
@@ -246,7 +275,7 @@ export default function TutorPage() {
             className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-[#3B82F6] hover:bg-[#2563EB] text-white text-sm font-medium rounded-lg transition-colors"
           >
             <Plus size={16} />
-            + New Chat
+            {isEn ? 'New Chat' : 'Nouveau chat'}
           </button>
         </div>
 
@@ -254,7 +283,7 @@ export default function TutorPage() {
         <div className="flex-1 overflow-y-auto px-2 py-2 space-y-1">
           {chatHistories.length > 0 && (
             <p className="px-2 text-[10px] font-semibold uppercase tracking-wider text-[#64748B] mb-2">
-              CHAT HISTORY
+              {isEn ? 'CHAT HISTORY' : 'HISTORIQUE'}
             </p>
           )}
           {chatHistories.map((chat) => {
@@ -262,7 +291,7 @@ export default function TutorPage() {
             return (
               <button
                 key={chat.id}
-                onClick={() => handleSelectChat(chat)}
+                onClick={() => { handleSelectChat(chat); setSidebarOpen(false); }}
                 className={`w-full text-left px-2.5 py-2 rounded-lg text-xs transition-all group relative ${
                   isActive
                     ? 'bg-[#1A2332] border border-[#3B82F6]/40 text-[#F8FAFC]'
@@ -298,7 +327,7 @@ export default function TutorPage() {
           })}
           {chatHistories.length === 0 && (
             <p className="px-2 text-xs text-[#64748B] py-4 text-center italic">
-              Aucun historique
+              {isEn ? 'No history' : 'Aucun historique'}
             </p>
           )}
         </div>
@@ -310,30 +339,26 @@ export default function TutorPage() {
             className="w-full flex items-center gap-2 px-3 py-2 text-xs text-[#94A3B8] border border-[#2D3A52] rounded-lg hover:border-[#3B82F6]/40 hover:text-[#F8FAFC] transition-all"
           >
             <ArrowLeft size={14} />
-            Back to Results
+            {isEn ? 'Back to Results' : 'Retour aux résultats'}
           </button>
         </div>
       </aside>
 
-      {/* ── Toggle sidebar button (when closed) ── */}
-      {!sidebarOpen && (
-        <button
-          onClick={() => setSidebarOpen(true)}
-          className="absolute top-4 left-4 z-10 p-1.5 rounded-lg bg-[#111827] border border-[#2D3A52] text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#3B82F6]/40 transition-all"
-        >
-          <MessageSquare size={16} />
-        </button>
+      {/* ── Mobile overlay backdrop ── */}
+      {sidebarOpen && (
+        <div
+          className="md:hidden fixed inset-0 z-10 bg-black/50"
+          onClick={() => setSidebarOpen(false)}
+        />
       )}
 
-      {/* ── Close sidebar button (when open) ── */}
-      {sidebarOpen && (
-        <button
-          onClick={() => setSidebarOpen(false)}
-          className="absolute top-4 left-[252px] z-10 p-1.5 rounded-lg bg-[#111827] border border-[#2D3A52] text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#3B82F6]/40 transition-all"
-        >
-          <ChevronRight size={14} />
-        </button>
-      )}
+      {/* ── Toggle sidebar button (mobile always visible, desktop when closed) ── */}
+      <button
+        onClick={() => setSidebarOpen(!sidebarOpen)}
+        className="absolute top-3 left-3 z-30 p-2 rounded-lg bg-[#111827] border border-[#2D3A52] text-[#94A3B8] hover:text-[#F8FAFC] hover:border-[#3B82F6]/40 transition-all md:static md:ml-2 md:mt-2"
+      >
+        <MessageSquare size={16} />
+      </button>
 
       {/* ── Main Chat Area ── */}
       <div className="flex-1 flex flex-col min-w-0">
@@ -343,9 +368,9 @@ export default function TutorPage() {
             <Bot size={18} className="text-white" />
           </div>
           <div>
-            <h1 className="text-base font-bold text-[#F8FAFC]">Tuteur IA</h1>
+            <h1 className="text-base font-bold text-[#F8FAFC]">{isEn ? 'AI Tutor' : 'Tuteur IA'}</h1>
             <p className="text-[11px] text-[#94A3B8]">
-              Posez vos questions sur la théorie et les examens
+              {isEn ? 'Ask questions about theory and exams' : 'Posez vos questions sur la théorie et les examens'}
             </p>
           </div>
         </div>
@@ -411,10 +436,10 @@ export default function TutorPage() {
           <div className="px-4 pb-2">
             <p className="text-xs text-[#64748B] mb-2 flex items-center gap-1">
               <Sparkles size={12} className="text-[#F59E0B]" />
-              Suggestions
+              {isEn ? 'Suggestions' : 'Suggestions'}
             </p>
             <div className="flex flex-wrap gap-1.5">
-              {SUGGESTED_QUESTIONS.map((q) => (
+              {(isEn ? SUGGESTED_EN : SUGGESTED_FR).map((q) => (
                 <button
                   key={q}
                   onClick={() => handleSuggested(q)}
@@ -438,7 +463,7 @@ export default function TutorPage() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask a question..."
+              placeholder={isEn ? "Ask a question..." : "Posez une question..."}
               disabled={loading}
               className="flex-1 px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] focus:ring-1 focus:ring-[#3B82F6]/30 disabled:opacity-50"
             />

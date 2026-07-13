@@ -5,6 +5,7 @@ import * as crypto from 'crypto';
 import { prisma } from '../config/database';
 import { env } from '../config/env';
 import { authenticate } from '../middleware/auth';
+import { getSettings } from '../config/settings';
 
 const router = Router();
 
@@ -46,6 +47,34 @@ router.post('/register', async (req: Request, res: Response): Promise<void> => {
     });
 
     const token = signToken({ id: user.id, email: user.email, role: user.role });
+
+    // Notify admin of new registration (best-effort)
+    const settings = getSettings();
+    const apiKey = env.RESEND_API_KEY;
+    if (apiKey && apiKey !== 're_placeholder' && settings.adminNewUserAlert) {
+      fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: {
+          'Authorization': `Bearer ${apiKey}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          from: 'Metierium <info@metierium.com>',
+          to: settings.adminNotificationEmail,
+          subject: `Nouvelle inscription — ${email}`,
+          html: `<div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;background:#0A0E1A;color:#F8FAFC;border-radius:12px">
+            <h1 style="color:#3B82F6;font-size:22px">Nouvelle inscription</h1>
+            <p style="color:#94A3B8;line-height:1.5">Un nouvel utilisateur vient de s'inscrire sur Metierium.</p>
+            <table style="color:#F8FAFC;font-size:14px;margin:16px 0;width:100%">
+              <tr><td style="padding:4px 0;color:#64748B">Email</td><td style="padding:4px 0">${email}</td></tr>
+              <tr><td style="padding:4px 0;color:#64748B">Nom</td><td style="padding:4px 0">${name || 'Non fourni'}</td></tr>
+              <tr><td style="padding:4px 0;color:#64748B">Plan</td><td style="padding:4px 0">GRATUIT</td></tr>
+            </table>
+            <p style="color:#64748B;font-size:12px">Connectez-vous à l'admin pour gérer les utilisateurs.</p>
+          </div>`,
+        }),
+      }).catch(() => {});
+    }
 
     res.status(201).json({
       token,
@@ -255,6 +284,90 @@ router.post('/reset-password', async (req: Request, res: Response): Promise<void
   } catch (err) {
     console.error('[Auth] Reset password error:', err);
     res.status(500).json({ message: 'Erreur interne' });
+  }
+});
+
+/**
+ * PUT /api/auth/profile
+ * Update authenticated user's profile (name, email).
+ */
+router.put('/profile', authenticate, async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { name, email } = req.body;
+
+    if (!name && !email) {
+      res.status(400).json({ message: 'Name or email is required' });
+      return;
+    }
+
+    const data: { name?: string; email?: string } = {};
+    if (name !== undefined) data.name = name;
+    if (email !== undefined) {
+      if (typeof email !== 'string' || !email.includes('@')) {
+        res.status(400).json({ message: 'Valid email is required' });
+        return;
+      }
+      const existing = await prisma.user.findUnique({ where: { email } });
+      if (existing && existing.id !== req.user!.id) {
+        res.status(409).json({ message: 'Email already in use' });
+        return;
+      }
+      data.email = email;
+    }
+
+    const updated = await prisma.user.update({
+      where: { id: req.user!.id },
+      data,
+      select: { id: true, name: true, email: true, role: true },
+    });
+
+    res.json({ user: updated });
+  } catch (err) {
+    console.error('[Auth] Profile update error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
+ * POST /api/auth/change-password
+ * Change authenticated user's password.
+ */
+router.post('/change-password', authenticate, async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { currentPassword, newPassword } = req.body;
+
+    if (!currentPassword || !newPassword) {
+      res.status(400).json({ message: 'Current password and new password are required' });
+      return;
+    }
+
+    if (newPassword.length < 8) {
+      res.status(400).json({ message: 'New password must be at least 8 characters' });
+      return;
+    }
+
+    const user = await prisma.user.findUnique({ where: { id: req.user!.id } });
+    if (!user) {
+      res.status(404).json({ message: 'User not found' });
+      return;
+    }
+
+    const valid = await bcrypt.compare(currentPassword, user.password);
+    if (!valid) {
+      res.status(400).json({ message: 'Current password is incorrect' });
+      return;
+    }
+
+    const passwordHash = await bcrypt.hash(newPassword, 12);
+    await prisma.user.update({
+      where: { id: req.user!.id },
+      data: { password: passwordHash },
+    });
+
+    res.json({ message: 'Password changed successfully' });
+  } catch (err) {
+    console.error('[Auth] Change password error:', err);
+    res.status(500).json({ message: 'Internal server error' });
   }
 });
 

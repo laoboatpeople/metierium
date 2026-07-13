@@ -18,6 +18,12 @@ import stripeRoutes from './routes/stripe';
 import adminRoutes from './routes/admin';
 import turnstileRoutes from './routes/turnstile';
 import tutorRoutes from './routes/tutor';
+import settingsRoutes from './routes/settings';
+import contactRoutes from './routes/contact';
+import contactAdminRoutes from './routes/contactAdmin';
+import newsletterRoutes from './routes/newsletter';
+import subscriptionsRoutes from './routes/subscriptions';
+import analyticsRoutes from './routes/analytics';
 
 const app = express();
 
@@ -65,6 +71,17 @@ app.get('/health', async (_req, res) => {
   }
 });
 
+// Also serve under /api/health for the health-check cron
+app.get('/api/health', async (_req, res) => {
+  try {
+    await prisma.$queryRaw`SELECT 1`;
+    res.json({ status: 'ok', timestamp: new Date().toISOString(), database: 'connected' });
+  } catch (err) {
+    console.error('[Health Check] DB connectivity failed:', err);
+    res.status(503).json({ status: 'error', timestamp: new Date().toISOString(), database: 'disconnected' });
+  }
+});
+
 // ─── API routes ─────────────────────────────────────────────────
 
 app.use('/api/auth', authRoutes);
@@ -75,6 +92,22 @@ app.use('/api/stripe', stripeRoutes);
 app.use('/api/admin', adminRoutes);
 app.use('/api/turnstile', turnstileRoutes);
 app.use('/api/tutor', tutorRoutes);
+app.use('/api/admin', settingsRoutes);
+
+// Contact routes — public contact form submission
+app.use('/api/contact', contactRoutes);
+
+// Contact admin routes — admin-only contact message management
+app.use('/api/admin/contact-messages', contactAdminRoutes);
+
+// Newsletter admin routes — admin-only subscriber management
+app.use('/api/admin/newsletter', newsletterRoutes);
+
+// Subscriptions admin routes — admin-only subscription management
+app.use('/api/admin/subscriptions', subscriptionsRoutes);
+
+// Analytics admin routes — admin-only analytics data
+app.use('/api/admin/analytics', analyticsRoutes);
 
 // ─── 404 handler ────────────────────────────────────────────────
 

@@ -106,3 +106,22 @@ model Subscription {
   createdAt     DateTime   @default(now())
   updatedAt     DateTime   @updatedAt
 }
+
+/// ContactMessage — submissions from the public contact form
+model ContactMessage {
+  id        String   @id @default(cuid())
+  name      String
+  email     String
+  message   String
+  direction String   @default("inbound")   // inbound = from visitor, outbound = from admin
+  status    String   @default("pending")   // pending, replied
+  replyText String?  @map("reply_text")
+  repliedAt DateTime? @map("replied_at")
+  repliedBy String?  @map("replied_by")    // admin user id who replied
+  createdAt DateTime @default(now()) @map("created_at")
+  updatedAt DateTime @updatedAt @map("updated_at")
+
+  @@index([email])
+  @@index([createdAt])
+  @@map("contact_messages")
+}

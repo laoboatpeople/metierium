@@ -19,12 +19,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'fr_CA',
     siteName: 'Metierium',
-    images: [{ url: '/og-image.svg', width: 1200, height: 630 }],
+    images: [{ url: 'https://metierium.com/og-image.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Metierium — Préparez vos examens de métiers au Québec',
     description: 'Réussissez votre examen de certification avec théorie complète, examens blancs et suivi personnalisé.',
+    images: ['https://metierium.com/og-image.png'],
   },
   robots: { index: true, follow: true },
   alternates: {

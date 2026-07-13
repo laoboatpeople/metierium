@@ -175,8 +175,8 @@ export default function LandingPage() {
             <a href="#features" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navFeatures')}</a>
             <a href="#trades" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navTrades')}</a>
             <a href="#pricing" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navPricing')}</a>
-            <Link href="/faq" className="text-sm text-[#94A3B8] hover:text-white transition-colors">FAQ</Link>
-            <Link href="/blog" className="text-sm text-[#94A3B8] hover:text-white transition-colors">Blog</Link>
+            <Link href="/faq" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navFaq')}</Link>
+            <Link href="/blog" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navBlog')}</Link>
             <button
               onClick={toggleLocale}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-sm text-[#94A3B8] hover:text-white hover:border-white/20 transition-all"
@@ -210,8 +210,8 @@ export default function LandingPage() {
               <a href="#features" onClick={() => setMobileMenuOpen(false)} className="text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navFeatures')}</a>
               <a href="#trades" onClick={() => setMobileMenuOpen(false)} className="text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navTrades')}</a>
               <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navPricing')}</a>
-              <Link href="/faq" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-[#94A3B8] hover:text-white transition-colors py-2">FAQ</Link>
-              <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-[#94A3B8] hover:text-white transition-colors py-2">Blog</Link>
+              <Link href="/faq" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navFaq')}</Link>
+              <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navBlog')}</Link>
               <button
                 onClick={() => { toggleLocale(); setMobileMenuOpen(false); }}
                 className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-white/10 bg-white/5 text-sm text-[#94A3B8] hover:text-white w-fit"
@@ -324,13 +324,13 @@ export default function LandingPage() {
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center">
                         <GraduationCap className="w-5 h-5 text-white" />
                       </div>
-                      <span className="text-xs font-semibold text-[#3B82F6]">Exemple de question</span>
+                      <span className="text-xs font-semibold text-[#3B82F6]">{t('questionCardLabel')}</span>
                     </div>
                     <p className="text-sm text-[#F8FAFC] font-medium mb-3 leading-relaxed">
-                      Quel composant du cycle de réfrigération augmente la pression du réfrigérant ?
+                      {t('questionCardText')}
                     </p>
                     <div className="space-y-1.5">
-                      {['Évaporateur', 'Détendeur', 'Compresseur', 'Condenseur'].map((opt, i) => (
+                      {(t('questionCardOptions') || '').split(',').map((opt, i) => (
                         <div key={i} className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs ${i === 2 ? 'bg-[#3B82F6]/20 border border-[#3B82F6]/40 text-[#3B82F6]' : 'bg-white/5 text-[#94A3B8]'}`}>
                           <span className="font-mono w-4">{String.fromCharCode(65 + i)}.</span>
                           <span>{opt}</span>
@@ -341,7 +341,7 @@ export default function LandingPage() {
                       ))}
                     </div>
                     <p className="text-xs text-[#64748B] mt-3 text-center">
-                      Plus de 2 400 questions dans 5 métiers
+                      {t('questionCardFooter')}
                     </p>
                   </div>
                 </div>
@@ -839,19 +839,19 @@ export default function LandingPage() {
             <div className="bg-[#1A2035] border border-[#2D3A52] hover:border-[#3B82F6]/30 rounded-2xl p-4 flex flex-col transition-all duration-300">
               <div className="flex-1">
                 <h3 className="text-base font-semibold text-[#F8FAFC] mb-1">GRATUIT</h3>
-                <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">Pour découvrir la plateforme</p>
+                <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">{t('pricingPagePlanFreeDesc')}</p>
                 <div className="flex items-baseline gap-0.5 mb-5">
                   <span className="text-3xl font-bold text-[#F8FAFC]">0</span>
                   <span className="text-xs text-[#94A3B8]">$</span>
-                  <span className="text-xs text-[#64748B]">/mois</span>
+                  <span className="text-xs text-[#64748B]">{t('pricingPagePerMonth')}</span>
                 </div>
                 <ul className="space-y-2 mb-5">
                   {[
-                    { text: '1 métier au choix', inc: true },
-                    { text: 'Contenu théorique complet', inc: true },
-                    { text: 'Questions limitées', inc: true },
-                    { text: 'Examens illimités', inc: false },
-                    { text: 'Tuteur IA', inc: false },
+                    { text: t('pricingFeatOneTrade'), inc: true },
+                    { text: t('pricingFeatTheory'), inc: true },
+                    { text: t('pricingFeatLimitedQ'), inc: true },
+                    { text: t('pricingFeatUnlimitedExams'), inc: false },
+                    { text: t('pricingFeatAiTutor'), inc: false },
                   ].map((f) => (
                     <li key={f.text} className="flex items-start gap-2">
                       {f.inc ? (
@@ -868,7 +868,7 @@ export default function LandingPage() {
                 href="/auth/register"
                 className="block w-full text-center py-2.5 rounded-xl bg-[#3B82F6] text-white text-sm font-semibold hover:bg-[#2563EB] transition-all"
               >
-                Commencer gratuitement
+                {t('pricingPageCtaFree')}
               </Link>
             </div>
 
@@ -876,20 +876,20 @@ export default function LandingPage() {
             <div className="bg-[#1A2035] border border-[#2D3A52] hover:border-[#3B82F6]/30 rounded-2xl p-4 flex flex-col transition-all duration-300">
               <div className="flex-1">
                 <h3 className="text-base font-semibold text-[#3B82F6] mb-1">ESSENTIEL</h3>
-                <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">1 métier, accès complet</p>
+                <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">{t('pricingPagePlanEssentialDesc')}</p>
                 <div className="flex items-baseline gap-0.5 mb-5">
                   <span className="text-3xl font-bold text-[#F8FAFC]">29</span>
                   <span className="text-xs text-[#94A3B8]">$</span>
-                  <span className="text-xs text-[#64748B]">/mois</span>
+                  <span className="text-xs text-[#64748B]">{t('pricingPagePerMonth')}</span>
                 </div>
                 <ul className="space-y-2 mb-5">
                   {[
-                    { text: '1 métier au choix', inc: true },
-                    { text: 'Contenu théorique complet', inc: true },
-                    { text: 'Questions illimitées', inc: true },
-                    { text: 'Examens illimités', inc: true },
-                    { text: 'Tuteur IA', inc: true },
-                    { text: '🔒 Métier verrouillé', inc: true, highlight: true },
+                    { text: t('pricingFeatOneTrade'), inc: true },
+                    { text: t('pricingFeatTheory'), inc: true },
+                    { text: t('pricingFeatUnlimitedQ'), inc: true },
+                    { text: t('pricingFeatUnlimitedExams'), inc: true },
+                    { text: t('pricingFeatAiTutor'), inc: true },
+                    { text: t('pricingFeatLocked'), inc: true, highlight: true },
                   ].map((f) => (
                     <li key={f.text} className="flex items-start gap-2">
                       <Check size={14} className={`mt-0.5 shrink-0 ${f.highlight ? 'text-[#3B82F6]' : 'text-[#10B981]'}`} />
@@ -902,7 +902,7 @@ export default function LandingPage() {
                 href="/pricing"
                 className="block w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white text-sm font-semibold hover:shadow-lg hover:shadow-[#3B82F6]/20 transition-all"
               >
-                S'abonner
+                {t('pricingPageCtaSubscribe')}
               </Link>
             </div>
 
@@ -910,25 +910,25 @@ export default function LandingPage() {
             <div className="bg-[#1A2035] border border-[#3B82F6]/40 rounded-2xl p-4 flex flex-col shadow-[0_0_30px_rgba(59,130,246,0.15)] transition-all duration-300 relative">
               <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
                 <span className="px-4 py-1 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white text-xs font-semibold rounded-full whitespace-nowrap">
-                  POPULAIRE
+                  {t('pricingPopular')}
                 </span>
               </div>
               <div className="flex-1 pt-1">
                 <h3 className="text-base font-semibold text-[#8B5CF6] mb-1">PRO</h3>
-                <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">Tous les métiers, sans limites</p>
+                <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">{t('pricingPagePlanProDesc')}</p>
                 <div className="flex items-baseline gap-0.5 mb-5">
                   <span className="text-3xl font-bold text-[#F8FAFC]">49</span>
                   <span className="text-xs text-[#94A3B8]">$</span>
-                  <span className="text-xs text-[#64748B]">/mois</span>
+                  <span className="text-xs text-[#64748B]">{t('pricingPagePerMonth')}</span>
                 </div>
                 <ul className="space-y-2 mb-5">
                   {[
-                    { text: 'Tous les métiers', inc: true },
-                    { text: 'Contenu théorique complet', inc: true },
-                    { text: 'Questions illimitées', inc: true },
-                    { text: 'Examens illimités', inc: true },
-                    { text: 'Tuteur IA', inc: true },
-                    { text: 'Suivi de progression', inc: true },
+                    { text: t('pricingFeatAllTrades'), inc: true },
+                    { text: t('pricingFeatTheory'), inc: true },
+                    { text: t('pricingFeatUnlimitedQ'), inc: true },
+                    { text: t('pricingFeatUnlimitedExams'), inc: true },
+                    { text: t('pricingFeatAiTutor'), inc: true },
+                    { text: t('planFeatureTracking'), inc: true },
                   ].map((f) => (
                     <li key={f.text} className="flex items-start gap-2">
                       <Check size={14} className="mt-0.5 text-[#10B981] shrink-0" />
@@ -941,7 +941,7 @@ export default function LandingPage() {
                 href="/pricing"
                 className="block w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white text-sm font-semibold hover:shadow-lg hover:shadow-[#3B82F6]/20 transition-all"
               >
-                S'abonner
+                {t('pricingPageCtaSubscribe')}
               </Link>
             </div>
 
@@ -949,19 +949,19 @@ export default function LandingPage() {
             <div className="bg-[#1A2035] border border-[#2D3A52] hover:border-[#F59E0B]/30 rounded-2xl p-4 flex flex-col transition-all duration-300">
               <div className="flex-1">
                 <h3 className="text-base font-semibold text-[#F59E0B] mb-1">À VIE</h3>
-                <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">Tous les métiers, à vie</p>
+                <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">{t('pricingPagePlanLifetimeDesc')}</p>
                 <div className="flex items-baseline gap-0.5 mb-5">
                   <span className="text-3xl font-bold text-[#F8FAFC]">559</span>
                   <span className="text-xs text-[#94A3B8]">$</span>
                 </div>
                 <ul className="space-y-2 mb-5">
                   {[
-                    { text: 'Tous les métiers', inc: true, highlight: true },
-                    { text: 'Contenu théorique complet', inc: true },
-                    { text: 'Questions illimitées', inc: true },
-                    { text: 'Examens illimités', inc: true },
-                    { text: 'Tuteur IA', inc: true },
-                    { text: 'Mises à jour incluses', inc: true },
+                    { text: t('pricingFeatAllTrades'), inc: true, highlight: true },
+                    { text: t('pricingFeatTheory'), inc: true },
+                    { text: t('pricingFeatUnlimitedQ'), inc: true },
+                    { text: t('pricingFeatUnlimitedExams'), inc: true },
+                    { text: t('pricingFeatAiTutor'), inc: true },
+                    { text: t('pricingFeatUpdates'), inc: true },
                   ].map((f) => (
                     <li key={f.text} className="flex items-start gap-2">
                       <Check size={14} className={`mt-0.5 shrink-0 ${f.highlight ? 'text-[#F59E0B]' : 'text-[#10B981]'}`} />
@@ -974,7 +974,7 @@ export default function LandingPage() {
                 href="/pricing"
                 className="block w-full text-center py-2.5 rounded-xl bg-gradient-to-r from-[#F59E0B] to-[#D97706] text-white text-sm font-semibold hover:shadow-lg hover:shadow-[#F59E0B]/20 transition-all"
               >
-                Acheter à vie
+                {t('pricingPageCtaLifetime')}
               </Link>
             </div>
           </div>
@@ -1014,48 +1014,24 @@ export default function LandingPage() {
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               <span className="bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent">
-                Questions fréquentes
+                {t('faqTitle')}
               </span>
             </h2>
             <p className="text-[#94A3B8] max-w-2xl mx-auto">
-              Tout ce que vous devez savoir sur les examens de métier au Québec
+              {t('faqSubtitle', { count: '10' })}
             </p>
           </div>
 
           <div className="space-y-3">
             {[
-              {
-                q: "Qu'est-ce que l'examen CMEQ pour électricien ?",
-                a: "L'examen CMEQ (Corporation des maîtres électriciens du Québec) est l'examen de certification obligatoire pour devenir électricien au Québec. Il couvre le Code de construction du Québec — Chapitre V (électricité), les calculs de charge, les circuits, la protection des circuits, les moteurs électriques et les normes de sécurité. Notre plateforme offre 950 questions d'entraînement couvrant l'ensemble des 10 chapitres du programme."
-              },
-              {
-                q: "Combien de questions y a-t-il à l'examen d'électricien CMEQ ?",
-                a: "L'examen CMEQ contient généralement entre 50 et 100 questions à choix multiples portant sur le Code de l'électricité (CCE), les calculs de charge résidentielle et commerciale, la protection des circuits, les moteurs, la mise à la terre et les méthodes de câblage. Le seuil de réussite est de 70 %."
-              },
-              {
-                q: "Comment se préparer à l'examen de plomberie CMMTQ ?",
-                a: "Pour vous préparer à l'examen CMMTQ, étudiez le Code de plomberie du Québec, les types de tuyaux (cuivre M/L/K, PVC, ABS, PEX), l'alimentation en eau potable, l'évacuation et la ventilation, les appareils sanitaires, le chauffage de l'eau, les systèmes de gaz (CSA B149) et la protection incendie. Notre plateforme couvre ces 8 chapitres avec plus de 600 questions d'entraînement."
-              },
-              {
-                q: "Quel est le seuil de réussite aux examens de métier au Québec ?",
-                a: "Le seuil de réussite pour les examens de métier au Québec est de 70 %. Une préparation adéquate avec du contenu théorique complet et des examens blancs est essentielle pour maximiser vos chances de succès dès la première tentative."
-              },
-              {
-                q: "La certification QBQ pour soudeur est-elle reconnue ?",
-                a: "Oui, la certification QBQ (Québec Board of Trades) est officielle et reconnue pour les soudeurs au Québec. Les normes CSA W47.1 (acier) et CSA W59 (construction soudée) sont les références. La certification est valide 2 ans et nécessite une réussite aux examens théorique et pratique."
-              },
-              {
-                q: "Quels sont les prérequis pour l'examen d'électricien ?",
-                a: "Pour passer l'examen d'électricien au Québec, il faut généralement avoir complété un DEP en électricité (1 800 heures), accumulé les heures d'apprentissage requises, et être inscrit à la Commission de la construction du Québec (CCQ)."
-              },
-              {
-                q: "Combien coûte la préparation aux examens ?",
-                a: "Nos plans commencent à 0$ pour le plan GRATUIT (accès limité à un métier), 29$/mois pour le plan ESSENTIEL (théorie complète et examens blancs) et 49$/mois pour le plan PRO (tous les métiers). Un accès À VIE est disponible pour 559$."
-              },
-              {
-                q: "Où puis-je passer l'examen de métier au Québec ?",
-                a: "Les examens sont administrés par la CCQ, la RBQ, le QBQ et les corporations (CMEQ, CMMTQ). La préparation peut se faire en ligne via notre plateforme avec théorie complète, 2 161 questions d'entraînement et un tuteur IA pour vous accompagner."
-              }
+              { q: t('faqQ1'), a: t('faqA1') },
+              { q: t('faqQ2'), a: t('faqA2') },
+              { q: t('faqQ3'), a: t('faqA3') },
+              { q: t('faqQ4'), a: t('faqA4') },
+              { q: t('faqQ5'), a: t('faqA5') },
+              { q: t('faqQ6'), a: t('faqA6') },
+              { q: t('faqQ7'), a: t('faqA7') },
+              { q: t('faqQ8'), a: t('faqA8') },
             ].map((item, idx) => (
               <details
                 key={idx}
