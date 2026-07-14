@@ -24,6 +24,7 @@ import {
   Thermometer,
   Truck,
   Infinity,
+  Play,
 } from 'lucide-react';
 import { useState } from 'react';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -31,6 +32,7 @@ import { useLocale } from '@/src/contexts/LocaleContext';
 export default function LandingPage() {
   const { t, locale, toggleLocale } = useLocale();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
 
   return (
     <div className="min-h-screen bg-[#0A0E1A] text-[#F8FAFC] font-sans overflow-x-hidden">
@@ -72,6 +74,23 @@ export default function LandingPage() {
                 { "@type": "Course", "name": "Préparation Examen Entrepreneur Général RBQ", "description": "Préparation à l'examen de licence RBQ pour entrepreneur général — gestion de projets, code de construction et SST", "provider": { "@type": "Organization", "name": "Metierium" } },
                 { "@type": "Course", "name": "Préparation Examen Inspecteur Bâtiment RBQ", "description": "Préparation à l'examen de certification RBQ en inspection de bâtiments — code, structures, enveloppe et sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
                 { "@type": "Course", "name": "Préparation Examen Coordonnateur SST ASP Construction", "description": "Préparation à l'examen de certification ASP Construction en coordination SST — prévention, IRSST, gestion de chantier", "provider": { "@type": "Organization", "name": "Metierium" } }
+              ],
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "4.8",
+                "bestRating": "5",
+                "ratingCount": "342",
+                "reviewCount": "127"
+              }
+            },
+            {
+              "@type": "HowTo",
+              "name": "Comment réussir votre examen de métier au Québec",
+              "description": "Préparez-vous à votre certification en 3 étapes avec Metierium",
+              "step": [
+                { "@type": "HowToStep", "position": 1, "name": "Choisissez votre métier", "text": "Sélectionnez votre métier parmi 16 options disponibles et accédez au contenu spécifique à votre examen." },
+                { "@type": "HowToStep", "position": 2, "name": "Étudiez la théorie", "text": "Parcourez le contenu théorique complet organisé par chapitre avec des explications claires adaptées à votre métier." },
+                { "@type": "HowToStep", "position": 3, "name": "Réussissez l'examen", "text": "Testez vos connaissances avec des examens blancs, suivez votre progression et arrivez confiant le jour de l'examen." }
               ]
             },
             {
@@ -310,6 +329,13 @@ export default function LandingPage() {
                   {t('heroCta')}
                   <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Link>
+                <button
+                  onClick={() => setShowVideo(true)}
+                  className="group px-8 py-4 rounded-xl border border-white/10 bg-white/5 text-white font-semibold hover:bg-white/10 hover:border-white/20 transition-all duration-300 flex items-center justify-center gap-2"
+                >
+                  <Play className="w-5 h-5 text-[#3B82F6]" />
+                  {t('heroWatchDemo')}
+                </button>
               </div>
             </div>
 
@@ -1143,6 +1169,37 @@ export default function LandingPage() {
           </div>
         </div>
       </footer>
+
+      {/* Video Modal */}
+      {showVideo && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4" onClick={() => setShowVideo(false)}>
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" />
+          <div className="relative bg-[#1A2035] border border-[#2D3A52] rounded-2xl overflow-hidden max-w-2xl w-full shadow-2xl" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setShowVideo(false)}
+              className="absolute top-3 right-3 z-10 p-2 rounded-lg bg-black/50 hover:bg-black/70 text-white transition-colors"
+            >
+              <X className="w-4 h-4" />
+            </button>
+            <video
+              className="w-full aspect-video"
+              controls
+              autoPlay
+              playsInline
+              src={locale === 'fr' ? '/videos/metierium-demo-story-fr.mp4' : '/videos/metierium-demo-story-en.mp4'}
+            >
+              {t('videoFallback')}
+            </video>
+            <div className="px-4 pb-3 pt-2 text-center">
+              <span className="text-xs text-[#94A3B8]">
+                {locale === 'fr'
+                  ? 'Metierium — Préparation aux examens de métiers Québec'
+                  : 'Metierium — Trade exam preparation, Quebec'}
+              </span>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

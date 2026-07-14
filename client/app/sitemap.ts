@@ -1,66 +1,86 @@
 import { MetadataRoute } from 'next';
-import { readFileSync, existsSync } from 'fs';
-import { join } from 'path';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://metierium.com';
 
-  const entries: MetadataRoute.Sitemap = [
-    { url: baseUrl, lastModified: new Date(), changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${baseUrl}/auth/login`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
-    { url: `${baseUrl}/auth/register`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
-    { url: `${baseUrl}/auth/forgot-password`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.3 },
-    { url: `${baseUrl}/pricing`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${baseUrl}/theory`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.9 },
-    { url: `${baseUrl}/exams`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${baseUrl}/subscription`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
-    { url: `${baseUrl}/tutor`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
-    { url: `${baseUrl}/profile`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.2 },
-    { url: `${baseUrl}/app`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.6 },
-    { url: `${baseUrl}/faq`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.8 },
-    { url: `${baseUrl}/blog`, lastModified: new Date(), changeFrequency: 'daily', priority: 0.7 },
-    { url: `${baseUrl}/trade/cmeq`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/trade/cmmtq`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/trade/qbq`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/trade/hvac`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${baseUrl}/trade/mvl`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.9 },
+  // Static pages
+  const staticPages = [
+    { url: baseUrl, priority: 1.0, changeFrequency: 'weekly' as const },
+    { url: `${baseUrl}/theory`, priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: `${baseUrl}/exams`, priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: `${baseUrl}/pricing`, priority: 0.7, changeFrequency: 'monthly' as const },
+    { url: `${baseUrl}/blog`, priority: 0.7, changeFrequency: 'weekly' as const },
+    { url: `${baseUrl}/faq`, priority: 0.8, changeFrequency: 'weekly' as const },
+    { url: `${baseUrl}/contact`, priority: 0.5, changeFrequency: 'monthly' as const },
   ];
 
-  // Add FAQ pages from faq-data.json
-  const faqPath = join(process.cwd(), 'public', 'faq-data.json');
-  if (existsSync(faqPath)) {
-    try {
-      const faqData = JSON.parse(readFileSync(faqPath, 'utf-8'));
-      for (const entry of faqData) {
-        if (entry.slug) {
-          entries.push({
-            url: `${baseUrl}/faq/${entry.slug}`,
-            lastModified: new Date(),
-            changeFrequency: 'weekly',
-            priority: 0.7,
-          });
-        }
-      }
-    } catch {}
-  }
+  // Trade pillar pages
+  const trades = [
+    'cmeq', 'cmmtq', 'qbq', 'hvac', 'mvl',
+    'securite-incendie', 'ferblantier', 'briqueteur',
+    'operateur-equipement-lourd', 'gaz', 'ascenseurs',
+    'refrigeration', 'constructeur', 'entrepreneur-general',
+    'inspecteur', 'coordonnateur-sst',
+  ];
 
-  // Add blog posts from blog-data.json
-  const blogPath = join(process.cwd(), 'public', 'blog-data.json');
-  if (existsSync(blogPath)) {
-    try {
-      const blogData = JSON.parse(readFileSync(blogPath, 'utf-8'));
-      for (const post of blogData) {
-        if (post.slug) {
-          entries.push({
-            url: `${baseUrl}/blog/${post.slug}`,
-            lastModified: new Date(),
-            changeFrequency: 'monthly',
-            priority: 0.5,
-          });
-        }
-      }
-    } catch {}
-  }
+  const tradePages = trades.map((slug) => ({
+    url: `${baseUrl}/trade/${slug}`,
+    priority: 0.9,
+    changeFrequency: 'weekly' as const,
+  }));
 
-  return entries;
+  // Blog posts
+  const blogSlugs = [
+    'guide-examen-electricien-cmeq',
+    'guide-examen-plombier-cmmtq',
+    'guide-examen-soudeur-qbq',
+    'guide-examen-hvac',
+    'guide-examen-mvl',
+    'guide-examen-securite-incendie',
+    'guide-examen-ferblantier',
+    'guide-examen-briqueteur',
+    'guide-examen-opequip',
+    'guide-examen-gaz',
+    'guide-examen-ascenseurs',
+    'guide-examen-refrigeration',
+    'guide-examen-constructeur',
+    'guide-examen-entrepreneur-general',
+    'guide-examen-inspecteur',
+    'guide-examen-coordonnateur-sst',
+    'calendrier-examens-metier-quebec-2026',
+  ];
+
+  const blogPages = blogSlugs.map((slug) => ({
+    url: `${baseUrl}/blog/${slug}`,
+    priority: 0.6,
+    changeFrequency: 'monthly' as const,
+  }));
+
+  // FAQ pages
+  const faqSlugs = [
+    'cmeq-examen-questions',
+    'cmeq-combien-questions',
+    'cmeq-preparation',
+    'cmeq-prerequis',
+    'cmmtq-examen-questions',
+    'qbq-soudeur-certification',
+    'examen-metier-cout',
+    'ou-passer-examen-metier-quebec',
+    'constr-examen-questions',
+    'entgen-examen-questions',
+    'inspect-examen-questions',
+  ];
+
+  const faqPages = faqSlugs.map((slug) => ({
+    url: `${baseUrl}/faq/${slug}`,
+    priority: 0.5,
+    changeFrequency: 'monthly' as const,
+  }));
+
+  return [
+    ...staticPages,
+    ...tradePages,
+    ...blogPages,
+    ...faqPages,
+  ];
 }

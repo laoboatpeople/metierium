@@ -7,23 +7,23 @@ import Script from 'next/script';
 import { BookOpen, HelpCircle, GraduationCap, ChevronRight, ArrowLeft, Loader2, FileText, Zap, Layers, Shield } from 'lucide-react';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
-const TRADES: Record<string, { name: string; desc: string; color: string }> = {
+const TRADES: Record<string, { name: string; desc: string; color: string; faqTrade?: string }> = {
   cmeq: { name: 'CMEQ', desc: 'Électricien — Corporation des maîtres électriciens du Québec', color: '#3B82F6' },
   cmmtq: { name: 'CMMTQ', desc: 'Plombier — Corporation des maîtres mécaniciens en tuyauterie du Québec', color: '#06B6D4' },
   qbq: { name: 'QBQ', desc: 'Soudeur — Québec Board of Trades', color: '#8B5CF6' },
   hvac: { name: 'CMMTQ', desc: 'Technicien en chauffage-climatisation — HVAC', color: '#F59E0B' },
   mvl: { name: 'CCQ', desc: 'Mécanicien de véhicules lourds — CCQ', color: '#10B981' },
-  'securite-incendie': { name: 'RBQ', desc: 'Technicien en sécurité incendie — RBQ', color: '#EF4444' },
-  ferblantier: { name: 'CCQ', desc: 'Ferblantier / Tôlier — CCQ', color: '#8B5CF6' },
-  briqueteur: { name: 'CCQ', desc: 'Briqueteur-maçon — CCQ', color: '#F59E0B' },
-  'operateur-equipement-lourd': { name: 'CCQ', desc: 'Opérateur d\'équipement lourd — CCQ', color: '#06B6D4' },
+  'securite-incendie': { name: 'RBQ', desc: 'Technicien en sécurité incendie — RBQ', color: '#EF4444', faqTrade: 'INCENDIE' },
+  ferblantier: { name: 'CCQ', desc: 'Ferblantier / Tôlier — CCQ', color: '#8B5CF6', faqTrade: 'FERBLAN' },
+  briqueteur: { name: 'CCQ', desc: 'Briqueteur-maçon — CCQ', color: '#F59E0B', faqTrade: 'BRIQUE' },
+  'operateur-equipement-lourd': { name: 'CCQ', desc: "Opérateur d'équipement lourd — CCQ", color: '#06B6D4', faqTrade: 'OPEQUIP' },
   gaz: { name: 'RBQ', desc: 'Technicien en gaz — RBQ', color: '#F59E0B' },
-  ascenseurs: { name: 'RBQ', desc: 'Mécanicien d\'ascenseurs — RBQ', color: '#10B981' },
-  refrigeration: { name: 'RBQ', desc: 'Opérateur de réfrigération — RBQ', color: '#0E7490' },
-  constructeur: { name: 'RBQ', desc: 'Constructeur-rénovateur — RBQ', color: '#7C3AED' },
-  'entrepreneur-general': { name: 'RBQ', desc: 'Entrepreneur général — RBQ', color: '#4F46E5' },
-  inspecteur: { name: 'RBQ', desc: 'Inspecteur en bâtiment — RBQ', color: '#0E7490' },
-  'coordonnateur-sst': { name: 'ASP Const.', desc: 'Coordonnateur SST — ASP Construction', color: '#DC2626' },
+  ascenseurs: { name: 'RBQ', desc: "Mécanicien d'ascenseurs — RBQ", color: '#10B981', faqTrade: 'ASCEN' },
+  refrigeration: { name: 'RBQ', desc: 'Opérateur de réfrigération — RBQ', color: '#0E7490', faqTrade: 'REFRIG' },
+  constructeur: { name: 'RBQ', desc: 'Constructeur-rénovateur — RBQ', color: '#7C3AED', faqTrade: 'CONSTR' },
+  'entrepreneur-general': { name: 'RBQ', desc: 'Entrepreneur général — RBQ', color: '#4F46E5', faqTrade: 'ENTGEN' },
+  inspecteur: { name: 'RBQ', desc: 'Inspecteur en bâtiment — RBQ', color: '#0E7490', faqTrade: 'INSPECT' },
+  'coordonnateur-sst': { name: 'ASP Const.', desc: 'Coordonnateur SST — ASP Construction', color: '#DC2626', faqTrade: 'SST' },
 };
 
 export default function TradePillarPage() {
@@ -38,7 +38,11 @@ export default function TradePillarPage() {
       const currentLocale = locale || 'fr';
       fetch('/faq-data.json')
         .then(r => r.json())
-        .then((data: any[]) => setFaqEntries(data.filter(e => e.trade?.toLowerCase() === slug && (!e.locale || e.locale === currentLocale))))
+        .then((data: any[]) => setFaqEntries(data.filter(e => {
+          const faqTrade = e.trade?.toLowerCase();
+          const targetTrade = (trade?.faqTrade || slug).toLowerCase();
+          return faqTrade === targetTrade && (!e.locale || e.locale === currentLocale);
+        })))
         .catch(() => {});
     }
   }, [slug, locale]);

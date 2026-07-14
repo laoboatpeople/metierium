@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     description: 'Réussissez votre examen de certification avec théorie complète, examens blancs et suivi personnalisé.',
     type: 'website',
     locale: 'fr_CA',
+    alternateLocale: ['en_CA'],
     siteName: 'Metierium',
     images: [{ url: 'https://metierium.com/og-image.png', width: 1200, height: 630 }],
   },
@@ -30,6 +31,10 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
   alternates: {
     canonical: 'https://metierium.com',
+    languages: {
+      'fr-CA': 'https://metierium.com',
+      'en-CA': 'https://metierium.com/en',
+    },
   },
   other: {
     'application/ld+json': JSON.stringify({
