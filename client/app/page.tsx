@@ -394,12 +394,12 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {/* Électricien (CMEQ) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#3B82F6]/10 to-[#06B6D4]/10 border border-[#3B82F6]/20 hover:border-[#3B82F6]/50 transition-all duration-300 group">
+            <Link href="/trade/cmeq" className="p-6 rounded-2xl bg-gradient-to-br from-[#3B82F6]/10 to-[#06B6D4]/10 border border-[#3B82F6]/20 hover:border-[#3B82F6]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center mb-4">
                 <Zap className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#3B82F6] transition-colors">
-                <Link href="/trade/cmeq">{t('tradeElectricien')}</Link>
+                {t('tradeElectricien')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeElectricienDesc')}
@@ -412,15 +412,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Plombier (CMMTQ) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#06B6D4]/10 to-[#0E7490]/10 border border-[#06B6D4]/20 hover:border-[#06B6D4]/50 transition-all duration-300 group">
+            <Link href="/trade/cmmtq" className="p-6 rounded-2xl bg-gradient-to-br from-[#06B6D4]/10 to-[#0E7490]/10 border border-[#06B6D4]/20 hover:border-[#06B6D4]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#06B6D4] to-[#0E7490] flex items-center justify-center mb-4">
                 <Wrench className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#06B6D4] transition-colors">
-                <Link href="/trade/cmmtq">{t('tradePlombier')}</Link>
+                {t('tradePlombier')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradePlombierDesc')}
@@ -433,15 +433,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Soudeur (QBQ) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#8B5CF6]/10 to-[#7C3AED]/10 border border-[#8B5CF6]/20 hover:border-[#8B5CF6]/50 transition-all duration-300 group">
+            <Link href="/trade/qbq" className="p-6 rounded-2xl bg-gradient-to-br from-[#8B5CF6]/10 to-[#7C3AED]/10 border border-[#8B5CF6]/20 hover:border-[#8B5CF6]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#7C3AED] flex items-center justify-center mb-4">
                 <Shield className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#8B5CF6] transition-colors">
-                <Link href="/trade/qbq">{t('tradeSoudeur')}</Link>
+                {t('tradeSoudeur')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeSoudeurDesc')}
@@ -454,15 +454,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* HVAC (CMMTQ) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#F59E0B]/10 to-[#D97706]/10 border border-[#F59E0B]/20 hover:border-[#F59E0B]/50 transition-all duration-300 group">
+            <Link href="/trade/hvac" className="p-6 rounded-2xl bg-gradient-to-br from-[#F59E0B]/10 to-[#D97706]/10 border border-[#F59E0B]/20 hover:border-[#F59E0B]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#F59E0B] to-[#D97706] flex items-center justify-center mb-4">
                 <Thermometer className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#F59E0B] transition-colors">
-                <Link href="/trade/hvac">{t('tradeHvac')}</Link>
+                {t('tradeHvac')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeHvacDesc')}
@@ -475,15 +475,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Mécanicien véhicules lourds (CCQ) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#10B981]/10 to-[#059669]/10 border border-[#10B981]/20 hover:border-[#10B981]/50 transition-all duration-300 group">
+            <Link href="/trade/mvl" className="p-6 rounded-2xl bg-gradient-to-br from-[#10B981]/10 to-[#059669]/10 border border-[#10B981]/20 hover:border-[#10B981]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#10B981] to-[#059669] flex items-center justify-center mb-4">
                 <Truck className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#10B981] transition-colors">
-                <Link href="/trade/mvl">{t('tradeMvl')}</Link>
+                {t('tradeMvl')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeMvlDesc')}
@@ -496,15 +496,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Technicien en sécurité incendie (INCENDIE) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#EF4444]/10 to-[#DC2626]/10 border border-[#EF4444]/20 hover:border-[#EF4444]/50 transition-all duration-300 group">
+            <Link href="/trade/securite-incendie" className="p-6 rounded-2xl bg-gradient-to-br from-[#EF4444]/10 to-[#DC2626]/10 border border-[#EF4444]/20 hover:border-[#EF4444]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#EF4444] to-[#DC2626] flex items-center justify-center mb-4">
                 <Shield className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#EF4444] transition-colors">
-                <Link href="/trade/securite-incendie">{t('tradeIncendie')}</Link>
+                {t('tradeIncendie')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeIncendieDesc')}
@@ -517,15 +517,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Ferblantier / Tôlier (FERBLAN) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#8B5CF6]/10 to-[#7C3AED]/10 border border-[#8B5CF6]/20 hover:border-[#8B5CF6]/50 transition-all duration-300 group">
+            <Link href="/trade/ferblantier" className="p-6 rounded-2xl bg-gradient-to-br from-[#8B5CF6]/10 to-[#7C3AED]/10 border border-[#8B5CF6]/20 hover:border-[#8B5CF6]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#8B5CF6] to-[#7C3AED] flex items-center justify-center mb-4">
                 <Wrench className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#8B5CF6] transition-colors">
-                <Link href="/trade/ferblantier">{t('tradeFerblantier')}</Link>
+                {t('tradeFerblantier')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeFerblantierDesc')}
@@ -538,15 +538,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Briqueteur-maçon (BRIQUE) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#F59E0B]/10 to-[#D97706]/10 border border-[#F59E0B]/20 hover:border-[#F59E0B]/50 transition-all duration-300 group">
+            <Link href="/trade/briqueteur" className="p-6 rounded-2xl bg-gradient-to-br from-[#F59E0B]/10 to-[#D97706]/10 border border-[#F59E0B]/20 hover:border-[#F59E0B]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#F59E0B] to-[#D97706] flex items-center justify-center mb-4">
                 <Wrench className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#F59E0B] transition-colors">
-                <Link href="/trade/briqueteur">{t('tradeBriqueteur')}</Link>
+                {t('tradeBriqueteur')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeBriqueteurDesc')}
@@ -559,15 +559,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Opérateur d'équipement lourd (OPEQUIP) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#06B6D4]/10 to-[#0E7490]/10 border border-[#06B6D4]/20 hover:border-[#06B6D4]/50 transition-all duration-300 group">
+            <Link href="/trade/operateur-equipement-lourd" className="p-6 rounded-2xl bg-gradient-to-br from-[#06B6D4]/10 to-[#0E7490]/10 border border-[#06B6D4]/20 hover:border-[#06B6D4]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#06B6D4] to-[#0E7490] flex items-center justify-center mb-4">
                 <Truck className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#06B6D4] transition-colors">
-                <Link href="/trade/operateur-equipement-lourd">{t('tradeOpEquip')}</Link>
+                {t('tradeOpEquip')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeOpEquipDesc')}
@@ -580,15 +580,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Technicien en gaz (GAZ) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#F59E0B]/10 to-[#D97706]/10 border border-[#F59E0B]/20 hover:border-[#F59E0B]/50 transition-all duration-300 group">
+            <Link href="/trade/gaz" className="p-6 rounded-2xl bg-gradient-to-br from-[#F59E0B]/10 to-[#D97706]/10 border border-[#F59E0B]/20 hover:border-[#F59E0B]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#F59E0B] to-[#D97706] flex items-center justify-center mb-4">
                 <Thermometer className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#F59E0B] transition-colors">
-                <Link href="/trade/gaz">{t('tradeGaz')}</Link>
+                {t('tradeGaz')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeGazDesc')}
@@ -601,15 +601,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Mécanicien d'ascenseurs (ASCEN) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#10B981]/10 to-[#059669]/10 border border-[#10B981]/20 hover:border-[#10B981]/50 transition-all duration-300 group">
+            <Link href="/trade/ascenseurs" className="p-6 rounded-2xl bg-gradient-to-br from-[#10B981]/10 to-[#059669]/10 border border-[#10B981]/20 hover:border-[#10B981]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#10B981] to-[#059669] flex items-center justify-center mb-4">
                 <Wrench className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#10B981] transition-colors">
-                <Link href="/trade/ascenseurs">{t('tradeAscenseur')}</Link>
+                {t('tradeAscenseur')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeAscenseurDesc')}
@@ -622,15 +622,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Opérateur de réfrigération (REFRIG) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#0E7490]/10 to-[#0A5C70]/10 border border-[#0E7490]/20 hover:border-[#0E7490]/50 transition-all duration-300 group">
+            <Link href="/trade/refrigeration" className="p-6 rounded-2xl bg-gradient-to-br from-[#0E7490]/10 to-[#0A5C70]/10 border border-[#0E7490]/20 hover:border-[#0E7490]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0E7490] to-[#0A5C70] flex items-center justify-center mb-4">
                 <Thermometer className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#0E7490] transition-colors">
-                <Link href="/trade/refrigeration">{t('tradeRefrig')}</Link>
+                {t('tradeRefrig')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeRefrigDesc')}
@@ -643,15 +643,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Constructeur-rénovateur (CONSTR) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#7C3AED]/10 to-[#6D28D9]/10 border border-[#7C3AED]/20 hover:border-[#7C3AED]/50 transition-all duration-300 group">
+            <Link href="/trade/constructeur" className="p-6 rounded-2xl bg-gradient-to-br from-[#7C3AED]/10 to-[#6D28D9]/10 border border-[#7C3AED]/20 hover:border-[#7C3AED]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#7C3AED] to-[#6D28D9] flex items-center justify-center mb-4">
                 <Wrench className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#7C3AED] transition-colors">
-                <Link href="/trade/constructeur">{t('tradeConstr')}</Link>
+                {t('tradeConstr')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeConstrDesc')}
@@ -664,15 +664,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Entrepreneur général (ENTGEN) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#4F46E5]/10 to-[#4338CA]/10 border border-[#4F46E5]/20 hover:border-[#4F46E5]/50 transition-all duration-300 group">
+            <Link href="/trade/entrepreneur-general" className="p-6 rounded-2xl bg-gradient-to-br from-[#4F46E5]/10 to-[#4338CA]/10 border border-[#4F46E5]/20 hover:border-[#4F46E5]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#4F46E5] to-[#4338CA] flex items-center justify-center mb-4">
                 <Shield className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#4F46E5] transition-colors">
-                <Link href="/trade/entrepreneur-general">{t('tradeEntgen')}</Link>
+                {t('tradeEntgen')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeEntgenDesc')}
@@ -685,15 +685,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Inspecteur en bâtiment (INSPECT) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#0E7490]/10 to-[#0A5C70]/10 border border-[#0E7490]/20 hover:border-[#0E7490]/50 transition-all duration-300 group">
+            <Link href="/trade/inspecteur" className="p-6 rounded-2xl bg-gradient-to-br from-[#0E7490]/10 to-[#0A5C70]/10 border border-[#0E7490]/20 hover:border-[#0E7490]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0E7490] to-[#0A5C70] flex items-center justify-center mb-4">
                 <Shield className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#0E7490] transition-colors">
-                <Link href="/trade/inspecteur">{t('tradeInspect')}</Link>
+                {t('tradeInspect')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeInspectDesc')}
@@ -706,15 +706,15 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
 
             {/* Coordonnateur SST (SST) */}
-            <div className="p-6 rounded-2xl bg-gradient-to-br from-[#DC2626]/10 to-[#B91C1C]/10 border border-[#DC2626]/20 hover:border-[#DC2626]/50 transition-all duration-300 group">
+            <Link href="/trade/coordonnateur-sst" className="p-6 rounded-2xl bg-gradient-to-br from-[#DC2626]/10 to-[#B91C1C]/10 border border-[#DC2626]/20 hover:border-[#DC2626]/50 transition-all duration-300 group block">
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#DC2626] to-[#B91C1C] flex items-center justify-center mb-4">
                 <Shield className="w-7 h-7 text-white" />
               </div>
               <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#DC2626] transition-colors">
-                <Link href="/trade/coordonnateur-sst">{t('tradeSst')}</Link>
+                {t('tradeSst')}
               </h3>
               <p className="text-sm text-[#94A3B8] mb-4">
                 {t('tradeSstDesc')}
@@ -727,7 +727,7 @@ export default function LandingPage() {
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>
-            </div>
+            </Link>
           </div>
         </div>
       </section>
