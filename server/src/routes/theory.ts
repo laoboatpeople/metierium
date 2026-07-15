@@ -27,7 +27,20 @@ router.get('/', authenticate, async (req: Request, res: Response): Promise<void>
       where: { id: req.user!.id },
       select: { plan: true, subStatus: true },
     });
-    const isFree = !dbUser || dbUser.plan === 'FREE';
+
+    // Detect Pro: MONTHLY plan with no tradeId lock
+    let userPlan: string = dbUser?.plan || 'FREE';
+    if (userPlan === 'MONTHLY') {
+      const activeSub = await prisma.subscription.findFirst({
+        where: { userId: req.user!.id, status: { in: ['ACTIVE', 'CANCELLED'] } },
+        orderBy: { createdAt: 'desc' },
+      });
+      if (activeSub && !activeSub.tradeId && (activeSub.status !== 'CANCELLED' || (activeSub.currentPeriod && new Date(activeSub.currentPeriod) > new Date()))) {
+        userPlan = 'PRO';
+      }
+    }
+
+    const isFree = userPlan === 'FREE';
 
     const chapters = await prisma.chapter.findMany({
       where: {
@@ -58,7 +71,7 @@ router.get('/', authenticate, async (req: Request, res: Response): Promise<void>
       hasTheory: !!(lang === 'en' ? (ch.theoryContentEn || ch.theoryContent) : ch.theoryContent),
     }));
 
-    res.json({ data: mapped, plan: dbUser?.plan || 'FREE' });
+    res.json({ data: mapped, plan: userPlan });
   } catch (err) {
     console.error('[Theory] List error:', err);
     res.status(500).json({ message: 'Internal server error' });
