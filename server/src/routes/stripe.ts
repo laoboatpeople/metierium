@@ -215,9 +215,12 @@ router.post('/webhook', async (req: Request, res: Response): Promise<void> => {
           where: { stripeSubId: stripeSub.id },
         });
         if (existingSub) {
-          const status = stripeSub.status === 'active' ? 'ACTIVE'
+          const isCancelled = stripeSub.cancel_at_period_end && stripeSub.status === 'active';
+          const status = isCancelled ? 'CANCELLED'
+            : stripeSub.status === 'active' ? 'ACTIVE'
             : stripeSub.status === 'past_due' ? 'PAST_DUE'
             : 'CANCELLED';
+
           await prisma.subscription.update({
             where: { id: existingSub.id },
             data: {
@@ -225,7 +228,16 @@ router.post('/webhook', async (req: Request, res: Response): Promise<void> => {
               currentPeriod: new Date(stripeSub.current_period_end * 1000),
             },
           });
-          console.log(`[Stripe] Subscription ${stripeSub.id} updated to ${status}`);
+
+          // If user cancelled at period end, reflect it in subStatus but keep plan active until period ends
+          if (isCancelled) {
+            await prisma.user.update({
+              where: { id: existingSub.userId },
+              data: { subStatus: 'CANCELLED' },
+            });
+          }
+
+          console.log(`[Stripe] Subscription ${stripeSub.id} updated to ${status}${isCancelled ? ' (cancel_at_period_end)' : ''}`);
         }
         break;
       }
@@ -240,7 +252,12 @@ router.post('/webhook', async (req: Request, res: Response): Promise<void> => {
             where: { id: existing.id },
             data: { status: 'CANCELLED' },
           });
-          console.log(`[Stripe] Subscription ${deletedSub.id} cancelled`);
+          // Revoke access: set plan back to FREE when subscription actually ends
+          await prisma.user.update({
+            where: { id: existing.userId },
+            data: { plan: 'FREE', subStatus: null },
+          });
+          console.log(`[Stripe] Subscription ${deletedSub.id} ended — user ${existing.userId} reverted to FREE`);
         }
         break;
       }

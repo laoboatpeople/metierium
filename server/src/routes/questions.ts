@@ -79,7 +79,8 @@ router.get('/', authenticate, async (req: Request, res: Response): Promise<void>
       if (total === 0 && locale !== 'fr') {
         where.locale = 'fr';
       } else {
-        return res.json({ data: questions, total, limit, offset, totalPages: Math.ceil(total / limit) });
+        res.json({ data: questions, total, limit, offset, totalPages: Math.ceil(total / limit) });
+        return;
       }
     }
 

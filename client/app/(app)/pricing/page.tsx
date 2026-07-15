@@ -95,6 +95,8 @@ export default function PricingPage() {
   const [subscribing, setSubscribing] = useState<string | null>(null);
   const [error, setError] = useState('');
   const [currentPlan, setCurrentPlan] = useState<string | null>(null);
+  const [subStatus, setSubStatus] = useState<string | null>(null);
+  const [subscriptionEndDate, setSubscriptionEndDate] = useState<string | null>(null);
   const [portalLoading, setPortalLoading] = useState(false);
 
   // Fetch trades + current plan
@@ -123,6 +125,13 @@ export default function PricingPage() {
             'LIFETIME': 'lifetime',
           };
           setCurrentPlan(map[plan] || null);
+          setSubStatus(data.subStatus || data.subscription?.status || null);
+          if (data.subscription?.currentPeriod) {
+            const d = new Date(data.subscription.currentPeriod);
+            setSubscriptionEndDate(d.toLocaleDateString('fr-CA', {
+              year: 'numeric', month: 'long', day: 'numeric',
+            }));
+          }
         })
         .catch(() => {});
     }
@@ -325,6 +334,21 @@ export default function PricingPage() {
                 <>Gérer l'abonnement / Annuler</>
               )}
             </button>
+          </div>
+        )}
+
+        {/* Cancellation notice */}
+        {subStatus === 'CANCELLED' && subscriptionEndDate && (
+          <div className="text-center mt-8">
+            <div className="inline-block px-6 py-4 bg-[#1A2035] border border-[#F59E0B]/30 rounded-xl">
+              <p className="text-[#F59E0B] text-sm font-medium">
+                ⏳ Abonnement annulé — service actif jusqu'au{' '}
+                <span className="font-bold">{subscriptionEndDate}</span>
+              </p>
+              <p className="text-[#64748B] text-xs mt-1">
+                Tu auras encore accès à toutes les fonctionnalités jusqu'à cette date.
+              </p>
+            </div>
           </div>
         )}
 
