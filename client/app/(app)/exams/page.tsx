@@ -262,6 +262,16 @@ function ExamsPage() {
       const hasChapterFilter = selectedChapters.size > 0;
       let qs: Question[] = [];
 
+      // Cap question count to available questions in selected chapters
+      let effectiveCount = questionCount;
+      if (hasChapterFilter) {
+        const selectedChapterList = chapters.filter((c) => selectedChapters.has(c.id));
+        const totalAvailable = selectedChapterList.reduce((sum, ch) => sum + (ch.questionCount || 0), 0);
+        if (questionCount > totalAvailable) {
+          effectiveCount = totalAvailable;
+        }
+      }
+
       if (hasChapterFilter) {
         // Weighted distribution across selected chapters
         const selectedChapterList = chapters.filter((c) => selectedChapters.has(c.id));
@@ -271,9 +281,9 @@ function ExamsPage() {
           // Distribute proportionally, last chapter gets remainder
           let count: number;
           if (idx < selectedChapterList.length - 1) {
-            count = Math.round((questionCount / totalWeight));
+            count = Math.round((effectiveCount / totalWeight));
           } else {
-            count = questionCount - allocated;
+            count = effectiveCount - allocated;
           }
           allocated += count;
           if (count < 1) return null;
@@ -726,7 +736,22 @@ function ExamsPage() {
                   <p className="text-sm text-[#94A3B8]">
                     {t('examsPassThreshold', { threshold: PASS_THRESHOLD })}
                   </p>
-                  <p className="text-xs text-[#64748B]">{questions.length === 0 ? t('examsQuestionsRandom', { count: questionCount }) : t('examsQuestionsPrepared', { count: questions.length })}</p>
+                  <p className="text-xs text-[#64748B]">
+                    {(() => {
+                      if (questions.length > 0) return t('examsQuestionsPrepared', { count: questions.length });
+                      if (selectedChapters.size > 0) {
+                        const chList = chapters.filter(c => selectedChapters.has(c.id));
+                        const available = chList.reduce((s, ch) => s + (ch.questionCount || 0), 0);
+                        if (questionCount > available) {
+                          return <>
+                            <span className="text-[#F59E0B]">⚠ {t('examsQuestionsRandom', { count: available })}</span>
+                            <span className="block text-[#64748B]">{t('examsCappedNotice', { requested: questionCount, available })}</span>
+                          </>;
+                        }
+                      }
+                      return t('examsQuestionsRandom', { count: questionCount });
+                    })()}
+                  </p>
                 </div>
               </div>
               <button
