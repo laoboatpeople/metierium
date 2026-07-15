@@ -9,3 +9,11 @@ build/
 .DS_Store
 .coverage
 coverage/
+# Stray scripts
+server/translate_batch*.js
+server/translate_batch*.py
+server/extract_*.js
+server/extract_*.py
+server/insert_*.js
+server/insert_*.py
+server/slice_*.py
