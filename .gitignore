@@ -9,6 +9,8 @@ build/
 .DS_Store
 .coverage
 coverage/
+__pycache__/
+*.pyc
 # Stray scripts
 server/translate_batch*.js
 server/translate_batch*.py
@@ -17,3 +19,9 @@ server/extract_*.py
 server/insert_*.js
 server/insert_*.py
 server/slice_*.py
+server/auto_translate*.py
+server/check_en.js
+server/count_en.js
+server/create_en_batch.py
+server/get_remaining*.js
+server/master_translate*.py
