@@ -17,22 +17,24 @@ import {
   LogOut,
   X,
 } from 'lucide-react';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
-const NAV_ITEMS = [
-{ href: '/app', label: 'Tableau de bord', icon: LayoutDashboard },
-{ href: '/theory', label: 'Théorie', icon: BookMarked },
-{ href: '/exams', label: 'Examens', icon: BookOpen },
-{ href: '/app', label: 'Statistiques', icon: BarChart3 },
-{ href: '/faq', label: 'FAQ', icon: HelpCircle },
-{ href: '/blog', label: 'Blog', icon: Newspaper },
-{ href: '/tutor', label: 'Tuteur IA', icon: MessageSquare },
-{ href: '/pricing', label: 'Abonnement', icon: CreditCard },
-{ href: '/profile', label: 'Profil', icon: User },
+const NAV_DEFS = [
+  { href: '/app', icon: LayoutDashboard, labelKey: 'dashboard' },
+  { href: '/theory', icon: BookMarked, labelKey: 'theory' },
+  { href: '/exams', icon: BookOpen, labelKey: 'exams' },
+  { href: '/app', icon: BarChart3, labelKey: 'statsTitle' },
+  { href: '/faq', icon: HelpCircle, labelKey: 'navFaq' },
+  { href: '/blog', icon: Newspaper, labelKey: 'navBlog' },
+  { href: '/tutor', icon: MessageSquare, labelKey: 'aiTutor' },
+  { href: '/pricing', icon: CreditCard, labelKey: 'subscription' },
+  { href: '/profile', icon: User, labelKey: 'profile' },
 ];
 
 export function Sidebar({ onClose }: { mobileOpen?: boolean; onClose?: () => void }) {
   const pathname = usePathname();
   const router = useRouter();
+  const { t } = useLocale();
   const [user, setUser] = useState<{ name: string; email: string } | null>(null);
 
   const handleLogout = () => {
@@ -60,7 +62,7 @@ export function Sidebar({ onClose }: { mobileOpen?: boolean; onClose?: () => voi
           </div>
           <div>
             <p className="text-sm font-semibold text-text-primary leading-none">Metierium</p>
-            <p className="text-[10px] text-text-tertiary mt-0.5">Préparation aux examens</p>
+            <p className="text-[10px] text-text-tertiary mt-0.5">{t('sidebarExamPrep')}</p>
           </div>
         </div>
         {onClose && (
@@ -73,11 +75,11 @@ export function Sidebar({ onClose }: { mobileOpen?: boolean; onClose?: () => voi
       {/* Navigation */}
       <div className="flex-1 overflow-y-auto px-3 py-4 space-y-0.5">
         {(() => {
-          const activeHref = [...NAV_ITEMS]
+          const activeHref = [...NAV_DEFS]
             .sort((a, b) => b.href.length - a.href.length)
             .find(({ href }) => pathname === href || pathname.startsWith(`${href}/`))?.href;
 
-          return NAV_ITEMS.map(({ label, href, icon: Icon }) => {
+          return NAV_DEFS.map(({ labelKey, href, icon: Icon }) => {
             const isActive = href === activeHref;
             return (
               <Link
@@ -91,7 +93,7 @@ export function Sidebar({ onClose }: { mobileOpen?: boolean; onClose?: () => voi
                 }`}
               >
                 <Icon size={16} strokeWidth={1.75} className="flex-shrink-0" />
-                {label}
+                {t(labelKey)}
               </Link>
             );
           });
@@ -106,7 +108,7 @@ export function Sidebar({ onClose }: { mobileOpen?: boolean; onClose?: () => voi
           </div>
           <div className="flex-1 min-w-0">
             <p className="text-sm font-medium text-text-primary truncate">
-              {user?.name ?? 'Utilisateur'}
+              {user?.name ?? t('profileDefaultName')}
             </p>
             <p className="text-xs text-text-tertiary truncate">{user?.email ?? ''}</p>
           </div>
@@ -116,7 +118,7 @@ export function Sidebar({ onClose }: { mobileOpen?: boolean; onClose?: () => voi
           className="flex items-center gap-2 w-full mt-3 px-3 py-2 rounded-lg text-sm text-text-secondary hover:text-red hover:bg-red/5 transition-colors"
         >
           <LogOut size={16} />
-          Déconnexion
+          {t('signOut')}
         </button>
       </div>
     </nav>

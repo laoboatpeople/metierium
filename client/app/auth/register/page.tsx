@@ -6,8 +6,10 @@ import Link from 'next/link';
 import { GraduationCap, UserPlus, Mail, Lock, User, Loader2, AlertCircle } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import Captcha from '@/components/Captcha';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 export default function RegisterPage() {
+  const { t } = useLocale();
   const router = useRouter();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -19,7 +21,7 @@ export default function RegisterPage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!captchaToken) {
-      setError('Veuillez compléter le captcha de sécurité');
+      setError(t('authCaptchaError'));
       return;
     }
     setError(null);
@@ -35,7 +37,7 @@ export default function RegisterPage() {
       document.cookie = `auth_role=${data.user.role || 'student'}; path=/; SameSite=Lax`;
       router.push('/app');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Erreur lors de la création du compte');
+      setError(err instanceof Error ? err.message : t('authRegisterError'));
     } finally {
       setLoading(false);
     }
@@ -56,9 +58,9 @@ export default function RegisterPage() {
 
         {/* Card */}
         <div className="bg-[#1A2035] border border-[#2D3A52] rounded-2xl p-8">
-          <h1 className="text-2xl font-bold text-[#F8FAFC] mb-1">Inscription</h1>
+          <h1 className="text-2xl font-bold text-[#F8FAFC] mb-1">{t('register')}</h1>
           <p className="text-sm text-[#94A3B8] mb-6">
-            Commencez votre préparation dès maintenant
+            {t('registerSubtitle')}
           </p>
 
           {error && (
@@ -71,7 +73,7 @@ export default function RegisterPage() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">
-                Nom complet
+                {t('name')}
               </label>
               <div className="relative">
                 <User size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#64748B]" />
@@ -79,7 +81,7 @@ export default function RegisterPage() {
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="Jean Tremblay"
+                  placeholder={t('namePlaceholder')}
                   required
                   className="w-full pl-10 pr-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] focus:ring-1 focus:ring-[#3B82F6]/30 transition-colors"
                 />
@@ -88,7 +90,7 @@ export default function RegisterPage() {
 
             <div>
               <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">
-                Courriel
+                {t('email')}
               </label>
               <div className="relative">
                 <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#64748B]" />
@@ -96,7 +98,7 @@ export default function RegisterPage() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="votre@courriel.com"
+                  placeholder={t('emailPlaceholder')}
                   required
                   className="w-full pl-10 pr-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] focus:ring-1 focus:ring-[#3B82F6]/30 transition-colors"
                 />
@@ -105,7 +107,7 @@ export default function RegisterPage() {
 
             <div>
               <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">
-                Mot de passe
+                {t('password')}
               </label>
               <div className="relative">
                 <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#64748B]" />
@@ -113,7 +115,7 @@ export default function RegisterPage() {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Minimum 6 caractères"
+                  placeholder={t('authRegisterPasswordPlaceholder')}
                   required
                   minLength={6}
                   className="w-full pl-10 pr-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] focus:ring-1 focus:ring-[#3B82F6]/30 transition-colors"
@@ -133,14 +135,14 @@ export default function RegisterPage() {
               ) : (
                 <UserPlus size={18} />
               )}
-              {loading ? 'Inscription...' : 'Créer mon compte'}
+              {loading ? t('authCreatingAccount') : t('authCreateAccount')}
             </button>
           </form>
 
           <p className="mt-6 text-center text-sm text-[#64748B]">
-            Déjà un compte ?{' '}
+            {t('haveAccount')}{' '}
             <Link href="/auth/login" className="text-[#3B82F6] hover:text-[#2563EB] transition-colors font-medium">
-              Connectez-vous
+              {t('signInLink')}
             </Link>
           </p>
         </div>

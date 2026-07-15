@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
+import { useLocale } from '@/src/contexts/LocaleContext';
 import {
   BookOpen,
   TrendingUp,
@@ -93,6 +94,41 @@ interface StatCardProps {
   color: 'blue' | 'green' | 'amber' | 'purple';
 }
 
+const TRADE_NAMES: Record<string, { en: string; fr: string }> = {
+  CMEQ: { en: 'Electrician', fr: 'Électricien' },
+  CMMTQ: { en: 'Plumber', fr: 'Plombier' },
+  QBQ: { en: 'Welder', fr: 'Soudeur' },
+  HVAC: { en: 'HVAC Technician', fr: 'Technicien en chauffage-climatisation' },
+  BRIQUE: { en: 'Bricklayer', fr: 'Briqueteur-maçon' },
+  ASCEN: { en: 'Elevator Mechanic', fr: 'Mécanicien d\'ascenseurs' },
+  INCENDIE: { en: 'Fire Safety Technician', fr: 'Technicien en sécurité incendie' },
+  GAZ: { en: 'Gas Technician', fr: 'Technicien en gaz' },
+  MVL: { en: 'Heavy Vehicle Mechanic', fr: 'Mécanicien de véhicules lourds' },
+  OPEQUIP: { en: 'Heavy Equipment Operator', fr: 'Opérateur d\'équipement lourd' },
+  FERBLAN: { en: 'Sheet Metal Worker', fr: 'Ferblantier / Tôlier' },
+  REFRIG: { en: 'Refrigeration Operator', fr: 'Opérateur de réfrigération' },
+  INSPECT: { en: 'Building Inspector', fr: 'Inspecteur en bâtiment' },
+  CONSTR: { en: 'Builder-Renovator', fr: 'Constructeur-rénovateur' },
+  ENTGEN: { en: 'General Contractor', fr: 'Entrepreneur général' },
+  SST: { en: 'Safety Coordinator', fr: 'Coordonnateur SST' },
+};
+
+/** Reverse map: trade name (EN/FR) -> trade code, for locale-aware display */
+const TRADE_CODE_BY_NAME: Record<string, string> = {};
+for (const [code, names] of Object.entries(TRADE_NAMES)) {
+  TRADE_CODE_BY_NAME[names.en.toLowerCase()] = code;
+  TRADE_CODE_BY_NAME[names.fr.toLowerCase()] = code;
+}
+
+function getTradeNameLocalized(storedName: string, locale: string): string {
+  const code = TRADE_CODE_BY_NAME[storedName.toLowerCase()];
+  if (code) {
+    const entry = TRADE_NAMES[code];
+    return locale === 'fr' ? entry.fr : entry.en;
+  }
+  return storedName;
+}
+
 const colorMap: Record<string, { bg: string; text: string }> = {
   blue: { bg: 'bg-[#3B82F6]/10', text: 'text-[#3B82F6]' },
   green: { bg: 'bg-[#22C55E]/10', text: 'text-[#22C55E]' },
@@ -128,20 +164,21 @@ function StatCardS({ title, value, icon, subtitle, href, color }: StatCardProps)
 // ─── Error State ────────────────────────────────────────
 
 function ErrorState({ message, onRetry }: { message: string; onRetry: () => void }) {
+  const { t } = useLocale();
   return (
     <div className="flex flex-col items-center justify-center py-20 gap-5">
       <div className="h-16 w-16 rounded-full bg-[#EF4444]/10 flex items-center justify-center">
         <XCircle size={32} className="text-[#EF4444]" />
       </div>
       <div className="text-center">
-        <h3 className="text-base font-semibold text-[#F8FAFC]">Something went wrong</h3>
+        <h3 className="text-base font-semibold text-[#F8FAFC]">{t('somethingWentWrong')}</h3>
         <p className="text-sm text-[#94A3B8] mt-1 max-w-sm">{message}</p>
       </div>
       <button
         onClick={onRetry}
         className="px-5 py-2.5 rounded-xl bg-[#1A2035] border border-[#2D3A52] text-[#F8FAFC] text-sm font-medium hover:bg-[#243047] transition-colors"
       >
-        Try again
+        {t('tryAgain')}
       </button>
     </div>
   );
@@ -156,6 +193,7 @@ export default function DashboardPage() {
   const [examHistory, setExamHistoryState] = useState<ExamRecord[]>([]);
   const [selectedTrade, setSelectedTrade] = useState<string>('');
   const [showClearConfirm, setShowClearConfirm] = useState(false);
+  const { t, locale } = useLocale();
 
   function loadStats() {
     setLoading(true);
@@ -181,9 +219,10 @@ export default function DashboardPage() {
         for (const r of results) {
           const key = r.tradeId || 'general';
           if (!examMap.has(key)) {
+            const tradeCode = (r.tradeCode || r.tradeId || 'GEN').substring(0, 10).toUpperCase();
             examMap.set(key, {
-              examCode: (r.tradeCode || r.tradeId || 'GEN').substring(0, 10).toUpperCase(),
-              examName: r.tradeName || 'General',
+              examCode: tradeCode,
+              examName: r.tradeName || t('examsGeneral'),
               scores: [],
               passedCount: 0,
             });
@@ -254,7 +293,7 @@ export default function DashboardPage() {
           byExam,
         });
       } catch (err: any) {
-        setError(err?.message || 'Failed to load dashboard');
+        setError(err?.message || t('dashboardLoadError'));
       }
       setLoading(false);
     })();
@@ -283,8 +322,8 @@ export default function DashboardPage() {
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-xl font-bold text-[#F8FAFC]">Dashboard</h1>
-            <p className="text-sm text-[#94A3B8] mt-0.5">Your study overview</p>
+            <h1 className="text-xl font-bold text-[#F8FAFC]">{t('dashboard')}</h1>
+            <p className="text-sm text-[#94A3B8] mt-0.5">{t('dashboardSubtitle')}</p>
           </div>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
@@ -305,8 +344,8 @@ export default function DashboardPage() {
       <div className="space-y-6">
         <div className="flex items-center justify-between">
           <div>
-            <h1 className="text-xl font-bold text-[#F8FAFC]">Dashboard</h1>
-            <p className="text-sm text-[#94A3B8] mt-0.5">Your study overview</p>
+            <h1 className="text-xl font-bold text-[#F8FAFC]">{t('dashboard')}</h1>
+            <p className="text-sm text-[#94A3B8] mt-0.5">{t('dashboardSubtitle')}</p>
           </div>
         </div>
         <ErrorState message={error} onRetry={loadStats} />
@@ -317,6 +356,12 @@ export default function DashboardPage() {
   // ── Loaded state ───────────────────────────────────
   const { totalExams, totalAttempts, averageScore, passRate, studyStreak, byExam } = stats!;
   const totalPassed = byExam.reduce((sum, e) => sum + e.passedCount, 0);
+
+  const getLocalizedName = (code: string) => {
+    const n = TRADE_NAMES[code];
+    if (!n) return code;
+    return n.fr || n.en;
+  };
 
   const sorted = [...byExam].sort((a, b) => b.averageScore - a.averageScore);
   const strongest = sorted.length > 0 && sorted[sorted.length - 1].averageScore > 0 ? sorted[0] : null;
@@ -333,8 +378,8 @@ export default function DashboardPage() {
         className="flex items-center justify-between"
       >
         <div>
-          <h1 className="text-xl font-bold text-[#F8FAFC]">Dashboard</h1>
-          <p className="text-sm text-[#94A3B8] mt-0.5">Your study overview</p>
+          <h1 className="text-xl font-bold text-[#F8FAFC]">{t('dashboard')}</h1>
+          <p className="text-sm text-[#94A3B8] mt-0.5">{t('dashboardSubtitle')}</p>
         </div>
       </motion.div>
 
@@ -347,13 +392,13 @@ export default function DashboardPage() {
             className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5 hover:border-[#3B82F6]/30 transition-all group"
           >
             <div className="flex items-center justify-between mb-3">
-              <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748B]">Exams Available</span>
+              <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748B]">{t('dashboardExamsAvail')}</span>
               <div className="h-8 w-8 rounded-lg bg-[#3B82F6]/10 flex items-center justify-center">
                 <BookOpen size={16} className="text-[#3B82F6]" />
               </div>
             </div>
             <p className="text-2xl font-bold text-[#3B82F6]">{totalExams}</p>
-            <p className="text-xs text-[#94A3B8] mt-1">{byExam.length} of {totalExams} practiced</p>
+            <p className="text-xs text-[#94A3B8] mt-1">{t('dashboardPracticedFormat', { count: byExam.length, total: totalExams })}</p>
           </motion.div>
         </Link>
 
@@ -364,13 +409,13 @@ export default function DashboardPage() {
           className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5"
         >
           <div className="flex items-center justify-between mb-3">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748B]">Total Attempts</span>
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748B]">{t('dashboardTotalAttempts')}</span>
             <div className="h-8 w-8 rounded-lg bg-[#8B5CF6]/10 flex items-center justify-center">
               <Zap size={16} className="text-[#8B5CF6]" />
             </div>
           </div>
           <p className="text-2xl font-bold text-[#8B5CF6]">{totalAttempts}</p>
-          <p className="text-xs text-[#94A3B8] mt-1">All-time attempts</p>
+          <p className="text-xs text-[#94A3B8] mt-1">{t('dashboardAllTimeAttempts')}</p>
         </motion.div>
 
         <motion.div
@@ -380,7 +425,7 @@ export default function DashboardPage() {
           className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5"
         >
           <div className="flex items-center justify-between mb-3">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748B]">Average Score</span>
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748B]">{t('dashboardAvgScore')}</span>
             <div className="h-8 w-8 rounded-lg bg-[#F59E0B]/10 flex items-center justify-center">
               <TrendingUp size={16} className={`${averageScore >= 70 ? 'text-[#22C55E]' : 'text-[#F59E0B]'}`} />
             </div>
@@ -390,8 +435,8 @@ export default function DashboardPage() {
           </p>
           <p className="text-xs text-[#94A3B8] mt-1">
             {totalAttempts > 0
-              ? `Based on ${totalAttempts} attempt${totalAttempts > 1 ? 's' : ''}`
-              : 'No attempts yet'}
+              ? t('dashboardBasedOnAttempts', { count: totalAttempts })
+              : t('dashboardNoAttempts')}
           </p>
         </motion.div>
 
@@ -402,7 +447,7 @@ export default function DashboardPage() {
           className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5"
         >
           <div className="flex items-center justify-between mb-3">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748B]">Pass Rate</span>
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748B]">{t('dashboardPassRate')}</span>
             <div className="h-8 w-8 rounded-lg bg-[#F59E0B]/10 flex items-center justify-center">
               <Target size={16} className={passRate >= 70 ? 'text-[#22C55E]' : 'text-[#F59E0B]'} />
             </div>
@@ -411,7 +456,7 @@ export default function DashboardPage() {
             {totalAttempts > 0 ? `${passRate}%` : '—'}
           </p>
           <p className="text-xs text-[#94A3B8] mt-1">
-            {totalAttempts > 0 ? `${totalPassed} / ${totalAttempts} ≥70%` : 'No attempts yet'}
+            {totalAttempts > 0 ? t('dashboardPassRateDetail', { passed: totalPassed, total: totalAttempts }) : t('dashboardNoAttempts')}
           </p>
         </motion.div>
 
@@ -422,15 +467,15 @@ export default function DashboardPage() {
           className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5"
         >
           <div className="flex items-center justify-between mb-3">
-            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748B]">Study Streak</span>
+            <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748B]">{t('dashboardStreak')}</span>
             <div className="h-8 w-8 rounded-lg bg-[#F59E0B]/10 flex items-center justify-center">
               <Clock size={16} className="text-[#F59E0B]" />
             </div>
           </div>
           <p className="text-2xl font-bold text-[#F59E0B]">
-            {studyStreak === 1 ? '1 day' : `${studyStreak} days`}
+            {t('dashboardStreakValue', { count: studyStreak })}
           </p>
-          <p className="text-xs text-[#94A3B8] mt-1">Keep it going!</p>
+          <p className="text-xs text-[#94A3B8] mt-1">{t('dashboardKeepGoing')}</p>
         </motion.div>
       </div>
 
@@ -449,13 +494,13 @@ export default function DashboardPage() {
             >
               <div className="flex items-center gap-2 mb-2">
                 <Award size={14} className="text-[#22C55E]" />
-                <span className="text-xs font-bold uppercase tracking-wider text-[#22C55E]">STRENGTH</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#22C55E]">{t('dashboardStrength')}</span>
               </div>
-              <p className="text-sm font-medium text-[#F8FAFC] truncate">{strongest.examCode} — {strongest.examName}</p>
+              <p className="text-sm font-medium text-[#F8FAFC] truncate">{strongest.examCode} — {getTradeNameLocalized(strongest.examName, locale)}</p>
               <div className="flex gap-4 mt-2 text-xs text-[#94A3B8]">
                 <span>Avg. <span className="text-[#22C55E] font-semibold">{strongest.averageScore}%</span></span>
                 <span>Best <span className="text-[#22C55E] font-semibold">{strongest.bestScore}%</span></span>
-                <span>{strongest.totalAttempts} att.</span>
+                <span>{t('dashboardAttemptsShort', { count: strongest.totalAttempts })}</span>
               </div>
             </div>
           )}
@@ -466,13 +511,13 @@ export default function DashboardPage() {
             >
               <div className="flex items-center gap-2 mb-2">
                 <Target size={14} className="text-[#EF4444]" />
-                <span className="text-xs font-bold uppercase tracking-wider text-[#EF4444]">WEAKNESS</span>
+                <span className="text-xs font-bold uppercase tracking-wider text-[#EF4444]">{t('dashboardWeakness')}</span>
               </div>
-              <p className="text-sm font-medium text-[#F8FAFC] truncate">{weakest.examCode} — {weakest.examName}</p>
+              <p className="text-sm font-medium text-[#F8FAFC] truncate">{weakest.examCode} — {getTradeNameLocalized(weakest.examName, locale)}</p>
               <div className="flex gap-4 mt-2 text-xs text-[#94A3B8]">
                 <span>Avg. <span className="text-[#EF4444] font-semibold">{weakest.averageScore}%</span></span>
                 <span>Best <span className="text-[#F59E0B] font-semibold">{weakest.bestScore}%</span></span>
-                <span>{weakest.totalAttempts} att.</span>
+                <span>{t('dashboardAttemptsShort', { count: weakest.totalAttempts })}</span>
               </div>
             </div>
           )}
@@ -481,7 +526,7 @@ export default function DashboardPage() {
         </motion.div>
       )}
 
-      {/* Exam Performance table */}
+      {/* {t('dashboardExamPerformance')} table */}
       {byExam.length > 0 && (
         <motion.div
           initial={{ opacity: 0, y: 16 }}
@@ -492,7 +537,7 @@ export default function DashboardPage() {
           <div className="px-5 py-4 border-b border-[#2D3A52]">
             <h2 className="text-sm font-semibold text-[#F8FAFC] flex items-center gap-2">
               <BarChart3 size={16} className="text-[#64748B]" />
-              Exam Performance
+              {t('dashboardExamPerformance')}
             </h2>
           </div>
           <div className="overflow-x-auto">
@@ -501,11 +546,11 @@ export default function DashboardPage() {
                 <tr className="border-b border-[#2D3A52]">
                   <th className="text-left px-5 py-3 text-[11px] font-medium text-[#64748B] uppercase tracking-wider">EXAMS</th>
                   <th className="text-right px-5 py-3 text-[11px] font-medium text-[#64748B] uppercase tracking-wider">ATTEMPTS</th>
-                  <th className="text-right px-5 py-3 text-[11px] font-medium text-[#64748B] uppercase tracking-wider">AVG SCORE</th>
-                  <th className="text-right px-5 py-3 text-[11px] font-medium text-[#64748B] uppercase tracking-wider">BEST</th>
-                  <th className="text-right px-5 py-3 text-[11px] font-medium text-[#64748B] uppercase tracking-wider">LAST</th>
-                  <th className="text-center px-5 py-3 text-[11px] font-medium text-[#64748B] uppercase tracking-wider">TRENDING</th>
-                  <th className="text-right px-5 py-3 text-[11px] font-medium text-[#64748B] uppercase tracking-wider">PASS RATE</th>
+                  <th className="text-right px-5 py-3 text-[11px] font-medium text-[#64748B] uppercase tracking-wider">{t('dashboardAvgScoreShort')}</th>
+                  <th className="text-right px-5 py-3 text-[11px] font-medium text-[#64748B] uppercase tracking-wider">{t('dashboardBest')}</th>
+                  <th className="text-right px-5 py-3 text-[11px] font-medium text-[#64748B] uppercase tracking-wider">{t('dashboardLast')}</th>
+                  <th className="text-center px-5 py-3 text-[11px] font-medium text-[#64748B] uppercase tracking-wider">{t('dashboardTrending')}</th>
+                  <th className="text-right px-5 py-3 text-[11px] font-medium text-[#64748B] uppercase tracking-wider">{t('dashboardPassRateShort')}</th>
                 </tr>
               </thead>
               <tbody>
@@ -523,7 +568,7 @@ export default function DashboardPage() {
                       <td className="px-5 py-3 text-[#F8FAFC] font-medium">
                         <div className="flex items-center gap-2">
                           <span className="text-[11px] px-1.5 py-0.5 rounded bg-[#3B82F6]/10 text-[#3B82F6] font-mono">{exam.examCode}</span>
-                          <span>{exam.examName}</span>
+                          <span>{getTradeNameLocalized(exam.examName, locale)}</span>
                         </div>
                       </td>
                       <td className="px-5 py-3 text-right text-[#F8FAFC] font-mono tabular-nums">{exam.totalAttempts}</td>
@@ -552,7 +597,7 @@ export default function DashboardPage() {
           </div>
           {byExam.length === 0 && (
             <div className="px-5 py-8 text-center text-sm text-[#94A3B8]">
-              Complete your first exam to see performance data
+              {t('dashboardNoData')}
             </div>
           )}
         </motion.div>
@@ -568,16 +613,16 @@ export default function DashboardPage() {
           <div className="w-14 h-14 rounded-full bg-[#3B82F6]/10 flex items-center justify-center mx-auto mb-4">
             <BookOpen size={24} className="text-[#3B82F6]" />
           </div>
-          <h3 className="text-base font-semibold text-[#F8FAFC]">No exams yet</h3>
+          <h3 className="text-base font-semibold text-[#F8FAFC]">{t('dashboardNoExamsYet')}</h3>
           <p className="text-sm text-[#94A3B8] mt-1 max-w-sm mx-auto">
-            Start practicing to track your performance across all trades
+            {t('dashboardNoExamsDesc')}
           </p>
           <Link
             href="/exams"
             className="inline-flex items-center gap-2 mt-4 px-5 py-2.5 bg-gradient-to-r from-[#06B6D4] to-[#3B82F6] rounded-xl font-medium text-white text-sm hover:shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all"
           >
             <Sparkles size={16} />
-            Start your first exam
+            {t('dashboardStartExam')}
             <ArrowRight size={16} />
           </Link>
         </motion.div>
@@ -595,14 +640,14 @@ export default function DashboardPage() {
         <div className="flex items-center justify-between">
           <h2 className="text-lg font-semibold text-[#F8FAFC] flex items-center gap-2">
             <BarChart3 size={20} className="text-[#3B82F6]" />
-            Statistiques par métier
+            {t('dashboardTradeStats')}
           </h2>
           {examHistory.length > 0 && (
             <button
               onClick={() => setShowClearConfirm(true)}
               className="text-xs text-[#EF4444] hover:text-[#DC2626] px-3 py-1.5 rounded-lg border border-[#EF4444]/20 hover:bg-[#EF4444]/10 transition-colors"
             >
-              Effacer l'historique
+              {t('dashboardClearHistory')}
             </button>
           )}
         </div>
@@ -610,7 +655,7 @@ export default function DashboardPage() {
         {examHistory.length === 0 ? (
           <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-8 text-center">
             <BarChart3 size={48} className="mx-auto text-[#2D3A52] mb-3" />
-            <p className="text-sm text-[#94A3B8]">Aucun examen complété pour le moment.</p>
+            <p className="text-sm text-[#94A3B8]">{t('dashboardNoHistory')}</p>
           </div>
         ) : (
           <>
@@ -618,7 +663,8 @@ export default function DashboardPage() {
             {tradeIds.length > 1 && (
               <div className="flex flex-wrap gap-2">
                 {tradeIds.map(tid => {
-                  const name = examHistory.find(r => r.tradeId === tid)?.tradeName || tid;
+                  const rawName = examHistory.find(r => r.tradeId === tid)?.tradeName || tid;
+                  const name = getTradeNameLocalized(rawName, locale);
                   return (
                     <button
                       key={tid}
@@ -643,7 +689,7 @@ export default function DashboardPage() {
                   <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <Award size={16} className="text-[#F59E0B]" />
-                      <span className="text-xs text-[#94A3B8]">Moyenne</span>
+                      <span className="text-xs text-[#94A3B8]">{t('dashboardAverage')}</span>
                     </div>
                     <p className="text-2xl font-bold text-[#F8FAFC]">{statsData.averageScore}%</p>
                     <div className="mt-2 w-full h-1.5 bg-[#111827] rounded-full overflow-hidden">
@@ -657,22 +703,22 @@ export default function DashboardPage() {
                   <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <Target size={16} className="text-[#06B6D4]" />
-                      <span className="text-xs text-[#94A3B8]">Taux de réussite</span>
+                      <span className="text-xs text-[#94A3B8]">{t('dashboardPassRate')}</span>
                     </div>
                     <p className="text-2xl font-bold text-[#F8FAFC]">{statsData.passRate}%</p>
-                    <p className="text-xs text-[#94A3B8] mt-1">{statsData.passed} / {statsData.totalExams} réussis</p>
+                    <p className="text-xs text-[#94A3B8] mt-1">{t('dashboardPassedFormat', { passed: statsData.passed, total: statsData.totalExams })}</p>
                   </div>
 
                   <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <Trophy size={16} className="text-[#F59E0B]" />
-                      <span className="text-xs text-[#94A3B8]">Meilleur score</span>
+                      <span className="text-xs text-[#94A3B8]">{t('dashboardBestScore')}</span>
                     </div>
                     <p className="text-2xl font-bold text-[#22C55E]">{statsData.bestScore}%</p>
                     {statsData.scoreTrend !== 0 && (
                       <p className={`text-xs mt-1 flex items-center gap-1 ${statsData.scoreTrend > 0 ? 'text-[#22C55E]' : 'text-[#EF4444]'}`}>
                         {statsData.scoreTrend > 0 ? <TrendingUp size={12} /> : <TrendingDown size={12} />}
-                        {statsData.scoreTrend > 0 ? '+' : ''}{statsData.scoreTrend}% récent
+                        {statsData.scoreTrend > 0 ? '+' : ''}{statsData.scoreTrend}% {t('statsTrendRecent')}
                       </p>
                     )}
                   </div>
@@ -680,10 +726,10 @@ export default function DashboardPage() {
                   <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4">
                     <div className="flex items-center gap-2 mb-2">
                       <Clock size={16} className="text-[#8B5CF6]" />
-                      <span className="text-xs text-[#94A3B8]">Temps total</span>
+                      <span className="text-xs text-[#94A3B8]">{t('dashboardTotalTime')}</span>
                     </div>
                     <p className="text-2xl font-bold text-[#F8FAFC] text-lg">{formatTime(statsData.totalTime)}</p>
-                    <p className="text-xs text-[#94A3B8] mt-1">{statsData.totalQuestions} questions</p>
+                    <p className="text-xs text-[#94A3B8] mt-1">{t('dashboardQuestionCount', { count: statsData.totalQuestions })}</p>
                   </div>
                 </div>
 
@@ -692,14 +738,14 @@ export default function DashboardPage() {
                   <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5">
                     <div className="flex items-center gap-2 mb-3">
                       <Zap size={16} className="text-[#22C55E]" />
-                      <h3 className="font-semibold text-[#F8FAFC]">Points forts</h3>
+                      <h3 className="font-semibold text-[#F8FAFC]">{t('dashboardStrengths')}</h3>
                     </div>
                     {statsData.strengths.length > 0 ? (
                       <div className="space-y-2">
                         {statsData.strengths.map(s => (
                           <div key={s.chapterNumber}>
                             <div className="flex justify-between text-xs mb-0.5">
-                              <span className="text-[#94A3B8]">{s.tradeName ? `${s.tradeName} > ` : ''}{s.chapterName}</span>
+                              <span className="text-[#94A3B8]">{s.tradeName ? `${getTradeNameLocalized(s.tradeName, locale)} > ` : ''}{s.chapterName}</span>
                               <span className="text-[#22C55E] font-medium">{s.percentage}%</span>
                             </div>
                             <div className="w-full h-2 bg-[#111827] rounded-full overflow-hidden">
@@ -709,21 +755,21 @@ export default function DashboardPage() {
                         ))}
                       </div>
                     ) : (
-                      <p className="text-sm text-[#64748B]">Pas assez de données pour déterminer les points forts.</p>
+                      <p className="text-sm text-[#64748B]">{t('statsNoDataStrengths')}</p>
                     )}
                   </div>
 
                   <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5">
                     <div className="flex items-center gap-2 mb-3">
                       <AlertTriangle size={16} className="text-[#EF4444]" />
-                      <h3 className="font-semibold text-[#F8FAFC]">Points à améliorer</h3>
+                      <h3 className="font-semibold text-[#F8FAFC]">{t('dashboardWeaknesses')}</h3>
                     </div>
                     {statsData.weaknesses.length > 0 ? (
                       <div className="space-y-2">
                         {statsData.weaknesses.map(s => (
                           <div key={s.chapterNumber}>
                             <div className="flex justify-between text-xs mb-0.5">
-                              <span className="text-[#94A3B8]">{s.tradeName ? `${s.tradeName} > ` : ''}{s.chapterName}</span>
+                              <span className="text-[#94A3B8]">{s.tradeName ? `${getTradeNameLocalized(s.tradeName, locale)} > ` : ''}{s.chapterName}</span>
                               <span className="text-[#EF4444] font-medium">{s.percentage}%</span>
                             </div>
                             <div className="w-full h-2 bg-[#111827] rounded-full overflow-hidden">
@@ -733,12 +779,12 @@ export default function DashboardPage() {
                         ))}
                       </div>
                     ) : (
-                      <p className="text-sm text-[#64748B]">Pas assez de données pour déterminer les points faibles.</p>
+                      <p className="text-sm text-[#64748B]">{t('statsNoDataWeaknesses')}</p>
                     )}
 
                     {statsData.needsReview.length > 0 && (
                       <div className="mt-3 pt-3 border-t border-[#2D3A52]">
-                        <p className="text-xs text-[#94A3B8] mb-1">Chapitres à réviser</p>
+                        <p className="text-xs text-[#94A3B8] mb-1">{t('dashboardNeedsReview')}</p>
                         <div className="flex flex-wrap gap-1.5">
                           {statsData.needsReview.map((ch, i) => (
                             <Link
@@ -746,7 +792,7 @@ export default function DashboardPage() {
                               href={`/theory?tradeId=${ch.tradeId || ''}&chapterId=${ch.chapterId || ''}`}
                               className="text-xs bg-[#EF4444]/10 border border-[#EF4444]/20 text-[#EF4444] px-2 py-0.5 rounded-full hover:bg-[#EF4444]/20 transition-colors"
                             >
-                              {ch.tradeName ? `${ch.tradeName} > ${ch.chapterName}` : ch.chapterName}
+                              {ch.tradeName ? `${getTradeNameLocalized(ch.tradeName, locale)} > ${ch.chapterName}` : ch.chapterName}
                             </Link>
                           ))}
                         </div>
@@ -759,7 +805,7 @@ export default function DashboardPage() {
                 <div>
                   <h3 className="text-base font-semibold text-[#F8FAFC] mb-3 flex items-center gap-2">
                     <Brain size={18} className="text-[#8B5CF6]" />
-                    Performance par chapitre
+                    {t('dashboardChapterPerformance')}
                   </h3>
                   <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5 space-y-3">
                     {statsData.chapterPerformance.length > 0 ? (
@@ -768,7 +814,7 @@ export default function DashboardPage() {
                         return (
                           <div key={ch.chapterNumber}>
                             <div className="flex justify-between text-xs mb-1">
-                              <span className="text-[#F8FAFC] font-medium">{ch.tradeName ? `${ch.tradeName} > ` : ''}{ch.chapterName}</span>
+                              <span className="text-[#F8FAFC] font-medium">{ch.tradeName ? `${getTradeNameLocalized(ch.tradeName, locale)} > ` : ''}{ch.chapterName}</span>
                               <span className="font-medium" style={{ color }}>{ch.percentage}%</span>
                             </div>
                             <div className="flex items-center gap-2">
@@ -784,7 +830,7 @@ export default function DashboardPage() {
                         );
                       })
                     ) : (
-                      <p className="text-sm text-[#64748B]">Aucune donnée par chapitre pour le moment.</p>
+                      <p className="text-sm text-[#64748B]">{t('statsNoChapterData')}</p>
                     )}
                   </div>
                 </div>
@@ -793,7 +839,7 @@ export default function DashboardPage() {
                 <div>
                   <h3 className="text-base font-semibold text-[#F8FAFC] mb-3 flex items-center gap-2">
                     <Clock size={18} className="text-[#3B82F6]" />
-                    Examens récents
+                    {t('dashboardRecentExams')}
                   </h3>
                   <div className="space-y-2">
                     {statsData.recentHistory.map(record => (
@@ -812,10 +858,10 @@ export default function DashboardPage() {
                           </div>
                           <div>
                             <p className="text-sm font-medium text-[#F8FAFC]">
-                              {record.tradeName ? `${record.tradeName} > ` : ''}{record.passed ? 'Réussi' : 'Échec'} — {record.totalQuestions} questions
+                              {record.tradeId && record.tradeName ? `${getTradeNameLocalized(record.tradeName, locale)} > ` : ''}{record.passed ? t('dashboardSuccess') : t('dashboardFailure')} — {t('dashboardQuestionCount', { count: record.totalQuestions })}
                             </p>
                             <p className="text-xs text-[#64748B]">
-                              {new Date(record.date).toLocaleDateString('fr-CA', {
+                              {new Date(record.date).toLocaleDateString(locale === 'fr' ? 'fr-CA' : 'en-CA', {
                                 year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
                               })}
                               {' · '} {formatTime(record.timeSpent)}
@@ -839,13 +885,13 @@ export default function DashboardPage() {
                     href="/exams"
                     className="flex-1 py-3 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] rounded-xl font-medium text-white text-center hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]"
                   >
-                    Nouvel examen
+                    {t('dashboardNewExam')}
                   </Link>
                   <Link
                     href="/theory"
                     className="flex-1 py-3 border border-[#2D3A52] rounded-xl font-medium text-[#94A3B8] text-center hover:border-[#3B82F6]/40 hover:text-[#F8FAFC]"
                   >
-                    Réviser la théorie
+                    {t('dashboardReviewTheory')}
                   </Link>
                 </div>
               </>
@@ -858,16 +904,16 @@ export default function DashboardPage() {
       {showClearConfirm && (
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60">
           <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6 max-w-sm mx-4">
-            <h3 className="text-lg font-semibold text-[#F8FAFC] mb-2">Effacer l'historique</h3>
+            <h3 className="text-lg font-semibold text-[#F8FAFC] mb-2">{t('dashboardClearHistory')}</h3>
             <p className="text-sm text-[#94A3B8] mb-4">
-              Toutes vos statistiques d'examens seront définitivement supprimées. Cette action est irréversible.
+              {t('statsClearConfirmDesc')}
             </p>
             <div className="flex gap-3">
               <button
                 onClick={() => setShowClearConfirm(false)}
                 className="flex-1 py-2.5 border border-[#2D3A52] rounded-lg text-sm text-[#94A3B8] hover:text-[#F8FAFC]"
               >
-                Annuler
+                {t('statsCancel')}
               </button>
               <button
                 onClick={() => {
@@ -877,7 +923,7 @@ export default function DashboardPage() {
                 }}
                 className="flex-1 py-2.5 bg-[#EF4444] rounded-lg text-sm text-white font-medium hover:bg-[#DC2626]"
               >
-                Effacer
+                {t('statsConfirmClear')}
               </button>
             </div>
           </div>

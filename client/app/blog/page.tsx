@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useSearchParams } from 'next/navigation';
 import { Calendar, Clock, ArrowRight, GraduationCap, Loader2 } from 'lucide-react';
 import Nav from '@/components/Nav';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 interface BlogPost {
   slug: string;
@@ -17,6 +18,7 @@ interface BlogPost {
 }
 
 function BlogContent() {
+  const { t } = useLocale();
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const searchParams = useSearchParams();
@@ -49,8 +51,8 @@ function BlogContent() {
           <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center mx-auto mb-3">
             <GraduationCap className="w-6 h-6 text-white" />
           </div>
-          <h1 className="text-2xl font-bold text-[#F8FAFC]">Blog</h1>
-          <p className="text-sm text-[#94A3B8] mt-1">Actualités, conseils et mises à jour sur les examens de métier au Québec</p>
+          <h1 className="text-2xl font-bold text-[#F8FAFC]">{t('blogTitle')}</h1>
+          <p className="text-sm text-[#94A3B8] mt-1">{t('blogSubtitle')}</p>
         </div>
 
         {/* Categories */}
@@ -63,7 +65,7 @@ function BlogContent() {
                 : 'bg-[#111827] text-[#94A3B8] border-[#2D3A52] hover:text-[#3B82F6]'
             }`}
           >
-            Tout
+            {t('blogAllCategories')}
           </Link>
           {categories.map(cat => (
             <Link
@@ -83,9 +85,9 @@ function BlogContent() {
         {/* Posts */}
         {filtered.length === 0 ? (
           <div className="text-center py-16 text-[#64748B]">
-            <p className="text-lg">Aucun article dans cette catégorie.</p>
+            <p className="text-lg">{t('blogNoPosts')}</p>
             <Link href="/blog" className="text-sm text-[#3B82F6] hover:text-[#06B6D4] mt-2 inline-block">
-              Voir tous les articles →
+              {t('blogViewAll')}
             </Link>
           </div>
         ) : (
@@ -105,12 +107,12 @@ function BlogContent() {
                 </h2>
                 <p className="text-sm text-[#94A3B8] line-clamp-2 mb-3">{post.excerpt}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-[#64748B]">Par {post.author}</span>
+                  <span className="text-xs text-[#64748B]">{t('blogByAuthor', { author: post.author })}</span>
                   <Link
                     href={`/blog/${post.slug}`}
                     className="text-xs text-[#3B82F6] flex items-center gap-1 hover:text-[#06B6D4]"
                   >
-                    Lire <ArrowRight size={12} />
+                    {t('blogReadMore')} <ArrowRight size={12} />
                   </Link>
                 </div>
               </article>

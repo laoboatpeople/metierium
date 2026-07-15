@@ -16,17 +16,17 @@ export default function PricingPage() {
   const plans = [
     {
       id: 'free',
-      name: 'GRATUIT',
+      name: t('pricingPageFree'),
       price: '0',
       period: t('pricingPagePerMonth'),
       desc: t('pricingPagePlanFreeDesc'),
       features: [
-        { text: '1 métier au choix', included: true },
-        { text: 'Contenu théorique complet', included: true },
-        { text: 'Questions limitées', included: true },
-        { text: 'Changez de métier librement', included: true },
-        { text: 'Examens illimités', included: false },
-        { text: 'Tuteur IA', included: false },
+        { text: t('pricingFeatureOneTrade'), included: true },
+        { text: t('pricingFeatureFullTheory'), included: true },
+        { text: t('pricingFeatureLimitedQ'), included: true },
+        { text: t('pricingFeatureSwitchTrade'), included: true },
+        { text: t('pricingFeatureUnlimitedExams'), included: false },
+        { text: t('pricingFeatureAiTutor'), included: false },
       ],
       cta: t('pricingPageCtaFree'),
       popular: false,
@@ -34,17 +34,17 @@ export default function PricingPage() {
     },
     {
       id: 'essential',
-      name: 'ESSENTIEL',
+      name: t('pricingPageEssential'),
       price: '29',
       period: t('pricingPagePerMonth'),
       desc: t('pricingPagePlanEssentialDesc'),
       features: [
-        { text: '1 métier au choix', included: true },
-        { text: 'Contenu théorique complet', included: true },
-        { text: 'Questions illimitées', included: true },
-        { text: 'Examens illimités', included: true },
-        { text: 'Tuteur IA', included: true },
-        { text: '🔒 Métier verrouillé', included: true, highlight: true },
+        { text: t('pricingFeatureOneTrade'), included: true },
+        { text: t('pricingFeatureFullTheory'), included: true },
+        { text: t('pricingFeatureUnlimitedQ'), included: true },
+        { text: t('pricingFeatureUnlimitedExams'), included: true },
+        { text: t('pricingFeatureAiTutor'), included: true },
+        { text: t('pricingFeatureLockedTrade'), included: true, highlight: true },
       ],
       cta: t('pricingPageCtaSubscribe'),
       popular: false,
@@ -52,17 +52,17 @@ export default function PricingPage() {
     },
     {
       id: 'pro',
-      name: 'PRO',
+      name: t('pricingPagePro'),
       price: '49',
       period: t('pricingPagePerMonth'),
       desc: t('pricingPagePlanProDesc'),
       features: [
-        { text: 'Tous les métiers', included: true },
-        { text: 'Contenu théorique complet', included: true },
-        { text: 'Questions illimitées', included: true },
-        { text: 'Examens illimités', included: true },
-        { text: 'Tuteur IA', included: true },
-        { text: 'Suivi de progression', included: true },
+        { text: t('pricingFeatureAllTrades'), included: true },
+        { text: t('pricingFeatureFullTheory'), included: true },
+        { text: t('pricingFeatureUnlimitedQ'), included: true },
+        { text: t('pricingFeatureUnlimitedExams'), included: true },
+        { text: t('pricingFeatureAiTutor'), included: true },
+        { text: t('pricingFeatureProgress'), included: true },
       ],
       cta: t('pricingPageCtaSubscribe'),
       popular: true,
@@ -70,17 +70,17 @@ export default function PricingPage() {
     },
     {
       id: 'lifetime',
-      name: 'À VIE',
+      name: t('pricingPageLifetime'),
       price: '559',
       period: '',
       desc: t('pricingPagePlanLifetimeDesc'),
       features: [
-        { text: 'Tous les métiers', included: true, highlight: true },
-        { text: 'Contenu théorique complet', included: true },
-        { text: 'Questions illimitées', included: true },
-        { text: 'Examens illimités', included: true },
-        { text: 'Tuteur IA', included: true },
-        { text: 'Mises à jour incluses', included: true },
+        { text: t('pricingFeatureAllTrades'), included: true, highlight: true },
+        { text: t('pricingFeatureFullTheory'), included: true },
+        { text: t('pricingFeatureUnlimitedQ'), included: true },
+        { text: t('pricingFeatureUnlimitedExams'), included: true },
+        { text: t('pricingFeatureAiTutor'), included: true },
+        { text: t('pricingFeatureUpdates'), included: true },
       ],
       cta: t('pricingPageCtaLifetime'),
       popular: false,
@@ -234,7 +234,7 @@ export default function PricingPage() {
               {currentPlan === plan.id && (
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-10">
                   <span className="px-4 py-1 bg-gradient-to-r from-[#22C55E] to-[#16A34A] text-white text-xs font-semibold rounded-full whitespace-nowrap shadow-lg shadow-green/20">
-                    ✓ Votre forfait actuel
+                    {t('pricingPageCurrentPlanBadge')}
                   </span>
                 </div>
               )}
@@ -279,7 +279,7 @@ export default function PricingPage() {
                   } ${subscribing === plan.id ? 'opacity-70' : ''}`}
                 >
                   {currentPlan === plan.id ? (
-                    '✓ Actif'
+                    <span>{t('pricingPageActive')}</span>
                   ) : subscribing === plan.id ? (
                     <><Loader2 size={14} className="animate-spin" /> {t('pricingPageRedirecting')}</>
                   ) : (

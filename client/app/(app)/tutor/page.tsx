@@ -23,18 +23,6 @@ interface ChatHistory {
 
 const STORAGE_KEY = 'tutorChatHistories';
 
-const INITIAL_MESSAGE_FR: ChatMessage = {
-  role: 'assistant',
-  content:
-    "Bonjour ! Je suis votre tuteur IA spécialisé dans les métiers de la construction au Québec. Posez-moi une question sur la théorie, le Code de construction, ou les examens de certification.",
-};
-
-const INITIAL_MESSAGE_EN: ChatMessage = {
-  role: 'assistant',
-  content:
-    "Hello! I am your AI tutor specialized in Quebec construction trades. Ask me a question about theory, the Construction Code, or certification exams.",
-};
-
 const SUGGESTED_FR = [
   "Explique-moi la loi d'Ohm simplement",
   "Quels sont les types de câbles résidentiels au Québec ?",
@@ -58,7 +46,11 @@ function generateId(): string {
 export default function TutorPage() {
   const { t, locale } = useLocale();
   const isEn = locale === 'en';
-  const [messages, setMessages] = useState<ChatMessage[]>([{ ...(isEn ? INITIAL_MESSAGE_EN : INITIAL_MESSAGE_FR) }]);
+  const initialMessage: ChatMessage = {
+    role: 'assistant',
+    content: t('tutorWelcomePrompt'),
+  };
+  const [messages, setMessages] = useState<ChatMessage[]>([{ ...initialMessage }]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -147,7 +139,7 @@ export default function TutorPage() {
       const firstUser = msgs.find((m) => m.role === 'user');
       const title = firstUser
         ? firstUser.content.slice(0, 60)
-        : 'Nouvelle conversation';
+        : t('tutorNewConversation');
       const entry: ChatHistory = {
         id,
         title: title.length > 40 ? title + '…' : title,
@@ -179,17 +171,17 @@ export default function TutorPage() {
         body: JSON.stringify({ message: text }),
       });
 
-      if (!res.ok) throw new Error('Erreur de communication avec le serveur');
+      if (!res.ok) throw new Error(t('tutorServerError'));
       const data = await res.json();
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', content: data.response || data.message || "Je n'ai pas de réponse pour le moment." },
+        { role: 'assistant', content: data.response || data.message || t('tutorNoResponse') },
       ]);
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Erreur de connexion');
+      setError(err instanceof Error ? err.message : t('tutorConnectionError'));
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', content: "Désolé, je n'ai pas pu traiter votre demande. Veuillez réessayer." },
+        { role: 'assistant', content: t('tutorSorryMessage') },
       ]);
     }
     setLoading(false);
@@ -206,7 +198,7 @@ export default function TutorPage() {
 
   // ── New Chat ──
   const handleNewChat = () => {
-    setMessages([{ ...(isEn ? INITIAL_MESSAGE_EN : INITIAL_MESSAGE_FR) }]);
+    setMessages([{ ...initialMessage }]);
     setCurrentChatId(null);
     setError(null);
     setInput('');
@@ -275,7 +267,7 @@ export default function TutorPage() {
             className="w-full flex items-center justify-center gap-2 px-3 py-2 bg-[#3B82F6] hover:bg-[#2563EB] text-white text-sm font-medium rounded-lg transition-colors"
           >
             <Plus size={16} />
-            {isEn ? 'New Chat' : 'Nouveau chat'}
+            {t('tutorNewChat')}
           </button>
         </div>
 
@@ -283,7 +275,7 @@ export default function TutorPage() {
         <div className="flex-1 overflow-y-auto px-2 py-2 space-y-1">
           {chatHistories.length > 0 && (
             <p className="px-2 text-[10px] font-semibold uppercase tracking-wider text-[#64748B] mb-2">
-              {isEn ? 'CHAT HISTORY' : 'HISTORIQUE'}
+              {t('tutorChatHistory')}
             </p>
           )}
           {chatHistories.map((chat) => {
@@ -327,7 +319,7 @@ export default function TutorPage() {
           })}
           {chatHistories.length === 0 && (
             <p className="px-2 text-xs text-[#64748B] py-4 text-center italic">
-              {isEn ? 'No history' : 'Aucun historique'}
+              {t('tutorNoHistory')}
             </p>
           )}
         </div>
@@ -339,7 +331,7 @@ export default function TutorPage() {
             className="w-full flex items-center gap-2 px-3 py-2 text-xs text-[#94A3B8] border border-[#2D3A52] rounded-lg hover:border-[#3B82F6]/40 hover:text-[#F8FAFC] transition-all"
           >
             <ArrowLeft size={14} />
-            {isEn ? 'Back to Results' : 'Retour aux résultats'}
+            {t('tutorBackToResults')}
           </button>
         </div>
       </aside>
@@ -368,9 +360,9 @@ export default function TutorPage() {
             <Bot size={18} className="text-white" />
           </div>
           <div>
-            <h1 className="text-base font-bold text-[#F8FAFC]">{isEn ? 'AI Tutor' : 'Tuteur IA'}</h1>
+            <h1 className="text-base font-bold text-[#F8FAFC]">{t('tutorHeaderTitle')}</h1>
             <p className="text-[11px] text-[#94A3B8]">
-              {isEn ? 'Ask questions about theory and exams' : 'Posez vos questions sur la théorie et les examens'}
+              {t('tutorHeaderDesc')}
             </p>
           </div>
         </div>
@@ -436,7 +428,7 @@ export default function TutorPage() {
           <div className="px-4 pb-2">
             <p className="text-xs text-[#64748B] mb-2 flex items-center gap-1">
               <Sparkles size={12} className="text-[#F59E0B]" />
-              {isEn ? 'Suggestions' : 'Suggestions'}
+              {t('tutorSuggestions')}
             </p>
             <div className="flex flex-wrap gap-1.5">
               {(isEn ? SUGGESTED_EN : SUGGESTED_FR).map((q) => (
@@ -463,7 +455,7 @@ export default function TutorPage() {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder={isEn ? "Ask a question..." : "Posez une question..."}
+              placeholder={t('tutorInputPlaceholder')}
               disabled={loading}
               className="flex-1 px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] focus:ring-1 focus:ring-[#3B82F6]/30 disabled:opacity-50"
             />

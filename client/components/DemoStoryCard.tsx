@@ -2,37 +2,39 @@
 
 import { useState } from 'react';
 import { Play, Pause } from 'lucide-react';
-
-const demoSlides = [
-  {
-    title: "Échec à l'examen CMEQ",
-    subtitle: "Ça m'a coûté 6 mois",
-    desc: "J'ai échoué mon examen d'électricien de justesse. Pas faute de connaître — mais le format, la pression... J'ai perdu 6 mois à tout reprendre.",
-    icon: "😰",
-    stat: "35%",
-    statLabel: "Taux d'échec au 1er essai",
-  },
-  {
-    title: "J'ai trouvé Metierium",
-    subtitle: "Théorie + pratique ciblée",
-    desc: "Au lieu de relire mon code sans fin, j'ai fait les examens blancs. La théorie expliquée simplement, les questions qui tombent vraiment. Pas de blabla.",
-    icon: "💡",
-    stat: "2 400+",
-    statLabel: "Questions adaptées à ton métier",
-  },
-  {
-    title: "Certifié du premier coup",
-    subtitle: "À 47 ans, j'ai réussi",
-    desc: "3 semaines de préparation intensive sur Metierium, et j'ai passé mon CMEQ avec 78%. Mon employeur m'a augmenté le mois suivant. Le meilleur investissement de ma carrière.",
-    icon: "🏆",
-    stat: "94%",
-    statLabel: "Taux de réussite des membres",
-  },
-];
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 export default function DemoStoryCard() {
+  const { t } = useLocale();
   const [activeSlide, setActiveSlide] = useState(0);
   const [isPlaying, setIsPlaying] = useState(true);
+
+  const demoSlides = [
+    {
+      title: t('demoSlide1Title'),
+      subtitle: t('demoSlide1Subtitle'),
+      desc: t('demoSlide1Desc'),
+      icon: '😰',
+      stat: t('demoSlide1Stat'),
+      statLabel: t('demoSlide1StatLabel'),
+    },
+    {
+      title: t('demoSlide2Title'),
+      subtitle: t('demoSlide2Subtitle'),
+      desc: t('demoSlide2Desc'),
+      icon: '💡',
+      stat: t('demoSlide2Stat'),
+      statLabel: t('demoSlide2StatLabel'),
+    },
+    {
+      title: t('demoSlide3Title'),
+      subtitle: t('demoSlide3Subtitle'),
+      desc: t('demoSlide3Desc'),
+      icon: '🏆',
+      stat: t('demoSlide3Stat'),
+      statLabel: t('demoSlide3StatLabel'),
+    },
+  ];
 
   // Auto-advance
   useState(() => {
@@ -128,7 +130,7 @@ export default function DemoStoryCard() {
             ))}
           </div>
           <span className="text-[10px] text-[#64748B]">
-            +{152 + activeSlide * 47} histoires similaires
+            {t('demoSlideSimilar', { count: 152 + activeSlide * 47 })}
           </span>
         </div>
       </div>

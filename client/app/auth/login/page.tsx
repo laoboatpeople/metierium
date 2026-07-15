@@ -6,8 +6,10 @@ import Link from 'next/link';
 import { GraduationCap, LogIn, Mail, Lock, Loader2, AlertCircle } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import Captcha from '@/components/Captcha';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 export default function LoginPage() {
+  const { t } = useLocale();
   const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -18,7 +20,7 @@ export default function LoginPage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
     if (!captchaToken) {
-      setError('Veuillez compléter le captcha de sécurité');
+      setError(t('authCaptchaError'));
       return;
     }
     setError(null);
@@ -34,7 +36,7 @@ export default function LoginPage() {
       document.cookie = `auth_role=${data.user.role || 'student'}; path=/; SameSite=Lax`;
       router.push('/app');
     } catch (err) {
-      setError(err instanceof Error ? err.message : 'Courriel ou mot de passe incorrect');
+      setError(err instanceof Error ? err.message : t('authInvalidCredentials'));
     } finally {
       setLoading(false);
     }
@@ -55,9 +57,9 @@ export default function LoginPage() {
 
         {/* Card */}
         <div className="bg-[#1A2035] border border-[#2D3A52] rounded-2xl p-8">
-          <h1 className="text-2xl font-bold text-[#F8FAFC] mb-1">Connexion</h1>
+          <h1 className="text-2xl font-bold text-[#F8FAFC] mb-1">{t('signIn')}</h1>
           <p className="text-sm text-[#94A3B8] mb-6">
-            Accédez à votre espace d&apos;étude personnalisé
+            {t('signInSubtitle')}
           </p>
 
           {error && (
@@ -70,7 +72,7 @@ export default function LoginPage() {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">
-                Courriel
+                {t('email')}
               </label>
               <div className="relative">
                 <Mail size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#64748B]" />
@@ -78,7 +80,7 @@ export default function LoginPage() {
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="votre@courriel.com"
+                  placeholder={t('emailPlaceholder')}
                   required
                   className="w-full pl-10 pr-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] focus:ring-1 focus:ring-[#3B82F6]/30 transition-colors"
                 />
@@ -87,7 +89,7 @@ export default function LoginPage() {
 
             <div>
               <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">
-                Mot de passe
+                {t('password')}
               </label>
               <div className="relative">
                 <Lock size={16} className="absolute left-3 top-1/2 -translate-y-1/2 text-[#64748B]" />
@@ -95,7 +97,7 @@ export default function LoginPage() {
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  placeholder="Votre mot de passe"
+                  placeholder={t('passwordPlaceholder')}
                   required
                   minLength={6}
                   className="w-full pl-10 pr-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] focus:ring-1 focus:ring-[#3B82F6]/30 transition-colors"
@@ -108,7 +110,7 @@ export default function LoginPage() {
                 href="/auth/forgot-password"
                 className="text-xs text-[#64748B] hover:text-[#3B82F6] transition-colors"
               >
-                Mot de passe oublié ?
+                {t('authForgotPasswordLink')}
               </Link>
             </div>
 
@@ -124,14 +126,14 @@ export default function LoginPage() {
               ) : (
                 <LogIn size={18} />
               )}
-              {loading ? 'Connexion...' : 'Se connecter'}
+              {loading ? t('authLoggingIn') : t('authLogin')}
             </button>
           </form>
 
           <p className="mt-6 text-center text-sm text-[#64748B]">
-            Pas encore de compte ?{' '}
+            {t('noAccount')}{' '}
             <Link href="/auth/register" className="text-[#3B82F6] hover:text-[#2563EB] transition-colors font-medium">
-              Créer un compte
+              {t('createAccount')}
             </Link>
           </p>
         </div>

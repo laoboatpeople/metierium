@@ -1,0 +1,8 @@
+file '/home/chuck/projects/metierium/public/videos/temp_en/seg_01.mp4'
+file '/home/chuck/projects/metierium/public/videos/temp_en/seg_02.mp4'
+file '/home/chuck/projects/metierium/public/videos/temp_en/seg_03.mp4'
+file '/home/chuck/projects/metierium/public/videos/temp_en/seg_04.mp4'
+file '/home/chuck/projects/metierium/public/videos/temp_en/seg_05.mp4'
+file '/home/chuck/projects/metierium/public/videos/temp_en/seg_06.mp4'
+file '/home/chuck/projects/metierium/public/videos/temp_en/seg_07.mp4'
+file '/home/chuck/projects/metierium/public/videos/temp_en/seg_08.mp4'

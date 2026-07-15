@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useMemo, Suspense } from 'react';
+import { useEffect, useState, useRef, useMemo, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -72,9 +72,9 @@ const TRADE_NAME_MAP: Record<string, string> = {
   welder: 'Soudeur',
 };
 
-function getTradeName(tradeId: string, trades: Trade[]): string {
+function getTradeName(tradeId: string, trades: Trade[], locale?: string): string {
   const t = trades.find((tr) => tr.id === tradeId);
-  if (t) return t.name || t.nameFr;
+  if (t) return locale === 'fr' ? (t.nameFr || t.name) : (t.name || t.nameFr);
   return TRADE_NAME_MAP[tradeId] || tradeId;
 }
 
@@ -109,7 +109,7 @@ function ExamsPage() {
   const [examResult, setExamResult] = useState<ExamResult | null>(null);
   const [examTime, setExamTime] = useState(0);
   const [timerActive, setTimerActive] = useState(false);
-  const [questionCount, setQuestionCount] = useState(20);
+  const [questionCount, setQuestionCount] = useState(50);
   const [difficulty, setDifficulty] = useState<string>('');
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [selectedChapters, setSelectedChapters] = useState<Set<string>>(new Set());
@@ -120,6 +120,8 @@ function ExamsPage() {
   const [saved, setSaved] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const { t, locale } = useLocale();
+  const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const questionCountRef = useRef<HTMLDivElement>(null);
   const router = useRouter();
   const searchParams = useSearchParams();
 
@@ -132,7 +134,7 @@ function ExamsPage() {
     if (tradeParam) setSelectedTrade(tradeParam);
     if (chapterParam) {
       setSelectedChapters(new Set([chapterParam]));
-      setQuestionCount(20);
+      setQuestionCount(50);
     }
   }, [searchParams]);
 
@@ -192,14 +194,18 @@ function ExamsPage() {
             (a: Chapter, b: Chapter) => a.number - b.number
           );
           setChapters(list);
-          // FREE plan: auto-select chapter 1 only, 20 questions max
+          // FREE plan: auto-select chapter 1 only, 50 questions max
           if (plan === 'FREE' && list.length > 0) {
             setSelectedChapters(new Set([list[0].id]));
-            setQuestionCount(20);
+            setQuestionCount(50);
           }
         }
       } catch { /* ignore */ }
       setChaptersLoading(false);
+      // Auto-scroll to question count after trade + chapters loaded
+      setTimeout(() => {
+        questionCountRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 100);
     })();
   }, [selectedTrade, locale]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -211,6 +217,13 @@ function ExamsPage() {
     }
     return () => clearInterval(interval);
   }, [timerActive]);
+
+  // Clear auto-advance on unmount
+  useEffect(() => {
+    return () => {
+      if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
+    };
+  }, []);
 
   const formatTime = (s: number) => {
     const m = Math.floor(s / 60);
@@ -312,15 +325,16 @@ function ExamsPage() {
       next.delete(currentIndex);
       return next;
     });
-    // Auto-advance to next question
+    // Auto-advance to next question (clear any pending advance first)
+    if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
     if (currentIndex < questions.length - 1) {
-      setTimeout(() => setCurrentIndex((i) => i + 1), 300);
+      autoAdvanceRef.current = setTimeout(() => setCurrentIndex((i) => i + 1), 300);
     }
   };
 
   const nextQuestion = () => {
     if (currentIndex < questions.length - 1) {
-      // Track as skipped if not answered
+      if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
       if (!answers[questions[currentIndex]?.id]) {
         setSkipped((prev) => new Set(prev).add(currentIndex));
       }
@@ -330,6 +344,7 @@ function ExamsPage() {
 
   const prevQuestion = () => {
     if (currentIndex > 0) {
+      if (autoAdvanceRef.current) clearTimeout(autoAdvanceRef.current);
       setCurrentIndex((i) => i - 1);
     }
   };
@@ -343,7 +358,9 @@ function ExamsPage() {
     for (const q of questions) {
       const selected = answers[q.id] || '';
       const answerIdx = q.answer ? q.answer.charCodeAt(0) - 65 : -1;
-      const correctText = (answerIdx >= 0 && q.options && q.options[answerIdx]) ? q.options[answerIdx] : q.answer;
+      const answerLetter = q.answer && q.answer.startsWith('Option ') ? q.answer.slice(-1) : q.answer;
+      const answerIdx2 = answerLetter ? answerLetter.charCodeAt(0) - 65 : -1;
+      const correctText = (answerIdx2 >= 0 && q.options && q.options[answerIdx2]) ? q.options[answerIdx2] : q.answer;
       const isCorrect = selected === correctText;
       if (isCorrect) correct++;
       resultAnswers.push({ questionId: q.id, selected, correct: isCorrect, chapterId: q.chapterId });
@@ -385,7 +402,7 @@ function ExamsPage() {
         id: `exam_${Date.now()}`,
         date: new Date().toISOString(),
         tradeId: selectedTrade,
-        tradeName: getTradeName(selectedTrade, trades),
+        tradeName: getTradeName(selectedTrade, trades, locale),
         totalQuestions: questions.length,
         correct,
         incorrect: questions.length - correct,
@@ -396,7 +413,7 @@ function ExamsPage() {
           chapterName: cb.chapterName,
           correct: cb.correct,
           total: cb.total,
-          tradeName: getTradeName(selectedTrade, trades),
+          tradeName: getTradeName(selectedTrade, trades, locale),
           chapterId: cb.chapterId || undefined,
         })),
         difficulty,
@@ -519,14 +536,14 @@ function ExamsPage() {
 
             <div className="grid sm:grid-cols-2 gap-4">
               {/* Question count */}
-              <div className="bg-[#111827]/60 rounded-lg p-3.5 border border-[#2D3A52]/50">
+              <div ref={questionCountRef} className="bg-[#111827]/60 rounded-lg p-3.5 border border-[#2D3A52]/50">
                 <label className="block text-xs font-medium text-[#94A3B8] mb-2.5 flex items-center gap-1.5">
                   <BarChart3 size={14} className="text-[#3B82F6]" />
                   {t('examsQuestionCount')}
                 </label>
                 <div className="flex gap-1.5 flex-wrap">
                   {[10, 20, 30, 50, 100, 150].map((n) => {
-                    const isLockedCount = userPlan === 'FREE' && n !== 20;
+                    const isLockedCount = userPlan === 'FREE' && n > 50;
                     return (
                       <button
                         key={n}
@@ -1193,7 +1210,9 @@ function ExamsPage() {
               const ans = examResult.answers.find((a) => a.questionId === q.id);
               const isCorrect = ans?.correct;
               const answerIdx = q.answer ? q.answer.charCodeAt(0) - 65 : -1;
-              const correctText = (answerIdx >= 0 && q.options && q.options[answerIdx]) ? q.options[answerIdx] : q.answer;
+              const answerLetter = q.answer && q.answer.startsWith('Option ') ? q.answer.slice(-1) : q.answer;
+      const answerIdx2 = answerLetter ? answerLetter.charCodeAt(0) - 65 : -1;
+      const correctText = (answerIdx2 >= 0 && q.options && q.options[answerIdx2]) ? q.options[answerIdx2] : q.answer;
               return (
                 <div key={q.id} className={`bg-[#1A2035] border ${isCorrect ? 'border-[#22C55E]/20' : 'border-[#EF4444]/20'} rounded-xl p-4`}>
                   <div className="flex items-start gap-2 mb-2">
@@ -1234,6 +1253,22 @@ function ExamsPage() {
               );
             })}
           </div>
+        </div>
+
+        {/* Bottom actions — Nouvel Examen / Voir Stats */}
+        <div className="flex gap-3 pt-2">
+          <button
+            onClick={resetExam}
+            className="flex-1 py-3 bg-[#3B82F6] rounded-xl font-medium text-white hover:bg-[#2563EB] transition-colors flex items-center justify-center gap-2"
+          >
+            <RefreshCw size={18} /> {t('examsNewExam')}
+          </button>
+          <Link
+            href="/app#exam-history"
+            className="flex-1 py-3 bg-[#1A2035] border border-[#2D3A52] rounded-xl font-medium text-[#F8FAFC] hover:bg-[#2D3A52] transition-colors flex items-center justify-center gap-2"
+          >
+            <BarChart3 size={18} /> {t('examsViewStats')}
+          </Link>
         </div>
       </div>
     );

@@ -3,8 +3,10 @@
 import { useState } from 'react';
 import Nav from '@/components/Nav';
 import { Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 export default function ContactPage() {
+  const { t } = useLocale();
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
@@ -16,7 +18,7 @@ export default function ContactPage() {
 
     if (!name.trim() || !email.trim() || !message.trim()) {
       setStatus('error');
-      setStatusMsg('Veuillez remplir tous les champs.');
+      setStatusMsg(t('contactValidationError'));
       return;
     }
 
@@ -39,17 +41,17 @@ export default function ContactPage() {
 
       if (!res.ok) {
         const data = await res.json().catch(() => ({}));
-        throw new Error(data.error || 'Erreur lors de l\'envoi du message.');
+        throw new Error(data.error || t('contactGenericError'));
       }
 
       setStatus('success');
-      setStatusMsg('Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.');
+      setStatusMsg(t('contactSuccessDesc'));
       setName('');
       setEmail('');
       setMessage('');
     } catch (err: unknown) {
       setStatus('error');
-      setStatusMsg(err instanceof Error ? err.message : 'Une erreur est survenue. Veuillez réessayer.');
+      setStatusMsg(err instanceof Error ? err.message : t('contactGenericError'));
     }
   };
 
@@ -61,10 +63,10 @@ export default function ContactPage() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-3xl md:text-4xl font-bold text-[#F8FAFC] mb-4">
-            Contactez-nous
+            {t('contactTitle')}
           </h1>
           <p className="text-[#94A3B8] text-lg">
-            Une question, une suggestion ou un problème ? Notre équipe est là pour vous aider.
+            {t('contactDesc')}
           </p>
         </div>
 
@@ -73,13 +75,13 @@ export default function ContactPage() {
           {status === 'success' ? (
             <div className="text-center py-8">
               <CheckCircle size={48} className="text-green-400 mx-auto mb-4" />
-              <p className="text-[#F8FAFC] text-lg font-medium mb-2">Message envoyé !</p>
+              <p className="text-[#F8FAFC] text-lg font-medium mb-2">{t('contactSuccessTitle')}</p>
               <p className="text-[#94A3B8] text-sm">{statusMsg}</p>
               <button
                 onClick={() => setStatus('idle')}
                 className="mt-6 px-4 py-2 bg-[#3B82F6] hover:bg-[#2563EB] rounded-lg text-sm font-medium text-white transition-colors"
               >
-                Envoyer un autre message
+                {t('contactSendAnother')}
               </button>
             </div>
           ) : (
@@ -87,14 +89,14 @@ export default function ContactPage() {
               {/* Name */}
               <div>
                 <label htmlFor="name" className="block text-sm font-medium text-[#F8FAFC] mb-1.5">
-                  Nom complet
+                  {t('contactNameLabel')}
                 </label>
                 <input
                   id="name"
                   type="text"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
-                  placeholder="Votre nom"
+                  placeholder={t('contactNamePlaceholder')}
                   className="w-full px-4 py-2.5 rounded-lg bg-[#0A0E1A] border border-[#2D3A52] text-sm text-[#F8FAFC] placeholder:text-[#64748B] focus:outline-none focus:border-[#3B82F6]/50"
                 />
               </div>
@@ -102,14 +104,14 @@ export default function ContactPage() {
               {/* Email */}
               <div>
                 <label htmlFor="email" className="block text-sm font-medium text-[#F8FAFC] mb-1.5">
-                  Courriel
+                  {t('contactEmailLabel')}
                 </label>
                 <input
                   id="email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  placeholder="votre@courriel.com"
+                  placeholder={t('contactEmailPlaceholder')}
                   className="w-full px-4 py-2.5 rounded-lg bg-[#0A0E1A] border border-[#2D3A52] text-sm text-[#F8FAFC] placeholder:text-[#64748B] focus:outline-none focus:border-[#3B82F6]/50"
                 />
               </div>
@@ -117,14 +119,14 @@ export default function ContactPage() {
               {/* Message */}
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-[#F8FAFC] mb-1.5">
-                  Message
+                  {t('contactMessageLabel')}
                 </label>
                 <textarea
                   id="message"
                   rows={5}
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
-                  placeholder="Décrivez votre question ou votre problème..."
+                  placeholder={t('contactMessagePlaceholder')}
                   className="w-full px-4 py-2.5 rounded-lg bg-[#0A0E1A] border border-[#2D3A52] text-sm text-[#F8FAFC] placeholder:text-[#64748B] focus:outline-none focus:border-[#3B82F6]/50 resize-y"
                 />
               </div>
@@ -146,12 +148,12 @@ export default function ContactPage() {
                 {status === 'loading' ? (
                   <>
                     <Loader2 size={16} className="animate-spin" />
-                    Envoi en cours...
+                    {t('contactSending')}
                   </>
                 ) : (
                   <>
                     <Send size={16} />
-                    Envoyer le message
+                    {t('contactSubmit')}
                   </>
                 )}
               </button>
@@ -162,7 +164,7 @@ export default function ContactPage() {
         {/* Contact info */}
         <div className="mt-8 text-center">
           <p className="text-sm text-[#64748B]">
-            Vous pouvez aussi nous écrire directement à{' '}
+            {t('contactAltEmail')}{' '}
             <a href="mailto:info@metierium.com" className="text-[#3B82F6] hover:underline">
               info@metierium.com
             </a>

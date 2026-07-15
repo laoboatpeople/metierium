@@ -4,8 +4,9 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
 import Script from 'next/script';
-import { Calendar, Clock, ArrowLeft, ChevronRight, GraduationCap, Loader2 } from 'lucide-react';
+import { Calendar, Clock, ArrowLeft, ChevronRight, Loader2 } from 'lucide-react';
 import Nav from '@/components/Nav';
+import { useLocale } from '@/src/contexts/LocaleContext';
 
 interface BlogPost {
   slug: string;
@@ -19,6 +20,7 @@ interface BlogPost {
 }
 
 export default function BlogPostPage() {
+  const { t } = useLocale();
   const params = useParams();
   const slug = params?.slug as string;
   const [post, setPost] = useState<BlogPost | null>(null);
@@ -47,7 +49,7 @@ export default function BlogPostPage() {
   if (!post) {
     return (
       <div className="min-h-screen bg-[#0A0E1A] flex items-center justify-center">
-        <p className="text-[#94A3B8]">Article introuvable.</p>
+        <p className="text-[#94A3B8]">{t('blogArticleNotFound')}</p>
       </div>
     );
   }
@@ -70,9 +72,9 @@ export default function BlogPostPage() {
 
       <div className="max-w-3xl mx-auto px-4 py-8">
         <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
-          <Link href="/" className="hover:text-[#3B82F6]">Accueil</Link>
+          <Link href="/" className="hover:text-[#3B82F6]">{t('blogArticleHome')}</Link>
           <ChevronRight size={12} />
-          <Link href="/blog" className="hover:text-[#3B82F6]">Blog</Link>
+          <Link href="/blog" className="hover:text-[#3B82F6]">{t('blogArticleBlog')}</Link>
           <ChevronRight size={12} />
           <span className="text-[#94A3B8] truncate max-w-[200px]">{post.title}</span>
         </nav>
@@ -85,7 +87,7 @@ export default function BlogPostPage() {
           </div>
 
           <h1 className="text-2xl font-bold text-[#F8FAFC] mb-4">{post.title}</h1>
-          <p className="text-xs text-[#64748B] mb-6">Par {post.author}</p>
+          <p className="text-xs text-[#64748B] mb-6">{t('blogArticleByAuthor', { author: post.author })}</p>
 
           <div className="prose prose-sm max-w-none text-[#94A3B8] leading-relaxed"
             dangerouslySetInnerHTML={{ __html: post.content }}
@@ -104,7 +106,7 @@ export default function BlogPostPage() {
 
         {related.length > 0 && (
           <div className="mt-8">
-            <h2 className="text-lg font-semibold text-[#F8FAFC] mb-3">Articles connexes</h2>
+            <h2 className="text-lg font-semibold text-[#F8FAFC] mb-3">{t('blogArticleRelatedTitle')}</h2>
             <div className="grid md:grid-cols-3 gap-3">
               {related.map(r => (
                 <Link key={r.slug} href={`/blog/${r.slug}`}
@@ -119,7 +121,7 @@ export default function BlogPostPage() {
 
         <div className="mt-6">
           <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-[#3B82F6] hover:text-[#06B6D4]">
-            <ArrowLeft size={14} /> Retour au blog
+            <ArrowLeft size={14} /> {t('blogArticleBack')}
           </Link>
         </div>
       </div>
