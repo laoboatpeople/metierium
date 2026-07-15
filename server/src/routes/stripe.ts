@@ -167,6 +167,15 @@ router.post('/webhook', async (req: Request, res: Response): Promise<void> => {
           await prisma.subscription.create({ data });
         }
 
+        // Also update the User's plan and subStatus
+        await prisma.user.update({
+          where: { id: userId },
+          data: {
+            plan: dbPlan,
+            subStatus: 'ACTIVE',
+          },
+        });
+
         // Store the Stripe customer ID on the User
         if (session.customer) {
           await prisma.user.update({

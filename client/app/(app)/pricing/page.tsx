@@ -311,7 +311,7 @@ export default function PricingPage() {
                 <Loader2 size={20} className="text-[#3B82F6] animate-spin" />
               </div>
             ) : (
-              <div className="space-y-2 mb-5">
+              <div className="space-y-2 mb-5 max-h-[320px] overflow-y-auto pr-1">
                 {trades.map((trade) => (
                   <button
                     key={trade.id}
