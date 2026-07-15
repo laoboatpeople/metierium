@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useMemo, useCallback } from 'react';
+import { useEffect, useState, useMemo, useCallback, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import Script from 'next/script';
@@ -191,16 +191,25 @@ function SkeletonPage() {
 
 // ─── Chapter Section ──────────────────────────────────────
 
-function ChapterSection({ chapter, color }: { chapter: TheoryChapter; color: SectionColor }) {
-  const [expanded, setExpanded] = useState(false);
+function ChapterSection({ chapter, color, preselected }: { chapter: TheoryChapter; color: SectionColor; preselected?: boolean }) {
+  const [expanded, setExpanded] = useState(preselected || false);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const colors = SECTION_STYLES[color];
   const { t } = useLocale();
   const router = useRouter();
 
+  useEffect(() => {
+    if (preselected && sectionRef.current) {
+      setTimeout(() => {
+        sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }, 350);
+    }
+  }, [preselected]);
+
   if (chapter.questionCount === 0 && !chapter.hasTheory) return null;
 
   return (
-    <div className="bg-card border border-border rounded-card overflow-hidden">
+    <div ref={sectionRef} className="bg-card border border-border rounded-card overflow-hidden">
       <button
         onClick={() => setExpanded(!expanded)}
         className="w-full text-left px-4 py-3.5 flex items-center gap-3 hover:bg-hover/50 transition-colors"
@@ -286,13 +295,18 @@ function ChapterSection({ chapter, color }: { chapter: TheoryChapter; color: Sec
 
 // ─── Category Card ────────────────────────────────────────
 
-function CategoryCard({ category }: { category: TheoryCategory }) {
+function CategoryCard({ category, preselectedChapterId }: { category: TheoryCategory; preselectedChapterId?: string }) {
   const [expanded, setExpanded] = useState(false);
   const color = getSectionColor(category.code);
   const colors = SECTION_STYLES[color];
   const chaptersWithTheory = category.chapters.filter(ch => ch.hasTheory).length;
   const chaptersWithQuestions = category.chapters.filter(ch => ch.questionCount > 0).length;
   const { t } = useLocale();
+  const hasPreselected = category.chapters.some(ch => ch.id === preselectedChapterId);
+
+  useEffect(() => {
+    if (hasPreselected) setExpanded(true);
+  }, [hasPreselected]);
 
   return (
     <div className="bg-card border border-border rounded-card overflow-hidden transition-all duration-200 hover:border-blue/30">
@@ -347,7 +361,7 @@ function CategoryCard({ category }: { category: TheoryCategory }) {
                 category.chapters
                   .filter(ch => ch.questionCount > 0 || ch.hasTheory)
                   .map((ch) => (
-                    <ChapterSection key={ch.id} chapter={ch} color={color} />
+                    <ChapterSection key={ch.id} chapter={ch} color={color} preselected={ch.id === preselectedChapterId} />
                   ))
               ) : (
                 <div className="py-8 text-center">
@@ -377,6 +391,14 @@ export default function TheoryPage() {
   const [categories, setCategories] = useState<TheoryCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [preselectedChapterId, setPreselectedChapterId] = useState<string | null>(null);
+
+  // Read tradeId & chapterId from URL params on mount
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const chId = params.get('chapterId');
+    if (chId) setPreselectedChapterId(chId);
+  }, []);
 
   useEffect(() => {
     document.title = `${t('theory')} | Metierium`;
@@ -565,7 +587,7 @@ export default function TheoryPage() {
       {!loading && categories.length > 0 && (
         <div className="space-y-6">
           {categories.map((cat) => (
-            <CategoryCard key={cat.id} category={cat} />
+            <CategoryCard key={cat.id} category={cat} preselectedChapterId={preselectedChapterId || undefined} />
           ))}
         </div>
       )}
