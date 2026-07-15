@@ -148,6 +148,16 @@ router.post('/webhook', async (req: Request, res: Response): Promise<void> => {
           where: { userId, status: 'ACTIVE' },
         });
 
+        // For Lifetime: cancel any existing Stripe subscription
+        if (plan === 'LIFETIME' && existing?.stripeSubId?.startsWith('sub_')) {
+          try {
+            await stripe.subscriptions.cancel(existing.stripeSubId);
+            console.log(`[Stripe] Cancelled previous subscription ${existing.stripeSubId} for Lifetime upgrade`);
+          } catch (cancelErr: any) {
+            console.warn(`[Stripe] Could not cancel previous subscription ${existing.stripeSubId}: ${cancelErr.message}`);
+          }
+        }
+
         const data: any = {
           userId,
           plan: dbPlan,
