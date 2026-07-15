@@ -194,6 +194,7 @@ export default function DashboardPage() {
   const [selectedTrade, setSelectedTrade] = useState<string>('');
   const [showClearConfirm, setShowClearConfirm] = useState(false);
   const { t, locale } = useLocale();
+  const [chapterNameMap, setChapterNameMap] = useState<Record<string, string>>({});
 
   function loadStats() {
     setLoading(true);
@@ -299,6 +300,31 @@ export default function DashboardPage() {
     })();
   }
 
+  // Fetch localized chapter names from API for all trades with history
+  useEffect(() => {
+    if (!examHistory.length) return;
+    const tradeIds = [...new Set(examHistory.map(r => r.tradeId))];
+    const token = localStorage.getItem('token');
+    const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+    if (token) headers['Authorization'] = `Bearer ${token}`;
+
+    (async () => {
+      const map: Record<string, string> = {};
+      for (const tid of tradeIds) {
+        try {
+          const res = await fetch(`${API_BASE}/api/theory?tradeId=${tid}&locale=${locale}`, { headers });
+          if (!res.ok) continue;
+          const data = await res.json();
+          const chapters = data.data || [];
+          for (const ch of chapters) {
+            map[`${tid}:${ch.number}`] = ch.name;
+          }
+        } catch {}
+      }
+      setChapterNameMap(map);
+    })();
+  }, [locale, examHistory.length]);
+
   useEffect(() => {
     loadStats();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -356,6 +382,11 @@ export default function DashboardPage() {
   // ── Loaded state ───────────────────────────────────
   const { totalExams, totalAttempts, averageScore, passRate, studyStreak, byExam } = stats!;
   const totalPassed = byExam.reduce((sum, e) => sum + e.passedCount, 0);
+
+  const getLocalizedChapterName = (tradeId: string, chapterNumber: number, fallback: string) => {
+    const key = `${tradeId}:${chapterNumber}`;
+    return chapterNameMap[key] || fallback;
+  };
 
   const getLocalizedName = (code: string) => {
     const n = TRADE_NAMES[code];
@@ -745,7 +776,7 @@ export default function DashboardPage() {
                         {statsData.strengths.map(s => (
                           <div key={s.chapterNumber}>
                             <div className="flex justify-between text-xs mb-0.5">
-                              <span className="text-[#94A3B8]">{s.tradeName ? `${getTradeNameLocalized(s.tradeName, locale)} > ` : ''}{s.chapterName}</span>
+                              <span className="text-[#94A3B8]">{s.tradeName ? `${getTradeNameLocalized(s.tradeName, locale)} > ` : ''}{getLocalizedChapterName(s.tradeId, s.chapterNumber, s.chapterName)}</span>
                               <span className="text-[#22C55E] font-medium">{s.percentage}%</span>
                             </div>
                             <div className="w-full h-2 bg-[#111827] rounded-full overflow-hidden">
@@ -769,7 +800,7 @@ export default function DashboardPage() {
                         {statsData.weaknesses.map(s => (
                           <div key={s.chapterNumber}>
                             <div className="flex justify-between text-xs mb-0.5">
-                              <span className="text-[#94A3B8]">{s.tradeName ? `${getTradeNameLocalized(s.tradeName, locale)} > ` : ''}{s.chapterName}</span>
+                              <span className="text-[#94A3B8]">{s.tradeName ? `${getTradeNameLocalized(s.tradeName, locale)} > ` : ''}{getLocalizedChapterName(s.tradeId, s.chapterNumber, s.chapterName)}</span>
                               <span className="text-[#EF4444] font-medium">{s.percentage}%</span>
                             </div>
                             <div className="w-full h-2 bg-[#111827] rounded-full overflow-hidden">
@@ -792,7 +823,7 @@ export default function DashboardPage() {
                               href={`/theory?tradeId=${ch.tradeId || ''}&chapterId=${ch.chapterId || ''}`}
                               className="text-xs bg-[#EF4444]/10 border border-[#EF4444]/20 text-[#EF4444] px-2 py-0.5 rounded-full hover:bg-[#EF4444]/20 transition-colors"
                             >
-                              {ch.tradeName ? `${getTradeNameLocalized(ch.tradeName, locale)} > ${ch.chapterName}` : ch.chapterName}
+                              {ch.tradeName ? `${getTradeNameLocalized(ch.tradeName, locale)} > ${getLocalizedChapterName(ch.tradeId, ch.chapterNumber, ch.chapterName)}` : getLocalizedChapterName(ch.tradeId, ch.chapterNumber, ch.chapterName)}
                             </Link>
                           ))}
                         </div>
@@ -814,7 +845,7 @@ export default function DashboardPage() {
                         return (
                           <div key={ch.chapterNumber}>
                             <div className="flex justify-between text-xs mb-1">
-                              <span className="text-[#F8FAFC] font-medium">{ch.tradeName ? `${getTradeNameLocalized(ch.tradeName, locale)} > ` : ''}{ch.chapterName}</span>
+                              <span className="text-[#F8FAFC] font-medium">{ch.tradeName ? `${getTradeNameLocalized(ch.tradeName, locale)} > ` : ''}{getLocalizedChapterName(ch.tradeId, ch.chapterNumber, ch.chapterName)}</span>
                               <span className="font-medium" style={{ color }}>{ch.percentage}%</span>
                             </div>
                             <div className="flex items-center gap-2">
