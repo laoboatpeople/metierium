@@ -272,7 +272,7 @@ function ExamsPage() {
           allocated += count;
           if (count < 1) return null;
 
-          let url = `${API_BASE}/api/questions?tradeId=${selectedTrade}&chapterId=${ch.id}&limit=${count}`;
+          let url = `${API_BASE}/api/questions?tradeId=${selectedTrade}&chapterId=${ch.id}&limit=${count}&locale=${locale}`;
           if (difficulty) url += `&difficulty=${difficulty}`;
           return fetch(url, {
             headers: { Authorization: `Bearer ${token}` },
@@ -287,7 +287,7 @@ function ExamsPage() {
           qs.push(...chapterQs);
         }
       } else {
-        const url = `${API_BASE}/api/questions?tradeId=${selectedTrade}&limit=${questionCount}${difficulty ? `&difficulty=${difficulty}` : ''}`;
+        const url = `${API_BASE}/api/questions?tradeId=${selectedTrade}&limit=${questionCount}&locale=${locale}${difficulty ? `&difficulty=${difficulty}` : ''}`;
         const res = await fetch(url, {
           headers: { Authorization: `Bearer ${token}` },
         });

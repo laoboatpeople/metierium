@@ -50,7 +50,38 @@ router.get('/', authenticate, async (req: Request, res: Response): Promise<void>
     if (chapterId) where.chapterId = chapterId as string;
     if (difficulty) where.difficulty = difficulty as string;
     if (type) where.type = type as string;
-    if (locale) where.locale = locale as string;
+    if (locale) {
+      // Try requested locale first, fall back to 'fr'
+      const localeFilter = { ...where, locale: locale as string };
+      const [questions, total] = await Promise.all([
+        prisma.question.findMany({
+          where: localeFilter,
+          take: limit,
+          skip: offset,
+          orderBy: { createdAt: 'desc' },
+          select: {
+            id: true,
+            tradeId: true,
+            chapterId: true,
+            type: true,
+            difficulty: true,
+            question: true,
+            options: true,
+            answer: true,
+            explanation: true,
+            locale: true,
+            createdAt: true,
+          },
+        }),
+        prisma.question.count({ where: localeFilter }),
+      ]);
+      // If no results for requested locale, fall back to 'fr'
+      if (total === 0 && locale !== 'fr') {
+        where.locale = 'fr';
+      } else {
+        return res.json({ data: questions, total, limit, offset, totalPages: Math.ceil(total / limit) });
+      }
+    }
 
     const [questions, total] = await Promise.all([
       prisma.question.findMany({
