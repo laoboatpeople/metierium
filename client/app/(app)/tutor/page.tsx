@@ -23,6 +23,49 @@ interface ChatHistory {
 
 const STORAGE_KEY = 'tutorChatHistories';
 
+// ── Simple LaTeX + Markdown renderer for AI responses ──
+function renderAIResponse(content: string): string {
+  let html = content
+    // Bold markers
+    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+    // Horizontal rules
+    .replace(/^---+/gm, '<hr class="border-[#2D3A52] my-2" />')
+    // Lines starting with - as list items
+    .replace(/^- (.+)$/gm, '<li class="ml-4 text-[#94A3B8]">$1</li>');
+
+  // Display math \[ ... \]
+  html = html.replace(/\\\[([\s\S]*?)\\\]/g, (_m, math: string) => {
+    const cleaned = cleanLatex(math);
+    return `<pre class="bg-[#1A2332] border border-[#2D3A52] p-3 rounded-lg my-2 text-sm font-mono overflow-x-auto text-[#F8FAFC]">${cleaned}</pre>`;
+  });
+
+  // Inline math \( ... \)
+  html = html.replace(/\\\(([\s\S]*?)\\\)/g, (_m, math: string) => {
+    const cleaned = cleanLatex(math);
+    return `<code class="bg-[#1A2332] px-1.5 py-0.5 rounded text-xs font-mono text-[#E2E8F0]">${cleaned}</code>`;
+  });
+
+  return html;
+}
+
+function cleanLatex(math: string): string {
+  return math
+    .replace(/\\text\{([^}]*)\}/g, '$1')
+    .replace(/\\frac\{([^}]*)\}\{([^}]*)\}/g, '($1) / ($2)')
+    .replace(/\\dfrac\{([^}]*)\}\{([^}]*)\}/g, '($1) / ($2)')
+    .replace(/\\times/g, '×')
+    .replace(/\\,/g, ' ')
+    .replace(/\\%/g, '%')
+    .replace(/\\displaystyle/g, '')
+    .replace(/\\left/g, '')
+    .replace(/\\right/g, '')
+    .replace(/\\(?:mathrm|mathbf|mathit)\{([^}]*)\}/g, '$1')
+    .replace(/\\\{/g, '{')
+    .replace(/\\\}/g, '}')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 const SUGGESTED_FR = [
   "Explique-moi la loi d'Ohm simplement",
   "Quels sont les types de câbles résidentiels au Québec ?",
@@ -391,7 +434,7 @@ export default function TutorPage() {
                     <Bot size={14} className="text-[#8B5CF6]" />
                   </div>
                   <div className="bg-[#0D1117] border border-[#2D3A52] rounded-xl px-4 py-2.5 text-sm leading-relaxed text-[#F8FAFC]">
-                    <div className="whitespace-pre-wrap">{msg.content}</div>
+                    <div dangerouslySetInnerHTML={{ __html: renderAIResponse(msg.content) }} />
                   </div>
                 </div>
               )}
