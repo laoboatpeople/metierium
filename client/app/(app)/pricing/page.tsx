@@ -117,8 +117,7 @@ export default function PricingPage() {
           const plan = data.plan || data.subscription?.plan || 'FREE';
           const map: Record<string, string> = {
             'FREE': 'free',
-            'ESSENTIAL': 'essential',
-            'PRO': 'pro',
+            'MONTHLY': 'essential',
             'LIFETIME': 'lifetime',
           };
           setCurrentPlan(map[plan] || null);
