@@ -95,7 +95,9 @@ export default function PricingPage() {
   const [subscribing, setSubscribing] = useState<string | null>(null);
   const [error, setError] = useState('');
   const [currentPlan, setCurrentPlan] = useState<string | null>(null);
+  const [portalLoading, setPortalLoading] = useState(false);
 
+  // Fetch trades + current plan
   useEffect(() => {
     // Fetch trades
     fetch('/api/trades')
@@ -187,6 +189,25 @@ export default function PricingPage() {
     if (pendingPlan && selectedTrade) {
       handleSubscribe(pendingPlan, selectedTrade.id);
       setPendingPlan(null);
+    }
+  }
+
+  async function handleManageSubscription() {
+    setPortalLoading(true);
+    try {
+      const token = localStorage.getItem('token');
+      const res = await fetch('/api/stripe/create-portal-session', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      if (!res.ok) throw new Error('Failed to open billing portal');
+      const data = await res.json();
+      window.location.href = data.url;
+    } catch {
+      setPortalLoading(false);
     }
   }
 
@@ -289,6 +310,23 @@ export default function PricingPage() {
             </div>
           ))}
         </div>
+
+        {/* Manage / Cancel subscription */}
+        {currentPlan && currentPlan !== 'free' && (
+          <div className="text-center mt-6">
+            <button
+              onClick={handleManageSubscription}
+              disabled={portalLoading}
+              className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1A2035] border border-[#2D3A52] rounded-xl text-sm text-[#94A3B8] hover:border-[#EF4444]/40 hover:text-[#EF4444] transition-all disabled:opacity-50"
+            >
+              {portalLoading ? (
+                <><Loader2 size={14} className="animate-spin" /> Loading...</>
+              ) : (
+                <>Gérer l'abonnement / Annuler</>
+              )}
+            </button>
+          </div>
+        )}
 
         <p className="text-center text-sm text-[#64748B] mt-12">
           {t('pricingPageCancelAnytime')}
