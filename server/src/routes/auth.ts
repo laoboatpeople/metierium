@@ -167,9 +167,9 @@ router.get('/me', authenticate, async (req: Request, res: Response): Promise<voi
         }
         return user.plan;
       })(),
-      subStatus: user.subStatus,
+      subStatus: user.plan === 'FREE' ? null : user.subStatus,
       createdAt: user.createdAt,
-      subscription: user.subscription[0] ?? null,
+      subscription: user.plan === 'FREE' ? null : (user.subscription[0] ?? null),
     });
   } catch (err) {
     console.error('[Auth] Me error:', err);

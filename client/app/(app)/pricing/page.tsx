@@ -388,8 +388,8 @@ export default function PricingPage() {
                       {selectedTrade?.id === trade.id && <div className="w-2 h-2 rounded-full bg-[#3B82F6]" />}
                     </div>
                     <div>
-                      <div className="text-sm font-medium">{trade.nameFr}</div>
-                      <div className="text-[11px] text-[#64748B]">{trade.name} ({trade.code})</div>
+                      <div className="text-sm font-medium">{locale === 'fr' ? trade.nameFr : trade.name}</div>
+                      <div className="text-[11px] text-[#64748B]">{locale === 'fr' ? `${trade.name} (${trade.code})` : `${trade.nameFr} (${trade.code})`}</div>
                     </div>
                   </button>
                 ))}
