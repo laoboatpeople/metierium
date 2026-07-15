@@ -160,7 +160,13 @@ router.get('/me', authenticate, async (req: Request, res: Response): Promise<voi
       email: user.email,
       name: user.name,
       role: user.role,
-      plan: user.plan,
+      plan: (() => {
+        // Pro is stored as MONTHLY but has no tradeId lock
+        if (user.plan === 'MONTHLY' && user.subscription[0] && !user.subscription[0].tradeId) {
+          return 'PRO';
+        }
+        return user.plan;
+      })(),
       subStatus: user.subStatus,
       createdAt: user.createdAt,
       subscription: user.subscription[0] ?? null,
