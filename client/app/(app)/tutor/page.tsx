@@ -367,7 +367,8 @@ export default function TutorPage() {
           )}
         </div>
 
-        {/* Back to Results */}
+        {/* Back to Results — only show when coming from exam results */}
+        {returnUrl && (
         <div className="p-3 border-t border-[#1E2D45]">
           <button
             onClick={handleGoBack}
@@ -377,6 +378,7 @@ export default function TutorPage() {
             {t('tutorBackToResults')}
           </button>
         </div>
+        )}
       </aside>
 
       {/* ── Mobile overlay backdrop ── */}
