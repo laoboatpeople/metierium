@@ -22,6 +22,32 @@ router.get('/', async (_req: Request, res: Response): Promise<void> => {
 });
 
 /**
+ * GET /api/trades/access
+ * Returns all trades with the current user's access status for each.
+ * Requires authentication. Must be defined BEFORE /:code.
+ */
+router.get('/access', authenticate, async (req: Request, res: Response): Promise<void> => {
+  try {
+    const trades = await prisma.trade.findMany({
+      orderBy: { name: 'asc' },
+    });
+
+    const access = await getUserTradeAccess(req.user!.id);
+
+    const data = trades.map(trade => ({
+      ...trade,
+      hasAccess: access.type === 'all' || (access.type === 'single' && access.tradeId === trade.id),
+      accessType: access.type,
+    }));
+
+    res.json({ data });
+  } catch (err) {
+    console.error('[Trades] Access error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
  * GET /api/trades/:code
  * Get a trade by its code (e.g., "CMEQ"), including its chapters.
  */
@@ -44,32 +70,6 @@ router.get('/:code', async (req: Request, res: Response): Promise<void> => {
     res.json(trade);
   } catch (err) {
     console.error('[Trades] Get error:', err);
-    res.status(500).json({ message: 'Internal server error' });
-  }
-});
-
-/**
- * GET /api/trades/access
- * Returns all trades with the current user's access status for each.
- * Requires authentication.
- */
-router.get('/access', authenticate, async (req: Request, res: Response): Promise<void> => {
-  try {
-    const trades = await prisma.trade.findMany({
-      orderBy: { name: 'asc' },
-    });
-
-    const access = await getUserTradeAccess(req.user!.id);
-
-    const data = trades.map(trade => ({
-      ...trade,
-      hasAccess: access.type === 'all' || (access.type === 'single' && access.tradeId === trade.id),
-      accessType: access.type,
-    }));
-
-    res.json({ data });
-  } catch (err) {
-    console.error('[Trades] Access error:', err);
     res.status(500).json({ message: 'Internal server error' });
   }
 });

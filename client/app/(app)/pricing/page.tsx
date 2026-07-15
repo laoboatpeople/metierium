@@ -96,7 +96,7 @@ export default function PricingPage() {
   const [error, setError] = useState('');
   const [currentPlan, setCurrentPlan] = useState<string | null>(null);
   const [subStatus, setSubStatus] = useState<string | null>(null);
-  const [subscriptionEndDate, setSubscriptionEndDate] = useState<string | null>(null);
+  const [subscriptionEndDate, setSubscriptionEndDate] = useState<number | null>(null);
   const [portalLoading, setPortalLoading] = useState(false);
 
   // Fetch trades + current plan
@@ -127,10 +127,8 @@ export default function PricingPage() {
           setCurrentPlan(map[plan] || null);
           setSubStatus(data.subStatus || data.subscription?.status || null);
           if (data.subscription?.currentPeriod) {
-            const d = new Date(data.subscription.currentPeriod);
-            setSubscriptionEndDate(d.toLocaleDateString(locale === 'fr' ? 'fr-CA' : 'en-CA', {
-              year: 'numeric', month: 'long', day: 'numeric',
-            }));
+            const d = new Date(data.subscription.currentPeriod).getTime();
+            setSubscriptionEndDate(d);
           }
         })
         .catch(() => {});
@@ -343,7 +341,7 @@ export default function PricingPage() {
             <div className="inline-block px-6 py-4 bg-[#1A2035] border border-[#F59E0B]/30 rounded-xl">
               <p className="text-[#F59E0B] text-sm font-medium">
                 {t('pricingPageCancelledNotice')}{' '}
-                <span className="font-bold">{subscriptionEndDate}</span>
+                <span className="font-bold">{new Date(subscriptionEndDate).toLocaleDateString(locale === 'fr' ? 'fr-CA' : 'en-CA', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
               </p>
               <p className="text-[#64748B] text-xs mt-1">
                 {t('pricingPageCancelledDesc')}
