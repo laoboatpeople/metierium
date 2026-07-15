@@ -409,7 +409,7 @@ function ExamsPage() {
         score,
         timeSpent: examTime,
         chapterResults: chapterBreakdown.map((cb) => ({
-          chapterNumber: parseInt(cb.chapterId, 10) || 0,
+          chapterNumber: (cb.chapterId ? parseInt(cb.chapterId.split('_').pop() || '0', 10) : 0),
           chapterName: cb.chapterName,
           correct: cb.correct,
           total: cb.total,

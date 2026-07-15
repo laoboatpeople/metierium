@@ -76,26 +76,32 @@ export function getTradeStats(tradeId: string) {
   const tradeName = history[0]?.tradeName || '';
   const firstTradeId = history[0]?.tradeId || '';
 
-  // Aggregate chapter performance
-  const chapterMap = new Map<number, { name: string; correct: number; total: number }>();
-  const chapterIdMap = new Map<number, string>();
+  // Aggregate chapter performance — keyed by chapterId for accuracy
+  const chapterMap = new Map<string, { chapterNumber: number; name: string; correct: number; total: number }>();
+  const chapterIdMap = new Map<string, string>();
   for (const record of history) {
     for (const cr of record.chapterResults) {
-      const existing = chapterMap.get(cr.chapterNumber) || { name: cr.chapterName, correct: 0, total: 0 };
+      const key = cr.chapterId || `ch_${cr.chapterNumber}`;
+      const existing = chapterMap.get(key) || {
+        chapterNumber: cr.chapterNumber,
+        name: cr.chapterName,
+        correct: 0,
+        total: 0,
+      };
       existing.correct += cr.correct;
       existing.total += cr.total;
-      chapterMap.set(cr.chapterNumber, existing);
-      if (cr.chapterId && !chapterIdMap.has(cr.chapterNumber)) {
-        chapterIdMap.set(cr.chapterNumber, cr.chapterId);
+      chapterMap.set(key, existing);
+      if (cr.chapterId && !chapterIdMap.has(key)) {
+        chapterIdMap.set(key, cr.chapterId);
       }
     }
   }
 
   const chapterPerformance = Array.from(chapterMap.entries())
-    .map(([num, data]) => ({
-      chapterNumber: num,
+    .map(([key, data]) => ({
+      chapterNumber: data.chapterNumber,
+      chapterId: chapterIdMap.get(key) || key,
       chapterName: data.name,
-      correct: data.correct,
       total: data.total,
       percentage: data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0,
       tradeName,
