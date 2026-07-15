@@ -102,11 +102,11 @@ export function getTradeStats(tradeId: string) {
       chapterNumber: data.chapterNumber,
       chapterId: chapterIdMap.get(key) || key,
       chapterName: data.name,
+      correct: data.correct,
       total: data.total,
       percentage: data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0,
       tradeName,
       tradeId: firstTradeId,
-      chapterId: chapterIdMap.get(num) || '',
     }))
     .sort((a, b) => a.chapterNumber - b.chapterNumber);
 
