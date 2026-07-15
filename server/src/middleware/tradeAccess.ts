@@ -53,10 +53,19 @@ export async function getUserTradeAccess(userId: string): Promise<{
   const activeSub = await prisma.subscription.findFirst({
     where: {
       userId,
-      status: 'ACTIVE',
+      status: { in: ['ACTIVE', 'CANCELLED'] },
+      ...(false ? {} : {}), // placeholder for future filter
     },
     orderBy: { createdAt: 'desc' },
   });
+
+  // For CANCELLED subscriptions, only grant access if within the billing period
+  if (activeSub && activeSub.status === 'CANCELLED' && activeSub.currentPeriod) {
+    if (new Date(activeSub.currentPeriod) < new Date()) {
+      // Period expired — treat as free
+      return { type: 'free' };
+    }
+  }
 
   if (!activeSub) {
     return { type: 'free' };

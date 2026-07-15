@@ -23,8 +23,11 @@ router.get('/', authenticate, async (req: Request, res: Response): Promise<void>
     }
 
     const lang = (locale as string) || 'fr';
-    const user = (req as any).user;
-    const isFree = !user || user.plan === 'FREE';
+    const dbUser = await prisma.user.findUnique({
+      where: { id: req.user!.id },
+      select: { plan: true, subStatus: true },
+    });
+    const isFree = !dbUser || dbUser.plan === 'FREE';
 
     const chapters = await prisma.chapter.findMany({
       where: {
@@ -55,7 +58,7 @@ router.get('/', authenticate, async (req: Request, res: Response): Promise<void>
       hasTheory: !!(lang === 'en' ? (ch.theoryContentEn || ch.theoryContent) : ch.theoryContent),
     }));
 
-    res.json({ data: mapped, plan: user?.plan || 'FREE' });
+    res.json({ data: mapped, plan: dbUser?.plan || 'FREE' });
   } catch (err) {
     console.error('[Theory] List error:', err);
     res.status(500).json({ message: 'Internal server error' });

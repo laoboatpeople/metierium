@@ -155,17 +155,23 @@ function ExamsPage() {
         const token = localStorage.getItem('token');
         const headers: Record<string, string> = {};
         if (token) headers['Authorization'] = `Bearer ${token}`;
-        const res = await fetch(`${API_BASE}/api/trades`, { headers });
+        const res = await fetch(`${API_BASE}/api/trades/access`, { headers });
         if (res.ok) {
           const data = await res.json();
           const list = Array.isArray(data) ? data : data.data ?? [];
-          const tradeList = list.map((t: any) => ({
-            id: t.id,
-            code: t.code,
-            name: t.name,
-            nameFr: t.nameFr || t.name,
-          }));
+          const tradeList = list
+            .filter((t: any) => t.hasAccess)
+            .map((t: any) => ({
+              id: t.id,
+              code: t.code,
+              name: t.name,
+              nameFr: t.nameFr || t.name,
+            }));
           setTrades(tradeList);
+          // Auto-select first available trade
+          if (tradeList.length > 0 && !selectedTrade) {
+            setSelectedTrade(tradeList[0].id);
+          }
         }
       } catch { /* ignore */ }
       setLoading(false);

@@ -143,7 +143,7 @@ router.get('/me', authenticate, async (req: Request, res: Response): Promise<voi
       where: { id: req.user!.id },
       include: {
         subscription: {
-          where: { status: 'ACTIVE' },
+          where: { status: { in: ['ACTIVE', 'CANCELLED'] } },
           orderBy: { createdAt: 'desc' },
           take: 1,
         },

@@ -12,7 +12,7 @@ interface Trade {
 }
 
 export default function PricingPage() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const plans = [
     {
       id: 'free',
@@ -128,7 +128,7 @@ export default function PricingPage() {
           setSubStatus(data.subStatus || data.subscription?.status || null);
           if (data.subscription?.currentPeriod) {
             const d = new Date(data.subscription.currentPeriod);
-            setSubscriptionEndDate(d.toLocaleDateString('fr-CA', {
+            setSubscriptionEndDate(d.toLocaleDateString(locale === 'fr' ? 'fr-CA' : 'en-CA', {
               year: 'numeric', month: 'long', day: 'numeric',
             }));
           }
@@ -329,9 +329,9 @@ export default function PricingPage() {
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#1A2035] border border-[#2D3A52] rounded-xl text-sm text-[#94A3B8] hover:border-[#EF4444]/40 hover:text-[#EF4444] transition-all disabled:opacity-50"
             >
               {portalLoading ? (
-                <><Loader2 size={14} className="animate-spin" /> Loading...</>
+                <><Loader2 size={14} className="animate-spin" /> {t('pricingPageLoading')}</>
               ) : (
-                <>Gérer l'abonnement / Annuler</>
+                <>{t('pricingPageManageOrCancel')}</>
               )}
             </button>
           </div>
@@ -342,11 +342,11 @@ export default function PricingPage() {
           <div className="text-center mt-8">
             <div className="inline-block px-6 py-4 bg-[#1A2035] border border-[#F59E0B]/30 rounded-xl">
               <p className="text-[#F59E0B] text-sm font-medium">
-                ⏳ Abonnement annulé — service actif jusqu'au{' '}
+                {t('pricingPageCancelledNotice')}{' '}
                 <span className="font-bold">{subscriptionEndDate}</span>
               </p>
               <p className="text-[#64748B] text-xs mt-1">
-                Tu auras encore accès à toutes les fonctionnalités jusqu'à cette date.
+                {t('pricingPageCancelledDesc')}
               </p>
             </div>
           </div>
