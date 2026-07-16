@@ -193,24 +193,40 @@ function SkeletonPage() {
 
 function ChapterSection({ chapter, color, preselected }: { chapter: TheoryChapter; color: SectionColor; preselected?: boolean }) {
   const [expanded, setExpanded] = useState(preselected || false);
-  const sectionRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLButtonElement>(null);
   const colors = SECTION_STYLES[color];
   const { t } = useLocale();
   const router = useRouter();
 
   useEffect(() => {
-    if (preselected && sectionRef.current) {
+    if (preselected && headerRef.current) {
       setTimeout(() => {
-        sectionRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 350);
+        const rect = headerRef.current!.getBoundingClientRect();
+        const navbarH = 64; // fixed navbar height
+        window.scrollTo({ top: window.scrollY + rect.top - navbarH, behavior: 'smooth' });
+      }, 600);
     }
   }, [preselected]);
+
+  // Save expanded chapter to localStorage so we remember it on page return
+  useEffect(() => {
+    if (expanded) {
+      try { localStorage.setItem('lastTheoryChapter', chapter.id); } catch {}
+    } else {
+      // Clear saved chapter when user closes it
+      try {
+        const saved = localStorage.getItem('lastTheoryChapter');
+        if (saved === chapter.id) localStorage.removeItem('lastTheoryChapter');
+      } catch {}
+    }
+  }, [expanded, chapter.id]);
 
   if (chapter.questionCount === 0 && !chapter.hasTheory) return null;
 
   return (
-    <div ref={sectionRef} className="bg-card border border-border rounded-card overflow-hidden">
+    <div className="bg-card border border-border rounded-card overflow-hidden">
       <button
+        ref={headerRef}
         onClick={() => setExpanded(!expanded)}
         className="w-full text-left px-4 py-3.5 flex items-center gap-3 hover:bg-hover/50 transition-colors"
       >
@@ -393,11 +409,19 @@ export default function TheoryPage() {
   const [error, setError] = useState<string | null>(null);
   const [preselectedChapterId, setPreselectedChapterId] = useState<string | null>(null);
 
-  // Read tradeId & chapterId from URL params on mount
+  // Read chapterId from URL params or localStorage (to remember last opened chapter)
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const chId = params.get('chapterId');
-    if (chId) setPreselectedChapterId(chId);
+    if (chId) {
+      setPreselectedChapterId(chId);
+    } else {
+      // Restore last opened chapter from localStorage
+      try {
+        const saved = localStorage.getItem('lastTheoryChapter');
+        if (saved) setPreselectedChapterId(saved);
+      } catch {}
+    }
   }, []);
 
   useEffect(() => {
@@ -494,9 +518,7 @@ export default function TheoryPage() {
     },
   ];
 
-  const totalQuestions = categories.reduce((sum, c) => sum + c.questionCount, 0);
   const totalChapters = categories.reduce((sum, c) => sum + c.chapterCount, 0);
-  const totalTheory = categories.reduce((sum, c) => sum + c.chapters.filter(ch => ch.hasTheory).length, 0);
 
   return (
     <div className="animate-fade-in space-y-8">
@@ -547,10 +569,6 @@ export default function TheoryPage() {
             <span>{categories.length} {t('categories')}</span>
             <span className="w-1 h-1 rounded-full bg-text-tertiary" />
             <span>{totalChapters} {t('chapters')}</span>
-            <span className="w-1 h-1 rounded-full bg-text-tertiary" />
-            <span className="font-medium text-blue">{t('theoryWithTheory', { count: totalTheory })}</span>
-            <span className="w-1 h-1 rounded-full bg-text-tertiary" />
-            <span>{totalQuestions} {t('questions')}</span>
           </div>
         )}
       </div>
