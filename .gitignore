@@ -25,3 +25,9 @@ server/count_en.js
 server/create_en_batch.py
 server/get_remaining*.js
 server/master_translate*.py
+*.py
+run_fix.sh
+insert_en.js
+check_en.js
+extract_fr.js
+get_remaining*.js
