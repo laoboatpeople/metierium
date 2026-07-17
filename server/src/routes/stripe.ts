@@ -231,12 +231,26 @@ router.post('/webhook', async (req: Request, res: Response): Promise<void> => {
             : stripeSub.status === 'past_due' ? 'PAST_DUE'
             : 'CANCELLED';
 
+          // Check Stripe subscription items to detect plan changes (upgrade Essential → Pro)
+          const items = stripeSub.items?.data || [];
+          const hasProPrice = items.some(item => item.price?.id === env.STRIPE_PRO_PRICE_ID);
+          const hasLifetimePrice = items.some(item => item.price?.id === env.STRIPE_LIFETIME_PRICE_ID);
+
+          const updateData: any = {
+            status,
+            currentPeriod: stripeSub.current_period_end
+              ? new Date(stripeSub.current_period_end * 1000)
+              : existingSub.currentPeriod,
+          };
+
+          // Pro / Lifetime → clear tradeId (unlock all trades)
+          if (hasProPrice || hasLifetimePrice) {
+            updateData.tradeId = null;
+          }
+
           await prisma.subscription.update({
             where: { id: existingSub.id },
-            data: {
-              status,
-              currentPeriod: new Date(stripeSub.current_period_end * 1000),
-            },
+            data: updateData,
           });
 
           // If user cancelled at period end, reflect it in subStatus but keep plan active until period ends
@@ -247,7 +261,7 @@ router.post('/webhook', async (req: Request, res: Response): Promise<void> => {
             });
           }
 
-          console.log(`[Stripe] Subscription ${stripeSub.id} updated to ${status}${isCancelled ? ' (cancel_at_period_end)' : ''}`);
+          console.log(`[Stripe] Subscription ${stripeSub.id} updated to ${status}${isCancelled ? ' (cancel_at_period_end)' : ''}${hasProPrice ? ' [Pro]' : hasLifetimePrice ? ' [Lifetime]' : ''}`);
         }
         break;
       }
@@ -321,13 +335,124 @@ router.post('/create-portal-session', authenticate, async (req: Request, res: Re
   try {
     const session = await stripe.billingPortal.sessions.create({
       customer: stripeCustomerId,
-      return_url: `${env.FRONTEND_URL}/profile`,
+      return_url: `${env.FRONTEND_URL}/pricing`,
     });
 
     res.json({ url: session.url });
   } catch (err: any) {
     console.error('[Stripe] create-portal-session error:', err);
     res.status(500).json({ message: 'Failed to create portal session' });
+  }
+});
+
+/**
+ * GET /api/stripe/subscription
+ * Returns the user's Stripe subscription info (cancel_at_period_end, current_period_end).
+ * Directly queries Stripe — no webhook delay.
+ */
+router.get('/subscription', authenticate, async (req: Request, res: Response): Promise<void> => {
+  if (!stripe) {
+    res.status(500).json({ message: 'Stripe not configured' });
+    return;
+  }
+
+  const user = await prisma.user.findUnique({
+    where: { id: req.user!.id },
+    include: {
+      subscription: {
+        where: { status: { in: ['ACTIVE', 'CANCELLED'] } },
+        orderBy: { createdAt: 'desc' },
+        take: 1,
+      },
+    },
+  });
+
+  if (!user || !user.subscription[0]?.stripeSubId) {
+    res.json({ active: false });
+    return;
+  }
+
+  try {
+    const stripeSub = await stripe.subscriptions.retrieve(user.subscription[0].stripeSubId);
+    res.json({
+      active: stripeSub.status === 'active' || stripeSub.status === 'trialing',
+      status: stripeSub.status,
+      cancelAtPeriodEnd: stripeSub.cancel_at_period_end,
+      currentPeriodEnd: stripeSub.current_period_end,
+    });
+  } catch (err: any) {
+    console.error('[Stripe] get subscription error:', err);
+    // Fallback to DB data
+    res.json({
+      active: user.subscription[0].status === 'ACTIVE',
+      status: user.subscription[0].status,
+      cancelAtPeriodEnd: user.subStatus === 'CANCELLED',
+      currentPeriodEnd: user.subscription[0].currentPeriod
+        ? Math.floor(user.subscription[0].currentPeriod.getTime() / 1000)
+        : null,
+    });
+  }
+});
+
+/**
+ * POST /api/stripe/cancel-subscription
+ * Cancels the user's subscription immediately and reverts to FREE plan.
+ * Shows a confirmation before execution (handled on frontend).
+ */
+router.post('/cancel-subscription', authenticate, async (req: Request, res: Response): Promise<void> => {
+  if (!stripe) {
+    res.status(500).json({ message: 'Stripe not configured' });
+    return;
+  }
+
+  const user = await prisma.user.findUnique({
+    where: { id: req.user!.id },
+    include: {
+      subscription: {
+        where: { status: { in: ['ACTIVE', 'CANCELLED'] } },
+        orderBy: { createdAt: 'desc' },
+        take: 1,
+      },
+    },
+  });
+
+  if (!user || !user.subscription[0]) {
+    res.status(400).json({ message: 'No active subscription found.' });
+    return;
+  }
+
+  const sub = user.subscription[0];
+
+  try {
+    // Cancel on Stripe side immediately
+    if (sub.stripeSubId?.startsWith('sub_')) {
+      await stripe.subscriptions.cancel(sub.stripeSubId, {
+        prorate: false,
+      });
+      console.log(`[Stripe] Subscription ${sub.stripeSubId} cancelled immediately by user ${user.id}`);
+    }
+
+    // Update DB — revoke access NOW
+    await prisma.subscription.update({
+      where: { id: sub.id },
+      data: {
+        status: 'CANCELLED',
+        currentPeriod: new Date(), // period ends now
+      },
+    });
+
+    await prisma.user.update({
+      where: { id: user.id },
+      data: {
+        plan: 'FREE',
+        subStatus: null,
+      },
+    });
+
+    res.json({ message: 'Subscription cancelled. You are now on the Free plan.' });
+  } catch (err: any) {
+    console.error('[Stripe] cancel-subscription error:', err);
+    res.status(500).json({ message: 'Failed to cancel subscription.' });
   }
 });
 

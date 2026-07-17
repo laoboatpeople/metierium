@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { useLocale } from '@/src/contexts/LocaleContext';
-import { Check, X, Sparkles, Loader2 } from 'lucide-react';
+import { Check, X, Sparkles, Loader2, AlertCircle } from 'lucide-react';
 
 interface Trade {
   id: string;
@@ -98,6 +98,8 @@ export default function PricingPage() {
   const [subStatus, setSubStatus] = useState<string | null>(null);
   const [subscriptionEndDate, setSubscriptionEndDate] = useState<number | null>(null);
   const [portalLoading, setPortalLoading] = useState(false);
+  const [showCancelModal, setShowCancelModal] = useState(false);
+  const [cancelling, setCancelling] = useState(false);
 
   // Fetch trades + current plan
   useEffect(() => {
@@ -115,7 +117,8 @@ export default function PricingPage() {
     // Fetch current user subscription
     const token = localStorage.getItem('token');
     if (token) {
-      fetch('/api/auth/me', { headers: { Authorization: `Bearer ${token}` } })
+      const headers = { Authorization: `Bearer ${token}` };
+      fetch('/api/auth/me', { headers })
         .then(r => r.json())
         .then(data => {
           const plan = data.plan || data.subscription?.plan || 'FREE';
@@ -130,6 +133,17 @@ export default function PricingPage() {
           if (data.subscription?.currentPeriod) {
             const d = new Date(data.subscription.currentPeriod).getTime();
             setSubscriptionEndDate(d);
+          }
+        })
+        .catch(() => {});
+
+      // Also check Stripe directly for cancel_at_period_end (no webhook delay)
+      fetch('/api/stripe/subscription', { headers })
+        .then(r => r.json())
+        .then(data => {
+          if (data.cancelAtPeriodEnd && data.currentPeriodEnd) {
+            setSubStatus('CANCELLED');
+            setSubscriptionEndDate(data.currentPeriodEnd * 1000);
           }
         })
         .catch(() => {});
@@ -154,7 +168,7 @@ export default function PricingPage() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`
         },
         body: JSON.stringify(body),
       });
@@ -178,7 +192,16 @@ export default function PricingPage() {
     if (!plan) return;
 
     if (plan.type === 'free') {
-      window.location.href = '/auth/register';
+      // If already on a paid plan, show cancel confirmation
+      if (currentPlan && currentPlan !== 'free') {
+        setShowCancelModal(true);
+        return;
+      }
+      // Not logged in → redirect to register
+      if (!currentPlan) {
+        window.location.href = '/auth/register';
+        return;
+      }
       return;
     }
 
@@ -208,7 +231,7 @@ export default function PricingPage() {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Authorization: `Bearer ${token}`,
+          Authorization: `Bearer ${token}`
         },
       });
       if (!res.ok) throw new Error('Failed to open billing portal');
@@ -216,6 +239,26 @@ export default function PricingPage() {
       window.location.href = data.url;
     } catch {
       setPortalLoading(false);
+    }
+  }
+
+  async function handleCancelSubscription() {
+    setCancelling(true);
+    try {
+      const token = localStorage.getItem('token');
+      const res = await fetch('/api/stripe/cancel-subscription', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`
+        },
+      });
+      if (!res.ok) throw new Error('Failed to cancel subscription');
+      setShowCancelModal(false);
+      window.location.reload();
+    } catch {
+      setCancelling(false);
+      setShowCancelModal(false);
     }
   }
 
@@ -302,7 +345,9 @@ export default function PricingPage() {
                       : plan.popular
                       ? 'bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white hover:shadow-lg hover:shadow-[#3B82F6]/20'
                       : plan.type === 'free'
-                      ? 'bg-[#3B82F6] text-white hover:bg-[#2563EB]'
+                      ? currentPlan
+                        ? 'bg-transparent border border-[#EF4444]/40 text-[#EF4444] hover:bg-[#EF4444]/10'
+                        : 'bg-[#3B82F6] text-white hover:bg-[#2563EB]'
                       : 'bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white hover:shadow-lg hover:shadow-[#3B82F6]/20'
                   } ${subscribing === plan.id ? 'opacity-70' : ''}`}
                 >
@@ -310,6 +355,8 @@ export default function PricingPage() {
                     <span>{t('pricingPageActive')}</span>
                   ) : subscribing === plan.id ? (
                     <><Loader2 size={14} className="animate-spin" /> {t('pricingPageRedirecting')}</>
+                  ) : plan.type === 'free' && currentPlan ? (
+                    <span>Rétrograder au gratuit</span>
                   ) : (
                     plan.cta
                   )}
@@ -389,7 +436,7 @@ export default function PricingPage() {
                     </div>
                     <div>
                       <div className="text-sm font-medium">{locale === 'fr' ? trade.nameFr : trade.name}</div>
-                      <div className="text-[11px] text-[#64748B]">{locale === 'fr' ? `${trade.name} (${trade.code})` : `${trade.nameFr} (${trade.code})`}</div>
+                      <div className="text-[11px] text-[#64748B]">{trade.code}</div>
                     </div>
                   </button>
                 ))}
@@ -411,6 +458,39 @@ export default function PricingPage() {
                 {subscribing === pendingPlan ? (
                   <><Loader2 size={14} className="animate-spin inline mr-1" /> {t('pricingPageRedirecting')}</>
                 ) : t('pricingPageModalConfirm')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Cancel subscription confirmation modal */}
+      {showCancelModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/70" onClick={() => { if (!cancelling) setShowCancelModal(false); }} />
+          <div className="relative bg-[#0A0E1A] border border-[#2D3A52] rounded-2xl p-6 w-full max-w-sm shadow-2xl text-center">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-[#EF4444]/10 border border-[#EF4444]/20 flex items-center justify-center">
+              <AlertCircle size={24} className="text-[#EF4444]" />
+            </div>
+            <h3 className="text-lg font-bold text-[#F8FAFC] mb-2">Passer au plan gratuit ?</h3>
+            <p className="text-sm text-[#94A3B8] mb-6">
+              Tu vas perdre immédiatement l'accès aux fonctionnalités payantes (tous les métiers, questions illimitées, tuteur IA).
+              Cette action est <span className="text-[#EF4444] font-semibold">irréversible</span>.
+            </p>
+            <div className="flex gap-3">
+              <button
+                onClick={() => setShowCancelModal(false)}
+                disabled={cancelling}
+                className="flex-1 py-2.5 rounded-xl bg-[#1A2035] text-[#94A3B8] text-sm font-medium hover:bg-[#243047] transition-colors disabled:opacity-50"
+              >
+                Annuler
+              </button>
+              <button
+                onClick={handleCancelSubscription}
+                disabled={cancelling}
+                className="flex-1 py-2.5 rounded-xl bg-gradient-to-r from-[#EF4444] to-[#DC2626] text-white text-sm font-semibold hover:shadow-lg hover:shadow-[#EF4444]/20 transition-all disabled:opacity-50 flex items-center justify-center gap-2"
+              >
+                {cancelling ? <><Loader2 size={14} className="animate-spin" /> Résiliation...</> : 'Oui, passer au gratuit'}
               </button>
             </div>
           </div>

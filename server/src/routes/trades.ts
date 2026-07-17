@@ -36,7 +36,7 @@ router.get('/access', authenticate, async (req: Request, res: Response): Promise
 
     const data = trades.map(trade => ({
       ...trade,
-      hasAccess: access.type === 'all' || (access.type === 'single' && access.tradeId === trade.id),
+      hasAccess: access.type === 'free' || access.type === 'all' || (access.type === 'single' && access.tradeId === trade.id),
       accessType: access.type,
     }));
 
