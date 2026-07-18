@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useMemo, useCallback, useRef } from 'react';
+import { useEffect, useState, useMemo, useRef, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import Script from 'next/script';
@@ -26,6 +26,7 @@ import {
   Clock,
   CheckCircle,
   Loader2,
+  Share2,
 } from 'lucide-react';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
@@ -198,6 +199,24 @@ function ChapterSection({ chapter, color, preselected }: { chapter: TheoryChapte
   const { t } = useLocale();
   const router = useRouter();
 
+  const shareChapter = useCallback((ch: TheoryChapter) => {
+    const url = `${window.location.origin}/theory?chapterId=${ch.id}`;
+    const title = `${ch.number}. ${ch.name} | Metierium`;
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      try { navigator.share({ title, url }); } catch {}
+    } else {
+      try { navigator.clipboard.writeText(url); } catch {}
+    }
+  }, []);
+
+  // Ensure expanded opens when preselected — handles edge cases where useState
+  // initial value might not pick up the prop due to timing
+  useEffect(() => {
+    if (preselected) {
+      setExpanded(true);
+    }
+  }, [preselected]);
+
   useEffect(() => {
     if (preselected && headerRef.current) {
       setTimeout(() => {
@@ -228,6 +247,8 @@ function ChapterSection({ chapter, color, preselected }: { chapter: TheoryChapte
       <button
         ref={headerRef}
         onClick={() => setExpanded(!expanded)}
+        data-chapter-id={chapter.id}
+        aria-expanded={expanded}
         className="w-full text-left px-4 py-3.5 flex items-center gap-3 hover:bg-hover/50 transition-colors"
       >
         <div className={`h-8 w-8 rounded-lg ${colors.bg} flex items-center justify-center shrink-0`}>
@@ -270,13 +291,20 @@ function ChapterSection({ chapter, color, preselected }: { chapter: TheoryChapte
           >
             <div className="border-t border-border px-5 py-5">
               <TheoryRenderer content={chapter.theoryContent} color={color} />
-              <div className="mt-4 flex items-center justify-start">
+              <div className="mt-4 flex items-center justify-start gap-2">
                 <button
                   onClick={() => router.push(`/exams?tradeId=${chapter.tradeId}&chapterId=${chapter.id}`)}
                   className="flex items-center gap-1.5 text-xs font-medium text-green hover:text-green/80 transition-colors px-3 py-1.5 rounded-lg bg-green/10 hover:bg-green/20"
                 >
                   <GraduationCap size={14} />
                   {t('testChapter')}
+                </button>
+                <button
+                  onClick={() => shareChapter(chapter)}
+                  className="flex items-center gap-1.5 text-xs font-medium text-blue hover:text-blue/80 transition-colors px-3 py-1.5 rounded-lg bg-blue/10 hover:bg-blue/20"
+                >
+                  <Share2 size={14} />
+                  {t('share')}
                 </button>
               </div>
             </div>
@@ -311,21 +339,49 @@ function ChapterSection({ chapter, color, preselected }: { chapter: TheoryChapte
 
 // ─── Category Card ────────────────────────────────────────
 
-function CategoryCard({ category, preselectedChapterId }: { category: TheoryCategory; preselectedChapterId?: string }) {
-  const [expanded, setExpanded] = useState(false);
+function CategoryCard({ category, preselectedChapterId, preselectedTradeCode }: { category: TheoryCategory; preselectedChapterId?: string; preselectedTradeCode?: string | null }) {
   const color = getSectionColor(category.code);
   const colors = SECTION_STYLES[color];
   const chaptersWithTheory = category.chapters.filter(ch => ch.hasTheory).length;
   const chaptersWithQuestions = category.chapters.filter(ch => ch.questionCount > 0).length;
   const { t } = useLocale();
-  const hasPreselected = category.chapters.some(ch => ch.id === preselectedChapterId);
+  const hasPreselected = category.chapters.some(ch => ch.id === preselectedChapterId) || category.code === preselectedTradeCode;
+  const [expanded, setExpanded] = useState(hasPreselected);
+
+  const shareCategory = useCallback((cat: TheoryCategory) => {
+    const slugMap: Record<string, string> = {
+      CMEQ:'cmeq', CMMTQ:'cmmtq', QBQ:'qbq', HVAC:'hvac',
+      MVL:'mvl', INCENDIE:'securite-incendie', FERBLAN:'ferblantier',
+      BRIQUE:'briqueteur', OPEQUIP:'operateur-equipement-lourd',
+      GAZ:'gaz', ASCEN:'ascenseurs', REFRIG:'refrigeration',
+      CONSTR:'constructeur', ENTGEN:'entrepreneur-general',
+      INSPECT:'inspecteur', SST:'coordonnateur-sst',
+    };
+    const slug = slugMap[cat.code] || cat.code.toLowerCase();
+    const url = `${window.location.origin}/theory?trade=${slug}`;
+    const title = `${cat.name} | Metierium`;
+    if (typeof navigator !== 'undefined' && navigator.share) {
+      try { navigator.share({ title, url }); } catch {}
+    } else {
+      try { navigator.clipboard.writeText(url); } catch {}
+    }
+  }, []);
 
   useEffect(() => {
-    if (hasPreselected) setExpanded(true);
+    if (hasPreselected) {
+      setExpanded(true);
+      if (preselectedTradeCode && category.code === preselectedTradeCode) {
+        setTimeout(() => {
+          document.querySelector(`[data-category-id="${category.id}"]`)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 300);
+      }
+    }
   }, [hasPreselected]);
 
   return (
-    <div className="bg-card border border-border rounded-card overflow-hidden transition-all duration-200 hover:border-blue/30">
+    <div
+      data-category-id={category.id}
+      className="bg-card border border-border rounded-card overflow-hidden transition-all duration-200 hover:border-blue/30">
       <button
         onClick={() => setExpanded(!expanded)}
         className="w-full text-left p-5 flex items-start gap-4"
@@ -339,6 +395,14 @@ function CategoryCard({ category, preselectedChapterId }: { category: TheoryCate
             <span className="text-[10px] font-mono px-1.5 py-0.5 rounded border border-border text-text-tertiary">
               {category.code}
             </span>
+            <button
+              onClick={(e) => { e.stopPropagation(); shareCategory(category); }}
+              className="flex items-center gap-1 text-xs font-medium text-blue hover:text-blue/80 transition-colors px-2 py-1 rounded-lg bg-blue/10 hover:bg-blue/20 shrink-0 ml-auto"
+              title={t('share')}
+            >
+              <Share2 size={12} />
+              <span className="hidden sm:inline">{t('share')}</span>
+            </button>
           </div>
           {category.description && (
             <p className="text-xs text-text-secondary line-clamp-1 mb-2">{category.description}</p>
@@ -356,11 +420,13 @@ function CategoryCard({ category, preselectedChapterId }: { category: TheoryCate
             )}
           </div>
         </div>
-        {expanded ? (
-          <ChevronDown size={18} className="shrink-0 text-text-tertiary mt-1" />
-        ) : (
-          <ChevronRight size={18} className="shrink-0 text-text-tertiary mt-1" />
-        )}
+        <div className="flex items-center gap-2 shrink-0 mt-1" onClick={e => e.stopPropagation()}>
+          {expanded ? (
+            <ChevronDown size={18} className="shrink-0 text-text-tertiary" />
+          ) : (
+            <ChevronRight size={18} className="shrink-0 text-text-tertiary" />
+          )}
+        </div>
       </button>
 
       <AnimatePresence>
@@ -404,26 +470,101 @@ function getSectionColor(code: string): SectionColor {
 
 export default function TheoryPage() {
   const { t, locale } = useLocale();
+  const [preselectedChapterId, setPreselectedChapterId] = useState<string | null>(null);
+  const [preselectedTradeCode, setPreselectedTradeCode] = useState<string | null>(null);
   const [categories, setCategories] = useState<TheoryCategory[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const [preselectedChapterId, setPreselectedChapterId] = useState<string | null>(null);
 
-  // Read chapterId from URL params or localStorage (to remember last opened chapter)
+  // 🔥 Read chapterId from URL in a useEffect that fires AFTER hydration.
+  // This is the ONLY reliable way to get URL params in Next.js App Router:
+  // - useState initializer is SSR'd → hydration ignores client initializer
+  // - Module-level code runs once at import time, not on navigation
+  // - useEffect fires after each render, so window.location.search is current
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const chId = params.get('chapterId');
     if (chId) {
       setPreselectedChapterId(chId);
-    } else {
-      // Restore last opened chapter from localStorage
+      // Also mirror to localStorage so the scroll/click backup can find it
+      try { localStorage.setItem('lastTheoryChapter', chId); } catch {}
+    }
+  });
+
+  // Map trade page slugs to trade codes
+  const TRADE_SLUG_TO_CODE: Record<string, string> = {
+    cmeq: 'CMEQ', cmmtq: 'CMMTQ', qbq: 'QBQ', hvac: 'HVAC',
+    mvl: 'MVL', 'securite-incendie': 'INCENDIE', ferblantier: 'FERBLAN',
+    briqueteur: 'BRIQUE', 'operateur-equipement-lourd': 'OPEQUIP',
+    gaz: 'GAZ', ascenseurs: 'ASCEN', refrigeration: 'REFRIG',
+    constructeur: 'CONSTR', 'entrepreneur-general': 'ENTGEN',
+    inspecteur: 'INSPECT', 'coordonnateur-sst': 'SST',
+  };
+
+  const DESCRIPTION_EN: Record<string, string> = {
+    CMEQ: 'Quebec Master Electricians Corporation — Certification exam preparation with full theory and practice exams.',
+    CMMTQ: 'Quebec Plumbing Code and CSA B149 standards — Complete plumbing theory and exam prep.',
+    QBQ: 'SMAW, GMAW, FCAW, GTAW welding — CSA W47.1 and W59 standards for Quebec certification.',
+    HVAC: 'Heating, ventilation, and air conditioning — Quebec HVAC certification exam preparation.',
+    MVL: 'Heavy vehicle mechanics — CCQ certification exam for trucks, buses and heavy machinery.',
+    INCENDIE: 'Fire safety systems — RBQ certification exam preparation including alarms and sprinklers.',
+    FERBLAN: 'Sheet metal work — CCQ certification with ductwork, roofing and architectural metal.',
+    BRIQUE: 'Bricklaying and masonry — CCQ certification for brick, block, stone and mortar.',
+    OPEQUIP: 'Heavy equipment operation — CCQ certification for excavators, bulldozers and graders.',
+    GAZ: 'Gas fitting — RBQ certification for natural gas and propane installation and maintenance.',
+    ASCEN: 'Elevator mechanics — RBQ certification with CSA elevator code and safety systems.',
+    REFRIG: 'Refrigeration systems — RBQ certification for commercial and industrial refrigeration.',
+    CONSTR: 'Builder-renovator — RBQ license preparation covering management, codes and safety.',
+    ENTGEN: 'General contractor — RBQ certification exam for construction business management.',
+    INSPECT: 'Building inspection — RBQ certification for building codes, structures and envelope inspection.',
+    SST: 'Safety coordination — ASP Construction certification for workplace safety management.',
+  };
+
+  // Read chapterId from URL on every render — fires after hydration
+  // and on every client-side navigation, always reading the current URL.
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const chId = params.get('chapterId');
+    const tradeSlug = params.get('trade');
+    const tradeIdRaw = params.get('tradeId');
+    if (chId) {
+      setPreselectedChapterId(chId);
+      try { localStorage.setItem('lastTheoryChapter', chId); } catch {}
+    } else if (!tradeSlug && !tradeIdRaw) {
       try {
         const saved = localStorage.getItem('lastTheoryChapter');
         if (saved) setPreselectedChapterId(saved);
       } catch {}
+    } else {
+      setPreselectedChapterId(null);
     }
-  }, []);
+    if (tradeSlug && TRADE_SLUG_TO_CODE[tradeSlug]) {
+      setPreselectedTradeCode(TRADE_SLUG_TO_CODE[tradeSlug]);
+    }
+  });
 
+  // Expand matching chapter via DOM click 500ms after data loads
+  useEffect(() => {
+    if (!preselectedChapterId || loading || categories.length === 0) return;
+    for (const cat of categories) {
+      const match = cat.chapters.find(ch => ch.id === preselectedChapterId);
+      if (match) {
+        setTimeout(() => {
+          const el = document.querySelector(`[data-chapter-id="${preselectedChapterId}"]`) as HTMLElement | null;
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Only click if not already expanded (aria-expanded check)
+            if (el.getAttribute('aria-expanded') !== 'true') {
+              el.click();
+            }
+          }
+        }, 500);
+        break;
+      }
+    }
+  }, [preselectedChapterId, loading, categories.length]);
+
+  // Set page title
   useEffect(() => {
     document.title = `${t('theory')} | Metierium`;
   }, [t]);
@@ -466,7 +607,7 @@ export default function TheoryPage() {
           id: trade.id,
           code: trade.code,
           name: locale === 'fr' ? (trade.nameFr || trade.name) : trade.name,
-          description: trade.description || null,
+          description: locale === 'fr' ? (trade.description || null) : (DESCRIPTION_EN[trade.code as keyof typeof DESCRIPTION_EN] || trade.description || null),
           country: 'CA',
           licenseType: trade.code,
           chapterCount: chapters.length,
@@ -605,7 +746,7 @@ export default function TheoryPage() {
       {!loading && categories.length > 0 && (
         <div className="space-y-6">
           {categories.map((cat) => (
-            <CategoryCard key={cat.id} category={cat} preselectedChapterId={preselectedChapterId || undefined} />
+            <CategoryCard key={cat.id} category={cat} preselectedChapterId={preselectedChapterId || undefined} preselectedTradeCode={preselectedTradeCode} />
           ))}
         </div>
       )}

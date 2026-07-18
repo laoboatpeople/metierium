@@ -168,8 +168,13 @@ function ExamsPage() {
               nameFr: t.nameFr || t.name,
             }));
           setTrades(tradeList);
-          // Auto-select first available trade
-          if (tradeList.length > 0 && !selectedTrade) {
+          // Auto-select first available trade if none pre-selected via URL, or if URL trade is not accessible
+          if (tradeList.length > 0 && !selectedTrade && !searchParams.get('tradeId')) {
+            setSelectedTrade(tradeList[0].id);
+          }
+          // If URL param tradeId is set but user doesn't have access to it, override with first accessible
+          const urlTrade = searchParams.get('tradeId');
+          if (urlTrade && tradeList.length > 0 && !tradeList.some(t => t.id === urlTrade)) {
             setSelectedTrade(tradeList[0].id);
           }
         }

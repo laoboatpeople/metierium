@@ -16,6 +16,8 @@ const fr: Record<string, unknown> = {
   questions: 'questions',
   question: 'question',
   retry: 'Réessayer',
+  share: 'Partager',
+  linkCopied: 'Lien copié !',
   tryAgain: 'Réessayer',
   somethingWentWrong: 'Une erreur est survenue',
 
@@ -782,6 +784,8 @@ const en: Record<string, string> = {
   questions: 'questions',
   question: 'question',
   retry: 'Retry',
+  share: 'Share',
+  linkCopied: 'Link copied!',
   tryAgain: 'Try Again',
   somethingWentWrong: 'Something went wrong',
 

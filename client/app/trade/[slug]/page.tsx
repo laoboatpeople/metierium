@@ -7,23 +7,23 @@ import Script from 'next/script';
 import { BookOpen, HelpCircle, ChevronRight, ArrowLeft, FileText, Zap } from 'lucide-react';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
-const TRADES: Record<string, { name: string; descKey: string; color: string; faqTrade?: string }> = {
-  cmeq: { name: 'CMEQ', descKey: 'tradePageCmeqDesc', color: '#3B82F6' },
-  cmmtq: { name: 'CMMTQ', descKey: 'tradePageCmmtqDesc', color: '#06B6D4' },
-  qbq: { name: 'QBQ', descKey: 'tradePageQbqDesc', color: '#8B5CF6' },
-  hvac: { name: 'CMMTQ', descKey: 'tradePageHvacDesc', color: '#F59E0B' },
-  mvl: { name: 'CCQ', descKey: 'tradePageMvlDesc', color: '#10B981' },
-  'securite-incendie': { name: 'RBQ', descKey: 'tradePageIncendieDesc', color: '#EF4444', faqTrade: 'INCENDIE' },
-  ferblantier: { name: 'CCQ', descKey: 'tradePageFerblantierDesc', color: '#8B5CF6', faqTrade: 'FERBLAN' },
-  briqueteur: { name: 'CCQ', descKey: 'tradePageBriqueteurDesc', color: '#F59E0B', faqTrade: 'BRIQUE' },
-  'operateur-equipement-lourd': { name: 'CCQ', descKey: 'tradePageOpEquipDesc', color: '#06B6D4', faqTrade: 'OPEQUIP' },
-  gaz: { name: 'RBQ', descKey: 'tradePageGazDesc', color: '#F59E0B' },
-  ascenseurs: { name: 'RBQ', descKey: 'tradePageAscenseursDesc', color: '#10B981', faqTrade: 'ASCEN' },
-  refrigeration: { name: 'RBQ', descKey: 'tradePageRefrigDesc', color: '#0E7490', faqTrade: 'REFRIG' },
-  constructeur: { name: 'RBQ', descKey: 'tradePageConstrDesc', color: '#7C3AED', faqTrade: 'CONSTR' },
-  'entrepreneur-general': { name: 'RBQ', descKey: 'tradePageEntgenDesc', color: '#4F46E5', faqTrade: 'ENTGEN' },
-  inspecteur: { name: 'RBQ', descKey: 'tradePageInspectDesc', color: '#0E7490', faqTrade: 'INSPECT' },
-  'coordonnateur-sst': { name: 'ASP Const.', descKey: 'tradePageSstDesc', color: '#DC2626', faqTrade: 'SST' },
+const TRADES: Record<string, { name: string; descKey: string; color: string; faqTrade?: string; tradeId: string }> = {
+  cmeq: { name: 'CMEQ', descKey: 'tradePageCmeqDesc', color: '#3B82F6', tradeId: 'cmrbe6r1d0000eap3fmyxpqfo' },
+  cmmtq: { name: 'CMMTQ', descKey: 'tradePageCmmtqDesc', color: '#06B6D4', tradeId: 'cmrbe6r1g0001eap3oqmla96n' },
+  qbq: { name: 'QBQ', descKey: 'tradePageQbqDesc', color: '#8B5CF6', tradeId: 'cmrbe6r1h0002eap3qxylo6mr' },
+  hvac: { name: 'CMMTQ', descKey: 'tradePageHvacDesc', color: '#F59E0B', tradeId: 'cmt_hvac_001' },
+  mvl: { name: 'CCQ', descKey: 'tradePageMvlDesc', color: '#10B981', tradeId: 'cmt_mvl_001' },
+  'securite-incendie': { name: 'RBQ', descKey: 'tradePageIncendieDesc', color: '#EF4444', faqTrade: 'INCENDIE', tradeId: 'cmt_incendie_001' },
+  ferblantier: { name: 'CCQ', descKey: 'tradePageFerblantierDesc', color: '#8B5CF6', faqTrade: 'FERBLAN', tradeId: 'cmt_ferblantier_001' },
+  briqueteur: { name: 'CCQ', descKey: 'tradePageBriqueteurDesc', color: '#F59E0B', faqTrade: 'BRIQUE', tradeId: 'cmt_briqueteur_001' },
+  'operateur-equipement-lourd': { name: 'CCQ', descKey: 'tradePageOpEquipDesc', color: '#06B6D4', faqTrade: 'OPEQUIP', tradeId: 'cmt_opequip_001' },
+  gaz: { name: 'RBQ', descKey: 'tradePageGazDesc', color: '#F59E0B', tradeId: 'cmt_gaz_001' },
+  ascenseurs: { name: 'RBQ', descKey: 'tradePageAscenseursDesc', color: '#10B981', faqTrade: 'ASCEN', tradeId: 'cmt_ascenseur_001' },
+  refrigeration: { name: 'RBQ', descKey: 'tradePageRefrigDesc', color: '#0E7490', faqTrade: 'REFRIG', tradeId: 'cmt_refrig_001' },
+  constructeur: { name: 'RBQ', descKey: 'tradePageConstrDesc', color: '#7C3AED', faqTrade: 'CONSTR', tradeId: 'cmt_constructeur_001' },
+  'entrepreneur-general': { name: 'RBQ', descKey: 'tradePageEntgenDesc', color: '#4F46E5', faqTrade: 'ENTGEN', tradeId: 'cmt_entrepreneur_general_001' },
+  inspecteur: { name: 'RBQ', descKey: 'tradePageInspectDesc', color: '#0E7490', faqTrade: 'INSPECT', tradeId: 'cmt_inspecteur_001' },
+  'coordonnateur-sst': { name: 'ASP Const.', descKey: 'tradePageSstDesc', color: '#DC2626', faqTrade: 'SST', tradeId: 'cmt_coordsst_001' },
 };
 
 export default function TradePillarPage() {
@@ -93,12 +93,12 @@ export default function TradePillarPage() {
             </div>
           </div>
           <div className="grid grid-cols-3 gap-3 mt-4">
-            <Link href="/exams" className="bg-[#111827] rounded-lg p-3 text-center hover:border-[#3B82F6]/30 border border-[#2D3A52]">
+            <Link href={`/exams?tradeId=${trade.tradeId}`} className="bg-[#111827] rounded-lg p-3 text-center hover:border-[#3B82F6]/30 border border-[#2D3A52]">
               <BookOpen size={18} className="mx-auto mb-1" style={{ color: trade.color }} />
               <p className="text-xs text-[#F8FAFC] font-medium">{t('exams')}</p>
               <p className="text-[10px] text-[#64748B]">{t('tradePageExamsSubtitle')}</p>
             </Link>
-            <Link href="/theory" className="bg-[#111827] rounded-lg p-3 text-center hover:border-[#3B82F6]/30 border border-[#2D3A52]">
+            <Link href={`/theory?trade=${slug}`} className="bg-[#111827] rounded-lg p-3 text-center hover:border-[#3B82F6]/30 border border-[#2D3A52]">
               <FileText size={18} className="mx-auto mb-1" style={{ color: trade.color }} />
               <p className="text-xs text-[#F8FAFC] font-medium">{t('theory')}</p>
               <p className="text-[10px] text-[#64748B]">{t('tradePageTheorySubtitle')}</p>
@@ -133,7 +133,7 @@ export default function TradePillarPage() {
         <div className="bg-gradient-to-r from-[#3B82F6]/10 to-[#06B6D4]/10 border border-[#3B82F6]/20 rounded-xl p-6 text-center mt-8">
           <h2 className="text-lg font-semibold text-[#F8FAFC] mb-2">{t('tradePageCtaTitle', { name: trade.name })}</h2>
           <p className="text-sm text-[#94A3B8] mb-4">{t('tradePageCtaDesc')}</p>
-          <Link href="/exams" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] rounded-lg text-white font-medium">
+          <Link href={`/exams?tradeId=${trade.tradeId}`} className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] rounded-lg text-white font-medium">
             {t('tradePageCtaButton')} <ArrowLeft size={14} className="rotate-180" />
           </Link>
         </div>
