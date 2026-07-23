@@ -59,6 +59,8 @@ model Chapter {
   questions     Question[]
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
+
+  @@index([tradeId])
 }
 
 model Question {
@@ -76,6 +78,10 @@ model Question {
   locale      String    @default("fr")
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
+
+  @@index([tradeId])
+  @@index([chapterId])
+  @@index([locale])
 }
 
 model User {

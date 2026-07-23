@@ -32,19 +32,19 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
   const { t } = useLocale();
 
   const ADMIN_NAV_ITEMS = [
-    { href: '/app/admin', label: 'Dashboard', icon: LayoutDashboard },
-    { href: '/app/admin/trades', label: t('adminNavTrades'), icon: Briefcase },
-    { href: '/app/admin/chapters', label: 'Chapitres', icon: BookOpen },
-    { href: '/app/admin/questions', label: 'Questions', icon: HelpCircle },
-    { href: '/app/admin/users', label: 'Utilisateurs', icon: Users },
-    { href: '/app/admin/notifications', label: 'Notifications', icon: Bell },
-    { href: '/app/admin/contact-messages', label: 'Contact', icon: MessageSquare },
-    { href: '/app/admin/settings', label: 'Settings', icon: Settings },
-    { href: '/app/admin/newsletter', label: 'Newsletter', icon: Mail },
-    { href: '/app/admin/subscriptions', label: 'Subscriptions', icon: CreditCard },
-    { href: '/app/admin/analytics', label: 'Analytics', icon: BarChart3 },
-    { href: '/app/admin/ai-generator', label: 'AI Generator', icon: Sparkles },
-    { href: '/app/admin/profile', label: 'Profile', icon: UserCircle },
+    { href: '/admin', label: 'Dashboard', icon: LayoutDashboard },
+    { href: '/admin/trades', label: t('adminNavTrades'), icon: Briefcase },
+    { href: '/admin/chapters', label: 'Chapitres', icon: BookOpen },
+    { href: '/admin/questions', label: 'Questions', icon: HelpCircle },
+    { href: '/admin/users', label: 'Utilisateurs', icon: Users },
+    { href: '/admin/notifications', label: 'Notifications', icon: Bell },
+    { href: '/admin/contact-messages', label: 'Contact', icon: MessageSquare },
+    { href: '/admin/settings', label: 'Settings', icon: Settings },
+    { href: '/admin/newsletter', label: 'Newsletter', icon: Mail },
+    { href: '/admin/subscriptions', label: 'Subscriptions', icon: CreditCard },
+    { href: '/admin/analytics', label: 'Analytics', icon: BarChart3 },
+    { href: '/admin/ai-generator', label: 'AI Generator', icon: Sparkles },
+    { href: '/admin/profile', label: 'Profile', icon: UserCircle },
   ];
 
   const [user, setUser] = useState<{ name: string; email: string; role?: string } | null>(null);
@@ -62,7 +62,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     try {
       const parsed = JSON.parse(storedUser);
       setUser(parsed);
-      if (parsed.role === 'admin') {
+      if (parsed.role?.toUpperCase() === 'ADMIN') {
         setAuthorized(true);
       } else {
         router.push('/app');

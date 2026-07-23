@@ -39,7 +39,7 @@ export default function AdminChapters() {
   async function fetchChapters() {
     try {
       const data = await authApi('/api/admin/chapters');
-      setChapters(data.chapters ?? data);
+      setChapters(data?.data ?? data?.chapters ?? []);
     } catch (err) {
       setError(err instanceof Error ? err.message : t('adminChaptersErrorLoading'));
     } finally {
@@ -50,7 +50,7 @@ export default function AdminChapters() {
   async function fetchTrades() {
     try {
       const data = await authApi('/api/admin/trades');
-      setTrades(data.trades ?? data);
+      setTrades(data?.data ?? data?.trades ?? []);
     } catch {
       // Silently fail
     }

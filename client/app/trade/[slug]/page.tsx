@@ -1,143 +1,53 @@
-'use client';
+import type { Metadata } from 'next';
+import TradePillarPage from './PageContent';
 
-import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
-import Link from 'next/link';
-import Script from 'next/script';
-import { BookOpen, HelpCircle, ChevronRight, ArrowLeft, FileText, Zap } from 'lucide-react';
-import { useLocale } from '@/src/contexts/LocaleContext';
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const tradeNames: Record<string, { name: string, nameFr: string }> = {
+    cmeq: { name: 'Electrician (CMEQ)', nameFr: 'Électricien (CMEQ)' },
+    cmmtq: { name: 'Plumber (CMMTQ)', nameFr: 'Plombier (CMMTQ)' },
+    qbq: { name: 'Welder (QBQ)', nameFr: 'Soudeur (QBQ)' },
+    hvac: { name: 'HVAC (CMMTQ)', nameFr: 'CVC (CMMTQ)' },
+    mvl: { name: 'Heavy Vehicle Mechanic (CCQ)', nameFr: 'Mécanicien véhicules lourds (CCQ)' },
+    'securite-incendie': { name: 'Fire Safety (RBQ)', nameFr: 'Sécurité incendie (RBQ)' },
+    ferblantier: { name: 'Sheet Metal Worker (CCQ)', nameFr: 'Ferblantier (CCQ)' },
+    briqueteur: { name: 'Bricklayer (CCQ)', nameFr: 'Briqueteur (CCQ)' },
+    'operateur-equipement-lourd': { name: 'Heavy Equipment Operator (CCQ)', nameFr: 'Opérateur équipement lourd (CCQ)' },
+    gaz: { name: 'Gas Technician (RBQ)', nameFr: 'Technicien gaz (RBQ)' },
+    ascenseurs: { name: 'Elevator Mechanic (RBQ)', nameFr: 'Mécanicien ascenseurs (RBQ)' },
+    refrigeration: { name: 'Refrigeration Operator (RBQ)', nameFr: 'Opérateur réfrigération (RBQ)' },
+    constructeur: { name: 'Builder-Renovator (RBQ)', nameFr: 'Constructeur-rénovateur (RBQ)' },
+    'entrepreneur-general': { name: 'General Contractor (RBQ)', nameFr: 'Entrepreneur général (RBQ)' },
+    inspecteur: { name: 'Building Inspector (RBQ)', nameFr: 'Inspecteur bâtiment (RBQ)' },
+    'coordonnateur-sst': { name: 'Safety Coordinator (ASP Const.)', nameFr: 'Coordonnateur SST (ASP Const.)' },
+  };
 
-const TRADES: Record<string, { name: string; descKey: string; color: string; faqTrade?: string; tradeId: string }> = {
-  cmeq: { name: 'CMEQ', descKey: 'tradePageCmeqDesc', color: '#3B82F6', tradeId: 'cmrbe6r1d0000eap3fmyxpqfo' },
-  cmmtq: { name: 'CMMTQ', descKey: 'tradePageCmmtqDesc', color: '#06B6D4', tradeId: 'cmrbe6r1g0001eap3oqmla96n' },
-  qbq: { name: 'QBQ', descKey: 'tradePageQbqDesc', color: '#8B5CF6', tradeId: 'cmrbe6r1h0002eap3qxylo6mr' },
-  hvac: { name: 'CMMTQ', descKey: 'tradePageHvacDesc', color: '#F59E0B', tradeId: 'cmt_hvac_001' },
-  mvl: { name: 'CCQ', descKey: 'tradePageMvlDesc', color: '#10B981', tradeId: 'cmt_mvl_001' },
-  'securite-incendie': { name: 'RBQ', descKey: 'tradePageIncendieDesc', color: '#EF4444', faqTrade: 'INCENDIE', tradeId: 'cmt_incendie_001' },
-  ferblantier: { name: 'CCQ', descKey: 'tradePageFerblantierDesc', color: '#8B5CF6', faqTrade: 'FERBLAN', tradeId: 'cmt_ferblantier_001' },
-  briqueteur: { name: 'CCQ', descKey: 'tradePageBriqueteurDesc', color: '#F59E0B', faqTrade: 'BRIQUE', tradeId: 'cmt_briqueteur_001' },
-  'operateur-equipement-lourd': { name: 'CCQ', descKey: 'tradePageOpEquipDesc', color: '#06B6D4', faqTrade: 'OPEQUIP', tradeId: 'cmt_opequip_001' },
-  gaz: { name: 'RBQ', descKey: 'tradePageGazDesc', color: '#F59E0B', tradeId: 'cmt_gaz_001' },
-  ascenseurs: { name: 'RBQ', descKey: 'tradePageAscenseursDesc', color: '#10B981', faqTrade: 'ASCEN', tradeId: 'cmt_ascenseur_001' },
-  refrigeration: { name: 'RBQ', descKey: 'tradePageRefrigDesc', color: '#0E7490', faqTrade: 'REFRIG', tradeId: 'cmt_refrig_001' },
-  constructeur: { name: 'RBQ', descKey: 'tradePageConstrDesc', color: '#7C3AED', faqTrade: 'CONSTR', tradeId: 'cmt_constructeur_001' },
-  'entrepreneur-general': { name: 'RBQ', descKey: 'tradePageEntgenDesc', color: '#4F46E5', faqTrade: 'ENTGEN', tradeId: 'cmt_entrepreneur_general_001' },
-  inspecteur: { name: 'RBQ', descKey: 'tradePageInspectDesc', color: '#0E7490', faqTrade: 'INSPECT', tradeId: 'cmt_inspecteur_001' },
-  'coordonnateur-sst': { name: 'ASP Const.', descKey: 'tradePageSstDesc', color: '#DC2626', faqTrade: 'SST', tradeId: 'cmt_coordsst_001' },
-};
+  const trade = tradeNames[slug];
 
-export default function TradePillarPage() {
-  const { t, locale } = useLocale();
-  const params = useParams();
-  const slug = params?.slug as string;
-  const tradeRaw = TRADES[slug];
-  const trade = tradeRaw ? { ...tradeRaw, desc: t(tradeRaw.descKey) } : undefined;
-  const [faqEntries, setFaqEntries] = useState<any[]>([]);
+  return {
+    title: trade ? `${trade.name} Exam Preparation | Metierium` : `Trade Exam Prep | Metierium`,
+    description: trade
+      ? `Prepare for your ${trade.name} certification exam in Quebec with complete theory, practice tests, and AI tutor.`
+      : `Prepare for your Quebec trade certification exam with Metierium.`,
+    alternates: {
+      canonical: `https://metierium.com/trade/${slug}`,
+      languages: {
+        'fr-CA': `https://metierium.com/trade/${slug}`,
+        'en-CA': `https://metierium.com/en/trade/${slug}`,
+      },
+    },
+    openGraph: {
+      title: trade ? `${trade.name} Exam Preparation | Metierium` : `Trade Exam Prep | Metierium`,
+      description: trade
+        ? `Prepare for your ${trade.name} certification exam in Quebec.`
+        : `Prepare for your Quebec trade certification exam.`,
+      locale: 'en_CA',
+      alternateLocale: ['fr_CA'],
+      siteName: 'Metierium',
+    },
+  };
+}
 
-  useEffect(() => {
-    if (slug) {
-      const currentLocale = locale || 'fr';
-      fetch('/faq-data.json')
-        .then(r => r.json())
-        .then((data: any[]) => setFaqEntries(data.filter(e => {
-          const faqTrade = e.trade?.toLowerCase();
-          const targetTrade = (trade?.faqTrade || slug).toLowerCase();
-          return faqTrade === targetTrade && (!e.locale || e.locale === currentLocale);
-        })))
-        .catch(() => {});
-    }
-  }, [slug, locale]);
-
-  if (!trade) {
-    return (
-      <div className="min-h-screen bg-[#0A0E1A] flex items-center justify-center">
-        <p className="text-[#94A3B8]">{t('tradePageNotFound')}</p>
-      </div>
-    );
-  }
-
-  const categories = [...new Set(faqEntries.map((e: any) => e.category))];
-  const faqByCat = categories.reduce((acc, cat) => {
-    acc[cat] = faqEntries.filter((e: any) => e.category === cat);
-    return acc;
-  }, {} as Record<string, any[]>);
-
-  return (
-    <div className="min-h-screen bg-[#0A0E1A]">
-      <Script id="pillar-schema" type="application/ld+json" strategy="afterInteractive">{`
-        {
-          "@context": "https://schema.org",
-          "@type": "CollectionPage",
-          "name": "${trade.name} — Metierium",
-          "description": "${t('tradePageSchemaDesc', { name: trade.name })}",
-          "about": { "@type": "Course", "name": "${t('tradePageSchemaAbout', { name: trade.name })}" }
-        }
-      `}</Script>
-
-      <div className="max-w-4xl mx-auto px-4 py-8">
-        <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
-          <Link href="/" className="hover:text-[#3B82F6]">{t('faqHome')}</Link>
-          <ChevronRight size={12} />
-          <span className="text-[#94A3B8]">{trade.name}</span>
-        </nav>
-
-        {/* Hero */}
-        <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6 md:p-8 mb-6">
-          <div className="flex items-center gap-3 mb-3">
-            <div className="w-10 h-10 rounded-xl flex items-center justify-center" style={{ backgroundColor: `${trade.color}20` }}>
-              <Zap size={20} style={{ color: trade.color }} />
-            </div>
-            <div>
-              <h1 className="text-2xl font-bold text-[#F8FAFC]">{trade.name}</h1>
-              <p className="text-sm text-[#94A3B8]">{trade.desc}</p>
-            </div>
-          </div>
-          <div className="grid grid-cols-3 gap-3 mt-4">
-            <Link href={`/exams?tradeId=${trade.tradeId}`} className="bg-[#111827] rounded-lg p-3 text-center hover:border-[#3B82F6]/30 border border-[#2D3A52]">
-              <BookOpen size={18} className="mx-auto mb-1" style={{ color: trade.color }} />
-              <p className="text-xs text-[#F8FAFC] font-medium">{t('exams')}</p>
-              <p className="text-[10px] text-[#64748B]">{t('tradePageExamsSubtitle')}</p>
-            </Link>
-            <Link href={`/theory?trade=${slug}`} className="bg-[#111827] rounded-lg p-3 text-center hover:border-[#3B82F6]/30 border border-[#2D3A52]">
-              <FileText size={18} className="mx-auto mb-1" style={{ color: trade.color }} />
-              <p className="text-xs text-[#F8FAFC] font-medium">{t('theory')}</p>
-              <p className="text-[10px] text-[#64748B]">{t('tradePageTheorySubtitle')}</p>
-            </Link>
-            <Link href={`/faq?trade=${trade.name}`} className="bg-[#111827] rounded-lg p-3 text-center hover:border-[#3B82F6]/30 border border-[#2D3A52]">
-              <HelpCircle size={18} className="mx-auto mb-1" style={{ color: trade.color }} />
-              <p className="text-xs text-[#F8FAFC] font-medium">{t('faqLabel')}</p>
-              <p className="text-[10px] text-[#64748B]">{t('tradePageFaqSubtitle', { count: faqEntries.length })}</p>
-            </Link>
-          </div>
-        </div>
-
-        {/* FAQ by category */}
-        {Object.entries(faqByCat).map(([cat, items]) => (
-          <div key={cat} className="mb-6">
-            <h2 className="text-sm font-semibold text-[#94A3B8] uppercase tracking-wider mb-3">{cat}</h2>
-            <div className="space-y-2">
-              {items.map((item: any) => (
-                <Link
-                  key={item.slug}
-                  href={`/faq/${item.slug}`}
-                  className="block bg-[#1A2035] border border-[#2D3A52] rounded-xl p-3 hover:border-[#3B82F6]/30 transition-all"
-                >
-                  <p className="text-sm text-[#F8FAFC]">{item.question}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        ))}
-
-        {/* CTA */}
-        <div className="bg-gradient-to-r from-[#3B82F6]/10 to-[#06B6D4]/10 border border-[#3B82F6]/20 rounded-xl p-6 text-center mt-8">
-          <h2 className="text-lg font-semibold text-[#F8FAFC] mb-2">{t('tradePageCtaTitle', { name: trade.name })}</h2>
-          <p className="text-sm text-[#94A3B8] mb-4">{t('tradePageCtaDesc')}</p>
-          <Link href={`/exams?tradeId=${trade.tradeId}`} className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] rounded-lg text-white font-medium">
-            {t('tradePageCtaButton')} <ArrowLeft size={14} className="rotate-180" />
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
+export default function Page() {
+  return <TradePillarPage />;
 }

@@ -40,13 +40,10 @@ router.get('/', authenticate, async (req: Request, res: Response): Promise<void>
       }
     }
 
-    const isFree = userPlan === 'FREE';
-
     const chapters = await prisma.chapter.findMany({
       where: {
         tradeId: tradeId as string,
         ...(lang === 'en' ? { theoryContentEn: { not: null } } : { theoryContent: { not: null } }),
-        ...(isFree ? { number: 1 } : {}),
       },
       orderBy: { number: 'asc' },
       select: {

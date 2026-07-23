@@ -28,7 +28,7 @@ export default function AdminUsers() {
   async function fetchUsers() {
     try {
       const data = await authApi('/api/admin/users');
-      setUsers(data.users ?? data);
+      setUsers(data?.data ?? data?.users ?? []);
     } catch (err) {
       setError(err instanceof Error ? err.message : t('adminUsersLoadError'));
     } finally {

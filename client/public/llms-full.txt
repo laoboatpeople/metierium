@@ -1,0 +1,38 @@
+# Metierium
+> Quebec trade exam preparation platform — prepare for CMEQ, CMMTQ, QBQ, RBQ, CCQ, and ASP Construction certification exams with complete theory, practice exams, AI tutor, and personalized progress tracking.
+
+## Key pages
+- https://metierium.com/ - Home — landing page with overview of all 16 trades, features, pricing, and FAQ
+- https://metierium.com/theory - Theory — browse theory content organized by trade and chapter. Each chapter includes detailed explanations and practice questions.
+- https://metierium.com/exams - Practice exams — configure and take timed practice exams. Choose your trade, chapters, question count, and difficulty level. Results include per-chapter breakdown.
+- https://metierium.com/pricing - Pricing plans — Free ($0/mo, 1 trade), Essential ($29/mo, 1 trade), Pro ($49/mo, all trades), Lifetime ($559, all trades forever)
+- https://metierium.com/tutor - AI tutor — chat with an AI assistant specialized in Quebec trade exam content. Ask questions about code calculations, theory concepts, and exam strategies.
+- https://metierium.com/faq - FAQ — searchable knowledge base with hundreds of questions and answers about Quebec trade exams, certification processes, and Metierium platform.
+- https://metierium.com/blog - Blog — articles about Quebec trade certification, exam tips, code changes, and industry news.
+- https://metierium.com/contact - Contact us — send a message to the Metierium team.
+- https://metierium.com/auth/login - Login — sign in to your account.
+- https://metierium.com/auth/register - Register — create a new account.
+- https://metierium.com/auth/forgot-password - Forgot password — reset your password.
+- https://metierium.com/app - Dashboard — personalized dashboard with exam history, stats, and progress tracking.
+- https://metierium.com/profile - Profile — view and manage your profile, subscription, and account settings.
+
+## Trades (16)
+- https://metierium.com/trade/cmeq - Electrician (CMEQ) — Quebec master electrician certification exam preparation. Covers Chapter V (Electricity) of the Quebec Construction Code, load calculations, circuits, protection, motors, and safety standards.
+- https://metierium.com/trade/cmmtq - Plumber (CMMTQ) — Quebec plumber certification exam preparation. Covers Chapter III (Plumbing), pipe installation (copper, PVC, ABS, PEX), water supply, drainage, venting, fixtures, water heating, and gas systems (CSA B149).
+- https://metierium.com/trade/qbq - Welder (QBQ) — Quebec welder certification exam preparation. Covers CSA W47.1 (steel), CSA W59 (welded construction), SMAW, GMAW, FCAW processes, and welding symbols.
+- https://metierium.com/trade/hvac - HVAC (CMMTQ) — HVAC technician certification exam preparation. Covers thermodynamics, HVAC systems, refrigeration cycles, load calculations, ventilation, and air distribution.
+- https://metierium.com/trade/mvl - Heavy Vehicle Mechanic (CCQ) — CCQ heavy vehicle mechanic exam preparation. Covers diesel engines, transmissions, hydraulics, braking systems, and electrical systems.
+- https://metierium.com/trade/securite-incendie - Fire Safety (RBQ) — RBQ fire safety technician exam preparation. Covers fire alarms, sprinklers, detection systems, signaling, and fire safety codes.
+- https://metierium.com/trade/ferblantier - Sheet Metal Worker (CCQ) — CCQ sheet metal worker exam preparation. Covers ventilation, roofing, sheet metal fabrication, ducts, and flashing.
+- https://metierium.com/trade/briqueteur - Bricklayer (CCQ) — CCQ bricklayer exam preparation. Covers brick, block, stone, mortar mixing, wall construction, and masonry codes.
+- https://metierium.com/trade/operateur-equipement-lourd - Heavy Equipment Operator (CCQ) — CCQ heavy equipment operator exam preparation. Covers excavators, bulldozers, graders, loaders, safety, and site preparation.
+- https://metierium.com/trade/gaz - Gas Technician (RBQ) — RBQ gas technician exam preparation. Covers CSA B149.1 (natural gas/propane installation), CSA B149.2 (propane storage), appliance venting, and gas safety.
+- https://metierium.com/trade/ascenseurs - Elevator Mechanic (RBQ) — RBQ elevator mechanic exam preparation. Covers CSA B44 (elevator safety code), installation, maintenance, electrical and mechanical systems.
+- https://metierium.com/trade/refrigeration - Refrigeration Operator (RBQ) — RBQ refrigeration operator exam preparation. Covers refrigerants, compressors, condensers, evaporators, safety, and environmental regulations.
+- https://metierium.com/trade/constructeur - Builder-Renovator (RBQ) — RBQ builder-renovator license exam preparation. Covers construction management, building codes, contracts, health and safety, and administrative procedures.
+- https://metierium.com/trade/entrepreneur-general - General Contractor (RBQ) — RBQ general contractor license exam preparation. Covers project management, construction codes, workplace safety, contracts, and business management.
+- https://metierium.com/trade/inspecteur - Building Inspector (RBQ) — RBQ building inspector certification exam preparation. Covers building codes, structural inspection, building envelope, fire safety, and accessibility standards.
+- https://metierium.com/trade/coordonnateur-sst - Safety Coordinator (ASP Const.) — ASP Construction safety coordinator exam preparation. Covers prevention, IRSST standards, site management, hazard identification, and OHS regulations.
+
+## Blog
+- https://metierium.com/blog - All blog posts — articles about Quebec trade certification, exam tips, code changes, Sceau Rouge (Red Seal), and industry news.

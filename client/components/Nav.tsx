@@ -23,9 +23,9 @@ export default function Nav() {
             <Link href="/#features" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navFeatures')}</Link>
             <Link href="/#trades" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navTrades')}</Link>
             <Link href="/#pricing" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navPricing')}</Link>
-            <Link href="/faq" className="text-sm text-[#94A3B8] hover:text-white transition-colors">FAQ</Link>
-            <Link href="/blog" className="text-sm text-[#94A3B8] hover:text-white transition-colors">Blog</Link>
-            <Link href="/contact" className="text-sm text-[#94A3B8] hover:text-white transition-colors">Contact</Link>
+            <Link href="/faq" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navFaq')}</Link>
+            <Link href="/blog" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navBlog')}</Link>
+            <Link href="/contact" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navContact')}</Link>
             <button
               onClick={toggleLocale}
               className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-sm text-[#94A3B8] hover:text-white hover:border-white/20 transition-all"
@@ -55,9 +55,9 @@ export default function Nav() {
               <Link href="/#features" className="block text-sm text-[#94A3B8] hover:text-white" onClick={() => setMobileMenuOpen(false)}>{t('navFeatures')}</Link>
               <Link href="/#trades" className="block text-sm text-[#94A3B8] hover:text-white" onClick={() => setMobileMenuOpen(false)}>{t('navTrades')}</Link>
               <Link href="/#pricing" className="block text-sm text-[#94A3B8] hover:text-white" onClick={() => setMobileMenuOpen(false)}>{t('navPricing')}</Link>
-              <Link href="/faq" className="block text-sm text-[#94A3B8] hover:text-white" onClick={() => setMobileMenuOpen(false)}>FAQ</Link>
-              <Link href="/blog" className="block text-sm text-[#94A3B8] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Blog</Link>
-              <Link href="/contact" className="block text-sm text-[#94A3B8] hover:text-white" onClick={() => setMobileMenuOpen(false)}>Contact</Link>
+              <Link href="/faq" className="block text-sm text-[#94A3B8] hover:text-white" onClick={() => setMobileMenuOpen(false)}>{t('navFaq')}</Link>
+              <Link href="/blog" className="block text-sm text-[#94A3B8] hover:text-white" onClick={() => setMobileMenuOpen(false)}>{t('navBlog')}</Link>
+              <Link href="/contact" className="block text-sm text-[#94A3B8] hover:text-white" onClick={() => setMobileMenuOpen(false)}>{t('navContact')}</Link>
               <Link href="/auth/login" className="block w-full text-center px-4 py-2 bg-[#3B82F6] rounded-lg text-sm font-medium" onClick={() => setMobileMenuOpen(false)}>
                 {t('navSignIn')}
               </Link>

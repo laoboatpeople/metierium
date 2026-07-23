@@ -1,5 +1,28 @@
 [
   {
+    "slug": "code-plomberie-quebec-modifications-2026-examen-cmmtq",
+    "title": "Nouveau règlement sur la plomberie au Québec : ce qui change pour l'examen CMMTQ en 2026",
+    "content": "<h2>Une mise à jour majeure du Chapitre III — Plomberie</h2><p>Depuis le 1er janvier 2026, le <strong>Chapitre III — Plomberie</strong> du Code de construction du Québec a intégré plusieurs modifications inspirées du <em>National Plumbing Code of Canada</em> 2020 (CNP-2020). Pour les apprentis qui se préparent à l'examen de la <strong>CMMTQ (Corporation des maîtres mécaniciens en tuyauterie du Québec)</strong>, ces changements ne sont pas optionnels : ils tombent directement à l'examen théorique et pratique.</p><p>Ce billet fait le point sur les modifications les plus fréquemment testées et vous donne des clés pour les maîtriser avant votre passage.</p><h2>1. Ventilation des appareils — La grande réforme</h2><p>Le changement le plus structurant concerne les <strong>systèmes de ventilation</strong>. Là où l'ancienne édition tolérait certaines dérogations empiriques, la version 2026 impose des calculs de <strong>diamètre de ventilation</strong> obligatoires selon la <strong>tableau 2.4.10.1.</strong> du Code.</p><p><strong>Ce qu'il faut retenir pour l'examen :</strong></p><ul><li>Le diamètre minimal d'une ventilation secondaire (ventilation de circuit) passe à <strong>3 po (76 mm)</strong> pour un groupe de plus de 4 toilettes, contre 2½ po auparavant.</li><li>La distance maximale entre un appareil et sa ventilation primaire est désormais calculée avec la <strong>formule L = 0,6 × D × √P</strong> où D est le diamètre nominal de l'appareil en pouces et P la perte de charge admissible en po d'eau (0,3048 po H₂O par défaut pour un réseau bien dimensionné).</li><li>Les noues de ventilation (wet venting) sont désormais autorisées explicitement sur les éviers de cuisine et les lavabos doubles jusqu'à 4 unités de branchement, à condition que la pente minimale soit de <strong>1:50 (2 %)</strong> et non plus 1:100.</li></ul><p><strong>Astuce examen CMMTQ :</strong> On vous donnera presque toujours un croquis avec trois appareils déjà raccordés — on vous demandera de dimensionner la ventilation manquante. N'oubliez pas de vérifier le tableau des <strong>distances maximales non ventilées (article 2.5.6.3.)</strong> : 1,2 m pour une toilette, 3,0 m pour un lavabo.</p><h2>2. Protection contre le refoulement — Nouvelles classes</h2><p>Le second changement majeur est la <strong>reclassification des dispositifs anti-refoulement (DAR)</strong>. L'ancienne classification — simple, double, réduit de pression — cède la place à la classification CSA B64 harmonisée avec les standards nord-américains.</p><p><strong>Les nouvelles classes (à connaître pour l'examen) :</strong></p><ul><li><strong>Classe A :</strong> Usage résidentiel intérieur (toilette, baignoire) — Le DAR doit avoir un jeu d'air d'au moins 25 mm entre la sortie de l'appareil et le niveau de débordement.</li><li><strong>Classe B :</strong> Usage commercial léger (évier de cuisine de restaurant) — Clapet anti-retour certifié CSA B64.2, vérification annuelle obligatoire.</li><li><strong>Classe C :</strong> Usage à risque modéré (lave-vaisselle commercial, bac de vidange de laveuse industrielle) — Réducteur de pression certifié CSA B64.4.</li><li><strong>Classe D :</strong> Usage à risque élevé (équipement médical, laboratoire chimique) — Double clapet certifié CSA B64.5 avec disconnecteur et alarme de défaillance.</li></ul><p>L'article <strong>2.6.2.3. du Code</strong> impose désormais que tout DAR soit <strong>accessible en tout temps</strong> — une trappe d'inspection est obligatoire. À l'examen, on vous demandera souvent de positionner cette trappe sur un plan.</p><h2>3. Pente des conduites — Harmonisation avec le CNP-2020</h2><p>La pente minimale des conduites d'évacuation passe de <strong>1:100 à 1:50</strong> pour les diamètres 3 po et moins. Pour les diamètres de 4 po et plus, la pente minimale reste à 1:100. <strong>Attention</strong> : cette distinction est une question-piège classique — l'examinateur vous donnera un diamètre de 3 po avec pente 1:100 et vous demandera si c'est conforme. La réponse est <strong>non</strong> depuis 2026.</p><p>Les tuyaux de 4 po et plus (collecteurs horizontaux d'immeuble) conservent 1:100, mais la pente <strong>maximale</strong> ne doit pas excéder 1:12 pour éviter la séparation des liquides et solides — <em>article 2.4.6.2.</em></p><h2>4. Nappes chauffantes et compteurs d'eau</h2><p>Les <strong>nappes chauffantes</strong> intégrées aux dalles de béton doivent maintenant inclure un <strong>système de vidange</strong> accessible (article 2.7.3.4.) avec purgeur d'air automatique au point le plus haut. Ce n'était qu'une recommandation RBQ ; c'est désormais une prescription réglementaire.</p><p>Côté <strong>compteur d'eau</strong>, l'article 3.2.1.1. exige un compteur individuel par unité de logement. À l'examen, on vous demandera de calculer le diamètre : Qp = Qa × K (K = 0,75 pour 2-6 logements, 0,60 pour 7-20, 0,50 pour 21+).</p><h2>Se préparer avec Certification Québec</h2><p>Chez <strong>Certification Québec</strong>, nos simulateurs d'examen CMMTQ intègrent ces nouvelles dispositions. Chaque question précise l'article du Code concerné. Les modifications 2026 sont marquées d'un badge <em>NOUVEAU</em>.</p><p>Notre banque couvre les articles 2.4 à 3.4 du Chapitre III — Plomberie avec plus de 450 questions à choix multiples et 25 mises en situation avec plans.</p><p><em>Références : Code de construction du Québec, Chapitre III — Plomberie, édition 2026 (modifications intégrant le CNP-2020) ; Loi sur le bâtiment (RLRQ, c. B-1.1) ; Règlement sur la qualification professionnelle des entrepreneurs et des constructeurs-propriétaires (RQPQPECP). Règlement de la CMMTQ — sections 18, 23 et 27.</em></p>",
+    "excerpt": "Une mise à jour majeure du Chapitre III — PlomberieDepuis le 1er janvier 2026, le Chapitre III — Plomberie du Code de construction du Québec a intégré...",
+    "date": "2026-07-20",
+    "author": "Metierium",
+    "category": "CMMTQ",
+    "readTime": "6 min",
+    "tags": [
+      "CMMTQ",
+      "examen plomberie",
+      "code construction Québec",
+      "plombier certifié",
+      "ventilation plomberie",
+      "anti-refoulement",
+      "CNP-2020",
+      "Chapitre III",
+      "certification plombier"
+    ],
+    "titleEn": "New Quebec plumbing regulations: What changes for the CMMTQ exam in 2026",
+    "excerptEn": "A major update to Chapter III — Plumbing. Since January 1, 2026, the Quebec Construction Code Chapter III — Plumbing has integrated..."
+  },
+  {
     "slug": "sceau-rouge-quebec-certification-interprovinciale",
     "title": "Le Sceau rouge au Québec : guide complet pour obtenir la certification interprovinciale",
     "content": "<h2>Qu'est-ce que le Sceau rouge ?</h2><p>Le Programme du Sceau rouge (Red Seal Program) est une norme de certification pancanadienne qui permet aux travailleurs de métiers spécialisés d'exercer leur profession dans toutes les provinces et territoires du Canada sans avoir à repasser d'examens ou à suivre une formation supplémentaire. Administré par Emploi et Développement social Canada (EDSC) en collaboration avec les organismes provinciaux de réglementation, le Sceau rouge est apposé sur le certificat de qualification d'un travailleur pour indiquer qu'il a satisfait à la norme nationale de compétence pour son métier.</p><p>Au Québec, le Sceau rouge est intégré au système de certification existant géré par la Commission de la construction du Québec (CCQ) et les ordres professionnels comme la CMEQ, la CMMTQ et Emploi-Québec (pour les soudeurs certifiés QBQ). En 2025, plus de 70 000 travailleurs québécois détenaient un certificat Sceau rouge, et ce nombre augmente d'environ 5 % par année.</p><h2>Quels métiers de la construction sont admissibles ?</h2><p>Le Programme du Sceau rouge couvre plus de 50 métiers spécialisés au Canada. Pour le secteur de la construction au Québec, les principaux métiers admissibles sont :</p><ul><li><strong>Électricien (construction)</strong> — Code 41301 (CNP). Le Sceau rouge s'obtient en complétant l'examen interprovincial en plus de l'examen CMEQ. Les électriciens certifiés Sceau rouge peuvent travailler en Ontario, en Alberta et en Colombie-Britannique sans examen supplémentaire.</li><li><strong>Plombier</strong> — Code 32101 (CNP). La certification Sceau rouge pour les plombiers est reconnue dans toutes les provinces. L'examen interprovincial en plomberie couvre 90 % du contenu du programme québécois, avec des différences mineures sur les normes de ventilation et les matériaux autorisés.</li><li><strong>Soudeur</strong> — Codes 72106 à 72109 selon le procédé. Contrairement aux électriciens et plombiers, le Sceau rouge pour les soudeurs est basé sur la norme CSA W47.1 et les exigences du Bureau de normalisation du Québec (BNQ). La reconnaissance interprovinciale est plus nuancée et dépend des normes spécifiques de chaque province.</li><li><strong>Chauffagiste (technicien en installation d'équipement de chauffage)</strong> — Code 42102 (CNP). Couvre les installations de gaz, de mazout et les systèmes géothermiques.</li><li><strong>Opérateur de pont roulant, grutier, mécanicien de chantier</strong> — d'autres métiers de la construction admissibles au Sceau rouge.</li></ul><h2>Comment obtenir le Sceau rouge au Québec ?</h2><p>Il existe trois voies principales pour obtenir le Sceau rouge au Québec :</p><h3>Voie 1 : Par la formation professionnelle (voie scolaire)</h3><p>Les diplômés d'un DEP (Diplôme d'études professionnelles) admissible, suivi d'un apprentissage complet (entre 6 000 et 8 000 heures selon le métier), ET ayant réussi l'examen de certification provincial (CMEQ, CMMTQ, etc.) peuvent se présenter à l'examen interprovincial du Sceau rouge. Condition : avoir accumulé au moins 80 % des heures d'apprentissage requises.</p><p>Au Québec, environ 35 % des candidats au Sceau rouge empruntent cette voie. L'examen interprovincial est offert deux fois par année dans les centres de la CCQ à Montréal, Québec, Saguenay, Trois-Rivières et Gatineau.</p><h3>Voie 2 : Par l'expérience (voie des travailleurs expérimentés)</h3><p>Les travailleurs qui justifient d'au moins 4 ans d'expérience à temps plein (environ 7 000 à 8 000 heures) dans le métier, sans avoir complété de formation formelle, peuvent demander une évaluation de leurs compétences. Si celle-ci est positive, ils sont admis à l'examen interprovincial sans avoir à suivre de formation complémentaire.</p><p>Cette voie représente 55 % des candidatures. Les frais d'évaluation des compétences sont de 425 $ pour la plupart des métiers, remboursables si le candidat réussit l'examen dans l'année suivant l'évaluation.</p><h3>Voie 3 : Par la mobilité interprovinciale</h3><p>Les travailleurs déjà certifiés Sceau rouge dans une autre province canadienne peuvent demander la reconnaissance de leur certification au Québec. En vertu de l'Accord de libre-échange canadien (ALEC), les provinces ne peuvent pas imposer d'exigences supplémentaires aux détenteurs du Sceau rouge, sauf pour des différences réglementaires justifiées (ex. : normes sismiques en Colombie-Britannique, conditions climatiques au Québec nécessitant des profondeurs de gel spécifiques).</p><h2>L'examen interprovincial : format et contenu</h2><p>L'examen du Sceau rouge est un examen à choix multiples informatisé, administré par l'organisme de réglementation provincial (au Québec, la CCQ coordonne la tenue des examens). Voici les caractéristiques :</p><ul><li><strong>Électricien (construction)</strong> — 130 questions, 4 heures. Pondération : 50 % installations et mise en service, 25 % analyse de circuits, 15 % entretien et réparation, 10 % sécurité. Note de passage : 70 %.</li><li><strong>Plombier</strong> — 120 questions, 4 heures. Pondération : 30 % tuyauterie et raccordement, 25 % systèmes de drainage, 20 % ventilation, 15 % appareils sanitaires, 10 % sécurité.</li><li><strong>Soudeur</strong> — 100 questions, 3 heures. Pondération : 35 % procédés de soudage, 25 % lecture de plans, 20 % métallurgie, 10 % inspection et contrôle de la qualité, 10 % sécurité.</li></ul><p>Les questions sont alignées sur le profil national de compétences (National Occupational Analysis, NOA) de chaque métier. Au Québec, le contenu de l'examen interprovincial correspond à 85-90 % du contenu de l'examen provincial (CMEQ/CMMTQ). Les 10-15 % restants couvrent des aspects spécifiques aux autres provinces, comme les méthodes de dimensionnement des canalisations de gaz en Ontario ou les normes de mise à la terre en Alberta.</p><h2>Avantages du Sceau rouge pour les travailleurs québécois</h2><h3>Mobilité professionnelle accrue</h3><p>Le principal avantage est la liberté de travailler dans n'importe quelle province canadienne sans obstacle réglementaire. Un électricien certifié Sceau rouge formé à Montréal peut travailler à Toronto, Calgary ou Vancouver sans avoir à repasser d'examens. Selon les données d'EDSC, environ 15 % des détenteurs du Sceau rouge au Québec travaillent dans une autre province à un moment de leur carrière, principalement en Alberta (secteur pétrolier) et en Ontario (secteur industriel).</p><h3>Avantage salarial</h3><p>Les travailleurs détenant le Sceau rouge bénéficient d'une prime salariale estimée entre 5 % et 12 % par rapport à leurs collègues sans certification interprovinciale. Cette prime est plus élevée dans les provinces où la main-d'œuvre qualifiée est rare, comme en Alberta et en Saskatchewan.</p><h3>Reconnaissance internationale</h3><p>Le Sceau rouge est reconnu dans le cadre de plusieurs accords de reconnaissance mutuelle (ARM) avec d'autres pays, dont les États-Unis (certains États), l'Australie, le Royaume-Uni et la Nouvelle-Zélande. Un travailleur québécois certifié Sceau rouge peut voir ses compétences reconnues à l'étranger sans avoir à repasser l'ensemble des examens locaux.</p><h2>Différences entre le Sceau rouge et les certifications québécoises</h2><p>Il est important de comprendre que le Sceau rouge ne remplace pas les certifications provinciales. Au Québec, vous devez d'abord obtenir :</p><ul><li><strong>CMEQ</strong> — Pour les maîtres électriciens et compagnons électriciens (licence obligatoire pour travailler sur les chantiers de construction au Québec)</li><li><strong>CMMTQ</strong> — Pour les maîtres plombiers (nécessaire pour signer des plans et soumissionner des contrats)</li><li><strong>QBQ (BNQ)</strong> — Pour les soudeurs certifiés (obligatoire pour souder sur les chantiers régis par la CCQ)</li></ul><p>Le Sceau rouge est une certification additionnelle qui s'ajoute à votre certification provinciale. Vous ne pouvez pas obtenir le Sceau rouge sans d'abord détenir la certification provinciale correspondante (voie 1) ou sans faire évaluer votre expérience (voie 2).</p><p>En pratique, la séquence est : certification provinciale → expérience de travail (minimum 2 000 heures après certification) → examen interprovincial du Sceau rouge → certificat Sceau rouge apposé sur votre carte de compétence.</p><h2>Frais et délais</h2><p>Les frais pour obtenir le Sceau rouge au Québec sont les suivants (2026) :</p><ul><li><strong>Frais d'inscription à l'examen interprovincial</strong> : 225 $ (payable à la CCQ)</li><li><strong>Frais d'évaluation des compétences (voie 2)</strong> : 425 $</li><li><strong>Frais de délivrance du certificat Sceau rouge</strong> : 75 $</li><li><strong>Renouvellement</strong> : Aucun frais de renouvellement (le Sceau rouge est valide à vie, contrairement à la licence CMEQ/CMMTQ qui nécessite un renouvellement annuel)</li></ul><p>Délais : de l'inscription à la réception du certificat, comptez environ 3 à 6 mois, selon la voie empruntée et les dates d'examen.</p><h2>Conclusion</h2><p>Le Sceau rouge est un atout considérable pour tout travailleur de métier au Québec. Il ouvre des portes à travers le Canada et au-delà, tout en offrant une reconnaissance officielle de vos compétences selon une norme nationale. Pour les électriciens CMEQ, les plombiers CMMTQ et les soudeurs QBQ qui envisagent une carrière avec mobilité et flexibilité, l'obtention du Sceau rouge est un investissement qui se rentabilise rapidement, avec une prime salariale moyenne de 8 % et des opportunités professionnelles dans l'ensemble du pays. Les sessions d'examen interprovincial sont offertes à la fin de l'automne et au printemps — vérifiez les dates auprès de la CCQ dès maintenant pour planifier votre passage.</p>",
@@ -8,7 +31,18 @@
     "author": "Metierium",
     "category": "Général",
     "readTime": "9 min",
-    "tags": ["Sceau rouge", "Red Seal", "certification interprovinciale", "examen interprovincial", "mobilité main-d'œuvre Québec", "compagnon électricien", "plombier certifié", "soudeur QBQ"]
+    "tags": [
+      "Sceau rouge",
+      "Red Seal",
+      "certification interprovinciale",
+      "examen interprovincial",
+      "mobilité main-d'œuvre Québec",
+      "compagnon électricien",
+      "plombier certifié",
+      "soudeur QBQ"
+    ],
+    "titleEn": "Red Seal in Quebec: Complete guide to interprovincial certification",
+    "excerptEn": "Complete guide to the Red Seal Program in Quebec: how CMEQ electricians, CMMTQ plumbers and QBQ welders can obtain interprovincial certification to work anywhere in Canada."
   },
   {
     "slug": "10-conseils-reussir-examen-cmeq-premier-coup",
@@ -19,7 +53,15 @@
     "author": "Metierium",
     "category": "CMEQ",
     "readTime": "8 min",
-    "tags": ["CMEQ", "examen électricien", "conseils étude", "Code de construction Québec", "licence électricien"]
+    "tags": [
+      "CMEQ",
+      "examen électricien",
+      "conseils étude",
+      "Code de construction Québec",
+      "licence électricien"
+    ],
+    "titleEn": "10 tips to pass the CMEQ exam on your first try",
+    "excerptEn": "Maximize your chances of passing the CMEQ exam on your first try with these 10 practical tips: mastering the Construction Code, load calculations, time management and proven study strategies."
   },
   {
     "slug": "nouvelles-modifications-code-construction-quebec-2026",
@@ -30,7 +72,15 @@
     "author": "Metierium",
     "category": "CMEQ",
     "readTime": "7 min",
-    "tags": ["Code de construction Québec 2026", "DDFT", "DFARC", "modifications électriques", "borne recharge véhicule électrique"]
+    "tags": [
+      "Code de construction Québec 2026",
+      "DDFT",
+      "DFARC",
+      "modifications électriques",
+      "borne recharge véhicule électrique"
+    ],
+    "titleEn": "New Quebec Construction Code amendments 2026",
+    "excerptEn": "Discover the main changes to the Quebec Construction Code 2026: new GFCI/AFCI requirements, EV charging stations, solar panels and detailed transition period."
   },
   {
     "slug": "guide-complet-devenir-plombier-certifie-quebec-2026",
@@ -41,7 +91,15 @@
     "author": "Metierium",
     "category": "CMMTQ",
     "readTime": "9 min",
-    "tags": ["plombier Québec", "CMMTQ", "DEP plomberie", "apprentissage plomberie", "certification plomberie"]
+    "tags": [
+      "plombier Québec",
+      "CMMTQ",
+      "DEP plomberie",
+      "apprentissage plomberie",
+      "certification plomberie"
+    ],
+    "titleEn": "Complete guide: Becoming a certified plumber in Quebec in 2026",
+    "excerptEn": "Step-by-step guide to becoming a certified plumber in Quebec in 2026: Plumbing DEP, 8,000-hour apprenticeship, CMMTQ exam, license and salary outlook."
   },
   {
     "slug": "examen-qbq-soudeur-tout-savoir",
@@ -52,7 +110,15 @@
     "author": "Metierium",
     "category": "QBQ",
     "readTime": "8 min",
-    "tags": ["QBQ", "soudeur Québec", "CSA W47.1", "examen soudage", "certification soudure"]
+    "tags": [
+      "QBQ",
+      "soudeur Québec",
+      "CSA W47.1",
+      "examen soudage",
+      "certification soudure"
+    ],
+    "titleEn": "QBQ welder exam: Everything you need to know",
+    "excerptEn": "Complete guide to the QBQ exam for welders in Quebec: CSA W47.1 standard, electrode types, welding positions, evaluation criteria and practical tips to succeed."
   },
   {
     "slug": "cmeq-vs-ccq-difference",
@@ -63,7 +129,15 @@
     "author": "Metierium",
     "category": "Général",
     "readTime": "6 min",
-    "tags": ["CMEQ", "CCQ", "différence CMEQ CCQ", "électricien Québec", "certification Québec"]
+    "tags": [
+      "CMEQ",
+      "CCQ",
+      "différence CMEQ CCQ",
+      "électricien Québec",
+      "certification Québec"
+    ],
+    "titleEn": "CMEQ vs CCQ: What's the difference?",
+    "excerptEn": "Understand the difference between CMEQ and CCQ: their roles, responsibilities and areas of intervention in the certification and management of electricians in Quebec."
   },
   {
     "slug": "combien-gagne-electricien-quebec-2026",
@@ -74,7 +148,15 @@
     "author": "Metierium",
     "category": "Général",
     "readTime": "7 min",
-    "tags": ["salaire électricien Québec", "compagnon électricien", "maître électricien", "CCQ salaire", "marché du travail Québec"]
+    "tags": [
+      "salaire électricien Québec",
+      "compagnon électricien",
+      "maître électricien",
+      "CCQ salaire",
+      "marché du travail Québec"
+    ],
+    "titleEn": "How much does an electrician earn in Quebec in 2026?",
+    "excerptEn": "Complete salary overview for electricians in Quebec in 2026: wages by certification level (apprentice, journeyman, master), by region, benefits and career outlook."
   },
   {
     "slug": "erreurs-frequentes-examen-plomberie-cmmtq",
@@ -85,7 +167,15 @@
     "author": "Metierium",
     "category": "CMMTQ",
     "readTime": "7 min",
-    "tags": ["CMMTQ", "examen plomberie", "erreurs fréquentes", "Code de plomberie Québec", "certification plombier"]
+    "tags": [
+      "CMMTQ",
+      "examen plomberie",
+      "erreurs fréquentes",
+      "Code de plomberie Québec",
+      "certification plombier"
+    ],
+    "titleEn": "The most common mistakes on the CMMTQ plumbing exam",
+    "excerptEn": "The 7 most common mistakes on the CMMTQ plumbing exam: misinterpreting the Code, slope calculations, vent sizing and tips to avoid them."
   },
   {
     "slug": "choisir-soudage-smaw-gmaw-differences",
@@ -96,7 +186,15 @@
     "author": "Metierium",
     "category": "QBQ",
     "readTime": "8 min",
-    "tags": ["SMAW", "GMAW", "soudage Québec", "procédés de soudage", "certification QBQ"]
+    "tags": [
+      "SMAW",
+      "GMAW",
+      "soudage Québec",
+      "procédés de soudage",
+      "certification QBQ"
+    ],
+    "titleEn": "How to choose between SMAW and GMAW welding?",
+    "excerptEn": "Complete comparison guide between SMAW and GMAW welding for Quebec welders: advantages, disadvantages, ideal applications and tips for choosing the right process."
   },
   {
     "slug": "preparation-examen-metier-5-outils-indispensables",
@@ -107,7 +205,17 @@
     "author": "Metierium",
     "category": "Général",
     "readTime": "7 min",
-    "tags": ["préparation examen métier", "outils étude", "CMEQ", "CMMTQ", "QBQ", "flashcards", "simulateur examen"]
+    "tags": [
+      "préparation examen métier",
+      "outils étude",
+      "CMEQ",
+      "CMMTQ",
+      "QBQ",
+      "flashcards",
+      "simulateur examen"
+    ],
+    "titleEn": "Trade exam prep: 5 essential tools",
+    "excerptEn": "The 5 essential tools to prepare for your trade exams in Quebec: online simulators, annotated digital Code, flashcards, video tutorials and adaptive AI assistant."
   },
   {
     "slug": "tout-savoir-ddft-dfarc-quebec",
@@ -118,6 +226,15 @@
     "author": "Metierium",
     "category": "CMEQ",
     "readTime": "8 min",
-    "tags": ["DDFT", "DFARC", "disjoncteur différentiel", "Code construction Québec", "sécurité électrique", "GFCI AFCI Québec"]
+    "tags": [
+      "DDFT",
+      "DFARC",
+      "disjoncteur différentiel",
+      "Code construction Québec",
+      "sécurité électrique",
+      "GFCI AFCI Québec"
+    ],
+    "titleEn": "Everything you need to know about GFCI and AFCI in Quebec",
+    "excerptEn": "Complete guide on GFCI and AFCI in Quebec: where to install them, differences between the two devices, new 2026 Code requirements and practical installation tips."
   }
 ]

@@ -9,6 +9,25 @@ router.use(authenticate);
 router.use(requireRoles('ADMIN'));
 
 /**
+ * GET /api/admin/stats
+ * Return quick counts for the admin dashboard.
+ */
+router.get('/stats', async (_req: Request, res: Response): Promise<void> => {
+  try {
+    const [totalUsers, totalTrades, totalChapters, totalQuestions] = await Promise.all([
+      prisma.user.count(),
+      prisma.trade.count(),
+      prisma.chapter.count(),
+      prisma.question.count(),
+    ]);
+    res.json({ totalUsers, totalTrades, totalChapters, totalQuestions });
+  } catch (err) {
+    console.error('[Admin] Stats error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
  * GET /api/admin/users
  * List all users with their latest subscription.
  */

@@ -23,8 +23,21 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === 'en' || stored === 'fr') {
       setLocaleState(stored);
+    } else {
+      // Browser language detection fallback
+      try {
+        const browserLang = navigator.language || navigator.languages?.[0] || '';
+        if (browserLang.startsWith('en')) {
+          setLocaleState('en');
+        }
+      } catch {}
     }
   }, []);
+
+  // Sync <html lang> with locale
+  useEffect(() => {
+    document.documentElement.lang = locale;
+  }, [locale]);
 
   const setLocale = useCallback((newLocale: Locale) => {
     setLocaleState(newLocale);

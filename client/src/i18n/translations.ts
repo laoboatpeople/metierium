@@ -74,6 +74,7 @@ const fr: Record<string, unknown> = {
   heroPillTracking: 'Étudier partout',
   heroCta: 'Commencer',
   heroWatchDemo: 'Voir la démo',
+  heroTagline: "Maîtrisez votre examen de métier avec la théorie et la pratique expertes",
   videoFallback: 'Votre navigateur ne supporte pas la vidéo.',
 
   // Landing page - Question card
@@ -606,6 +607,12 @@ const fr: Record<string, unknown> = {
   pricingPageModalDesc: "Le plan ESSENTIEL verrouille votre choix. Vous ne pourrez pas changer par la suite.",
   pricingPageModalCancel: 'Annuler',
   pricingPageModalConfirm: 'Confirmer',
+  pricingPageDowngrade: 'Rétrograder au gratuit',
+  pricingPageCancelModalTitle: 'Passer au plan gratuit ?',
+  pricingPageCancelModalDesc: "Tu vas perdre immédiatement l'accès aux fonctionnalités payantes (tous les métiers, questions illimitées, tuteur IA). Cette action est irréversible.",
+  pricingPageCancelModalCancel: 'Annuler',
+  pricingPageCancelModalProcessing: 'Résiliation...',
+  pricingPageCancelModalConfirm: 'Oui, passer au gratuit',
   // Landing page - Pricing features (landing page)
   pricingFeatOneTrade: '1 métier au choix',
   pricingFeatTheory: 'Contenu théorique complet',
@@ -841,6 +848,7 @@ const en: Record<string, string> = {
   heroPillTracking: 'Study anywhere',
   heroCta: 'Get Started',
   heroWatchDemo: 'Watch Demo',
+  heroTagline: 'Master your trade exam with expert-crafted theory and practice',
   videoFallback: 'Your browser does not support the video.',
 
   // Landing page - Question card
@@ -1373,6 +1381,12 @@ const en: Record<string, string> = {
   pricingPageModalDesc: 'The ESSENTIEL plan locks your choice. You will not be able to change it later.',
   pricingPageModalCancel: 'Cancel',
   pricingPageModalConfirm: 'Confirm',
+  pricingPageDowngrade: 'Downgrade to free',
+  pricingPageCancelModalTitle: 'Switch to free plan?',
+  pricingPageCancelModalDesc: 'You will immediately lose access to paid features (all trades, unlimited questions, AI tutor). This action is irreversible.',
+  pricingPageCancelModalCancel: 'Cancel',
+  pricingPageCancelModalProcessing: 'Cancelling...',
+  pricingPageCancelModalConfirm: 'Yes, switch to free',
   // Landing page - Pricing features (landing page)
   pricingFeatOneTrade: '1 trade of your choice',
   pricingFeatTheory: 'Complete theoretical content',

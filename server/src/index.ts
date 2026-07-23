@@ -48,6 +48,16 @@ const globalLimiter = rateLimit({
 
 app.use(globalLimiter);
 
+// Per-route rate limiting for auth endpoints (brute-force protection)
+const authLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 20, // 20 requests per window
+  message: { message: 'Trop de tentatives. Réessayez plus tard.' },
+  standardHeaders: true,
+  legacyHeaders: false,
+});
+app.use(['/api/auth/login', '/api/auth/register', '/api/auth/forgot-password', '/api/auth/reset-password'], authLimiter);
+
 // ─── Body parsing ───────────────────────────────────────────────
 // Stripe webhook needs raw body for signature verification.
 // We store the raw body via verify callback for the webhook handler.
@@ -126,7 +136,7 @@ app.use((err: Error, _req: express.Request, res: express.Response, _next: expres
 
 const PORT = parseInt(env.PORT, 10);
 
-const server = app.listen(PORT, () => {
+const server = app.listen(PORT, '127.0.0.1', () => {
   console.log(`Metierium API running on port ${PORT}`);
   console.log(`Environment: ${env.NODE_ENV}`);
 });

@@ -30,7 +30,8 @@ interface AnalyticsData {
   totalUsers: number;
   activeSubscriptions: number;
   overallPassRate: number;
-  userGrowth: Array<{ date: string; count: number }>;
+  userGrowth: number;
+  userGrowthData: Array<{ date: string; count: number }>;
   revenueByMonth: Array<{ month: string; amount: number }>;
   questionsByDifficulty: { EASY: number; MEDIUM: number; HARD: number };
   passRateByExam: Array<{ examCode: string; passRate: number; totalAttempts: number }>;
@@ -136,7 +137,7 @@ export default function AdminAnalyticsPage() {
     {
       label: 'Total Users',
       value: data?.totalUsers ?? '—',
-      trend: data ? (data.userGrowth >= 0 ? `+${data.userGrowth}%` : `${data.userGrowth}%`) : null,
+      trend: data ? `${data.userGrowth >= 0 ? '+' : ''}${data.userGrowth}%` : null,
       up: data ? data.userGrowth >= 0 : true,
       icon: Users,
       color: 'text-[#3B82F6]',
@@ -180,7 +181,7 @@ export default function AdminAnalyticsPage() {
     month: formatMonthLabel(r.month),
   }));
 
-  const userGrowthData = (data?.userGrowth ?? []).map((g) => ({
+  const userGrowthData = (data?.userGrowthData ?? []).map((g: { date: string; count: number }) => ({
     ...g,
     date: new Date(g.date).toLocaleDateString('en', { month: 'short', day: 'numeric' }),
   }));
@@ -335,9 +336,7 @@ export default function AdminAnalyticsPage() {
                     borderRadius: 8,
                     color: '#F8FAFC',
                   }}
-                  formatter={(value: number) => [`$${value}`, 'Revenue']}
-                />
-                <Bar dataKey="amount" fill="#10B981" radius={[4, 4, 0, 0]} />
+                />\n                <Bar dataKey="amount" fill="#10B981" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           ) : (

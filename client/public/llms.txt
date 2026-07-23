@@ -1,0 +1,35 @@
+# Metierium
+> Quebec trade exam preparation platform
+
+## Key pages
+- https://metierium.com/ - Home
+- https://metierium.com/theory - Theory content
+- https://metierium.com/exams - Practice exams
+- https://metierium.com/pricing - Pricing plans
+- https://metierium.com/tutor - AI tutor
+- https://metierium.com/faq - FAQ
+- https://metierium.com/blog - Blog
+- https://metierium.com/contact - Contact us
+- https://metierium.com/auth/login - Login
+- https://metierium.com/auth/register - Register
+
+## Trades (16)
+- https://metierium.com/trade/cmeq - Electrician (CMEQ)
+- https://metierium.com/trade/cmmtq - Plumber (CMMTQ)
+- https://metierium.com/trade/qbq - Welder (QBQ)
+- https://metierium.com/trade/hvac - HVAC (CMMTQ)
+- https://metierium.com/trade/mvl - Heavy Vehicle Mechanic (CCQ)
+- https://metierium.com/trade/securite-incendie - Fire Safety (RBQ)
+- https://metierium.com/trade/ferblantier - Sheet Metal Worker (CCQ)
+- https://metierium.com/trade/briqueteur - Bricklayer (CCQ)
+- https://metierium.com/trade/operateur-equipement-lourd - Heavy Equipment Operator (CCQ)
+- https://metierium.com/trade/gaz - Gas Technician (RBQ)
+- https://metierium.com/trade/ascenseurs - Elevator Mechanic (RBQ)
+- https://metierium.com/trade/refrigeration - Refrigeration Operator (RBQ)
+- https://metierium.com/trade/constructeur - Builder-Renovator (RBQ)
+- https://metierium.com/trade/entrepreneur-general - General Contractor (RBQ)
+- https://metierium.com/trade/inspecteur - Building Inspector (RBQ)
+- https://metierium.com/trade/coordonnateur-sst - Safety Coordinator (ASP Const.)
+
+## Blog
+- https://metierium.com/blog - All blog posts

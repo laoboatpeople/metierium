@@ -124,7 +124,7 @@ router.get('/', authenticate, async (req: Request, res: Response): Promise<void>
  * GET /api/questions/:id
  * Get a single question by ID.
  */
-router.get('/:id', async (req: Request, res: Response): Promise<void> => {
+router.get('/:id', authenticate, async (req: Request, res: Response): Promise<void> => {
   try {
     const question = await prisma.question.findUnique({
       where: { id: req.params.id },

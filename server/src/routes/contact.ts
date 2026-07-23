@@ -4,10 +4,12 @@ import { authenticate } from '../middleware/auth';
 
 const router = Router();
 
+const FROM_EMAIL = 'Metierium <info@metierium.com>';
+
 /**
  * POST /api/contact
  * Public endpoint — no auth required.
- * Saves a contact form submission to the database.
+ * Sends a contact form submission via email + saves to DB.
  */
 router.post('/', async (req: Request, res: Response): Promise<void> => {
   const { name, email, message } = req.body;
@@ -24,7 +26,51 @@ router.post('/', async (req: Request, res: Response): Promise<void> => {
     return;
   }
 
+  const apiKey = process.env.RESEND_API_KEY;
+  if (!apiKey) {
+    console.error('[Contact] RESEND_API_KEY not configured');
+    res.status(500).json({ error: 'Email service not configured' });
+    return;
+  }
+
+  const text = [
+    `New contact form submission — ${name}`,
+    '',
+    '── Contact ──',
+    `Name: ${name}`,
+    `Email: ${email}`,
+    '',
+    '── Message ──',
+    message,
+  ].join('\n');
+
   try {
+    // Send notification email via Resend (to info@metierium.com - works even without DNS verification)
+    const fetchRes = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        from: FROM_EMAIL,
+        to: ['chuck.onekeo@gmail.com'],
+        reply_to: email,
+        subject: `[Metierium] Contact from ${name}`,
+        text,
+      }),
+    });
+
+    if (!fetchRes.ok) {
+      const errBody = await fetchRes.text();
+      console.error('[Contact] Resend error:', fetchRes.status, errBody);
+      res.status(500).json({ error: 'Failed to send message' });
+      return;
+    }
+
+    
+
+    // Save to database
     await prisma.contactMessage.create({
       data: {
         name: name.trim(),
@@ -37,7 +83,7 @@ router.post('/', async (req: Request, res: Response): Promise<void> => {
 
     res.json({ success: true, message: 'Votre message a été envoyé avec succès !' });
   } catch (err) {
-    console.error('[Contact] DB save error:', err);
+    console.error('[Contact] Error:', err);
     res.status(500).json({ error: 'Failed to send message. Please try again later.' });
   }
 });

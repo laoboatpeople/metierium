@@ -1,130 +1,106 @@
-'use client';
-
-import { useEffect, useState } from 'react';
-import { useParams } from 'next/navigation';
-import Link from 'next/link';
+import type { Metadata } from 'next';
 import Script from 'next/script';
-import { Calendar, Clock, ArrowLeft, ChevronRight, Loader2 } from 'lucide-react';
-import Nav from '@/components/Nav';
-import { useLocale } from '@/src/contexts/LocaleContext';
+import BlogPostPage from './PageContent';
+import blogData from '@/public/blog-data.json';
 
-interface BlogPost {
-  slug: string;
-  title: string;
-  content: string;
-  date: string;
-  author: string;
-  category: string;
-  readTime: string;
-  tags: string[];
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const posts = blogData as any[];
+  const post = posts.find((p: any) => p.slug === slug);
+  
+  if (post) {
+    return {
+      title: `${post.title} | Metierium Blog`,
+      description: post.excerpt?.replace(/<[^>]*>/g, '').slice(0, 160) || `Read about ${post.category} — Quebec trade exam certification tips and insights.`,
+      alternates: {
+        canonical: `https://metierium.com/blog/${slug}`,
+        languages: {
+          'fr-CA': `https://metierium.com/blog/${slug}`,
+          'en-CA': `https://metierium.com/en/blog/${slug}`,
+        },
+      },
+      openGraph: {
+        title: `${post.title} | Metierium Blog`,
+        description: post.excerpt?.replace(/<[^>]*>/g, '').slice(0, 160),
+        type: 'article',
+        locale: 'en_CA',
+        alternateLocale: ['fr_CA'],
+        siteName: 'Metierium',
+        publishedTime: post.date,
+        authors: [post.author],
+      },
+    };
+  }
+
+  return {
+    title: 'Blog Post | Metierium',
+    description: 'Read articles about Quebec trade certification and exam preparation.',
+    alternates: {
+      canonical: `https://metierium.com/blog/${slug}`,
+    },
+  };
 }
 
-export default function BlogPostPage() {
-  const { t } = useLocale();
-  const params = useParams();
-  const slug = params?.slug as string;
-  const [post, setPost] = useState<BlogPost | null>(null);
-  const [allPosts, setAllPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
+function formatDate(dateStr: string): string {
+  const date = new Date(dateStr + 'T00:00:00Z');
+  return date.toLocaleDateString('fr-CA', { year: 'numeric', month: 'long', day: 'numeric' });
+}
 
-  useEffect(() => {
-    fetch('/blog-data.json')
-      .then(r => r.json())
-      .then((data: BlogPost[]) => {
-        setAllPosts(data);
-        setPost(data.find(p => p.slug === slug) || null);
-      })
-      .catch(() => setPost(null))
-      .finally(() => setLoading(false));
-  }, [slug]);
+export default async function Page({ params }: { params: Promise<{ slug: string }> }) {
+  const posts = blogData as any[];
+  const { slug } = await params;
+  const post = posts.find((p: any) => p.slug === slug);
 
-  if (loading) {
+  if (post) {
+    const articleSchema = {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      '@id': `https://metierium.com/blog/${slug}#article`,
+      headline: post.title,
+      description: post.excerpt?.replace(/<[^>]*>/g, '').slice(0, 200),
+      datePublished: post.date,
+      dateModified: post.date,
+      author: {
+        '@type': 'Person',
+        name: post.author,
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'Metierium',
+        url: 'https://metierium.com',
+      },
+      image: 'https://metierium.com/og-image.png',
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': `https://metierium.com/blog/${slug}`,
+      },
+      speakable: {
+        '@type': 'SpeakableSpecification',
+        cssSelector: ['.key-takeaways', '.blog-content'],
+      },
+    };
+
+    const formattedDate = formatDate(post.date);
+
     return (
-      <div className="min-h-screen bg-[#0A0E1A] flex items-center justify-center">
-        <Loader2 size={24} className="animate-spin text-[#3B82F6]" />
-      </div>
-    );
-  }
-
-  if (!post) {
-    return (
-      <div className="min-h-screen bg-[#0A0E1A] flex items-center justify-center">
-        <p className="text-[#94A3B8]">{t('blogArticleNotFound')}</p>
-      </div>
-    );
-  }
-
-  const related = allPosts.filter(p => p.category === post.category && p.slug !== slug).slice(0, 3);
-
-  return (
-    <div className="min-h-screen bg-[#0A0E1A]">
-      <Nav />
-      <Script id="blog-article" type="application/ld+json" strategy="afterInteractive">{`
-        {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": ${JSON.stringify(post.title)},
-          "datePublished": "${post.date}",
-          "author": { "@type": "Person", "name": "${post.author}" },
-          "publisher": { "@type": "Organization", "name": "Metierium" }
-        }
-      `}</Script>
-
-      <div className="max-w-3xl mx-auto px-4 py-8">
-        <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
-          <Link href="/" className="hover:text-[#3B82F6]">{t('blogArticleHome')}</Link>
-          <ChevronRight size={12} />
-          <Link href="/blog" className="hover:text-[#3B82F6]">{t('blogArticleBlog')}</Link>
-          <ChevronRight size={12} />
-          <span className="text-[#94A3B8] truncate max-w-[200px]">{post.title}</span>
-        </nav>
-
-        <article className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6 md:p-8">
-          <div className="flex items-center gap-3 text-xs text-[#64748B] mb-3">
-            <span className="flex items-center gap-1"><Calendar size={12} /> {post.date}</span>
-            <span className="flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
-            <span className="px-1.5 py-0.5 rounded bg-[#3B82F6]/10 text-[#3B82F6]">{post.category}</span>
+      <>
+        <Script id="article-schema" type="application/ld+json" strategy="beforeInteractive">
+          {JSON.stringify(articleSchema)}
+        </Script>
+        {/* Visible datePublished for GEO */}
+        <div className="hidden md:block max-w-3xl mx-auto px-4 pt-4">
+          <div className="flex items-center gap-2 text-sm text-[#64748B]">
+            <time dateTime={post.date}>Publié le {formattedDate}</time>
+            <span className="text-[#2D3A52]">|</span>
+            <span>Par {post.author}</span>
+            <span className="text-[#2D3A52]">|</span>
+            <span>{post.readTime}</span>
           </div>
-
-          <h1 className="text-2xl font-bold text-[#F8FAFC] mb-4">{post.title}</h1>
-          <p className="text-xs text-[#64748B] mb-6">{t('blogArticleByAuthor', { author: post.author })}</p>
-
-          <div className="prose prose-sm max-w-none text-[#94A3B8] leading-relaxed"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
-
-          {post.tags.length > 0 && (
-            <div className="mt-6 pt-6 border-t border-[#2D3A52] flex flex-wrap gap-1.5">
-              {post.tags.map(tag => (
-                <span key={tag} className="text-xs px-2 py-1 rounded-md bg-[#111827] border border-[#2D3A52] text-[#64748B]">
-                  #{tag}
-                </span>
-              ))}
-            </div>
-          )}
-        </article>
-
-        {related.length > 0 && (
-          <div className="mt-8">
-            <h2 className="text-lg font-semibold text-[#F8FAFC] mb-3">{t('blogArticleRelatedTitle')}</h2>
-            <div className="grid md:grid-cols-3 gap-3">
-              {related.map(r => (
-                <Link key={r.slug} href={`/blog/${r.slug}`}
-                  className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4 hover:border-[#3B82F6]/30 transition-colors">
-                  <p className="text-xs text-[#64748B]">{r.date}</p>
-                  <p className="text-sm font-medium text-[#F8FAFC] mt-1 line-clamp-2">{r.title}</p>
-                </Link>
-              ))}
-            </div>
-          </div>
-        )}
-
-        <div className="mt-6">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-[#3B82F6] hover:text-[#06B6D4]">
-            <ArrowLeft size={14} /> {t('blogArticleBack')}
-          </Link>
         </div>
-      </div>
-    </div>
-  );
+        <BlogPostPage />
+      </>
+    );
+  }
+
+  return <BlogPostPage />;
 }
