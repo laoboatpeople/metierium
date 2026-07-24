@@ -158,17 +158,17 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
             {/* Admin link - only for admin users */}
             {user?.role === 'admin' && (
               <Link
-                href="/app/admin"
+                href="/admin"
                 onClick={() => setSidebarOpen(false)}
                 className={`flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors ${
-                  pathname.startsWith('/app/admin')
+                  pathname.startsWith('/admin')
                     ? 'bg-blue/10 text-blue'
                     : 'text-text-secondary hover:text-text-primary hover:bg-hover'
                 }`}
               >
                 <Shield size={18} />
                 <span>Admin</span>
-                {pathname.startsWith('/app/admin') && <ChevronRight size={14} className="ml-auto" />}
+                {pathname.startsWith('/admin') && <ChevronRight size={14} className="ml-auto" />}
               </Link>
             )}
           </nav>

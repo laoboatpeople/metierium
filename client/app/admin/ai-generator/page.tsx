@@ -11,7 +11,7 @@ export default function AIGeneratorRedirect() {
   const router = useRouter();
 
   useEffect(() => {
-    router.replace('/app/admin/questions');
+    router.replace('/admin/questions');
   }, [router]);
 
   return null;

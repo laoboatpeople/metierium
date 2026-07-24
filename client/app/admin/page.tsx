@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import {
   Users,
   Briefcase,
@@ -8,6 +9,7 @@ import {
   HelpCircle,
   TrendingUp,
   Loader2,
+  ArrowRight,
 } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -57,10 +59,10 @@ export default function AdminDashboard() {
   }
 
   const cards = [
-    { label: t('adminTotalUsers'), value: stats?.totalUsers ?? 0, icon: Users, color: 'from-[#3B82F6] to-[#06B6D4]' },
-    { label: t('adminTotalTrades'), value: stats?.totalTrades ?? 0, icon: Briefcase, color: 'from-[#10B981] to-[#059669]' },
-    { label: t('adminTotalChapters'), value: stats?.totalChapters ?? 0, icon: BookOpen, color: 'from-[#8B5CF6] to-[#7C3AED]' },
-    { label: t('adminTotalQuestions'), value: stats?.totalQuestions ?? 0, icon: HelpCircle, color: 'from-[#F59E0B] to-[#D97706]' },
+    { label: t('adminTotalUsers'), value: stats?.totalUsers ?? 0, icon: Users, color: 'from-[#3B82F6] to-[#06B6D4]', href: '/admin/users' },
+    { label: t('adminTotalTrades'), value: stats?.totalTrades ?? 0, icon: Briefcase, color: 'from-[#10B981] to-[#059669]', href: '/admin/trades' },
+    { label: t('adminTotalChapters'), value: stats?.totalChapters ?? 0, icon: BookOpen, color: 'from-[#8B5CF6] to-[#7C3AED]', href: '/admin/chapters' },
+    { label: t('adminTotalQuestions'), value: stats?.totalQuestions ?? 0, icon: HelpCircle, color: 'from-[#F59E0B] to-[#D97706]', href: '/admin/questions' },
   ];
 
   return (
@@ -79,18 +81,20 @@ export default function AdminDashboard() {
         {cards.map((card) => {
           const Icon = card.icon;
           return (
-            <div
+            <Link
               key={card.label}
-              className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6 hover:border-[#3B82F6]/30 transition-colors"
+              href={card.href}
+              className="group bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6 hover:border-[#3B82F6]/50 hover:-translate-y-0.5 transition-all duration-200"
             >
               <div className="flex items-center justify-between mb-4">
                 <div className={`w-10 h-10 rounded-lg bg-gradient-to-br ${card.color} flex items-center justify-center`}>
                   <Icon size={20} className="text-white" />
                 </div>
+                <ArrowRight size={16} className="text-[#64748B] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
               </div>
               <p className="text-3xl font-bold text-[#F8FAFC] mb-1">{card.value}</p>
-              <p className="text-sm text-[#94A3B8]">{card.label}</p>
-            </div>
+              <p className="text-sm text-[#94A3B8] group-hover:text-[#CBD5E1] transition-colors">{card.label}</p>
+            </Link>
           );
         })}
       </div>

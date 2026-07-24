@@ -1,4 +1,5 @@
 import { Router, Request, Response } from 'express';
+import * as bcrypt from 'bcryptjs';
 import { prisma } from '../config/database';
 import { authenticate, requireRoles } from '../middleware/auth';
 
@@ -61,6 +62,138 @@ router.get('/users', async (_req: Request, res: Response): Promise<void> => {
     res.json({ data: users });
   } catch (err) {
     console.error('[Admin] List users error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
+ * POST /api/admin/users
+ * Create a new user.
+ * Body: { name, email, password, role?, plan? }
+ */
+router.post('/users', async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { name, email, password, role, plan } = req.body;
+
+    if (!email || !password) {
+      res.status(400).json({ message: 'email and password are required' });
+      return;
+    }
+
+    const existing = await prisma.user.findUnique({ where: { email } });
+    if (existing) {
+      res.status(409).json({ message: 'A user with this email already exists' });
+      return;
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 12);
+
+    const user = await prisma.user.create({
+      data: {
+        name: name || null,
+        email,
+        password: hashedPassword,
+        role: role || 'STUDENT',
+        plan: plan || 'FREE',
+      },
+      select: {
+        id: true,
+        email: true,
+        name: true,
+        role: true,
+        plan: true,
+        subStatus: true,
+        createdAt: true,
+        updatedAt: true,
+      },
+    });
+
+    res.status(201).json(user);
+  } catch (err) {
+    console.error('[Admin] Create user error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
+ * PUT /api/admin/users/:id
+ * Update an existing user.
+ * Body: { name?, email?, password?, role?, plan? }
+ */
+router.put('/users/:id', async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { id } = req.params;
+    const { name, email, password, role, plan } = req.body;
+
+    const existing = await prisma.user.findUnique({ where: { id } });
+    if (!existing) {
+      res.status(404).json({ message: 'User not found' });
+      return;
+    }
+
+    // If email is being changed, check uniqueness
+    if (email && email !== existing.email) {
+      const emailConflict = await prisma.user.findUnique({ where: { email } });
+      if (emailConflict) {
+        res.status(409).json({ message: 'Another user with this email already exists' });
+        return;
+      }
+    }
+
+    const data: Record<string, unknown> = {};
+    if (name !== undefined) data.name = name;
+    if (email !== undefined) data.email = email;
+    if (role !== undefined) data.role = role;
+    if (plan !== undefined) data.plan = plan;
+    if (password) data.password = await bcrypt.hash(password, 12);
+
+    const user = await prisma.user.update({
+      where: { id },
+      data,
+      select: {
+        id: true,
+        email: true,
+        name: true,
+        role: true,
+        plan: true,
+        subStatus: true,
+        createdAt: true,
+        updatedAt: true,
+      },
+    });
+
+    res.json(user);
+  } catch (err) {
+    console.error('[Admin] Update user error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
+ * DELETE /api/admin/users/:id
+ * Delete a user.
+ */
+router.delete('/users/:id', async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { id } = req.params;
+
+    const existing = await prisma.user.findUnique({ where: { id } });
+    if (!existing) {
+      res.status(404).json({ message: 'User not found' });
+      return;
+    }
+
+    // Prevent self-deletion
+    if (req.user && req.user.id === id) {
+      res.status(400).json({ message: 'You cannot delete your own account' });
+      return;
+    }
+
+    await prisma.user.delete({ where: { id } });
+
+    res.json({ message: 'User deleted' });
+  } catch (err) {
+    console.error('[Admin] Delete user error:', err);
     res.status(500).json({ message: 'Internal server error' });
   }
 });

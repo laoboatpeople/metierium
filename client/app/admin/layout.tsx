@@ -113,7 +113,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
         <div className="flex flex-col h-full">
           {/* Logo */}
           <div className="flex items-center justify-between px-6 py-5 border-b border-[#2D3A52]">
-            <Link href="/app/admin" className="flex items-center gap-3">
+            <Link href="/admin" className="flex items-center gap-3">
               <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center">
                 <Shield size={16} className="text-white" />
               </div>
@@ -131,8 +131,8 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
           <nav className="flex-1 px-3 py-4 space-y-1 overflow-y-auto">
             {ADMIN_NAV_ITEMS.map((item) => {
               const isActive =
-                item.href === '/app/admin'
-                  ? pathname === '/app/admin'
+                item.href === '/admin'
+                  ? pathname === '/admin'
                   : pathname.startsWith(item.href);
               const Icon = item.icon;
               return (
