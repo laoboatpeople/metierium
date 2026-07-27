@@ -3,6 +3,7 @@ import { prisma } from '../config/database';
 import { env } from '../config/env';
 import { authenticate } from '../middleware/auth';
 import stripe, { Stripe } from '../config/stripe';
+import { sendPlanChangeEmail } from '../lib/email';
 
 const router = Router();
 
@@ -195,6 +196,18 @@ router.post('/webhook', async (req: Request, res: Response): Promise<void> => {
         }
 
         console.log(`[Stripe] ${dbPlan} subscription created/updated for user ${userId}`);
+
+        // Send plan change confirmation email
+        const planUser = await prisma.user.findUnique({ where: { id: userId } });
+        if (planUser) {
+          await sendPlanChangeEmail({
+            to: planUser.email,
+            userName: planUser.name,
+            oldPlan: existing?.plan ?? 'FREE',
+            newPlan: dbPlan,
+            source: 'stripe',
+          });
+        }
         break;
       }
 
@@ -282,6 +295,18 @@ router.post('/webhook', async (req: Request, res: Response): Promise<void> => {
             data: { plan: 'FREE', subStatus: null },
           });
           console.log(`[Stripe] Subscription ${deletedSub.id} ended — user ${existing.userId} reverted to FREE`);
+
+          // Send plan change confirmation email (downgrade to FREE)
+          const revertedUser = await prisma.user.findUnique({ where: { id: existing.userId } });
+          if (revertedUser) {
+            await sendPlanChangeEmail({
+              to: revertedUser.email,
+              userName: revertedUser.name,
+              oldPlan: existing.plan,
+              newPlan: 'FREE',
+              source: 'stripe',
+            });
+          }
         }
         break;
       }
@@ -450,6 +475,15 @@ router.post('/cancel-subscription', authenticate, async (req: Request, res: Resp
     });
 
     res.json({ message: 'Subscription cancelled. You are now on the Free plan.' });
+
+    // Send plan change confirmation email (downgrade to FREE)
+    await sendPlanChangeEmail({
+      to: user.email,
+      userName: user.name,
+      oldPlan: sub.plan,
+      newPlan: 'FREE',
+      source: 'stripe',
+    });
   } catch (err: any) {
     console.error('[Stripe] cancel-subscription error:', err);
     res.status(500).json({ message: 'Failed to cancel subscription.' });

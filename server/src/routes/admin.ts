@@ -2,6 +2,7 @@ import { Router, Request, Response } from 'express';
 import * as bcrypt from 'bcryptjs';
 import { prisma } from '../config/database';
 import { authenticate, requireRoles } from '../middleware/auth';
+import { sendPlanChangeEmail } from '../lib/email';
 
 const router = Router();
 
@@ -162,6 +163,17 @@ router.put('/users/:id', async (req: Request, res: Response): Promise<void> => {
       },
     });
 
+    // Send plan change confirmation email if plan was modified
+    if (plan !== undefined && plan !== existing.plan) {
+      await sendPlanChangeEmail({
+        to: user.email,
+        userName: user.name,
+        oldPlan: existing.plan,
+        newPlan: plan,
+        source: 'admin',
+      });
+    }
+
     res.json(user);
   } catch (err) {
     console.error('[Admin] Update user error:', err);
@@ -288,6 +300,104 @@ router.put('/trades/:id', async (req: Request, res: Response): Promise<void> => 
     res.json(trade);
   } catch (err) {
     console.error('[Admin] Update trade error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
+ * DELETE /api/admin/trades/:id
+ * Delete a trade and all its chapters/questions (cascade).
+ */
+router.delete('/trades/:id', async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { id } = req.params;
+
+    const existing = await prisma.trade.findUnique({ where: { id } });
+    if (!existing) {
+      res.status(404).json({ message: 'Trade not found' });
+      return;
+    }
+
+    // Delete children first (no cascade in schema)
+    await prisma.question.deleteMany({ where: { tradeId: id } });
+    await prisma.chapter.deleteMany({ where: { tradeId: id } });
+    await prisma.trade.delete({ where: { id } });
+
+    res.json({ message: 'Trade deleted' });
+  } catch (err) {
+    console.error('[Admin] Delete trade error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
+ * GET /api/admin/chapters
+ * List all chapters, optionally filtered by tradeId.
+ */
+router.get('/chapters', async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { tradeId } = req.query;
+    const chapters = await prisma.chapter.findMany({
+      where: tradeId ? { tradeId: tradeId as string } : undefined,
+      orderBy: [{ tradeId: 'asc' }, { number: 'asc' }],
+      include: {
+        trade: { select: { code: true, name: true, nameFr: true } },
+        _count: { select: { questions: true } },
+      },
+    });
+
+    res.json({ data: chapters });
+  } catch (err) {
+    console.error('[Admin] List chapters error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
+ * GET /api/admin/questions
+ * List all questions, optionally filtered by tradeId/chapterId.
+ */
+router.get('/questions', async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { tradeId, chapterId } = req.query;
+    const where: Record<string, string> = {};
+    if (tradeId) where.tradeId = tradeId as string;
+    if (chapterId) where.chapterId = chapterId as string;
+
+    const questions = await prisma.question.findMany({
+      where,
+      orderBy: { createdAt: 'desc' },
+      include: {
+        chapter: { select: { id: true, name: true, nameFr: true, number: true } },
+        trade: { select: { id: true, code: true, name: true, nameFr: true } },
+      },
+    });
+
+    res.json({ data: questions });
+  } catch (err) {
+    console.error('[Admin] List questions error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
+ * DELETE /api/admin/questions/:id
+ * Delete a single question.
+ */
+router.delete('/questions/:id', async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { id } = req.params;
+
+    const existing = await prisma.question.findUnique({ where: { id } });
+    if (!existing) {
+      res.status(404).json({ message: 'Question not found' });
+      return;
+    }
+
+    await prisma.question.delete({ where: { id } });
+    res.json({ message: 'Question deleted' });
+  } catch (err) {
+    console.error('[Admin] Delete question error:', err);
     res.status(500).json({ message: 'Internal server error' });
   }
 });

@@ -1,30 +1,75 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Plus, Pencil, Trash2, Loader2, X, Check, AlertCircle, HelpCircle } from 'lucide-react';
+import { Plus, Pencil, Trash2, Loader2, X, Check, AlertCircle, HelpCircle, Filter } from 'lucide-react';
 import { useLocale } from '@/src/contexts/LocaleContext';
 import { authApi } from '@/lib/api';
 
+/* ── Interfaces alignées sur le schema Prisma réel ── */
+
 interface Trade {
   id: string;
+  code: string;
   name: string;
+  nameFr: string;
+  description?: string | null;
+  _count?: { chapters: number };
 }
 
 interface Chapter {
   id: string;
-  title: string;
+  number: number;
+  name: string;
+  nameFr: string;
   tradeId: string;
+  theoryContent?: string | null;
+  trade?: { code: string; name: string; nameFr: string };
+  _count?: { questions: number };
 }
 
 interface Question {
   id: string;
-  text: string;
-  options: string[];
-  correctAnswer: number;
   tradeId: string;
-  chapterId: string;
-  chapter?: { title: string };
+  chapterId?: string | null;
+  type: string;
+  difficulty: string;
+  question: string;
+  options: string[] | null;
+  answer: string;
+  explanation?: string | null;
+  locale: string;
+  createdAt: string;
+  chapter?: { id: string; name: string; nameFr: string; number: number } | null;
+  trade?: { id: string; code: string; name: string; nameFr: string } | null;
 }
+
+/* ── Helpers ── */
+
+function parseOptions(raw: unknown): string[] {
+  if (Array.isArray(raw)) return raw.map(String);
+  if (typeof raw === 'string') {
+    try {
+      const parsed = JSON.parse(raw);
+      if (Array.isArray(parsed)) return parsed.map(String);
+    } catch { /* not JSON */ }
+  }
+  return [];
+}
+
+function answerLabel(answer: string, options: string[]): string {
+  const letter = answer.startsWith('Option ') ? answer.slice(-1) : answer;
+  const idx = letter.charCodeAt(0) - 65; // A=0, B=1...
+  if (idx >= 0 && idx < options.length) return `${letter}. ${options[idx]}`;
+  return answer;
+}
+
+const DIFFICULTY_COLORS: Record<string, string> = {
+  EASY: 'bg-[#10B981]/10 text-[#10B981] border-[#10B981]/20',
+  MEDIUM: 'bg-[#F59E0B]/10 text-[#F59E0B] border-[#F59E0B]/20',
+  HARD: 'bg-[#EF4444]/10 text-[#EF4444] border-[#EF4444]/20',
+};
+
+/* ── Component ── */
 
 export default function AdminQuestions() {
   const { t, locale } = useLocale();
@@ -38,14 +83,20 @@ export default function AdminQuestions() {
   const [showForm, setShowForm] = useState(false);
   const [editing, setEditing] = useState<Question | null>(null);
   const [formData, setFormData] = useState({
-    text: '',
+    question: '',
     options: ['', '', '', ''],
     correctAnswer: 0,
     tradeId: '',
     chapterId: '',
+    type: 'MCQ',
+    difficulty: 'MEDIUM',
+    explanation: '',
+    locale: 'fr',
   });
   const [saving, setSaving] = useState(false);
   const [formError, setFormError] = useState<string | null>(null);
+  const [page, setPage] = useState(0);
+  const PAGE_SIZE = 50;
 
   useEffect(() => {
     Promise.all([fetchQuestions(), fetchTrades(), fetchChapters()]);
@@ -54,7 +105,7 @@ export default function AdminQuestions() {
   async function fetchQuestions() {
     try {
       const data = await authApi('/api/admin/questions');
-      setQuestions(data.questions ?? data);
+      setQuestions(Array.isArray(data) ? data : data.data ?? data.questions ?? []);
     } catch (err) {
       setError(err instanceof Error ? err.message : t('adminQuestionsLoadError'));
     } finally {
@@ -65,14 +116,14 @@ export default function AdminQuestions() {
   async function fetchTrades() {
     try {
       const data = await authApi('/api/admin/trades');
-      setTrades(data.trades ?? data);
+      setTrades(Array.isArray(data) ? data : data.data ?? data.trades ?? []);
     } catch { /* silent */ }
   }
 
   async function fetchChapters() {
     try {
       const data = await authApi('/api/admin/chapters');
-      setChapters(data.chapters ?? data);
+      setChapters(Array.isArray(data) ? data : data.data ?? data.chapters ?? []);
     } catch { /* silent */ }
   }
 
@@ -86,28 +137,55 @@ export default function AdminQuestions() {
     return true;
   });
 
+  const totalPages = Math.ceil(filteredQuestions.length / PAGE_SIZE);
+  const pagedQuestions = filteredQuestions.slice(page * PAGE_SIZE, (page + 1) * PAGE_SIZE);
+
+  function chapterLabel(ch: Question['chapter']): string {
+    if (!ch) return '—';
+    const name = locale === 'fr' ? (ch.nameFr || ch.name) : ch.name;
+    return `Ch. ${ch.number} — ${name}`;
+  }
+
+  function tradeLabel(tr: Question['trade']): string {
+    if (!tr) return '—';
+    return locale === 'fr' ? (tr.nameFr || tr.name) : tr.name;
+  }
+
   function openCreate() {
     setEditing(null);
     setFormData({
-      text: '',
+      question: '',
       options: ['', '', '', ''],
       correctAnswer: 0,
-      tradeId: trades[0]?.id || '',
+      tradeId: filterTrade || trades[0]?.id || '',
       chapterId: '',
+      type: 'MCQ',
+      difficulty: 'MEDIUM',
+      explanation: '',
+      locale: 'fr',
     });
     setFormError(null);
     setShowForm(true);
   }
 
-  function openEdit(question: Question) {
-    const opts = question.options.length >= 4 ? question.options : [...question.options, '', '', '', ''];
-    setEditing(question);
+  function openEdit(q: Question) {
+    const opts = parseOptions(q.options);
+    const padded = [...opts];
+    while (padded.length < 4) padded.push('');
+    const letter = q.answer.startsWith('Option ') ? q.answer.slice(-1) : q.answer;
+    const idx = Math.max(0, letter.charCodeAt(0) - 65);
+
+    setEditing(q);
     setFormData({
-      text: question.text,
-      options: opts.slice(0, 4),
-      correctAnswer: question.correctAnswer,
-      tradeId: question.tradeId,
-      chapterId: question.chapterId,
+      question: q.question,
+      options: padded.slice(0, 4),
+      correctAnswer: idx >= 0 && idx < 4 ? idx : 0,
+      tradeId: q.tradeId,
+      chapterId: q.chapterId || '',
+      type: q.type,
+      difficulty: q.difficulty,
+      explanation: q.explanation || '',
+      locale: q.locale,
     });
     setFormError(null);
     setShowForm(true);
@@ -121,7 +199,7 @@ export default function AdminQuestions() {
 
   async function handleSave(e: React.FormEvent) {
     e.preventDefault();
-    if (!formData.text.trim()) {
+    if (!formData.question.trim()) {
       setFormError(t('adminQuestionsTextRequired'));
       return;
     }
@@ -129,7 +207,7 @@ export default function AdminQuestions() {
       setFormError(t('adminQuestionsOptionsRequired'));
       return;
     }
-    if (!formData.chapterId) {
+    if (!formData.tradeId) {
       setFormError(t('adminQuestionsSelectChapter'));
       return;
     }
@@ -137,13 +215,19 @@ export default function AdminQuestions() {
     setSaving(true);
     setFormError(null);
     try {
+      const answerLetter = String.fromCharCode(65 + formData.correctAnswer); // 0→A, 1→B...
       const payload = {
-        text: formData.text,
-        options: formData.options,
-        correctAnswer: formData.correctAnswer,
         tradeId: formData.tradeId,
-        chapterId: formData.chapterId,
+        chapterId: formData.chapterId || null,
+        type: formData.type,
+        difficulty: formData.difficulty,
+        question: formData.question,
+        options: formData.options,
+        answer: answerLetter,
+        explanation: formData.explanation || null,
+        locale: formData.locale,
       };
+
       if (editing) {
         await authApi(`/api/admin/questions/${editing.id}`, {
           method: 'PUT',
@@ -190,6 +274,9 @@ export default function AdminQuestions() {
           <div className="flex items-center gap-3 mb-2">
             <HelpCircle size={24} className="text-[#3B82F6]" />
             <h1 className="text-2xl font-bold text-[#F8FAFC]">{t('adminQuestions')}</h1>
+            <span className="px-2.5 py-0.5 bg-[#3B82F6]/10 text-[#3B82F6] text-xs font-semibold rounded-full border border-[#3B82F6]/20">
+              {filteredQuestions.length}
+            </span>
           </div>
           <p className="text-sm text-[#94A3B8]">{t('adminQuestionsDesc')}</p>
         </div>
@@ -211,33 +298,44 @@ export default function AdminQuestions() {
       )}
 
       {/* Filters */}
-      <div className="flex gap-4 mb-6">
+      <div className="flex items-center gap-4 mb-6">
+        <Filter size={16} className="text-[#64748B]" />
         <select
           value={filterTrade}
           onChange={(e) => {
             setFilterTrade(e.target.value);
             setFilterChapter('');
-            if (!showForm) {
-              setFormData({ ...formData, tradeId: e.target.value, chapterId: '' });
-            }
+            setPage(0);
           }}
           className="px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
         >
           <option value="">{t('adminQuestionsAllTrades')}</option>
-          {trades.map((t) => (
-            <option key={t.id} value={t.id}>{t.name}</option>
+          {trades.map((tr) => (
+            <option key={tr.id} value={tr.id}>
+              {tr.code} — {locale === 'fr' ? (tr.nameFr || tr.name) : tr.name}
+            </option>
           ))}
         </select>
         <select
           value={filterChapter}
-          onChange={(e) => setFilterChapter(e.target.value)}
+          onChange={(e) => { setFilterChapter(e.target.value); setPage(0); }}
           className="px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
         >
           <option value="">{t('adminQuestionsAllChapters')}</option>
           {availableChapters.map((ch) => (
-            <option key={ch.id} value={ch.id}>{ch.title}</option>
+            <option key={ch.id} value={ch.id}>
+              Ch. {ch.number} — {locale === 'fr' ? (ch.nameFr || ch.name) : ch.name}
+            </option>
           ))}
         </select>
+        {(filterTrade || filterChapter) && (
+          <button
+            onClick={() => { setFilterTrade(''); setFilterChapter(''); setPage(0); }}
+            className="text-xs text-[#64748B] hover:text-[#F8FAFC] underline transition-colors"
+          >
+            {t('adminCancel')}
+          </button>
+        )}
       </div>
 
       {/* Form modal */}
@@ -261,11 +359,12 @@ export default function AdminQuestions() {
             )}
 
             <form onSubmit={handleSave} className="space-y-4">
+              {/* Question text */}
               <div>
                 <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminQuestionsQuestionLabel')}</label>
                 <textarea
-                  value={formData.text}
-                  onChange={(e) => setFormData({ ...formData, text: e.target.value })}
+                  value={formData.question}
+                  onChange={(e) => setFormData({ ...formData, question: e.target.value })}
                   placeholder={t('adminQuestionsTextPlaceholder')}
                   rows={3}
                   required
@@ -273,6 +372,7 @@ export default function AdminQuestions() {
                 />
               </div>
 
+              {/* Trade + Chapter + Type + Difficulty */}
               <div className="grid grid-cols-2 gap-4">
                 <div>
                   <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminQuestionsTrade')}</label>
@@ -281,8 +381,10 @@ export default function AdminQuestions() {
                     onChange={(e) => setFormData({ ...formData, tradeId: e.target.value, chapterId: '' })}
                     className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
                   >
-                    {trades.map((t) => (
-                      <option key={t.id} value={t.id}>{t.name}</option>
+                    {trades.map((tr) => (
+                      <option key={tr.id} value={tr.id}>
+                        {tr.code} — {locale === 'fr' ? (tr.nameFr || tr.name) : tr.name}
+                      </option>
                     ))}
                   </select>
                 </div>
@@ -294,9 +396,36 @@ export default function AdminQuestions() {
                     className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
                   >
                     <option value="">{t('adminQuestionsSelect')}</option>
-                    {availableChapters.map((ch) => (
-                      <option key={ch.id} value={ch.id}>{ch.title}</option>
-                    ))}
+                    {chapters
+                      .filter((ch) => !formData.tradeId || ch.tradeId === formData.tradeId)
+                      .map((ch) => (
+                        <option key={ch.id} value={ch.id}>
+                          Ch. {ch.number} — {locale === 'fr' ? (ch.nameFr || ch.name) : ch.name}
+                        </option>
+                      ))}
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Type</label>
+                  <select
+                    value={formData.type}
+                    onChange={(e) => setFormData({ ...formData, type: e.target.value })}
+                    className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
+                  >
+                    <option value="MCQ">MCQ</option>
+                    <option value="TRUE_FALSE">True / False</option>
+                  </select>
+                </div>
+                <div>
+                  <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Difficulté</label>
+                  <select
+                    value={formData.difficulty}
+                    onChange={(e) => setFormData({ ...formData, difficulty: e.target.value })}
+                    className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
+                  >
+                    <option value="EASY">Facile</option>
+                    <option value="MEDIUM">Moyen</option>
+                    <option value="HARD">Difficile</option>
                   </select>
                 </div>
               </div>
@@ -315,7 +444,7 @@ export default function AdminQuestions() {
                           : 'bg-[#111827] border-[#2D3A52] text-[#64748B] hover:border-[#10B981]'
                       }`}
                     >
-                      {formData.correctAnswer === i ? <Check size={14} /> : i + 1}
+                      {formData.correctAnswer === i ? <Check size={14} /> : String.fromCharCode(65 + i)}
                     </button>
                     <input
                       type="text"
@@ -326,9 +455,32 @@ export default function AdminQuestions() {
                     />
                   </div>
                 ))}
-                <p className="text-xs text-[#64748B] mt-1">
-                  {t('adminQuestionsOptionsHint')}
-                </p>
+                <p className="text-xs text-[#64748B] mt-1">{t('adminQuestionsOptionsHint')}</p>
+              </div>
+
+              {/* Explanation */}
+              <div>
+                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Explication (optionnel)</label>
+                <textarea
+                  value={formData.explanation}
+                  onChange={(e) => setFormData({ ...formData, explanation: e.target.value })}
+                  placeholder="Pourquoi cette réponse est correcte..."
+                  rows={2}
+                  className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] resize-none"
+                />
+              </div>
+
+              {/* Locale */}
+              <div>
+                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">Langue</label>
+                <select
+                  value={formData.locale}
+                  onChange={(e) => setFormData({ ...formData, locale: e.target.value })}
+                  className="w-full px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
+                >
+                  <option value="fr">Français</option>
+                  <option value="en">English</option>
+                </select>
               </div>
 
               <div className="flex justify-end gap-3 pt-2">
@@ -360,52 +512,100 @@ export default function AdminQuestions() {
             <thead>
               <tr className="border-b border-[#2D3A52]">
                 <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminQuestionsColQuestion')}</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Métier</th>
                 <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminQuestionsColChapter')}</th>
-                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminQuestionsColOptions')}</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Rép.</th>
+                <th className="text-left px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">Diff.</th>
                 <th className="text-right px-6 py-4 text-xs font-medium text-[#94A3B8] uppercase tracking-wider">{t('adminQuestionsColActions')}</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-[#2D3A52]">
-              {filteredQuestions.length === 0 ? (
+              {pagedQuestions.length === 0 ? (
                 <tr>
-                  <td colSpan={4} className="px-6 py-12 text-center text-[#64748B] text-sm">
+                  <td colSpan={6} className="px-6 py-12 text-center text-[#64748B] text-sm">
                     {t('adminNoQuestions')}
                   </td>
                 </tr>
               ) : (
-                filteredQuestions.map((q) => (
-                  <tr key={q.id} className="hover:bg-[#243047]/50 transition-colors">
-                    <td className="px-6 py-4 text-sm text-[#F8FAFC] max-w-md truncate">{q.text}</td>
-                    <td className="px-6 py-4">
-                      <span className="px-2 py-0.5 bg-[#8B5CF6]/10 text-[#8B5CF6] text-xs rounded border border-[#8B5CF6]/20">
-                        {q.chapter?.title || '—'}
-                      </span>
-                    </td>
-                    <td className="px-6 py-4 text-sm text-[#94A3B8]">
-                      {t('adminQuestionsCount', { count: q.options.length })}
-                    </td>
-                    <td className="px-6 py-4 text-right">
-                      <div className="flex items-center justify-end gap-2">
-                        <button
-                          onClick={() => openEdit(q)}
-                          className="p-2 text-[#94A3B8] hover:text-[#3B82F6] hover:bg-[#3B82F6]/10 rounded-lg transition-colors"
-                        >
-                          <Pencil size={16} />
-                        </button>
-                        <button
-                          onClick={() => handleDelete(q.id)}
-                          className="p-2 text-[#94A3B8] hover:text-[#EF4444] hover:bg-[#EF4444]/10 rounded-lg transition-colors"
-                        >
-                          <Trash2 size={16} />
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                ))
+                pagedQuestions.map((q) => {
+                  const opts = parseOptions(q.options);
+                  return (
+                    <tr key={q.id} className="hover:bg-[#243047]/50 transition-colors">
+                      <td className="px-6 py-4 text-sm text-[#F8FAFC] max-w-md">
+                        <span className="line-clamp-2">{q.question}</span>
+                        {q.locale !== 'fr' && (
+                          <span className="ml-2 px-1.5 py-0.5 bg-[#64748B]/10 text-[#64748B] text-[10px] rounded uppercase">{q.locale}</span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4">
+                        <span className="px-2 py-0.5 bg-[#3B82F6]/10 text-[#3B82F6] text-xs rounded border border-[#3B82F6]/20 font-mono">
+                          {q.trade?.code || '—'}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4">
+                        <span className="px-2 py-0.5 bg-[#8B5CF6]/10 text-[#8B5CF6] text-xs rounded border border-[#8B5CF6]/20">
+                          {chapterLabel(q.chapter)}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4">
+                        <span className="px-2 py-0.5 bg-[#10B981]/10 text-[#10B981] text-xs font-bold rounded border border-[#10B981]/20">
+                          {q.answer.startsWith('Option ') ? q.answer.slice(-1) : q.answer}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4">
+                        <span className={`px-2 py-0.5 text-xs rounded border ${DIFFICULTY_COLORS[q.difficulty] || 'bg-[#64748B]/10 text-[#64748B] border-[#64748B]/20'}`}>
+                          {q.difficulty}
+                        </span>
+                      </td>
+                      <td className="px-6 py-4 text-right">
+                        <div className="flex items-center justify-end gap-2">
+                          <button
+                            onClick={() => openEdit(q)}
+                            className="p-2 text-[#94A3B8] hover:text-[#3B82F6] hover:bg-[#3B82F6]/10 rounded-lg transition-colors"
+                          >
+                            <Pencil size={16} />
+                          </button>
+                          <button
+                            onClick={() => handleDelete(q.id)}
+                            className="p-2 text-[#94A3B8] hover:text-[#EF4444] hover:bg-[#EF4444]/10 rounded-lg transition-colors"
+                          >
+                            <Trash2 size={16} />
+                          </button>
+                        </div>
+                      </td>
+                    </tr>
+                  );
+                })
               )}
             </tbody>
           </table>
         </div>
+
+        {/* Pagination */}
+        {totalPages > 1 && (
+          <div className="flex items-center justify-between px-6 py-4 border-t border-[#2D3A52]">
+            <span className="text-xs text-[#64748B]">
+              {page * PAGE_SIZE + 1}–{Math.min((page + 1) * PAGE_SIZE, filteredQuestions.length)} / {filteredQuestions.length}
+            </span>
+            <div className="flex gap-2">
+              <button
+                onClick={() => setPage((p) => Math.max(0, p - 1))}
+                disabled={page === 0}
+                className="px-3 py-1.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-xs text-[#F8FAFC] disabled:opacity-30 hover:border-[#3B82F6] transition-colors"
+              >
+                ←
+              </button>
+              <span className="px-3 py-1.5 text-xs text-[#94A3B8]">{page + 1} / {totalPages}</span>
+              <button
+                onClick={() => setPage((p) => Math.min(totalPages - 1, p + 1))}
+                disabled={page >= totalPages - 1}
+                className="px-3 py-1.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-xs text-[#F8FAFC] disabled:opacity-30 hover:border-[#3B82F6] transition-colors"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );
