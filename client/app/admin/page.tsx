@@ -78,6 +78,13 @@ interface DashboardData {
     passRate: number;
     totalAttempts: number;
   }>;
+  recentChats: Array<{
+    id: string;
+    topic: string;
+    user: { name: string; email: string } | null;
+    messageCount: number;
+    updatedAt: string;
+  }>;
   planDistribution: Record<string, number>;
   userGrowth: Array<{ date: string; count: number }>;
   revenueByMonth: Array<{ month: string; amount: number }>;
@@ -716,8 +723,8 @@ export default function AdminDashboard() {
         </div>
       </div>
 
-      {/* Learning pulse — 3 columns */}
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mt-8">
+      {/* Learning pulse — 2x2 grid */}
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 mt-8">
         {/* Recent Exam Attempts */}
         <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6">
           <h3 className="text-sm font-semibold text-[#F8FAFC] mb-4">{t('adminRecentAttempts')}</h3>
@@ -813,6 +820,38 @@ export default function AdminDashboard() {
                   <span className="text-[10px] px-2 py-0.5 rounded-full font-semibold bg-[#EF4444]/15 text-[#EF4444] flex-shrink-0">
                     {q.passRate}%
                   </span>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="py-8 text-center text-sm text-[#64748B]">{t('adminNoData')}</div>
+          )}
+        </div>
+
+        {/* Recent Tutor Chats */}
+        <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6">
+          <h3 className="text-sm font-semibold text-[#F8FAFC] mb-4">{t('adminRecentChats')}</h3>
+          {loading ? (
+            <div className="space-y-3">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div key={i} className="h-10 bg-[#0F1525] rounded animate-pulse" />
+              ))}
+            </div>
+          ) : data?.recentChats && data.recentChats.length > 0 ? (
+            <div className="space-y-1 max-h-80 overflow-y-auto">
+              {data.recentChats.map((cs) => (
+                <div key={cs.id} className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-[#0F1525] transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-[#3B82F6]/15 flex items-center justify-center flex-shrink-0">
+                    <MessageSquare size={14} className="text-[#3B82F6]" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm text-[#F8FAFC] truncate">{cs.user?.name || cs.user?.email || (locale === 'fr' ? 'Utilisateur' : 'User')}</p>
+                    <p className="text-[10px] text-[#64748B] truncate">{cs.topic}</p>
+                  </div>
+                  <div className="text-right flex-shrink-0">
+                    <p className="text-[10px] text-[#94A3B8]">{cs.messageCount} {locale === 'fr' ? 'messages' : 'msgs'}</p>
+                    <p className="text-[10px] text-[#64748B]">{formatRelativeTime(cs.updatedAt)}</p>
+                  </div>
                 </div>
               ))}
             </div>

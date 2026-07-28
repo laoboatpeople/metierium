@@ -42,6 +42,7 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       recentExamAttempts,
       recentAnsweredQuestions,
       topFailedQuestionsRaw,
+      recentChatSessions,
     ] = await Promise.all([
       prisma.user.count(),
       prisma.trade.count(),
@@ -50,8 +51,8 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       prisma.subscription.count({ where: { status: 'ACTIVE' } }),
       // userGrowth for selected period — group by created date
       prisma.$queryRawUnsafe<Array<{ day: string; count: bigint }>>(
-        `SELECT DATE("createdAt") as day, COUNT(*)::int as count FROM "User" WHERE "createdAt" >= $1 GROUP BY DATE("createdAt") ORDER BY day`,
-        [startDate.toISOString()]
+        `SELECT DATE("createdAt") as day, COUNT(*)::int as count FROM "User" WHERE "createdAt" >= $1::timestamp GROUP BY DATE("createdAt") ORDER BY day`,
+        startDate.toISOString()
       ).catch(() => []),
       // questions by difficulty
       prisma.$queryRawUnsafe<Array<{ difficulty: string; count: bigint }>>(
@@ -119,8 +120,8 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       }),
       // active users today (updatedAt today — proxy for login/activity)
       prisma.$queryRawUnsafe<Array<{ count: bigint }>>(
-        `SELECT COUNT(*)::int as count FROM "User" WHERE "updatedAt" >= $1`,
-        [new Date(new Date().setHours(0, 0, 0, 0)).toISOString()]
+        `SELECT COUNT(*)::int as count FROM "User" WHERE "updatedAt" >= $1::timestamp`,
+        new Date(new Date().setHours(0, 0, 0, 0)).toISOString()
       ).catch(() => [{ count: BigInt(0) }]),
       // total exams taken (learning tracking)
       prisma.examAttempt.count().catch(() => 0),
@@ -159,6 +160,15 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
           attemptAnswers: { where: { isCorrect: true }, select: { id: true } },
         },
         take: 200,
+      }).catch(() => []),
+      // recent tutor chat sessions — last 15 with user + message count
+      prisma.chatSession.findMany({
+        orderBy: { updatedAt: 'desc' },
+        take: 15,
+        include: {
+          user: { select: { id: true, name: true, email: true } },
+          _count: { select: { messages: true } },
+        },
       }).catch(() => []),
     ]);
 
@@ -284,6 +294,14 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       .sort((a, b) => a.passRate - b.passRate)
       .slice(0, 10);
 
+    const recentChats = (recentChatSessions as any[]).map((cs) => ({
+      id: cs.id,
+      topic: cs.topic ?? 'Conversation tuteur',
+      user: cs.user ? { name: cs.user.name, email: cs.user.email } : null,
+      messageCount: cs._count?.messages ?? 0,
+      updatedAt: cs.updatedAt.toISOString(),
+    }));
+
     res.json({
       totalUsers,
       totalTrades,
@@ -298,6 +316,7 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       recentAttempts,
       recentAnswers,
       topFailedQuestions,
+      recentChats,
       planDistribution,
       userGrowth: userGrowthArray,
       revenueByMonth,

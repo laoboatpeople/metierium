@@ -100,6 +100,7 @@ export default function TutorPage() {
   const [returnUrl, setReturnUrl] = useState<string | null>(null);
   const [chatHistories, setChatHistories] = useState<ChatHistory[]>([]);
   const [currentChatId, setCurrentChatId] = useState<string | null>(null);
+  const [serverSessionId, setServerSessionId] = useState<string | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -211,11 +212,12 @@ export default function TutorPage() {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ message: text }),
+        body: JSON.stringify({ message: text, sessionId: serverSessionId }),
       });
 
       if (!res.ok) throw new Error(t('tutorServerError'));
       const data = await res.json();
+      if (data.sessionId) setServerSessionId(data.sessionId);
       setMessages((prev) => [
         ...prev,
         { role: 'assistant', content: data.response || data.message || t('tutorNoResponse') },
@@ -243,6 +245,7 @@ export default function TutorPage() {
   const handleNewChat = () => {
     setMessages([{ ...initialMessage }]);
     setCurrentChatId(null);
+    setServerSessionId(null);
     setError(null);
     setInput('');
     setTimeout(() => inputRef.current?.focus(), 100);
