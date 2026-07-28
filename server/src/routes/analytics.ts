@@ -33,6 +33,10 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       questionsByLocaleRaw,
       planDistributionRaw,
       lastRegisteredUsers,
+      recentSubscriptions,
+      recentContactMessages,
+      recentQuestionsAdded,
+      activeUsersTodayRaw,
     ] = await Promise.all([
       prisma.user.count(),
       prisma.trade.count(),
@@ -73,6 +77,46 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
           createdAt: true,
         },
       }),
+      // recent subscriptions — last 10 with user info
+      prisma.subscription.findMany({
+        orderBy: { createdAt: 'desc' },
+        take: 10,
+        include: {
+          user: { select: { id: true, name: true, email: true, plan: true } },
+        },
+      }),
+      // recent contact messages — last 10
+      prisma.contactMessage.findMany({
+        orderBy: { createdAt: 'desc' },
+        take: 10,
+        select: {
+          id: true,
+          name: true,
+          email: true,
+          message: true,
+          direction: true,
+          status: true,
+          createdAt: true,
+        },
+      }),
+      // recent questions added — last 10
+      prisma.question.findMany({
+        orderBy: { createdAt: 'desc' },
+        take: 10,
+        select: {
+          id: true,
+          question: true,
+          difficulty: true,
+          locale: true,
+          createdAt: true,
+          chapter: { select: { name: true, nameFr: true, trade: { select: { code: true } } } },
+        },
+      }),
+      // active users today (updatedAt today — proxy for login/activity)
+      prisma.$queryRawUnsafe<Array<{ count: bigint }>>(
+        `SELECT COUNT(*)::int as count FROM "User" WHERE "updatedAt" >= $1`,
+        [new Date(new Date().setHours(0, 0, 0, 0)).toISOString()]
+      ).catch(() => [{ count: BigInt(0) }]),
     ]);
 
     // Process user growth
@@ -154,6 +198,9 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       details: { plan: u.plan },
     }));
 
+    // Active users today
+    const activeUsersToday = Number(activeUsersTodayRaw?.[0]?.count ?? 0);
+
     res.json({
       totalUsers,
       totalTrades,
@@ -162,6 +209,7 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       activeSubscriptions,
       newUsersThisPeriod,
       totalRevenue,
+      activeUsersToday,
       planDistribution,
       userGrowth: userGrowthArray,
       revenueByMonth,
@@ -169,6 +217,30 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       questionsByTrade,
       questionsByLocale: localeMap,
       recentActivity,
+      recentSubscriptions: recentSubscriptions.map((s) => ({
+        id: s.id,
+        plan: s.plan,
+        status: s.status,
+        createdAt: s.createdAt.toISOString(),
+        user: { id: s.user.id, name: s.user.name, email: s.user.email, plan: s.user.plan },
+      })),
+      recentContactMessages: recentContactMessages.map((m) => ({
+        id: m.id,
+        name: m.name,
+        email: m.email,
+        message: m.message.slice(0, 120),
+        direction: m.direction,
+        status: m.status,
+        createdAt: m.createdAt.toISOString(),
+      })),
+      recentQuestionsAdded: recentQuestionsAdded.map((q) => ({
+        id: q.id,
+        question: q.question.slice(0, 100),
+        difficulty: q.difficulty,
+        locale: q.locale,
+        createdAt: q.createdAt.toISOString(),
+        chapter: q.chapter ? { name: q.chapter.name, nameFr: q.chapter.nameFr, tradeCode: q.chapter.trade.code } : null,
+      })),
       lastRegisteredUsers: lastRegisteredUsers.map((u) => ({
         id: u.id,
         name: u.name,

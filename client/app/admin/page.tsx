@@ -28,6 +28,10 @@ import {
   Loader2,
   ArrowRight,
   UserPlus,
+  UserCheck,
+  MessageSquare,
+  PlusCircle,
+  Mail,
 } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -42,6 +46,7 @@ interface DashboardData {
   activeSubscriptions: number;
   newUsersThisPeriod: number;
   totalRevenue: number;
+  activeUsersToday: number;
   planDistribution: Record<string, number>;
   userGrowth: Array<{ date: string; count: number }>;
   revenueByMonth: Array<{ month: string; amount: number }>;
@@ -54,6 +59,30 @@ interface DashboardData {
     createdAt: string;
     user?: { name: string; email: string };
     details?: Record<string, unknown>;
+  }>;
+  recentSubscriptions: Array<{
+    id: string;
+    plan: string;
+    status: string;
+    createdAt: string;
+    user: { id: string; name: string | null; email: string; plan: string };
+  }>;
+  recentContactMessages: Array<{
+    id: string;
+    name: string;
+    email: string;
+    message: string;
+    direction: string;
+    status: string;
+    createdAt: string;
+  }>;
+  recentQuestionsAdded: Array<{
+    id: string;
+    question: string;
+    difficulty: string;
+    locale: string;
+    createdAt: string;
+    chapter: { name: string; nameFr: string; tradeCode: string } | null;
   }>;
   lastRegisteredUsers: Array<{
     id: string;
@@ -226,6 +255,14 @@ export default function AdminDashboard() {
       sub: data
         ? `${data.questionsByLocale?.fr ?? 0} FR / ${data.questionsByLocale?.en ?? 0} EN`
         : undefined,
+    },
+    {
+      label: t('adminActiveToday'),
+      value: data?.activeUsersToday ?? 0,
+      icon: UserCheck,
+      color: 'from-[#06B6D4] to-[#0891B2]',
+      href: null,
+      sub: undefined,
     },
   ];
 
@@ -517,6 +554,119 @@ export default function AdminDashboard() {
         ) : (
           <div className="py-8 text-center text-sm text-[#64748B]">{t('adminNoData')}</div>
         )}
+      </div>
+
+      {/* Activity monitoring — 3 columns */}
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mt-8">
+        {/* Recent Subscriptions */}
+        <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6">
+          <h3 className="text-sm font-semibold text-[#F8FAFC] mb-4">{t('adminRecentSubscriptions')}</h3>
+          {loading ? (
+            <div className="space-y-3">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div key={i} className="h-10 bg-[#0F1525] rounded animate-pulse" />
+              ))}
+            </div>
+          ) : data?.recentSubscriptions && data.recentSubscriptions.length > 0 ? (
+            <div className="space-y-1 max-h-80 overflow-y-auto">
+              {data.recentSubscriptions.map((s) => (
+                <div key={s.id} className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-[#0F1525] transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-[#10B981]/15 flex items-center justify-center flex-shrink-0">
+                    <CreditCard size={14} className="text-[#10B981]" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm text-[#F8FAFC] truncate">{s.user.name ?? s.user.email}</p>
+                    <p className="text-[10px] text-[#64748B]">
+                      {PLAN_LABELS[s.plan]?.[locale] ?? s.plan} · {s.status}
+                    </p>
+                  </div>
+                  <span className="text-[10px] text-[#64748B] flex-shrink-0">{formatRelativeTime(s.createdAt)}</span>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="py-8 text-center text-sm text-[#64748B]">{t('adminNoData')}</div>
+          )}
+        </div>
+
+        {/* Recent Contact Messages */}
+        <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6">
+          <h3 className="text-sm font-semibold text-[#F8FAFC] mb-4">{t('adminRecentMessages')}</h3>
+          {loading ? (
+            <div className="space-y-3">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div key={i} className="h-10 bg-[#0F1525] rounded animate-pulse" />
+              ))}
+            </div>
+          ) : data?.recentContactMessages && data.recentContactMessages.length > 0 ? (
+            <div className="space-y-1 max-h-80 overflow-y-auto">
+              {data.recentContactMessages.map((m) => (
+                <div key={m.id} className="flex items-start gap-3 py-2.5 px-3 rounded-lg hover:bg-[#0F1525] transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-[#3B82F6]/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <Mail size={14} className="text-[#3B82F6]" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-sm text-[#F8FAFC] truncate">{m.name}</p>
+                    <p className="text-[10px] text-[#64748B] line-clamp-2">{m.message}</p>
+                  </div>
+                  <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                    <span
+                      className={`text-[9px] px-1.5 py-0.5 rounded-full font-medium ${
+                        m.status === 'replied'
+                          ? 'bg-[#10B981]/15 text-[#10B981]'
+                          : 'bg-[#F59E0B]/15 text-[#F59E0B]'
+                      }`}
+                    >
+                      {m.status === 'replied' ? (locale === 'fr' ? 'Répondu' : 'Replied') : (locale === 'fr' ? 'En attente' : 'Pending')}
+                    </span>
+                    <span className="text-[10px] text-[#64748B]">{formatRelativeTime(m.createdAt)}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="py-8 text-center text-sm text-[#64748B]">{t('adminNoData')}</div>
+          )}
+        </div>
+
+        {/* Recent Questions Added */}
+        <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6">
+          <h3 className="text-sm font-semibold text-[#F8FAFC] mb-4">{t('adminRecentQuestions')}</h3>
+          {loading ? (
+            <div className="space-y-3">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div key={i} className="h-10 bg-[#0F1525] rounded animate-pulse" />
+              ))}
+            </div>
+          ) : data?.recentQuestionsAdded && data.recentQuestionsAdded.length > 0 ? (
+            <div className="space-y-1 max-h-80 overflow-y-auto">
+              {data.recentQuestionsAdded.map((q) => (
+                <div key={q.id} className="flex items-start gap-3 py-2.5 px-3 rounded-lg hover:bg-[#0F1525] transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-[#8B5CF6]/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <PlusCircle size={14} className="text-[#8B5CF6]" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs text-[#94A3B8] leading-snug line-clamp-2">{q.question}</p>
+                    <p className="text-[10px] text-[#64748B] mt-0.5">
+                      {q.chapter ? `${q.chapter.tradeCode} · ${locale === 'fr' ? q.chapter.nameFr : q.chapter.name}` : '—'}
+                    </p>
+                  </div>
+                  <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                    <span
+                      className="text-[9px] px-1.5 py-0.5 rounded text-white"
+                      style={{ backgroundColor: DIFFICULTY_COLORS[q.difficulty] ?? '#64748B' }}
+                    >
+                      {DIFFICULTY_LABELS[q.difficulty]?.[locale] ?? q.difficulty}
+                    </span>
+                    <span className="text-[10px] text-[#64748B]">{formatRelativeTime(q.createdAt)}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="py-8 text-center text-sm text-[#64748B]">{t('adminNoData')}</div>
+          )}
+        </div>
       </div>
     </div>
   );
