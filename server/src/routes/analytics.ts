@@ -37,6 +37,11 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       recentContactMessages,
       recentQuestionsAdded,
       activeUsersTodayRaw,
+      totalExamsTaken,
+      allAttempts,
+      recentExamAttempts,
+      recentAnsweredQuestions,
+      topFailedQuestionsRaw,
     ] = await Promise.all([
       prisma.user.count(),
       prisma.trade.count(),
@@ -117,6 +122,44 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
         `SELECT COUNT(*)::int as count FROM "User" WHERE "updatedAt" >= $1`,
         [new Date(new Date().setHours(0, 0, 0, 0)).toISOString()]
       ).catch(() => [{ count: BigInt(0) }]),
+      // total exams taken (learning tracking)
+      prisma.examAttempt.count().catch(() => 0),
+      // all attempts for pass rate
+      prisma.examAttempt.findMany({ where: { reviewMode: false }, select: { score: true } }).catch(() => []),
+      // recent exam attempts — last 15 with user + trade
+      prisma.examAttempt.findMany({
+        orderBy: { completedAt: 'desc' },
+        take: 15,
+        include: {
+          user: { select: { id: true, name: true, email: true } },
+          trade: { select: { code: true, name: true, nameFr: true } },
+        },
+      }).catch(() => []),
+      // recent answered questions — last 25 individual answers
+      prisma.examAttemptQuestion.findMany({
+        orderBy: { attempt: { completedAt: 'desc' } },
+        take: 25,
+        include: {
+          question: { select: { id: true, question: true, difficulty: true } },
+          attempt: {
+            select: {
+              completedAt: true,
+              user: { select: { id: true, name: true, email: true } },
+            },
+          },
+        },
+      }).catch(() => []),
+      // top failed questions — lowest pass rate
+      prisma.question.findMany({
+        select: {
+          id: true,
+          question: true,
+          difficulty: true,
+          _count: { select: { attemptAnswers: true } },
+          attemptAnswers: { where: { isCorrect: true }, select: { id: true } },
+        },
+        take: 200,
+      }).catch(() => []),
     ]);
 
     // Process user growth
@@ -201,6 +244,46 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
     // Active users today
     const activeUsersToday = Number(activeUsersTodayRaw?.[0]?.count ?? 0);
 
+    // ─── Learning tracking ─────────────────────────────────
+    const overallPassRate = allAttempts.length > 0
+      ? Math.round((allAttempts.filter((a: { score: number }) => a.score >= 70).length / allAttempts.length) * 100)
+      : 0;
+
+    const recentAttempts = (recentExamAttempts as any[]).map((a) => ({
+      id: a.id,
+      score: a.score,
+      totalQuestions: a.totalQuestions,
+      correctCount: a.correctCount,
+      completedAt: a.completedAt.toISOString(),
+      user: { id: a.user.id, name: a.user.name, email: a.user.email },
+      trade: { code: a.trade.code, name: a.trade.name, nameFr: a.trade.nameFr },
+    }));
+
+    const recentAnswers = (recentAnsweredQuestions as any[]).map((aq) => ({
+      id: aq.id,
+      userAnswer: aq.userAnswer,
+      isCorrect: aq.isCorrect,
+      question: { id: aq.question.id, text: aq.question.question.slice(0, 100), difficulty: aq.question.difficulty },
+      user: aq.attempt.user ? { id: aq.attempt.user.id, name: aq.attempt.user.name, email: aq.attempt.user.email } : null,
+      completedAt: aq.attempt.completedAt.toISOString(),
+    }));
+
+    const topFailedQuestions = (topFailedQuestionsRaw as any[])
+      .map((q) => {
+        const total = q._count.attemptAnswers;
+        const correct = q.attemptAnswers.length;
+        return {
+          id: q.id,
+          question: q.question.slice(0, 120),
+          difficulty: q.difficulty,
+          passRate: total > 0 ? Math.round((correct / total) * 100) : 100,
+          totalAttempts: total,
+        };
+      })
+      .filter((q) => q.totalAttempts >= 2)
+      .sort((a, b) => a.passRate - b.passRate)
+      .slice(0, 10);
+
     res.json({
       totalUsers,
       totalTrades,
@@ -210,6 +293,11 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       newUsersThisPeriod,
       totalRevenue,
       activeUsersToday,
+      totalExamsTaken,
+      overallPassRate,
+      recentAttempts,
+      recentAnswers,
+      topFailedQuestions,
       planDistribution,
       userGrowth: userGrowthArray,
       revenueByMonth,

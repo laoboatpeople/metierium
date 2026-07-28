@@ -456,6 +456,31 @@ function ExamsPage() {
       saveExamResult(record);
       setSaved(true);
     } catch { /* ignore */ }
+
+    // Persist to server (non-blocking — localStorage is the fallback)
+    try {
+      const token = localStorage.getItem('token');
+      if (token) {
+        fetch(`${API_BASE}/api/attempts`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
+          body: JSON.stringify({
+            tradeId: selectedTrade,
+            score,
+            totalQuestions: questions.length,
+            correctCount: correct,
+            timeSpent: examTime,
+            difficulty: difficulty || null,
+            reviewMode,
+            answers: resultAnswers.map((a) => ({
+              questionId: a.questionId,
+              userAnswer: a.selected,
+              isCorrect: a.correct,
+            })),
+          }),
+        }).catch(() => {});
+      }
+    } catch { /* ignore — server tracking is best-effort */ }
   };
 
   const resetExam = () => {

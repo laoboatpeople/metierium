@@ -43,6 +43,7 @@ model Trade {
   description String?
   chapters    Chapter[]
   questions   Question[]
+  examAttempts ExamAttempt[]
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 }
@@ -76,6 +77,7 @@ model Question {
   answer      String
   explanation String?
   locale      String    @default("fr")
+  attemptAnswers ExamAttemptQuestion[]
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
 
@@ -96,6 +98,8 @@ model User {
   resetToken    String?
   resetTokenExpires DateTime?
   subscription  Subscription[]
+  examAttempts  ExamAttempt[]
+  activityLogs  ActivityLog[]
   createdAt     DateTime     @default(now())
   updatedAt     DateTime     @updatedAt
 }
@@ -111,6 +115,56 @@ model Subscription {
   currentPeriod DateTime?
   createdAt     DateTime   @default(now())
   updatedAt     DateTime   @updatedAt
+}
+
+/// ExamAttempt — one completed exam simulation per user
+model ExamAttempt {
+  id             String   @id @default(cuid())
+  userId         String
+  user           User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tradeId        String
+  trade          Trade    @relation(fields: [tradeId], references: [id])
+  score          Float
+  totalQuestions Int
+  correctCount   Int
+  timeSpent      Int      // seconds
+  difficulty     String?  // EASY, MEDIUM, HARD, or mixed
+  reviewMode     Boolean  @default(false)
+  completedAt    DateTime @default(now())
+
+  answers ExamAttemptQuestion[]
+
+  @@index([userId])
+  @@index([tradeId])
+  @@index([completedAt])
+}
+
+/// ExamAttemptQuestion — individual answer within an attempt
+model ExamAttemptQuestion {
+  id         String  @id @default(cuid())
+  attemptId  String
+  attempt    ExamAttempt @relation(fields: [attemptId], references: [id], onDelete: Cascade)
+  questionId String
+  question   Question @relation(fields: [questionId], references: [id])
+  userAnswer String
+  isCorrect  Boolean
+
+  @@index([attemptId])
+  @@index([questionId])
+}
+
+/// ActivityLog — audit trail for admin dashboard
+model ActivityLog {
+  id        String   @id @default(cuid())
+  userId    String?
+  user      User?    @relation(fields: [userId], references: [id], onDelete: SetNull)
+  action    String
+  details   Json?
+  ipAddress String?
+  createdAt DateTime @default(now())
+
+  @@index([userId])
+  @@index([createdAt])
 }
 
 /// ContactMessage — submissions from the public contact form

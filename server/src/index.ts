@@ -24,6 +24,7 @@ import contactAdminRoutes from './routes/contactAdmin';
 import newsletterRoutes from './routes/newsletter';
 import subscriptionsRoutes from './routes/subscriptions';
 import analyticsRoutes from './routes/analytics';
+import attemptsRoutes from './routes/attempts';
 
 const app = express();
 
@@ -118,6 +119,9 @@ app.use('/api/admin/subscriptions', subscriptionsRoutes);
 
 // Analytics admin routes — admin-only analytics data
 app.use('/api/admin/analytics', analyticsRoutes);
+
+// Attempts routes — authenticated student exam attempt tracking
+app.use('/api/attempts', attemptsRoutes);
 
 // ─── 404 handler ────────────────────────────────────────────────
 

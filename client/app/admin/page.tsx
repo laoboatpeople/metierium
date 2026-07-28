@@ -32,6 +32,11 @@ import {
   MessageSquare,
   PlusCircle,
   Mail,
+  ClipboardCheck,
+  Target,
+  CheckCircle2,
+  XCircle,
+  ListChecks,
 } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -47,6 +52,32 @@ interface DashboardData {
   newUsersThisPeriod: number;
   totalRevenue: number;
   activeUsersToday: number;
+  totalExamsTaken: number;
+  overallPassRate: number;
+  recentAttempts: Array<{
+    id: string;
+    score: number;
+    totalQuestions: number;
+    correctCount: number;
+    completedAt: string;
+    user: { id: string; name: string | null; email: string };
+    trade: { code: string; name: string; nameFr: string };
+  }>;
+  recentAnswers: Array<{
+    id: string;
+    userAnswer: string;
+    isCorrect: boolean;
+    question: { id: string; text: string; difficulty: string };
+    user: { id: string; name: string | null; email: string } | null;
+    completedAt: string;
+  }>;
+  topFailedQuestions: Array<{
+    id: string;
+    question: string;
+    difficulty: string;
+    passRate: number;
+    totalAttempts: number;
+  }>;
   planDistribution: Record<string, number>;
   userGrowth: Array<{ date: string; count: number }>;
   revenueByMonth: Array<{ month: string; amount: number }>;
@@ -261,6 +292,22 @@ export default function AdminDashboard() {
       value: data?.activeUsersToday ?? 0,
       icon: UserCheck,
       color: 'from-[#06B6D4] to-[#0891B2]',
+      href: null,
+      sub: undefined,
+    },
+    {
+      label: t('adminExamsTaken'),
+      value: data?.totalExamsTaken ?? 0,
+      icon: ClipboardCheck,
+      color: 'from-[#3B82F6] to-[#2563EB]',
+      href: null,
+      sub: undefined,
+    },
+    {
+      label: t('adminPassRate'),
+      value: `${data?.overallPassRate ?? 0}%`,
+      icon: Target,
+      color: 'from-[#10B981] to-[#059669]',
       href: null,
       sub: undefined,
     },
@@ -660,6 +707,112 @@ export default function AdminDashboard() {
                     </span>
                     <span className="text-[10px] text-[#64748B]">{formatRelativeTime(q.createdAt)}</span>
                   </div>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="py-8 text-center text-sm text-[#64748B]">{t('adminNoData')}</div>
+          )}
+        </div>
+      </div>
+
+      {/* Learning pulse — 3 columns */}
+      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 mt-8">
+        {/* Recent Exam Attempts */}
+        <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6">
+          <h3 className="text-sm font-semibold text-[#F8FAFC] mb-4">{t('adminRecentAttempts')}</h3>
+          {loading ? (
+            <div className="space-y-3">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div key={i} className="h-10 bg-[#0F1525] rounded animate-pulse" />
+              ))}
+            </div>
+          ) : data?.recentAttempts && data.recentAttempts.length > 0 ? (
+            <div className="space-y-1 max-h-80 overflow-y-auto">
+              {data.recentAttempts.map((a) => {
+                const passed = a.score >= 70;
+                return (
+                  <div key={a.id} className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-[#0F1525] transition-colors">
+                    <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${passed ? 'bg-[#10B981]/15' : 'bg-[#EF4444]/15'}`}>
+                      {passed ? <CheckCircle2 size={14} className="text-[#10B981]" /> : <XCircle size={14} className="text-[#EF4444]" />}
+                    </div>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-sm text-[#F8FAFC] truncate">{a.user.name ?? a.user.email}</p>
+                      <p className="text-[10px] text-[#64748B]">
+                        {locale === 'fr' ? a.trade.nameFr : a.trade.name} · {a.correctCount}/{a.totalQuestions}
+                      </p>
+                    </div>
+                    <div className="flex flex-col items-end gap-1 flex-shrink-0">
+                      <span className={`text-[10px] px-2 py-0.5 rounded-full font-semibold ${passed ? 'bg-[#10B981]/15 text-[#10B981]' : 'bg-[#EF4444]/15 text-[#EF4444]'}`}>
+                        {Math.round(a.score)}%
+                      </span>
+                      <span className="text-[10px] text-[#64748B]">{formatRelativeTime(a.completedAt)}</span>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          ) : (
+            <div className="py-8 text-center text-sm text-[#64748B]">{t('adminNoData')}</div>
+          )}
+        </div>
+
+        {/* Recent Answers */}
+        <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6">
+          <h3 className="text-sm font-semibold text-[#F8FAFC] mb-4">{t('adminRecentAnswers')}</h3>
+          {loading ? (
+            <div className="space-y-3">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div key={i} className="h-10 bg-[#0F1525] rounded animate-pulse" />
+              ))}
+            </div>
+          ) : data?.recentAnswers && data.recentAnswers.length > 0 ? (
+            <div className="space-y-1 max-h-80 overflow-y-auto">
+              {data.recentAnswers.map((ans) => (
+                <div key={ans.id} className="flex items-start gap-3 py-2.5 px-3 rounded-lg hover:bg-[#0F1525] transition-colors">
+                  <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5 ${ans.isCorrect ? 'bg-[#10B981]/15' : 'bg-[#EF4444]/15'}`}>
+                    {ans.isCorrect ? <CheckCircle2 size={14} className="text-[#10B981]" /> : <XCircle size={14} className="text-[#EF4444]" />}
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs text-[#94A3B8] leading-snug line-clamp-2">{ans.question.text}</p>
+                    <p className="text-[10px] text-[#64748B] mt-0.5">
+                      {ans.user ? (ans.user.name ?? ans.user.email) : '—'} · {ans.userAnswer}
+                    </p>
+                  </div>
+                  <span className="text-[10px] text-[#64748B] flex-shrink-0">{formatRelativeTime(ans.completedAt)}</span>
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div className="py-8 text-center text-sm text-[#64748B]">{t('adminNoData')}</div>
+          )}
+        </div>
+
+        {/* Top Failed Questions */}
+        <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6">
+          <h3 className="text-sm font-semibold text-[#F8FAFC] mb-4">{t('adminTopFailed')}</h3>
+          {loading ? (
+            <div className="space-y-3">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <div key={i} className="h-10 bg-[#0F1525] rounded animate-pulse" />
+              ))}
+            </div>
+          ) : data?.topFailedQuestions && data.topFailedQuestions.length > 0 ? (
+            <div className="space-y-1 max-h-80 overflow-y-auto">
+              {data.topFailedQuestions.map((q) => (
+                <div key={q.id} className="flex items-start gap-3 py-2.5 px-3 rounded-lg hover:bg-[#0F1525] transition-colors">
+                  <div className="w-8 h-8 rounded-full bg-[#F59E0B]/15 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <ListChecks size={14} className="text-[#F59E0B]" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <p className="text-xs text-[#94A3B8] leading-snug line-clamp-2">{q.question}</p>
+                    <p className="text-[10px] text-[#64748B] mt-0.5">
+                      {q.totalAttempts} {locale === 'fr' ? 'tentatives' : 'attempts'}
+                    </p>
+                  </div>
+                  <span className="text-[10px] px-2 py-0.5 rounded-full font-semibold bg-[#EF4444]/15 text-[#EF4444] flex-shrink-0">
+                    {q.passRate}%
+                  </span>
                 </div>
               ))}
             </div>
