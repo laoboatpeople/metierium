@@ -20,7 +20,6 @@ import {
   Settings,
   Mail,
   CreditCard,
-  BarChart3,
   Sparkles,
   UserCircle,
 } from 'lucide-react';
@@ -42,7 +41,6 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     { href: '/admin/settings', label: 'Settings', icon: Settings },
     { href: '/admin/newsletter', label: 'Newsletter', icon: Mail },
     { href: '/admin/subscriptions', label: 'Subscriptions', icon: CreditCard },
-    { href: '/admin/analytics', label: 'Analytics', icon: BarChart3 },
     { href: '/admin/ai-generator', label: 'AI Generator', icon: Sparkles },
     { href: '/admin/profile', label: 'Profile', icon: UserCircle },
   ];
