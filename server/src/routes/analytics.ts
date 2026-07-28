@@ -23,16 +23,22 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
 
     const [
       totalUsers,
+      totalTrades,
+      totalChapters,
+      totalQuestions,
       activeSubscriptions,
-      totalExamsTaken,
       userGrowth,
       questionsByDifficulty,
+      questionsByTradeRaw,
+      questionsByLocaleRaw,
+      planDistributionRaw,
+      lastRegisteredUsers,
     ] = await Promise.all([
       prisma.user.count(),
+      prisma.trade.count(),
+      prisma.chapter.count(),
+      prisma.question.count(),
       prisma.subscription.count({ where: { status: 'ACTIVE' } }),
-      prisma.$queryRawUnsafe<Array<{ count: bigint }>>(
-        `SELECT COUNT(*) as count FROM "Question" WHERE "createdAt" >= $1`, [new Date(0).toISOString()]
-      ).catch(() => [{ count: BigInt(0) }]),
       // userGrowth for selected period — group by created date
       prisma.$queryRawUnsafe<Array<{ day: string; count: bigint }>>(
         `SELECT DATE("createdAt") as day, COUNT(*)::int as count FROM "User" WHERE "createdAt" >= $1 GROUP BY DATE("createdAt") ORDER BY day`,
@@ -42,6 +48,31 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       prisma.$queryRawUnsafe<Array<{ difficulty: string; count: bigint }>>(
         `SELECT "difficulty", COUNT(*)::int as count FROM "Question" GROUP BY "difficulty"`
       ).catch(() => []),
+      // questions by trade
+      prisma.$queryRawUnsafe<Array<{ code: string; name: string; "nameFr": string; count: bigint }>>(
+        `SELECT t."code", t."name", t."nameFr", COUNT(q."id")::int as count FROM "Trade" t LEFT JOIN "Question" q ON q."tradeId" = t."id" GROUP BY t."code", t."name", t."nameFr" ORDER BY count DESC`
+      ).catch(() => []),
+      // questions by locale
+      prisma.$queryRawUnsafe<Array<{ locale: string; count: bigint }>>(
+        `SELECT "locale", COUNT(*)::int as count FROM "Question" GROUP BY "locale"`
+      ).catch(() => []),
+      // plan distribution
+      prisma.$queryRawUnsafe<Array<{ plan: string; count: bigint }>>(
+        `SELECT "plan", COUNT(*)::int as count FROM "User" GROUP BY "plan"`
+      ).catch(() => []),
+      // last 15 registered users
+      prisma.user.findMany({
+        orderBy: { createdAt: 'desc' },
+        take: 15,
+        select: {
+          id: true,
+          name: true,
+          email: true,
+          plan: true,
+          role: true,
+          createdAt: true,
+        },
+      }),
     ]);
 
     // Process user growth
@@ -52,6 +83,8 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
         }))
       : [];
 
+    const newUsersThisPeriod = userGrowthArray.reduce((sum, g) => sum + g.count, 0);
+
     // Process questions by difficulty
     const difficultyMap: Record<string, number> = { EASY: 0, MEDIUM: 0, HARD: 0 };
     if (Array.isArray(questionsByDifficulty)) {
@@ -59,6 +92,34 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
         const key = row.difficulty?.toUpperCase() || 'MEDIUM';
         if (key in difficultyMap) {
           difficultyMap[key] = Number(row.count);
+        }
+      }
+    }
+
+    // Questions by trade
+    const questionsByTrade = (questionsByTradeRaw as Array<{ code: string; name: string; nameFr: string; count: bigint }>).map((r) => ({
+      code: r.code,
+      name: r.name,
+      nameFr: r.nameFr,
+      count: Number(r.count),
+    }));
+
+    // Questions by locale
+    const localeMap: Record<string, number> = { fr: 0, en: 0 };
+    if (Array.isArray(questionsByLocaleRaw)) {
+      for (const row of questionsByLocaleRaw as Array<{ locale: string; count: bigint }>) {
+        const key = (row.locale || 'fr').toLowerCase();
+        localeMap[key] = Number(row.count);
+      }
+    }
+
+    // Plan distribution
+    const planDistribution: Record<string, number> = { FREE: 0, MONTHLY: 0, LIFETIME: 0 };
+    if (Array.isArray(planDistributionRaw)) {
+      for (const row of planDistributionRaw as Array<{ plan: string; count: bigint }>) {
+        const key = row.plan?.toUpperCase() || 'FREE';
+        if (key in planDistribution) {
+          planDistribution[key] = Number(row.count);
         }
       }
     }
@@ -82,32 +143,39 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       .sort((a, b) => a.month.localeCompare(b.month))
       .slice(-12);
 
+    const totalRevenue = revenueByMonth.reduce((sum, r) => sum + r.amount, 0);
+
     // Recent activity — last 20 entries from user creation/subscriptions
-    const recentActivity = await prisma.user.findMany({
-      orderBy: { createdAt: 'desc' },
-      take: 20,
-      select: {
-        id: true,
-        name: true,
-        email: true,
-        role: true,
-        createdAt: true,
-      },
-    });
+    const recentActivity = lastRegisteredUsers.map((u) => ({
+      id: u.id,
+      action: 'USER_REGISTERED',
+      createdAt: u.createdAt.toISOString(),
+      user: u.name ? { name: u.name, email: u.email } : { name: u.email, email: u.email },
+      details: { plan: u.plan },
+    }));
 
     res.json({
       totalUsers,
+      totalTrades,
+      totalChapters,
+      totalQuestions,
       activeSubscriptions,
-      overallPassRate: 0,
+      newUsersThisPeriod,
+      totalRevenue,
+      planDistribution,
       userGrowth: userGrowthArray,
       revenueByMonth,
       questionsByDifficulty: difficultyMap,
-      passRateByExam: [],
-      recentActivity: recentActivity.map((u) => ({
+      questionsByTrade,
+      questionsByLocale: localeMap,
+      recentActivity,
+      lastRegisteredUsers: lastRegisteredUsers.map((u) => ({
         id: u.id,
-        action: 'USER_REGISTERED',
+        name: u.name,
+        email: u.email,
+        plan: u.plan,
+        role: u.role,
         createdAt: u.createdAt.toISOString(),
-        user: u.name ? { name: u.name, email: u.email } : undefined,
       })),
     });
   } catch (err) {
