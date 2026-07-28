@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import { Loader2, AlertCircle, Users, Shield, CreditCard, Circle, Plus, Pencil, Trash2, X } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -27,6 +28,7 @@ const emptyForm: FormData = { name: '', email: '', password: '', role: 'STUDENT'
 
 export default function AdminUsers() {
   const { t } = useLocale();
+  const router = useRouter();
   const [users, setUsers] = useState<AppUser[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -192,7 +194,11 @@ export default function AdminUsers() {
                 </tr>
               ) : (
                 users.map((u) => (
-                  <tr key={u.id} className="hover:bg-[#243047]/50 transition-colors">
+                  <tr
+                    key={u.id}
+                    onClick={() => router.push(`/admin/users/${u.id}`)}
+                    className="hover:bg-[#243047]/50 transition-colors cursor-pointer"
+                  >
                     <td className="px-6 py-4">
                       <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded-full bg-[#3B82F6]/20 flex items-center justify-center">
@@ -237,14 +243,14 @@ export default function AdminUsers() {
                     <td className="px-6 py-4">
                       <div className="flex items-center justify-end gap-2">
                         <button
-                          onClick={() => openEditModal(u)}
+                          onClick={(e) => { e.stopPropagation(); openEditModal(u); }}
                           className="p-2 rounded-lg text-[#94A3B8] hover:text-[#3B82F6] hover:bg-[#3B82F6]/10 transition-colors"
                           title={t('adminEditUser')}
                         >
                           <Pencil size={15} />
                         </button>
                         <button
-                          onClick={() => { setDeleteTarget(u); setDeleteError(null); }}
+                          onClick={(e) => { e.stopPropagation(); setDeleteTarget(u); setDeleteError(null); }}
                           className="p-2 rounded-lg text-[#94A3B8] hover:text-[#EF4444] hover:bg-[#EF4444]/10 transition-colors"
                           title={t('adminDeleteUser')}
                         >

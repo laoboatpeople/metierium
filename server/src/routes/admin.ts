@@ -68,6 +68,94 @@ router.get('/users', async (_req: Request, res: Response): Promise<void> => {
 });
 
 /**
+ * GET /api/admin/users/:id
+ * Get a single user with full details: subscriptions, contact messages.
+ */
+router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
+  try {
+    const { id } = req.params;
+
+    const user = await prisma.user.findUnique({
+      where: { id },
+      select: {
+        id: true,
+        email: true,
+        name: true,
+        role: true,
+        plan: true,
+        subStatus: true,
+        stripeId: true,
+        createdAt: true,
+        updatedAt: true,
+        subscription: {
+          orderBy: { createdAt: 'desc' },
+          select: {
+            id: true,
+            plan: true,
+            status: true,
+            stripeSubId: true,
+            currentPeriod: true,
+            createdAt: true,
+            updatedAt: true,
+            tradeId: true,
+          },
+        },
+      },
+    });
+
+    if (!user) {
+      res.status(404).json({ message: 'User not found' });
+      return;
+    }
+
+    // Contact messages matching this user's email
+    const contactMessages = await prisma.contactMessage.findMany({
+      where: { email: { equals: user.email, mode: 'insensitive' } },
+      orderBy: { createdAt: 'desc' },
+      take: 20,
+      select: {
+        id: true,
+        name: true,
+        message: true,
+        direction: true,
+        status: true,
+        createdAt: true,
+      },
+    });
+
+    // Enrich subscriptions with trade names
+    const tradeIds = [...new Set(user.subscription.map((s) => s.tradeId).filter(Boolean))] as string[];
+    const trades = tradeIds.length > 0
+      ? await prisma.trade.findMany({
+          where: { id: { in: tradeIds } },
+          select: { id: true, code: true, name: true, nameFr: true },
+        })
+      : [];
+    const tradeMap = new Map(trades.map((t) => [t.id, t]));
+
+    const subscriptions = user.subscription.map((s) => ({
+      ...s,
+      trade: s.tradeId ? tradeMap.get(s.tradeId) ?? null : null,
+    }));
+
+    res.json({
+      ...user,
+      subscriptions,
+      contactMessages,
+      stats: {
+        totalSubscriptions: user.subscription.length,
+        activeSubscriptions: user.subscription.filter((s) => s.status === 'ACTIVE').length,
+        contactMessageCount: contactMessages.length,
+        accountAgeDays: Math.floor((Date.now() - new Date(user.createdAt).getTime()) / 86400000),
+      },
+    });
+  } catch (err) {
+    console.error('[Admin] Get user error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
  * POST /api/admin/users
  * Create a new user.
  * Body: { name, email, password, role?, plan? }
