@@ -19,6 +19,10 @@ import {
   Sparkles,
   AlertTriangle,
   CheckCircle,
+  CheckCircle2,
+  ListChecks,
+  History,
+  Minus,
   Loader2,
   Brain,
   RefreshCw,
@@ -48,6 +52,12 @@ interface DashboardStats {
   passRate: number;
   studyStreak: number;
   byExam: ExamPerformance[];
+  bestScore: number;
+  examsPassedUnique: number;
+  totalQuestionsAnswered: number;
+  totalCorrect: number;
+  momentum: number;
+  lastAttemptAt: string | null;
 }
 
 // ─── Skeleton ───────────────────────────────────────────
@@ -184,6 +194,19 @@ function ErrorState({ message, onRetry }: { message: string; onRetry: () => void
   );
 }
 
+// ─── Time-ago helper ───────────────────────────────────
+
+function timeAgo(iso: string, t: (path: string, vars?: Record<string, string | number>) => string): string {
+  const diffMs = Date.now() - new Date(iso).getTime();
+  const mins = Math.floor(diffMs / 60000);
+  if (mins < 1) return t('timeAgoNow');
+  if (mins < 60) return t('timeAgoMin', { count: mins });
+  const hours = Math.floor(mins / 60);
+  if (hours < 24) return t('timeAgoHour', { count: hours });
+  const days = Math.floor(hours / 24);
+  return t('timeAgoDay', { count: days });
+}
+
 // ─── Main Dashboard ─────────────────────────────────────
 
 export default function DashboardPage() {
@@ -285,6 +308,27 @@ export default function DashboardPage() {
           streak = 1;
         }
 
+        // ── Extra insights (RealtyLicence parity) ──
+        const bestScore = totalAttempts > 0 ? Math.max(...results.map((r: any) => r.score || 0)) : 0;
+        const examsPassedUnique = byExam.filter(e => e.passedCount > 0).length;
+        const totalQuestionsAnswered = results.reduce((s: number, r: any) => s + (r.totalQuestions || 0), 0);
+        const totalCorrect = results.reduce((s: number, r: any) => s + (r.correct || 0), 0);
+        const lastAttemptAt = results.length > 0 ? results[0].date : null;
+
+        // Momentum: recent performance vs slightly older performance
+        let momentum = 0;
+        if (totalAttempts >= 6) {
+          const last3 = results.slice(0, 3);
+          const prev3 = results.slice(3, 6);
+          const lastAvg = last3.reduce((s: number, r: any) => s + (r.score || 0), 0) / 3;
+          const prevAvg = prev3.reduce((s: number, r: any) => s + (r.score || 0), 0) / 3;
+          momentum = Math.round(lastAvg - prevAvg);
+        } else if (totalAttempts >= 2) {
+          const rest = results.slice(1);
+          const restAvg = rest.reduce((s: number, r: any) => s + (r.score || 0), 0) / rest.length;
+          momentum = Math.round((results[0].score || 0) - restAvg);
+        }
+
         setStats({
           totalExams,
           totalAttempts,
@@ -292,6 +336,12 @@ export default function DashboardPage() {
           passRate,
           studyStreak: streak,
           byExam,
+          bestScore,
+          examsPassedUnique,
+          totalQuestionsAnswered,
+          totalCorrect,
+          momentum,
+          lastAttemptAt,
         });
       } catch (err: any) {
         setError(err?.message || t('dashboardLoadError'));
@@ -380,8 +430,12 @@ export default function DashboardPage() {
   }
 
   // ── Loaded state ───────────────────────────────────
-  const { totalExams, totalAttempts, averageScore, passRate, studyStreak, byExam } = stats!;
+  const {
+    totalExams, totalAttempts, averageScore, passRate, studyStreak, byExam,
+    bestScore, examsPassedUnique, totalQuestionsAnswered, totalCorrect, momentum, lastAttemptAt,
+  } = stats!;
   const totalPassed = byExam.reduce((sum, e) => sum + e.passedCount, 0);
+  const accuracy = totalQuestionsAnswered > 0 ? Math.round((totalCorrect / totalQuestionsAnswered) * 100) : 0;
 
   const getLocalizedChapterName = (chapterId: string | undefined, fallback: string) => {
     if (!chapterId) return fallback;
@@ -510,8 +564,55 @@ export default function DashboardPage() {
         </motion.div>
       </div>
 
+      {/* Insights row — RealtyLicence parity */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+        <StatCardS
+          title={t('dashboardPersonalBest')}
+          value={totalAttempts > 0 ? `${bestScore}%` : '—'}
+          icon={<Trophy size={16} />}
+          color={bestScore >= 70 ? 'green' : 'amber'}
+          subtitle={t('dashboardPersonalBestSubtitle')}
+        />
+        <StatCardS
+          title={t('dashboardExamsPassedCard')}
+          value={`${examsPassedUnique}/${byExam.length}`}
+          icon={<CheckCircle2 size={16} />}
+          color={examsPassedUnique > 0 ? 'green' : 'amber'}
+          subtitle={t('dashboardExamsPassedSubtitle', { count: examsPassedUnique, total: byExam.length })}
+        />
+        <StatCardS
+          title={t('dashboardQuestionsAnswered')}
+          value={totalQuestionsAnswered}
+          icon={<ListChecks size={16} />}
+          color="blue"
+          subtitle={t('dashboardQuestionsAnsweredSubtitle', { correct: totalCorrect, accuracy })}
+        />
+        <StatCardS
+          title={t('dashboardMomentum')}
+          value={momentum > 0 ? `+${momentum}%` : momentum < 0 ? `${momentum}%` : '±0%'}
+          icon={momentum > 0 ? <TrendingUp size={16} /> : momentum < 0 ? <TrendingDown size={16} /> : <Minus size={16} />}
+          color={momentum > 0 ? 'green' : momentum < 0 ? 'amber' : 'amber'}
+          subtitle={
+            totalAttempts < 2
+              ? t('dashboardMomentumSubtitle')
+              : momentum > 0
+                ? t('dashboardMomentumUp')
+                : momentum < 0
+                  ? t('dashboardMomentumDown')
+                  : t('dashboardMomentumFlat')
+          }
+        />
+        <StatCardS
+          title={t('dashboardLastActivity')}
+          value={lastAttemptAt ? timeAgo(lastAttemptAt, t) : '—'}
+          icon={<History size={16} />}
+          color="purple"
+          subtitle={t('dashboardLastActivitySubtitle')}
+        />
+      </div>
+
       {/* Strength / Weakness */}
-      {(strongest || weakest) && (
+      {byExam.length > 0 && (
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
@@ -535,7 +636,7 @@ export default function DashboardPage() {
               </div>
             </div>
           )}
-          {weakest && (
+          {weakest ? (
             <div
               className="bg-[#1A2035] border border-[#EF4444]/20 rounded-xl p-4 cursor-pointer hover:bg-[#243047]/30 transition-colors"
               onClick={() => window.location.href = `/exams`}
@@ -551,9 +652,15 @@ export default function DashboardPage() {
                 <span>{t('dashboardAttemptsShort', { count: weakest.totalAttempts })}</span>
               </div>
             </div>
+          ) : (
+            <div className="bg-[#1A2035] border border-[#22C55E]/20 rounded-xl p-4 flex flex-col justify-center">
+              <div className="flex items-center gap-2 mb-2">
+                <CheckCircle size={14} className="text-[#22C55E]" />
+                <span className="text-xs font-bold uppercase tracking-wider text-[#22C55E]">{t('dashboardWeakness')}</span>
+              </div>
+              <p className="text-sm text-[#94A3B8]">{t('dashboardNoWeaknessDesc')}</p>
+            </div>
           )}
-          {!strongest && <div />}
-          {!weakest && <div />}
         </motion.div>
       )}
 
