@@ -262,7 +262,7 @@ export default function DashboardPage() {
         let totalPassed = 0;
         let totalExams = examMap.size;
 
-        for (const [, entry] of examMap) {
+        for (const [tradeId, entry] of examMap) {
           const scores = entry.scores;
           const avg = Math.round(scores.reduce((a, b) => a + b, 0) / scores.length);
           const best = Math.max(...scores);
@@ -272,7 +272,7 @@ export default function DashboardPage() {
           totalPassed += entry.passedCount;
 
           byExam.push({
-            examId: entry.examCode,
+            examId: tradeId,
             examCode: entry.examCode,
             examName: entry.examName,
             totalAttempts: scores.length,
