@@ -2,7 +2,7 @@
   {
     "slug": "metierium-cest-quoi",
     "question": "Qu'est-ce que Metierium ?",
-    "answer": "<p><strong>Metierium</strong> est une plateforme de préparation aux examens de certification des métiers réglementés au Québec. Nous couvrons <strong>16 métiers</strong> incluant CMEQ (électriciens), CMMTQ (plombiers), QBQ (soudeurs), RBQ (entrepreneurs généraux, gaz, ascenseurs, etc.), CCQ (ferblantiers, briqueteurs, opérateurs d'équipement lourd) et ASP Construction (SST).</p><p>Notre mission est de vous aider à réussir votre examen de certification avec du contenu théorique complet, des simulations d'examen et un suivi personnalisé.</p>",
+    "answer": "<p><strong>Metierium</strong> est une plateforme de préparation aux examens de certification des métiers réglementés au Québec. Nous couvrons <strong>17 métiers</strong> incluant CMEQ (électriciens), CMMTQ (plombiers), QBQ (soudeurs), RBQ (entrepreneurs généraux, gaz, ascenseurs, etc.), CCQ (ferblantiers, briqueteurs, opérateurs d'équipement lourd) et ASP Construction (SST).</p><p>Notre mission est de vous aider à réussir votre examen de certification avec du contenu théorique complet, des simulations d'examen et un suivi personnalisé.</p>",
     "category": "Metierium",
     "trade": "Général",
     "keywords": [
@@ -17,7 +17,7 @@
   {
     "slug": "metierium-comment-ca-marche",
     "question": "Comment fonctionne Metierium ?",
-    "answer": "<p>Metierium fonctionne en <strong>3 étapes simples</strong> :</p><ol><li><strong>Choisissez votre métier</strong> — Sélectionnez votre domaine parmi les 16 métiers disponibles (électricien, plombier, entrepreneur général, etc.)</li><li><strong>Étudiez la théorie</strong> — Consultez le contenu théorique complet pour chaque chapitre de votre examen</li><li><strong>Pratiquez avec des examens blancs</strong> — Testez vos connaissances avec des simulations d'examen chronométrées et obtenez des explications détaillées</li></ol><p>Vous pouvez suivre votre progression, identifier vos points faibles et vous améliorer à chaque tentative.</p>",
+    "answer": "<p>Metierium fonctionne en <strong>3 étapes simples</strong> :</p><ol><li><strong>Choisissez votre métier</strong> — Sélectionnez votre domaine parmi les 17 métiers disponibles (électricien, plombier, entrepreneur général, etc.)</li><li><strong>Étudiez la théorie</strong> — Consultez le contenu théorique complet pour chaque chapitre de votre examen</li><li><strong>Pratiquez avec des examens blancs</strong> — Testez vos connaissances avec des simulations d'examen chronométrées et obtenez des explications détaillées</li></ol><p>Vous pouvez suivre votre progression, identifier vos points faibles et vous améliorer à chaque tentative.</p>",
     "category": "Metierium",
     "trade": "Général",
     "keywords": [
@@ -63,7 +63,7 @@
   {
     "slug": "metierium-combien-questions",
     "question": "Combien de questions d'examen sont disponibles sur Metierium ?",
-    "answer": "<p>Metierium propose actuellement <strong>plus de 8 000 questions</strong> à choix multiples réparties sur les 16 métiers. Chaque question est accompagnée d'une explication détaillée pour vous aider à comprendre la réponse.</p><p>Les questions sont classées par chapitre et par niveau de difficulté (Facile, Moyen, Difficile) pour un apprentissage progressif. De nouvelles questions sont ajoutées régulièrement.</p>",
+    "answer": "<p>Metierium propose actuellement <strong>plus de 8 000 questions</strong> à choix multiples réparties sur les 17 métiers. Chaque question est accompagnée d'une explication détaillée pour vous aider à comprendre la réponse.</p><p>Les questions sont classées par chapitre et par niveau de difficulté (Facile, Moyen, Difficile) pour un apprentissage progressif. De nouvelles questions sont ajoutées régulièrement.</p>",
     "category": "Metierium",
     "trade": "Général",
     "keywords": [
@@ -123,7 +123,7 @@
   {
     "slug": "metierium-comment-commencer",
     "question": "Comment commencer à utiliser Metierium ?",
-    "answer": "<p>Pour commencer avec Metierium :</p><ol><li>Créez un compte gratuit sur <a href=\"/auth/register\">la page d'inscription</a></li><li>Explorez les 16 métiers disponibles</li><li>Choisissez un métier et commencez par le premier chapitre gratuit</li><li>Si vous souhaitez accéder à tout le contenu, choisissez un abonnement Mensuel ou À vie</li></ol><p>L'inscription ne prend qu'une minute et vous donne accès immédiat au contenu d'essai.</p>",
+    "answer": "<p>Pour commencer avec Metierium :</p><ol><li>Créez un compte gratuit sur <a href=\"/auth/register\">la page d'inscription</a></li><li>Explorez les 17 métiers disponibles</li><li>Choisissez un métier et commencez par le premier chapitre gratuit</li><li>Si vous souhaitez accéder à tout le contenu, choisissez un abonnement Mensuel ou À vie</li></ol><p>L'inscription ne prend qu'une minute et vous donne accès immédiat au contenu d'essai.</p>",
     "category": "Metierium",
     "trade": "Général",
     "keywords": [
@@ -137,8 +137,8 @@
   },
   {
     "slug": "metierium-types-metiers",
-    "question": "Quels sont les 16 métiers couverts par Metierium ?",
-    "answer": "<p>Metierium couvre les <strong>16 métiers</strong> suivants :</p><ol><li><strong>CMEQ</strong> — Électricien (Maître électricien)</li><li><strong>CMMTQ</strong> — Plombier (Maître plombier)</li><li><strong>QBQ</strong> — Soudeur (Québec Bureau de Qualification)</li><li><strong>HVAC</strong> — Chauffage-Climatisation (CMMTQ)</li><li><strong>MVL</strong> — Mécanicien Véhicules Lourds (CCQ)</li><li><strong>INCENDIE</strong> — Sécurité Incendie (RBQ)</li><li><strong>FERBLAN</strong> — Ferblantier-Tôlier (CCQ)</li><li><strong>BRIQUE</strong> — Briqueteur-Maçon (CCQ)</li><li><strong>OPEQUIP</strong> — Opérateur Équipement Lourd (CCQ)</li><li><strong>GAZ</strong> — Technicien Gaz (RBQ)</li><li><strong>ASCEN</strong> — Mécanicien Ascenseurs (RBQ)</li><li><strong>REFRIG</strong> — Réfrigération (RBQ)</li><li><strong>CONSTR</strong> — Constructeur-Rénovateur (RBQ)</li><li><strong>ENTGEN</strong> — Entrepreneur Général (RBQ)</li><li><strong>INSPECT</strong> — Inspecteur Bâtiment (RBQ)</li><li><strong>SST</strong> — Coordonnateur SST (ASP Construction)</li></ol>",
+    "question": "Quels sont les 17 métiers couverts par Metierium ?",
+    "answer": "<p>Metierium couvre les <strong>17 métiers</strong> suivants :</p><ol><li><strong>CMEQ</strong> — Électricien (Maître électricien)</li><li><strong>CMMTQ</strong> — Plombier (Maître plombier)</li><li><strong>QBQ</strong> — Soudeur (Québec Bureau de Qualification)</li><li><strong>HVAC</strong> — Chauffage-Climatisation (CMMTQ)</li><li><strong>MVL</strong> — Mécanicien Véhicules Lourds (CCQ)</li><li><strong>INCENDIE</strong> — Sécurité Incendie (RBQ)</li><li><strong>FERBLAN</strong> — Ferblantier-Tôlier (CCQ)</li><li><strong>BRIQUE</strong> — Briqueteur-Maçon (CCQ)</li><li><strong>OPEQUIP</strong> — Opérateur Équipement Lourd (CCQ)</li><li><strong>GAZ</strong> — Technicien Gaz (RBQ)</li><li><strong>ASCEN</strong> — Mécanicien Ascenseurs (RBQ)</li><li><strong>REFRIG</strong> — Réfrigération (RBQ)</li><li><strong>CONSTR</strong> — Constructeur-Rénovateur (RBQ)</li><li><strong>ENTGEN</strong> — Entrepreneur Général (RBQ)</li><li><strong>INSPECT</strong> — Inspecteur Bâtiment (RBQ)</li><li><strong>SST</strong> — Coordonnateur SST (ASP Construction)</li><li><strong>GESTRAV</strong> — Gestion des travaux (RBQ)</li></ol>",
     "category": "Metierium",
     "trade": "Général",
     "keywords": [
@@ -187,7 +187,7 @@
   {
     "slug": "what-is-metierium",
     "question": "What is Metierium?",
-    "answer": "<p><strong>Metierium</strong> is a platform for preparing for regulated trade certification exams in Quebec. We cover <strong>16 trades</strong> including CMEQ (electricians), CMMTQ (plumbers), QBQ (welders), RBQ (general contractors, gas, elevators, etc.), CCQ (tinsmiths, bricklayers, heavy equipment operators), and ASP Construction (OHS).</p><p>Our mission is to help you pass your certification exam with comprehensive theoretical content, exam simulations, and personalized progress tracking.</p>",
+    "answer": "<p><strong>Metierium</strong> is a platform for preparing for regulated trade certification exams in Quebec. We cover <strong>17 trades</strong> including CMEQ (electricians), CMMTQ (plumbers), QBQ (welders), RBQ (general contractors, gas, elevators, etc.), CCQ (tinsmiths, bricklayers, heavy equipment operators), and ASP Construction (OHS).</p><p>Our mission is to help you pass your certification exam with comprehensive theoretical content, exam simulations, and personalized progress tracking.</p>",
     "category": "Metierium",
     "trade": "Général",
     "keywords": [
@@ -248,7 +248,7 @@
   {
     "slug": "how-many-exam-questions",
     "question": "How many exam questions are available on Metierium?",
-    "answer": "<p>Metierium currently offers <strong>over 8,000 multiple-choice questions</strong> spread across 16 trades. Each question comes with a detailed explanation to help you understand the answer.</p><p>Questions are organized by chapter and difficulty level (Easy, Medium, Hard) for progressive learning. New questions are added regularly.</p>",
+    "answer": "<p>Metierium currently offers <strong>over 8,000 multiple-choice questions</strong> spread across 17 trades. Each question comes with a detailed explanation to help you understand the answer.</p><p>Questions are organized by chapter and difficulty level (Easy, Medium, Hard) for progressive learning. New questions are added regularly.</p>",
     "category": "Metierium",
     "trade": "Général",
     "keywords": [
@@ -322,8 +322,8 @@
   },
   {
     "slug": "list-of-16-trades-covered",
-    "question": "What are the 16 trades covered by Metierium?",
-    "answer": "<p>Metierium covers the following <strong>16 trades</strong>:</p><ol><li><strong>CMEQ</strong> — Electrician (Master Electrician)</li><li><strong>CMMTQ</strong> — Plumber (Master Plumber)</li><li><strong>QBQ</strong> — Welder (Quebec Bureau of Qualification)</li><li><strong>HVAC</strong> — Heating & Air Conditioning (CMMTQ)</li><li><strong>MVL</strong> — Heavy Vehicle Mechanic (CCQ)</li><li><strong>INCENDIE</strong> — Fire Safety (RBQ)</li><li><strong>FERBLAN</strong> — Tinsmith-Sheet Metal Worker (CCQ)</li><li><strong>BRIQUE</strong> — Bricklayer-Mason (CCQ)</li><li><strong>OPEQUIP</strong> — Heavy Equipment Operator (CCQ)</li><li><strong>GAZ</strong> — Gas Technician (RBQ)</li><li><strong>ASCEN</strong> — Elevator Mechanic (RBQ)</li><li><strong>REFRIG</strong> — Refrigeration (RBQ)</li><li><strong>CONSTR</strong> — Builder-Renovator (RBQ)</li><li><strong>ENTGEN</strong> — General Contractor (RBQ)</li><li><strong>INSPECT</strong> — Building Inspector (RBQ)</li><li><strong>SST</strong> — OHS Coordinator (ASP Construction)</li></ol>",
+    "question": "What are the 17 trades covered by Metierium?",
+    "answer": "<p>Metierium covers the following <strong>17 trades</strong>:</p><ol><li><strong>CMEQ</strong> — Electrician (Master Electrician)</li><li><strong>CMMTQ</strong> — Plumber (Master Plumber)</li><li><strong>QBQ</strong> — Welder (Quebec Bureau of Qualification)</li><li><strong>HVAC</strong> — Heating & Air Conditioning (CMMTQ)</li><li><strong>MVL</strong> — Heavy Vehicle Mechanic (CCQ)</li><li><strong>INCENDIE</strong> — Fire Safety (RBQ)</li><li><strong>FERBLAN</strong> — Tinsmith-Sheet Metal Worker (CCQ)</li><li><strong>BRIQUE</strong> — Bricklayer-Mason (CCQ)</li><li><strong>OPEQUIP</strong> — Heavy Equipment Operator (CCQ)</li><li><strong>GAZ</strong> — Gas Technician (RBQ)</li><li><strong>ASCEN</strong> — Elevator Mechanic (RBQ)</li><li><strong>REFRIG</strong> — Refrigeration (RBQ)</li><li><strong>CONSTR</strong> — Builder-Renovator (RBQ)</li><li><strong>ENTGEN</strong> — General Contractor (RBQ)</li><li><strong>INSPECT</strong> — Building Inspector (RBQ)</li><li><strong>SST</strong> — OHS Coordinator (ASP Construction)</li><li><strong>GESTRAV</strong> — Construction Project Management (RBQ)</li></ol>",
     "category": "Metierium",
     "trade": "Général",
     "keywords": [
@@ -5284,5 +5284,122 @@
       "pass contractor license"
     ],
     "locale": "en"
+  },
+  {
+    "slug": "gestrav-examen-gestion-travaux-rbq",
+    "question": "Qu'est-ce que l'examen de gestion des travaux de la RBQ ?",
+    "answer": "<p>L'examen de <strong>gestion des travaux</strong> de la RBQ évalue les compétences administratives et de gestion nécessaires pour diriger des chantiers de construction au Québec. Contrairement aux examens techniques par métier, cet examen est <strong>transversal</strong> — il s'adresse à tous les entrepreneurs, peu importe leur spécialité.</p><p>Il couvre 8 grands domaines :</p><ol><li><strong>Estimation de coûts et soumissions</strong> — métré, coûts directs/indirects, contingences, marge bénéficiaire</li><li><strong>Planification et ordonnancement</strong> — Gantt, CPM/PERT, chemin critique, allocation des ressources</li><li><strong>Gestion de la main-d'œuvre</strong> — Loi R-20, CCQ, conventions collectives, sous-traitance</li><li><strong>Cadre légal et réglementaire</strong> — licence RBQ, Loi sur le bâtiment, Code de construction, GCR</li><li><strong>Santé et sécurité</strong> — LSST, RSST, CNESST, EPI, droit de refus</li><li><strong>Gestion des contrats</strong> — CCDC, cautionnements, hypothèque légale, litiges</li><li><strong>Gestion financière</strong> — budget, valeur acquise (EVM), flux de trésorerie, TPS/TVQ</li><li><strong>Qualité et clôture</strong> — QA/QC, punch list, réception, documents as-built</li></ol>",
+    "category": "GESTRAV Gestion des travaux",
+    "keywords": [
+      "gestion des travaux",
+      "RBQ",
+      "examen",
+      "entrepreneur",
+      "chantier",
+      "estimation",
+      "planification"
+    ]
+  },
+  {
+    "slug": "gestrav-preparation-examen-gestion-travaux",
+    "question": "Comment se préparer à l'examen de gestion des travaux RBQ ?",
+    "answer": "<p>Voici une stratégie de préparation efficace pour l'examen de gestion des travaux :</p><ol><li><strong>Étudiez la théorie par chapitre</strong> — Commencez par l'estimation et la planification, puis avancez vers les aspects légaux et financiers. Chaque chapitre de Metierium contient un manuel d'étude complet</li><li><strong>Maîtrisez les calculs</strong> — L'examen inclut des calculs de coûts, de contingences, de valeur acquise (CPI, SPI, EAC) et de flux de trésorerie. Pratiquez avec des exemples concrets</li><li><strong>Connaissez les lois québécoises</strong> — LSST, RSST, Loi sur le bâtiment, Loi R-20, C.c.Q. (art. 2726 hypothèque légale), GCR. Les numéros d'articles sont souvent demandés</li><li><strong>Faites des examens blancs</strong> — Metierium offre 594 questions en français avec explications. Simulez les conditions réelles (temps limité, sans notes)</li><li><strong>Révisez vos points faibles</strong> — Le tableau de bord identifie vos chapitres les plus faibles. Concentrez-vous dessus en priorité</li></ol><p><strong>Seuil de réussite :</strong> 70 %. Avec une préparation sérieuse de 4 à 6 semaines, la grande majorité des candidats réussissent du premier coup.</p>",
+    "category": "GESTRAV Gestion des travaux",
+    "keywords": [
+      "préparation",
+      "examen",
+      "gestion des travaux",
+      "RBQ",
+      "étude",
+      "réussite"
+    ]
+  },
+  {
+    "slug": "gestrav-estimation-couts-soumissions",
+    "question": "Que couvre le chapitre sur l'estimation de coûts et les soumissions ?",
+    "answer": "<p>Le chapitre 1 du parcours Gestion des travaux couvre l'<strong>estimation de coûts</strong> et le processus de <strong>soumission</strong> en construction :</p><ul><li><strong>Métré et quantités</strong> — Calcul des surfaces (m²), volumes (m³), longueurs (ml) à partir des plans et devis</li><li><strong>Coûts directs</strong> — Main-d'œuvre (taux horaire CCQ), matériaux (prix unitaires), équipements (location ou amortissement)</li><li><strong>Coûts indirects</strong> — Frais de chantier, supervision, assurances, permis, installation de chantier</li><li><strong>Contingence</strong> — Réserve pour imprévus (5 à 15 % selon le risque du projet)</li><li><strong>Marge bénéficiaire</strong> — Profit net de l'entrepreneur (typiquement 5 à 15 %)</li><li><strong>Facteur de majoration</strong> — Multiplicateur appliqué aux coûts directs pour couvrir les frais généraux et le profit</li><li><strong>Types de soumissions</strong> — Forfait (lump sum), prix unitaire, coût majoré (cost-plus)</li><li><strong>Appel d'offres</strong> — Processus de soumission publique et privée, dépôt électronique (SEAO au Québec)</li></ul><p>Ce chapitre inclut des <strong>exercices de calcul</strong> : estimation complète d'un projet, calcul du facteur de majoration, analyse de prix unitaires.</p>",
+    "category": "GESTRAV Gestion des travaux",
+    "keywords": [
+      "estimation",
+      "soumission",
+      "coûts",
+      "métré",
+      "forfait",
+      "prix unitaire"
+    ]
+  },
+  {
+    "slug": "gestrav-sst-lsst-rsst-chantier",
+    "question": "Quelles sont les obligations SST sur un chantier de construction au Québec ?",
+    "answer": "<p>La <strong>santé et sécurité du travail (SST)</strong> sur les chantiers québécois est régie par la <strong>LSST</strong> (Loi sur la santé et la sécurité du travail) et le <strong>RSST</strong> (Règlement sur la SST). La CNESST veille à l'application.</p><p><strong>Obligations de l'employeur (art. 51 LSST) :</strong></p><ul><li>Fournir des équipements de protection individuelle (EPI) conformes CSA</li><li>Élaborer un programme de prévention</li><li>Former les travailleurs sur les risques</li><li>Maintenir un environnement sécuritaire</li></ul><p><strong>Règles techniques clés (RSST) :</strong></p><ul><li><strong>Chutes :</strong> Garde-corps obligatoire à partir de 3 mètres</li><li><strong>Tranchées :</strong> Blindage obligatoire au-delà de 1,2 m</li><li><strong>Espaces clos :</strong> Permis de travail + analyse d'atmosphère + surveillant</li><li><strong>Cadenassage :</strong> Procédure obligatoire avant tout travail sur équipements énergisés</li><li><strong>SIMDUT/WHMIS :</strong> Étiquetage + FDS + formation pour tous les produits dangereux</li></ul><p><strong>Droit de refus :</strong> Un travailleur peut refuser un travail dangereux sans représailles. Un inspecteur CNESST tranche en cas de désaccord.</p>",
+    "category": "GESTRAV Gestion des travaux",
+    "keywords": [
+      "SST",
+      "LSST",
+      "RSST",
+      "CNESST",
+      "sécurité",
+      "chantier",
+      "EPI",
+      "cadenassage"
+    ]
+  },
+  {
+    "slug": "gestrav-contrats-cautionnement-hypotheque",
+    "question": "Quels sont les types de contrats et garanties en construction au Québec ?",
+    "answer": "<p>Le chapitre sur la <strong>gestion des contrats</strong> couvre les aspects juridiques essentiels :</p><p><strong>Types de contrats :</strong></p><ul><li><strong>Forfait (lump sum)</strong> — Prix global fixe. Le client connaît le coût total d'avance</li><li><strong>Prix unitaire</strong> — Prix par unité (m³, ml). Fréquent en génie civil</li><li><strong>Coût majoré (cost-plus)</strong> — Coûts réels + marge. Flexibilité maximale</li></ul><p><strong>Garanties et cautionnements :</strong></p><ul><li><strong>Cautionnement de soumission</strong> — 10 % du prix soumissionné</li><li><strong>Cautionnement d'exécution</strong> — 50 % du prix du contrat</li><li><strong>Cautionnement de paiement</strong> — 50 % du prix du contrat</li><li><strong>Retenue contractuelle</strong> — 10 % de chaque paiement progressif</li></ul><p><strong>Hypothèque légale (art. 2726 C.c.Q.) :</strong></p><p>Les entrepreneurs, sous-traitants et fournisseurs peuvent inscrire une hypothèque légale sur l'immeuble dans les <strong>30 jours</strong> suivant la fin des travaux. C'est une garantie puissante qui permet la vente en justice pour recouvrer une créance impayée.</p><p><strong>Résolution des litiges :</strong> Négociation → Médiation → Arbitrage → Tribunal. Prescription : 3 ans (art. 2925 C.c.Q.).</p>",
+    "category": "GESTRAV Gestion des travaux",
+    "keywords": [
+      "contrats",
+      "cautionnement",
+      "hypothèque légale",
+      "CCDC",
+      "retenue",
+      "litiges"
+    ]
+  },
+  {
+    "slug": "gestrav-construction-project-management-exam",
+    "question": "What is the RBQ Construction Project Management exam?",
+    "answer": "<p>The <strong>Construction Project Management</strong> exam from the RBQ assesses the administrative and management skills needed to run construction sites in Quebec. Unlike trade-specific technical exams, this exam is <strong>cross-cutting</strong> — it applies to all contractors regardless of specialty.</p><p>It covers 8 major areas:</p><ol><li><strong>Cost estimation and bidding</strong> — quantity takeoffs, direct/indirect costs, contingencies, profit margins</li><li><strong>Planning and scheduling</strong> — Gantt charts, CPM/PERT, critical path, resource allocation</li><li><strong>Workforce management</strong> — Act R-20, CCQ, collective agreements, subcontracting</li><li><strong>Legal and regulatory framework</strong> — RBQ licensing, Building Act, Construction Code, GCR warranty</li><li><strong>Health and safety</strong> — OHSA, OHS Regulation, CNESST, PPE, right of refusal</li><li><strong>Contract management</strong> — CCDC, bonds, legal hypothec, disputes</li><li><strong>Financial management</strong> — budgets, earned value (EVM), cash flow, GST/QST</li><li><strong>Quality and closeout</strong> — QA/QC, punch lists, acceptance, as-built documents</li></ol>",
+    "category": "GESTRAV Construction Management",
+    "keywords": [
+      "construction management",
+      "RBQ",
+      "exam",
+      "contractor",
+      "site management",
+      "estimation",
+      "planning"
+    ]
+  },
+  {
+    "slug": "gestrav-exam-preparation-tips",
+    "question": "How should I prepare for the RBQ Construction Project Management exam?",
+    "answer": "<p>Here's an effective preparation strategy:</p><ol><li><strong>Study theory chapter by chapter</strong> — Start with estimation and planning, then move to legal and financial aspects. Each Metierium chapter contains a complete study guide</li><li><strong>Master the calculations</strong> — The exam includes cost calculations, contingencies, earned value metrics (CPI, SPI, EAC), and cash flow projections</li><li><strong>Know Quebec laws</strong> — OHSA, OHS Regulation, Building Act, Act R-20, C.C.Q. (art. 2726 legal hypothec), GCR. Article numbers are frequently tested</li><li><strong>Take practice exams</strong> — Metierium offers 594 English questions with explanations. Simulate real conditions (timed, no notes)</li><li><strong>Review weak areas</strong> — The dashboard identifies your weakest chapters. Focus on those first</li></ol><p><strong>Passing threshold:</strong> 70%. With 4-6 weeks of serious preparation, most candidates pass on their first attempt.</p>",
+    "category": "GESTRAV Construction Management",
+    "keywords": [
+      "preparation",
+      "exam",
+      "construction management",
+      "RBQ",
+      "study",
+      "passing"
+    ]
+  },
+  {
+    "slug": "gestrav-ohs-obligations-quebec",
+    "question": "What are the OHS obligations on a Quebec construction site?",
+    "answer": "<p><strong>Occupational health and safety (OHS)</strong> on Quebec construction sites is governed by the <strong>OHSA</strong> (Occupational Health and Safety Act) and the <strong>OHS Regulation</strong>. The CNESST enforces compliance.</p><p><strong>Employer obligations (s. 51 OHSA):</strong></p><ul><li>Provide CSA-compliant personal protective equipment (PPE)</li><li>Develop a prevention program</li><li>Train workers on hazards</li><li>Maintain a safe environment</li></ul><p><strong>Key technical rules (OHSR):</strong></p><ul><li><strong>Falls:</strong> Guardrails required from 3 metres</li><li><strong>Trenches:</strong> Shoring required beyond 1.2 m</li><li><strong>Confined spaces:</strong> Work permit + atmosphere testing + attendant</li><li><strong>Lockout:</strong> Mandatory procedure before work on energized equipment</li><li><strong>WHMIS:</strong> Labelling + SDS + training for all hazardous products</li></ul><p><strong>Right of refusal:</strong> A worker may refuse dangerous work without reprisal. A CNESST inspector rules in case of disagreement.</p>",
+    "category": "GESTRAV Construction Management",
+    "keywords": [
+      "OHS",
+      "OHSA",
+      "CNESST",
+      "safety",
+      "construction site",
+      "PPE",
+      "lockout"
+    ]
   }
 ]

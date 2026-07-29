@@ -81,7 +81,7 @@ const fr: Record<string, unknown> = {
   questionCardLabel: 'Exemple de question',
   questionCardText: 'Quel composant du cycle de réfrigération augmente la pression du réfrigérant ?',
   questionCardOptions: 'Évaporateur,Détendeur,Compresseur,Condenseur',
-  questionCardFooter: 'Plus de 2 400 questions dans 5 métiers',
+  questionCardFooter: 'Plus de 18 000 questions dans 17 métiers',
 
   // Nav
   navFaq: 'FAQ',
@@ -144,6 +144,8 @@ const fr: Record<string, unknown> = {
   tradeInspectDesc: 'Préparation à l\'examen de certification RBQ en inspection de bâtiments — code, structures, enveloppe et sécurité.',
   tradeSst: 'Coordonnateur SST (ASP Const.)',
   tradeSstDesc: 'Préparation à l\'examen de certification ASP Construction en coordination SST — prévention, IRSST, gestion de chantier.',
+  tradeGestrav: 'Gestion des travaux (RBQ)',
+  tradeGestravDesc: 'Préparation à l\'examen RBQ en gestion des travaux — estimation, planification, contrats, SST, finances et clôture de projet.',
   comingSoon: 'À Venir',
 
   // Trade page ([slug]/page.tsx)
@@ -172,6 +174,7 @@ const fr: Record<string, unknown> = {
   tradePageEntgenDesc: 'Entrepreneur général — RBQ',
   tradePageInspectDesc: 'Inspecteur en bâtiment — RBQ',
   tradePageSstDesc: 'Coordonnateur SST — ASP Construction',
+  tradePageGestravDesc: 'Gestion des travaux — RBQ',
 
   // Landing page - Pricing
   pricingTitle: 'Choisissez votre plan',
@@ -915,7 +918,7 @@ const en: Record<string, string> = {
   questionCardLabel: 'Sample Question',
   questionCardText: 'Which component of the refrigeration cycle increases the pressure of the refrigerant?',
   questionCardOptions: 'Evaporator,Expansion Valve,Compressor,Condenser',
-  questionCardFooter: 'Over 2,400 questions across 16 trades',
+  questionCardFooter: 'Over 18,000 questions across 17 trades',
 
   // Nav
   navFaq: 'FAQ',
@@ -978,6 +981,8 @@ const en: Record<string, string> = {
   tradeInspectDesc: 'Preparation for the RBQ building inspection certification exam — code, structures, envelope and safety.',
   tradeSst: 'Safety Coordinator (ASP Const.)',
   tradeSstDesc: 'Preparation for the ASP Construction safety coordinator certification exam — prevention, IRSST, site management.',
+  tradeGestrav: 'Construction Project Management (RBQ)',
+  tradeGestravDesc: 'Preparation for the RBQ construction project management exam — estimation, planning, contracts, OHS, finances and project closeout.',
   comingSoon: 'Coming Soon',
 
   // Trade page ([slug]/page.tsx)
@@ -1006,6 +1011,7 @@ const en: Record<string, string> = {
   tradePageEntgenDesc: 'General Contractor — RBQ',
   tradePageInspectDesc: 'Building Inspector — RBQ',
   tradePageSstDesc: 'Safety Coordinator — ASP Construction',
+  tradePageGestravDesc: 'Construction Project Management — RBQ',
 
   // Landing page - Pricing
   pricingTitle: 'Choose Your Plan',

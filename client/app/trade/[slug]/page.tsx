@@ -20,6 +20,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     'entrepreneur-general': { name: 'General Contractor (RBQ)', nameFr: 'Entrepreneur général (RBQ)' },
     inspecteur: { name: 'Building Inspector (RBQ)', nameFr: 'Inspecteur bâtiment (RBQ)' },
     'coordonnateur-sst': { name: 'Safety Coordinator (ASP Const.)', nameFr: 'Coordonnateur SST (ASP Const.)' },
+    'gestion-travaux': { name: 'Construction Project Management (RBQ)', nameFr: 'Gestion des travaux (RBQ)' },
   };
 
   const trade = tradeNames[slug];

@@ -131,7 +131,7 @@ Remember: students are preparing for high-stakes licensing exams. Accuracy and e
       body: JSON.stringify({
         model: 'deepseek-chat',
         messages,
-        max_tokens: 600,
+        max_tokens: 2048,
         temperature: 0.7,
       }),
     });

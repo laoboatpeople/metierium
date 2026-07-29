@@ -25,6 +25,7 @@ import {
   Truck,
   Infinity,
   Play,
+  ClipboardList,
 } from 'lucide-react';
 import { useState } from 'react';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -73,7 +74,8 @@ export default function LandingPage() {
                 { "@type": "Course", "name": "Préparation Examen Constructeur Rénovateur RBQ", "description": "Préparation à l'examen de licence RBQ pour constructeur-rénovateur — gestion, code, contrats et sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
                 { "@type": "Course", "name": "Préparation Examen Entrepreneur Général RBQ", "description": "Préparation à l'examen de licence RBQ pour entrepreneur général — gestion de projets, code de construction et SST", "provider": { "@type": "Organization", "name": "Metierium" } },
                 { "@type": "Course", "name": "Préparation Examen Inspecteur Bâtiment RBQ", "description": "Préparation à l'examen de certification RBQ en inspection de bâtiments — code, structures, enveloppe et sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
-                { "@type": "Course", "name": "Préparation Examen Coordonnateur SST ASP Construction", "description": "Préparation à l'examen de certification ASP Construction en coordination SST — prévention, IRSST, gestion de chantier", "provider": { "@type": "Organization", "name": "Metierium" } }
+                { "@type": "Course", "name": "Préparation Examen Coordonnateur SST ASP Construction", "description": "Préparation à l'examen de certification ASP Construction en coordination SST — prévention, IRSST, gestion de chantier", "provider": { "@type": "Organization", "name": "Metierium" } },
+                { "@type": "Course", "name": "Préparation Examen Gestion des Travaux RBQ", "description": "Préparation à l'examen RBQ en gestion des travaux — estimation de coûts, planification, main-d'œuvre, cadre légal, SST, contrats, finances et clôture de projet", "provider": { "@type": "Organization", "name": "Metierium" } }
               ],
               "aggregateRating": {
                 "@type": "AggregateRating",
@@ -88,7 +90,7 @@ export default function LandingPage() {
               "name": "Comment réussir votre examen de métier au Québec",
               "description": "Préparez-vous à votre certification en 3 étapes avec Metierium",
               "step": [
-                { "@type": "HowToStep", "position": 1, "name": "Choisissez votre métier", "text": "Sélectionnez votre métier parmi 16 options disponibles et accédez au contenu spécifique à votre examen." },
+                { "@type": "HowToStep", "position": 1, "name": "Choisissez votre métier", "text": "Sélectionnez votre métier parmi 17 options disponibles et accédez au contenu spécifique à votre examen." },
                 { "@type": "HowToStep", "position": 2, "name": "Étudiez la théorie", "text": "Parcourez le contenu théorique complet organisé par chapitre avec des explications claires adaptées à votre métier." },
                 { "@type": "HowToStep", "position": 3, "name": "Réussissez l'examen", "text": "Testez vos connaissances avec des examens blancs, suivez votre progression et arrivez confiant le jour de l'examen." }
               ]
@@ -299,6 +301,7 @@ export default function LandingPage() {
                   { label: 'ENTGEN', color: 'from-[#4F46E5] to-[#4338CA]' },
                   { label: 'INSPECT', color: 'from-[#0E7490] to-[#0A5C70]' },
                   { label: 'SST', color: 'from-[#DC2626] to-[#B91C1C]' },
+                  { label: 'GESTRAV', color: 'from-[#0EA5E9] to-[#0284C7]' },
                 ].map((item, i) => (
                   <span
                     key={i}
@@ -726,6 +729,27 @@ export default function LandingPage() {
                 <span>{t('tradeTheoryComplete')}</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-[#DC2626] mt-1">
+                <Check size={14} />
+                <span>{t('tradeExamQuestions')}</span>
+              </div>
+            </Link>
+
+            {/* Gestion des travaux (GESTRAV) */}
+            <Link href="/trade/gestion-travaux" className="p-6 rounded-2xl bg-gradient-to-br from-[#0EA5E9]/10 to-[#0284C7]/10 border border-[#0EA5E9]/20 hover:border-[#0EA5E9]/50 transition-all duration-300 group block">
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-[#0EA5E9] to-[#0284C7] flex items-center justify-center mb-4">
+                <ClipboardList className="w-7 h-7 text-white" />
+              </div>
+              <h3 className="text-lg font-bold text-[#F8FAFC] mb-2 group-hover:text-[#0EA5E9] transition-colors">
+                {t('tradeGestrav')}
+              </h3>
+              <p className="text-sm text-[#94A3B8] mb-4">
+                {t('tradeGestravDesc')}
+              </p>
+              <div className="flex items-center gap-2 text-xs text-[#0EA5E9]">
+                <Check size={14} />
+                <span>{t('tradeTheoryComplete')}</span>
+              </div>
+              <div className="flex items-center gap-2 text-xs text-[#0EA5E9] mt-1">
                 <Check size={14} />
                 <span>{t('tradeExamQuestions')}</span>
               </div>

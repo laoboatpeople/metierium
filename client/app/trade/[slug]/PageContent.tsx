@@ -24,6 +24,7 @@ const TRADES: Record<string, { name: string; descKey: string; color: string; faq
   'entrepreneur-general': { name: 'RBQ', descKey: 'tradePageEntgenDesc', color: '#4F46E5', faqTrade: 'ENTGEN', tradeId: 'cmt_entrepreneur_general_001' },
   inspecteur: { name: 'RBQ', descKey: 'tradePageInspectDesc', color: '#0E7490', faqTrade: 'INSPECT', tradeId: 'cmt_inspecteur_001' },
   'coordonnateur-sst': { name: 'ASP Const.', descKey: 'tradePageSstDesc', color: '#DC2626', faqTrade: 'SST', tradeId: 'cmt_coordsst_001' },
+  'gestion-travaux': { name: 'RBQ', descKey: 'tradePageGestravDesc', color: '#0EA5E9', faqTrade: 'GESTRAV', tradeId: 'cms64nslj000013ams4gg5bre' },
 };
 
 export default function TradePillarPage() {
