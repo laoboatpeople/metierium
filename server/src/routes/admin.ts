@@ -138,10 +138,135 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
       trade: s.tradeId ? tradeMap.get(s.tradeId) ?? null : null,
     }));
 
+    // ── Learning stats: exam attempts ──────────────────────────
+    const PASS_THRESHOLD = 70;
+    const attempts = await prisma.examAttempt.findMany({
+      where: { userId: id },
+      orderBy: { completedAt: 'desc' },
+      select: {
+        id: true,
+        tradeId: true,
+        score: true,
+        totalQuestions: true,
+        correctCount: true,
+        timeSpent: true,
+        difficulty: true,
+        reviewMode: true,
+        completedAt: true,
+      },
+    });
+
+    const totalAttempts = attempts.length;
+    const avgScore = totalAttempts > 0
+      ? Math.round(attempts.reduce((s, a) => s + a.score, 0) / totalAttempts)
+      : 0;
+    const bestScore = totalAttempts > 0 ? Math.max(...attempts.map((a) => a.score)) : 0;
+    const passedCount = attempts.filter((a) => a.score >= PASS_THRESHOLD).length;
+    const totalQuestionsAnswered = attempts.reduce((s, a) => s + a.totalQuestions, 0);
+    const totalCorrect = attempts.reduce((s, a) => s + a.correctCount, 0);
+    const totalTimeSpent = attempts.reduce((s, a) => s + a.timeSpent, 0);
+
+    // Per-trade breakdown
+    const tradePerf = new Map<string, { attempts: number; scoreSum: number; best: number; passed: number }>();
+    for (const a of attempts) {
+      const p = tradePerf.get(a.tradeId) || { attempts: 0, scoreSum: 0, best: 0, passed: 0 };
+      p.attempts += 1;
+      p.scoreSum += a.score;
+      p.best = Math.max(p.best, a.score);
+      if (a.score >= PASS_THRESHOLD) p.passed += 1;
+      tradePerf.set(a.tradeId, p);
+    }
+
+    // Resolve trade names for attempts + per-trade breakdown
+    const attemptTradeIds = [...new Set(attempts.map((a) => a.tradeId))];
+    const attemptTrades = attemptTradeIds.length > 0
+      ? await prisma.trade.findMany({
+          where: { id: { in: attemptTradeIds } },
+          select: { id: true, code: true, name: true, nameFr: true },
+        })
+      : [];
+    const attemptTradeMap = new Map(attemptTrades.map((t) => [t.id, t]));
+
+    const byTrade = [...tradePerf.entries()]
+      .map(([tid, p]) => {
+        const trade = attemptTradeMap.get(tid);
+        return {
+          tradeId: tid,
+          code: trade?.code ?? tid,
+          name: trade?.name ?? tid,
+          nameFr: trade?.nameFr ?? trade?.name ?? tid,
+          attempts: p.attempts,
+          averageScore: Math.round(p.scoreSum / p.attempts),
+          bestScore: p.best,
+          passed: p.passed,
+        };
+      })
+      .sort((a, b) => b.attempts - a.attempts);
+
+    const recentAttempts = attempts.slice(0, 10).map((a) => {
+      const trade = attemptTradeMap.get(a.tradeId);
+      return {
+        id: a.id,
+        score: a.score,
+        totalQuestions: a.totalQuestions,
+        correctCount: a.correctCount,
+        timeSpent: a.timeSpent,
+        difficulty: a.difficulty,
+        reviewMode: a.reviewMode,
+        passed: a.score >= PASS_THRESHOLD,
+        completedAt: a.completedAt,
+        trade: trade ? { code: trade.code, name: trade.name, nameFr: trade.nameFr } : null,
+      };
+    });
+
+    // ── Tutor activity ─────────────────────────────────────────
+    const [chatSessionCount, chatMessageCount, lastChat] = await Promise.all([
+      prisma.chatSession.count({ where: { userId: id } }),
+      prisma.chatMessage.count({
+        where: { session: { userId: id } },
+      }),
+      prisma.chatSession.findFirst({
+        where: { userId: id },
+        orderBy: { updatedAt: 'desc' },
+        select: { updatedAt: true, topic: true },
+      }),
+    ]);
+
+    // ── Recent activity log ────────────────────────────────────
+    const recentActivity = await prisma.activityLog.findMany({
+      where: { userId: id },
+      orderBy: { createdAt: 'desc' },
+      take: 10,
+      select: { id: true, action: true, details: true, createdAt: true },
+    });
+
     res.json({
       ...user,
       subscriptions,
       contactMessages,
+      examStats: {
+        totalAttempts,
+        averageScore: avgScore,
+        bestScore,
+        passedCount,
+        passRate: totalAttempts > 0 ? Math.round((passedCount / totalAttempts) * 100) : 0,
+        totalQuestionsAnswered,
+        totalCorrect,
+        accuracy: totalQuestionsAnswered > 0 ? Math.round((totalCorrect / totalQuestionsAnswered) * 100) : 0,
+        totalTimeSpent,
+        firstAttemptAt: attempts.length > 0 ? attempts[attempts.length - 1].completedAt : null,
+        lastAttemptAt: attempts.length > 0 ? attempts[0].completedAt : null,
+        tradesStudied: tradePerf.size,
+      },
+      byTrade,
+      recentAttempts,
+      tutorStats: {
+        sessions: chatSessionCount,
+        messages: chatMessageCount,
+        lastActivityAt: lastChat?.updatedAt ?? null,
+        lastTopic: lastChat?.topic ?? null,
+      },
+      recentActivity,
       stats: {
         totalSubscriptions: user.subscription.length,
         activeSubscriptions: user.subscription.filter((s) => s.status === 'ACTIVE').length,

@@ -19,6 +19,13 @@ import {
   XCircle,
   Send,
   Inbox,
+  GraduationCap,
+  Target,
+  Trophy,
+  TrendingUp,
+  BookOpen,
+  Bot,
+  Activity,
 } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -58,6 +65,54 @@ interface UserDetail {
   updatedAt: string;
   subscriptions: SubscriptionDetail[];
   contactMessages: ContactMsg[];
+  examStats: {
+    totalAttempts: number;
+    averageScore: number;
+    bestScore: number;
+    passedCount: number;
+    passRate: number;
+    totalQuestionsAnswered: number;
+    totalCorrect: number;
+    accuracy: number;
+    totalTimeSpent: number;
+    firstAttemptAt: string | null;
+    lastAttemptAt: string | null;
+    tradesStudied: number;
+  };
+  byTrade: {
+    tradeId: string;
+    code: string;
+    name: string;
+    nameFr: string;
+    attempts: number;
+    averageScore: number;
+    bestScore: number;
+    passed: number;
+  }[];
+  recentAttempts: {
+    id: string;
+    score: number;
+    totalQuestions: number;
+    correctCount: number;
+    timeSpent: number;
+    difficulty: string | null;
+    reviewMode: boolean;
+    passed: boolean;
+    completedAt: string;
+    trade: { code: string; name: string; nameFr: string } | null;
+  }[];
+  tutorStats: {
+    sessions: number;
+    messages: number;
+    lastActivityAt: string | null;
+    lastTopic: string | null;
+  };
+  recentActivity: {
+    id: string;
+    action: string;
+    details: Record<string, unknown> | null;
+    createdAt: string;
+  }[];
   stats: {
     totalSubscriptions: number;
     activeSubscriptions: number;
@@ -110,6 +165,22 @@ function formatRelativeTime(dateStr: string): string {
   if (diffHours < 24) return `il y a ${diffHours}h`;
   const diffDays = Math.floor(diffHours / 24);
   return `il y a ${diffDays}j`;
+}
+
+function formatDuration(seconds: number): string {
+  if (seconds < 60) return `${seconds}s`;
+  const mins = Math.floor(seconds / 60);
+  const secs = seconds % 60;
+  if (mins < 60) return secs > 0 ? `${mins}m ${secs}s` : `${mins}m`;
+  const hours = Math.floor(mins / 60);
+  const remMins = mins % 60;
+  return remMins > 0 ? `${hours}h ${remMins}m` : `${hours}h`;
+}
+
+function scoreColor(score: number): string {
+  if (score >= 70) return 'text-[#10B981]';
+  if (score >= 50) return 'text-[#F59E0B]';
+  return 'text-[#EF4444]';
 }
 
 function Avatar({ name, size = 'xl' }: { name: string; size?: 'md' | 'lg' | 'xl' }) {
@@ -297,6 +368,218 @@ export default function UserDetailPage() {
                 <p className="text-2xl font-bold text-[#F8FAFC]">{card.value}</p>
               </div>
             ))}
+          </div>
+
+          {/* ── Learning performance ─────────────────────────────── */}
+          <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl overflow-hidden">
+            <div className="px-6 py-4 border-b border-[#2D3A52] flex items-center gap-2">
+              <GraduationCap size={15} className="text-[#06B6D4]" />
+              <h2 className="text-base font-semibold text-[#F8FAFC]">
+                {locale === 'fr' ? "Performance d'apprentissage" : 'Learning performance'}
+              </h2>
+            </div>
+
+            {user.examStats.totalAttempts > 0 ? (
+              <div className="p-6 space-y-6">
+                {/* Key metrics */}
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                  <div className="bg-[#0F1424] border border-[#2D3A52] rounded-lg p-3">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <BookOpen size={12} className="text-[#3B82F6]" />
+                      <p className="text-[9px] font-medium text-[#64748B] uppercase tracking-wide">
+                        {locale === 'fr' ? 'Examens' : 'Exams'}
+                      </p>
+                    </div>
+                    <p className="text-xl font-bold text-[#F8FAFC]">{user.examStats.totalAttempts}</p>
+                    <p className="text-[10px] text-[#64748B]">
+                      {user.examStats.tradesStudied} {locale === 'fr' ? 'métier(s)' : 'trade(s)'}
+                    </p>
+                  </div>
+                  <div className="bg-[#0F1424] border border-[#2D3A52] rounded-lg p-3">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <Target size={12} className="text-[#F59E0B]" />
+                      <p className="text-[9px] font-medium text-[#64748B] uppercase tracking-wide">
+                        {locale === 'fr' ? 'Moyenne' : 'Average'}
+                      </p>
+                    </div>
+                    <p className={`text-xl font-bold ${scoreColor(user.examStats.averageScore)}`}>
+                      {user.examStats.averageScore}%
+                    </p>
+                    <p className="text-[10px] text-[#64748B]">
+                      {locale === 'fr' ? 'meilleur' : 'best'} {user.examStats.bestScore}%
+                    </p>
+                  </div>
+                  <div className="bg-[#0F1424] border border-[#2D3A52] rounded-lg p-3">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <Trophy size={12} className="text-[#10B981]" />
+                      <p className="text-[9px] font-medium text-[#64748B] uppercase tracking-wide">
+                        {locale === 'fr' ? 'Réussite' : 'Pass rate'}
+                      </p>
+                    </div>
+                    <p className="text-xl font-bold text-[#F8FAFC]">{user.examStats.passRate}%</p>
+                    <p className="text-[10px] text-[#64748B]">
+                      {user.examStats.passedCount}/{user.examStats.totalAttempts} {locale === 'fr' ? 'réussis' : 'passed'}
+                    </p>
+                  </div>
+                  <div className="bg-[#0F1424] border border-[#2D3A52] rounded-lg p-3">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <TrendingUp size={12} className="text-[#8B5CF6]" />
+                      <p className="text-[9px] font-medium text-[#64748B] uppercase tracking-wide">
+                        {locale === 'fr' ? 'Précision' : 'Accuracy'}
+                      </p>
+                    </div>
+                    <p className="text-xl font-bold text-[#F8FAFC]">{user.examStats.accuracy}%</p>
+                    <p className="text-[10px] text-[#64748B]">
+                      {user.examStats.totalCorrect}/{user.examStats.totalQuestionsAnswered} {locale === 'fr' ? 'bonnes' : 'correct'}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Time + last activity */}
+                <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-[#64748B]">
+                  <span>
+                    ⏱ {locale === 'fr' ? 'Temps total' : 'Total time'}:{' '}
+                    <span className="text-[#F8FAFC] font-medium">{formatDuration(user.examStats.totalTimeSpent)}</span>
+                  </span>
+                  {user.examStats.lastAttemptAt && (
+                    <span>
+                      {locale === 'fr' ? 'Dernier examen' : 'Last exam'}:{' '}
+                      <span className="text-[#F8FAFC] font-medium">{formatRelativeTime(user.examStats.lastAttemptAt)}</span>
+                    </span>
+                  )}
+                </div>
+
+                {/* Per-trade breakdown */}
+                {user.byTrade.length > 0 && (
+                  <div>
+                    <p className="text-[10px] font-medium text-[#64748B] uppercase tracking-wide mb-2">
+                      {locale === 'fr' ? 'Par métier' : 'By trade'}
+                    </p>
+                    <div className="space-y-2">
+                      {user.byTrade.map((t) => (
+                        <div key={t.tradeId} className="flex items-center gap-3">
+                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#3B82F6]/10 text-[#3B82F6] font-mono flex-shrink-0">
+                            {t.code}
+                          </span>
+                          <span className="text-sm text-[#F8FAFC] flex-1 truncate">
+                            {locale === 'fr' ? t.nameFr : t.name}
+                          </span>
+                          <span className="text-[11px] text-[#64748B] flex-shrink-0">
+                            {t.attempts} {locale === 'fr' ? 'essai(s)' : 'attempt(s)'}
+                          </span>
+                          <div className="w-24 h-1.5 bg-[#0F1424] rounded-full overflow-hidden flex-shrink-0">
+                            <div
+                              className={`h-full rounded-full ${t.averageScore >= 70 ? 'bg-[#10B981]' : t.averageScore >= 50 ? 'bg-[#F59E0B]' : 'bg-[#EF4444]'}`}
+                              style={{ width: `${t.averageScore}%` }}
+                            />
+                          </div>
+                          <span className={`text-sm font-mono font-medium w-10 text-right flex-shrink-0 ${scoreColor(t.averageScore)}`}>
+                            {t.averageScore}%
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Recent attempts */}
+                {user.recentAttempts.length > 0 && (
+                  <div>
+                    <p className="text-[10px] font-medium text-[#64748B] uppercase tracking-wide mb-2">
+                      {locale === 'fr' ? 'Examens récents' : 'Recent exams'}
+                    </p>
+                    <div className="space-y-1.5">
+                      {user.recentAttempts.map((a) => (
+                        <div key={a.id} className="flex items-center gap-3 bg-[#0F1424] border border-[#2D3A52]/50 rounded-lg px-3 py-2">
+                          <div className={`w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0 ${a.passed ? 'bg-[#10B981]/10' : 'bg-[#EF4444]/10'}`}>
+                            {a.passed ? <CheckCircle2 size={13} className="text-[#10B981]" /> : <XCircle size={13} className="text-[#EF4444]" />}
+                          </div>
+                          <div className="flex-1 min-w-0">
+                            <p className="text-xs text-[#F8FAFC] truncate">
+                              {a.trade ? (locale === 'fr' ? a.trade.nameFr : a.trade.name) : '—'}
+                            </p>
+                            <p className="text-[10px] text-[#64748B]">
+                              {a.correctCount}/{a.totalQuestions} · {formatDuration(a.timeSpent)} · {formatRelativeTime(a.completedAt)}
+                            </p>
+                          </div>
+                          <span className={`text-sm font-mono font-bold flex-shrink-0 ${scoreColor(a.score)}`}>{a.score}%</span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <div className="flex flex-col items-center justify-center py-12">
+                <GraduationCap size={24} className="text-[#64748B] mb-2" />
+                <p className="text-sm text-[#64748B]">
+                  {locale === 'fr' ? "Aucun examen complété" : 'No exams completed'}
+                </p>
+              </div>
+            )}
+          </div>
+
+          {/* ── Tutor + activity ─────────────────────────────────── */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            {/* Tutor */}
+            <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl overflow-hidden">
+              <div className="px-5 py-3 border-b border-[#2D3A52] flex items-center gap-2">
+                <Bot size={14} className="text-[#8B5CF6]" />
+                <h3 className="text-sm font-semibold text-[#F8FAFC]">
+                  {locale === 'fr' ? 'Tuteur IA' : 'AI Tutor'}
+                </h3>
+              </div>
+              <div className="p-5 space-y-3">
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-[#64748B]">{locale === 'fr' ? 'Sessions' : 'Sessions'}</span>
+                  <span className="text-sm font-medium text-[#F8FAFC]">{user.tutorStats.sessions}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-[#64748B]">{locale === 'fr' ? 'Messages' : 'Messages'}</span>
+                  <span className="text-sm font-medium text-[#F8FAFC]">{user.tutorStats.messages}</span>
+                </div>
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-[#64748B]">{locale === 'fr' ? 'Dernière activité' : 'Last activity'}</span>
+                  <span className="text-sm font-medium text-[#F8FAFC]">
+                    {user.tutorStats.lastActivityAt ? formatRelativeTime(user.tutorStats.lastActivityAt) : '—'}
+                  </span>
+                </div>
+                {user.tutorStats.lastTopic && (
+                  <p className="text-[11px] text-[#64748B] pt-1 border-t border-[#2D3A52] line-clamp-2">
+                    💬 {user.tutorStats.lastTopic}
+                  </p>
+                )}
+              </div>
+            </div>
+
+            {/* Recent activity log */}
+            <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl overflow-hidden">
+              <div className="px-5 py-3 border-b border-[#2D3A52] flex items-center gap-2">
+                <Activity size={14} className="text-[#06B6D4]" />
+                <h3 className="text-sm font-semibold text-[#F8FAFC]">
+                  {locale === 'fr' ? 'Activité récente' : 'Recent activity'}
+                </h3>
+              </div>
+              {user.recentActivity.length > 0 ? (
+                <div className="p-5 space-y-2.5 max-h-52 overflow-y-auto">
+                  {user.recentActivity.map((act) => (
+                    <div key={act.id} className="flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#06B6D4] mt-1.5 flex-shrink-0" />
+                      <div className="min-w-0">
+                        <p className="text-xs text-[#F8FAFC] font-mono">{act.action}</p>
+                        <p className="text-[10px] text-[#64748B]">{formatRelativeTime(act.createdAt)}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex items-center justify-center py-8">
+                  <p className="text-xs text-[#64748B]">
+                    {locale === 'fr' ? 'Aucune activité enregistrée' : 'No activity logged'}
+                  </p>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Subscriptions */}
