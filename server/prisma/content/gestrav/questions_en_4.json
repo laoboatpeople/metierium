@@ -1,0 +1,2927 @@
+[
+ {
+  "chapter": 7,
+  "question": "The RBQ (Régie du bâtiment du Québec) has as its primary mandate to:",
+  "options": [
+   "Issue driver's licenses",
+   "Administer hospitals",
+   "Ensure the quality of construction work and public safety",
+   "Manage workers' wages"
+  ],
+  "answer": "C",
+  "explanation": "The RBQ administers the Building Act: it issues licenses, verifies qualifications, inspects construction sites and protects the public.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'RBQ license' is mandatory for:",
+  "options": [
+   "Only public projects",
+   "Any contractor who carries out or has construction work carried out covered by the Building Act",
+   "All workers",
+   "Only architects"
+  ],
+  "answer": "B",
+  "explanation": "The Building Act requires a license for anyone who carries out or has construction work carried out, under penalty of fines and contract nullity.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The RBQ license includes 'subcategories' that:",
+  "options": [
+   "Define the types of work the holder is authorized to carry out",
+   "Have no legal value",
+   "Are optional",
+   "Are identical for everyone"
+  ],
+  "answer": "A",
+  "explanation": "Each subcategory (e.g.: 1.1 general contractor, 16 electrician) authorizes specific work. Working outside one's subcategory is an offence.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'general contractor' (subcategory 1.1, 1.2, 1.3) may:",
+  "options": [
+   "Coordinate and carry out all the work on a project, subcontracting the specialties",
+   "Only do management",
+   "Only practise a single trade",
+   "No manual work"
+  ],
+  "answer": "A",
+  "explanation": "The general contractor (building, civil engineering, roadwork) coordinates the project and may subcontract specialized work to contractors holding the required subcategories.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'RBQ examination' to obtain a license includes:",
+  "options": [
+   "No examination",
+   "A management examination (Construction Management) and one or more technical examinations depending on the subcategories",
+   "Only a technical examination",
+   "Only an interview"
+  ],
+  "answer": "B",
+  "explanation": "The RBQ license requires passing the management examination (common) and technical examinations specific to the requested subcategories.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The RBQ 'Construction Management' examination is:",
+  "options": [
+   "Common to all contractors, covering project management, administration and legal aspects",
+   "Only for engineers",
+   "Optional",
+   "Specific to each trade"
+  ],
+  "answer": "A",
+  "explanation": "The management examination is cross-cutting: all contractors must pass it, regardless of their trade. It covers administration, management and law.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The RBQ 'license security' (bond) is:",
+  "options": [
+   "Only for large companies",
+   "Optional",
+   "A tax",
+   "Mandatory: a financial guarantee (e.g.: $20,000) protecting clients against non-compliant work"
+  ],
+  "answer": "D",
+  "explanation": "Every licensee must maintain a security bond (amount depending on the category) guaranteeing compliant performance and protecting clients in case of default.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The RBQ 'Compensation Fund' may:",
+  "options": [
+   "Pay all disputes",
+   "Guarantee wages",
+   "Replace the courts",
+   "Compensate clients harmed by a licensee, up to the amount of the bond"
+  ],
+  "answer": "D",
+  "explanation": "The Compensation Fund (via the bond) may compensate clients for non-compliant or unperformed work by a licensee.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Working without an RBQ license when one is required constitutes:",
+  "options": [
+   "A common accepted practice",
+   "A penal offence punishable by significant fines and may render the contract null",
+   "A right",
+   "A simple formality"
+  ],
+  "answer": "B",
+  "explanation": "Practising without a license is an offence under the Building Act: fines (up to $90,000 for a legal person), contract nullity and prosecution.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'license verification' of a contractor by a client is done:",
+  "options": [
+   "Only by a lawyer",
+   "It is impossible",
+   "Only by phone",
+   "Via the RBQ License Holders Register (online, free)"
+  ],
+  "answer": "D",
+  "explanation": "The RBQ License Holders Register (rbq.gouv.qc.ca) allows free verification of a licensee's validity, subcategories and bond.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Building Act' (CQLR, c. B-1.1) governs:",
+  "options": [
+   "Only roads",
+   "Contractor qualification, quality of work and building safety",
+   "Only wages",
+   "Only residences"
+  ],
+  "answer": "B",
+  "explanation": "The Building Act governs: the RBQ license, construction standards (Code), professional qualification and public protection.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Quebec Construction Code' is based on:",
+  "options": [
+   "Only American standards",
+   "No national code",
+   "The National Building Code of Canada (NBC), adapted with Quebec modifications",
+   "European standards"
+  ],
+  "answer": "C",
+  "explanation": "The Quebec Construction Code adopts the NBC with modifications specific to Quebec (climate, local practices). It has the force of law.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'National Building Code' (NBC) is published by:",
+  "options": [
+   "The UN",
+   "The CBSA",
+   "The National Research Council of Canada (NRC)",
+   "The RBQ"
+  ],
+  "answer": "C",
+  "explanation": "The NBC is developed by the NRC. Provinces adopt and adapt it. Quebec integrates it through its Construction Code.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'construction standards' in Quebec cover:",
+  "options": [
+   "No technical field",
+   "Only aesthetics",
+   "Structure, envelope, plumbing, electrical, mechanical, accessibility, fire safety",
+   "Only structure"
+  ],
+  "answer": "C",
+  "explanation": "The standards cover all aspects: structure, envelope, plumbing, electrical, HVAC, fire protection, accessibility, energy efficiency.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'RBQ inspector' may:",
+  "options": [
+   "Only give advice",
+   "Visit construction sites, require corrections, suspend work and recommend prosecution",
+   "Have no authority",
+   "Only issue permits"
+  ],
+  "answer": "B",
+  "explanation": "The RBQ inspector has broad powers: access to sites, correction orders, work suspension, seizure and recommendation of penal prosecution.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'certificate of compliance' (or attestation) from the RBQ confirms:",
+  "options": [
+   "The hiring of workers",
+   "Ownership of the land",
+   "That the work complies with applicable standards, required for certain buildings",
+   "Payment of taxes"
+  ],
+  "answer": "C",
+  "explanation": "For certain buildings (e.g.: new residential), a certificate of compliance attests that the construction meets the Code. It is required for occupancy.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'new residential buildings guarantee plan' (GCR - residential guarantee):",
+  "options": [
+   "Only covers condos",
+   "Is optional",
+   "No longer exists",
+   "Is mandatory for new residential buildings, covering defects and completion"
+  ],
+  "answer": "D",
+  "explanation": "The GCR (formerly the New Residential Buildings Guarantee) is mandatory: it covers deposits, completion, defects (1 year) and major defects (5 years).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The GCR 'deposit guarantee' protects:",
+  "options": [
+   "Subcontractors",
+   "The client who paid a deposit if the contractor defaults before work begins",
+   "The municipality",
+   "The contractor"
+  ],
+  "answer": "B",
+  "explanation": "The deposit guarantee reimburses the client if the contractor cashes a deposit and fails to begin the work.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The GCR 'completion guarantee' covers:",
+  "options": [
+   "Only painting",
+   "Defects after 5 years",
+   "Completion of the work if the contractor abandons the site",
+   "Workers' wages"
+  ],
+  "answer": "C",
+  "explanation": "The completion guarantee ensures that the work will be completed (by another contractor) if the original contractor abandons the project.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The GCR 'defects guarantee' lasts:",
+  "options": [
+   "10 years",
+   "5 years",
+   "1 year after acceptance of the work",
+   "No duration"
+  ],
+  "answer": "C",
+  "explanation": "The defects guarantee covers workmanship defects for 1 year after acceptance. Hidden and major defects have longer guarantees.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The GCR 'hidden defects guarantee' lasts:",
+  "options": [
+   "1 year",
+   "10 years",
+   "5 years",
+   "3 years after acceptance"
+  ],
+  "answer": "D",
+  "explanation": "The hidden defects guarantee (not apparent at acceptance) covers defects for 3 years after acceptance of the work.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The GCR 'major defects guarantee' lasts:",
+  "options": [
+   "10 years",
+   "3 years",
+   "5 years after acceptance, covering defects compromising the solidity or use of the building",
+   "1 year"
+  ],
+  "answer": "C",
+  "explanation": "The major defects guarantee (5 years) covers serious defects compromising the solidity of the building or rendering it unfit for its intended use.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The municipal 'building permit' is:",
+  "options": [
+   "Generally mandatory before starting construction or renovation work",
+   "Only for condos",
+   "Issued by the RBQ",
+   "Optional for small work"
+  ],
+  "answer": "A",
+  "explanation": "Most municipalities require a permit before work begins. Building without a permit can result in fines and an obligation to demolish.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'occupancy certificate' (or occupancy permit) is:",
+  "options": [
+   "A sales contract",
+   "A lease",
+   "A municipal document authorizing the occupancy of a building after verification of compliance",
+   "An insurance"
+  ],
+  "answer": "C",
+  "explanation": "The occupancy certificate confirms that the building is compliant and may be occupied. It is often required after construction or a change of use.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Municipal 'zoning' determines:",
+  "options": [
+   "Driver's licenses",
+   "Taxes",
+   "Wages",
+   "The permitted uses (residential, commercial, industrial) and the siting standards on a lot"
+  ],
+  "answer": "D",
+  "explanation": "The zoning bylaw defines the authorized uses by zone, setbacks, height, density and siting standards.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'minor variance' in urban planning allows:",
+  "options": [
+   "Avoiding taxes",
+   "Authorizing a minor deviation from a municipal bylaw (e.g.: setback) via the advisory committee",
+   "Building anything",
+   "Ignoring the Construction Code"
+  ],
+  "answer": "B",
+  "explanation": "The minor variance authorizes a deviation from a zoning or subdivision bylaw, if the deviation is minor and does not undermine the public interest.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Civil Code of Quebec' (CCQ) governs construction contracts because:",
+  "options": [
+   "It replaces the Building Act",
+   "It contains the general rules of contracts (formation, performance, liability, warranties)",
+   "It applies only to individuals",
+   "It has no role"
+  ],
+  "answer": "B",
+  "explanation": "The CCQ is the common law of contracts in Quebec: formation, interpretation, performance, non-performance, liability and legal warranties.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'contract of enterprise' (art. 2098 CCQ) is:",
+  "options": [
+   "An employment contract",
+   "A sale",
+   "The contract by which a person (contractor) undertakes to carry out work for a client",
+   "A lease"
+  ],
+  "answer": "C",
+  "explanation": "The contract of enterprise (or of service) binds the contractor (who carries out work) to the client. It is the legal basis of construction contracts.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Act respecting labour relations, vocational training and workforce management' (Act R-20) governs:",
+  "options": [
+   "Sales contracts",
+   "Building permits",
+   "Taxes",
+   "Labour relations in the construction industry: collective agreements, qualification, CCQ"
+  ],
+  "answer": "D",
+  "explanation": "Act R-20 governs the construction industry: sectoral collective agreements, competency certificates, the Commission de la construction du Québec (CCQ).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Commission de la construction du Québec' (CCQ) administers:",
+  "options": [
+   "Hospitals",
+   "Building permits",
+   "Municipal taxes",
+   "Collective agreements, worker qualification and construction industry funds"
+  ],
+  "answer": "D",
+  "explanation": "The CCQ manages: sectoral collective agreements, competency certificates, training, benefit plans and industry funds.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The CCQ 'competency certificate' is:",
+  "options": [
+   "Mandatory for any worker carrying out construction work covered by Act R-20",
+   "Only for apprentices",
+   "Optional",
+   "Issued by the RBQ"
+  ],
+  "answer": "A",
+  "explanation": "Every worker on a construction site must hold a valid CCQ competency certificate (apprentice, journeyman or occupation), under penalty of fines.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'sectoral collective agreements' in construction cover:",
+  "options": [
+   "No financial aspect",
+   "Wages, working conditions, benefits and hiring rules by sector",
+   "Only schedules",
+   "Only wages"
+  ],
+  "answer": "B",
+  "explanation": "The agreements (residential, institutional-commercial, industrial, civil engineering) set: wages, hours, leave, insurance, pension, hiring rules.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'residential sector' in construction (Act R-20) includes:",
+  "options": [
+   "Residential buildings (houses, condos, dwellings) of less than 4 storeys and 300 m²",
+   "Only condos",
+   "Only single-family homes",
+   "All buildings"
+  ],
+  "answer": "A",
+  "explanation": "The residential sector covers low-rise/small-area residential buildings. Beyond that, it is the institutional-commercial sector.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'monthly report' to the CCQ is:",
+  "options": [
+   "A tax",
+   "Only for large companies",
+   "Optional",
+   "Mandatory: the employer must report hours worked and pay contributions"
+  ],
+  "answer": "D",
+  "explanation": "Each employer must submit monthly to the CCQ the report of hours worked and pay the contributions (benefits, training).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'statutory holidays' in the construction industry are:",
+  "options": [
+   "Specific: the construction holidays (2 weeks in summer, 2 weeks in winter) are mandatory",
+   "Only Christmas",
+   "Non-existent",
+   "Identical to other industries"
+  ],
+  "answer": "A",
+  "explanation": "The industry has mandatory vacations: 2 weeks in summer (late July) and 2 weeks in winter (late December), in addition to statutory holidays.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'hiring' of a construction worker typically goes through:",
+  "options": [
+   "Placement by the CCQ (hiring office) according to the collective agreement rules",
+   "A newspaper ad",
+   "Word of mouth only",
+   "No rules"
+  ],
+  "answer": "A",
+  "explanation": "Workforce placement is governed by the CCQ: employers hire through the placement office according to priority and ratio rules.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'apprentice/journeyman ratio' on a construction site is:",
+  "options": [
+   "Non-existent",
+   "Regulated by the collective agreement (e.g.: 1 apprentice per journeyman)",
+   "10 apprentices for 1 journeyman",
+   "Free"
+  ],
+  "answer": "B",
+  "explanation": "The agreements set ratios (e.g.: 1 apprentice per journeyman) to ensure adequate training and quality of work.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'professional qualification' (competency certificate) is obtained through:",
+  "options": [
+   "Only experience",
+   "Training (DEP/ASP) and apprenticeship, or recognition of prior learning",
+   "Only an examination",
+   "Purchase"
+  ],
+  "answer": "B",
+  "explanation": "The certificate is obtained through: diploma (DEP) + apprenticeship, or recognition of prior learning (RPL). It attests to the worker's competence.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Occupational Health and Safety Act' (OHSA) applies:",
+  "options": [
+   "Only to offices",
+   "Only to factories",
+   "To all establishments, including construction sites",
+   "No sector"
+  ],
+  "answer": "C",
+  "explanation": "The OHSA applies to all workers and employers in Quebec, including construction, with specific rules for construction sites (OHSC).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Occupational Health and Safety Regulation' (OHSC) for construction:",
+  "options": [
+   "Does not apply to construction",
+   "Is optional",
+   "Replaces the OHSA",
+   "Details the obligations specific to construction sites: PPE, falls, excavation, electricity, etc."
+  ],
+  "answer": "D",
+  "explanation": "The OHSC (or Safety Code for construction work) specifies the technical safety rules applicable on construction sites.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'right of refusal' of a worker (art. 12 OHSA) allows them to:",
+  "options": [
+   "Refuse to be trained",
+   "Refuse to wear PPE",
+   "Refuse to carry out work if they have reasonable grounds to believe there is a danger to their health or safety",
+   "Refuse any work"
+  ],
+  "answer": "C",
+  "explanation": "The worker may refuse dangerous work. The employer and the CNESST investigate. The refusal cannot result in sanctions if the grounds are reasonable.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'CNESST' (Commission des normes, de l'équité, de la santé et de la sécurité du travail):",
+  "options": [
+   "Only manages wages",
+   "Manages building permits",
+   "Has no role in construction",
+   "Administers the OHSA, labour standards, pay equity and accident compensation"
+  ],
+  "answer": "D",
+  "explanation": "The CNESST combines: labour standards, pay equity, OHS and compensation (replaces CSST). It inspects, compensates and prevents.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'compensation' for a workplace accident by the CNESST:",
+  "options": [
+   "Is a no-fault system: the injured worker is compensated without suing the employer",
+   "Is optional",
+   "Requires a lawsuit",
+   "Only covers deaths"
+  ],
+  "answer": "A",
+  "explanation": "The CNESST system is no-fault: the worker receives benefits (wages, care) in exchange for the employer's immunity from suit.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'CNESST contribution' (premium rate) is:",
+  "options": [
+   "Paid by the employer, according to the risk of their sector of activity",
+   "Paid by the worker",
+   "Optional",
+   "Identical for everyone"
+  ],
+  "answer": "A",
+  "explanation": "The employer pays the CNESST contribution (rate depending on the sector's risk). Construction has high rates given the accident risks.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Act respecting labour standards' (ALS) sets:",
+  "options": [
+   "The minimum conditions: wages, hours, leave, vacations, notice, harassment",
+   "Only the minimum wage",
+   "Only leave",
+   "No standards"
+  ],
+  "answer": "A",
+  "explanation": "The ALS establishes the minimum standards (wages, hours, leave, vacations, notice, harassment). In construction, collective agreements add to them.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "'Psychological harassment' at work (art. 81.18 ALS) is:",
+  "options": [
+   "Prohibited: repeated vexatious conduct undermining the dignity or integrity of the worker",
+   "Acceptable",
+   "Only a conflict",
+   "Without recourse"
+  ],
+  "answer": "A",
+  "explanation": "Psychological harassment is prohibited. The employer must prevent and address complaints. The worker may file a complaint with the CNESST.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Pay Equity Act' requires:",
+  "options": [
+   "Only for managers",
+   "Nothing",
+   "Only the minimum wage",
+   "That female-predominant jobs be paid equally to male jobs of equivalent value"
+  ],
+  "answer": "D",
+  "explanation": "Pay equity requires equal pay for jobs of equivalent value, without discrimination based on sex.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Act respecting industrial accidents and occupational diseases' (AIAOD):",
+  "options": [
+   "Is optional",
+   "Only covers car accidents",
+   "No longer exists",
+   "Compensates workers injured or made ill because of work, via the CNESST"
+  ],
+  "answer": "D",
+  "explanation": "The AIAOD (integrated into the CNESST) compensates: occupational injuries, diseases, rehabilitation, return to work. It is a no-fault system.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'return to work' after an accident (AIAOD):",
+  "options": [
+   "Has no rules",
+   "Is governed: the employer must reinstate the worker in their job or an equivalent job",
+   "Depends only on the worker",
+   "Is impossible"
+  ],
+  "answer": "B",
+  "explanation": "The right to return to work protects the worker: the employer must reinstate them (job or equivalent) after their injury, subject to conditions.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Consumer Protection Act' (CPA) may apply to construction:",
+  "options": [
+   "Never",
+   "Only for food",
+   "When the client is a consumer (individual): warranties, contracts, commercial practices",
+   "Only for cars"
+  ],
+  "answer": "C",
+  "explanation": "The CPA protects consumers: legal warranties, contract rules, prohibition of misleading practices. It applies to residential renovations.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'residential renovation contract' with a consumer must:",
+  "options": [
+   "Be in writing, contain the mandatory mentions (price, deadline, warranties) and respect the cancellation period",
+   "Be verbal",
+   "Have no form",
+   "Be notarized"
+  ],
+  "answer": "A",
+  "explanation": "The contract with a consumer must be in writing, detailed (price, work, deadline) and grant a right of cancellation (10 days for certain contracts).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 10-day 'cancellation period' (CPA) for a contract concluded at a distance or off-premises:",
+  "options": [
+   "Does not exist",
+   "Allows the consumer to cancel without reason within 10 days of signing",
+   "Is 30 days",
+   "Applies to all contracts"
+  ],
+  "answer": "B",
+  "explanation": "For contracts concluded off-premises (e.g.: door-to-door) or at a distance, the consumer has 10 days to cancel without penalty.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'legal warranty of quality' (CPA + CCQ) for work:",
+  "options": [
+   "Applies automatically: the work must be compliant and free of hidden defects",
+   "Is optional",
+   "Does not exist",
+   "Replaces the contract"
+  ],
+  "answer": "A",
+  "explanation": "The legal warranty adds to the contract: the work must be compliant, durable and free of hidden defects, even without an express clause.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "'Misleading advertising' in construction (CPA):",
+  "options": [
+   "Has no consequences",
+   "Is prohibited: no false or misleading representation about work, prices or qualifications",
+   "Is permitted",
+   "Is regulated only by the RBQ"
+  ],
+  "answer": "B",
+  "explanation": "The CPA prohibits false or misleading advertising. A contractor cannot make false representations about their qualifications, prices or work.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Environment Quality Act' (EQA) on a construction site concerns:",
+  "options": [
+   "No site aspect",
+   "The management of hazardous materials, discharges, erosion and the protection of waterways",
+   "Only offices",
+   "Only recycling"
+  ],
+  "answer": "B",
+  "explanation": "The EQA governs: disposal of hazardous materials, discharges into the environment, erosion control, protection of wetlands and waterways on construction sites.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The environmental 'authorization certificate' is required for:",
+  "options": [
+   "Certain work with environmental impact (e.g.: near a waterway, wetland)",
+   "Only factories",
+   "All work",
+   "No work"
+  ],
+  "answer": "A",
+  "explanation": "Work near a waterway, in a wetland or with significant environmental impact may require an authorization certificate from the MELCC.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'management of residual materials' on a construction site aims to:",
+  "options": [
+   "Ignore waste",
+   "Send everything to landfill",
+   "Reduce, reuse, recycle and recover construction waste (wood, metal, concrete)",
+   "Burn waste"
+  ],
+  "answer": "C",
+  "explanation": "Quebec policy favours the 3RV hierarchy: reduction, reuse, recycling, recovery. Landfill is the last resort.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Regulation respecting the disposal and treatment of wastewater' concerns:",
+  "options": [
+   "Only cities",
+   "No building",
+   "Septic systems and wastewater treatment for buildings",
+   "Only factories"
+  ],
+  "answer": "C",
+  "explanation": "The regulation governs septic systems (tanks, leaching fields) and wastewater treatment for buildings not connected to the sewer.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Act respecting land use planning and development' (ALUPD) gives municipalities the power to:",
+  "options": [
+   "Issue RBQ licenses",
+   "Set wages",
+   "Manage hospitals",
+   "Adopt zoning, subdivision and construction bylaws"
+  ],
+  "answer": "D",
+  "explanation": "The ALUPD empowers municipalities to govern land use: zoning, subdivision, construction, PIIA, minor variances.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'PIIA' (Site Planning and Architectural Integration Plan) is:",
+  "options": [
+   "A municipal bylaw governing the architectural appearance and integration of buildings in certain areas",
+   "A driver's license",
+   "A tax",
+   "A contract"
+  ],
+  "answer": "A",
+  "explanation": "The PIIA subjects certain projects to an architectural and landscape evaluation by the CCU, to ensure integration into the environment.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'certificate of location' is:",
+  "options": [
+   "An insurance",
+   "A sales contract",
+   "A building permit",
+   "A document prepared by a land surveyor describing the property, its measurements and its constraints"
+  ],
+  "answer": "D",
+  "explanation": "The certificate of location (surveyor) describes: dimensions, area, buildings, easements, constraint zones. It is required for transactions and permits.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'easement' (right of way, view, etc.) on a property:",
+  "options": [
+   "Is a burden on a property for the benefit of another, registered in the Land Register",
+   "Cancels ownership",
+   "Is always temporary",
+   "Does not exist"
+  ],
+  "answer": "A",
+  "explanation": "The easement (art. 1177 CCQ) is a real right: right of way, view, sewer. It follows the land (not the owner) and must be published.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Land Register of Quebec' is:",
+  "options": [
+   "A telephone directory",
+   "Managed by the RBQ",
+   "A sales website",
+   "The public register of real estate rights: ownership, mortgages, easements, charges"
+  ],
+  "answer": "D",
+  "explanation": "The Land Register publishes all real estate rights: titles of ownership, mortgages, easements. Publication protects rights.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'publication' of a real estate right in the Land Register:",
+  "options": [
+   "Makes the right enforceable against third parties and protects its holder",
+   "Is optional",
+   "Is free",
+   "Has no effect"
+  ],
+  "answer": "A",
+  "explanation": "Publication (registration) makes the right enforceable against third parties. Without publication, a right may be unenforceable against a good-faith purchaser.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'welcome tax' (transfer duty) is:",
+  "options": [
+   "A federal tax",
+   "Optional",
+   "A duty collected by the municipality upon the transfer of ownership of a property",
+   "A tax on wages"
+  ],
+  "answer": "C",
+  "explanation": "The transfer duty (welcome tax) is paid by the buyer to the municipality upon the purchase of a property, calculated on the price.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'GST/QST' on construction work:",
+  "options": [
+   "Applies to work and materials, with specific rules (e.g.: self-supply)",
+   "Is only federal",
+   "Never applies",
+   "Is only provincial"
+  ],
+  "answer": "A",
+  "explanation": "The GST (5%) and QST (9.975%) apply to work. Self-supply (construction for oneself) may be taxable. Specific rules apply.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "'Self-supply' in construction (building for oneself):",
+  "options": [
+   "Is prohibited",
+   "Has no tax implications",
+   "Is always exempt",
+   "May be subject to GST/QST as if the building were sold"
+  ],
+  "answer": "D",
+  "explanation": "Self-supply (building or substantially renovating for oneself) may be deemed a taxable sale, subject to GST/QST on the fair value.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'RénoVert tax credit' (or equivalent) aims to:",
+  "options": [
+   "Prohibit renovations",
+   "Fund roads",
+   "Encourage energy-efficient residential renovations through a tax credit",
+   "Tax renovations"
+  ],
+  "answer": "C",
+  "explanation": "Renovation tax credits (varying by year) encourage energy-efficient or accessibility work, reducing the taxpayer's tax.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'accessibility standard' in the Construction Code aims at:",
+  "options": [
+   "Only offices",
+   "Accessibility of buildings for persons with disabilities (ramps, doors, washrooms)",
+   "No building",
+   "Only schools"
+  ],
+  "answer": "B",
+  "explanation": "The Code provides accessibility standards (barrier-free) for public buildings and multi-unit dwellings: access, doors, corridors, adapted washrooms.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "'Fire protection' in the Construction Code requires:",
+  "options": [
+   "No measures",
+   "Only for factories",
+   "Measures according to use and size: alarms, extinguishers, emergency exits, fire resistance",
+   "Only extinguishers"
+  ],
+  "answer": "C",
+  "explanation": "Fire protection varies by use: alarms, extinguishers, emergency exits, compartmentation, fire resistance of structural elements.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'emergency exit' in a building must:",
+  "options": [
+   "Be single",
+   "Be locked",
+   "Be accessible, unobstructed, signposted and lead directly outside",
+   "Serve as storage"
+  ],
+  "answer": "C",
+  "explanation": "Emergency exits must at all times be accessible, unobstructed, signposted and allow rapid evacuation to the outside.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'fire resistance' of structural elements is expressed in:",
+  "options": [
+   "Kilograms",
+   "Degrees Celsius",
+   "Minutes or hours (e.g.: 1 h, 2 h) depending on the use and size of the building",
+   "Metres"
+  ],
+  "answer": "C",
+  "explanation": "Fire resistance rating (FRR) is the duration (in hours) during which an element retains its function under fire. It varies by use and height.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "'Compartmentation' against fire consists of:",
+  "options": [
+   "Opening all walls",
+   "Dividing the building into sections by fire-rated walls/floors to limit spread",
+   "Painting walls",
+   "Installing windows"
+  ],
+  "answer": "B",
+  "explanation": "Compartmentation divides the building into fire zones (walls, floors, fire doors) to contain the fire and allow evacuation.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'ventilation' of buildings in the Code aims at:",
+  "options": [
+   "Only aesthetics",
+   "Only comfort",
+   "No health objective",
+   "Air quality, removal of contaminants and prevention of mould"
+  ],
+  "answer": "D",
+  "explanation": "Ventilation ensures indoor air quality, removes moisture and contaminants, and prevents health problems and mould.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "'Energy efficiency' in the Construction Code:",
+  "options": [
+   "Is optional",
+   "Concerns only cars",
+   "Does not exist",
+   "Imposes minimum requirements for insulation, airtightness and system performance"
+  ],
+  "answer": "D",
+  "explanation": "The Code (Energy Efficiency chapter) sets requirements: insulation, airtightness, window and mechanical system performance.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Novoclimat program' in Quebec aims to:",
+  "options": [
+   "Encourage the construction of new high-energy-performance homes",
+   "Prohibit construction",
+   "Tax homes",
+   "Fund roads"
+  ],
+  "answer": "A",
+  "explanation": "Novoclimat (Transition énergétique Québec) certifies and subsidizes new homes exceeding energy efficiency standards.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Environment Quality Act' (EQA) prohibits:",
+  "options": [
+   "Only noise",
+   "All construction",
+   "The release of contaminants into the environment beyond permitted standards",
+   "No release"
+  ],
+  "answer": "C",
+  "explanation": "The EQA prohibits releasing contaminants (soil, water, air) beyond standards. Construction sites must control dust, discharges and hazardous materials.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Regulation respecting hazardous materials' governs:",
+  "options": [
+   "Only food products",
+   "The storage, handling, transport and disposal of hazardous materials",
+   "Only explosives",
+   "No materials"
+  ],
+  "answer": "B",
+  "explanation": "The regulation governs the entire cycle of hazardous materials: storage, handling, transport (TDG) and safe disposal.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'transport of dangerous goods' (TDG) on a construction site is governed by:",
+  "options": [
+   "Only the RBQ",
+   "The TDG Regulations (federal): labelling, documents, containers, training",
+   "Only the Highway Safety Code",
+   "No rules"
+  ],
+  "answer": "B",
+  "explanation": "TDG (federal) governs transport: labels, placards, shipping documents, certified containers and driver training.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Competition Act' (federal) prohibits in construction:",
+  "options": [
+   "Competition",
+   "No practices",
+   "Only advertising",
+   "Bid-rigging and anti-competitive agreements"
+  ],
+  "answer": "D",
+  "explanation": "Bid-rigging (agreement between bidders) is a criminal offence. The Competition Act protects the integrity of calls for tenders.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "'Bid-rigging' is:",
+  "options": [
+   "A right",
+   "An accepted practice",
+   "A legal strategy",
+   "A criminal offence: secret agreement between bidders to distort the call for tenders"
+  ],
+  "answer": "D",
+  "explanation": "Bid-rigging (art. 47 Competition Act) is criminal: bidders agree on who will win, distorting competition.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Autorité des marchés publics' (AMP) in Quebec monitors:",
+  "options": [
+   "The integrity of public contracts: authorization to contract, compliance, investigations",
+   "Private markets",
+   "Driver's licenses",
+   "Wages"
+  ],
+  "answer": "A",
+  "explanation": "The AMP ensures the integrity of public contracts: it authorizes companies to contract with the State, investigates and may exclude companies.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The AMP 'authorization to contract' is required for:",
+  "options": [
+   "Public contracts above certain thresholds (e.g.: $5M)",
+   "Only federal contracts",
+   "All private contracts",
+   "No contract"
+  ],
+  "answer": "A",
+  "explanation": "Companies wishing to contract with the Quebec State above thresholds must obtain an authorization from the AMP (integrity verification).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The public 'tendering process' requires:",
+  "options": [
+   "A single bidder",
+   "Only sole-source negotiation",
+   "No rules",
+   "Transparency, equal treatment of bidders and award to the lowest compliant bidder"
+  ],
+  "answer": "D",
+  "explanation": "Public calls for tenders must respect: publicity, equality of bidders, objective criteria and award to the lowest compliant bidder.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'compliant bid' in a call for tenders is:",
+  "options": [
+   "The most expensive",
+   "The cheapest without conditions",
+   "The one that meets all the requirements of the specifications and bidding conditions",
+   "The one submitted late"
+  ],
+  "answer": "C",
+  "explanation": "A compliant bid meets all conditions: documents, deadlines, guarantees, price. A non-compliant bid may be rejected.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'specifications' in a call for tenders describe:",
+  "options": [
+   "No details",
+   "The technical requirements, materials, standards and conditions of execution of the work",
+   "Only the price",
+   "Only the plans"
+  ],
+  "answer": "B",
+  "explanation": "The specifications detail: materials, standards, methods, quality, conditions. Together with the plans, they form the technical document of the contract.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'addendum' in a call for tenders is:",
+  "options": [
+   "A modification or clarification made to the tender documents before the bid submission date",
+   "A separate contract",
+   "A permit",
+   "An invoice"
+  ],
+  "answer": "A",
+  "explanation": "The addendum modifies or clarifies the tender documents. All bidders must take it into account; it forms part of the contract.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'site visit' before bidding allows:",
+  "options": [
+   "Negotiating the price",
+   "Obtaining the permit",
+   "Signing the contract",
+   "The bidder to observe the actual site conditions and adjust their bid"
+  ],
+  "answer": "D",
+  "explanation": "The site visit (sometimes mandatory) allows the bidder to assess the actual conditions (access, soil, existing structures) and bid with full knowledge.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'inadmissibility clause' in a call for tenders:",
+  "options": [
+   "Has no effect",
+   "Requires accepting all bids",
+   "Specifies the grounds for rejection of a bid (non-compliance, lateness, missing guarantee)",
+   "Is illegal"
+  ],
+  "answer": "C",
+  "explanation": "The inadmissibility clause defines the grounds for rejection: late bid, non-compliant, missing guarantee. It protects the integrity of the process.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'standing offer' (framework contract) in public procurement:",
+  "options": [
+   "Is prohibited",
+   "Is a fixed-price contract",
+   "Has no duration",
+   "Establishes the conditions for future orders of goods or services, without volume obligation"
+  ],
+  "answer": "D",
+  "explanation": "The framework contract (standing offer) sets the conditions (prices, terms) for subsequent orders, without guaranteeing a minimum volume.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "'Subcontracting' in a public contract is often:",
+  "options": [
+   "Subject to authorization and must meet the same requirements (qualification, compliance)",
+   "Free without conditions",
+   "Prohibited",
+   "Without effect"
+  ],
+  "answer": "A",
+  "explanation": "In public contracts, subcontracting may be governed: prior authorization, qualification of subcontractors, compliance with contract conditions.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "'Accountability' in a public construction project:",
+  "options": [
+   "Does not exist",
+   "Concerns only the private sector",
+   "Is optional",
+   "Is mandatory: progress reports, cost justification, compliance with standards"
+  ],
+  "answer": "D",
+  "explanation": "Public projects require accountability: reports, expenditure justification, compliance. The AMP and the Auditor General may investigate.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Auditor General of Quebec' may:",
+  "options": [
+   "Manage construction sites",
+   "Audit the use of public funds in construction contracts and report",
+   "Issue permits",
+   "Set wages"
+  ],
+  "answer": "B",
+  "explanation": "The AGQ audits the use of public funds, including construction contracts, and reports to the National Assembly on management.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Permanent Anti-Corruption Unit' (UPAC) may intervene in:",
+  "options": [
+   "Investigations of corruption, collusion and fraud in public contracts",
+   "Only the private sector",
+   "Only thefts",
+   "No contract"
+  ],
+  "answer": "A",
+  "explanation": "The UPAC investigates corruption, collusion and fraud in public construction contracts, in coordination with the AMP and police.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Act respecting the integrity of public contracts' aims to:",
+  "options": [
+   "Eliminate calls for tenders",
+   "Increase costs",
+   "Ensure the integrity of public contracts: authorization, compliance, exclusion of offending companies",
+   "Privatize work"
+  ],
+  "answer": "C",
+  "explanation": "The Integrity Act (via the AMP) protects public contracts against corruption: mandatory authorization, verifications, sanctions and exclusions.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Register of Ineligible Enterprises' (RENA) lists:",
+  "options": [
+   "The best companies",
+   "Companies excluded from public contracts for integrity breaches",
+   "Bankrupt companies",
+   "New contractors"
+  ],
+  "answer": "B",
+  "explanation": "The RENA (managed by the AMP) lists companies ineligible for public contracts (fraud, collusion, false declaration).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "A 'false declaration' in a public call for tenders may result in:",
+  "options": [
+   "No consequences",
+   "Rejection of the bid, exclusion from public contracts and prosecution",
+   "A bonus",
+   "A price reduction"
+  ],
+  "answer": "B",
+  "explanation": "A false declaration (qualification, experience, compliance) may result in rejection, registration in the RENA and criminal prosecution.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'employer's liability' for the acts of their employee (art. 1463 CCQ):",
+  "options": [
+   "Is only contractual",
+   "Does not exist",
+   "Is only criminal",
+   "The employer is liable for the damage caused by their employee in the performance of their duties"
+  ],
+  "answer": "D",
+  "explanation": "Art. 1463 CCQ: the employer is liable for the damage caused by their employee in the performance of their duties (vicarious liability).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'manufacturer's liability' for a defective product:",
+  "options": [
+   "Is only criminal",
+   "The manufacturer is liable for the damage caused by a safety defect in their product",
+   "Does not exist",
+   "Is only contractual"
+  ],
+  "answer": "B",
+  "explanation": "The manufacturer (and the seller) is liable for the damage caused by a safety defect in the product, even without a contract with the victim (art. 1468 CCQ).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'product recall' in construction (e.g.: defective materials):",
+  "options": [
+   "Concerns only food",
+   "Does not exist",
+   "May be ordered by the authorities if the product presents a safety hazard",
+   "Is voluntary only"
+  ],
+  "answer": "C",
+  "explanation": "The authorities (Health Canada, RBQ) may order the recall of dangerous construction products. The manufacturer must notify and correct.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'CSA standard' (Canadian Standards Association) in construction:",
+  "options": [
+   "Is a voluntary technical standard, often made mandatory by reference in the Code",
+   "Is a tax",
+   "Has no value",
+   "Is a law"
+  ],
+  "answer": "A",
+  "explanation": "CSA standards (e.g.: Z94.1 hard hats, Z259 harnesses) are voluntary but become mandatory when the Code or a regulation incorporates them by reference.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "'Incorporation by reference' of a standard in the Code means:",
+  "options": [
+   "The standard is deleted",
+   "The Code is cancelled",
+   "The standard is optional",
+   "The technical standard becomes mandatory as if it were part of the Code"
+  ],
+  "answer": "D",
+  "explanation": "When the Code incorporates a standard by reference (e.g.: CSA, ASTM), that standard has mandatory force for the application of the Code.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'updating' of the Quebec Construction Code:",
+  "options": [
+   "Is periodic: the Code evolves with new standards, technologies and lessons learned",
+   "Never takes place",
+   "Depends only on the federal government",
+   "Is fixed"
+  ],
+  "answer": "A",
+  "explanation": "The Code is updated periodically (new editions of the NBC, Quebec modifications). Professionals must keep up with changes.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'professional' (architect, engineer) on a construction site has a liability:",
+  "options": [
+   "None",
+   "Only contractual",
+   "Professional and legal: they must respect the standards of the profession and may be held liable for their errors",
+   "Only moral"
+  ],
+  "answer": "C",
+  "explanation": "The architect/engineer has professional (professional order) and legal liability: they answer for their errors, negligence and compliance with standards.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'professional liability insurance' of the architect/engineer:",
+  "options": [
+   "Is optional",
+   "Is mandatory (by the professional order) to cover errors and omissions",
+   "Does not exist",
+   "Only covers accidents"
+  ],
+  "answer": "B",
+  "explanation": "Professional orders (OAQ, OIQ) require professional liability insurance covering the professional's errors, omissions and negligence.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'seal' of the engineer or architect on plans:",
+  "options": [
+   "Is decorative",
+   "Is optional for all buildings",
+   "Has no value",
+   "Attests that the plans comply with standards and engages professional liability"
+  ],
+  "answer": "D",
+  "explanation": "The seal (and signature) engages the professional's liability: they attest to compliance with standards and assume the consequences of their plans.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'duty to inform' of the contractor towards the client:",
+  "options": [
+   "Concerns only prices",
+   "Does not exist",
+   "The contractor must inform the client of the risks, options and limits of the work",
+   "Is only verbal"
+  ],
+  "answer": "C",
+  "explanation": "The contractor has a duty to inform: inform the client of the risks, technical choices, limits and consequences of the work.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'duty to advise' of the professional (architect/engineer):",
+  "options": [
+   "Concerns only fees",
+   "Requires the professional to advise the client according to the rules of the profession and best practices",
+   "Is optional",
+   "Does not exist"
+  ],
+  "answer": "B",
+  "explanation": "The duty to advise requires the professional to guide the client, propose appropriate solutions and warn of risks, according to the rules of the profession.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "'Decennial liability' (French law) vs Quebec law:",
+  "options": [
+   "Quebec has 10 years",
+   "Identical",
+   "Quebec does not have automatic decennial liability; the guarantees are 1, 3 and 5 years (GCR) and 3 years (limitation period)",
+   "No guarantee in Quebec"
+  ],
+  "answer": "C",
+  "explanation": "Unlike France (10 years), Quebec has GCR guarantees (1, 3, 5 years) and a 3-year limitation period. No automatic decennial liability.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "'Tolerance' in construction work (permissible deviations):",
+  "options": [
+   "Does not exist",
+   "Is always zero",
+   "Is set by the client only",
+   "Standards and specifications provide for permissible tolerances (e.g.: flatness, alignment)"
+  ],
+  "answer": "D",
+  "explanation": "Standards (CSA, ACI, specifications) provide for permissible tolerances for deviations (flatness, verticality, alignment). Beyond that, it is a non-conformance.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "'Non-compliance' with construction standards may result in:",
+  "options": [
+   "No consequences",
+   "Obligation to correct, fines, refusal of the certificate and contractor liability",
+   "Cancellation of the project",
+   "Only a warning"
+  ],
+  "answer": "B",
+  "explanation": "A non-compliance may require correction (at the contractor's expense), result in fines, refusal of the occupancy certificate and prosecution.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "'Quality control' on a construction site aims to:",
+  "options": [
+   "Only reduce costs",
+   "Ignore defects",
+   "Only safety",
+   "Verify that the work and materials comply with the plans, specifications and standards"
+  ],
+  "answer": "D",
+  "explanation": "Quality control (tests, inspections, verifications) ensures the compliance of materials and workmanship with contractual and regulatory requirements.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "'Material tests' (concrete, steel, soil) on a construction site:",
+  "options": [
+   "Are optional",
+   "Are useless",
+   "Concern only water",
+   "Are required by standards to verify strength and compliance (e.g.: concrete cylinders)"
+  ],
+  "answer": "D",
+  "explanation": "Tests (slump, concrete cylinders, compaction, welding) verify the compliance of materials with specifications. They are often mandatory.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'site log' (daily report) documents:",
+  "options": [
+   "Only delays",
+   "Only wages",
+   "No events",
+   "Weather conditions, workforce, work performed, incidents, deliveries and directives"
+  ],
+  "answer": "D",
+  "explanation": "The site log records daily: weather, workforce, work, incidents, deliveries, visitors, directives. It is evidence in case of dispute.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "'Documentary evidence' (photos, emails, plans) in a construction dispute:",
+  "options": [
+   "Has no value",
+   "Is essential to establish the facts, responsibilities and damages",
+   "Replaces witnesses",
+   "Is inadmissible"
+  ],
+  "answer": "B",
+  "explanation": "Documentation (dated photos, emails, revised plans, log) constitutes crucial evidence to establish the facts and responsibilities in a dispute.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'expert witness' in a construction dispute:",
+  "options": [
+   "Is prohibited",
+   "Is always neutral",
+   "May be retained by a party to give a technical opinion enlightening the court",
+   "Replaces the judge"
+  ],
+  "answer": "C",
+  "explanation": "Each party may retain an expert (engineer, architect) to produce a report and testify. The court may also appoint its own expert.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'obligation to retain construction documents':",
+  "options": [
+   "Documents (plans, contracts, warranties) must be retained for several years (e.g.: 5-10 years)",
+   "Is 30 days",
+   "Is 1 year",
+   "Does not exist"
+  ],
+  "answer": "A",
+  "explanation": "Construction documents must be retained beyond the warranty periods (5-10 years recommended) to defend against late claims.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'limitation period' for a hidden defect in construction runs from:",
+  "options": [
+   "The end of the work",
+   "The signing of the contract",
+   "The sale of the building",
+   "The discovery of the defect (the moment when the client could reasonably have noticed it)"
+  ],
+  "answer": "D",
+  "explanation": "For hidden defects, the 3-year limitation period runs from the discovery of the defect (art. 2925, 1726 CCQ), not from the end of the work.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'waiver of subrogation' in a construction insurance contract:",
+  "options": [
+   "Is mandatory",
+   "Is illegal",
+   "Prevents the insurer from suing a responsible third party after compensating its insured",
+   "Cancels the insurance"
+  ],
+  "answer": "C",
+  "explanation": "The waiver of subrogation (common in construction) prevents the insurer who has paid from turning against another party to the contract.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "'Builder's risk insurance' typically covers:",
+  "options": [
+   "Only civil liability",
+   "Wages",
+   "Only delays",
+   "Material damage to the work under construction (fire, theft, vandalism, weather)"
+  ],
+  "answer": "D",
+  "explanation": "Builder's risk insurance (all-risk construction) covers physical damage to the work under construction during the work.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The contractor's 'commercial general liability insurance' covers:",
+  "options": [
+   "Bodily injury or property damage caused to third parties by the company's activities",
+   "Defects in the work",
+   "Wages",
+   "Taxes"
+  ],
+  "answer": "A",
+  "explanation": "CGL covers damage to third parties (injuries, property damage) caused by operations. It does not cover defects in the work itself.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'defective workmanship exclusion' in a CGL policy:",
+  "options": [
+   "Covers defects",
+   "Covers everything",
+   "Does not exist",
+   "Typically excludes the cost of repairing poorly executed work (but covers consequential damage)"
+  ],
+  "answer": "D",
+  "explanation": "CGL generally excludes the cost of redoing the defective work itself, but may cover damage caused to third parties by that work.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'certificate of insurance' given to the client before the work begins:",
+  "options": [
+   "Is optional",
+   "Attests that the contractor holds the required insurance (CGL, builder's risk) and their amounts",
+   "Is an invoice",
+   "Replaces the contract"
+  ],
+  "answer": "B",
+  "explanation": "The certificate of insurance proves coverage (CGL, builder's risk) and its limits. Contracts often require its delivery before work begins.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "'Subrogation' by the insurer means that:",
+  "options": [
+   "The contract is cancelled",
+   "After compensating, the insurer takes the place of the insured to sue the responsible party",
+   "The insurer abandons the file",
+   "The insured loses their rights"
+  ],
+  "answer": "B",
+  "explanation": "Subrogation allows the insurer who has paid a claim to turn against the responsible third party to recover the amounts paid.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'Building Act' requires that work be carried out:",
+  "options": [
+   "Without any standards",
+   "In accordance with standards and rules of the profession, by qualified persons",
+   "Only by engineers",
+   "As quickly as possible"
+  ],
+  "answer": "B",
+  "explanation": "The Building Act requires performance in accordance with standards and rules of the profession, by licensed/qualified workers, to protect the public.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "The 'warranty claim' between the general contractor and the subcontractor:",
+  "options": [
+   "Is prohibited",
+   "Concerns only the client",
+   "Allows the general contractor to turn against the subcontractor responsible for a defect",
+   "Does not exist"
+  ],
+  "answer": "C",
+  "explanation": "If a subcontractor causes a defect, the general contractor (liable to the client) may exercise a warranty claim against the at-fault subcontractor.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "'Joint and several liability' between co-debtors in a construction dispute:",
+  "options": [
+   "Always divides the debt",
+   "Allows the creditor to claim the full amount from either of the joint and several debtors",
+   "Cancels the debt",
+   "Never exists"
+  ],
+  "answer": "B",
+  "explanation": "Joint and several liability allows the creditor to claim 100% from any joint and several debtor, who may then claim the share of the others.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "'Contribution between co-debtors' after payment by one of them:",
+  "options": [
+   "Is prohibited",
+   "The debtor who paid may claim from the others their proportional share",
+   "Cancels the recourse",
+   "Does not exist"
+  ],
+  "answer": "B",
+  "explanation": "The joint and several debtor who paid more than their share may claim from the other co-debtors their proportional contribution (contribution claim).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'quality assurance plan' (QAP) on a construction project defines:",
+  "options": [
+   "Only prices",
+   "No processes",
+   "Only safety",
+   "The processes, responsibilities and controls to ensure the compliance of the work with the requirements"
+  ],
+  "answer": "D",
+  "explanation": "The QAP describes: quality organization, inspections, tests, non-conformance management, responsibilities. It structures the project's quality control.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Quality control' (QC) is distinguished from 'quality assurance' (QA) because:",
+  "options": [
+   "They are identical",
+   "No difference",
+   "QA verifies products",
+   "QC verifies products/work (inspections, tests), QA manages processes to prevent defects"
+  ],
+  "answer": "D",
+  "explanation": "QA = processes (prevention, system). QC = product (inspection, tests, detection). Both are complementary for quality.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Inspection of the work' on a construction site aims to:",
+  "options": [
+   "No objective",
+   "Only costs",
+   "Only safety",
+   "Verify the compliance of the workmanship with the plans, specifications and standards, at each stage"
+  ],
+  "answer": "D",
+  "explanation": "Inspection verifies that the work performed complies with the requirements (plans, specifications, standards) before moving to the next stage.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'hold point' in an inspection plan is:",
+  "options": [
+   "A delay",
+   "A coffee break",
+   "A meeting",
+   "A stage where work cannot continue without the formal approval of the inspector"
+  ],
+  "answer": "D",
+  "explanation": "The hold point requires inspection/approval before proceeding (e.g.: rebar before pouring). Working beyond it without approval is a non-conformance.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'witness point' differs from the hold point because:",
+  "options": [
+   "It is identical",
+   "It does not exist",
+   "It is stricter",
+   "Work may continue if the inspector does not show up on the agreed date"
+  ],
+  "answer": "D",
+  "explanation": "At a witness point, the inspector is invited but their absence does not stop the work. At a hold point, their approval is mandatory.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'punch list' at the end of a project:",
+  "options": [
+   "Is optional",
+   "Is an invoice",
+   "Lists the work to be corrected or completed before final acceptance",
+   "Replaces the contract"
+  ],
+  "answer": "C",
+  "explanation": "The punch list identifies items to be corrected/completed. It is established during the pre-acceptance inspection and conditions final acceptance.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "'Substantial completion' is reached when:",
+  "options": [
+   "The site is empty",
+   "The work can be used for its intended purpose, despite remaining minor work",
+   "The client refuses",
+   "All work is perfect"
+  ],
+  "answer": "B",
+  "explanation": "Substantial completion: the work is usable for its intended purpose, except for minor work (punch list). It triggers the warranties.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Final completion' takes place:",
+  "options": [
+   "Never",
+   "When all work (including the punch list) is completed and accepted",
+   "At the beginning of the project",
+   "Only after 5 years"
+  ],
+  "answer": "B",
+  "explanation": "Final completion marks the complete achievement: all punch list items are corrected, documents delivered, warranties active.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Close-out documents' typically include:",
+  "options": [
+   "Only photos",
+   "As-built drawings, manuals, warranties, certificates and training",
+   "Only the final invoice",
+   "No documents"
+  ],
+  "answer": "B",
+  "explanation": "Close-out documents: as-built drawings, maintenance manuals, warranties, certificates of compliance, test reports, operator training.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'As-built drawings':",
+  "options": [
+   "Reflect the modifications made during construction compared to the initial plans",
+   "Are identical to the design plans",
+   "Are useless",
+   "Are deleted"
+  ],
+  "answer": "A",
+  "explanation": "As-built drawings document the actual changes (deviations, modifications) made on site. They are essential for maintenance and future work.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Owner training' at the end of a project:",
+  "options": [
+   "Is prohibited",
+   "Ensures that the client knows how to operate and maintain the installed systems (HVAC, plumbing, etc.)",
+   "Is useless",
+   "Concerns only workers"
+  ],
+  "answer": "B",
+  "explanation": "Owner training (often contractual) transfers the knowledge to operate and maintain the systems, preventing premature breakdowns.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "'Commissioning' of a building's systems:",
+  "options": [
+   "Is only electrical",
+   "Is optional",
+   "Verifies that the systems (HVAC, electrical, plumbing) operate according to the design and requirements",
+   "Does not exist"
+  ],
+  "answer": "C",
+  "explanation": "Commissioning tests and adjusts the systems to confirm that they perform according to the design. It is increasingly required.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'certificate of compliance' for systems (electrical, gas, plumbing):",
+  "options": [
+   "Is decorative",
+   "Has no value",
+   "Attests that the installation complies with standards and can be safely commissioned",
+   "Is optional"
+  ],
+  "answer": "C",
+  "explanation": "Certificates of compliance (e.g.: electrical by the RBQ, gas) attest to compliance with standards and authorize safe commissioning.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'contractor's warranty' on the work begins at:",
+  "options": [
+   "The sale of the building",
+   "The signing of the contract",
+   "The end of the site",
+   "Acceptance of the work (provisional or final depending on the warranty)"
+  ],
+  "answer": "D",
+  "explanation": "Warranties (contractual and legal) begin at acceptance of the work. The acceptance date is therefore crucial for their starting point.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'maintenance manual' given to the client at the end of the project:",
+  "options": [
+   "Is an invoice",
+   "Describes the maintenance required for each system and material, preserving the warranties",
+   "Is useless",
+   "Replaces the plans"
+  ],
+  "answer": "B",
+  "explanation": "The maintenance manual guides the client on the required maintenance (frequency, methods) to maintain performance and preserve warranties.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'NCR' (non-conformance report) documents:",
+  "options": [
+   "A deviation from the requirements, with its cause, treatment and disposition",
+   "A payment",
+   "A meeting",
+   "A delay"
+  ],
+  "answer": "A",
+  "explanation": "The NCR formalizes: the description of the deviation, the cause, the disposition (repair, replace, accept) and the corrective/preventive actions.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'disposition' of a non-conformance may be:",
+  "options": [
+   "Only rejection",
+   "No options",
+   "Only acceptance",
+   "Repair, replace, use as-is (with acceptance) or reject"
+  ],
+  "answer": "D",
+  "explanation": "The disposition of an NCR: repair, replacement, acceptance (concession) or rejection. It must be approved by the authorized parties.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Corrective action' in a quality system aims to:",
+  "options": [
+   "Punish workers",
+   "Eliminate the cause of a detected non-conformance to prevent its recurrence",
+   "Increase costs",
+   "Ignore the problem"
+  ],
+  "answer": "B",
+  "explanation": "Corrective action addresses the root cause of an existing non-conformance to prevent it from recurring (vs preventive action for a potential risk).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Preventive action' in a quality system aims to:",
+  "options": [
+   "Correct an existing defect",
+   "Punish",
+   "Only document",
+   "Eliminate the cause of a potential non-conformance before it occurs"
+  ],
+  "answer": "D",
+  "explanation": "Preventive action anticipates and eliminates the causes of potential non-conformances, before they materialize (proactive improvement).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Root cause analysis' uses tools such as:",
+  "options": [
+   "The Ishikawa diagram (fishbone), the 5 whys, the fault tree",
+   "Only statistics",
+   "Only intuition",
+   "No tools"
+  ],
+  "answer": "A",
+  "explanation": "Root cause analysis uses: Ishikawa (6M), 5 whys, fault tree, to identify the root cause and not the symptoms.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'Ishikawa diagram' (fishbone) classifies causes into:",
+  "options": [
+   "6M: Material, Machine, Method, Manpower, Milieu, Measurement",
+   "No categories",
+   "2 categories",
+   "10 categories"
+  ],
+  "answer": "A",
+  "explanation": "The Ishikawa diagram classifies potential causes into 6M: Material, Machine, Method, Manpower, Milieu, Measurement, to structure the analysis.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The '5 whys method' consists of:",
+  "options": [
+   "Asking 5 random questions",
+   "Doing 5 inspections",
+   "Asking 'why' successively (approximately 5 times) to trace back from the effect to the root cause",
+   "Counting defects"
+  ],
+  "answer": "C",
+  "explanation": "The 5 whys chain 'why' questions to go beyond symptoms and reach the fundamental cause of a problem.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "'Statistical process control' (SPC) uses:",
+  "options": [
+   "Control charts and indicators to monitor process stability",
+   "Only surveys",
+   "No data",
+   "Only final inspection"
+  ],
+  "answer": "A",
+  "explanation": "SPC uses control charts (mean, range) to detect process drift and act before defects are produced.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'ISO 9001 standard' concerns:",
+  "options": [
+   "Safety",
+   "Environment",
+   "Quality management: requirements for a quality management system (QMS)",
+   "Wages"
+  ],
+  "answer": "C",
+  "explanation": "ISO 9001 specifies the requirements of a QMS: customer focus, leadership, process approach, continuous improvement. It is certifiable.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Continuous improvement' (PDCA - Plan-Do-Check-Act) is:",
+  "options": [
+   "An audit",
+   "An iterative cycle: plan, do, check, act, to continuously improve processes",
+   "An inspection",
+   "A single cycle"
+  ],
+  "answer": "B",
+  "explanation": "The PDCA cycle (Deming wheel) structures continuous improvement: plan the action, do it, check the results, act to standardize/correct.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The internal 'quality audit' on a construction site aims to:",
+  "options": [
+   "Verify that quality processes are applied in accordance with the plan and standards",
+   "Punish",
+   "Replace inspection",
+   "Have no objective"
+  ],
+  "answer": "A",
+  "explanation": "The internal audit evaluates the compliance of the quality system with the QAP and standards, identifies deviations and proposes improvements.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Traceability' of materials on a construction site allows:",
+  "options": [
+   "Tracing the origin, certificates and location of a material in the work",
+   "Nothing",
+   "Only deadlines",
+   "Only costs"
+  ],
+  "answer": "A",
+  "explanation": "Traceability (lot numbers, certificates, location) allows finding the history of a material, essential in case of defect or recall.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'material compliance certificate' (mill certificate):",
+  "options": [
+   "Replaces inspection",
+   "Attests that the material (e.g.: steel, concrete) meets the required specifications and standards",
+   "Is an invoice",
+   "Is useless"
+  ],
+  "answer": "B",
+  "explanation": "The mill certificate (mill test/certificate) documents the composition, properties and compliance of the material with standards. It is required for critical materials.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Calibration' of measuring instruments on a construction site:",
+  "options": [
+   "Concerns only offices",
+   "Has no importance",
+   "Is optional",
+   "Ensures the accuracy of measurements (e.g.: levels, pressure gauges) against reference standards"
+  ],
+  "answer": "D",
+  "explanation": "Periodic calibration guarantees that instruments measure accurately. Inaccurate measurements can cause non-conformances and defects.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Change management' in quality:",
+  "options": [
+   "Concerns only costs",
+   "Is useless",
+   "Controls and documents changes to plans, specifications and processes to avoid errors",
+   "Prohibits any change"
+  ],
+  "answer": "C",
+  "explanation": "Change management ensures that any change (plan, specification, method) is evaluated, approved, documented and communicated, avoiding inconsistencies.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'design review' before construction:",
+  "options": [
+   "Concerns only costs",
+   "Is useless",
+   "Is prohibited",
+   "Verifies the feasibility, compliance and coordination of plans before execution"
+  ],
+  "answer": "D",
+  "explanation": "The design review (plan coordination) detects conflicts and errors before the site, reducing costly modifications and delays.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Clash detection' via the BIM model:",
+  "options": [
+   "Identifies interferences between systems (e.g.: pipe vs beam) before construction",
+   "Is impossible",
+   "Is useless",
+   "Concerns only aesthetics"
+  ],
+  "answer": "A",
+  "explanation": "BIM (3D modeling) detects clashes between systems (structure, mechanical, electrical) upstream, avoiding costly corrections on site.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'BIM' (Building Information Modeling) in project management:",
+  "options": [
+   "Is a 2D drawing software",
+   "Concerns only renderings",
+   "Is prohibited",
+   "An intelligent 3D digital model integrating building data throughout its life cycle"
+  ],
+  "answer": "D",
+  "explanation": "BIM is a parametric 3D model containing building data: geometry, materials, costs, schedules, maintenance. It facilitates coordination.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Trade coordination' on a construction site aims to:",
+  "options": [
+   "Ignore others",
+   "Sequence the interventions of the different trades to avoid conflicts and delays",
+   "Only safety",
+   "Create conflicts"
+  ],
+  "answer": "B",
+  "explanation": "Coordination (scheduling, meetings, BIM) sequences the trades (structure, envelope, mechanical, electrical) to avoid interferences and optimize schedules.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "The weekly 'coordination meeting' on site:",
+  "options": [
+   "Is a waste of time",
+   "Brings together stakeholders to review progress, conflicts, safety and next steps",
+   "Concerns only the client",
+   "Is prohibited"
+  ],
+  "answer": "B",
+  "explanation": "The site meeting (weekly) coordinates: progress, problems, safety, deliveries, next steps. The minutes document the decisions.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'minutes' of the site meeting:",
+  "options": [
+   "Are an invoice",
+   "Are useless",
+   "Document the decisions, actions, responsible persons and deadlines, serving as reference and evidence",
+   "Replace the contract"
+  ],
+  "answer": "C",
+  "explanation": "The meeting minutes record: attendees, decisions, actions (who, what, when). Distributed to the parties, they serve as evidence of commitments made.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "'Risk management' at project closeout aims to:",
+  "options": [
+   "Have no objective",
+   "Identify and address remaining risks (warranties, liabilities, potential disputes)",
+   "Ignore residual risks",
+   "Create risks"
+  ],
+  "answer": "B",
+  "explanation": "At closeout, residual risks are assessed: active warranties, potential disputes, post-acceptance obligations, to manage them proactively.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'project review' (post-mortem / lessons learned):",
+  "options": [
+   "Analyzes the successes and failures of the project to improve future practices",
+   "Is an invoice",
+   "Is prohibited",
+   "Is useless"
+  ],
+  "answer": "A",
+  "explanation": "The project review (lessons learned) identifies: what worked well/poorly, the causes, the lessons to retain for future projects.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "'Archiving' of project documents at closeout:",
+  "options": [
+   "Organizes and preserves documents (contracts, plans, minutes, warranties) for the required duration",
+   "Is optional",
+   "Is a waste of time",
+   "Concerns only paper"
+  ],
+  "answer": "A",
+  "explanation": "Archiving preserves project documents (digital and paper) according to legal and contractual durations, for future references and disputes.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'release of bonds' at the end of a project:",
+  "options": [
+   "Is prohibited",
+   "Takes place after final acceptance and the expiry of claim periods",
+   "Never happens",
+   "Is immediate"
+  ],
+  "answer": "B",
+  "explanation": "Bonds (performance, payment) are released after final acceptance and the expiry of claim periods (legal hypothec).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'final account' of a project:",
+  "options": [
+   "Does not exist",
+   "Is an estimate",
+   "Is approximate",
+   "Establishes the final balance due, including modifications, retainage and adjustments"
+  ],
+  "answer": "D",
+  "explanation": "The final account consolidates: initial contract, modifications, released retainage, penalties/credits, to establish the final balance to be paid.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'final release' signed at closeout:",
+  "options": [
+   "Cancels the warranties",
+   "Is an invoice",
+   "Confirms the complete settlement and the waiver of future claims for the work covered",
+   "Is useless"
+  ],
+  "answer": "C",
+  "explanation": "The final release attests that all amounts are settled and that the parties waive any subsequent claim on the work (except warranties).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Punch list completion' conditions:",
+  "options": [
+   "No stage",
+   "Final acceptance and the release of final retainage",
+   "Only safety",
+   "The start of the project"
+  ],
+  "answer": "B",
+  "explanation": "The correction of all punch list items (punch list completion) is required for final acceptance and the release of the final retainage.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'transfer of ownership' of the work to the client takes place at:",
+  "options": [
+   "The signing of the contract",
+   "The end of the warranty",
+   "Never",
+   "Acceptance of the work (transfer of custody and risks)"
+  ],
+  "answer": "D",
+  "explanation": "Acceptance transfers custody and risks of the work to the client. It is the pivotal moment: warranties, insurance and liabilities shift.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'performance warranty' (mechanical systems) typically lasts:",
+  "options": [
+   "1 month",
+   "According to the contract and the law: often 1 to 2 years for equipment, 5 years for major defects",
+   "No warranty",
+   "10 years"
+  ],
+  "answer": "B",
+  "explanation": "Warranties vary: 1 year (defects), 2 years (equipment, depending on contracts), 3 years (hidden defects), 5 years (major defects, GCR).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The contractor's 'after-sales service' during the warranty period:",
+  "options": [
+   "Requires the contractor to correct defects covered by the warranty within a reasonable time",
+   "Is optional",
+   "Is prohibited",
+   "Concerns only cars"
+  ],
+  "answer": "A",
+  "explanation": "During the warranty period, the contractor must correct covered defects (workmanship defects, hidden defects) within a reasonable time after notice from the client.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'formal notice' for a defect under warranty:",
+  "options": [
+   "Formally notifies the contractor of the defect and requires correction within a deadline, preserving rights",
+   "Cancels the warranty",
+   "Is useless",
+   "Is prohibited"
+  ],
+  "answer": "A",
+  "explanation": "The formal notice (written notice) calls on the contractor to correct the defect under warranty. It preserves rights and starts the deadlines running.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Joint expert assessment' for a construction defect:",
+  "options": [
+   "Brings together the experts of both parties to observe the defect and its causes, ideally by mutual agreement",
+   "Is useless",
+   "Is prohibited",
+   "Replaces the judge"
+  ],
+  "answer": "A",
+  "explanation": "Joint expert assessment allows the parties to agree on the observation of the defect, its causes and the corrections, avoiding litigation.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'contractor's liability' after acceptance:",
+  "options": [
+   "Ceases immediately",
+   "Never exists",
+   "Lasts 30 years",
+   "Persists for the warranties (defects, hidden defects, major defects) according to legal and contractual deadlines"
+  ],
+  "answer": "D",
+  "explanation": "After acceptance, the contractor remains liable through the warranties: 1 year (defects), 3 years (hidden defects), 5 years (major defects), plus the limitation period.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Warranty period monitoring':",
+  "options": [
+   "Monitors defects appearing during the warranty period to report them and have them corrected",
+   "Is prohibited",
+   "Concerns only costs",
+   "Is useless"
+  ],
+  "answer": "A",
+  "explanation": "Warranty period monitoring (often by the building manager) detects and reports defects under warranty before the deadlines expire.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "'Administrative closeout' of a project includes:",
+  "options": [
+   "Only payment",
+   "Only safety",
+   "No verification",
+   "Verification of all deliverables, documents, warranties, releases and settlement of accounts"
+  ],
+  "answer": "D",
+  "explanation": "Administrative closeout validates: complete deliverables, documents delivered, active warranties, signed releases, settled accounts, archives constituted.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Performance evaluation' of subcontractors at the end of the project:",
+  "options": [
+   "Measures quality, deadlines, safety and cooperation, for future projects",
+   "Is useless",
+   "Is prohibited",
+   "Concerns only costs"
+  ],
+  "answer": "A",
+  "explanation": "Subcontractor evaluation (quality, deadlines, OHS, cooperation) feeds a database for future selection and improvement.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "'Lessons learned' (feedback) on risks and unforeseen events:",
+  "options": [
+   "Concerns only accidents",
+   "Is a waste of time",
+   "Is prohibited",
+   "Captures the lessons from unforeseen events to better anticipate and manage future risks"
+  ],
+  "answer": "D",
+  "explanation": "Lessons learned document the unforeseen events encountered, their causes and the responses, enriching the risk management of future projects.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "'Client satisfaction' at project closeout is measured by:",
+  "options": [
+   "Only safety",
+   "Only price",
+   "Compliance of the work, respect of deadlines/costs and quality of the relationship",
+   "No criteria"
+  ],
+  "answer": "C",
+  "explanation": "Client satisfaction integrates: compliance with expectations, respect of commitments (deadlines, costs), quality, communication and service.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'cost of non-quality' (CNQ) in a project includes:",
+  "options": [
+   "Only materials",
+   "Only wages",
+   "No costs",
+   "Scrap, rework, delays, claims and loss of reputation due to defects"
+  ],
+  "answer": "D",
+  "explanation": "CNQ quantifies: scrap, rework, delays, warranties, disputes, loss of clients. Preventing it costs less than correcting it.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Prevention' of defects (vs detection) is:",
+  "options": [
+   "Useless",
+   "More expensive",
+   "Impossible",
+   "Generally less costly and more effective than correction after the fact"
+  ],
+  "answer": "D",
+  "explanation": "Preventing (training, processes, upstream controls) costs less than detecting and correcting (rework, delays, disputes). It is the principle of quality assurance.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "'Zero defects' as a quality objective means:",
+  "options": [
+   "Aiming for the elimination of defects through prevention, even if absolute perfection is an ideal",
+   "That defects are ignored",
+   "That no defect is tolerated and everything is perfect in practice",
+   "That all defects are punished"
+  ],
+  "answer": "A",
+  "explanation": "'Zero defects' (Crosby) is a prevention philosophy: aiming for the elimination of defects at the source, rather than accepting a defect level.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'ISO 14001 standard' concerns:",
+  "options": [
+   "Wages",
+   "Quality",
+   "Safety",
+   "Environmental management: requirements for an environmental management system"
+  ],
+  "answer": "D",
+  "explanation": "ISO 14001 specifies the requirements of an environmental management system: impacts, legal compliance, continuous improvement. It is certifiable.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'ISO 45001 standard' concerns:",
+  "options": [
+   "Quality",
+   "Occupational health and safety management (OHS)",
+   "Finances",
+   "Environment"
+  ],
+  "answer": "B",
+  "explanation": "ISO 45001 (replaces OHSAS 18001) specifies the requirements of an OHS management system: prevention of occupational injuries and diseases.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'integrated management system' (IMS) combines:",
+  "options": [
+   "Quality (9001), environment (14001) and OHS (45001) into a coherent system",
+   "Only quality",
+   "Only finances",
+   "No standards"
+  ],
+  "answer": "A",
+  "explanation": "The IMS integrates the three standards (quality, environment, OHS) into a single system, optimizing processes, audits and resources.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Certification' of a management system (ISO) is:",
+  "options": [
+   "Mandatory by law",
+   "Voluntary: an accredited body attests compliance with the standard after audit",
+   "Automatic",
+   "Prohibited"
+  ],
+  "answer": "B",
+  "explanation": "ISO certification is voluntary: an accredited certifier audits the system and issues a certificate of compliance (periodic surveillance).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The ISO 'certification audit' takes place in:",
+  "options": [
+   "1 stage",
+   "3 stages",
+   "No stages",
+   "2 stages: document review (stage 1) then field audit (stage 2)"
+  ],
+  "answer": "D",
+  "explanation": "Initial certification: stage 1 (document review, preparation) then stage 2 (field audit, compliance). Followed by annual surveillance audits.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "'Management review' in a management system:",
+  "options": [
+   "Is an inspection",
+   "Is useless",
+   "Periodically evaluates the performance of the system and decides on improvements (by top management)",
+   "Concerns only workers"
+  ],
+  "answer": "C",
+  "explanation": "Management review (mandatory ISO): management analyzes indicators, audits, complaints and decides on resources and improvements.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Quality 'key performance indicators' (KPIs) on a construction site include:",
+  "options": [
+   "No indicators",
+   "Non-conformance rate, rework rate, inspection results, client complaints",
+   "Only costs",
+   "Only deadlines"
+  ],
+  "answer": "B",
+  "explanation": "Quality KPIs measure: NCR rate, rework, inspection compliance, complaints, client satisfaction, to drive improvement.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'Pareto chart' (80/20) in quality is used to:",
+  "options": [
+   "Manage deadlines",
+   "Draw plans",
+   "Identify the most frequent causes of defects (20% of causes = 80% of problems)",
+   "Calculate costs"
+  ],
+  "answer": "C",
+  "explanation": "The Pareto chart ranks defects by frequency to target the 20% of causes responsible for 80% of problems, prioritizing corrective actions.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'histogram' in quality control is used to:",
+  "options": [
+   "Draw buildings",
+   "Visualize the distribution of measurements (e.g.: concrete strength) to verify compliance",
+   "Manage costs",
+   "Plan deadlines"
+  ],
+  "answer": "B",
+  "explanation": "The histogram shows the distribution of data (frequency of values), revealing variability and compliance with specifications.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'control chart' detects:",
+  "options": [
+   "Costs",
+   "Wages",
+   "Abnormal variations in a process (points outside limits, trends) requiring action",
+   "Delays"
+  ],
+  "answer": "C",
+  "explanation": "The control chart plots measurements with limits (UCL/LCL). A point outside limits or a trend signals a special cause to investigate.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "'Process capability' (Cp, Cpk) measures:",
+  "options": [
+   "The ability of the process to produce within the specified tolerances",
+   "Costs",
+   "Deadlines",
+   "Safety"
+  ],
+  "answer": "A",
+  "explanation": "Cp/Cpk quantify the ability of the process to meet specifications. Cpk ≥ 1.33 is generally targeted for a capable process.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "'Sampling' for lot acceptance (e.g.: concrete):",
+  "options": [
+   "Takes a representative sample according to a standard (e.g.: CSA) to rule on compliance",
+   "Does not exist",
+   "Tests only the first piece",
+   "Tests 100% of pieces"
+  ],
+  "answer": "A",
+  "explanation": "Sampling (CSA/ASTM plans) takes representative specimens (e.g.: concrete cylinders) to evaluate lot compliance without testing everything.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Concrete compliance' is verified by:",
+  "options": [
+   "Strength tests on cylinders (at 7 and 28 days) and the slump test on site",
+   "Weight",
+   "Smell",
+   "Colour"
+  ],
+  "answer": "A",
+  "explanation": "Concrete compliance: slump test at delivery + cylinders tested in compression at 7 and 28 days vs the specified strength.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'slump' of concrete measures:",
+  "options": [
+   "The workability (consistency) of fresh concrete at delivery",
+   "Strength",
+   "Colour",
+   "Price"
+  ],
+  "answer": "A",
+  "explanation": "The slump test measures the workability of fresh concrete. A slump outside specification may indicate a problem (too much water, poor mix).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Concrete curing' after pouring aims to:",
+  "options": [
+   "No objective",
+   "Paint the concrete",
+   "Accelerate drying",
+   "Maintain moisture and temperature to ensure hydration and strength of the concrete"
+  ],
+  "answer": "D",
+  "explanation": "Curing (watering, membrane, tarps) maintains the moisture necessary for cement hydration, developing strength and preventing cracks.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Construction joints' in concrete must be:",
+  "options": [
+   "Painted",
+   "Avoided at all costs",
+   "Planned and treated (position, preparation) to ensure continuity and watertightness",
+   "Hidden"
+  ],
+  "answer": "C",
+  "explanation": "Construction joints (pour stops) are planned, positioned and prepared (roughness, bonding agent) for structural continuity.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'reinforcement' (rebar) of reinforced concrete is inspected for:",
+  "options": [
+   "Colour",
+   "Weight only",
+   "No criteria",
+   "Diameter, spacing, cover and lap splices compliant with the plans"
+  ],
+  "answer": "D",
+  "explanation": "Reinforcement inspection (before pouring) verifies: diameter, spacing, cover, lap splices, ties, in accordance with the structural plans.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'cover' of reinforcement in concrete:",
+  "options": [
+   "Is optional",
+   "Has no function",
+   "Is decorative",
+   "Protects the steel from corrosion and ensures bond, with a minimum thickness depending on exposure"
+  ],
+  "answer": "D",
+  "explanation": "Cover (concrete around the steel) protects against corrosion and ensures bond. Its minimum thickness depends on exposure (CSA A23.1).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Compaction' of concrete (vibration) during pouring:",
+  "options": [
+   "Is prohibited",
+   "Is useless",
+   "Eliminates air voids and ensures cover of reinforcement and filling of formwork",
+   "Concerns only asphalt"
+  ],
+  "answer": "C",
+  "explanation": "Vibration (vibrator needle) removes trapped air, ensures cover of the steel and complete filling of the formwork, for dense concrete.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Formwork stripping' of concrete must respect:",
+  "options": [
+   "Only 1 day",
+   "Only 30 days",
+   "No deadline",
+   "Minimum deadlines depending on the element and conditions, to avoid damage"
+  ],
+  "answer": "D",
+  "explanation": "Formwork stripping respects deadlines (depending on the element, temperature, strength achieved) to avoid damaging the still-fragile concrete.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'flatness tolerance' of a concrete slab is specified by:",
+  "options": [
+   "No standard",
+   "Flatness/levelness indices (F-numbers: FF, FL) or maximum deviations under a straightedge",
+   "Only the eye",
+   "The client only"
+  ],
+  "answer": "B",
+  "explanation": "Slab flatness is measured by F-numbers (FF flatness, FL levelness, ASTM E1155) or deviations under a straightedge, depending on the slab's use.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "'Cracking' of concrete is:",
+  "options": [
+   "Prohibited",
+   "Only aesthetic",
+   "Often unavoidable (shrinkage, thermal) but must be controlled (width, spacing) according to standards",
+   "Always a major defect"
+  ],
+  "answer": "C",
+  "explanation": "Some cracks (shrinkage) are unavoidable but must be controlled (joints, reinforcement). Structural or excessive cracks are non-conformances.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Waterproofing' of foundations and basements is verified by:",
+  "options": [
+   "Only paint",
+   "Chance",
+   "Inspection of membranes, drains and absence of infiltration (sometimes water test)",
+   "No test"
+  ],
+  "answer": "C",
+  "explanation": "Waterproofing (foundations, basements, roofs) is verified by inspection of systems (membranes, drains) and sometimes water tests.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'flood test' of a roof membrane:",
+  "options": [
+   "Is useless",
+   "Concerns only walls",
+   "Is prohibited",
+   "Consists of temporarily flooding the membrane to detect leaks before finishing"
+  ],
+  "answer": "D",
+  "explanation": "The flood test floods the membrane (24-48 h) to detect leaks before covering. It is required for certain roofs and waterproofing.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Thermal insulation' is inspected for:",
+  "options": [
+   "Price",
+   "Thickness, continuity, absence of thermal bridges and compliance with the Code",
+   "Colour",
+   "No criteria"
+  ],
+  "answer": "B",
+  "explanation": "Insulation inspection verifies: thickness, continuity, vapour barrier, absence of thermal bridges, in accordance with Code requirements (energy efficiency).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'vapour barrier' in a building envelope:",
+  "options": [
+   "Is prohibited",
+   "Has no function",
+   "Is decorative",
+   "Controls moisture migration to prevent condensation in walls/roofs"
+  ],
+  "answer": "D",
+  "explanation": "The vapour barrier (or vapour retarder) limits the migration of water vapour towards cold surfaces, preventing condensation and mould.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Airtightness' of the building envelope is verified by:",
+  "options": [
+   "Only the eye",
+   "No test",
+   "A blower door test measuring the air leakage rate",
+   "Weight"
+  ],
+  "answer": "C",
+  "explanation": "The blower door test puts the building under negative/positive pressure and measures air leaks, verifying compliance with the required airtightness.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Grounding' and 'continuity' of electrical circuits are tested by:",
+  "options": [
+   "No test",
+   "Only the eye",
+   "Chance",
+   "Measurements of ground resistance and continuity of protective conductors"
+  ],
+  "answer": "D",
+  "explanation": "Electrical tests verify: continuity of grounds, ground resistance, insulation, polarity, to ensure the safety of installations.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'pressure test' of piping (plumbing, gas):",
+  "options": [
+   "Is useless",
+   "Verifies the watertightness of networks by pressurizing them (water or air) before commissioning",
+   "Is prohibited",
+   "Concerns only electricity"
+  ],
+  "answer": "B",
+  "explanation": "The pressure test (hydrostatic or pneumatic) pressurizes the piping to detect leaks before commissioning.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Balancing' of HVAC systems (heating, ventilation, air conditioning):",
+  "options": [
+   "Is useless",
+   "Is optional",
+   "Concerns only electricity",
+   "Adjusts air and water flows so that each zone receives the quantities provided by the design"
+  ],
+  "answer": "D",
+  "explanation": "Balancing (TAB - testing, adjusting, balancing) adjusts air/water flows so that each space receives the designed quantities, ensuring comfort.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'energy performance' of the completed building is sometimes verified by:",
+  "options": [
+   "Chance",
+   "No verification",
+   "Only aesthetics",
+   "Modeling or measurements confirming compliance with Code requirements (e.g.: Novoclimat)"
+  ],
+  "answer": "D",
+  "explanation": "Energy performance may be validated by modeling, tests (blower door) or certification (Novoclimat, LEED), confirming compliance with the Code.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'LEED certification' (or equivalent) of a building:",
+  "options": [
+   "Attests to high environmental performance (energy, water, materials, air quality)",
+   "Is a tax",
+   "Is mandatory",
+   "Does not exist"
+  ],
+  "answer": "A",
+  "explanation": "LEED (and others: BOMA BEST, Novoclimat) certifies the environmental performance of the building according to criteria: energy, water, materials, site, indoor quality.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Indoor air quality' (IAQ) at building acceptance:",
+  "options": [
+   "May be measured (VOCs, CO2, particles) to confirm a healthy environment before occupancy",
+   "Is never measured",
+   "Concerns only factories",
+   "Is useless"
+  ],
+  "answer": "A",
+  "explanation": "IAQ (measurement of VOCs, CO2, mould) may be verified before occupancy, especially for green or sensitive buildings (schools, hospitals).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'flush-out' of a new building before occupancy:",
+  "options": [
+   "Ventilates the building abundantly to remove VOCs from new materials (paints, adhesives)",
+   "Concerns only plumbing",
+   "Is useless",
+   "Is prohibited"
+  ],
+  "answer": "A",
+  "explanation": "The flush-out (prolonged ventilation) removes volatile organic compounds (VOCs) emitted by new materials, improving IAQ before occupancy.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Construction waste management' at closeout:",
+  "options": [
+   "Is useless",
+   "Is finished at the beginning",
+   "Verifies sorting, recycling and compliant disposal of waste, with evidence (tickets)",
+   "Does not exist"
+  ],
+  "answer": "C",
+  "explanation": "At closeout, waste management is verified: recycling rate, disposal tickets, environmental compliance, for reports and certifications.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'final report of the engineer/architect' at closeout:",
+  "options": [
+   "Attests to the general compliance of the work with the plans and standards, and formulates reservations",
+   "Replaces the contract",
+   "Is an invoice",
+   "Is useless"
+  ],
+  "answer": "A",
+  "explanation": "The professional's final report attests to compliance, lists reservations and recommends (or not) acceptance. It engages their liability.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The municipal 'certificate of compliance' (occupancy):",
+  "options": [
+   "Does not exist",
+   "Is optional",
+   "Confirms that the building complies with municipal regulations and may be legally occupied",
+   "Is decorative"
+  ],
+  "answer": "C",
+  "explanation": "The municipal attestation/occupancy certificate confirms compliance with regulations (zoning, construction) and authorizes legal occupancy of the building.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "'Financial closeout' of a project verifies:",
+  "options": [
+   "Only wages",
+   "No costs",
+   "Only the initial invoice",
+   "That all costs, modifications, retainage and claims are settled and documented"
+  ],
+  "answer": "D",
+  "explanation": "Financial closeout consolidates: actual costs vs budget, modifications, retainage, claims, to establish the final cost and release financial guarantees.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "The 'final budget' vs the 'initial budget' of a project allows:",
+  "options": [
+   "Ignoring deviations",
+   "Punishing",
+   "Nothing",
+   "Analyzing deviations (overruns/savings) and their causes, to improve future estimates"
+  ],
+  "answer": "D",
+  "explanation": "The comparison of final/initial budget (variance analysis) identifies the causes of overruns and feeds the improvement of future estimates.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "'Knowledge capitalization' at the end of a project:",
+  "options": [
+   "Documents and shares lessons, methods and data to benefit future projects",
+   "Is prohibited",
+   "Is useless",
+   "Concerns only finances"
+  ],
+  "answer": "A",
+  "explanation": "Knowledge capitalization (database, lessons learned, standards) transforms the experience of a project into reusable knowledge for the organization.",
+  "difficulty": "EASY"
+ }
+]

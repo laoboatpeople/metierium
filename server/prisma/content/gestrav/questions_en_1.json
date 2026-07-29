@@ -1,0 +1,1536 @@
+[
+ {
+  "chapter": 1,
+  "question": "Which document details the quantities of materials required for a construction project?",
+  "options": [
+   "The schedule of prices",
+   "The quantity takeoff",
+   "The scope of work",
+   "The technical specifications"
+  ],
+  "answer": "B",
+  "explanation": "The quantity takeoff is the detailed measurement of the quantities of materials and work items required to complete a project.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "The direct costs of a construction project include:",
+  "options": [
+   "The property taxes on the head office",
+   "Legal and accounting fees",
+   "Office expenses and liability insurance",
+   "Labour, materials and equipment directly assigned to the work"
+  ],
+  "answer": "D",
+  "explanation": "Direct costs are those that can be specifically attributed to a given work item: labour, materials and equipment used directly on the job site.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "What is an indirect cost (overhead) in construction?",
+  "options": [
+   "The cost of materials incorporated into the work",
+   "The contractor's profit margin",
+   "Expenses that benefit all projects (administration, office rent)",
+   "The wages of a worker assigned to a specific job site"
+  ],
+  "answer": "C",
+  "explanation": "Indirect costs (overhead) are expenses not attributable to a specific project: administration, rent, general insurance, etc.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "A 10% contingency on a $500,000 estimate represents:",
+  "options": [
+   "$50,000",
+   "$100,000",
+   "$5,000",
+   "$500,000"
+  ],
+  "answer": "A",
+  "explanation": "10% × $500,000 = $50,000. The contingency covers unforeseen items and quantity variations.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "The profit margin is generally calculated:",
+  "options": [
+   "As a fixed dollar amount per project",
+   "As a percentage of direct costs only",
+   "Based on the number of employees",
+   "As a percentage of the total project cost"
+  ],
+  "answer": "D",
+  "explanation": "The profit margin is usually expressed as a percentage of the total cost (direct + indirect + contingency) and represents the contractor's profit.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Which type of bid commits the contractor to complete the work for a fixed lump-sum price?",
+  "options": [
+   "Cost-plus bid",
+   "Time-and-materials bid",
+   "Lump-sum (fixed-price) bid",
+   "Unit-price bid"
+  ],
+  "answer": "C",
+  "explanation": "A lump-sum bid commits the contractor to perform all the described work for a predetermined overall price.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "In a unit-price bid, the final payment depends on:",
+  "options": [
+   "Actual costs plus a percentage",
+   "The quantities actually performed multiplied by the unit prices",
+   "The agreed lump-sum price",
+   "A verbal agreement between the parties"
+  ],
+  "answer": "B",
+  "explanation": "Under a unit-price contract, payment is based on the quantities measured on the job site × the bid unit prices. The final amount varies according to actual quantities.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "A cost-plus contract means the client pays:",
+  "options": [
+   "The actual construction costs plus an agreed fee for the contractor",
+   "A unit price per square metre",
+   "A fixed price determined in advance",
+   "Only the materials"
+  ],
+  "answer": "A",
+  "explanation": "Under a cost-plus contract, the owner reimburses the actual costs (labour, materials, equipment) and pays the contractor a fee (percentage or fixed amount).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Which document often accompanies the call for tenders and lists the work items with their unit prices?",
+  "options": [
+   "The architectural drawing",
+   "The building permit",
+   "The schedule of prices",
+   "The location certificate"
+  ],
+  "answer": "C",
+  "explanation": "The schedule of prices lists each work item with its unit of measure and the bid unit price. It serves as the basis for progress payments.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "The unit of measure 'lm' in a quantity takeoff means:",
+  "options": [
+   "Square metre",
+   "Cubic metre",
+   "Thousand litres",
+   "Linear metre"
+  ],
+  "answer": "D",
+  "explanation": "'lm' = linear metre, used to measure linear work items (fences, pipes, curbs, beams).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "A markup factor of 1.25 applied to a direct cost of $80,000 gives a selling price of:",
+  "options": [
+   "$125,000",
+   "$100,000",
+   "$200,000",
+   "$80,000"
+  ],
+  "answer": "B",
+  "explanation": "$80,000 × 1.25 = $100,000. The markup factor includes overhead and profit in a single multiplier.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Unit-price analysis consists of:",
+  "options": [
+   "Assessing the market value of a building",
+   "Negotiating a discount with the client",
+   "Breaking down a price into its components (labour, materials, equipment, overhead, profit)",
+   "Comparing the prices of different suppliers"
+  ],
+  "answer": "C",
+  "explanation": "Unit-price analysis breaks each item down into its constituent elements to verify the accuracy of the price and identify risky items.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "What is the main role of the estimator in construction?",
+  "options": [
+   "Negotiating contracts with clients",
+   "Evaluating costs and preparing bids",
+   "Supervising workers on the job site",
+   "Drawing the architectural plans"
+  ],
+  "answer": "B",
+  "explanation": "The estimator analyzes the drawings and specifications, performs the quantity takeoff, consults suppliers and prepares the cost estimate and the bid.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "The 'preliminary takeoff' method consists of:",
+  "options": [
+   "Estimating costs based on past experience",
+   "Checking subcontractors' invoices",
+   "Calculating quantities from the drawings before work begins",
+   "Measuring the work after it is completed"
+  ],
+  "answer": "C",
+  "explanation": "The preliminary takeoff is the calculation of the quantities of work to be performed from the drawings and specifications, before execution begins.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "In a public call for tenders in Quebec, which fundamental principle must be respected?",
+  "options": [
+   "Negotiation by mutual agreement",
+   "Equal treatment and transparency among bidders",
+   "Awarding without predefined criteria",
+   "Selecting the most expensive bidder"
+  ],
+  "answer": "B",
+  "explanation": "Public calls for tenders are governed by principles of transparency, equal treatment and impartiality to ensure fair competition.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "A contractor bids $150/m³ for excavation. If the actual volume is 800 m³ instead of the estimated 600 m³, the amount paid will be:",
+  "options": [
+   "$60,000",
+   "$90,000",
+   "$150,000",
+   "$120,000"
+  ],
+  "answer": "D",
+  "explanation": "Under a unit price: 800 m³ × $150/m³ = $120,000. Payment follows the actual quantities, not the estimated quantities.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Job site overhead costs include:",
+  "options": [
+   "Site setup, temporary fencing, portable toilets and the site office",
+   "Company advertising",
+   "The architect's fees",
+   "The rent of the company's head office"
+  ],
+  "answer": "A",
+  "explanation": "Job site overhead costs are indirect costs specific to the project: setup, fencing, sanitation, office, temporary lighting, etc.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "What contingency percentage is typical for a well-defined project with detailed drawings?",
+  "options": [
+   "5 to 10%",
+   "50%",
+   "1 to 3%",
+   "25 to 30%"
+  ],
+  "answer": "A",
+  "explanation": "For a well-defined project, a contingency of 5 to 10% is common. Less defined projects may require 15 to 25%.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Digital 'takeoff' uses:",
+  "options": [
+   "A drone to fly over the job site",
+   "A calculator and conversion tables",
+   "Takeoff software that reads digital drawings (e.g. PlanSwift, Bluebeam)",
+   "A measuring tape and a pencil"
+  ],
+  "answer": "C",
+  "explanation": "Digital takeoff uses specialized software to extract quantities directly from PDF or CAD drawings, improving accuracy and speed.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "In a bid, 'exclusions' serve to:",
+  "options": [
+   "Reduce the bid price",
+   "Specify the work that is NOT included in the bid price",
+   "Eliminate competitors",
+   "Exclude taxes from the calculation"
+  ],
+  "answer": "B",
+  "explanation": "Exclusions define the scope by specifying what is not covered, avoiding misunderstandings and subsequent claims.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "A unit price typically includes:",
+  "options": [
+   "Only the cost of materials",
+   "Only labour",
+   "Taxes and permits only",
+   "Labour, materials, equipment, overhead and profit"
+  ],
+  "answer": "D",
+  "explanation": "A complete unit price includes all components: labour, materials, equipment, allocated overhead and profit margin.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "The 'rule of thumb' in estimating is:",
+  "options": [
+   "A precise method based on detailed calculations",
+   "An estimating software",
+   "A legal requirement of the RBQ",
+   "A quick approximation based on experience and historical ratios"
+  ],
+  "answer": "D",
+  "explanation": "The rule of thumb is a rough estimate (e.g. $/sq ft) useful in the preliminary phase, but insufficient for a firm bid.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Which body oversees public calls for tenders by municipalities in Quebec?",
+  "options": [
+   "The Ministère des Affaires municipales et de l'Habitation (MAMH)",
+   "The APCHQ",
+   "The CCQ",
+   "The RBQ"
+  ],
+  "answer": "A",
+  "explanation": "The MAMH sets the rules for municipal contracts. Municipalities must follow compliant contract management policies.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "A labour productivity rate of 0.5 hour/m² means that:",
+  "options": [
+   "The project lasts 0.5 hour",
+   "The cost is $0.50 per m²",
+   "One worker produces 0.5 m² per hour",
+   "It takes 0.5 hour of work to complete 1 m² of work"
+  ],
+  "answer": "D",
+  "explanation": "The productivity rate expresses the time required per unit of work. 0.5 h/m² = 30 minutes of work per square metre.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "If the labour cost is $45/h and the productivity rate is 0.8 h/m², the labour cost per m² is:",
+  "options": [
+   "$56.25/m²",
+   "$36/m²",
+   "$45/m²",
+   "$0.8/m²"
+  ],
+  "answer": "B",
+  "explanation": "$45/h × 0.8 h/m² = $36/m². The unit labour cost = hourly rate × productivity rate.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "The construction cost escalation index is used to:",
+  "options": [
+   "Adjust estimates to account for inflation between bidding and execution",
+   "Determine the number of workers needed",
+   "Reduce material prices",
+   "Calculate the profit margin"
+  ],
+  "answer": "A",
+  "explanation": "The escalation index allows estimated costs to be updated based on the foreseeable evolution of material and labour prices.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Which document must the contractor provide to guarantee its bid in a call for tenders?",
+  "options": [
+   "A birth certificate",
+   "A letter of recommendation",
+   "A bid bond, generally 10% of the bid amount",
+   "A personal cheque"
+  ],
+  "answer": "C",
+  "explanation": "The bid bond assures the owner that the selected bidder will sign the contract. It is typically 10%.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "'Front-end loading' in a schedule of prices consists of:",
+  "options": [
+   "Inflating the prices of work performed early in the project to improve cash flow",
+   "Starting work before the contract is signed",
+   "Reducing the prices of the first items",
+   "Eliminating the last items of the schedule"
+  ],
+  "answer": "A",
+  "explanation": "Front-end loading is a practice (sometimes disputed) that consists of inflating the prices of items performed early to obtain higher advance payments.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "A concrete quantity takeoff for a slab 10 m × 8 m × 0.15 m thick gives a volume of:",
+  "options": [
+   "1,200 m³",
+   "120 m³",
+   "12 m³",
+   "1.2 m³"
+  ],
+  "answer": "C",
+  "explanation": "Volume = 10 × 8 × 0.15 = 12 m³. Concrete takeoff is calculated in cubic metres (m³).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "The area of a wall 4 m high × 12 m long is:",
+  "options": [
+   "16 m²",
+   "48 m²",
+   "4.8 m²",
+   "480 m²"
+  ],
+  "answer": "B",
+  "explanation": "Area = 4 × 12 = 48 m². Surfaces (walls, floors, roofs) are measured in square metres.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "In an estimate, 'allowances' are:",
+  "options": [
+   "Late penalties",
+   "Discounts granted to the client",
+   "Government taxes",
+   "Amounts set aside for items not yet defined (e.g. choice of finishes)"
+  ],
+  "answer": "D",
+  "explanation": "Allowances are amounts included in the contract for items whose choice or price has not yet been determined.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "What is the main objective of a Class A (detailed) estimate?",
+  "options": [
+   "To obtain a quick order of magnitude",
+   "To avoid consulting suppliers",
+   "To replace the quantity takeoff",
+   "To provide an accurate estimate (±5%) based on complete drawings and specifications"
+  ],
+  "answer": "D",
+  "explanation": "The Class A (definitive) estimate is based on complete documents and aims for an accuracy of ±5%. It serves as the basis for the firm bid.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "The equipment cost in an estimate includes:",
+  "options": [
+   "Only the purchase price of the machines",
+   "Rental or depreciation, fuel, maintenance and the operator",
+   "Only fuel",
+   "Registration taxes only"
+  ],
+  "answer": "B",
+  "explanation": "Equipment cost includes rental/depreciation, fuel, maintenance, insurance and often the operator's wages.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "A contractor uses a markup factor of 1.35. If its direct costs are $200,000, its selling price is:",
+  "options": [
+   "$235,000",
+   "$335,000",
+   "$200,000",
+   "$270,000"
+  ],
+  "answer": "D",
+  "explanation": "$200,000 × 1.35 = $270,000. The 1.35 factor adds 35% to cover overhead and profit.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "The 'breakdown' of a bid consists of:",
+  "options": [
+   "Breaking down the overall price into detailed items to allow analysis and progress payments",
+   "Reducing the number of pages",
+   "Airing out the bid documents",
+   "Translating the bid into English"
+  ],
+  "answer": "A",
+  "explanation": "The breakdown details the overall price into components, facilitating bid evaluation and payment tracking.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "What main risk does the contractor assume in a lump-sum contract?",
+  "options": [
+   "No risk, the client pays everything",
+   "The exchange-rate risk only",
+   "The weather risk only",
+   "The risk of cost overrun if actual quantities exceed the estimates"
+  ],
+  "answer": "D",
+  "explanation": "Under a lump sum, the contractor assumes the quantity and price risk. If actual costs exceed the bid, it is at the contractor's expense.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "'Bid leveling' consists of:",
+  "options": [
+   "Adjusting bids to make them comparable (inclusions, exclusions, alternatives)",
+   "Automatically choosing the lowest bid",
+   "Cancelling the call for tenders",
+   "Negotiating prices after the bid opening"
+  ],
+  "answer": "A",
+  "explanation": "Leveling consists of standardizing bids by adding or removing items to compare offers on an equivalent basis.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "A unit-price schedule for excavation indicates $25/m³. For 1,500 m³ excavated, the amount is:",
+  "options": [
+   "$25,000",
+   "$15,000",
+   "$37,500",
+   "$1,500"
+  ],
+  "answer": "C",
+  "explanation": "1,500 m³ × $25/m³ = $37,500. Unit-price payment = actual quantity × unit price.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "The 'general conditions' of a construction contract define:",
+  "options": [
+   "The rights, obligations and administrative procedures of the parties",
+   "The technical specifications of materials",
+   "The architectural drawings",
+   "The price of each work item"
+  ],
+  "answer": "A",
+  "explanation": "The general conditions (e.g. CCDC 2, NQ 1809-900) govern the contractual relationship: roles, deadlines, payments, changes, disputes.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Labour productivity can be affected by:",
+  "options": [
+   "The number of pages in the contract",
+   "Weather conditions, job site congestion, overtime and coordination",
+   "Only the quality of materials",
+   "Only the workers' wages"
+  ],
+  "answer": "B",
+  "explanation": "Productivity depends on many factors: weather, access, congestion, overtime (fatigue), coordination between trades, etc.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "A preliminary Class C estimate has a typical accuracy of:",
+  "options": [
+   "±50%",
+   "±10 to 15%",
+   "±5%",
+   "±25 to 30%"
+  ],
+  "answer": "D",
+  "explanation": "The Class C (conceptual) estimate is based on limited information and has an accuracy of ±25 to 30%. It is used in the feasibility phase.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "A 'markup' of 20% on a cost of $100,000 gives a selling price of:",
+  "options": [
+   "$80,000",
+   "$120,000",
+   "$100,000",
+   "$200,000"
+  ],
+  "answer": "B",
+  "explanation": "$100,000 × 1.20 = $120,000. The 20% markup adds $20,000 of overhead and profit.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "In a takeoff, a 'waste factor' of 10% on 100 m² of ceramic tile means that you order:",
+  "options": [
+   "200 m²",
+   "100 m²",
+   "110 m²",
+   "90 m²"
+  ],
+  "answer": "C",
+  "explanation": "100 m² × 1.10 = 110 m². The waste factor covers cuts, breakage and defects. It varies by material (5-15% typical).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Which type of bid is most appropriate when the scope is poorly defined and may change?",
+  "options": [
+   "Discount bid",
+   "Lump-sum bid",
+   "Verbal bid",
+   "Unit-price or cost-plus bid"
+  ],
+  "answer": "D",
+  "explanation": "When the scope is uncertain, unit price or cost plus offers more flexibility than a lump sum, which transfers all the risk to the contractor.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "'Value engineering' aims to:",
+  "options": [
+   "Optimize the function/cost ratio by proposing equivalent, less expensive alternatives",
+   "Increase the contract price",
+   "Eliminate warranties",
+   "Reduce the quality of materials"
+  ],
+  "answer": "A",
+  "explanation": "Value engineering seeks to maintain function and quality while reducing costs through alternative solutions.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "An invitation (private) call for tenders differs from a public call for tenders because:",
+  "options": [
+   "It does not require a bid bond",
+   "It is open to all contractors",
+   "It is always less expensive",
+   "Only invited contractors may bid"
+  ],
+  "answer": "D",
+  "explanation": "The invitation call for tenders limits competition to preselected contractors, unlike the public call which is open to all.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "The 'cash flow' of a construction project is influenced by:",
+  "options": [
+   "The number of pages in the specifications",
+   "The payment schedule, holdbacks, billing delays and disbursements",
+   "Only the employees' wages",
+   "Only the bid price"
+  ],
+  "answer": "B",
+  "explanation": "Cash flow depends on the timing of inflows (client payments) and outflows (labour, materials, subcontractors), affected by holdbacks and delays.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "The typical contractual holdback in Quebec is:",
+  "options": [
+   "5%",
+   "10%",
+   "1%",
+   "25%"
+  ],
+  "answer": "B",
+  "explanation": "The 10% holdback is the standard in Quebec (and in Canada). It is deducted from each progress payment and released upon acceptance.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "A formwork takeoff for a beam 6 m long, 0.4 m wide and 0.6 m high (3 faces) gives an area of:",
+  "options": [
+   "1.44 m²",
+   "2.4 m²",
+   "9.6 m²",
+   "14.4 m²"
+  ],
+  "answer": "C",
+  "explanation": "3 faces: bottom (6×0.4=2.4) + 2 sides (6×0.6×2=7.2) = 9.6 m². Formwork is measured in m² of surface in contact with the concrete.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "'Bid shopping' is a practice:",
+  "options": [
+   "Considered unethical: using the lowest bid to negotiate with others",
+   "Mandatory in public contracts",
+   "With no consequence on the industry",
+   "Encouraged by the RBQ"
+  ],
+  "answer": "A",
+  "explanation": "Bid shopping consists of disclosing the lowest price to competitors to obtain a discount. It is unethical and undermines trust.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Parametric estimating uses:",
+  "options": [
+   "Competitors' selling prices",
+   "Historical ratios (e.g. $/m², $/bed) applied to the project parameters",
+   "Only the estimator's intuition",
+   "Detailed drawings and a complete takeoff"
+  ],
+  "answer": "B",
+  "explanation": "Parametric estimating applies historical unit costs to key parameters (area, volume) for a quick estimate in the early phase.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "If a 2,000 m² project has a historical cost of $350/m², the parametric estimate gives:",
+  "options": [
+   "$700,000",
+   "$70,000",
+   "$1,750,000",
+   "$350,000"
+  ],
+  "answer": "A",
+  "explanation": "2,000 m² × $350/m² = $700,000. Parametric estimating multiplies the parameter (area) by the historical unit cost.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "The 'special conditions' of a construction contract:",
+  "options": [
+   "Replace the general conditions",
+   "Concern only the subcontractors",
+   "Are optional and have no legal value",
+   "Specify and adapt the general conditions to the specific project (deadlines, penalties, insurance)"
+  ],
+  "answer": "D",
+  "explanation": "The special conditions supplement and modify the general conditions to reflect the specific requirements of the project and the owner.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "A contractor receives 3 subcontractor bids: $45,000, $48,000 and $52,000. For its bid, it should:",
+  "options": [
+   "Use $45,000 without verification",
+   "Take the average of the three",
+   "Ignore the bids and estimate itself",
+   "Analyze the compliance of each bid before selecting the lowest compliant one"
+  ],
+  "answer": "D",
+  "explanation": "The estimator must verify that each bid covers the same scope. The lowest is selected only if it is compliant and complete.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "The 'escalation clause' in a contract allows:",
+  "options": [
+   "Eliminating holdbacks",
+   "Increasing the profit margin",
+   "Reducing deadlines",
+   "Adjusting the contract price based on the variation of material or labour costs"
+  ],
+  "answer": "D",
+  "explanation": "The escalation clause protects the parties against major cost fluctuations (e.g. steel, fuel) by adjusting the contract price.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "The 'ratio method' for estimating overhead consists of:",
+  "options": [
+   "Calculating each indirect expense individually",
+   "Asking the client to pay the overhead separately",
+   "Applying a historical percentage of direct costs to cover overhead",
+   "Ignoring overhead"
+  ],
+  "answer": "C",
+  "explanation": "The ratio method applies a percentage (e.g. 12-18%) to direct costs to cover overhead, based on the company's experience.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "A performance specification differs from a prescriptive specification because it:",
+  "options": [
+   "Describes exactly the materials and methods to use",
+   "Defines the expected result while letting the contractor choose the means",
+   "Is always less detailed",
+   "Applies only to residential projects"
+  ],
+  "answer": "B",
+  "explanation": "The performance specification sets the objectives and result criteria, leaving the contractor free to choose the means to achieve them.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "'Bid closing' is:",
+  "options": [
+   "The deadline date and time for submitting bids",
+   "The cancellation of the call for tenders",
+   "The signing of the contract",
+   "The moment when the contractor starts the work"
+  ],
+  "answer": "A",
+  "explanation": "Bid closing is the submission deadline date/time. Any bid received afterward is generally rejected to preserve fairness.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "The sensitivity analysis of an estimate consists of:",
+  "options": [
+   "Measuring client satisfaction",
+   "Comparing competitors' bids",
+   "Evaluating the impact of variations in key parameters (prices, quantities, productivity) on the total cost",
+   "Checking the spelling of the bid"
+  ],
+  "answer": "C",
+  "explanation": "Sensitivity analysis tests the robustness of the estimate by varying the critical assumptions to identify risky items.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "An 'addendum' in a call for tenders is:",
+  "options": [
+   "An additional guarantee",
+   "A financial bonus for the bidder",
+   "A type of contract",
+   "A modification or clarification to the tender documents issued before closing"
+  ],
+  "answer": "D",
+  "explanation": "Addenda are official modifications to the tender documents. All bidders must take them into account in their price.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The Gantt chart represents:",
+  "options": [
+   "The time planning of activities in the form of horizontal bars",
+   "The organizational hierarchy",
+   "The cash flows",
+   "The project costs"
+  ],
+  "answer": "A",
+  "explanation": "The Gantt chart visualizes activities on a time axis with bars proportional to their duration, facilitating progress tracking.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "The CPM (Critical Path Method) is used to:",
+  "options": [
+   "Control the quality of the work",
+   "Manage human resources",
+   "Calculate the project costs",
+   "Identify the critical path and the activities that determine the minimum project duration"
+  ],
+  "answer": "D",
+  "explanation": "The CPM identifies the sequence of activities with no float (critical path) that determines the total project duration.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "The critical path of a project is:",
+  "options": [
+   "The sequence of activities with zero total float, determining the minimum project duration",
+   "The least expensive path",
+   "The shortest path through the network",
+   "The path with the most resources"
+  ],
+  "answer": "A",
+  "explanation": "The critical path is the longest sequence of dependent activities. Any delay on this path delays the entire project.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The total float of an activity is:",
+  "options": [
+   "The time a worker spends on break",
+   "The maximum delay an activity can undergo without delaying the project finish date",
+   "The number of workers assigned",
+   "The difference between the planned cost and the actual cost"
+  ],
+  "answer": "B",
+  "explanation": "Total float = late finish date - early finish date. A zero float indicates a critical activity.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The PERT method uses three duration estimates:",
+  "options": [
+   "Theoretical, actual and corrected",
+   "Short, average and long",
+   "Morning, noon and evening",
+   "Optimistic (a), most likely (m) and pessimistic (b)"
+  ],
+  "answer": "D",
+  "explanation": "PERT weights three estimates: expected duration = (a + 4m + b) / 6, integrating uncertainty into the planning.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "With PERT, if a=4 days, m=7 days, b=16 days, the expected duration is:",
+  "options": [
+   "9 days",
+   "8 days",
+   "7 days",
+   "12 days"
+  ],
+  "answer": "B",
+  "explanation": "PERT duration = (4 + 4×7 + 16) / 6 = (4+28+16)/6 = 48/6 = 8 days.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "A milestone in a schedule is:",
+  "options": [
+   "A punctual event of zero duration marking an important stage",
+   "A type of resource",
+   "A long-duration activity",
+   "A fixed cost"
+  ],
+  "answer": "A",
+  "explanation": "A milestone is a time reference point (duration = 0): end of foundation, obtaining a permit, equipment delivery, etc.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Activity sequencing consists of:",
+  "options": [
+   "Ordering the materials",
+   "Determining the logical order of execution and the dependencies between activities",
+   "Hiring the workers",
+   "Assigning costs to each activity"
+  ],
+  "answer": "B",
+  "explanation": "Sequencing establishes the dependency relationships (finish-to-start, start-to-start, etc.) between activities to build the project network.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "A 'finish-to-start' (FS) dependency relationship means that:",
+  "options": [
+   "Both activities start at the same time",
+   "The predecessor activity depends on the successor",
+   "The successor activity can only start when the predecessor is finished",
+   "Both activities finish at the same time"
+  ],
+  "answer": "C",
+  "explanation": "The FS (Finish-to-Start) relationship is the most common: the slab pour (B) can only start after the formwork (A) is finished.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'lead time' (overlap) in an FS relationship allows:",
+  "options": [
+   "Starting the successor activity before the predecessor is completely finished",
+   "Delaying the start of the successor activity",
+   "Eliminating the dependency",
+   "Increasing the project duration"
+  ],
+  "answer": "A",
+  "explanation": "The lead (advance) allows an overlap: e.g. starting the electrical installation 2 days before the end of the structural work.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'lag time' (delay) in an FS relationship imposes:",
+  "options": [
+   "A reduction in duration",
+   "A mandatory waiting period between the end of one activity and the start of the next",
+   "A cancellation of the dependency",
+   "An overlap between activities"
+  ],
+  "answer": "B",
+  "explanation": "The lag (delay) imposes a waiting period: e.g. waiting 7 days (concrete curing) before stripping the formwork after the pour.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The resource histogram shows:",
+  "options": [
+   "The workload (number of workers or hours) per period",
+   "The contractual relationships",
+   "The cumulative project costs",
+   "The quality of materials"
+  ],
+  "answer": "A",
+  "explanation": "The resource histogram visualizes the allocation of resources over time, identifying overloads and underutilization.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Resource leveling aims to:",
+  "options": [
+   "Eliminate the critical path",
+   "Reduce material costs",
+   "Increase the number of workers",
+   "Reduce load fluctuations by adjusting the dates of non-critical activities"
+  ],
+  "answer": "D",
+  "explanation": "Leveling uses the float of non-critical activities to smooth resource demand and avoid peaks.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "The phasing of a construction project consists of:",
+  "options": [
+   "Eliminating unnecessary steps",
+   "Reducing the number of phases",
+   "Starting all activities at the same time",
+   "Dividing the project into sequential stages (excavation, foundation, structure, envelope, finishes)"
+  ],
+  "answer": "D",
+  "explanation": "Phasing organizes the work into successive logical phases, each of which must be completed or sufficiently advanced before the next.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Weather constraints in Quebec mainly affect:",
+  "options": [
+   "No type of work",
+   "Interior work only",
+   "Exterior work: excavation, concrete placing, roofing, paving (frost, snow, rain)",
+   "Only painting"
+  ],
+  "answer": "C",
+  "explanation": "In Quebec, frost (Nov-Mar) and precipitation limit exterior work. Concrete placing requires precautions below 5°C.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Pouring concrete in cold weather (< 5°C) requires:",
+  "options": [
+   "Adding more water to the mix",
+   "Reducing the curing time",
+   "Protection measures: heating, shelters, accelerating admixtures, insulated formwork",
+   "No special precaution"
+  ],
+  "answer": "C",
+  "explanation": "In cold weather, the concrete must be protected from frost during curing: shelters, heating, admixtures, insulating formwork (CSA A23.1 standard).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The construction schedule must be:",
+  "options": [
+   "Updated regularly to reflect actual progress and changes",
+   "Established only by the client",
+   "Kept secret",
+   "Established once and never modified"
+  ],
+  "answer": "A",
+  "explanation": "The schedule is a living document, updated periodically (weekly/monthly) to compare planned vs. actual and adjust the planning.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "The WBS (Work Breakdown Structure) is:",
+  "options": [
+   "A hierarchical decomposition of the project into deliverables and work packages",
+   "A detailed budget",
+   "A company organizational chart",
+   "A Gantt chart"
+  ],
+  "answer": "A",
+  "explanation": "The WBS decomposes the project into manageable elements: phases → packages → activities, serving as the basis for planning and control.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "If a critical-path activity is delayed by 3 days, the project:",
+  "options": [
+   "Will not be affected",
+   "Will be delayed by 6 days",
+   "Will be delayed by 3 days (unless later compression)",
+   "Will be ahead"
+  ],
+  "answer": "C",
+  "explanation": "Any critical-path activity has zero float. A 3-day delay on the critical path delays the project finish by 3 days.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Schedule compression can be done by:",
+  "options": [
+   "Increasing the deadlines",
+   "Removing activities",
+   "Reducing quality",
+   "Crashing (adding resources) or fast-tracking (overlapping activities)"
+  ],
+  "answer": "D",
+  "explanation": "Crashing adds resources (cost ↑), fast-tracking overlaps sequential activities (risk ↑). Both reduce the duration.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Fast-tracking (parallel execution) mainly increases:",
+  "options": [
+   "The quality of the work",
+   "The material costs",
+   "The number of milestones",
+   "The risk of rework and modifications"
+  ],
+  "answer": "D",
+  "explanation": "Overlapping normally sequential activities increases the risk of conflicts, errors and rework if the assumptions change.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Crashing (adding resources) mainly increases:",
+  "options": [
+   "The risks",
+   "The project duration",
+   "The direct costs of the project",
+   "The float of activities"
+  ],
+  "answer": "C",
+  "explanation": "Adding resources (overtime, additional crews, equipment) reduces the duration but increases the direct costs.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "An activity with a free float of 5 days can be delayed by 5 days without:",
+  "options": [
+   "Affecting the project finish",
+   "Requiring resources",
+   "Delaying the start of the successor activity",
+   "Costing more"
+  ],
+  "answer": "C",
+  "explanation": "Free float is the delay an activity can undergo without delaying the early start of its immediate successors.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "The Gantt chart has one main limitation:",
+  "options": [
+   "It cannot include dates",
+   "It is reserved for small projects",
+   "It is too complex to read",
+   "It does not clearly show the dependencies between activities and the critical path"
+  ],
+  "answer": "D",
+  "explanation": "The Gantt shows durations but not the dependency links. The network (CPM/PERT) is needed to identify the critical path.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The S-curve of a project represents:",
+  "options": [
+   "The temperature variations",
+   "The structure of the organizational chart",
+   "The terrain profile",
+   "The cumulative evolution of costs or progress over time"
+  ],
+  "answer": "D",
+  "explanation": "The S-curve shows cumulative progress (costs, hours, %). Its characteristic shape: slow at the start, fast in the middle, slow at the end.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'look-ahead schedule' typically covers:",
+  "options": [
+   "The next 2 to 6 weeks of detailed work",
+   "Only the current day",
+   "The entire project",
+   "The next 5 years"
+  ],
+  "answer": "A",
+  "explanation": "The look-ahead (2-6 weeks) details the upcoming activities with resources, materials and constraints, serving weekly coordination.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The weekly job site coordination meeting serves to:",
+  "options": [
+   "Review progress, identify conflicts and plan the work for the following week",
+   "Negotiate contracts",
+   "Sign the payroll cheques",
+   "Approve the architectural drawings"
+  ],
+  "answer": "A",
+  "explanation": "The weekly site meeting (OAC) reviews progress, problems, deliveries and coordination between trades.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'float' of a project is:",
+  "options": [
+   "The time margin available on non-critical activities",
+   "The client's payment delay",
+   "The number of workers waiting",
+   "The contingency budget"
+  ],
+  "answer": "A",
+  "explanation": "Float is the time flexibility of non-critical activities. It allows resources to be adjusted without affecting the finish date.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "A project network diagram uses nodes to represent:",
+  "options": [
+   "The materials",
+   "The workers",
+   "The costs",
+   "The activities or events of the project"
+  ],
+  "answer": "D",
+  "explanation": "In a network (PDM/AON), each node represents an activity and the arrows indicate the logical dependencies.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "The early start (ES) date of an activity is:",
+  "options": [
+   "Always day 1 of the project",
+   "The date imposed by the client",
+   "The finish date of the predecessor activity minus 1 day",
+   "The earliest date at which the activity can start, given its predecessors"
+  ],
+  "answer": "D",
+  "explanation": "The ES (Early Start) is calculated by the forward pass: ES = max(EF of predecessors).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "The backward pass in the CPM calculates:",
+  "options": [
+   "The material quantities",
+   "The project costs",
+   "The number of workers",
+   "The late start and late finish dates (LS, LF) of each activity"
+  ],
+  "answer": "D",
+  "explanation": "The backward pass starts from the project end and works backward to calculate LS and LF, allowing the float of each activity to be determined.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "If the EF of an activity = day 15 and LF = day 20, the total float is:",
+  "options": [
+   "35 days",
+   "20 days",
+   "15 days",
+   "5 days"
+  ],
+  "answer": "D",
+  "explanation": "Total float = LF - EF = 20 - 15 = 5 days (or LS - ES). The activity can be delayed by 5 days without affecting the project.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'baseline' of a schedule is:",
+  "options": [
+   "An optional document",
+   "The approved version of the schedule serving as a reference to measure variances",
+   "The most recent schedule",
+   "The subcontractor's schedule"
+  ],
+  "answer": "B",
+  "explanation": "The baseline is the initial approved schedule. The variances between actual and the baseline measure planning performance.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "An SPI (Schedule Performance Index) of 0.85 means that:",
+  "options": [
+   "The project is 15% ahead",
+   "The project is 85% complete",
+   "The budget is exceeded by 15%",
+   "The project is progressing at 85% of the planned rate (behind schedule)"
+  ],
+  "answer": "D",
+  "explanation": "SPI = earned value / planned value. SPI < 1 = behind schedule. SPI = 0.85 means that for each planned day, only 0.85 day of work is achieved.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'critical chain' differs from the critical path because it:",
+  "options": [
+   "Ignores the dependencies",
+   "Applies only to IT projects",
+   "Is always shorter",
+   "Integrates resource constraints and adds project buffers"
+  ],
+  "answer": "D",
+  "explanation": "The critical chain (Goldratt) takes limited resources into account and protects the project with buffers rather than per-activity contingencies.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "A project 'buffer' in the critical chain method is:",
+  "options": [
+   "A type of contract",
+   "A protection wall on the job site",
+   "A time reserve placed at the end of the critical path to absorb delays",
+   "An insurance against bad weather"
+  ],
+  "answer": "C",
+  "explanation": "The project buffer protects the delivery date by absorbing the variations of critical activities, replacing individual contingencies.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Backward scheduling consists of:",
+  "options": [
+   "Ignoring the deadlines",
+   "Starting with the finishes",
+   "Starting from the imposed delivery date and working backward to determine the start dates",
+   "Planning the activities in random order"
+  ],
+  "answer": "C",
+  "explanation": "Backward scheduling starts from the final deadline and calculates the latest start dates for each activity, identifying the constraints.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'resource histogram' shows an overload when:",
+  "options": [
+   "The bar exceeds the available capacity for a given period",
+   "The bar is exactly at capacity",
+   "There is no bar",
+   "The bar is below the capacity line"
+  ],
+  "answer": "A",
+  "explanation": "When resource demand exceeds availability (bar above the line), there is an overload requiring leveling.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'resource constraint' means that:",
+  "options": [
+   "Only materials are limited",
+   "The limited availability of resources can lengthen the project duration",
+   "Resources are unlimited",
+   "Resources do not affect the schedule"
+  ],
+  "answer": "B",
+  "explanation": "If a resource (crane, specialized crew) is not available when needed, activities wait, lengthening the project.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'Takt time' in lean construction is:",
+  "options": [
+   "The workers' break time",
+   "The production rate required to deliver according to the schedule (available time / units)",
+   "The material delivery delay",
+   "The total project time"
+  ],
+  "answer": "B",
+  "explanation": "Takt time = available time / demand. It synchronizes the pace of the crews for a continuous flow, inspired by lean manufacturing.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'Last Planner System' (LPS) is a planning approach that:",
+  "options": [
+   "Is used only in manufacturing",
+   "Involves the executors (foremen) in planning the weekly commitments",
+   "Imposes a top-down schedule",
+   "Eliminates the need for a schedule"
+  ],
+  "answer": "B",
+  "explanation": "The LPS (Lean Construction) engages the last planners (those who execute) to make reliable commitments, improving the PPC (Percent Plan Complete).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "The PPC (Percent Plan Complete) measures:",
+  "options": [
+   "The percentage of activities planned for the week that were completed",
+   "The percentage of the budget spent",
+   "The percentage of materials delivered",
+   "The percentage of workers present"
+  ],
+  "answer": "A",
+  "explanation": "PPC = activities completed / activities planned × 100. A high PPC (>80%) indicates reliable, executable planning.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "A 'linked Gantt' improves the simple Gantt by:",
+  "options": [
+   "Showing the dependencies between activities with arrows",
+   "Adding colours",
+   "Reducing the number of activities",
+   "Adding the costs"
+  ],
+  "answer": "A",
+  "explanation": "The linked Gantt (with FS, SS, etc. links) visualizes the dependencies, allowing the impact of a delay on the following activities to be seen.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'work window' for exterior work in Quebec is:",
+  "options": [
+   "Only in summer (June-August)",
+   "All year round without restriction",
+   "Only in winter",
+   "The period when weather conditions allow the work (typically April to November)"
+  ],
+  "answer": "D",
+  "explanation": "The exterior work window in Quebec is limited by frost and snow. Planning must integrate these seasonal constraints.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "'Pull planning' in lean construction:",
+  "options": [
+   "Plans backward from the delivery milestone, identifying the prerequisite conditions",
+   "Is identical to the classic Gantt",
+   "Eliminates planning",
+   "Plans from the start to the end"
+  ],
+  "answer": "A",
+  "explanation": "Pull planning starts from the final objective and works backward: 'What is needed to deliver? And before that?' Each crew commits to its conditions.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "A 'near-critical path' is:",
+  "options": [
+   "A path with a lot of float",
+   "A path without importance",
+   "A sequence of activities with low float that could become critical in case of delay",
+   "The shortest path"
+  ],
+  "answer": "C",
+  "explanation": "The near-critical path has low float (e.g. 1-3 days). A slight delay can make it critical, requiring monitoring.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'responsibility matrix' (RACI) in planning defines:",
+  "options": [
+   "The delivery deadlines",
+   "Who is Responsible, Accountable, Consulted and Informed for each task",
+   "The costs of each activity",
+   "The technical specifications"
+  ],
+  "answer": "B",
+  "explanation": "The RACI matrix clarifies the roles: Responsible (executes), Accountable (approves), Consulted (consulted), Informed (informed).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "'Float banking' is a practice that:",
+  "options": [
+   "Eliminates the float",
+   "Consists of using all the float immediately",
+   "Preserves the float of non-critical activities as a reserve for unforeseen events",
+   "Transfers the float to the client"
+  ],
+  "answer": "C",
+  "explanation": "Float banking keeps the float in reserve rather than consuming it, offering a margin of manoeuvre in case of disruption.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "A 'milestone schedule' is useful for:",
+  "options": [
+   "Resource management",
+   "Communication with management and the client on the key stages of the project",
+   "Cost calculation",
+   "Detailed daily planning"
+  ],
+  "answer": "B",
+  "explanation": "The milestone schedule is a simplified view showing the key dates (foundation, structure, envelope, delivery) for reporting.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'deadline constraint' in scheduling software:",
+  "options": [
+   "Imposes a deadline without changing the critical path, generating an alert if exceeded",
+   "Replaces the Gantt",
+   "Modifies the network logic",
+   "Eliminates the float"
+  ],
+  "answer": "A",
+  "explanation": "The deadline is an informational constraint: it does not alter the CPM calculation but signals if the planned finish date exceeds the imposed deadline.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'time-cost trade-off' analyzes:",
+  "options": [
+   "Taxes vs subsidies",
+   "The additional cost to reduce the project duration (compression)",
+   "Quality vs quantity",
+   "The number of workers vs the number of machines"
+  ],
+  "answer": "B",
+  "explanation": "The time-cost trade-off evaluates how much it costs to compress each critical activity to determine the optimal compression.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'schedule update' must include:",
+  "options": [
+   "Only the completed activities",
+   "Only the delays",
+   "Only the costs",
+   "The actual start/finish dates, the progress in progress and the revised forecasts"
+  ],
+  "answer": "D",
+  "explanation": "The update integrates the actual (dates, %), the work in progress and revises the forecasts for future activities, keeping the schedule relevant.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'logic diagram' of a project shows:",
+  "options": [
+   "The dependency relationships between activities without a time scale",
+   "The costs per activity",
+   "The team organizational chart",
+   "The material specifications"
+  ],
+  "answer": "A",
+  "explanation": "The logic diagram (PDM network) shows the links between activities without time representation, serving to calculate the critical path.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "A 'hammock' activity in a schedule is:",
+  "options": [
+   "A summary activity that spans a group of activities (e.g. crane rental)",
+   "An activity without dependency",
+   "A deleted activity",
+   "A very short activity"
+  ],
+  "answer": "A",
+  "explanation": "The hammock activity covers a period defined by other activities (e.g. job site overhead from the start to the end of a phase).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'schedule variance' (SV) in earned value is calculated by:",
+  "options": [
+   "SV = ACWP - BCWP",
+   "SV = BCWP / BCWS",
+   "SV = BCWS - BCWP",
+   "SV = BCWP - BCWS (earned value - planned value)"
+  ],
+  "answer": "D",
+  "explanation": "SV = BCWP - BCWS. Negative SV = behind schedule. BCWP (Earned Value) = valued work performed, BCWS (Planned Value) = valued work planned.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "'Collaborative planning' (integrated project planning) involves:",
+  "options": [
+   "All stakeholders: client, architect, engineers, contractor, subcontractors",
+   "Only the workers",
+   "Only the project manager",
+   "Only the client"
+  ],
+  "answer": "A",
+  "explanation": "Collaborative planning integrates the expertise of all parties for a realistic, shared schedule, reducing conflicts.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "'BIM 4D' adds which dimension to the 3D model?",
+  "options": [
+   "Safety",
+   "Cost",
+   "Time (simulated construction sequence)",
+   "Quality"
+  ],
+  "answer": "C",
+  "explanation": "BIM 4D links the 3D model elements to the schedule activities, allowing the construction sequence to be visualized over time.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "The 'weather constraint' in a schedule is modeled by:",
+  "options": [
+   "Non-working days (calendar) or buffer activities for bad weather",
+   "Reducing the number of workers",
+   "Totally ignoring the climatic conditions",
+   "Increasing the costs"
+  ],
+  "answer": "A",
+  "explanation": "Weather constraints are integrated via calendars (holidays, season) and time provisions for rain/snow days.",
+  "difficulty": "MEDIUM"
+ }
+]

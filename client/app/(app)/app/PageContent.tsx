@@ -225,6 +225,48 @@ export default function DashboardPage() {
 
     (async () => {
       try {
+        // ── Primary source: API (DB is source of truth) ──
+        const token = localStorage.getItem('token');
+        if (token) {
+          try {
+            const res = await fetch(`${API_BASE}/api/attempts/stats`, {
+              headers: { Authorization: `Bearer ${token}` },
+            });
+            if (res.ok) {
+              const apiStats = await res.json();
+              if (apiStats.totalAttempts > 0) {
+                setStats({
+                  totalExams: apiStats.totalExams ?? 0,
+                  totalAttempts: apiStats.totalAttempts ?? 0,
+                  averageScore: apiStats.averageScore ?? 0,
+                  passRate: apiStats.passRate ?? 0,
+                  studyStreak: apiStats.studyStreak ?? 0,
+                  byExam: (apiStats.byExam ?? []).map((e: any) => ({
+                    examId: e.examId,
+                    examCode: e.examCode,
+                    examName: e.examName,
+                    totalAttempts: e.totalAttempts,
+                    averageScore: e.averageScore,
+                    bestScore: e.bestScore,
+                    lastScore: e.lastScore,
+                    passedCount: e.passedCount,
+                    passRate: e.passRate,
+                  })),
+                  bestScore: apiStats.bestScore ?? 0,
+                  examsPassedUnique: apiStats.examsPassedUnique ?? 0,
+                  totalQuestionsAnswered: apiStats.totalQuestionsAnswered ?? 0,
+                  totalCorrect: apiStats.totalCorrect ?? 0,
+                  momentum: apiStats.momentum ?? 0,
+                  lastAttemptAt: apiStats.lastAttemptAt ?? null,
+                });
+                setLoading(false);
+                return;
+              }
+            }
+          } catch { /* fall through to localStorage */ }
+        }
+
+        // ── Fallback: localStorage (legacy / offline) ──
         const stored = typeof window !== 'undefined' ? localStorage.getItem('metierium_exam_history') : null;
         let results: any[] = [];
         if (stored) {
@@ -258,9 +300,8 @@ export default function DashboardPage() {
 
         const byExam: ExamPerformance[] = [];
         let totalAttempts = 0;
-        let totalScoreSum = 0;
         let totalPassed = 0;
-        let totalExams = examMap.size;
+        const totalExams = examMap.size;
 
         for (const [tradeId, entry] of examMap) {
           const scores = entry.scores;
@@ -268,7 +309,6 @@ export default function DashboardPage() {
           const best = Math.max(...scores);
           const last = scores[scores.length - 1];
           totalAttempts += scores.length;
-          totalScoreSum += entry.passedCount * 70 + (avg < 70 ? avg : 70);
           totalPassed += entry.passedCount;
 
           byExam.push({
@@ -284,7 +324,6 @@ export default function DashboardPage() {
           });
         }
 
-        // Sort: most attempted first
         byExam.sort((a, b) => b.totalAttempts - a.totalAttempts);
 
         const averageScore = totalAttempts > 0
@@ -294,28 +333,23 @@ export default function DashboardPage() {
           ? Math.round((totalPassed / totalAttempts) * 100)
           : 0;
 
-        // Study streak: count consecutive days with exams
         let streak = 0;
         if (results.length > 0) {
           const dates = results
             .map(r => new Date(r.date).toISOString().split('T')[0])
             .sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
           const uniqueDays = [...new Set(dates)];
-          const today = new Date().toISOString().split('T')[0];
-          // Simple streak: count days with activity
           streak = Math.max(1, Math.min(uniqueDays.length, 7));
         } else {
           streak = 1;
         }
 
-        // ── Extra insights (RealtyLicence parity) ──
         const bestScore = totalAttempts > 0 ? Math.max(...results.map((r: any) => r.score || 0)) : 0;
         const examsPassedUnique = byExam.filter(e => e.passedCount > 0).length;
         const totalQuestionsAnswered = results.reduce((s: number, r: any) => s + (r.totalQuestions || 0), 0);
         const totalCorrect = results.reduce((s: number, r: any) => s + (r.correct || 0), 0);
         const lastAttemptAt = results.length > 0 ? results[0].date : null;
 
-        // Momentum: recent performance vs slightly older performance
         let momentum = 0;
         if (totalAttempts >= 6) {
           const last3 = results.slice(0, 3);
@@ -374,6 +408,23 @@ export default function DashboardPage() {
       setChapterNameMap(map);
     })();
   }, [locale, examHistory.length]);
+
+  // Sync localStorage exam history → DB (one-time, non-blocking)
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (!token) return;
+    const stored = localStorage.getItem('metierium_exam_history');
+    if (!stored) return;
+    try {
+      const history = JSON.parse(stored);
+      if (!Array.isArray(history) || history.length === 0) return;
+      fetch(`${API_BASE}/api/attempts/sync`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Authorization: 'Bearer ' + token },
+        body: JSON.stringify({ attempts: history }),
+      }).catch(() => {});
+    } catch { /* ignore */ }
+  }, []);
 
   useEffect(() => {
     loadStats();

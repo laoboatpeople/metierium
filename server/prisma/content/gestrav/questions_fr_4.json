@@ -1,0 +1,2927 @@
+[
+ {
+  "chapter": 7,
+  "question": "La RBQ (Régie du bâtiment du Québec) a pour mandat principal de :",
+  "options": [
+   "Délivrer les permis de conduire",
+   "Administrer les hôpitaux",
+   "Veiller à la qualité des travaux de construction et à la sécurité du public",
+   "Gérer les salaires des ouvriers"
+  ],
+  "answer": "C",
+  "explanation": "La RBQ administre la Loi sur le bâtiment : elle délivre les licences, vérifie la qualification, inspecte les chantiers et protège le public.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "La « licence RBQ » est obligatoire pour :",
+  "options": [
+   "Uniquement les projets publics",
+   "Tout entrepreneur qui exécute ou fait exécuter des travaux de construction visés par la Loi sur le bâtiment",
+   "Tous les travailleurs",
+   "Uniquement les architectes"
+  ],
+  "answer": "B",
+  "explanation": "La Loi sur le bâtiment exige une licence pour quiconque exécute ou fait exécuter des travaux de construction, sous peine d'amendes et de nullité du contrat.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "La licence RBQ comporte des « sous-catégories » qui :",
+  "options": [
+   "Délimitent les types de travaux que le titulaire est autorisé à exécuter",
+   "N'ont aucune valeur légale",
+   "Sont optionnelles",
+   "Sont identiques pour tous"
+  ],
+  "answer": "A",
+  "explanation": "Chaque sous-catégorie (ex. : 1.1 entrepreneur général, 16 électricien) autorise des travaux spécifiques. Travailler hors sous-catégorie est une infraction.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« entrepreneur général » (sous-catégorie 1.1, 1.2, 1.3) peut :",
+  "options": [
+   "Coordonner et exécuter l'ensemble des travaux d'un projet, en sous-traitant les spécialités",
+   "Uniquement faire de la gestion",
+   "Exécuter uniquement un métier",
+   "Aucun travail manuel"
+  ],
+  "answer": "A",
+  "explanation": "L'entrepreneur général (bâtiment, génie civil, voirie) coordonne le projet et peut sous-traiter les travaux spécialisés à des entrepreneurs détenant les sous-catégories requises.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« examen RBQ » pour obtenir une licence comprend :",
+  "options": [
+   "Aucun examen",
+   "Un examen de gestion (Gestion des travaux) et un ou plusieurs examens techniques selon les sous-catégories",
+   "Uniquement un examen technique",
+   "Uniquement un entretien"
+  ],
+  "answer": "B",
+  "explanation": "La licence RBQ exige la réussite de l'examen de gestion (commun) et des examens techniques propres aux sous-catégories demandées.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "L'examen « Gestion des travaux » de la RBQ est :",
+  "options": [
+   "Commun à tous les entrepreneurs, couvrant la gestion de projet, l'administration et les aspects légaux",
+   "Uniquement pour les ingénieurs",
+   "Optionnel",
+   "Spécifique à chaque métier"
+  ],
+  "answer": "A",
+  "explanation": "L'examen de gestion est transversal : tous les entrepreneurs doivent le réussir, quel que soit leur métier. Il couvre l'administration, la gestion et le droit.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « cautionnement de licence » RBQ est :",
+  "options": [
+   "Uniquement pour les grandes entreprises",
+   "Optionnel",
+   "Une taxe",
+   "Obligatoire : une garantie financière (ex. : 20 000 $) protégeant les clients contre les travaux non conformes"
+  ],
+  "answer": "D",
+  "explanation": "Tout licencié doit maintenir un cautionnement (montant selon la catégorie) garantissant l'exécution conforme et protégeant les clients en cas de défaut.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « Fonds d'indemnisation » de la RBQ peut :",
+  "options": [
+   "Payer tous les litiges",
+   "Garantir les salaires",
+   "Remplacer les tribunaux",
+   "Indemniser les clients lésés par un licencié, jusqu'à concurrence du cautionnement"
+  ],
+  "answer": "D",
+  "explanation": "Le Fonds d'indemnisation (via le cautionnement) peut compenser les clients pour des travaux non conformes ou non exécutés par un licencié.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Travailler sans licence RBQ quand elle est requise constitue :",
+  "options": [
+   "Une pratique courante acceptée",
+   "Une infraction pénale passible d'amendes importantes et peut rendre le contrat nul",
+   "Un droit",
+   "Une simple formalité"
+  ],
+  "answer": "B",
+  "explanation": "L'exercice sans licence est une infraction à la Loi sur le bâtiment : amendes (jusqu'à 90 000 $ pour une personne morale), nullité du contrat et poursuites.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « vérification de licence » d'un entrepreneur par un client se fait :",
+  "options": [
+   "Uniquement par un avocat",
+   "Impossible",
+   "Uniquement par téléphone",
+   "Via le Registre des détenteurs de licence RBQ (en ligne, gratuit)"
+  ],
+  "answer": "D",
+  "explanation": "Le Registre des détenteurs de licence RBQ (rbq.gouv.qc.ca) permet de vérifier gratuitement la validité, les sous-catégories et le cautionnement d'un licencié.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur le bâtiment » (L.R.Q., c. B-1.1) régit :",
+  "options": [
+   "Uniquement les routes",
+   "La qualification des entrepreneurs, la qualité des travaux et la sécurité dans le bâtiment",
+   "Les salaires uniquement",
+   "Uniquement les résidences"
+  ],
+  "answer": "B",
+  "explanation": "La Loi sur le bâtiment encadre : la licence RBQ, les normes de construction (Code), la qualification professionnelle et la protection du public.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « Code de construction du Québec » est basé sur :",
+  "options": [
+   "Uniquement les normes américaines",
+   "Aucun code national",
+   "Le Code national du bâtiment du Canada (CNBC), adapté avec des modifications québécoises",
+   "Les normes européennes"
+  ],
+  "answer": "C",
+  "explanation": "Le Code de construction du Québec adopte le CNBC avec des modifications propres au Québec (climat, pratiques locales). Il a force de loi.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « Code national du bâtiment » (CNBC) est publié par :",
+  "options": [
+   "L'ONU",
+   "L'ASFC",
+   "Le Conseil national de recherches du Canada (CNRC)",
+   "La RBQ"
+  ],
+  "answer": "C",
+  "explanation": "Le CNBC est élaboré par le CNRC. Les provinces l'adoptent et l'adaptent. Le Québec l'intègre via son Code de construction.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Les « normes de construction » au Québec couvrent :",
+  "options": [
+   "Aucun domaine technique",
+   "Uniquement l'esthétique",
+   "La structure, l'enveloppe, la plomberie, l'électricité, la mécanique, l'accessibilité, la sécurité incendie",
+   "Uniquement la structure"
+  ],
+  "answer": "C",
+  "explanation": "Les normes couvrent tous les aspects : structure, enveloppe, plomberie, électricité, CVAC, protection incendie, accessibilité, efficacité énergétique.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« inspecteur de la RBQ » peut :",
+  "options": [
+   "Uniquement donner des conseils",
+   "Visiter les chantiers, exiger des corrections, suspendre des travaux et recommander des poursuites",
+   "N'avoir aucun pouvoir",
+   "Uniquement émettre des permis"
+  ],
+  "answer": "B",
+  "explanation": "L'inspecteur RBQ a des pouvoirs étendus : accès aux chantiers, ordres de correction, suspension de travaux, saisie et recommandation de poursuites pénales.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « certificat de conformité » (ou attestation) de la RBQ confirme :",
+  "options": [
+   "L'embauche des ouvriers",
+   "La propriété du terrain",
+   "Que les travaux sont conformes aux normes applicables, requis pour certains bâtiments",
+   "Le paiement des taxes"
+  ],
+  "answer": "C",
+  "explanation": "Pour certains bâtiments (ex. : résidentiels neufs), un certificat de conformité atteste que la construction respecte le Code. Il est requis pour l'occupation.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « plan de garantie des bâtiments résidentiels neufs » (Garantie de construction résidentielle - GCR) :",
+  "options": [
+   "Couvre uniquement les condos",
+   "Est optionnel",
+   "N'existe plus",
+   "Est obligatoire pour les bâtiments résidentiels neufs, couvrant les malfaçons et l'achèvement"
+  ],
+  "answer": "D",
+  "explanation": "La GCR (anciennement Garantie des bâtiments résidentiels neufs) est obligatoire : elle couvre les acomptes, l'achèvement, les malfaçons (1 an) et les vices majeurs (5 ans).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « garantie des acomptes » de la GCR protège :",
+  "options": [
+   "Les sous-traitants",
+   "Le client qui a versé un acompte si l'entrepreneur fait défaut avant le début des travaux",
+   "La municipalité",
+   "L'entrepreneur"
+  ],
+  "answer": "B",
+  "explanation": "La garantie des acomptes rembourse le client si l'entrepreneur encaisse un acompte et fait défaut de commencer les travaux.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « garantie d'achèvement » de la GCR couvre :",
+  "options": [
+   "Uniquement la peinture",
+   "Les malfaçons après 5 ans",
+   "L'achèvement des travaux si l'entrepreneur abandonne le chantier",
+   "Les salaires des ouvriers"
+  ],
+  "answer": "C",
+  "explanation": "La garantie d'achèvement assure que les travaux seront complétés (par un autre entrepreneur) si l'entrepreneur initial abandonne le projet.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « garantie contre les malfaçons » de la GCR dure :",
+  "options": [
+   "10 ans",
+   "5 ans",
+   "1 an après la réception des travaux",
+   "Aucune durée"
+  ],
+  "answer": "C",
+  "explanation": "La garantie contre les malfaçons couvre les défauts d'exécution pendant 1 an après la réception. Les vices cachés et majeurs ont des garanties plus longues.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « garantie contre les vices cachés » de la GCR dure :",
+  "options": [
+   "1 an",
+   "10 ans",
+   "5 ans",
+   "3 ans après la réception"
+  ],
+  "answer": "D",
+  "explanation": "La garantie contre les vices cachés (non apparents à la réception) couvre les défauts pendant 3 ans après la réception des travaux.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « garantie contre les vices majeurs » de la GCR dure :",
+  "options": [
+   "10 ans",
+   "3 ans",
+   "5 ans après la réception, couvrant les défauts compromettant la solidité ou l'usage du bâtiment",
+   "1 an"
+  ],
+  "answer": "C",
+  "explanation": "La garantie des vices majeurs (5 ans) couvre les défauts graves compromettant la solidité du bâtiment ou le rendant impropre à sa destination.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « permis de construction » municipal est :",
+  "options": [
+   "Généralement obligatoire avant de commencer des travaux de construction ou de rénovation",
+   "Uniquement pour les condos",
+   "Délivré par la RBQ",
+   "Optionnel pour les petits travaux"
+  ],
+  "answer": "A",
+  "explanation": "La plupart des municipalités exigent un permis avant les travaux. Construire sans permis peut entraîner des amendes et l'obligation de démolir.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « certificat d'occupation » (ou permis d'occupation) est :",
+  "options": [
+   "Un contrat de vente",
+   "Un bail",
+   "Un document municipal autorisant l'occupation d'un bâtiment après vérification de la conformité",
+   "Une assurance"
+  ],
+  "answer": "C",
+  "explanation": "Le certificat d'occupation confirme que le bâtiment est conforme et peut être occupé. Il est souvent requis après une construction ou un changement d'usage.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « zonage » municipal détermine :",
+  "options": [
+   "Les permis de conduire",
+   "Les taxes",
+   "Les salaires",
+   "Les usages permis (résidentiel, commercial, industriel) et les normes d'implantation sur un terrain"
+  ],
+  "answer": "D",
+  "explanation": "Le règlement de zonage définit les usages autorisés par zone, les marges de recul, la hauteur, la densité et les normes d'implantation.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "La « dérogation mineure » en urbanisme permet :",
+  "options": [
+   "D'éviter les taxes",
+   "D'autoriser un écart mineur à un règlement municipal (ex. : marge de recul) via le comité consultatif",
+   "De construire n'importe quoi",
+   "D'ignorer le Code de construction"
+  ],
+  "answer": "B",
+  "explanation": "La dérogation mineure autorise un écart à un règlement de zonage ou de lotissement, si l'écart est mineur et ne porte pas atteinte à l'intérêt public.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « Code civil du Québec » (C.c.Q.) régit les contrats de construction car :",
+  "options": [
+   "Il remplace la Loi sur le bâtiment",
+   "Il contient les règles générales des contrats (formation, exécution, responsabilité, garanties)",
+   "Il s'applique uniquement aux particuliers",
+   "Il n'a aucun rôle"
+  ],
+  "answer": "B",
+  "explanation": "Le C.c.Q. est le droit commun des contrats au Québec : formation, interprétation, exécution, inexécution, responsabilité et garanties légales.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « contrat d'entreprise » (art. 2098 C.c.Q.) est :",
+  "options": [
+   "Un contrat de travail",
+   "Une vente",
+   "Le contrat par lequel une personne (entrepreneur) s'oblige à exécuter un ouvrage pour un client",
+   "Un bail"
+  ],
+  "answer": "C",
+  "explanation": "Le contrat d'entreprise (ou de service) lie l'entrepreneur (qui exécute un ouvrage) au client. C'est la base juridique des contrats de construction.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur les relations du travail, la formation professionnelle et la gestion de la main-d'œuvre » (Loi R-20) régit :",
+  "options": [
+   "Les contrats de vente",
+   "Les permis de construire",
+   "Les taxes",
+   "Les relations de travail dans l'industrie de la construction : conventions collectives, qualification, CCQ"
+  ],
+  "answer": "D",
+  "explanation": "La Loi R-20 encadre l'industrie de la construction : conventions collectives sectorielles, cartes de compétence, Commission de la construction du Québec (CCQ).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Commission de la construction du Québec » (CCQ) administre :",
+  "options": [
+   "Les hôpitaux",
+   "Les permis de construire",
+   "Les taxes municipales",
+   "Les conventions collectives, la qualification des travailleurs et les fonds de l'industrie de la construction"
+  ],
+  "answer": "D",
+  "explanation": "La CCQ gère : les conventions collectives sectorielles, les cartes de compétence, la formation, les régimes d'avantages sociaux et les fonds de l'industrie.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « carte de compétence » CCQ est :",
+  "options": [
+   "Obligatoire pour tout travailleur exécutant des travaux de construction visés par la Loi R-20",
+   "Uniquement pour les apprentis",
+   "Optionnelle",
+   "Délivrée par la RBQ"
+  ],
+  "answer": "A",
+  "explanation": "Tout travailleur sur un chantier de construction doit détenir une carte de compétence CCQ valide (apprenti, compagnon ou occupation), sous peine d'amendes.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Les « conventions collectives sectorielles » de la construction couvrent :",
+  "options": [
+   "Aucun aspect financier",
+   "Les salaires, les conditions de travail, les avantages sociaux et les règles d'embauche par secteur",
+   "Uniquement les horaires",
+   "Uniquement les salaires"
+  ],
+  "answer": "B",
+  "explanation": "Les conventions (résidentiel, institutionnel-commercial, industriel, génie civil) fixent : salaires, heures, congés, assurances, retraite, règles d'embauche.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « secteur résidentiel » en construction (Loi R-20) comprend :",
+  "options": [
+   "Les bâtiments résidentiels (maisons, condos, logements) de moins de 4 étages et 300 m²",
+   "Uniquement les condos",
+   "Uniquement les maisons unifamiliales",
+   "Tous les bâtiments"
+  ],
+  "answer": "A",
+  "explanation": "Le secteur résidentiel vise les bâtiments résidentiels de faible hauteur/surface. Au-delà, c'est le secteur institutionnel-commercial.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « rapport mensuel » à la CCQ est :",
+  "options": [
+   "Une taxe",
+   "Uniquement pour les grandes entreprises",
+   "Optionnel",
+   "Obligatoire : l'employeur doit déclarer les heures travaillées et payer les cotisations"
+  ],
+  "answer": "D",
+  "explanation": "Chaque employeur doit transmettre mensuellement à la CCQ le rapport des heures travaillées et verser les cotisations (avantages sociaux, formation).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Les « congés fériés » dans l'industrie de la construction sont :",
+  "options": [
+   "Spécifiques : les vacances de la construction (2 semaines été, 2 semaines hiver) sont obligatoires",
+   "Uniquement Noël",
+   "Inexistants",
+   "Identiques aux autres industries"
+  ],
+  "answer": "A",
+  "explanation": "L'industrie a des vacances obligatoires : 2 semaines en été (fin juillet) et 2 semaines en hiver (fin décembre), en plus des congés fériés.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« embauche » d'un travailleur de la construction passe typiquement par :",
+  "options": [
+   "Le placement par la CCQ (bureau d'embauche) selon les règles de la convention collective",
+   "Une annonce journal",
+   "Le bouche-à-oreille uniquement",
+   "Aucune règle"
+  ],
+  "answer": "A",
+  "explanation": "Le placement de la main-d'œuvre est encadré par la CCQ : les employeurs embauchent via le bureau de placement selon les règles de priorité et de ratio.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « ratio apprenti/compagnon » sur un chantier est :",
+  "options": [
+   "Inexistant",
+   "Réglementé par la convention collective (ex. : 1 apprenti par compagnon)",
+   "De 10 apprentis pour 1 compagnon",
+   "Libre"
+  ],
+  "answer": "B",
+  "explanation": "Les conventions fixent des ratios (ex. : 1 apprenti par compagnon) pour assurer la formation adéquate et la qualité des travaux.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « qualification professionnelle » (carte de compétence) s'obtient par :",
+  "options": [
+   "Uniquement l'expérience",
+   "La formation (DEP/ASP) et l'apprentissage, ou la reconnaissance des acquis",
+   "Uniquement un examen",
+   "L'achat"
+  ],
+  "answer": "B",
+  "explanation": "La carte s'obtient par : diplôme (DEP) + apprentissage, ou reconnaissance de l'expérience (RAC). Elle atteste la compétence du travailleur.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur la santé et la sécurité du travail » (LSST) s'applique :",
+  "options": [
+   "Uniquement aux bureaux",
+   "Uniquement aux usines",
+   "À tous les établissements, y compris les chantiers de construction",
+   "Aucun secteur"
+  ],
+  "answer": "C",
+  "explanation": "La LSST s'applique à tous les travailleurs et employeurs du Québec, incluant la construction, avec des règles spécifiques pour les chantiers (RSST).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « Règlement sur la santé et la sécurité du travail » (RSST) pour la construction :",
+  "options": [
+   "Ne s'applique pas à la construction",
+   "Est optionnel",
+   "Remplace la LSST",
+   "Détaille les obligations spécifiques aux chantiers : EPI, chutes, excavation, électricité, etc."
+  ],
+  "answer": "D",
+  "explanation": "Le RSST (ou Code de sécurité pour les travaux de construction) précise les règles techniques de sécurité applicables sur les chantiers.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « droit de refus » d'un travailleur (art. 12 LSST) lui permet de :",
+  "options": [
+   "Refuser de se former",
+   "Refuser de porter un EPI",
+   "Refuser d'exécuter un travail s'il a des motifs raisonnables de croire qu'il y a un danger pour sa santé ou sa sécurité",
+   "Refuser tout travail"
+  ],
+  "answer": "C",
+  "explanation": "Le travailleur peut refuser un travail dangereux. L'employeur et la CNESST investiguent. Le refus ne peut entraîner de sanction si le motif est raisonnable.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « CNESST » (Commission des normes, de l'équité, de la santé et de la sécurité du travail) :",
+  "options": [
+   "Gère uniquement les salaires",
+   "Gère les permis de construire",
+   "N'a aucun rôle en construction",
+   "Administre la LSST, les normes du travail, l'équité salariale et l'indemnisation des accidents"
+  ],
+  "answer": "D",
+  "explanation": "La CNESST regroupe : normes du travail, équité salariale, SST et indemnisation (remplace CSST). Elle inspecte, indemnise et prévient.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« indemnisation » d'un accident du travail par la CNESST :",
+  "options": [
+   "Est un régime sans égard à la faute : le travailleur blessé est indemnisé sans poursuivre l'employeur",
+   "Est optionnelle",
+   "Nécessite une poursuite",
+   "Couvre uniquement les décès"
+  ],
+  "answer": "A",
+  "explanation": "Le régime de la CNESST est sans égard à la faute : le travailleur reçoit des indemnités (salaire, soins) en échange de l'immunité de poursuite de l'employeur.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « cotisation CNESST » (taux de prime) est :",
+  "options": [
+   "Payée par l'employeur, selon le risque de son secteur d'activité",
+   "Payée par le travailleur",
+   "Optionnelle",
+   "Identique pour tous"
+  ],
+  "answer": "A",
+  "explanation": "L'employeur paie la cotisation CNESST (taux selon le risque du secteur). La construction a des taux élevés vu les risques d'accidents.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur les normes du travail » (LNT) fixe :",
+  "options": [
+   "Les conditions minimales : salaire, heures, congés, vacances, préavis, harcèlement",
+   "Uniquement le salaire minimum",
+   "Uniquement les congés",
+   "Aucune norme"
+  ],
+  "answer": "A",
+  "explanation": "La LNT établit les normes minimales (salaires, heures, congés, vacances, préavis, harcèlement). En construction, les conventions collectives s'y ajoutent.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « harcèlement psychologique » au travail (art. 81.18 LNT) est :",
+  "options": [
+   "Interdit : conduite vexatoire répétée portant atteinte à la dignité ou à l'intégrité du travailleur",
+   "Acceptable",
+   "Uniquement un conflit",
+   "Sans recours"
+  ],
+  "answer": "A",
+  "explanation": "Le harcèlement psychologique est interdit. L'employeur doit prévenir et traiter les plaintes. Le travailleur peut porter plainte à la CNESST.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur l'équité salariale » exige :",
+  "options": [
+   "Uniquement pour les cadres",
+   "Rien",
+   "Uniquement le salaire minimum",
+   "Que les emplois à prédominance féminine soient rémunérés equally aux emplois masculins de valeur équivalente"
+  ],
+  "answer": "D",
+  "explanation": "L'équité salariale exige une rémunération égale pour des emplois de valeur équivalente, sans discrimination fondée sur le sexe.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur les accidents du travail et les maladies professionnelles » (LATMP) :",
+  "options": [
+   "Est optionnelle",
+   "Couvre uniquement les accidents de voiture",
+   "N'existe plus",
+   "Indemnise les travailleurs blessés ou malades à cause du travail, via la CNESST"
+  ],
+  "answer": "D",
+  "explanation": "La LATMP (intégrée à la CNESST) indemnise : lésions professionnelles, maladies, réadaptation, retour au travail. C'est un régime sans égard à la faute.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « retour au travail » après un accident (LATMP) :",
+  "options": [
+   "N'a aucune règle",
+   "Est encadré : l'employeur doit réintégrer le travailleur dans son emploi ou un emploi équivalent",
+   "Dépend uniquement du travailleur",
+   "Est impossible"
+  ],
+  "answer": "B",
+  "explanation": "Le droit au retour au travail protège le travailleur : l'employeur doit le réintégrer (emploi ou équivalent) après sa lésion, sous conditions.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur la protection du consommateur » (LPC) peut s'appliquer à la construction :",
+  "options": [
+   "Jamais",
+   "Uniquement pour l'alimentation",
+   "Quand le client est un consommateur (particulier) : garanties, contrats, pratiques de commerce",
+   "Uniquement pour les voitures"
+  ],
+  "answer": "C",
+  "explanation": "La LPC protège les consommateurs : garanties légales, règles sur les contrats, interdiction des pratiques trompeuses. Elle s'applique aux rénovations résidentielles.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « contrat de rénovation résidentielle » avec un consommateur doit :",
+  "options": [
+   "Être écrit, contenir les mentions obligatoires (prix, délai, garanties) et respecter le délai de résiliation",
+   "Être verbal",
+   "N'avoir aucune forme",
+   "Être notarié"
+  ],
+  "answer": "A",
+  "explanation": "Le contrat avec un consommateur doit être écrit, détaillé (prix, travaux, délai) et accorder un droit de résiliation (10 jours pour certains contrats).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « délai de résiliation » de 10 jours (LPC) pour un contrat conclu à distance ou hors commerce :",
+  "options": [
+   "N'existe pas",
+   "Permet au consommateur d'annuler sans motif dans les 10 jours suivant la signature",
+   "Est de 30 jours",
+   "S'applique à tous les contrats"
+  ],
+  "answer": "B",
+  "explanation": "Pour les contrats conclus hors commerce (ex. : porte-à-porte) ou à distance, le consommateur a 10 jours pour résilier sans pénalité.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « garantie légale de qualité » (LPC + C.c.Q.) pour des travaux :",
+  "options": [
+   "S'applique automatiquement : les travaux doivent être conformes et exempts de vices cachés",
+   "Est optionnelle",
+   "N'existe pas",
+   "Remplace le contrat"
+  ],
+  "answer": "A",
+  "explanation": "La garantie légale s'ajoute au contrat : les travaux doivent être conformes, durables et exempts de vices cachés, même sans clause expresse.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « publicité trompeuse » dans la construction (LPC) :",
+  "options": [
+   "Est sans conséquence",
+   "Est interdite : aucune représentation fausse ou trompeuse sur les travaux, prix ou qualifications",
+   "Est permise",
+   "Est réglementée uniquement par la RBQ"
+  ],
+  "answer": "B",
+  "explanation": "La LPC interdit la publicité fausse ou trompeuse. Un entrepreneur ne peut faire de fausses représentations sur ses qualifications, prix ou travaux.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur l'environnement » (LQE) sur un chantier concerne :",
+  "options": [
+   "Aucun aspect chantier",
+   "La gestion des matières dangereuses, des rejets, de l'érosion et la protection des cours d'eau",
+   "Uniquement les bureaux",
+   "Uniquement le recyclage"
+  ],
+  "answer": "B",
+  "explanation": "La LQE encadre : disposition des MDR, rejets dans l'environnement, contrôle de l'érosion, protection des milieux humides et cours d'eau sur les chantiers.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « certificat d'autorisation » environnemental est requis pour :",
+  "options": [
+   "Certains travaux à impact environnemental (ex. : près d'un cours d'eau, milieu humide)",
+   "Uniquement les usines",
+   "Tous les travaux",
+   "Aucun travail"
+  ],
+  "answer": "A",
+  "explanation": "Les travaux près d'un cours d'eau, en milieu humide ou à impact environnemental significatif peuvent nécessiter un certificat d'autorisation du MELCC.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « gestion des matières résiduelles » sur un chantier vise à :",
+  "options": [
+   "Ignorer les déchets",
+   "Tout envoyer à l'enfouissement",
+   "Réduire, réutiliser, recycler et valoriser les déchets de construction (bois, métal, béton)",
+   "Brûler les déchets"
+  ],
+  "answer": "C",
+  "explanation": "La politique québécoise privilégie la hiérarchie 3RV : réduction, réemploi, recyclage, valorisation. L'enfouissement est le dernier recours.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « Règlement sur l'évacuation et le traitement des eaux usées » concerne :",
+  "options": [
+   "Uniquement les villes",
+   "Aucun bâtiment",
+   "Les installations septiques et le traitement des eaux usées des bâtiments",
+   "Uniquement les usines"
+  ],
+  "answer": "C",
+  "explanation": "Le règlement encadre les installations septiques (fosses, champs d'épuration) et le traitement des eaux usées pour les bâtiments non raccordés à l'égout.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur l'aménagement et l'urbanisme » (LAU) donne aux municipalités le pouvoir de :",
+  "options": [
+   "Délivrer les licences RBQ",
+   "Fixer les salaires",
+   "Gérer les hôpitaux",
+   "Adopter des règlements de zonage, de lotissement et de construction"
+  ],
+  "answer": "D",
+  "explanation": "La LAU habilite les municipalités à régir l'aménagement : zonage, lotissement, construction, PIIA, dérogations mineures.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « PIIA » (Plan d'implantation et d'intégration architecturale) est :",
+  "options": [
+   "Un règlement municipal encadrant l'aspect architectural et l'intégration des bâtiments dans certains secteurs",
+   "Un permis de conduire",
+   "Une taxe",
+   "Un contrat"
+  ],
+  "answer": "A",
+  "explanation": "Le PIIA soumet certains projets à une évaluation architecturale et paysagère par le CCU, pour assurer l'intégration dans le milieu.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « certificat de localisation » est :",
+  "options": [
+   "Une assurance",
+   "Un contrat de vente",
+   "Un permis de construire",
+   "Un document préparé par un arpenteur-géomètre décrivant la propriété, ses mesures et ses contraintes"
+  ],
+  "answer": "D",
+  "explanation": "Le certificat de localisation (arpenteur) décrit : dimensions, superficie, bâtiments, servitudes, zones de contraintes. Il est requis pour les transactions et permis.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « servitude » (droit de passage, vue, etc.) sur un terrain :",
+  "options": [
+   "Est une charge grevant un terrain au profit d'un autre, inscrite au Registre foncier",
+   "Annule la propriété",
+   "Est toujours temporaire",
+   "N'existe pas"
+  ],
+  "answer": "A",
+  "explanation": "La servitude (art. 1177 C.c.Q.) est un droit réel : passage, vue, égout. Elle suit le terrain (pas le propriétaire) et doit être publiée.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « Registre foncier du Québec » est :",
+  "options": [
+   "Un annuaire téléphonique",
+   "Géré par la RBQ",
+   "Un site de vente",
+   "Le registre public des droits immobiliers : propriété, hypothèques, servitudes, charges"
+  ],
+  "answer": "D",
+  "explanation": "Le Registre foncier publie tous les droits réels immobiliers : titres de propriété, hypothèques, servitudes. La publicité protège les droits.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « publication » d'un droit immobilier au Registre foncier :",
+  "options": [
+   "Rend le droit opposable aux tiers et protège son titulaire",
+   "Est optionnelle",
+   "Est gratuite",
+   "N'a aucun effet"
+  ],
+  "answer": "A",
+  "explanation": "La publication (inscription) rend le droit opposable aux tiers. Sans publication, un droit peut être inopposable à un acheteur de bonne foi.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "La « taxe de bienvenue » (droit de mutation) est :",
+  "options": [
+   "Une taxe fédérale",
+   "Optionnelle",
+   "Un droit perçu par la municipalité lors du transfert de propriété d'un immeuble",
+   "Une taxe sur les salaires"
+  ],
+  "answer": "C",
+  "explanation": "Le droit de mutation (taxe de bienvenue) est payé par l'acheteur à la municipalité lors de l'achat d'un immeuble, calculé sur le prix.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "La « TPS/TVQ » sur les travaux de construction :",
+  "options": [
+   "S'applique aux travaux et matériaux, avec des règles spécifiques (ex. : auto-fourniture)",
+   "Est uniquement fédérale",
+   "Ne s'applique jamais",
+   "Est uniquement provinciale"
+  ],
+  "answer": "A",
+  "explanation": "La TPS (5 %) et TVQ (9,975 %) s'appliquent aux travaux. L'auto-fourniture (construction pour soi-même) peut être taxable. Des règles spécifiques s'appliquent.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« auto-fourniture » en construction (construire pour soi-même) :",
+  "options": [
+   "Est interdite",
+   "N'a aucune incidence fiscale",
+   "Est toujours exonérée",
+   "Peut être assujettie à la TPS/TVQ comme si le bâtiment était vendu"
+  ],
+  "answer": "D",
+  "explanation": "L'auto-fourniture (construire ou rénover substantiellement pour soi) peut être réputée une vente taxable, assujettie à la TPS/TVQ sur la juste valeur.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « crédit d'impôt RénoVert » (ou équivalent) vise à :",
+  "options": [
+   "Interdire les rénovations",
+   "Financer les routes",
+   "Encourager les rénovations résidentielles écoénergétiques par un crédit d'impôt",
+   "Taxer les rénovations"
+  ],
+  "answer": "C",
+  "explanation": "Les crédits d'impôt à la rénovation (variables selon les années) encouragent les travaux écoénergétiques ou d'accessibilité, réduisant l'impôt du contribuable.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "La « norme d'accessibilité » dans le Code de construction vise :",
+  "options": [
+   "Uniquement les bureaux",
+   "L'accessibilité des bâtiments aux personnes handicapées (rampes, portes, sanitaires)",
+   "Aucun bâtiment",
+   "Uniquement les écoles"
+  ],
+  "answer": "B",
+  "explanation": "Le Code prévoit des normes d'accessibilité (sans obstacles) pour les bâtiments publics et multilogements : accès, portes, corridors, sanitaires adaptés.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « protection incendie » dans le Code de construction exige :",
+  "options": [
+   "Aucune mesure",
+   "Uniquement pour les usines",
+   "Des mesures selon l'usage et la taille : avertisseurs, extincteurs, issues de secours, résistance au feu",
+   "Uniquement des extincteurs"
+  ],
+  "answer": "C",
+  "explanation": "La protection incendie varie selon l'usage : avertisseurs, extincteurs, issues de secours, compartimentage, résistance au feu des éléments structuraux.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« issue de secours » (sortie de secours) dans un bâtiment doit :",
+  "options": [
+   "Être unique",
+   "Être verrouillée",
+   "Être accessible, dégagée, signalisée et mener directement à l'extérieur",
+   "Servir de rangement"
+  ],
+  "answer": "C",
+  "explanation": "Les issues de secours doivent être en tout temps accessibles, dégagées, signalisées et permettre l'évacuation rapide vers l'extérieur.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "La « résistance au feu » des éléments structuraux est exprimée en :",
+  "options": [
+   "Kilogrammes",
+   "Degrés Celsius",
+   "Minutes ou heures (ex. : 1 h, 2 h) selon l'usage et la taille du bâtiment",
+   "Mètres"
+  ],
+  "answer": "C",
+  "explanation": "La résistance au feu (RFC) est la durée (en h) pendant laquelle un élément conserve sa fonction sous l'effet du feu. Elle varie selon l'usage et la hauteur.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « compartimentage » contre l'incendie consiste à :",
+  "options": [
+   "Ouvrir tous les murs",
+   "Diviser le bâtiment en sections par des murs/planchers coupe-feu pour limiter la propagation",
+   "Peindre les murs",
+   "Installer des fenêtres"
+  ],
+  "answer": "B",
+  "explanation": "Le compartimentage divise le bâtiment en zones coupe-feu (murs, planchers, portes coupe-feu) pour contenir l'incendie et permettre l'évacuation.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « ventilation » des bâtiments dans le Code vise :",
+  "options": [
+   "Uniquement l'esthétique",
+   "Uniquement le confort",
+   "Aucun objectif sanitaire",
+   "La qualité de l'air, l'évacuation des contaminants et la prévention des moisissures"
+  ],
+  "answer": "D",
+  "explanation": "La ventilation assure la qualité de l'air intérieur, évacue l'humidité et les contaminants, et prévient les problèmes de santé et de moisissures.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« efficacité énergétique » dans le Code de construction :",
+  "options": [
+   "Est optionnelle",
+   "Concerne uniquement les voitures",
+   "N'existe pas",
+   "Impose des exigences minimales d'isolation, d'étanchéité et de performance des systèmes"
+  ],
+  "answer": "D",
+  "explanation": "Le Code (chapitre Efficacité énergétique) fixe des exigences : isolation, étanchéité à l'air, performance des fenêtres et des systèmes mécaniques.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « programme Novoclimat » au Québec vise :",
+  "options": [
+   "Encourager la construction de maisons neuves à haute performance énergétique",
+   "Interdire la construction",
+   "Taxer les maisons",
+   "Financer les routes"
+  ],
+  "answer": "A",
+  "explanation": "Novoclimat (Transition énergétique Québec) certifie et subventionne les maisons neuves dépassant les normes d'efficacité énergétique.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur la qualité de l'environnement » (LQE) interdit :",
+  "options": [
+   "Uniquement le bruit",
+   "Toute construction",
+   "Le rejet de contaminants dans l'environnement au-delà des normes permises",
+   "Aucun rejet"
+  ],
+  "answer": "C",
+  "explanation": "La LQE interdit de rejeter des contaminants (sol, eau, air) au-delà des normes. Les chantiers doivent contrôler poussières, rejets et matières dangereuses.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « Règlement sur les matières dangereuses » encadre :",
+  "options": [
+   "Uniquement les produits alimentaires",
+   "Le stockage, la manipulation, le transport et l'élimination des matières dangereuses",
+   "Uniquement les explosifs",
+   "Aucune matière"
+  ],
+  "answer": "B",
+  "explanation": "Le règlement encadre tout le cycle des matières dangereuses : entreposage, manipulation, transport (TMD) et élimination sécuritaire.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « transport des matières dangereuses » (TMD) sur un chantier est régi par :",
+  "options": [
+   "Uniquement la RBQ",
+   "Le Règlement sur le TMD (fédéral) : étiquetage, documents, contenants, formation",
+   "Uniquement le Code de la route",
+   "Aucune règle"
+  ],
+  "answer": "B",
+  "explanation": "Le TMD (fédéral) régit le transport : étiquettes, panneaux, documents d'expédition, contenants certifiés et formation des conducteurs.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur la concurrence » (fédérale) interdit dans la construction :",
+  "options": [
+   "La compétition",
+   "Aucune pratique",
+   "Uniquement la publicité",
+   "Le truquage des soumissions (bid-rigging) et les ententes anticoncurrentielles"
+  ],
+  "answer": "D",
+  "explanation": "Le truquage des soumissions (entente entre soumissionnaires) est une infraction criminelle. La Loi sur la concurrence protège l'intégrité des appels d'offres.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « truquage des soumissions » (bid-rigging) est :",
+  "options": [
+   "Un droit",
+   "Une pratique acceptée",
+   "Une stratégie légale",
+   "Une infraction criminelle : entente secrète entre soumissionnaires pour fausser l'appel d'offres"
+  ],
+  "answer": "D",
+  "explanation": "Le bid-rigging (art. 47 Loi sur la concurrence) est criminel : les soumissionnaires s'entendent pour déterminer qui gagnera, faussant la concurrence.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« Autorité des marchés publics » (AMP) au Québec surveille :",
+  "options": [
+   "L'intégrité des contrats publics : autorisation de contracter, conformité, enquêtes",
+   "Les marchés privés",
+   "Les permis de conduire",
+   "Les salaires"
+  ],
+  "answer": "A",
+  "explanation": "L'AMP veille à l'intégrité des contrats publics : elle autorise les entreprises à contracter avec l'État, enquête et peut exclure des entreprises.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« autorisation de contracter » de l'AMP est requise pour :",
+  "options": [
+   "Les contrats publics au-delà de certains seuils (ex. : 5 M$)",
+   "Uniquement les contrats fédéraux",
+   "Tous les contrats privés",
+   "Aucun contrat"
+  ],
+  "answer": "A",
+  "explanation": "Les entreprises voulant contracter avec l'État québécois au-delà des seuils doivent obtenir une autorisation de l'AMP (vérification d'intégrité).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « processus d'appel d'offres » public exige :",
+  "options": [
+   "Un seul soumissionnaire",
+   "Uniquement la négociation de gré à gré",
+   "Aucune règle",
+   "La transparence, l'égalité de traitement des soumissionnaires et l'octroi au plus bas soumissionnaire conforme"
+  ],
+  "answer": "D",
+  "explanation": "Les appels d'offres publics doivent respecter : publicité, égalité des soumissionnaires, critères objectifs et octroi au plus bas conforme.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « soumission conforme » dans un appel d'offres est :",
+  "options": [
+   "La plus chère",
+   "La moins chère sans conditions",
+   "Celle qui respecte toutes les exigences du devis et des conditions de soumission",
+   "Celle déposée en retard"
+  ],
+  "answer": "C",
+  "explanation": "Une soumission conforme respecte toutes les conditions : documents, délais, garanties, prix. Une soumission non conforme peut être rejetée.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « devis » (specifications) dans un appel d'offres décrit :",
+  "options": [
+   "Aucun détail",
+   "Les exigences techniques, les matériaux, les normes et les conditions d'exécution des travaux",
+   "Uniquement le prix",
+   "Uniquement les plans"
+  ],
+  "answer": "B",
+  "explanation": "Le devis précise : matériaux, normes, méthodes, qualité, conditions. Avec les plans, il forme le document technique du contrat.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« addenda » dans un appel d'offres est :",
+  "options": [
+   "Une modification ou précision apportée aux documents d'appel d'offres avant la date de soumission",
+   "Un contrat séparé",
+   "Un permis",
+   "Une facture"
+  ],
+  "answer": "A",
+  "explanation": "L'addenda modifie ou précise les documents d'appel d'offres. Tous les soumissionnaires doivent en tenir compte; il fait partie du contrat.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « visite de chantier » (site visit) avant soumission permet :",
+  "options": [
+   "De négocier le prix",
+   "D'obtenir le permis",
+   "De signer le contrat",
+   "Au soumissionnaire de constater les conditions réelles du site et d'ajuster sa soumission"
+  ],
+  "answer": "D",
+  "explanation": "La visite de chantier (parfois obligatoire) permet au soumissionnaire d'évaluer les conditions réelles (accès, sol, existants) et de soumissionner en connaissance.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "La « clause d'irrecevabilité » dans un appel d'offres :",
+  "options": [
+   "N'a aucun effet",
+   "Oblige à accepter toutes les soumissions",
+   "Précise les motifs de rejet d'une soumission (non-conformité, retard, garantie manquante)",
+   "Est illégale"
+  ],
+  "answer": "C",
+  "explanation": "La clause d'irrecevabilité définit les motifs de rejet : soumission tardive, non conforme, garantie absente. Elle protège l'intégrité du processus.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « contrat à commande » (contrat-cadre) dans les marchés publics :",
+  "options": [
+   "Est interdit",
+   "Est un contrat à prix fixe",
+   "N'a aucune durée",
+   "Établit les conditions pour des commandes futures de biens ou services, sans obligation de volume"
+  ],
+  "answer": "D",
+  "explanation": "Le contrat-cadre (à commandes) fixe les conditions (prix, termes) pour des commandes ultérieures, sans garantir de volume minimal.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « sous-traitance » dans un contrat public est souvent :",
+  "options": [
+   "Soumise à autorisation et doit respecter les mêmes exigences (qualification, conformité)",
+   "Libre sans conditions",
+   "Interdite",
+   "Sans effet"
+  ],
+  "answer": "A",
+  "explanation": "Dans les contrats publics, la sous-traitance peut être encadrée : autorisation préalable, qualification des sous-traitants, respect des conditions du contrat.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « reddition de comptes » dans un projet de construction public :",
+  "options": [
+   "N'existe pas",
+   "Concerne uniquement le privé",
+   "Est optionnelle",
+   "Est obligatoire : rapports d'avancement, justification des coûts, conformité aux normes"
+  ],
+  "answer": "D",
+  "explanation": "Les projets publics exigent une reddition de comptes : rapports, justification des dépenses, conformité. L'AMP et le Vérificateur général peuvent enquêter.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « Vérificateur général du Québec » peut :",
+  "options": [
+   "Gérer les chantiers",
+   "Vérifier l'utilisation des fonds publics dans les contrats de construction et faire rapport",
+   "Délivrer les permis",
+   "Fixer les salaires"
+  ],
+  "answer": "B",
+  "explanation": "Le VGQ audite l'utilisation des fonds publics, incluant les contrats de construction, et fait rapport à l'Assemblée nationale sur la gestion.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« Unité permanente anticorruption » (UPAC) peut intervenir dans :",
+  "options": [
+   "Les enquêtes sur la corruption, la collusion et la fraude dans les contrats publics",
+   "Uniquement le privé",
+   "Uniquement les vols",
+   "Aucun contrat"
+  ],
+  "answer": "A",
+  "explanation": "L'UPAC enquête sur la corruption, la collusion et la fraude dans les contrats publics de construction, en coordination avec l'AMP et la police.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur l'intégrité en matière de contrats publics » vise à :",
+  "options": [
+   "Supprimer les appels d'offres",
+   "Augmenter les coûts",
+   "Assurer l'intégrité des contrats publics : autorisation, conformité, exclusion des entreprises fautives",
+   "Privatiser les travaux"
+  ],
+  "answer": "C",
+  "explanation": "La Loi sur l'intégrité (via l'AMP) protège les contrats publics contre la corruption : autorisation obligatoire, vérifications, sanctions et exclusions.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « Registre des entreprises non admissibles » (RENA) liste :",
+  "options": [
+   "Les meilleures entreprises",
+   "Les entreprises exclues des contrats publics pour manquements à l'intégrité",
+   "Les entreprises en faillite",
+   "Les nouveaux entrepreneurs"
+  ],
+  "answer": "B",
+  "explanation": "Le RENA (géré par l'AMP) liste les entreprises non admissibles aux contrats publics (fraude, collusion, fausse déclaration).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « fausse déclaration » dans un appel d'offres public peut entraîner :",
+  "options": [
+   "Aucune conséquence",
+   "Le rejet de la soumission, l'exclusion des contrats publics et des poursuites",
+   "Un bonus",
+   "Une réduction de prix"
+  ],
+  "answer": "B",
+  "explanation": "Une fausse déclaration (qualification, expérience, conformité) peut entraîner le rejet, l'inscription au RENA et des poursuites pénales.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « responsabilité de l'employeur » pour les actes de son employé (art. 1463 C.c.Q.) :",
+  "options": [
+   "Est uniquement contractuelle",
+   "N'existe pas",
+   "Est pénale uniquement",
+   "L'employeur est responsable du dommage causé par son employé dans l'exécution de ses fonctions"
+  ],
+  "answer": "D",
+  "explanation": "L'art. 1463 C.c.Q. : l'employeur est responsable du dommage causé par son employé dans l'exécution de ses fonctions (responsabilité du fait d'autrui).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "La « responsabilité du fabricant » pour un produit défectueux :",
+  "options": [
+   "Est pénale uniquement",
+   "Le fabricant est responsable du dommage causé par un défaut de sécurité de son produit",
+   "N'existe pas",
+   "Est uniquement contractuelle"
+  ],
+  "answer": "B",
+  "explanation": "Le fabricant (et le vendeur) est responsable du dommage causé par un défaut de sécurité du produit, même sans contrat avec la victime (art. 1468 C.c.Q.).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « rappel de produit » dans la construction (ex. : matériaux défectueux) :",
+  "options": [
+   "Concerne uniquement l'alimentation",
+   "N'existe pas",
+   "Peut être ordonné par les autorités si le produit présente un danger pour la sécurité",
+   "Est volontaire uniquement"
+  ],
+  "answer": "C",
+  "explanation": "Les autorités (Santé Canada, RBQ) peuvent ordonner le rappel de produits de construction dangereux. Le fabricant doit aviser et corriger.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « norme CSA » (Association canadienne de normalisation) dans la construction :",
+  "options": [
+   "Est une norme technique volontaire, souvent rendue obligatoire par référence dans le Code",
+   "Est une taxe",
+   "N'a aucune valeur",
+   "Est une loi"
+  ],
+  "answer": "A",
+  "explanation": "Les normes CSA (ex. : Z94.1 casques, Z259 harnais) sont volontaires mais deviennent obligatoires quand le Code ou un règlement les incorpore par référence.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« incorporation par référence » d'une norme dans le Code signifie :",
+  "options": [
+   "La norme est supprimée",
+   "Le Code est annulé",
+   "La norme est optionnelle",
+   "La norme technique devient obligatoire comme si elle faisait partie du Code"
+  ],
+  "answer": "D",
+  "explanation": "Quand le Code incorpore une norme par référence (ex. : CSA, ASTM), cette norme a force obligatoire pour l'application du Code.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "La « mise à jour » du Code de construction du Québec :",
+  "options": [
+   "Est périodique : le Code évolue avec les nouvelles normes, technologies et leçons tirées",
+   "N'a jamais lieu",
+   "Dépend uniquement du fédéral",
+   "Est figée"
+  ],
+  "answer": "A",
+  "explanation": "Le Code est mis à jour périodiquement (nouvelles éditions du CNBC, modifications québécoises). Les professionnels doivent suivre les changements.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « professionnel » (architecte, ingénieur) sur un chantier a une responsabilité :",
+  "options": [
+   "Aucune",
+   "Uniquement contractuelle",
+   "Professionnelle et légale : il doit respecter les normes de l'art et peut être tenu responsable de ses erreurs",
+   "Uniquement morale"
+  ],
+  "answer": "C",
+  "explanation": "L'architecte/ingénieur a une responsabilité professionnelle (ordre professionnel) et légale : il répond de ses erreurs, négligences et du respect des normes.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« assurance responsabilité professionnelle » de l'architecte/ingénieur :",
+  "options": [
+   "Est optionnelle",
+   "Est obligatoire (par l'ordre professionnel) pour couvrir les erreurs et omissions",
+   "N'existe pas",
+   "Couvre uniquement les accidents"
+  ],
+  "answer": "B",
+  "explanation": "Les ordres professionnels (OAQ, OIQ) exigent une assurance responsabilité professionnelle couvrant les erreurs, omissions et négligences du professionnel.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « sceau » de l'ingénieur ou de l'architecte sur des plans :",
+  "options": [
+   "Est décoratif",
+   "Est optionnel pour tous les bâtiments",
+   "N'a aucune valeur",
+   "Atteste que les plans sont conformes aux normes et engage la responsabilité professionnelle"
+  ],
+  "answer": "D",
+  "explanation": "Le sceau (et la signature) engage la responsabilité du professionnel : il atteste la conformité aux normes et assume les conséquences de ses plans.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« obligation de renseignement » de l'entrepreneur envers le client :",
+  "options": [
+   "Concerne uniquement les prix",
+   "N'existe pas",
+   "L'entrepreneur doit informer le client des risques, options et limites des travaux",
+   "Est uniquement verbale"
+  ],
+  "answer": "C",
+  "explanation": "L'entrepreneur a une obligation de renseignement : informer le client des risques, des choix techniques, des limites et des conséquences des travaux.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « devoir de conseil » du professionnel (architecte/ingénieur) :",
+  "options": [
+   "Concerne uniquement les honoraires",
+   "Oblige le professionnel à conseiller le client selon les règles de l'art et les meilleures pratiques",
+   "Est optionnel",
+   "N'existe pas"
+  ],
+  "answer": "B",
+  "explanation": "Le devoir de conseil oblige le professionnel à guider le client, proposer les solutions appropriées et l'avertir des risques, selon les règles de l'art.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « responsabilité décennale » (droit français) vs le droit québécois :",
+  "options": [
+   "Le Québec a 10 ans",
+   "Identique",
+   "Le Québec n'a pas de responsabilité décennale automatique; les garanties sont de 1, 3 et 5 ans (GCR) et 3 ans (prescription)",
+   "Aucune garantie au Québec"
+  ],
+  "answer": "C",
+  "explanation": "Contrairement à la France (10 ans), le Québec a des garanties GCR (1, 3, 5 ans) et une prescription de 3 ans. Pas de décennale automatique.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "La « tolérance » dans les travaux de construction (écarts admissibles) :",
+  "options": [
+   "N'existe pas",
+   "Est toujours zéro",
+   "Est fixée par le client uniquement",
+   "Les normes et devis prévoient des tolérances admissibles (ex. : planéité, alignement)"
+  ],
+  "answer": "D",
+  "explanation": "Les normes (CSA, ACI, devis) prévoient des tolérances admissibles pour les écarts (planéité, verticalité, alignement). Au-delà, c'est une non-conformité.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « non-conformité » aux normes de construction peut entraîner :",
+  "options": [
+   "Aucune conséquence",
+   "L'obligation de corriger, des amendes, le refus du certificat et la responsabilité de l'entrepreneur",
+   "L'annulation du projet",
+   "Uniquement un avertissement"
+  ],
+  "answer": "B",
+  "explanation": "Une non-conformité peut obliger à corriger (aux frais de l'entrepreneur), entraîner des amendes, le refus du certificat d'occupation et des poursuites.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « contrôle de la qualité » sur un chantier vise à :",
+  "options": [
+   "Uniquement réduire les coûts",
+   "Ignorer les défauts",
+   "Uniquement la sécurité",
+   "Vérifier que les travaux et matériaux sont conformes aux plans, devis et normes"
+  ],
+  "answer": "D",
+  "explanation": "Le contrôle qualité (essais, inspections, vérifications) s'assure de la conformité des matériaux et de l'exécution aux exigences contractuelles et normatives.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Les « essais de matériaux » (béton, acier, sol) sur un chantier :",
+  "options": [
+   "Sont optionnels",
+   "Sont inutiles",
+   "Concernent uniquement l'eau",
+   "Sont requis par les normes pour vérifier la résistance et la conformité (ex. : cylindres de béton)"
+  ],
+  "answer": "D",
+  "explanation": "Les essais (slump, cylindres de béton, compaction, soudure) vérifient la conformité des matériaux aux spécifications. Ils sont souvent obligatoires.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « journal de chantier » (rapport quotidien) documente :",
+  "options": [
+   "Uniquement les retards",
+   "Uniquement les salaires",
+   "Aucun événement",
+   "Les conditions météo, l'effectif, les travaux réalisés, les incidents, les livraisons et les directives"
+  ],
+  "answer": "D",
+  "explanation": "Le journal de chantier consigne quotidiennement : météo, effectif, travaux, incidents, livraisons, visiteurs, directives. C'est une preuve en cas de litige.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "La « preuve documentaire » (photos, courriels, plans) dans un litige de construction :",
+  "options": [
+   "N'a aucune valeur",
+   "Est essentielle pour établir les faits, les responsabilités et les dommages",
+   "Remplace les témoins",
+   "Est irrecevable"
+  ],
+  "answer": "B",
+  "explanation": "La documentation (photos datées, courriels, plans révisés, journal) constitue une preuve cruciale pour établir les faits et les responsabilités en litige.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « témoin expert » dans un litige de construction :",
+  "options": [
+   "Est interdit",
+   "Est toujours neutre",
+   "Peut être mandaté par une partie pour donner un avis technique éclairant le tribunal",
+   "Remplace le juge"
+  ],
+  "answer": "C",
+  "explanation": "Chaque partie peut mandater un expert (ingénieur, architecte) pour produire un rapport et témoigner. Le tribunal peut aussi nommer son propre expert.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« obligation de conservation des documents » de construction :",
+  "options": [
+   "Les documents (plans, contrats, garanties) doivent être conservés plusieurs années (ex. : 5-10 ans)",
+   "Est de 30 jours",
+   "Est de 1 an",
+   "N'existe pas"
+  ],
+  "answer": "A",
+  "explanation": "Les documents de construction doivent être conservés au-delà des garanties (5-10 ans recommandé) pour se défendre en cas de réclamation tardive.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "La « prescription » pour un vice caché en construction court à partir de :",
+  "options": [
+   "La fin des travaux",
+   "La signature du contrat",
+   "La vente du bâtiment",
+   "La découverte du vice (moment où le client aurait pu raisonnablement le constater)"
+  ],
+  "answer": "D",
+  "explanation": "Pour les vices cachés, la prescription de 3 ans court de la découverte du vice (art. 2925, 1726 C.c.Q.), pas de la fin des travaux.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "La « renonciation à un recours » (waiver of subrogation) dans un contrat d'assurance construction :",
+  "options": [
+   "Est obligatoire",
+   "Est illégale",
+   "Empêche l'assureur de poursuivre un tiers responsable après avoir indemnisé son assuré",
+   "Annule l'assurance"
+  ],
+  "answer": "C",
+  "explanation": "La renonciation à subrogation (fréquente en construction) empêche l'assureur qui a payé de se retourner contre une autre partie au contrat.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« assurance chantier » (builder's risk) couvre typiquement :",
+  "options": [
+   "Uniquement la responsabilité civile",
+   "Les salaires",
+   "Les retards uniquement",
+   "Les dommages matériels à l'ouvrage en construction (incendie, vol, vandalisme, intempéries)"
+  ],
+  "answer": "D",
+  "explanation": "L'assurance chantier (builder's risk / tous risques chantier) couvre les dommages physiques à l'ouvrage en construction pendant les travaux.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« assurance responsabilité civile générale » de l'entrepreneur couvre :",
+  "options": [
+   "Les dommages corporels ou matériels causés aux tiers par les activités de l'entreprise",
+   "Les malfaçons de l'ouvrage",
+   "Les salaires",
+   "Les taxes"
+  ],
+  "answer": "A",
+  "explanation": "La RC générale couvre les dommages aux tiers (blessures, dommages matériels) causés par les opérations. Elle ne couvre pas les malfaçons de l'ouvrage lui-même.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 7,
+  "question": "L'« exclusion des travaux défectueux » dans une police RC :",
+  "options": [
+   "Couvre les malfaçons",
+   "Couvre tout",
+   "N'existe pas",
+   "Exclut typiquement le coût de réparer les travaux mal exécutés (mais couvre les dommages consécutifs)"
+  ],
+  "answer": "D",
+  "explanation": "La RC exclut généralement le coût de refaire les travaux défectueux eux-mêmes, mais peut couvrir les dommages causés aux tiers par ces travaux.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « certificat d'assurance » remis au client avant le chantier :",
+  "options": [
+   "Est optionnel",
+   "Atteste que l'entrepreneur détient les assurances requises (RC, chantier) et leurs montants",
+   "Est une facture",
+   "Remplace le contrat"
+  ],
+  "answer": "B",
+  "explanation": "Le certificat d'assurance prouve la couverture (RC, builder's risk) et ses limites. Les contrats exigent souvent sa remise avant le début des travaux.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "La « subrogation » de l'assureur signifie que :",
+  "options": [
+   "Le contrat est annulé",
+   "Après avoir indemnisé, l'assureur prend la place de l'assuré pour poursuivre le responsable",
+   "L'assureur abandonne le dossier",
+   "L'assuré perd ses droits"
+  ],
+  "answer": "B",
+  "explanation": "La subrogation permet à l'assureur qui a payé une réclamation de se retourner contre le tiers responsable pour récupérer les sommes versées.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "La « Loi sur le bâtiment » exige que les travaux soient exécutés :",
+  "options": [
+   "Sans aucune norme",
+   "Conformément aux normes et règles de l'art, par des personnes qualifiées",
+   "Uniquement par des ingénieurs",
+   "Le plus vite possible"
+  ],
+  "answer": "B",
+  "explanation": "La Loi sur le bâtiment impose l'exécution conforme aux normes et règles de l'art, par des licenciés/travailleurs qualifiés, pour protéger le public.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 7,
+  "question": "Le « recours en garantie » entre l'entrepreneur général et le sous-traitant :",
+  "options": [
+   "Est interdit",
+   "Concerne uniquement le client",
+   "Permet à l'entrepreneur général de se retourner contre le sous-traitant responsable d'une malfaçon",
+   "N'existe pas"
+  ],
+  "answer": "C",
+  "explanation": "Si un sous-traitant cause une malfaçon, l'entrepreneur général (tenu envers le client) peut exercer un recours en garantie contre le sous-traitant fautif.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "La « solidarité passive » entre coobligés dans un litige de construction :",
+  "options": [
+   "Divise toujours la dette",
+   "Permet au créancier de réclamer la totalité à l'un ou l'autre des débiteurs solidaires",
+   "Annule la dette",
+   "N'existe jamais"
+  ],
+  "answer": "B",
+  "explanation": "La solidarité passive permet au créancier de réclamer 100 % à n'importe quel débiteur solidaire, qui peut ensuite réclamer la part des autres.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 7,
+  "question": "La « contribution entre coobligés » après paiement par l'un d'eux :",
+  "options": [
+   "Est interdite",
+   "Le débiteur qui a payé peut réclamer aux autres leur part proportionnelle",
+   "Annule le recours",
+   "N'existe pas"
+  ],
+  "answer": "B",
+  "explanation": "Le débiteur solidaire qui a payé plus que sa part peut réclamer aux autres coobligés leur contribution proportionnelle (recours contributif).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « plan d'assurance qualité » (PAQ) sur un projet de construction définit :",
+  "options": [
+   "Uniquement les prix",
+   "Aucun processus",
+   "Uniquement la sécurité",
+   "Les processus, responsabilités et contrôles pour assurer la conformité des travaux aux exigences"
+  ],
+  "answer": "D",
+  "explanation": "Le PAQ décrit : organisation qualité, inspections, essais, gestion des non-conformités, responsabilités. Il structure le contrôle qualité du projet.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « contrôle de la qualité » (QC) se distingue de l'« assurance qualité » (QA) car :",
+  "options": [
+   "Ils sont identiques",
+   "Aucune différence",
+   "Le QA vérifie les produits",
+   "Le QC vérifie les produits/travaux (inspections, essais), le QA gère les processus pour prévenir les défauts"
+  ],
+  "answer": "D",
+  "explanation": "QA = processus (prévention, système). QC = produit (inspection, essais, détection). Les deux sont complémentaires pour la qualité.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« inspection des travaux » sur un chantier vise à :",
+  "options": [
+   "Aucun objectif",
+   "Uniquement les coûts",
+   "Uniquement la sécurité",
+   "Vérifier la conformité de l'exécution aux plans, devis et normes, à chaque étape"
+  ],
+  "answer": "D",
+  "explanation": "L'inspection vérifie que les travaux exécutés sont conformes aux exigences (plans, devis, normes) avant de passer à l'étape suivante.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « point d'arrêt » (hold point) dans un plan d'inspection est :",
+  "options": [
+   "Un retard",
+   "Une pause café",
+   "Une réunion",
+   "Une étape où les travaux ne peuvent continuer sans l'approbation formelle de l'inspecteur"
+  ],
+  "answer": "D",
+  "explanation": "Le point d'arrêt exige une inspection/approbation avant de poursuivre (ex. : ferraillage avant coulage). Travailler au-delà sans approbation est une non-conformité.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « point de vérification » (witness point) diffère du point d'arrêt car :",
+  "options": [
+   "Il est identique",
+   "Il n'existe pas",
+   "Il est plus strict",
+   "Les travaux peuvent continuer si l'inspecteur ne se présente pas à la date convenue"
+  ],
+  "answer": "D",
+  "explanation": "Au point de vérification, l'inspecteur est invité mais son absence n'arrête pas les travaux. Au point d'arrêt, son approbation est obligatoire.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "La « liste de déficiences » (punch list) à la fin d'un projet :",
+  "options": [
+   "Est optionnelle",
+   "Est une facture",
+   "Recense les travaux à corriger ou compléter avant la réception finale",
+   "Remplace le contrat"
+  ],
+  "answer": "C",
+  "explanation": "La punch list identifie les items à corriger/compléter. Elle est établie lors de l'inspection pré-réception et conditionne la réception finale.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "La « réception provisoire » (substantial completion) est atteinte quand :",
+  "options": [
+   "Le chantier est vide",
+   "L'ouvrage peut être utilisé aux fins prévues, malgré des travaux mineurs restants",
+   "Le client refuse",
+   "Tous les travaux sont parfaits"
+  ],
+  "answer": "B",
+  "explanation": "La réception provisoire (substantial completion) : l'ouvrage est utilisable pour sa destination, sauf travaux mineurs (punch list). Elle déclenche les garanties.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « réception définitive » (final completion) a lieu :",
+  "options": [
+   "Jamais",
+   "Quand tous les travaux (incluant la punch list) sont complétés et acceptés",
+   "Au début du projet",
+   "Uniquement après 5 ans"
+  ],
+  "answer": "B",
+  "explanation": "La réception définitive marque l'achèvement complet : tous les items de la punch list sont corrigés, les documents remis, les garanties actives.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Les « documents de fin de projet » (close-out documents) comprennent typiquement :",
+  "options": [
+   "Uniquement les photos",
+   "Les plans tel que construit (as-built), les manuels, les garanties, les certificats et la formation",
+   "Uniquement la facture finale",
+   "Aucun document"
+  ],
+  "answer": "B",
+  "explanation": "Les documents de clôture : plans as-built, manuels d'entretien, garanties, certificats de conformité, rapports d'essais, formation de l'exploitant.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Les « plans tel que construit » (as-built drawings) :",
+  "options": [
+   "Reflètent les modifications apportées pendant la construction par rapport aux plans initiaux",
+   "Sont identiques aux plans de conception",
+   "Sont inutiles",
+   "Sont supprimés"
+  ],
+  "answer": "A",
+  "explanation": "Les plans as-built documentent les changements réels (déviations, modifications) faits en chantier. Ils sont essentiels pour l'entretien et les travaux futurs.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « formation de l'exploitant » (owner training) à la fin d'un projet :",
+  "options": [
+   "Est interdite",
+   "Assure que le client sait opérer et entretenir les systèmes installés (CVAC, plomberie, etc.)",
+   "Est inutile",
+   "Concerne uniquement les ouvriers"
+  ],
+  "answer": "B",
+  "explanation": "La formation de l'exploitant (souvent contractuelle) transfère les connaissances pour opérer et entretenir les systèmes, prévenant les bris prématurés.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "La « mise en service » (commissioning) des systèmes d'un bâtiment :",
+  "options": [
+   "Est uniquement électrique",
+   "Est optionnelle",
+   "Vérifie que les systèmes (CVAC, électrique, plomberie) fonctionnent selon la conception et les besoins",
+   "N'existe pas"
+  ],
+  "answer": "C",
+  "explanation": "La mise en service (commissioning) teste et ajuste les systèmes pour confirmer qu'ils performant selon la conception. Elle est de plus en plus requise.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « certificat de conformité » des systèmes (électrique, gaz, plomberie) :",
+  "options": [
+   "Est décoratif",
+   "N'a aucune valeur",
+   "Atteste que l'installation est conforme aux normes et peut être mise en service en sécurité",
+   "Est optionnel"
+  ],
+  "answer": "C",
+  "explanation": "Les certificats de conformité (ex. : électrique par la RBQ, gaz) attestent la conformité aux normes et autorisent la mise en service sécuritaire.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « garantie de l'entrepreneur » sur les travaux débute à :",
+  "options": [
+   "La vente du bâtiment",
+   "La signature du contrat",
+   "La fin du chantier",
+   "La réception des travaux (provisoire ou définitive selon la garantie)"
+  ],
+  "answer": "D",
+  "explanation": "Les garanties (contractuelles et légales) débutent à la réception des travaux. La date de réception est donc cruciale pour leur point de départ.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « manuel d'entretien » remis au client à la fin du projet :",
+  "options": [
+   "Est une facture",
+   "Décrit l'entretien requis pour chaque système et matériau, préservant les garanties",
+   "Est inutile",
+   "Remplace les plans"
+  ],
+  "answer": "B",
+  "explanation": "Le manuel d'entretien guide le client sur l'entretien requis (fréquence, méthodes) pour maintenir la performance et préserver les garanties.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "La « non-conformité » (NCR - non-conformance report) documente :",
+  "options": [
+   "Un écart par rapport aux exigences, avec sa cause, son traitement et sa disposition",
+   "Un paiement",
+   "Une réunion",
+   "Un retard"
+  ],
+  "answer": "A",
+  "explanation": "La NCR formalise : la description de l'écart, la cause, la disposition (réparer, remplacer, accepter) et les actions correctives/préventives.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « disposition » d'une non-conformité peut être :",
+  "options": [
+   "Uniquement le rejet",
+   "Aucune option",
+   "Uniquement l'acceptation",
+   "Réparer, remplacer, utiliser tel quel (avec acceptation) ou rejeter"
+  ],
+  "answer": "D",
+  "explanation": "La disposition d'une NCR : réparation, remplacement, acceptation (concession) ou rejet. Elle doit être approuvée par les parties autorisées.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« action corrective » dans un système qualité vise à :",
+  "options": [
+   "Punir les ouvriers",
+   "Éliminer la cause d'une non-conformité détectée pour prévenir sa récurrence",
+   "Augmenter les coûts",
+   "Ignorer le problème"
+  ],
+  "answer": "B",
+  "explanation": "L'action corrective traite la cause racine d'une non-conformité existante pour empêcher qu'elle se reproduise (vs action préventive pour un risque potentiel).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« action préventive » dans un système qualité vise à :",
+  "options": [
+   "Corriger un défaut existant",
+   "Punir",
+   "Documenter uniquement",
+   "Éliminer la cause d'une non-conformité potentielle avant qu'elle ne survienne"
+  ],
+  "answer": "D",
+  "explanation": "L'action préventive anticipe et élimine les causes de non-conformités potentielles, avant qu'elles ne se matérialisent (amélioration proactive).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« analyse des causes racines » (root cause analysis) utilise des outils comme :",
+  "options": [
+   "Le diagramme d'Ishikawa (arêtes de poisson), les 5 pourquoi, l'arbre des défaillances",
+   "Uniquement les statistiques",
+   "Uniquement l'intuition",
+   "Aucun outil"
+  ],
+  "answer": "A",
+  "explanation": "L'analyse des causes racines utilise : Ishikawa (6M), 5 pourquoi, arbre des défaillances, pour identifier la cause profonde et non les symptômes.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « diagramme d'Ishikawa » (arêtes de poisson) classe les causes en :",
+  "options": [
+   "6M : Matière, Matériel, Méthode, Main-d'œuvre, Milieu, Mesure",
+   "Aucune catégorie",
+   "2 catégories",
+   "10 catégories"
+  ],
+  "answer": "A",
+  "explanation": "Le diagramme d'Ishikawa classe les causes potentielles en 6M : Matière, Matériel, Méthode, Main-d'œuvre, Milieu, Mesure, pour structurer l'analyse.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « méthode des 5 pourquoi » consiste à :",
+  "options": [
+   "Poser 5 questions au hasard",
+   "Faire 5 inspections",
+   "Demander « pourquoi » successivement (≈5 fois) pour remonter de l'effet à la cause racine",
+   "Compter les défauts"
+  ],
+  "answer": "C",
+  "explanation": "Les 5 pourquoi enchaînent les « pourquoi » pour dépasser les symptômes et atteindre la cause fondamentale d'un problème.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « contrôle statistique des processus » (SPC) utilise :",
+  "options": [
+   "Des cartes de contrôle et des indicateurs pour surveiller la stabilité des processus",
+   "Uniquement les sondages",
+   "Aucune donnée",
+   "Uniquement l'inspection finale"
+  ],
+  "answer": "A",
+  "explanation": "Le SPC utilise des cartes de contrôle (moyenne, étendue) pour détecter les dérives de processus et agir avant la production de défauts.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "La « norme ISO 9001 » concerne :",
+  "options": [
+   "La sécurité",
+   "L'environnement",
+   "Le management de la qualité : exigences pour un système de management de la qualité (SMQ)",
+   "Les salaires"
+  ],
+  "answer": "C",
+  "explanation": "ISO 9001 spécifie les exigences d'un SMQ : orientation client, leadership, approche processus, amélioration continue. Elle est certifiable.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« amélioration continue » (PDCA - Plan-Do-Check-Act) est :",
+  "options": [
+   "Un audit",
+   "Un cycle itératif : planifier, réaliser, vérifier, agir, pour améliorer en continu les processus",
+   "Une inspection",
+   "Un cycle unique"
+  ],
+  "answer": "B",
+  "explanation": "Le cycle PDCA (roue de Deming) structure l'amélioration continue : planifier l'action, la réaliser, vérifier les résultats, agir pour standardiser/corriger.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« audit qualité » interne sur un chantier vise à :",
+  "options": [
+   "Vérifier que les processus qualité sont appliqués conformément au plan et aux normes",
+   "Punir",
+   "Remplacer l'inspection",
+   "N'avoir aucun objectif"
+  ],
+  "answer": "A",
+  "explanation": "L'audit interne évalue la conformité du système qualité au PAQ et aux normes, identifie les écarts et propose des améliorations.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « traçabilité » des matériaux sur un chantier permet de :",
+  "options": [
+   "Retracer l'origine, les certificats et l'emplacement d'un matériau dans l'ouvrage",
+   "Rien",
+   "Uniquement les délais",
+   "Uniquement les coûts"
+  ],
+  "answer": "A",
+  "explanation": "La traçabilité (numéros de lot, certificats, localisation) permet de retrouver l'historique d'un matériau, essentiel en cas de défaut ou de rappel.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « certificat de conformité des matériaux » (mill certificate) :",
+  "options": [
+   "Remplace l'inspection",
+   "Atteste que le matériau (ex. : acier, béton) respecte les spécifications et normes requises",
+   "Est une facture",
+   "Est inutile"
+  ],
+  "answer": "B",
+  "explanation": "Le certificat d'usine (mill test/certificate) documente la composition, les propriétés et la conformité du matériau aux normes. Il est exigé pour les matériaux critiques.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« étalonnage » (calibration) des instruments de mesure sur un chantier :",
+  "options": [
+   "Concerne uniquement les bureaux",
+   "N'a aucune importance",
+   "Est optionnel",
+   "Assure la justesse des mesures (ex. : niveaux, manomètres) par rapport à des étalons de référence"
+  ],
+  "answer": "D",
+  "explanation": "L'étalonnage périodique garantit que les instruments mesurent juste. Des mesures faussées peuvent causer des non-conformités et des défauts.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « gestion des modifications » (change management) en qualité :",
+  "options": [
+   "Concerne uniquement les coûts",
+   "Est inutile",
+   "Contrôle et documente les modifications aux plans, devis et processus pour éviter les erreurs",
+   "Interdit tout changement"
+  ],
+  "answer": "C",
+  "explanation": "La gestion des modifications assure que tout changement (plan, devis, méthode) est évalué, approuvé, documenté et communiqué, évitant les incohérences.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « revue de conception » (design review) avant construction :",
+  "options": [
+   "Concerne uniquement les coûts",
+   "Est inutile",
+   "Est interdite",
+   "Vérifie la faisabilité, la conformité et la coordination des plans avant l'exécution"
+  ],
+  "answer": "D",
+  "explanation": "La revue de conception (coordination des plans) détecte les conflits et erreurs avant le chantier, réduisant les modifications et les retards coûteux.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « détection des conflits » (clash detection) via la maquette BIM :",
+  "options": [
+   "Identifie les interférences entre systèmes (ex. : tuyau vs poutre) avant la construction",
+   "Est impossible",
+   "Est inutile",
+   "Concerne uniquement l'esthétique"
+  ],
+  "answer": "A",
+  "explanation": "Le BIM (modélisation 3D) détecte les conflits entre systèmes (structure, mécanique, électrique) en amont, évitant les corrections coûteuses en chantier.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « BIM » (Building Information Modeling) dans la gestion de projet :",
+  "options": [
+   "Est un logiciel de dessin 2D",
+   "Concerne uniquement les rendus",
+   "Est interdit",
+   "Une maquette numérique 3D intelligente intégrant les données du bâtiment sur tout son cycle de vie"
+  ],
+  "answer": "D",
+  "explanation": "Le BIM est une maquette 3D paramétrique contenant les données du bâtiment : géométrie, matériaux, coûts, délais, entretien. Il facilite la coordination.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « coordination des corps de métier » sur un chantier vise à :",
+  "options": [
+   "Ignorer les autres",
+   "Ordonnancer les interventions des différents métiers pour éviter les conflits et les retards",
+   "Uniquement la sécurité",
+   "Créer des conflits"
+  ],
+  "answer": "B",
+  "explanation": "La coordination (planning, réunions, BIM) séquence les métiers (structure, enveloppe, mécanique, électrique) pour éviter les interférences et optimiser les délais.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "La « réunion de coordination » hebdomadaire de chantier :",
+  "options": [
+   "Est une perte de temps",
+   "Réunit les intervenants pour revoir l'avancement, les conflits, la sécurité et les prochaines étapes",
+   "Concerne uniquement le client",
+   "Est interdite"
+  ],
+  "answer": "B",
+  "explanation": "La réunion de chantier (hebdomadaire) coordonne : avancement, problèmes, sécurité, livraisons, prochaines étapes. Le procès-verbal documente les décisions.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « procès-verbal » (compte rendu) de réunion de chantier :",
+  "options": [
+   "Est une facture",
+   "Est inutile",
+   "Documente les décisions, actions, responsables et échéances, servant de référence et de preuve",
+   "Remplace le contrat"
+  ],
+  "answer": "C",
+  "explanation": "Le PV de réunion consigne : présents, décisions, actions (qui, quoi, quand). Distribué aux parties, il fait foi des engagements pris.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "La « gestion des risques » en clôture de projet vise à :",
+  "options": [
+   "N'avoir aucun objectif",
+   "Identifier et traiter les risques restants (garanties, responsabilités, litiges potentiels)",
+   "Ignorer les risques résiduels",
+   "Créer des risques"
+  ],
+  "answer": "B",
+  "explanation": "En clôture, on évalue les risques résiduels : garanties actives, litiges potentiels, obligations post-réception, pour les gérer proactivement.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « bilan de projet » (post-mortem / lessons learned) :",
+  "options": [
+   "Analyse les succès et échecs du projet pour améliorer les pratiques futures",
+   "Est une facture",
+   "Est interdit",
+   "Est inutile"
+  ],
+  "answer": "A",
+  "explanation": "Le bilan de projet (retour d'expérience) identifie : ce qui a bien/mal fonctionné, les causes, les leçons à retenir pour les projets futurs.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« archivage » des documents de projet à la clôture :",
+  "options": [
+   "Organise et conserve les documents (contrats, plans, PV, garanties) pour la durée requise",
+   "Est optionnel",
+   "Est une perte de temps",
+   "Concerne uniquement le papier"
+  ],
+  "answer": "A",
+  "explanation": "L'archivage conserve les documents du projet (numériques et papier) selon les durées légales et contractuelles, pour les références et litiges futurs.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "La « libération des cautionnements » à la fin d'un projet :",
+  "options": [
+   "Est interdite",
+   "A lieu après la réception définitive et l'expiration des délais de réclamation",
+   "N'arrive jamais",
+   "Est immédiate"
+  ],
+  "answer": "B",
+  "explanation": "Les cautionnements (exécution, paiement) sont libérés après la réception finale et l'expiration des délais de réclamation (hypothèque légale).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « décompte final » (final account) d'un projet :",
+  "options": [
+   "N'existe pas",
+   "Est une estimation",
+   "Est approximatif",
+   "Établit le solde définitif dû, incluant les modifications, retenues et ajustements"
+  ],
+  "answer": "D",
+  "explanation": "Le décompte final consolide : contrat initial, modifications, retenues libérées, pénalités/crédits, pour établir le solde définitif à payer.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « quittance finale » (final release) signée à la clôture :",
+  "options": [
+   "Annule les garanties",
+   "Est une facture",
+   "Confirme le règlement complet et la renonciation aux réclamations futures pour les travaux couverts",
+   "Est inutile"
+  ],
+  "answer": "C",
+  "explanation": "La quittance finale atteste que toutes les sommes sont réglées et que les parties renoncent à toute réclamation ultérieure sur les travaux (sauf garanties).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « levée des réserves » (punch list completion) conditionne :",
+  "options": [
+   "Aucune étape",
+   "La réception définitive et la libération des retenues finales",
+   "Uniquement la sécurité",
+   "Le début du projet"
+  ],
+  "answer": "B",
+  "explanation": "La correction de tous les items de la punch list (levée des réserves) est requise pour la réception définitive et la libération de la retenue finale.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « transfert de propriété » de l'ouvrage au client a lieu à :",
+  "options": [
+   "La signature du contrat",
+   "La fin de la garantie",
+   "Jamais",
+   "La réception des travaux (transfert de la garde et des risques)"
+  ],
+  "answer": "D",
+  "explanation": "La réception transfère la garde et les risques de l'ouvrage au client. C'est le moment charnière : garanties, assurances et responsabilités basculent.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « garantie de bon fonctionnement » (systèmes mécaniques) dure typiquement :",
+  "options": [
+   "1 mois",
+   "Selon le contrat et la loi : souvent 1 à 2 ans pour les équipements, 5 ans pour les vices majeurs",
+   "Aucune garantie",
+   "10 ans"
+  ],
+  "answer": "B",
+  "explanation": "Les garanties varient : 1 an (malfaçons), 2 ans (équipements, selon contrats), 3 ans (vices cachés), 5 ans (vices majeurs, GCR).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « service après-vente » (SAV) de l'entrepreneur pendant la garantie :",
+  "options": [
+   "Oblige l'entrepreneur à corriger les défauts couverts par la garantie dans un délai raisonnable",
+   "Est optionnel",
+   "Est interdit",
+   "Concerne uniquement les voitures"
+  ],
+  "answer": "A",
+  "explanation": "Pendant la garantie, l'entrepreneur doit corriger les défauts couverts (malfaçons, vices) dans un délai raisonnable après avis du client.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "La « mise en demeure » pour un défaut sous garantie :",
+  "options": [
+   "Notifie formellement l'entrepreneur du défaut et exige la correction dans un délai, préservant les droits",
+   "Annule la garantie",
+   "Est inutile",
+   "Est interdite"
+  ],
+  "answer": "A",
+  "explanation": "La mise en demeure (avis écrit) interpelle l'entrepreneur de corriger le défaut sous garantie. Elle préserve les droits et fait courir les délais.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« expertise contradictoire » pour un défaut de construction :",
+  "options": [
+   "Réunit les experts des deux parties pour constater le défaut et ses causes, idéalement d'un commun accord",
+   "Est inutile",
+   "Est interdite",
+   "Remplace le juge"
+  ],
+  "answer": "A",
+  "explanation": "L'expertise contradictoire (conjointe) permet aux parties de s'entendre sur le constat du défaut, ses causes et les correctifs, évitant un litige.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « responsabilité de l'entrepreneur » après la réception :",
+  "options": [
+   "Cesse immédiatement",
+   "N'existe jamais",
+   "Dure 30 ans",
+   "Persiste pour les garanties (malfaçons, vices cachés, majeurs) selon les délais légaux et contractuels"
+  ],
+  "answer": "D",
+  "explanation": "Après réception, l'entrepreneur reste responsable via les garanties : 1 an (malfaçons), 3 ans (vices cachés), 5 ans (vices majeurs), plus la prescription.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « suivi post-réception » (warranty period monitoring) :",
+  "options": [
+   "Surveille les défauts apparaissant pendant la garantie pour les signaler et les faire corriger",
+   "Est interdit",
+   "Concerne uniquement les coûts",
+   "Est inutile"
+  ],
+  "answer": "A",
+  "explanation": "Le suivi post-réception (souvent par le gestionnaire du bâtiment) détecte et signale les défauts sous garantie avant l'expiration des délais.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "La « clôture administrative » d'un projet comprend :",
+  "options": [
+   "Uniquement le paiement",
+   "Uniquement la sécurité",
+   "Aucune vérification",
+   "La vérification de tous les livrables, documents, garanties, quitus et le règlement des comptes"
+  ],
+  "answer": "D",
+  "explanation": "La clôture administrative valide : livrables complets, documents remis, garanties actives, quitus signés, comptes réglés, archives constituées.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« évaluation de la performance » des sous-traitants à la fin du projet :",
+  "options": [
+   "Mesure la qualité, les délais, la sécurité et la coopération, pour les projets futurs",
+   "Est inutile",
+   "Est interdite",
+   "Concerne uniquement les coûts"
+  ],
+  "answer": "A",
+  "explanation": "L'évaluation des sous-traitants (qualité, délais, SST, coopération) alimente une base de données pour la sélection future et l'amélioration.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « retour d'expérience » (REX / feedback) sur les risques et imprévus :",
+  "options": [
+   "Concerne uniquement les accidents",
+   "Est une perte de temps",
+   "Est interdit",
+   "Capitalise les leçons des imprévus pour mieux anticiper et gérer les risques futurs"
+  ],
+  "answer": "D",
+  "explanation": "Le REX documente les imprévus rencontrés, leurs causes et les parades, enrichissant la gestion des risques des projets futurs.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "La « satisfaction du client » en clôture de projet se mesure par :",
+  "options": [
+   "Uniquement la sécurité",
+   "Uniquement le prix",
+   "La conformité de l'ouvrage, le respect des délais/coûts et la qualité de la relation",
+   "Aucun critère"
+  ],
+  "answer": "C",
+  "explanation": "La satisfaction client intègre : conformité aux attentes, respect des engagements (délais, coûts), qualité, communication et service.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « coût de la non-qualité » (CNQ) dans un projet inclut :",
+  "options": [
+   "Uniquement les matériaux",
+   "Uniquement les salaires",
+   "Aucun coût",
+   "Les rebuts, retouches, retards, réclamations et perte de réputation dus aux défauts"
+  ],
+  "answer": "D",
+  "explanation": "Le CNQ quantifie : rebuts, retouches, retards, garanties, litiges, perte de clients. Le prévenir coûte moins que le corriger.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « prévention » des défauts (vs la détection) est :",
+  "options": [
+   "Inutile",
+   "Plus coûteuse",
+   "Impossible",
+   "Généralement moins coûteuse et plus efficace que la correction après coup"
+  ],
+  "answer": "D",
+  "explanation": "Prévenir (formation, processus, contrôles en amont) coûte moins que détecter et corriger (retouches, retards, litiges). C'est le principe de l'assurance qualité.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « zéro défaut » comme objectif qualité signifie :",
+  "options": [
+   "Viser l'élimination des défauts par la prévention, même si la perfection absolue est un idéal",
+   "Qu'on ignore les défauts",
+   "Qu'aucun défaut n'est toléré et que tout est parfait en pratique",
+   "Qu'on punit tous les défauts"
+  ],
+  "answer": "A",
+  "explanation": "Le « zéro défaut » (Crosby) est une philosophie de prévention : viser l'élimination des défauts à la source, plutôt que d'accepter un niveau de défauts.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « norme ISO 14001 » concerne :",
+  "options": [
+   "Les salaires",
+   "La qualité",
+   "La sécurité",
+   "Le management environnemental : exigences pour un système de gestion environnementale"
+  ],
+  "answer": "D",
+  "explanation": "ISO 14001 spécifie les exigences d'un système de management environnemental : impacts, conformité légale, amélioration continue. Elle est certifiable.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « norme ISO 45001 » concerne :",
+  "options": [
+   "La qualité",
+   "Le management de la santé et sécurité au travail (SST)",
+   "Les finances",
+   "L'environnement"
+  ],
+  "answer": "B",
+  "explanation": "ISO 45001 (remplace OHSAS 18001) spécifie les exigences d'un système de management SST : prévention des blessures et maladies professionnelles.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « système de management intégré » (SMI) combine :",
+  "options": [
+   "Qualité (9001), environnement (14001) et SST (45001) en un système cohérent",
+   "Uniquement la qualité",
+   "Uniquement les finances",
+   "Aucune norme"
+  ],
+  "answer": "A",
+  "explanation": "Le SMI intègre les trois normes (qualité, environnement, SST) en un système unique, optimisant les processus, audits et ressources.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « certification » d'un système de management (ISO) est :",
+  "options": [
+   "Obligatoire par la loi",
+   "Volontaire : un organisme accrédité atteste la conformité à la norme après audit",
+   "Automatique",
+   "Interdite"
+  ],
+  "answer": "B",
+  "explanation": "La certification ISO est volontaire : un certificateur accrédité audite le système et délivre un certificat de conformité (surveillance périodique).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« audit de certification » ISO se déroule en :",
+  "options": [
+   "1 étape",
+   "3 étapes",
+   "Aucune étape",
+   "2 étapes : revue documentaire (étape 1) puis audit terrain (étape 2)"
+  ],
+  "answer": "D",
+  "explanation": "La certification initiale : étape 1 (revue documentaire, préparation) puis étape 2 (audit terrain, conformité). Suivi par audits de surveillance annuels.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "La « revue de direction » dans un système de management :",
+  "options": [
+   "Est une inspection",
+   "Est inutile",
+   "Évalue périodiquement la performance du système et décide des améliorations (par la haute direction)",
+   "Concerne uniquement les ouvriers"
+  ],
+  "answer": "C",
+  "explanation": "La revue de direction (obligatoire ISO) : la direction analyse les indicateurs, audits, réclamations et décide des ressources et améliorations.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Les « indicateurs de performance » (KPI) qualité sur un chantier incluent :",
+  "options": [
+   "Aucun indicateur",
+   "Taux de non-conformités, taux de retouches, résultats d'inspections, réclamations clients",
+   "Uniquement les coûts",
+   "Uniquement les délais"
+  ],
+  "answer": "B",
+  "explanation": "Les KPI qualité mesurent : taux de NCR, retouches, conformité des inspections, réclamations, satisfaction client, pour piloter l'amélioration.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « diagramme de Pareto » (80/20) en qualité sert à :",
+  "options": [
+   "Gérer les délais",
+   "Dessiner des plans",
+   "Identifier les causes les plus fréquentes de défauts (20 % des causes = 80 % des problèmes)",
+   "Calculer les coûts"
+  ],
+  "answer": "C",
+  "explanation": "Le Pareto classe les défauts par fréquence pour cibler les 20 % de causes responsables de 80 % des problèmes, priorisant les actions correctives.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« histogramme » en contrôle qualité sert à :",
+  "options": [
+   "Dessiner des bâtiments",
+   "Visualiser la distribution des mesures (ex. : résistance du béton) pour vérifier la conformité",
+   "Gérer les coûts",
+   "Planifier les délais"
+  ],
+  "answer": "B",
+  "explanation": "L'histogramme montre la distribution des données (fréquence des valeurs), révélant la variabilité et la conformité aux spécifications.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « carte de contrôle » (control chart) détecte :",
+  "options": [
+   "Les coûts",
+   "Les salaires",
+   "Les variations anormales d'un processus (points hors limites, tendances) nécessitant une action",
+   "Les retards"
+  ],
+  "answer": "C",
+  "explanation": "La carte de contrôle trace les mesures avec des limites (LCS/LCI). Un point hors limites ou une tendance signale une cause spéciale à investiguer.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "La « capabilité d'un processus » (Cp, Cpk) mesure :",
+  "options": [
+   "L'aptitude du processus à produire dans les tolérances spécifiées",
+   "Les coûts",
+   "Les délais",
+   "La sécurité"
+  ],
+  "answer": "A",
+  "explanation": "Cp/Cpk quantifient la capacité du processus à respecter les spécifications. Cpk ≥ 1,33 est généralement visé pour un procédé capable.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« échantillonnage » pour l'acceptation des lots (ex. : béton) :",
+  "options": [
+   "Prélève un échantillon représentatif selon une norme (ex. : CSA) pour statuer sur la conformité",
+   "N'existe pas",
+   "Teste uniquement la première pièce",
+   "Teste 100 % des pièces"
+  ],
+  "answer": "A",
+  "explanation": "L'échantillonnage (plans CSA/ASTM) prélève des spécimens représentatifs (ex. : cylindres de béton) pour évaluer la conformité du lot sans tout tester.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « conformité du béton » se vérifie par :",
+  "options": [
+   "Des essais de résistance sur cylindres (à 7 et 28 jours) et l'affaissement (slump) au chantier",
+   "Le poids",
+   "L'odeur",
+   "La couleur"
+  ],
+  "answer": "A",
+  "explanation": "La conformité du béton : essai d'affaissement (slump) à la livraison + cylindres testés en compression à 7 et 28 jours vs la résistance spécifiée.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« affaissement » (slump) du béton mesure :",
+  "options": [
+   "La maniabilité (consistance) du béton frais à la livraison",
+   "La résistance",
+   "La couleur",
+   "Le prix"
+  ],
+  "answer": "A",
+  "explanation": "Le slump test mesure la maniabilité du béton frais. Un slump hors spécification peut indiquer un problème (trop d'eau, mauvaise composition).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « cure du béton » (curing) après le coulage vise à :",
+  "options": [
+   "Aucun objectif",
+   "Peindre le béton",
+   "Accélérer le séchage",
+   "Maintenir l'humidité et la température pour assurer l'hydratation et la résistance du béton"
+  ],
+  "answer": "D",
+  "explanation": "La cure (arrosage, membrane, bâches) maintient l'humidité nécessaire à l'hydratation du ciment, développant la résistance et prévenant les fissures.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Les « joints de construction » dans le béton doivent être :",
+  "options": [
+   "Peints",
+   "Évités à tout prix",
+   "Prévus et traités (position, préparation) pour assurer la continuité et l'étanchéité",
+   "Cachés"
+  ],
+  "answer": "C",
+  "explanation": "Les joints de construction (arrêts de coulage) sont planifiés, positionnés et préparés (rugosité, produit d'adhérence) pour la continuité structurale.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « ferraillage » (armatures) du béton armé est inspecté pour :",
+  "options": [
+   "La couleur",
+   "Le poids uniquement",
+   "Aucun critère",
+   "Le diamètre, l'espacement, l'enrobage et le recouvrement conformes aux plans"
+  ],
+  "answer": "D",
+  "explanation": "L'inspection du ferraillage (avant coulage) vérifie : diamètre, espacement, enrobage, recouvrements, attaches, conformément aux plans de structure.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« enrobage » des armatures dans le béton :",
+  "options": [
+   "Est optionnel",
+   "N'a aucune fonction",
+   "Est décoratif",
+   "Protège l'acier de la corrosion et assure l'adhérence, avec une épaisseur minimale selon l'exposition"
+  ],
+  "answer": "D",
+  "explanation": "L'enrobage (béton autour de l'acier) protège contre la corrosion et assure l'adhérence. Son épaisseur minimale dépend de l'exposition (CSA A23.1).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « compactage » du béton (vibration) lors du coulage :",
+  "options": [
+   "Est interdit",
+   "Est inutile",
+   "Élimine les vides d'air et assure l'enrobage des armatures et le remplissage des coffrages",
+   "Concerne uniquement l'asphalte"
+  ],
+  "answer": "C",
+  "explanation": "La vibration (aiguille vibrante) chasse l'air piégé, assure l'enrobage des aciers et le remplissage complet des coffrages, pour un béton dense.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « décoffrage » (décoffrage) du béton doit respecter :",
+  "options": [
+   "Uniquement 1 jour",
+   "Uniquement 30 jours",
+   "Aucun délai",
+   "Des délais minimaux selon l'élément et les conditions, pour éviter les dommages"
+  ],
+  "answer": "D",
+  "explanation": "Le décoffrage respecte des délais (selon l'élément, la température, la résistance atteinte) pour éviter d'endommager le béton encore fragile.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « tolérance de planéité » d'une dalle de béton est spécifiée par :",
+  "options": [
+   "Aucune norme",
+   "Des indices de planéité/水平ité (F-numbers : FF, FL) ou des écarts maximaux sous la règle",
+   "Uniquement l'œil",
+   "Le client uniquement"
+  ],
+  "answer": "B",
+  "explanation": "La planéité des dalles se mesure par les F-numbers (FF planéité, FL水平ité, ASTM E1155) ou des écarts sous règle, selon l'usage de la dalle.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 8,
+  "question": "La « fissuration » du béton est :",
+  "options": [
+   "Interdite",
+   "Uniquement esthétique",
+   "Souvent inévitable (retrait, thermique) mais doit être contrôlée (largeur, espacement) selon les normes",
+   "Toujours un défaut majeur"
+  ],
+  "answer": "C",
+  "explanation": "Certaines fissures (retrait) sont inévitables mais doivent être contrôlées (joints, ferraillage). Les fissures structurales ou excessives sont des non-conformités.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« étanchéité » des fondations et sous-sols est vérifiée par :",
+  "options": [
+   "Uniquement la peinture",
+   "Le hasard",
+   "L'inspection des membranes, drains et l'absence d'infiltration (parfois test d'eau)",
+   "Aucun test"
+  ],
+  "answer": "C",
+  "explanation": "L'étanchéité (fondations, sous-sols, toitures) est vérifiée par l'inspection des systèmes (membranes, drains) et parfois des tests d'eau.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « test d'étanchéité » (flood test) d'une membrane de toiture :",
+  "options": [
+   "Est inutile",
+   "Concerne uniquement les murs",
+   "Est interdit",
+   "Consiste à inonder temporairement la membrane pour détecter les fuites avant la finition"
+  ],
+  "answer": "D",
+  "explanation": "Le flood test inonde la membrane (24-48 h) pour détecter les fuites avant de recouvrir. Il est requis pour certaines toitures et étanchéités.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« isolation thermique » est inspectée pour :",
+  "options": [
+   "Le prix",
+   "L'épaisseur, la continuité, l'absence de ponts thermiques et la conformité au Code",
+   "La couleur",
+   "Aucun critère"
+  ],
+  "answer": "B",
+  "explanation": "L'inspection de l'isolation vérifie : épaisseur, continuité, pare-vapeur, absence de ponts thermiques, conformément aux exigences du Code (efficacité énergétique).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « pare-vapeur » dans une enveloppe de bâtiment :",
+  "options": [
+   "Est interdit",
+   "N'a aucune fonction",
+   "Est décoratif",
+   "Contrôle la migration de l'humidité pour prévenir la condensation dans les murs/toitures"
+  ],
+  "answer": "D",
+  "explanation": "Le pare-vapeur (ou freine-vapeur) limite la migration de vapeur d'eau vers les parois froides, prévenant la condensation et les moisissures.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« étanchéité à l'air » de l'enveloppe du bâtiment est vérifiée par :",
+  "options": [
+   "Uniquement l'œil",
+   "Aucun test",
+   "Un test d'infiltrométrie (blower door) mesurant le taux de fuite d'air",
+   "Le poids"
+  ],
+  "answer": "C",
+  "explanation": "Le test d'infiltrométrie (blower door) met le bâtiment en dépression/pression et mesure les fuites d'air, vérifiant la conformité à l'étanchéité requise.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « mise à la terre » et la « continuité » des circuits électriques sont testées par :",
+  "options": [
+   "Aucun test",
+   "Uniquement l'œil",
+   "Le hasard",
+   "Des mesures de résistance de terre et de continuité des conducteurs de protection"
+  ],
+  "answer": "D",
+  "explanation": "Les tests électriques vérifient : continuité des terres, résistance de prise de terre, isolement, polarité, pour assurer la sécurité des installations.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « test de pression » des tuyauteries (plomberie, gaz) :",
+  "options": [
+   "Est inutile",
+   "Vérifie l'étanchéité des réseaux en les mettant sous pression (eau ou air) avant la mise en service",
+   "Est interdit",
+   "Concerne uniquement l'électricité"
+  ],
+  "answer": "B",
+  "explanation": "Le test de pression (hydrostatique ou pneumatique) met les tuyauteries sous pression pour détecter les fuites avant la mise en service.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« équilibrage » des systèmes CVAC (chauffage, ventilation, climatisation) :",
+  "options": [
+   "Est inutile",
+   "Est optionnel",
+   "Concerne uniquement l'électricité",
+   "Ajuste les débits d'air et d'eau pour que chaque zone reçoive les quantités prévues par la conception"
+  ],
+  "answer": "D",
+  "explanation": "L'équilibrage (TAB - testing, adjusting, balancing) règle les débits d'air/eau pour que chaque espace reçoive les quantités conçues, assurant le confort.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « performance énergétique » du bâtiment terminé est parfois vérifiée par :",
+  "options": [
+   "Le hasard",
+   "Aucune vérification",
+   "Uniquement l'esthétique",
+   "Une modélisation ou des mesures confirmant la conformité aux exigences du Code (ex. : Novoclimat)"
+  ],
+  "answer": "D",
+  "explanation": "La performance énergétique peut être validée par modélisation, tests (infiltrométrie) ou certification (Novoclimat, LEED), confirmant la conformité au Code.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « certification LEED » (ou équivalent) d'un bâtiment :",
+  "options": [
+   "Atteste une performance environnementale élevée (énergie, eau, matériaux, qualité de l'air)",
+   "Est une taxe",
+   "Est obligatoire",
+   "N'existe pas"
+  ],
+  "answer": "A",
+  "explanation": "LEED (et autres : BOMA BEST, Novoclimat) certifie la performance environnementale du bâtiment selon des critères : énergie, eau, matériaux, site, qualité intérieure.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « qualité de l'air intérieur » (QAI) à la réception d'un bâtiment :",
+  "options": [
+   "Peut être mesurée (COV, CO2, particules) pour confirmer un environnement sain avant l'occupation",
+   "N'est jamais mesurée",
+   "Concerne uniquement les usines",
+   "Est inutile"
+  ],
+  "answer": "A",
+  "explanation": "La QAI (mesure des COV, CO2, moisissures) peut être vérifiée avant l'occupation, surtout pour les bâtiments verts ou sensibles (écoles, hôpitaux).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « rinçage » (flush-out) d'un bâtiment neuf avant occupation :",
+  "options": [
+   "Ventile abondamment le bâtiment pour évacuer les COV des matériaux neufs (peintures, colles)",
+   "Concerne uniquement la plomberie",
+   "Est inutile",
+   "Est interdit"
+  ],
+  "answer": "A",
+  "explanation": "Le flush-out (ventilation prolongée) évacue les composés organiques volatils (COV) émis par les matériaux neufs, améliorant la QAI avant l'occupation.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « gestion des déchets de chantier » en clôture :",
+  "options": [
+   "Est inutile",
+   "Est terminée au début",
+   "Vérifie le tri, le recyclage et la disposition conforme des déchets, avec les preuves (bordereaux)",
+   "N'existe pas"
+  ],
+  "answer": "C",
+  "explanation": "En clôture, on vérifie la gestion des déchets : taux de recyclage, bordereaux de disposition, conformité environnementale, pour les rapports et certifications.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « rapport final de l'ingénieur/architecte » à la clôture :",
+  "options": [
+   "Atteste la conformité générale des travaux aux plans et normes, et formule les réserves",
+   "Remplace le contrat",
+   "Est une facture",
+   "Est inutile"
+  ],
+  "answer": "A",
+  "explanation": "Le rapport final du professionnel atteste la conformité, liste les réserves et recommande (ou non) la réception. Il engage sa responsabilité.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "L'« attestation de conformité » municipale (occupation) :",
+  "options": [
+   "N'existe pas",
+   "Est optionnelle",
+   "Confirme que le bâtiment respecte les règlements municipaux et peut être occupé légalement",
+   "Est décorative"
+  ],
+  "answer": "C",
+  "explanation": "L'attestation/certificat d'occupation municipal confirme la conformité aux règlements (zonage, construction) et autorise l'occupation légale du bâtiment.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "La « clôture financière » d'un projet vérifie :",
+  "options": [
+   "Uniquement les salaires",
+   "Aucun coût",
+   "Uniquement la facture initiale",
+   "Que tous les coûts, modifications, retenues et réclamations sont réglés et documentés"
+  ],
+  "answer": "D",
+  "explanation": "La clôture financière consolide : coûts réels vs budget, modifications, retenues, réclamations, pour établir le coût final et libérer les garanties financières.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 8,
+  "question": "Le « budget final » vs le « budget initial » d'un projet permet de :",
+  "options": [
+   "Ignorer les écarts",
+   "Punir",
+   "Rien",
+   "Analyser les écarts (dépassements/économies) et leurs causes, pour améliorer les estimations futures"
+  ],
+  "answer": "D",
+  "explanation": "La comparaison budget final/initial (analyse des écarts) identifie les causes des dépassements et alimente l'amélioration des estimations futures.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 8,
+  "question": "La « capitalisation des connaissances » en fin de projet :",
+  "options": [
+   "Documente et partage les leçons, méthodes et données pour bénéficier aux projets futurs",
+   "Est interdite",
+   "Est inutile",
+   "Concerne uniquement les finances"
+  ],
+  "answer": "A",
+  "explanation": "La capitalisation (base de données, retours d'expérience, standards) transforme l'expérience d'un projet en savoir réutilisable pour l'organisation.",
+  "difficulty": "EASY"
+ }
+]

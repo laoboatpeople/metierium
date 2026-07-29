@@ -1,0 +1,1575 @@
+[
+ {
+  "chapter": 5,
+  "question": "La LSST (Loi sur la santé et la sécurité du travail) impose à l'employeur :",
+  "options": [
+   "L'obligation de prendre les mesures nécessaires pour protéger la santé et la sécurité des travailleurs",
+   "Aucune obligation",
+   "Uniquement de payer les salaires",
+   "Uniquement de fournir des outils"
+  ],
+  "answer": "A",
+  "explanation": "L'art. 51 LSST impose à l'employeur une obligation générale de protection : identifier les risques, former, superviser, fournir des équipements sécuritaires.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Le travailleur a l'obligation selon la LSST de :",
+  "options": [
+   "Travailler sans EPI",
+   "Ignorer les consignes de sécurité",
+   "Signaler les dangers uniquement à ses collègues",
+   "Prendre connaissance du programme de prévention et respecter les consignes de sécurité"
+  ],
+  "answer": "D",
+  "explanation": "L'art. 49 LSST oblige le travailleur à se conformer aux mesures de sécurité, utiliser les EPI et signaler les dangers à l'employeur.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « programme de prévention » sur un chantier doit être :",
+  "options": [
+   "Affiché et accessible à tous les travailleurs, mis à jour régulièrement",
+   "Optionnel pour les petits chantiers",
+   "Gardé secret",
+   "Uniquement remis à la direction"
+  ],
+  "answer": "A",
+  "explanation": "Le programme de prévention doit être accessible aux travailleurs, affiché sur le chantier et révisé quand les conditions changent.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "L'« analyse sécuritaire de tâche » (AST) consiste à :",
+  "options": [
+   "Décomposer une tâche en étapes, identifier les risques de chaque étape et définir les mesures de contrôle",
+   "Vérifier la qualité des matériaux",
+   "Mesurer la productivité",
+   "Évaluer le coût d'une tâche"
+  ],
+  "answer": "A",
+  "explanation": "L'AST (job safety analysis) décompose la tâche, identifie les dangers à chaque étape et prescrit les contrôles avant l'exécution.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « permis de travail » (work permit) est requis pour :",
+  "options": [
+   "Uniquement la peinture",
+   "Les travaux à haut risque : espace clos, travail à chaud, excavation profonde, travail en hauteur",
+   "Aucun travail",
+   "Toutes les tâches"
+  ],
+  "answer": "B",
+  "explanation": "Le permis de travail autorise formellement les tâches à risque après vérification des conditions de sécurité et des mesures de contrôle.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « travail à chaud » (soudage, meulage, découpe) nécessite :",
+  "options": [
+   "Aucune précaution",
+   "Un permis de travail à chaud, un extincteur à proximité et une surveillance incendie",
+   "Uniquement des lunettes",
+   "Uniquement un casque"
+  ],
+  "answer": "B",
+  "explanation": "Le travail à chaud génère des étincelles et de la chaleur. Le permis exige un extincteur, une surveillance post-travaux (30-60 min) et l'élimination des combustibles.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "La « protection contre les chutes » est obligatoire à partir de :",
+  "options": [
+   "10 mètres",
+   "1 mètre",
+   "3 mètres de hauteur (ou moins si risque de blessure)",
+   "5 mètres"
+  ],
+  "answer": "C",
+  "explanation": "Le RSST (art. 346) exige une protection contre les chutes à partir de 3 m, ou moins si le travailleur risque de tomber sur des pièces mobiles ou dans un liquide.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Les systèmes de protection contre les chutes comprennent :",
+  "options": [
+   "Aucun système",
+   "Uniquement le casque",
+   "Garde-corps, filets de sécurité, harnais avec cordon d'assujettissement et absorbeur d'énergie",
+   "Uniquement les bottes"
+  ],
+  "answer": "C",
+  "explanation": "La hiérarchie : éliminer le risque > garde-corps > filet > harnais. Le harnais doit être ancré à un point d'ancrage certifié (≥ 22 kN).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « point d'ancrage » d'un harnais de sécurité doit résister à une force minimale de :",
+  "options": [
+   "22 kN (≈ 5 000 lbs) par travailleur attaché",
+   "50 kN",
+   "100 N",
+   "1 kN"
+  ],
+  "answer": "A",
+  "explanation": "Le RSST exige un point d'ancrage capable de résister à 22 kN par travailleur, certifié par un ingénieur ou conforme à la norme CSA Z259.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « facteur de chute » (fall factor) est calculé par :",
+  "options": [
+   "Poids / hauteur",
+   "Hauteur × poids",
+   "Longueur du cordon / hauteur de chute",
+   "Hauteur de chute / longueur du cordon"
+  ],
+  "answer": "D",
+  "explanation": "Facteur de chute = distance de chute / longueur du cordon. Facteur 2 (chute au-dessus du point d'ancrage) = le plus sévère. Facteur 0 = idéal.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 5,
+  "question": "L'« absorbeur d'énergie » (shock absorber) sur un cordon d'assujettissement :",
+  "options": [
+   "Remplace le harnais",
+   "Réduit la force d'arrêt sur le corps du travailleur en se déployant progressivement",
+   "N'a aucune fonction",
+   "Augmente la force d'impact"
+  ],
+  "answer": "B",
+  "explanation": "L'absorbeur se déchire progressivement lors d'une chute, limitant la force d'arrêt à < 6 kN sur le corps, prévenant les blessures internes.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « garde-corps » sur un chantier doit avoir une hauteur minimale de :",
+  "options": [
+   "2 m",
+   "1,5 m",
+   "0,9 m (900 mm) avec lisse intermédiaire et plinthe",
+   "0,5 m"
+  ],
+  "answer": "C",
+  "explanation": "Le RSST exige un garde-corps de 0,9 m avec lisse intermédiaire et plinthe de 100 mm pour empêcher la chute d'objets.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Les « ouvertures de plancher » sur un chantier doivent être :",
+  "options": [
+   "Ignorées",
+   "Signalées par un ruban uniquement",
+   "Couvertes de façon sécuritaire (couvercle identifié, fixé) ou protégées par un garde-corps",
+   "Laissées ouvertes pour la ventilation"
+  ],
+  "answer": "C",
+  "explanation": "Toute ouverture de plancher doit être couverte (couvercle marqué « OUVERTURE », fixé) ou entourée d'un garde-corps pour prévenir les chutes.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « harnais de sécurité » doit être inspecté :",
+  "options": [
+   "Uniquement après une chute",
+   "Jamais",
+   "Une fois par an",
+   "Avant chaque utilisation, et formellement au moins une fois par an"
+  ],
+  "answer": "D",
+  "explanation": "L'inspection avant usage (visuelle) et l'inspection annuelle formelle (par personne compétente) sont obligatoires. Tout harnais ayant subi une chute doit être retiré.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « SIMDUT 2015 » est aligné sur :",
+  "options": [
+   "Le Système général harmonisé (SGH) de classification des produits chimiques",
+   "Les normes européennes uniquement",
+   "Aucun système international",
+   "Les normes américaines OSHA"
+  ],
+  "answer": "A",
+  "explanation": "Le SIMDUT 2015 intègre le SGH de l'ONU : pictogrammes normalisés, classes de danger, FDS à 16 sections, étiquettes standardisées.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Les pictogrammes SIMDUT comprennent :",
+  "options": [
+   "Uniquement des couleurs",
+   "Des symboles normalisés : flamme, crâne, corrosion, point d'exclamation, etc.",
+   "Des photos de produits",
+   "Uniquement des textes"
+  ],
+  "answer": "B",
+  "explanation": "Le SGH utilise 9 pictogrammes : flamme (inflammable), crâne (toxique), corrosion (corrosif), bombe (explosif), etc.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "La « fiche de données de sécurité » (FDS) doit contenir :",
+  "options": [
+   "Uniquement le fabricant",
+   "16 sections normalisées : identification, dangers, composition, premiers soins, manipulation, etc.",
+   "Uniquement le prix",
+   "Uniquement le nom du produit"
+  ],
+  "answer": "B",
+  "explanation": "La FDS (SDS) à 16 sections est obligatoire pour tout produit dangereux. Elle doit être accessible aux travailleurs exposés.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « cadenassage » (lockout) consiste à :",
+  "options": [
+   "Verrouiller les portes du chantier",
+   "Fermer le robinet d'eau",
+   "Isoler, dissiper et verrouiller toutes les sources d'énergie avant l'entretien d'un équipement",
+   "Éteindre la lumière"
+  ],
+  "answer": "C",
+  "explanation": "Le cadenassage isole toutes les énergies (électrique, hydraulique, pneumatique, gravitationnelle, thermique) et les verrouille avec un cadenas personnel.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "La « vérification zéro énergie » après cadenassage consiste à :",
+  "options": [
+   "Vérifier la couleur du cadenas",
+   "Compter les cadenas",
+   "Vérifier que le cadenas est bien fermé",
+   "Tenter de démarrer l'équipement pour confirmer l'absence d'énergie résiduelle"
+  ],
+  "answer": "D",
+  "explanation": "Après cadenassage, on tente un démarrage (test) pour confirmer l'isolation complète. C'est l'étape critique de vérification.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « cadenas personnel » de cadenassage est :",
+  "options": [
+   "Partagé entre tous les ouvriers",
+   "Unique à chaque travailleur, avec une seule clé gardée par son propriétaire",
+   "Fourni par le client",
+   "Optionnel"
+  ],
+  "answer": "B",
+  "explanation": "Chaque travailleur pose son propre cadenas et garde la clé. Personne d'autre ne peut le retirer, garantissant sa protection individuelle.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Les « matières dangereuses résiduelles » (MDR) sur un chantier incluent :",
+  "options": [
+   "Uniquement le bois",
+   "Aucune matière",
+   "Solvants, huiles, batteries, amiante, BPC, produits chimiques, contenants sous pression",
+   "Uniquement la peinture"
+  ],
+  "answer": "C",
+  "explanation": "Les MDR comprennent tous les résidus dangereux : solvants, huiles, batteries, amiante, BPC, aérosols. Leur gestion est réglementée (LQE, RSST).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "L'« amiante » est un cancérogène reconnu causant principalement :",
+  "options": [
+   "L'amiantose, le mésothéliome et le cancer du poumon",
+   "Des fractures",
+   "Des allergies cutanées uniquement",
+   "Des brûlures"
+  ],
+  "answer": "A",
+  "explanation": "L'inhalation de fibres d'amiante cause l'amiantose (fibrose), le mésothéliome (cancer de la plèvre) et le cancer du poumon, avec une latence de 20-40 ans.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le retrait d'amiante sur un chantier nécessite :",
+  "options": [
+   "Uniquement des gants",
+   "Aucune précaution",
+   "Une entreprise certifiée, un confinement, une dépression négative, des EPI spécifiques et une disposition contrôlée",
+   "Uniquement un masque"
+  ],
+  "answer": "C",
+  "explanation": "Le retrait d'amiante est strictement réglementé : confinement étanche, dépression, filtration HEPA, EPI (combinaison, respirateur), disposition en site autorisé.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « bruit » sur un chantier est réglementé à partir de :",
+  "options": [
+   "120 dB(A)",
+   "85 dB(A) sur 8 heures (niveau d'exposition quotidien)",
+   "50 dB(A)",
+   "Aucun seuil"
+  ],
+  "answer": "B",
+  "explanation": "Le RSST fixe la limite à 85 dB(A) sur 8h. Au-delà, un programme de conservation de l'ouïe est requis : EPI, rotation, audiogrammes.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Les « vibrations main-bras » (marteau-piqueur, meuleuse) peuvent causer :",
+  "options": [
+   "Le syndrome de Raynaud (doigts blancs) et des lésions nerveuses",
+   "Des allergies",
+   "Des fractures",
+   "Des brûlures"
+  ],
+  "answer": "A",
+  "explanation": "L'exposition prolongée aux vibrations cause le syndrome des doigts blancs (Raynaud), des neuropathies et des troubles musculo-squelettiques.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "La « manutention manuelle » de charges lourdes est réglementée :",
+  "options": [
+   "Uniquement pour les femmes",
+   "Uniquement pour les apprentis",
+   "Le RSST recommande des limites (ex. : 23 kg) et exige des aides mécaniques au-delà",
+   "Aucune limite"
+  ],
+  "answer": "C",
+  "explanation": "Le RSST et les guides CNESST recommandent des limites de levage (23 kg en conditions optimales) et exigent des équipements mécaniques pour les charges lourdes.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Les « troubles musculo-squelettiques » (TMS) dans la construction sont causés par :",
+  "options": [
+   "Les mouvements répétitifs, les postures contraignantes, les vibrations et la manutention manuelle",
+   "Uniquement le froid",
+   "Uniquement les accidents",
+   "Les produits chimiques"
+  ],
+  "answer": "A",
+  "explanation": "Les TMS (tendinites, bursites, lombalgies) résultent de l'accumulation de contraintes : répétition, posture, force, vibration, froid.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "L'« ergonomie » sur un chantier vise à :",
+  "options": [
+   "Éliminer les pauses",
+   "Augmenter la vitesse de travail",
+   "Réduire les salaires",
+   "Adapter le travail à l'humain : postures, outils, organisation pour réduire les contraintes physiques"
+  ],
+  "answer": "D",
+  "explanation": "L'ergonomie conçoit les postes, outils et méthodes pour minimiser les contraintes physiques et prévenir les TMS.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « stress thermique » (coup de chaleur) sur un chantier est un risque :",
+  "options": [
+   "Majeur en été : travail physique intense + chaleur + soleil peuvent causer un coup de chaleur mortel",
+   "Uniquement en hiver",
+   "Uniquement pour les bureaux",
+   "Inexistant"
+  ],
+  "answer": "A",
+  "explanation": "Le coup de chaleur est une urgence médicale mortelle. Le RSST exige des mesures : hydratation, pauses à l'ombre, acclimatation, surveillance.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « froid extrême » sur un chantier québécois peut causer :",
+  "options": [
+   "Des engelures, l'hypothermie et des accidents (perte de dextérité, surfaces glissantes)",
+   "Uniquement des retards",
+   "Uniquement de l'inconfort",
+   "Aucun risque"
+  ],
+  "answer": "A",
+  "explanation": "Le froid cause des engelures, l'hypothermie et augmente les risques d'accidents (perte de sensation, glissades). Le RSST exige des mesures de protection.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "La « qualité de l'air » sur un chantier (poussières, fumées, vapeurs) est contrôlée par :",
+  "options": [
+   "Uniquement les fenêtres",
+   "Aucune mesure",
+   "La ventilation, l'aspiration à la source, les EPI respiratoires et la surveillance atmosphérique",
+   "Uniquement les masques"
+  ],
+  "answer": "C",
+  "explanation": "La hiérarchie des contrôles : élimination > substitution > ventilation/aspiration > EPI respiratoire. La surveillance mesure les concentrations.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « respirateur » (masque respiratoire) doit être :",
+  "options": [
+   "Porté uniquement en hiver",
+   "Uniquement pour la peinture",
+   "Choisi au hasard",
+   "Ajusté individuellement (fit test), entretenu et adapté au contaminant spécifique"
+  ],
+  "answer": "D",
+  "explanation": "Le respirateur doit être sélectionné selon le contaminant, ajusté (fit test annuel), entretenu et porté correctement pour être efficace.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "La « silice cristalline » (poussière de béton, brique) est :",
+  "options": [
+   "Uniquement une nuisance",
+   "Inoffensive",
+   "Un cancérogène reconnu causant la silicose et le cancer du poumon",
+   "Uniquement un problème esthétique"
+  ],
+  "answer": "C",
+  "explanation": "La silice cristalline (quartz) est classée cancérogène. L'inhalation cause la silicose (fibrose pulmonaire) et le cancer du poumon. Le meulage du béton en génère.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le contrôle de la poussière de silice lors du meulage du béton exige :",
+  "options": [
+   "Aucune mesure",
+   "L'aspiration à la source (outil avec aspirateur HEPA intégré) ou le travail à l'eau",
+   "Uniquement des lunettes",
+   "Uniquement un masque chirurgical"
+  ],
+  "answer": "B",
+  "explanation": "Le RSST exige l'aspiration HEPA intégrée ou le meulage à l'eau pour capter la silice à la source, complété par un EPI respiratoire si nécessaire.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "L'« électricité » sur un chantier présente un risque de :",
+  "options": [
+   "Aucun risque",
+   "Uniquement des courts-circuits",
+   "Électrocution, électrisation, arc électrique et incendie",
+   "Uniquement des pannes"
+  ],
+  "answer": "C",
+  "explanation": "Les risques électriques : contact direct/indirect (électrocution), arc électrique (brûlures), incendie. Le cadenassage et la mise à la terre sont essentiels.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "La « distance d'approche » minimale près de lignes électriques aériennes est :",
+  "options": [
+   "Aucune distance",
+   "10 mètres",
+   "Définie par le RSST selon la tension (ex. : 3 m pour < 125 kV)",
+   "1 mètre"
+  ],
+  "answer": "C",
+  "explanation": "Le RSST fixe des distances minimales selon la tension : 3 m (< 125 kV), 4,5 m (125-250 kV), etc. Aucun travail à l'intérieur sans mesures spéciales.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 5,
+  "question": "La « mise à la terre » (grounding) des équipements électriques sur un chantier :",
+  "options": [
+   "Est optionnelle",
+   "Est obligatoire pour prévenir les électrocutions en cas de défaut d'isolation",
+   "Est uniquement pour les gros équipements",
+   "N'a aucune fonction"
+  ],
+  "answer": "B",
+  "explanation": "La mise à la terre dévie le courant de défaut vers la terre, déclenchant le disjoncteur et protégeant les personnes contre l'électrocution.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « disjoncteur différentiel » (GFCI/DDFT) sur un chantier protège contre :",
+  "options": [
+   "Les pannes de courant",
+   "Les courts-circuits uniquement",
+   "Les fuites de courant vers la terre (électrocution), en coupant le circuit en < 30 ms",
+   "Les surcharges uniquement"
+  ],
+  "answer": "C",
+  "explanation": "Le DDFT détecte la différence de courant entre phase et neutre (fuite vers la terre) et coupe en < 30 ms, prévenant l'électrocution.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Les « équipements de protection individuelle » (EPI) sont :",
+  "options": [
+   "Uniquement pour les visiteurs",
+   "Optionnels",
+   "La première mesure de protection à mettre en place",
+   "La dernière ligne de défense, après l'élimination du risque et les contrôles collectifs"
+  ],
+  "answer": "D",
+  "explanation": "La hiérarchie des contrôles : élimination > substitution > ingénierie > administratif > EPI. Les EPI sont le dernier recours, pas la première solution.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « casque de sécurité » (hard hat) protège contre :",
+  "options": [
+   "Aucun risque",
+   "Uniquement le soleil",
+   "Les impacts d'objets tombants, les chocs et les contacts électriques (selon la classe)",
+   "Uniquement la pluie"
+  ],
+  "answer": "C",
+  "explanation": "Le casque (norme CSA Z94.1) protège contre les chutes d'objets, les chocs latéraux et, selon la classe (E, G, C), les contacts électriques.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Les « chaussures de sécurité » sur un chantier doivent avoir :",
+  "options": [
+   "Aucune exigence",
+   "Uniquement une semelle antidérapante",
+   "Un embout d'acier (ou composite), une semelle anti-perforation et une semelle antidérapante",
+   "Uniquement des lacets"
+  ],
+  "answer": "C",
+  "explanation": "Les chaussures de sécurité (CSA Z195) ont un embout protecteur, une semelle anti-perforation et antidérapante, adaptées aux risques du chantier.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Les « lunettes de sécurité » sont obligatoires pour :",
+  "options": [
+   "Tous les travaux générant des projections : meulage, perçage, découpe, marteau-piqueur",
+   "Uniquement la soudure",
+   "Aucun travail",
+   "Uniquement la peinture"
+  ],
+  "answer": "A",
+  "explanation": "Les lunettes (CSA Z94.3) protègent contre les projections de particules, éclats, poussières. Elles sont requises pour la plupart des travaux manuels.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « gilet de haute visibilité » sur un chantier est requis :",
+  "options": [
+   "Uniquement la nuit",
+   "Quand le travailleur est exposé à la circulation ou aux équipements mobiles",
+   "Jamais",
+   "Uniquement pour les visiteurs"
+  ],
+  "answer": "B",
+  "explanation": "Le gilet haute visibilité (CSA Z96) est obligatoire près de la circulation, des grues, des véhicules de chantier, pour être vu des opérateurs.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "L'« enquête et inspection » de la CNESST sur un chantier peut :",
+  "options": [
+   "N'avoir aucune conséquence",
+   "Uniquement donner des avertissements",
+   "Être refusée par l'employeur",
+   "Résulter en des ordres de correction, des amendes et l'arrêt des travaux"
+  ],
+  "answer": "D",
+  "explanation": "L'inspecteur CNESST peut ordonner des corrections, imposer des amendes, suspendre des travaux et même fermer un chantier en cas de danger grave.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "L'« avis d'accident » à la CNESST doit être transmis :",
+  "options": [
+   "Uniquement si le travailleur le demande",
+   "Dans les 24 heures pour un accident grave ou mortel",
+   "Dans les 30 jours",
+   "Jamais"
+  ],
+  "answer": "B",
+  "explanation": "Un accident grave ou mortel doit être signalé à la CNESST dans les 24 heures. Le chantier est préservé pour l'enquête.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "La « préservation de la scène d'accident » signifie :",
+  "options": [
+   "Ne rien déplacer (sauf pour secourir) jusqu'à l'autorisation de la CNESST",
+   "Nettoyer immédiatement",
+   "Prendre des photos uniquement",
+   "Reprendre le travail"
+  ],
+  "answer": "A",
+  "explanation": "La scène doit être préservée intacte pour l'enquête CNESST. Seuls les gestes de secours sont permis. Déplacer des éléments peut constituer une infraction.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « registre d'accidents et d'incidents » sur un chantier doit :",
+  "options": [
+   "Être détruit après 1 an",
+   "Être gardé secret",
+   "Documenter tous les accidents, incidents et premiers soins, et être accessible",
+   "Contenir uniquement les accidents mortels"
+  ],
+  "answer": "C",
+  "explanation": "Le registre consigne tous les événements : accidents, quasi-accidents, premiers soins. Il sert à l'analyse des tendances et à la prévention.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « quasi-accident » (near miss) est :",
+  "options": [
+   "Un accident mineur",
+   "Un retard de travail",
+   "Un accident grave",
+   "Un événement qui aurait pu causer un accident mais ne l'a pas fait, nécessitant une analyse"
+  ],
+  "answer": "D",
+  "explanation": "Le quasi-accident est un signal d'alarme : les mêmes conditions auraient pu causer un accident. L'analyser prévient les accidents futurs.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "La « hiérarchie des contrôles » en SST place en premier :",
+  "options": [
+   "La signalisation",
+   "Les contrôles administratifs",
+   "L'élimination du danger à la source",
+   "Les EPI"
+  ],
+  "answer": "C",
+  "explanation": "La hiérarchie : 1) Élimination, 2) Substitution, 3) Ingénierie, 4) Administratif, 5) EPI. L'élimination est toujours la mesure prioritaire.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « comité de chantier » (ou comité SST) se réunit :",
+  "options": [
+   "Périodiquement (typiquement mensuel) pour revoir les enjeux de sécurité",
+   "Uniquement après un accident",
+   "Une fois par an",
+   "Jamais"
+  ],
+  "answer": "A",
+  "explanation": "Le comité SST se réunit régulièrement (mensuel) : inspection, analyse d'accidents, révision du programme, suivi des correctifs.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "La « formation SST » des travailleurs sur un chantier est :",
+  "options": [
+   "Uniquement pour les superviseurs",
+   "Uniquement pour les nouveaux",
+   "Obligatoire : accueil sécurité, formation spécifique aux tâches et aux risques",
+   "Optionnelle"
+  ],
+  "answer": "C",
+  "explanation": "Tout travailleur doit recevoir un accueil sécurité (règles du chantier, urgences) et une formation spécifique à ses tâches et aux risques présents.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "L'« accueil sécurité » (safety orientation) d'un nouveau travailleur couvre :",
+  "options": [
+   "Uniquement les salaires",
+   "Les règles du chantier, les procédures d'urgence, les EPI requis, les risques spécifiques",
+   "Uniquement l'horaire",
+   "Aucun contenu"
+  ],
+  "answer": "B",
+  "explanation": "L'accueil sécurité présente : règles, issues de secours, premiers soins, EPI, risques spécifiques, droit de refus, procédures d'urgence.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « plan d'urgence » sur un chantier doit prévoir :",
+  "options": [
+   "Aucun plan",
+   "Uniquement les tremblements de terre",
+   "Uniquement les incendies",
+   "Les évacuations, les premiers soins, les contacts d'urgence, les rassemblements et les exercices"
+  ],
+  "answer": "D",
+  "explanation": "Le plan d'urgence couvre : évacuation, point de rassemblement, premiers soins, contacts (911, CNESST, hôpital), exercices périodiques.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "L'« exercice d'évacuation » sur un chantier doit être :",
+  "options": [
+   "Uniquement pour les grands projets",
+   "Jamais réalisé",
+   "Uniquement une fois",
+   "Réalisé périodiquement pour valider le plan d'urgence et former les travailleurs"
+  ],
+  "answer": "D",
+  "explanation": "Les exercices d'évacuation valident le plan, identifient les lacunes et familiarisent les travailleurs avec les procédures d'urgence.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Les « premiers soins » sur un chantier exigent :",
+  "options": [
+   "Uniquement un médecin",
+   "Aucune trousse",
+   "Une trousse de premiers soins complète, accessible et vérifiée, avec des secouristes formés",
+   "Uniquement un téléphone"
+  ],
+  "answer": "C",
+  "explanation": "Le RSST exige une trousse conforme, vérifiée régulièrement, et un nombre minimal de secouristes certifiés selon l'effectif.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « secouriste » sur un chantier est :",
+  "options": [
+   "Un visiteur",
+   "Un médecin",
+   "Uniquement le contremaître",
+   "Un travailleur formé en secourisme (général + RCR) désigné par l'employeur"
+  ],
+  "answer": "D",
+  "explanation": "Le secouriste est un travailleur formé (secourisme général, RCR, DEA) et désigné. Le nombre requis dépend de l'effectif et des risques.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "La « trousse de premiers soins » sur un chantier doit contenir :",
+  "options": [
+   "Aucun contenu spécifique",
+   "Uniquement de l'alcool",
+   "Uniquement des pansements",
+   "Du matériel conforme au RSST : pansements, compresses, bandages, ciseaux, gants, etc."
+  ],
+  "answer": "D",
+  "explanation": "Le contenu est réglementé par le RSST (annexe) selon l'effectif : pansements, compresses stériles, bandages, ciseaux, gants, couverture, etc.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « DEA » (défibrillateur externe automatisé) sur un chantier :",
+  "options": [
+   "Est recommandé et de plus en plus requis, avec des secouristes formés à son utilisation",
+   "Est uniquement pour les hôpitaux",
+   "N'a aucune utilité",
+   "Est interdit"
+  ],
+  "answer": "A",
+  "explanation": "Le DEA peut sauver une vie en cas d'arrêt cardiaque. De plus en plus de chantiers en sont équipés, avec des secouristes formés.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "La « signalisation de sécurité » sur un chantier utilise des panneaux :",
+  "options": [
+   "Normalisés (CSA Z321) : forme et couleur selon le type de message",
+   "Aléatoires",
+   "Uniquement en anglais",
+   "Uniquement verbaux"
+  ],
+  "answer": "A",
+  "explanation": "Les panneaux sont normalisés : rond rouge (interdiction), triangle jaune (avertissement), rond bleu (obligation), carré vert (secours).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Le « balisage » d'une zone de danger sur un chantier utilise :",
+  "options": [
+   "Uniquement de la peinture",
+   "Uniquement des panneaux",
+   "Des rubans, barrières, clôtures et signaux selon le niveau de risque",
+   "Aucun balisage"
+  ],
+  "answer": "C",
+  "explanation": "Le balisage délimite les zones dangereuses : ruban (avertissement), barrière (accès restreint), clôture (accès interdit), selon le risque.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "Le contrat de construction à forfait (lump sum) engage l'entrepreneur à :",
+  "options": [
+   "Exécuter l'ensemble des travaux décrits pour un prix global fixe",
+   "Être payé selon les coûts réels",
+   "Ne rien garantir",
+   "Fournir uniquement la main-d'œuvre"
+  ],
+  "answer": "A",
+  "explanation": "À forfait, l'entrepreneur s'engage à réaliser tous les travaux du contrat pour un prix global déterminé, assumant le risque de quantité et de prix.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "Le contrat à prix unitaire est préférable quand :",
+  "options": [
+   "Les travaux sont uniquement résidentiels",
+   "Le client veut un prix fixe garanti",
+   "Les quantités sont incertaines ou peuvent varier (ex. : excavation, génie civil)",
+   "Le scope est parfaitement défini"
+  ],
+  "answer": "C",
+  "explanation": "Le prix unitaire est adapté aux quantités incertaines : on paie selon les quantités réelles mesurées, pas selon une estimation forfaitaire.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "Le contrat à coût majoré (cost-plus) transfère le risque de coût :",
+  "options": [
+   "Au client (propriétaire), qui paie les coûts réels plus une rémunération",
+   "À l'architecte",
+   "À l'entrepreneur",
+   "Au sous-traitant"
+  ],
+  "answer": "A",
+  "explanation": "En cost-plus, le propriétaire assume le risque de dépassement : il rembourse les coûts réels et verse un honoraire (fixe ou %).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « clause de modification » (change order) dans un contrat permet :",
+  "options": [
+   "D'ignorer les plans",
+   "De réduire les salaires",
+   "D'annuler le contrat unilatéralement",
+   "De modifier le scope, le prix ou les délais par entente écrite entre les parties"
+  ],
+  "answer": "D",
+  "explanation": "La modification (avenant) ajuste le contrat par écrit : travaux additionnels/omissions, changement de prix, extension de délai. Elle doit être signée.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "Un « ordre de changement » (change order) non signé par le client :",
+  "options": [
+   "Peut ne pas être payable si le contrat exige une autorisation écrite préalable",
+   "Annule le contrat",
+   "Est automatiquement approuvé",
+   "Est toujours valide"
+  ],
+  "answer": "A",
+  "explanation": "La plupart des contrats exigent une autorisation écrite avant les travaux additionnels. Sans signature, l'entrepreneur risque de ne pas être payé.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « pénalité de retard » (liquidated damages) est :",
+  "options": [
+   "Un bonus pour l'entrepreneur",
+   "Une amende criminelle",
+   "Une taxe gouvernementale",
+   "Un montant forfaitaire convenu à l'avance, payable par jour de retard au-delà de la date contractuelle"
+  ],
+  "answer": "D",
+  "explanation": "Les dommages-intérêts liquidés sont un montant quotidien convenu (ex. : 500 $/jour) compensant le client pour le retard, sans avoir à prouver le préjudice.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « clause de force majeure » dans un contrat :",
+  "options": [
+   "Annule toutes les obligations",
+   "Augmente les prix",
+   "Réduit les délais",
+   "Exonère les parties de responsabilité pour des événements imprévisibles et incontrôlables (grève, catastrophe)"
+  ],
+  "answer": "D",
+  "explanation": "La force majeure (événement imprévisible, irrésistible, extérieur) suspend les obligations et les délais sans pénalité pour les parties.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « retenue contractuelle » de 10 % est :",
+  "options": [
+   "Un rabais",
+   "Une taxe",
+   "Un montant retenu sur chaque paiement progressif pour garantir l'achèvement des travaux",
+   "Une pénalité"
+  ],
+  "answer": "C",
+  "explanation": "La retenue de 10 % est prélevée sur chaque paiement et conservée jusqu'à la réception, garantissant la correction des déficiences.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "La libération de la retenue de 10 % a lieu :",
+  "options": [
+   "Uniquement à la fin de la garantie de 5 ans",
+   "À la réception provisoire (partielle) et à la réception définitive (finale), après expiration des délais de réclamation",
+   "Au début du projet",
+   "Jamais"
+  ],
+  "answer": "B",
+  "explanation": "Une partie est libérée à la réception provisoire, le solde après la réception définitive et l'expiration des délais de réclamation (hypothèque légale).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « cautionnement d'exécution » (performance bond) protège :",
+  "options": [
+   "Les ouvriers",
+   "L'entrepreneur",
+   "Le client contre la défaillance de l'entrepreneur, en garantissant l'achèvement des travaux",
+   "Les sous-traitants"
+  ],
+  "answer": "C",
+  "explanation": "Le cautionnement d'exécution (typiquement 50 % du contrat) garantit au client que les travaux seront complétés même en cas de défaut de l'entrepreneur.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « cautionnement de paiement de la main-d'œuvre et des matériaux » protège :",
+  "options": [
+   "Les architectes",
+   "Le client uniquement",
+   "Les ingénieurs",
+   "Les sous-traitants et fournisseurs contre le non-paiement par l'entrepreneur général"
+  ],
+  "answer": "D",
+  "explanation": "Le cautionnement de paiement garantit que les sous-traitants et fournisseurs seront payés, même si l'entrepreneur général fait défaut.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « garantie de soumission » (bid bond) est typiquement de :",
+  "options": [
+   "1 %",
+   "25 %",
+   "5 %",
+   "10 % du montant soumissionné"
+  ],
+  "answer": "D",
+  "explanation": "La garantie de soumission (10 %) assure que le soumissionnaire retenu signera le contrat et fournira les cautionnements requis.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "L'« hypothèque légale de la construction » (art. 2726 C.c.Q.) est :",
+  "options": [
+   "Un contrat de prêt",
+   "Un permis de construire",
+   "Une sûreté grevant l'immeuble au bénéfice des ouvriers, sous-traitants et fournisseurs impayés",
+   "Une assurance"
+  ],
+  "answer": "C",
+  "explanation": "L'hypothèque légale garantit les créances liées aux travaux sur l'immeuble. Elle doit être inscrite dans les 30 jours de la fin des travaux.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "Le délai pour inscrire une hypothèque légale de la construction est de :",
+  "options": [
+   "1 an",
+   "5 ans",
+   "30 jours après la fin des travaux ou la résiliation du contrat",
+   "Aucun délai"
+  ],
+  "answer": "C",
+  "explanation": "L'inscription doit se faire dans les 30 jours de la fin des travaux ou de la résiliation. Passé ce délai, le droit à l'hypothèque est perdu.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "La « quittance » (waiver) dans un contrat de construction est :",
+  "options": [
+   "Une facture",
+   "Un permis",
+   "Un document par lequel une partie renonce à un droit (ex. : lien, réclamation) en échange du paiement",
+   "Un plan"
+  ],
+  "answer": "C",
+  "explanation": "La quittance (release/waiver) confirme le paiement et renonce aux droits de réclamation ou de lien pour les travaux couverts.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « médiation » dans un litige de construction est :",
+  "options": [
+   "Un processus volontaire et confidentiel où un médiateur facilite un accord sans imposer de solution",
+   "Un procès",
+   "Une poursuite criminelle",
+   "Un arbitrage"
+  ],
+  "answer": "A",
+  "explanation": "La médiation est un mode amiable : le médiateur aide les parties à négocier. Elle est souvent une étape préalable obligatoire avant l'arbitrage.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "L'« arbitrage » dans un litige de construction est :",
+  "options": [
+   "Une médiation",
+   "Un processus privé où un arbitre rend une décision liante, souvent prévu au contrat",
+   "Une négociation informelle",
+   "Un procès public"
+  ],
+  "answer": "B",
+  "explanation": "L'arbitrage est un tribunal privé : l'arbitre entend les parties et rend une sentence liante. Il est souvent plus rapide et confidentiel qu'un procès.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « clause compromissoire » dans un contrat de construction :",
+  "options": [
+   "Annule le contrat",
+   "Interdit l'arbitrage",
+   "Fixe les salaires",
+   "Oblige les parties à soumettre leurs litiges à l'arbitrage plutôt qu'aux tribunaux"
+  ],
+  "answer": "D",
+  "explanation": "La clause compromissoire engage les parties à recourir à l'arbitrage pour tout litige découlant du contrat, excluant les tribunaux ordinaires.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « délai de prescription » pour un recours contractuel en construction au Québec est de :",
+  "options": [
+   "30 ans",
+   "3 ans (droit commun) à compter du fait générateur ou de la découverte",
+   "1 an",
+   "10 ans"
+  ],
+  "answer": "B",
+  "explanation": "Le délai de prescription de droit commun est de 3 ans (art. 2925 C.c.Q.). Pour les vices cachés, il court de la découverte du vice.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "La « mise en demeure » dans un litige de construction est :",
+  "options": [
+   "Une facture",
+   "Un permis",
+   "Une notification formelle exigeant l'exécution d'une obligation, préalable à un recours judiciaire",
+   "Un plan"
+  ],
+  "answer": "C",
+  "explanation": "La mise en demeure (art. 1597 C.c.Q.) interpelle le débiteur d'exécuter son obligation. Elle est souvent requise avant d'intenter un recours.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « vice de consentement » (erreur, dol, lésion) peut :",
+  "options": [
+   "Renforcer le contrat",
+   "Entraîner la nullité du contrat si une partie a été trompée ou a erré sur un élément essentiel",
+   "Augmenter le prix",
+   "N'avoir aucun effet"
+  ],
+  "answer": "B",
+  "explanation": "Le vice de consentement (erreur, dol, crainte) peut rendre le contrat annulable si une partie n'aurait pas contracté sans cette erreur ou tromperie.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "La « responsabilité contractuelle » de l'entrepreneur couvre :",
+  "options": [
+   "Les dommages résultant de l'inexécution ou de la mauvaise exécution du contrat",
+   "Uniquement les retards",
+   "Aucune responsabilité",
+   "Uniquement les dommages corporels"
+  ],
+  "answer": "A",
+  "explanation": "L'entrepreneur est responsable des dommages causés par son inexécution : malfaçons, retards, non-conformité, sous réserve des exclusions contractuelles.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « responsabilité extracontractuelle » (délictuelle) peut engager :",
+  "options": [
+   "Tout personne causant un dommage à autrui par sa faute, même sans contrat",
+   "Personne",
+   "Uniquement l'entrepreneur",
+   "Uniquement le client"
+  ],
+  "answer": "A",
+  "explanation": "L'art. 1457 C.c.Q. impose à toute personne de réparer le dommage causé à autrui par sa faute, indépendamment de tout contrat.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « garantie de qualité » (vices cachés) du vendeur/constructeur est :",
+  "options": [
+   "Optionnelle",
+   "Inexistante au Québec",
+   "Uniquement contractuelle",
+   "Légale et automatique : le bien doit être exempt de vices cachés le rendant impropre à l'usage"
+  ],
+  "answer": "D",
+  "explanation": "La garantie de qualité (art. 1726 C.c.Q.) est légale : le vendeur/constructeur garantit que le bien est exempt de vices cachés, même sans clause.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "La « réception des travaux » sans réserve vaut :",
+  "options": [
+   "Annulation du contrat",
+   "Prolongation du contrat",
+   "Acceptation de l'ouvrage, transférant la garde au client et déclenchant les garanties",
+   "Rejet des travaux"
+  ],
+  "answer": "C",
+  "explanation": "La réception (même tacite) transfère la garde au client, déclenche les délais de garantie et libère l'entrepreneur de l'obligation de garde.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "Les « réserves » à la réception (punch list) :",
+  "options": [
+   "Identifient les travaux à corriger sans empêcher la réception, mais maintiennent l'obligation de l'entrepreneur",
+   "Sont sans effet",
+   "Prolongent le contrat indéfiniment",
+   "Annulent la réception"
+  ],
+  "answer": "A",
+  "explanation": "Les réserves listent les déficiences à corriger. La réception a lieu, mais l'entrepreneur reste tenu de corriger les items réservés.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « clause de non-responsabilité » (disclaimer) dans un contrat :",
+  "options": [
+   "Peut être invalide si elle exclut la responsabilité pour faute lourde ou dol",
+   "Est obligatoire",
+   "Est toujours valide",
+   "Annule toutes les obligations"
+  ],
+  "answer": "A",
+  "explanation": "Une clause de non-responsabilité peut être écartée si elle tente d'exclure la responsabilité pour faute lourde, dol ou violation d'une obligation essentielle.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « sous-traitant » est lié contractuellement à :",
+  "options": [
+   "L'entrepreneur général, pas directement au client (sauf exceptions)",
+   "Directement au client (propriétaire)",
+   "La municipalité",
+   "L'architecte"
+  ],
+  "answer": "A",
+  "explanation": "Le sous-traitant contracte avec l'entrepreneur général, pas avec le propriétaire. Le lien de droit est avec l'entrepreneur (sauf contrat direct).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « paiement direct » au sous-traitant par le client est possible :",
+  "options": [
+   "Dans certaines conditions (ex. : défaut de l'entrepreneur, clause contractuelle, hypothèque légale)",
+   "Uniquement pour les projets publics",
+   "Jamais",
+   "Uniquement si le sous-traitant le demande"
+  ],
+  "answer": "A",
+  "explanation": "Le client peut payer directement le sous-traitant en cas de défaut de l'entrepreneur ou si le contrat le prévoit, pour éviter les liens.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "La « solidarité » entre l'entrepreneur général et le sous-traitant envers le client :",
+  "options": [
+   "N'existe que si elle est prévue au contrat ou par la loi",
+   "N'existe jamais",
+   "Est automatique dans tous les cas",
+   "Est interdite"
+  ],
+  "answer": "A",
+  "explanation": "La solidarité ne se présume pas : elle doit être stipulée au contrat ou prévue par la loi. Sans elle, chaque partie n'est tenue que de sa part.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « CCDC 2 » (contrat type canadien) prévoit que les modifications doivent être :",
+  "options": [
+   "Approuvées par la municipalité",
+   "Verbales",
+   "Écrites et autorisées par l'architecte/ingénieur (consultant) au nom du client",
+   "Unilatérales par l'entrepreneur"
+  ],
+  "answer": "C",
+  "explanation": "Le CCDC 2 exige que les modifications soient documentées par écrit et autorisées par le consultant (architecte/ingénieur) agissant pour le client.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "Le rôle de l'« architecte » ou de l'« ingénieur » (consultant) dans un contrat CCDC est :",
+  "options": [
+   "Représenter l'entrepreneur",
+   "Représenter les sous-traitants",
+   "N'avoir aucun rôle",
+   "Agir comme agent du client et interprète impartial du contrat"
+  ],
+  "answer": "D",
+  "explanation": "Le consultant (architecte/ingénieur) agit pour le client : il administre le contrat, interprète les documents, certifie les paiements et juge de la conformité.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « certificat de paiement » émis par le consultant :",
+  "options": [
+   "Atteste que les travaux sont conformes et recommande le paiement au client",
+   "Annule le contrat",
+   "Est une facture de l'entrepreneur",
+   "Est un paiement effectif"
+  ],
+  "answer": "A",
+  "explanation": "Le certificat de paiement est une recommandation du consultant au client de payer un montant, basé sur l'avancement et la conformité des travaux.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « résiliation pour défaut » (termination for cause) permet au client de :",
+  "options": [
+   "Résilier le contrat après mise en demeure et délai de correction, si l'entrepreneur ne remédie pas au défaut",
+   "Résilier uniquement par jugement",
+   "Résilier le contrat sans préavis",
+   "Résilier à tout moment sans raison"
+  ],
+  "answer": "A",
+  "explanation": "La résiliation pour défaut exige une mise en demeure et un délai raisonnable pour corriger. Si l'entrepreneur ne remédie pas, le client peut résilier.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "La « résiliation pour convenance » (termination for convenience) :",
+  "options": [
+   "Est gratuite pour le client",
+   "Permet au client de résilier sans faute de l'entrepreneur, avec indemnisation des travaux exécutés",
+   "Annule tous les paiements",
+   "N'existe pas"
+  ],
+  "answer": "B",
+  "explanation": "La résiliation pour convenance (si prévue au contrat) permet au client d'arrêter le projet sans faute, en payant les travaux faits et les coûts de résiliation.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "Les « dommages-intérêts » en cas de rupture contractuelle visent à :",
+  "options": [
+   "Enrichir la partie lésée",
+   "Compenser la partie lésée pour la perte subie et le gain manqué, sans l'enrichir",
+   "Punir la partie fautive",
+   "Remplacer le contrat"
+  ],
+  "answer": "B",
+  "explanation": "Les dommages-intérêts sont compensatoires : ils replacent la partie lésée dans la position où elle aurait été si le contrat avait été exécuté.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "L'« obligation de mitigation » (minimiser les dommages) impose à la partie lésée de :",
+  "options": [
+   "Poursuivre immédiatement",
+   "Prendre des mesures raisonnables pour limiter l'étendue de son préjudice",
+   "Laisser les dommages s'aggraver",
+   "Ignorer le problème"
+  ],
+  "answer": "B",
+  "explanation": "La partie lésée doit agir raisonnablement pour limiter ses dommages (ex. : trouver un autre entrepreneur). Elle ne peut laisser le préjudice s'aggraver.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "La « clause pénale » (penalty clause) dans un contrat québécois :",
+  "options": [
+   "Fixe à l'avance le montant des dommages-intérêts, mais le tribunal peut la réduire si elle est abusive",
+   "Est obligatoire",
+   "Remplace le contrat",
+   "Est toujours invalide"
+  ],
+  "answer": "A",
+  "explanation": "La clause pénale (art. 1622 C.c.Q.) fixe les dommages à l'avance. Le tribunal peut la réduire si elle est manifestement abusive ou disproportionnée.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « privilège du vendeur » d'équipements sur un chantier :",
+  "options": [
+   "Peut exister si l'équipement n'est pas payé et n'est pas incorporé à l'immeuble",
+   "Est toujours prioritaire",
+   "N'existe pas",
+   "Remplace l'hypothèque"
+  ],
+  "answer": "A",
+  "explanation": "Le vendeur d'équipements non incorporés peut avoir un privilège ou une réserve de propriété. Une fois incorporé, l'équipement devient immeuble.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "La « réserve de propriété » dans un contrat de fourniture :",
+  "options": [
+   "Maintient la propriété au vendeur jusqu'au paiement complet",
+   "Est interdite",
+   "Annule la vente",
+   "Transfère immédiatement la propriété"
+  ],
+  "answer": "A",
+  "explanation": "La réserve de propriété stipule que le vendeur reste propriétaire jusqu'au paiement intégral, protégeant le fournisseur en cas d'insolvabilité de l'acheteur.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "L'« insolvabilité » de l'entrepreneur général affecte les sous-traitants car :",
+  "options": [
+   "Ils risquent de ne pas être payés, d'où l'importance du cautionnement de paiement et de l'hypothèque légale",
+   "Ils sont automatiquement payés",
+   "Ils deviennent propriétaires",
+   "Le contrat est automatiquement transféré"
+  ],
+  "answer": "A",
+  "explanation": "En cas d'insolvabilité, les sous-traitants sont des créanciers non garantis. Le cautionnement de paiement et l'hypothèque légale sont leurs protections.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « Loi sur la faillite et l'insolvabilité » (fédérale) peut :",
+  "options": [
+   "Garantir le paiement de tous",
+   "Annuler tous les contrats",
+   "Suspendre les recours des créanciers et imposer un ordre de priorité des créances",
+   "Éliminer les hypothèques"
+  ],
+  "answer": "C",
+  "explanation": "La faillite suspend les recours individuels (stay) et établit un ordre de distribution. Les créances garanties (hypothèque) ont priorité sur les non garanties.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « nantissement » (sûreté sur les créances) dans la construction :",
+  "options": [
+   "Remplace le cautionnement",
+   "Peut garantir un prêt en cédant les créances (paiements à recevoir) du contrat",
+   "Annule le contrat",
+   "Est interdit"
+  ],
+  "answer": "B",
+  "explanation": "Le nantissement de créances cède les paiements à recevoir à un prêteur comme garantie. Il doit être notifié au client pour être opposable.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "La « cession de contrat » dans la construction :",
+  "options": [
+   "Nécessite généralement le consentement de l'autre partie (intuitu personae)",
+   "Annule les garanties",
+   "Est interdite",
+   "Est toujours libre"
+  ],
+  "answer": "A",
+  "explanation": "Le contrat de construction est souvent intuitu personae (basé sur la personne). La cession à un tiers requiert le consentement de l'autre partie.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « sous-traitance de second niveau » (sous-sous-traitance) est :",
+  "options": [
+   "Automatiquement autorisée",
+   "Sans effet juridique",
+   "Toujours interdite",
+   "Possible mais souvent soumise à l'autorisation de l'entrepreneur général ou du client"
+  ],
+  "answer": "D",
+  "explanation": "La sous-sous-traitance peut être permise mais est souvent conditionnelle à l'approbation. L'entrepreneur général reste responsable envers le client.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « clause de confidentialité » dans un contrat de construction :",
+  "options": [
+   "Est obligatoire par la loi",
+   "Est sans valeur",
+   "Oblige les parties à ne pas divulguer les informations sensibles du projet",
+   "Annule le contrat"
+  ],
+  "answer": "C",
+  "explanation": "La clause de confidentialité protège les informations sensibles : prix, méthodes, données du client. Sa violation peut entraîner des dommages-intérêts.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "La « clause de propriété intellectuelle » dans un contrat de construction :",
+  "options": [
+   "Annule les brevets",
+   "Détermine à qui appartiennent les plans, méthodes et innovations développés",
+   "N'existe jamais",
+   "Est obligatoire"
+  ],
+  "answer": "B",
+  "explanation": "La clause PI attribue la propriété des plans, méthodes, innovations. Sans elle, des litiges peuvent surgir sur la propriété des développements.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « règlement des différends » (dispute resolution) dans un contrat prévoit typiquement :",
+  "options": [
+   "Uniquement la médiation",
+   "Aucun mécanisme",
+   "Une séquence : négociation → médiation → arbitrage (ou tribunaux)",
+   "Uniquement les tribunaux"
+  ],
+  "answer": "C",
+  "explanation": "Les contrats prévoient une escalade : négociation entre les parties, puis médiation, puis arbitrage ou tribunaux, pour résoudre les litiges efficacement.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « clause de loi applicable » dans un contrat de construction québécois :",
+  "options": [
+   "Est obligatoire",
+   "Désigne le droit québécois (ou canadien) comme régissant le contrat",
+   "Est inutile",
+   "Annule le contrat"
+  ],
+  "answer": "B",
+  "explanation": "La clause de loi applicable (governing law) désigne le droit qui régit l'interprétation du contrat. Au Québec, c'est le droit civil québécois.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « tribunal compétent » (jurisdiction) dans un litige de construction au Québec est :",
+  "options": [
+   "La Cour supérieure du Québec (ou la Cour du Québec pour les petits litiges)",
+   "Uniquement l'arbitrage",
+   "Uniquement la Cour fédérale",
+   "Un tribunal étranger"
+  ],
+  "answer": "A",
+  "explanation": "Les litiges de construction relèvent de la Cour supérieure (ou Cour du Québec < 85 000 $), sauf si les parties ont convenu de l'arbitrage.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « prescription extinctive » de 3 ans au Québec signifie que :",
+  "options": [
+   "Le droit d'agir en justice s'éteint 3 ans après le fait générateur ou la connaissance du dommage",
+   "Le projet doit durer 3 ans",
+   "Le contrat expire après 3 ans",
+   "Les garanties durent 3 ans"
+  ],
+  "answer": "A",
+  "explanation": "La prescription extinctive (art. 2925 C.c.Q.) éteint le droit d'action après 3 ans. Agir après ce délai entraîne l'irrecevabilité du recours.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "L'« interruption de la prescription » peut résulter de :",
+  "options": [
+   "L'inaction",
+   "Le temps qui passe",
+   "Le silence",
+   "Une reconnaissance de dette, une mise en demeure ou l'introduction d'un recours"
+  ],
+  "answer": "D",
+  "explanation": "La prescription est interrompue par : reconnaissance du droit, demande en justice, saisie. Le délai recommence à zéro après l'interruption.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « fardeau de la preuve » dans un litige de construction incombe :",
+  "options": [
+   "Au défendeur uniquement",
+   "Au juge",
+   "À la partie qui allègue un fait (demandeur pour la faute, défendeur pour les exceptions)",
+   "À l'expert"
+  ],
+  "answer": "C",
+  "explanation": "Le fardeau de la preuve suit la règle « actori incumbit probatio » : celui qui allègue doit prouver. Le demandeur prouve la faute, le défendeur ses défenses.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "L'« expertise judiciaire » dans un litige de construction :",
+  "options": [
+   "Est obligatoire dans tous les cas",
+   "Permet au tribunal de nommer un expert neutre pour éclairer des questions techniques",
+   "Est interdite",
+   "Remplace le juge"
+  ],
+  "answer": "B",
+  "explanation": "Le tribunal peut nommer un expert (ingénieur, architecte) pour donner un avis technique neutre sur les malfaçons, les coûts ou les causes.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « recours collectif » (class action) en construction :",
+  "options": [
+   "Est interdit",
+   "Remplace l'arbitrage",
+   "Est possible pour un groupe de propriétaires affectés par un vice commun (ex. : condos)",
+   "Est obligatoire"
+  ],
+  "answer": "C",
+  "explanation": "Le recours collectif permet à un groupe (ex. : copropriétaires) de poursuivre collectivement pour un préjudice commun, comme des vices de construction.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « transaction » (settlement) dans un litige de construction :",
+  "options": [
+   "Un accord entre les parties mettant fin au litige, avec concessions mutuelles",
+   "Annule le contrat",
+   "Est un jugement",
+   "Est imposée par le juge"
+  ],
+  "answer": "A",
+  "explanation": "La transaction (art. 2631 C.c.Q.) est un contrat par lequel les parties règlent leur litige par des concessions réciproques. Elle a l'autorité de la chose jugée.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "La « clause de renonciation » (waiver clause) dans un contrat :",
+  "options": [
+   "Annule le contrat",
+   "Oblige à renoncer à tous les droits",
+   "Précise que le fait de ne pas exercer un droit ne constitue pas une renonciation à l'exercer plus tard",
+   "Est illégale"
+  ],
+  "answer": "C",
+  "explanation": "La clause de non-renonciation protège les parties : tolérer un manquement une fois ne signifie pas renoncer à ses droits pour l'avenir.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "Le « contrat d'adhésion » dans la construction (ex. : conditions générales imposées) :",
+  "options": [
+   "N'a aucune valeur",
+   "Est toujours invalide",
+   "Est interprété contre la partie qui l'a rédigé (règle contra proferentem)",
+   "Est obligatoire"
+  ],
+  "answer": "C",
+  "explanation": "Le contrat d'adhésion (conditions imposées sans négociation) s'interprète contre son rédacteur en cas d'ambiguïté, protégeant la partie faible.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "La « bonne foi » (art. 6, 7, 1375 C.c.Q.) dans l'exécution d'un contrat de construction exige :",
+  "options": [
+   "Un comportement loyal, honnête et coopératif entre les parties",
+   "Uniquement le respect du texte",
+   "D'ignorer l'autre partie",
+   "De maximiser son profit"
+  ],
+  "answer": "A",
+  "explanation": "La bonne foi est un principe fondamental du droit québécois : les parties doivent agir avec loyauté, honnêteté et coopération dans l'exécution du contrat.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "L'« abus de droit » dans l'exercice d'un droit contractuel peut :",
+  "options": [
+   "Engager la responsabilité de son auteur si l'exercice est excessif, déraisonnable ou de mauvaise foi",
+   "Renforcer le droit",
+   "Être sans conséquence",
+   "Annuler le contrat"
+  ],
+  "answer": "A",
+  "explanation": "L'abus de droit (art. 7 C.c.Q.) sanctionne l'exercice excessif ou déraisonnable d'un droit, même légitime, causant un préjudice à autrui.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "La « théorie de l'imprévision » en droit québécois des contrats :",
+  "options": [
+   "Permet toujours de renégocier le prix",
+   "Annule tous les contrats",
+   "Est obligatoire",
+   "N'est généralement pas reconnue : le contrat lie les parties même si les circonstances changent"
+  ],
+  "answer": "D",
+  "explanation": "Le droit québécois est réticent à l'imprévision : le contrat fait loi entre les parties. Les changements de circonstances ne libèrent pas automatiquement.",
+  "difficulty": "HARD"
+ }
+]

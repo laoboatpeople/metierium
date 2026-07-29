@@ -311,7 +311,7 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
     const needsReview = chapterPerformance.filter((c) => c.total >= 3 && c.percentage < 60);
 
     // ── Tutor activity ─────────────────────────────────────────
-    const [chatSessionCount, chatMessageCount, lastChat] = await Promise.all([
+    const [chatSessionCount, chatMessageCount, lastChat, chatSessions] = await Promise.all([
       prisma.chatSession.count({ where: { userId: id } }),
       prisma.chatMessage.count({
         where: { session: { userId: id } },
@@ -320,6 +320,17 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
         where: { userId: id },
         orderBy: { updatedAt: 'desc' },
         select: { updatedAt: true, topic: true },
+      }),
+      prisma.chatSession.findMany({
+        where: { userId: id },
+        orderBy: { updatedAt: 'desc' },
+        take: 15,
+        select: {
+          id: true,
+          topic: true,
+          updatedAt: true,
+          _count: { select: { messages: true } },
+        },
       }),
     ]);
 
@@ -363,6 +374,12 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
         lastActivityAt: lastChat?.updatedAt ?? null,
         lastTopic: lastChat?.topic ?? null,
       },
+      chatSessions: chatSessions.map((s) => ({
+        id: s.id,
+        topic: s.topic,
+        updatedAt: s.updatedAt.toISOString(),
+        messageCount: s._count.messages,
+      })),
       recentActivity,
       stats: {
         totalSubscriptions: user.subscription.length,

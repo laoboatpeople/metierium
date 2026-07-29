@@ -367,4 +367,50 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
   }
 });
 
+/**
+ * GET /api/admin/analytics/active-today
+ * Last 10 users active today (exams or tutor chats since midnight).
+ */
+router.get('/active-today', async (_req: Request, res: Response): Promise<void> => {
+  try {
+    const midnight = new Date(new Date().setHours(0, 0, 0, 0)).toISOString();
+
+    const rows = await prisma.$queryRawUnsafe<
+      Array<{ id: string; name: string | null; email: string; lastActive: Date; activity: string }>
+    >(
+      `SELECT u.id, u.name, u.email,
+              MAX(a.last_active) AS "lastActive",
+              MAX(a.activity)    AS activity
+       FROM (
+         SELECT "userId" AS uid, MAX("completedAt") AS last_active, 'exam' AS activity
+         FROM "ExamAttempt" WHERE "completedAt" >= $1::timestamp
+         GROUP BY "userId"
+         UNION ALL
+         SELECT s."userId" AS uid, MAX(m."createdAt") AS last_active, 'chat' AS activity
+         FROM "ChatMessage" m JOIN "ChatSession" s ON m."sessionId" = s.id
+         WHERE m."createdAt" >= $1::timestamp
+         GROUP BY s."userId"
+       ) a
+       JOIN "User" u ON u.id = a.uid
+       GROUP BY u.id, u.name, u.email
+       ORDER BY "lastActive" DESC
+       LIMIT 10`,
+      midnight
+    ).catch(() => []);
+
+    res.json({
+      data: rows.map((r) => ({
+        id: r.id,
+        name: r.name,
+        email: r.email,
+        activity: r.activity,
+        lastActive: new Date(r.lastActive).toISOString(),
+      })),
+    });
+  } catch (err) {
+    console.error('[Analytics] Active-today error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 export default router;

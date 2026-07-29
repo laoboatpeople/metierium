@@ -31,6 +31,8 @@ import {
   Brain,
   AlertTriangle,
   CheckCircle,
+  X,
+  ChevronRight,
 } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -133,6 +135,12 @@ interface UserDetail {
     lastActivityAt: string | null;
     lastTopic: string | null;
   };
+  chatSessions: {
+    id: string;
+    topic: string | null;
+    updatedAt: string;
+    messageCount: number;
+  }[];
   recentActivity: {
     id: string;
     action: string;
@@ -246,6 +254,28 @@ export default function UserDetailPage() {
   const [user, setUser] = useState<UserDetail | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
+
+  // ── Tutor chat viewer modal ──
+  const [selectedChat, setSelectedChat] = useState<{
+    id: string;
+    topic: string | null;
+    user: { id: string; name: string | null; email: string } | null;
+    messages: { id: string; role: string; content: string; createdAt: string }[];
+  } | null>(null);
+  const [chatLoading, setChatLoading] = useState(false);
+
+  const openChat = useCallback(async (id: string) => {
+    setChatLoading(true);
+    setSelectedChat({ id, topic: null, user: null, messages: [] });
+    try {
+      const json = await authApi(`/api/admin/chat-sessions/${id}`);
+      setSelectedChat(json);
+    } catch {
+      setSelectedChat(null);
+    } finally {
+      setChatLoading(false);
+    }
+  }, []);
 
   const fetchUser = useCallback(async () => {
     try {
@@ -790,33 +820,48 @@ export default function UserDetailPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Tutor */}
             <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl overflow-hidden">
-              <div className="px-5 py-3 border-b border-[#2D3A52] flex items-center gap-2">
-                <Bot size={14} className="text-[#8B5CF6]" />
-                <h3 className="text-sm font-semibold text-[#F8FAFC]">
-                  {locale === 'fr' ? 'Tuteur IA' : 'AI Tutor'}
-                </h3>
+              <div className="px-5 py-3 border-b border-[#2D3A52] flex items-center justify-between">
+                <div className="flex items-center gap-2">
+                  <Bot size={14} className="text-[#8B5CF6]" />
+                  <h3 className="text-sm font-semibold text-[#F8FAFC]">
+                    {locale === 'fr' ? 'Tuteur IA' : 'AI Tutor'}
+                  </h3>
+                </div>
+                <span className="text-[10px] text-[#64748B]">
+                  {user.tutorStats.sessions} {locale === 'fr' ? 'sessions' : 'sessions'} · {user.tutorStats.messages} {locale === 'fr' ? 'messages' : 'messages'}
+                </span>
               </div>
-              <div className="p-5 space-y-3">
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[#64748B]">{locale === 'fr' ? 'Sessions' : 'Sessions'}</span>
-                  <span className="text-sm font-medium text-[#F8FAFC]">{user.tutorStats.sessions}</span>
+              {user.chatSessions.length > 0 ? (
+                <div className="p-2 max-h-64 overflow-y-auto">
+                  {user.chatSessions.map((s) => (
+                    <button
+                      key={s.id}
+                      onClick={() => openChat(s.id)}
+                      className="group w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#0F1525] transition-colors text-left"
+                    >
+                      <div className="w-8 h-8 rounded-lg bg-[#8B5CF6]/15 border border-[#8B5CF6]/20 flex items-center justify-center flex-shrink-0">
+                        <MessageSquare size={13} className="text-[#8B5CF6]" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <p className="text-xs font-medium text-[#F8FAFC] truncate group-hover:text-[#8B5CF6] transition-colors">
+                          {s.topic || (locale === 'fr' ? 'Sans sujet' : 'No topic')}
+                        </p>
+                        <p className="text-[10px] text-[#64748B]">
+                          {s.messageCount} {locale === 'fr' ? 'messages' : 'messages'} · {formatRelativeTime(s.updatedAt)}
+                        </p>
+                      </div>
+                      <ChevronRight size={14} className="text-[#64748B] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200 flex-shrink-0" />
+                    </button>
+                  ))}
                 </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[#64748B]">{locale === 'fr' ? 'Messages' : 'Messages'}</span>
-                  <span className="text-sm font-medium text-[#F8FAFC]">{user.tutorStats.messages}</span>
-                </div>
-                <div className="flex items-center justify-between">
-                  <span className="text-xs text-[#64748B]">{locale === 'fr' ? 'Dernière activité' : 'Last activity'}</span>
-                  <span className="text-sm font-medium text-[#F8FAFC]">
-                    {user.tutorStats.lastActivityAt ? formatRelativeTime(user.tutorStats.lastActivityAt) : '—'}
-                  </span>
-                </div>
-                {user.tutorStats.lastTopic && (
-                  <p className="text-[11px] text-[#64748B] pt-1 border-t border-[#2D3A52] line-clamp-2">
-                    💬 {user.tutorStats.lastTopic}
+              ) : (
+                <div className="flex flex-col items-center justify-center py-10">
+                  <Bot size={20} className="text-[#64748B] mb-2" />
+                  <p className="text-xs text-[#64748B]">
+                    {locale === 'fr' ? 'Aucune conversation' : 'No conversations'}
                   </p>
-                )}
-              </div>
+                </div>
+              )}
             </div>
 
             {/* Recent activity log */}
@@ -1061,6 +1106,74 @@ export default function UserDetailPage() {
           </div>
         </div>
       </div>
+
+      {/* ── Tutor conversation viewer modal ─────────────────────── */}
+      {selectedChat && (
+        <div
+          className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setSelectedChat(null)}
+        >
+          <div
+            className="bg-[#1A2035] border border-[#2D3A52] rounded-xl w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="px-5 py-4 border-b border-[#2D3A52] flex items-center justify-between flex-shrink-0">
+              <div className="min-w-0">
+                <h3 className="text-sm font-semibold text-[#F8FAFC] truncate">
+                  {selectedChat.topic || (locale === 'fr' ? 'Conversation tuteur' : 'Tutor conversation')}
+                </h3>
+                <p className="text-[11px] text-[#64748B] truncate">
+                  {selectedChat.user?.name || selectedChat.user?.email || (locale === 'fr' ? 'Utilisateur' : 'User')}
+                  {' · '}
+                  {selectedChat.messages.length} {locale === 'fr' ? 'messages' : 'messages'}
+                </p>
+              </div>
+              <button
+                onClick={() => setSelectedChat(null)}
+                className="p-1.5 rounded-lg hover:bg-[#0F1525] text-[#94A3B8] hover:text-[#F8FAFC] transition-colors flex-shrink-0"
+              >
+                <X size={16} />
+              </button>
+            </div>
+
+            {/* Messages */}
+            <div className="flex-1 overflow-y-auto p-5 space-y-4">
+              {chatLoading ? (
+                <div className="flex items-center justify-center py-16">
+                  <Loader2 size={20} className="animate-spin text-[#8B5CF6]" />
+                </div>
+              ) : (
+                selectedChat.messages.map((msg) => {
+                  const isUser = msg.role === 'user';
+                  return (
+                    <div key={msg.id} className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}>
+                      <div
+                        className={`max-w-[85%] rounded-xl px-4 py-2.5 ${
+                          isUser
+                            ? 'bg-[#3B82F6] text-white rounded-br-sm'
+                            : 'bg-[#0F1525] border border-[#2D3A52] text-[#E2E8F0] rounded-bl-sm'
+                        }`}
+                      >
+                        <p className="text-[10px] font-semibold uppercase tracking-wider mb-1 opacity-60">
+                          {isUser
+                            ? selectedChat.user?.name || selectedChat.user?.email || (locale === 'fr' ? 'Étudiant' : 'Student')
+                            : locale === 'fr' ? 'Tuteur IA' : 'AI Tutor'}
+                          {' · '}
+                          {new Date(msg.createdAt).toLocaleString(locale === 'fr' ? 'fr-CA' : 'en-CA', {
+                            month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit',
+                          })}
+                        </p>
+                        <p className="text-sm whitespace-pre-wrap leading-relaxed">{msg.content}</p>
+                      </div>
+                    </div>
+                  );
+                })
+              )}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

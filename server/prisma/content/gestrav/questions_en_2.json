@@ -1,0 +1,1692 @@
+[
+ {
+  "chapter": 3,
+  "question": "The main role of the CCQ (Commission de la construction du Québec) is to:",
+  "options": [
+   "Approve construction plans",
+   "Manage municipal permits",
+   "Administer the labour relations regime and collective agreements for the construction industry",
+   "Issue contractor licences"
+  ],
+  "answer": "C",
+  "explanation": "The CCQ administers collective agreements, pension funds, training, and competency certificates in the Quebec construction industry.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "The CCQ competency certificate is:",
+  "options": [
+   "A contractor licence",
+   "A university diploma",
+   "A mandatory document required to work on a construction site in Quebec",
+   "A driver's licence"
+  ],
+  "answer": "C",
+  "explanation": "Every construction worker must hold a valid CCQ competency certificate to work on a site governed by Act R-20.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Act R-20 (Act respecting labour relations, vocational training, and workforce management in the construction industry) applies to:",
+  "options": [
+   "Residential projects only",
+   "All construction work in Quebec, with certain exemptions",
+   "Government projects only",
+   "Projects over $1 million only"
+  ],
+  "answer": "B",
+  "explanation": "Act R-20 governs the entire construction industry in Quebec. Certain exemptions exist (maintenance, minor work, owner-built homes).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The four sectors of the construction industry in Quebec are:",
+  "options": [
+   "North, south, east, west",
+   "Light residential, heavy residential, commercial/institutional, industrial, civil engineering and roadwork",
+   "Public, private, mixed, international",
+   "Residential, commercial, industrial, civil engineering"
+  ],
+  "answer": "B",
+  "explanation": "The CCQ divides the industry into sectors: light residential, heavy residential, commercial/institutional, industrial, civil engineering and roadwork, each with its own collective agreement.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The apprentice-to-journeyman ratio on a construction site is:",
+  "options": [
+   "Unlimited",
+   "Determined by the collective agreement (typically 1 apprentice per journeyman)",
+   "Determined by the client",
+   "Always 3 apprentices per journeyman"
+  ],
+  "answer": "B",
+  "explanation": "CCQ collective agreements limit the apprentice/journeyman ratio to ensure adequate training and quality of work.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Hiring construction workers in Quebec is done through:",
+  "options": [
+   "Union dispatch (placement office) or direct hiring, depending on the collective agreement",
+   "Placement agencies only",
+   "Classified ads only",
+   "The federal government"
+  ],
+  "answer": "A",
+  "explanation": "Depending on the sector and the agreement, hiring may be done through the union placement office or directly by the employer, with priority given to local workers.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Overtime on a construction site is generally paid at:",
+  "options": [
+   "Double time from the first hour",
+   "Time and a half (1.5×) for the first hours, then double time (2×)",
+   "No premium",
+   "Regular rate"
+  ],
+  "answer": "B",
+  "explanation": "CCQ agreements typically provide 1.5× after 8 hours/day or 40 hours/week, and 2× beyond that, with variations by sector.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Subcontracting in construction consists of:",
+  "options": [
+   "Renting equipment",
+   "Buying materials in bulk",
+   "Hiring employees directly",
+   "Entrusting a portion of the work to a specialized company (subcontractor)"
+  ],
+  "answer": "D",
+  "explanation": "A subcontractor is a company engaged by the general contractor to perform a specialized scope of work (electrical, plumbing, etc.).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "The general contractor is responsible to the client for:",
+  "options": [
+   "No work, everything is subcontracted",
+   "All work, including that of subcontractors",
+   "Only its own work",
+   "Coordination only"
+  ],
+  "answer": "B",
+  "explanation": "The general contractor assumes overall contractual responsibility. Subcontractor failures are the general contractor's responsibility toward the client.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Coordination between subcontractors on a construction site is the responsibility of:",
+  "options": [
+   "The general contractor or the project manager",
+   "Each subcontractor individually",
+   "The architect",
+   "The client"
+  ],
+  "answer": "A",
+  "explanation": "The general contractor (or its representative) coordinates sequences, access, and interfaces between the various subcontractors.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'union' in the Quebec construction industry represents:",
+  "options": [
+   "Workers (employees) for negotiating working conditions",
+   "Contractors",
+   "Clients",
+   "Material suppliers"
+  ],
+  "answer": "A",
+  "explanation": "Unions (FTQ-Construction, CSN, CSD, etc.) represent workers and negotiate collective agreements with employer associations.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "The construction collective agreement in Quebec determines:",
+  "options": [
+   "Wages, benefits, working conditions, hours, leave, and hiring rules",
+   "Working hours only",
+   "Leave only",
+   "Wages only"
+  ],
+  "answer": "A",
+  "explanation": "The collective agreement is a comprehensive contract covering all aspects of working conditions: wages, benefits, schedules, mobility, etc.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'labour pool' in construction refers to:",
+  "options": [
+   "A swimming pool on the site",
+   "The labour budget",
+   "The number of subcontractors",
+   "The number of available and qualified workers in a region"
+  ],
+  "answer": "D",
+  "explanation": "The labour pool is the pool of certified workers available in a region, influencing planning and costs.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Labour productivity is measured by:",
+  "options": [
+   "The output/input ratio (e.g., m² installed per worker-hour)",
+   "The number of employees",
+   "The hourly wage",
+   "The number of hours worked"
+  ],
+  "answer": "A",
+  "explanation": "Productivity = quantity produced / hours worked. It varies depending on site conditions, skill level, and coordination.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "A factor that reduces productivity on a construction site is:",
+  "options": [
+   "A regular supply of materials",
+   "Prolonged overtime (cumulative fatigue)",
+   "Clear and complete drawings",
+   "Good coordination"
+  ],
+  "answer": "B",
+  "explanation": "Prolonged overtime causes fatigue, reducing marginal productivity. Studies show a significant decline after 50 hours/week.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "A typical construction 'crew' is composed of:",
+  "options": [
+   "Apprentices only",
+   "Engineers and architects",
+   "A journeyman and one or more apprentices/helpers, depending on the trade and the agreement",
+   "Journeymen only"
+  ],
+  "answer": "C",
+  "explanation": "The standard crew follows the agreement ratios: e.g., 1 journeyman + 1 apprentice, or 1 journeyman + 2 labourers, depending on the trade.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Union dispatch works by:",
+  "options": [
+   "Drawing lots",
+   "Wage bidding",
+   "Random selection of workers",
+   "A priority list based on seniority and availability"
+  ],
+  "answer": "D",
+  "explanation": "The union placement office assigns workers according to a priority list (seniority, availability, skills) and the employer's needs.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "'Labour mobility' in construction means:",
+  "options": [
+   "That wages are mobile",
+   "That workers move between sites and regions according to needs",
+   "That workers change trades",
+   "That construction sites move"
+  ],
+  "answer": "B",
+  "explanation": "Mobility is essential in construction: workers follow projects, moving between sites and sometimes between regions.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "The travel allowance is paid when:",
+  "options": [
+   "The site is located beyond a certain distance from the worker's home or the union office",
+   "The worker takes a vacation",
+   "The project is cancelled",
+   "The worker is late"
+  ],
+  "answer": "A",
+  "explanation": "Collective agreements provide travel allowances when the site is remote, covering transportation and sometimes accommodation.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'T-4' and 'Relevé 1' are documents related to:",
+  "options": [
+   "Taxation and workers' income tax returns",
+   "Construction permits",
+   "Quality of work",
+   "Site planning"
+  ],
+  "answer": "A",
+  "explanation": "The T-4 (federal) and Relevé 1 (Quebec) are tax slips issued by the employer, reporting the worker's income and deductions.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Employer payroll charges in construction include:",
+  "options": [
+   "The wage only",
+   "No additional charges",
+   "QPP, QPIP, employment insurance, CNESST, CCQ pension fund contributions, and benefits",
+   "Taxes only"
+  ],
+  "answer": "C",
+  "explanation": "The true labour cost includes employer charges: QPP, EI, QPIP, CNESST, CCQ funds, insurance, vacation, and leave — typically 35–45% of the wage.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "A 'labour burden' of 40% on a wage of $40/h results in a true cost of:",
+  "options": [
+   "$80/h",
+   "$56/h",
+   "$40/h",
+   "$24/h"
+  ],
+  "answer": "B",
+  "explanation": "$40 × 1.40 = $56/h. The labour burden adds employer charges to the base wage to obtain the true labour cost.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'reserve clause' in a collective agreement allows:",
+  "options": [
+   "The employer to retain certain key workers between projects",
+   "Reserving materials",
+   "Reserving the site",
+   "Cancelling the agreement"
+  ],
+  "answer": "A",
+  "explanation": "The reserve clause (or recall list) allows the employer to retain essential workers to ensure continuity between projects.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'decree of a collective agreement' in construction is:",
+  "options": [
+   "A government act making the agreement mandatory for all employers and workers in the sector",
+   "A union recommendation",
+   "A non-binding suggestion",
+   "An individual contract"
+  ],
+  "answer": "A",
+  "explanation": "The decree makes the collective agreement mandatory for the entire industry in the designated sector and region, even for non-unionized workers.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "Mandatory 'continuing education' in Quebec construction is:",
+  "options": [
+   "Optional and without consequences",
+   "For engineers only",
+   "For apprentices only",
+   "Required by the CCQ to maintain the competency certificate (150 hours/3 years)"
+  ],
+  "answer": "D",
+  "explanation": "The CCQ requires continuing education hours for competency certificate renewal, ensuring skills are maintained.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The CCQ 'apprenticeship logbook' is used to:",
+  "options": [
+   "Calculate taxes",
+   "Document the apprentice's work hours and acquired skills",
+   "Record absences",
+   "Note meal breaks"
+  ],
+  "answer": "B",
+  "explanation": "The apprenticeship logbook records hours worked and skills developed, leading to the journeyman certificate.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "A 'lockout' in the construction industry is:",
+  "options": [
+   "A work stoppage initiated by the employer during a bargaining dispute",
+   "An equipment breakdown",
+   "A workers' strike",
+   "A delivery delay"
+  ],
+  "answer": "A",
+  "explanation": "A lockout is the temporary closure of the site by the employer in response to a labour dispute, parallel to the workers' right to strike.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "A 'strike' in construction is:",
+  "options": [
+   "An individual delay",
+   "Always illegal",
+   "Prohibited at all times",
+   "A concerted work stoppage by workers, governed by the Labour Code"
+  ],
+  "answer": "D",
+  "explanation": "The right to strike is a constitutional right governed by the Labour Code. In construction, special provisions (Act R-20) may limit its exercise.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'wage rate' in a collective agreement varies according to:",
+  "options": [
+   "Trade, sector, region, and status (apprentice/journeyman)",
+   "Project size only",
+   "The employer's name",
+   "The worker's age only"
+  ],
+  "answer": "A",
+  "explanation": "Rates are negotiated by trade, sector (residential, commercial, etc.), administrative region, and qualification level.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'assignment' of a worker on a construction site means:",
+  "options": [
+   "Their transfer to another employer",
+   "Their assignment to a specific site, trade, and crew",
+   "Their dismissal",
+   "Their promotion"
+  ],
+  "answer": "B",
+  "explanation": "An assignment is the official designation of a worker to a project, determining their location, crew, and working conditions.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Paid 'travel time' in construction applies when:",
+  "options": [
+   "The worker travels for vacation",
+   "Travel to a remote site exceeds a threshold defined by the collective agreement",
+   "The site is in the city",
+   "The worker is in training"
+  ],
+  "answer": "B",
+  "explanation": "Collective agreements provide compensation for travel time beyond a certain radius (e.g., 50 km) from the assembly point.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The standard 'work week' in Quebec construction is:",
+  "options": [
+   "50 hours",
+   "35 hours",
+   "40 hours (8 h/day, 5 days)",
+   "45 hours"
+  ],
+  "answer": "C",
+  "explanation": "The standard week is 40 hours (8 h × 5 days). Hours beyond that are overtime, paid at a premium per the agreement.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "A planned 'site shutdown' is:",
+  "options": [
+   "A scheduled stoppage period (e.g., construction holidays, statutory holidays)",
+   "A mass layoff",
+   "A wildcat strike",
+   "An unplanned stoppage due to weather"
+  ],
+  "answer": "A",
+  "explanation": "Planned shutdowns (2 weeks in summer, 2 weeks in winter, holidays) are provided for in the agreements and integrated into planning.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'construction holidays' in Quebec typically take place:",
+  "options": [
+   "In March and October",
+   "The last two weeks of July and the first two weeks of January",
+   "In December",
+   "There are no fixed holidays"
+  ],
+  "answer": "B",
+  "explanation": "The Quebec construction industry typically shuts down for 2 weeks in late July and 2 weeks in late December/early January (CCQ holidays).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "'Psychological harassment' on a construction site is:",
+  "options": [
+   "Acceptable if it is a joke",
+   "Prohibited by the Act respecting labour standards and the OHS Act, with a prevention obligation",
+   "Without recourse for the victim",
+   "A civil matter only"
+  ],
+  "answer": "B",
+  "explanation": "The ALS and the OHS Act prohibit psychological harassment. The employer must prevent and address complaints. The CNESST may intervene.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "'Diversity' on Quebec construction sites is:",
+  "options": [
+   "Prohibited",
+   "Only a matter of quotas",
+   "Encouraged through equal access programs and hiring targets",
+   "Of no importance"
+  ],
+  "answer": "C",
+  "explanation": "Programs (e.g., the Equal Access Program) aim to increase the representation of women, minorities, and Indigenous peoples in construction.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "'Mentoring' on a construction site consists of:",
+  "options": [
+   "An experienced journeyman guiding and training an apprentice in performing the work",
+   "Ignoring new workers",
+   "Delegating all tasks to the apprentice",
+   "Punishing apprentices"
+  ],
+  "answer": "A",
+  "explanation": "Mentoring is essential to training: the journeyman passes on know-how, supervises, and evaluates the apprentice's progress.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'absenteeism rate' on a construction site directly affects:",
+  "options": [
+   "No aspect of the project",
+   "Morale only",
+   "Wages only",
+   "Productivity, schedule, and project costs"
+  ],
+  "answer": "D",
+  "explanation": "Absenteeism reduces the available workforce, delays activities, and increases costs (replacements, overtime).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "'Labour retention' in construction is a challenge because:",
+  "options": [
+   "Wages are too high",
+   "There are too many workers",
+   "There is no training",
+   "The industry is cyclical, projects are temporary, and competition for skilled workers is intense"
+  ],
+  "answer": "D",
+  "explanation": "Construction is cyclical (seasons, projects), workers frequently change employers, and the shortage of skilled labour intensifies competition.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "A 'subcontract' should ideally specify:",
+  "options": [
+   "The scope of work, deadlines, quality standards, insurance, retainage, and payment terms",
+   "The subcontractor's name only",
+   "The price only",
+   "The deadlines only"
+  ],
+  "answer": "A",
+  "explanation": "A comprehensive subcontract defines the scope, deadlines, standards, insurance, warranties, and payment conditions.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'retainage' on payments to the subcontractor is typically:",
+  "options": [
+   "10%",
+   "1%",
+   "5%",
+   "25%"
+  ],
+  "answer": "A",
+  "explanation": "A 10% retainage is the standard, deducted from each progress payment and released after substantial completion and expiry of claim deadlines.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'construction lien' protects:",
+  "options": [
+   "The general contractor only",
+   "Architects only",
+   "Subcontractors and suppliers by securing their payment against the building",
+   "The client only"
+  ],
+  "answer": "C",
+  "explanation": "The legal construction hypothec (art. 2726 C.C.Q.) allows unpaid subcontractors and suppliers to encumber the building to secure their claim.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "The deadline to register a construction lien in Quebec is:",
+  "options": [
+   "30 days after completion of the work or termination of the contract",
+   "5 years",
+   "No deadline",
+   "1 year"
+  ],
+  "answer": "A",
+  "explanation": "The lien must be registered within 30 days of completion of the work or termination of the contract. After this deadline, the right is lost.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "A 'lien waiver' is a document by which:",
+  "options": [
+   "The union authorizes a strike",
+   "The subcontractor waives its lien right in exchange for payment",
+   "The general contractor resigns",
+   "The client cancels the contract"
+  ],
+  "answer": "B",
+  "explanation": "A lien waiver is signed by the subcontractor/supplier confirming payment and waiving any lien rights for the work covered.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "'Progress payment' to the subcontractor is based on:",
+  "options": [
+   "Verified work progress, less retainage",
+   "The cost of materials only",
+   "Full payment at the end of the project",
+   "The number of employees present"
+  ],
+  "answer": "A",
+  "explanation": "Progress payments are calculated based on the verified percentage of completion, with deduction of the 10% retainage and previous amounts.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "'Health and safety coordination' between subcontractors is:",
+  "options": [
+   "Optional",
+   "The responsibility of each subcontractor only",
+   "An obligation of the general contractor, who must ensure a safe site for everyone",
+   "The responsibility of the client only"
+  ],
+  "answer": "C",
+  "explanation": "The general contractor has a legal obligation (OHS Act) to coordinate OHS on the site and ensure that all subcontractors comply with standards.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "A project's 'manpower plan' details:",
+  "options": [
+   "Subcontracts",
+   "Technical specifications",
+   "Material costs",
+   "Worker requirements by trade and by period, based on the schedule"
+  ],
+  "answer": "D",
+  "explanation": "The manpower plan translates the schedule into labour requirements: how many journeymen/apprentices per trade, for each week of the project.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'peak manpower' on a construction site typically occurs:",
+  "options": [
+   "At the end of the project",
+   "There is never a peak",
+   "At the beginning of the project",
+   "In the middle of the project, when several trades are working simultaneously"
+  ],
+  "answer": "D",
+  "explanation": "The peak occurs when trades overlap (structure + mechanical + electrical), requiring maximum coordination and resources.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "A project's 'manpower curve' typically has a:",
+  "options": [
+   "Linear shape",
+   "Exponential shape",
+   "Constant shape",
+   "Bell shape: gradual ramp-up, peak in the middle, decline toward the end"
+  ],
+  "answer": "D",
+  "explanation": "The manpower curve follows the S-curve: few workers at the start (excavation), peak in the middle (structure + MEP), decline during finishing.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'loaded hourly rate' of a worker includes:",
+  "options": [
+   "Base wage + employer charges + benefits + paid leave",
+   "Charges only",
+   "Benefits only",
+   "Base wage only"
+  ],
+  "answer": "A",
+  "explanation": "The loaded rate is the complete true cost: wage + charges (QPP, EI, CNESST) + benefits (CCQ funds, insurance) + paid leave.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'labour shortage' in Quebec construction is caused by:",
+  "options": [
+   "Weather only",
+   "An aging workforce, retirements, and the limited attractiveness of the industry",
+   "An excess of workers",
+   "Wages that are too high"
+  ],
+  "answer": "B",
+  "explanation": "The shortage results from an aging workforce, mass retirements, competition from other industries, and the negative perception of manual trades.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "The CCQ 'apprenticeship program' has a typical duration of:",
+  "options": [
+   "No fixed duration",
+   "1 month",
+   "2 to 5 years depending on the trade (e.g., 4 years for electrician)",
+   "10 years"
+  ],
+  "answer": "C",
+  "explanation": "Apprenticeship lasts 2–5 years depending on the trade, combining site hours (e.g., 6,000–8,000 h) and theoretical courses to obtain the journeyman certificate.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "A 'journeyman' in construction is:",
+  "options": [
+   "An engineer",
+   "A beginner",
+   "A supervisor",
+   "A skilled worker who has completed their apprenticeship and holds a competency certificate"
+  ],
+  "answer": "D",
+  "explanation": "A journeyman is a fully qualified worker, certified by the CCQ after completing apprenticeship, authorized to perform all work in their trade.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "A 'labourer' (helper) on a construction site is:",
+  "options": [
+   "An inspector",
+   "A subcontractor",
+   "An engineer",
+   "An unskilled worker who assists skilled tradespeople (hauling, cleaning, preparation)"
+  ],
+  "answer": "D",
+  "explanation": "A labourer performs unskilled physical tasks: hauling materials, cleaning, site preparation, and assisting trades.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "A 'foreman' on a construction site is:",
+  "options": [
+   "An accountant",
+   "An architect",
+   "An experienced worker who supervises a crew and coordinates daily work",
+   "A worker with no responsibilities"
+  ],
+  "answer": "C",
+  "explanation": "The foreman is the link between management and workers: assigning tasks, checking quality, ensuring safety, and reporting progress.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "A 'non-compete clause' in a subcontract:",
+  "options": [
+   "May limit the subcontractor's right to work for competitors for a defined period",
+   "Is always illegal",
+   "Applies to employees only",
+   "Has no legal value"
+  ],
+  "answer": "A",
+  "explanation": "A non-compete clause may be valid if it is reasonable (limited duration, territory, and scope) and protects a legitimate interest.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "A 'performance bond' protects:",
+  "options": [
+   "The subcontractor",
+   "The client (project owner) against contractor default",
+   "The workers",
+   "Suppliers only"
+  ],
+  "answer": "B",
+  "explanation": "A performance bond (typically 50% of the contract) guarantees the client that the work will be completed even if the contractor defaults.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "A 'labour and material payment bond' protects:",
+  "options": [
+   "Architects",
+   "The client only",
+   "Engineers",
+   "Subcontractors and suppliers against non-payment by the general contractor"
+  ],
+  "answer": "D",
+  "explanation": "A labour and material payment bond guarantees that subcontractors and suppliers will be paid even if the general contractor fails to pay them.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "The Act respecting labour standards (ALS) in Quebec applies to construction workers:",
+  "options": [
+   "Yes, but many provisions are adapted by Act R-20 and collective agreements",
+   "For minimum wage only",
+   "For vacation only",
+   "Not at all; they are excluded"
+  ],
+  "answer": "A",
+  "explanation": "The ALS applies in addition to Act R-20. Collective agreements may provide conditions more favourable than the ALS.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "The 'Record of Employment' (ROE) is issued by the employer when:",
+  "options": [
+   "The worker stops working (end of contract, layoff) for employment insurance purposes",
+   "The worker is hired",
+   "The worker takes vacation",
+   "The site opens"
+  ],
+  "answer": "A",
+  "explanation": "The ROE is required for the worker to claim employment insurance benefits after a job loss.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "'Mental health' on construction sites is:",
+  "options": [
+   "Of no importance",
+   "A growing concern: the industry has high rates of stress, burnout, and suicide",
+   "Forbidden to discuss",
+   "An individual problem only"
+  ],
+  "answer": "B",
+  "explanation": "Construction has suicide and psychological distress rates above average. Support and prevention programs are being developed.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "'Sexual harassment' on a construction site is:",
+  "options": [
+   "Tolerated if it is a joke",
+   "Strictly prohibited and may lead to disciplinary, civil, and criminal sanctions",
+   "Without consequences for the employer",
+   "A civil matter only"
+  ],
+  "answer": "B",
+  "explanation": "Sexual harassment is prohibited by the ALS, the OHS Act, the Charter of Rights, and the Criminal Code. The employer has a duty to prevent and intervene.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The main mission of the RBQ (Régie du bâtiment du Québec) is to:",
+  "options": [
+   "Manage construction sites",
+   "Train workers",
+   "Ensure the quality of construction work and public safety through regulation and oversight",
+   "Negotiate collective agreements"
+  ],
+  "answer": "C",
+  "explanation": "The RBQ issues licences, administers the Construction Code and the Safety Code, and monitors the quality and compliance of construction work.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "An RBQ licence is mandatory for:",
+  "options": [
+   "Projects over $1 million only",
+   "Any contractor who performs or has construction work performed in Quebec",
+   "Public projects only",
+   "Electricians only"
+  ],
+  "answer": "B",
+  "explanation": "The Building Act requires an RBQ licence for any construction contractor, with limited exemptions (owner-built homes, minor work).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "RBQ licence categories include:",
+  "options": [
+   "General categories (1.1, 1.2, 1.3) and specialized categories (by trade)",
+   "Residential categories only",
+   "Commercial categories only",
+   "A single general category"
+  ],
+  "answer": "A",
+  "explanation": "The RBQ has general categories (general contractor) and specialized categories (electrician, plumber, etc.), each with subcategories.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "RBQ licence category 1.1 corresponds to:",
+  "options": [
+   "General contractor for new buildings (all types)",
+   "Excavation contractor",
+   "Demolition contractor",
+   "Plumbing contractor"
+  ],
+  "answer": "A",
+  "explanation": "Category 1.1 is the general contractor for new buildings, authorizing the coordination of all new construction work.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "RBQ licence category 1.2 corresponds to:",
+  "options": [
+   "Electrical contractor",
+   "Civil engineering contractor",
+   "Roofing contractor",
+   "General contractor for renovation and restoration"
+  ],
+  "answer": "D",
+  "explanation": "Category 1.2 covers renovation, restoration, and maintenance work on existing buildings.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "RBQ licence category 1.3 corresponds to:",
+  "options": [
+   "Demolition contractor",
+   "Painting contractor",
+   "Civil engineering and roadwork contractor",
+   "Plumbing contractor"
+  ],
+  "answer": "C",
+  "explanation": "Category 1.3 is the general contractor for civil engineering and roadwork: roads, bridges, water mains, sewers, etc.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The Quebec Construction Code is based on:",
+  "options": [
+   "No existing standard",
+   "The National Building Code of Canada (NBC) with Quebec amendments",
+   "European standards only",
+   "American standards only"
+  ],
+  "answer": "B",
+  "explanation": "The Quebec Construction Code adopts the NBC with provincial amendments, covering building design and construction.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The Quebec Safety Code concerns:",
+  "options": [
+   "Fire safety only",
+   "Construction sites only",
+   "Safety of existing buildings: maintenance, inspection, equipment, accessibility",
+   "Road safety"
+  ],
+  "answer": "C",
+  "explanation": "The Safety Code (Building chapter) governs the safety of buildings in operation: maintenance, inspections, equipment, accessibility.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The Building Act (CQLR, c. B-1.1) governs:",
+  "options": [
+   "Labour relations",
+   "Municipal permits only",
+   "Contractor qualification, quality of work, and public safety",
+   "Wages only"
+  ],
+  "answer": "C",
+  "explanation": "The Building Act establishes the legal framework: RBQ licences, Construction Code, Safety Code, warranties, and control mechanisms.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "A municipal building permit is required for:",
+  "options": [
+   "No work",
+   "Most construction, renovation, or demolition work on a building",
+   "Projects over $100,000 only",
+   "Commercial buildings only"
+  ],
+  "answer": "B",
+  "explanation": "Municipalities require a permit for most work, verifying compliance with zoning, codes, and urban planning regulations.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "Municipal inspection during construction verifies:",
+  "options": [
+   "Compliance with building codes, zoning, and municipal regulations",
+   "Costs only",
+   "Aesthetics only",
+   "Workers' wages"
+  ],
+  "answer": "A",
+  "explanation": "The municipal inspector verifies compliance with codes (structure, fire, plumbing, electrical) and zoning and urban planning regulations.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'occupancy certificate' (or certificate of compliance) is issued:",
+  "options": [
+   "Before work begins",
+   "For commercial buildings only",
+   "After the final inspection confirming that the building is compliant and habitable",
+   "During construction"
+  ],
+  "answer": "C",
+  "explanation": "The occupancy certificate certifies that the building complies with codes and regulations, authorizing its occupancy. It is required after the final inspection.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'new residential building warranty' (GCR) in Quebec is:",
+  "options": [
+   "For houses over $500,000 only",
+   "Mandatory for all new residential buildings, covering construction defects",
+   "Optional",
+   "For condominiums only"
+  ],
+  "answer": "B",
+  "explanation": "The GCR (Garantie de construction résidentielle) is mandatory in Quebec for new residential buildings, with 1-year, 3-year, and 5-year coverage.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The GCR warranty covers hidden defects for:",
+  "options": [
+   "1 year",
+   "5 years",
+   "3 years",
+   "10 years"
+  ],
+  "answer": "B",
+  "explanation": "The GCR covers: 1 year (completion), 3 years (hidden defects), 5 years (major design/construction defects). Hidden defects = 5 years.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "The Régie du bâtiment du Québec may impose sanctions for:",
+  "options": [
+   "Aesthetic issues only",
+   "Delivery delays only",
+   "Payment delays only",
+   "Unlicensed work, non-compliance with codes, illegal practices"
+  ],
+  "answer": "D",
+  "explanation": "The RBQ may suspend/revoke licences, impose fines, and order work stoppages for non-compliance or illegal practice.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The maximum fine for illegal practice as a contractor (without an RBQ licence) is:",
+  "options": [
+   "$100",
+   "$1,000",
+   "No fine",
+   "Up to $100,000 for an individual and $200,000 for a legal person"
+  ],
+  "answer": "D",
+  "explanation": "The Building Act provides for severe fines: up to $100,000 (individual) and $200,000 (legal person) for working without a licence.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "The mandatory 'warranty plan' for new residential buildings is administered by:",
+  "options": [
+   "Municipalities",
+   "An authorized arbitration body (e.g., GCR, APCHQ)",
+   "The RBQ directly",
+   "Unions"
+  ],
+  "answer": "B",
+  "explanation": "The warranty plan is administered by authorized bodies (GCR, APCHQ Residential Building Warranty) under RBQ supervision.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "The Act respecting land use planning and development gives municipalities the power to:",
+  "options": [
+   "Train workers",
+   "Adopt zoning, subdivision, and construction bylaws",
+   "Issue RBQ licences",
+   "Manage construction sites"
+  ],
+  "answer": "B",
+  "explanation": "The Act empowers municipalities to regulate land use: zoning, subdivision, site plan control (PIIA), permits, and certificates.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "Municipal 'zoning' determines:",
+  "options": [
+   "Work schedules",
+   "Material prices",
+   "Workers' wages",
+   "Permitted uses, heights, setbacks, and densities for each zone"
+  ],
+  "answer": "D",
+  "explanation": "The zoning bylaw divides the territory into zones and prescribes authorized uses, siting standards, and densities.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "A 'PIIA' (Site Planning and Architectural Integration Plan) is:",
+  "options": [
+   "A safety inspection",
+   "A building permit",
+   "A site plan",
+   "A municipal process for the qualitative assessment of a project's architectural integration"
+  ],
+  "answer": "D",
+  "explanation": "A PIIA is a discretionary process in which the advisory committee evaluates the project's integration into its environment (architecture, landscape, heritage).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'CCU' (Urban Planning Advisory Committee) is:",
+  "options": [
+   "A court",
+   "A construction company",
+   "A committee that advises the municipal council on planning matters and PIIAs",
+   "A union"
+  ],
+  "answer": "C",
+  "explanation": "The CCU is an advisory committee made up of citizens and elected officials that provides opinions to the municipal council on projects and planning bylaws.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "A 'minor variance' in urban planning allows:",
+  "options": [
+   "Ignoring all regulations",
+   "Building without a permit",
+   "Building in an agricultural zone",
+   "Authorizing a project that does not comply with certain zoning bylaw standards, if the deviation is minor"
+  ],
+  "answer": "D",
+  "explanation": "A minor variance is a discretionary procedure allowing a slight departure from a standard (setback, height) without changing the spirit of the bylaw.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "A 'location certificate' is a document prepared by:",
+  "options": [
+   "A land surveyor, describing the position of the building on the lot",
+   "The architect",
+   "The contractor",
+   "The notary"
+  ],
+  "answer": "A",
+  "explanation": "A location certificate is a land surveyor's report confirming the building's siting, easements, and compliance with regulations.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "An 'easement' on a property is:",
+  "options": [
+   "A type of employment contract",
+   "A building permit",
+   "A charge imposed on a property (servient tenement) for the benefit of another (dominant tenement)",
+   "A municipal tax"
+  ],
+  "answer": "C",
+  "explanation": "An easement is a real right: e.g., right of way, view, sewer. It encumbers the servient tenement and benefits the dominant tenement, surviving changes in ownership.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'National Building Code – Canada' (NBC) is published by:",
+  "options": [
+   "The APCHQ",
+   "The National Research Council of Canada (NRC)",
+   "The CCQ",
+   "The RBQ"
+  ],
+  "answer": "B",
+  "explanation": "The NBC is published by the NRC. Provinces adopt it with local amendments (e.g., the Quebec Construction Code).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "A 'CSA standard' in Canadian construction is:",
+  "options": [
+   "A government permit",
+   "A type of contract",
+   "A technical standard of the Canadian Standards Association, often made mandatory by codes",
+   "An optional suggestion"
+  ],
+  "answer": "C",
+  "explanation": "CSA standards (e.g., CSA A23.1 for concrete, CSA C22.1 for electrical) are technical standards referenced and made mandatory by codes.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "'Asbestos' in existing buildings is regulated by:",
+  "options": [
+   "No regulation",
+   "The Safety Code, the OHS Act, and specific regulations on removal and disposal",
+   "Municipalities only",
+   "Insurers only"
+  ],
+  "answer": "B",
+  "explanation": "Asbestos is strictly regulated: identification, removal by certified companies, and special disposal provisions (OHS Regulation, Safety Code).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'RBQ licence register' is:",
+  "options": [
+   "Reserved for contractors",
+   "Public and searchable online, allowing verification of a licence's validity",
+   "Paper only",
+   "Secret"
+  ],
+  "answer": "B",
+  "explanation": "The RBQ register is public (rbq.gouv.qc.ca). Any citizen can verify whether a contractor holds a valid licence and its categories.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "'Decennial liability' in Quebec construction:",
+  "options": [
+   "Lasts exactly 10 years",
+   "Is replaced by the GCR warranty (1/3/5 years) and common-law civil liability",
+   "Does not exist in Quebec",
+   "Applies to bridges only"
+  ],
+  "answer": "B",
+  "explanation": "Quebec does not have decennial liability as in France. Protection comes from the GCR (residential) and common law (hidden defects, 3 years).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "A 'hidden defect' in Quebec law (C.C.Q.) is:",
+  "options": [
+   "A significant defect that renders the property unfit for its intended use and was not apparent at the time of sale",
+   "A construction delay",
+   "A minor aesthetic defect",
+   "A defect visible during inspection"
+  ],
+  "answer": "A",
+  "explanation": "A hidden defect (art. 1726 C.C.Q.) is a serious, non-apparent defect existing at the time of sale, rendering the property unfit for its intended use.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "The limitation period for a hidden defect claim in Quebec is:",
+  "options": [
+   "3 years from the discovery of the defect",
+   "1 year",
+   "10 years",
+   "No time limit"
+  ],
+  "answer": "A",
+  "explanation": "A hidden defect claim is prescribed by 3 years from the discovery of the defect (art. 2925 C.C.Q.), with a reasonable notice requirement.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'CNESST' (Commission des normes, de l'équité, de la santé et de la sécurité du travail) resulted from the merger of:",
+  "options": [
+   "The APCHQ and the FTQ",
+   "The RBQ and the CCQ",
+   "The CSST and the Commission des normes du travail",
+   "The GCR and the RBQ"
+  ],
+  "answer": "C",
+  "explanation": "The CNESST (2016) combines the CSST (occupational health and safety) and the CNT (labour standards), administering the OHS Act, the ALS, and compensation plans.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The Environment Quality Act (EQA) requires construction sites to implement:",
+  "options": [
+   "Recycling only",
+   "No obligations",
+   "Noise reduction only",
+   "Erosion control measures, waste management, and watercourse protection"
+  ],
+  "answer": "D",
+  "explanation": "The EQA and its regulations govern the environmental impacts of construction sites: erosion, sediments, waste, hazardous materials, noise.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'BAPE' (Bureau d'audiences publiques sur l'environnement) is involved in:",
+  "options": [
+   "Projects abroad",
+   "Mining projects only",
+   "Major projects with significant environmental impacts",
+   "Small residential projects"
+  ],
+  "answer": "C",
+  "explanation": "The BAPE holds public hearings for projects subject to the environmental assessment procedure (major infrastructure projects).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'BNQ 9011-950 standard' concerns:",
+  "options": [
+   "Driver's licences",
+   "Management of residual materials on construction sites",
+   "Insurance",
+   "Wages"
+  ],
+  "answer": "B",
+  "explanation": "The BNQ 9011-950 standard establishes requirements for the management of residual materials (sorting, recycling, recovery) on construction sites.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "The Occupational Health and Safety Regulation (OHSR) applies to:",
+  "options": [
+   "Offices only",
+   "Factories only",
+   "Mines only",
+   "All establishments and construction sites in Quebec, with specific sections for construction"
+  ],
+  "answer": "D",
+  "explanation": "The OHSR (enacted under the OHS Act) establishes OHS standards for all workplaces, with a specific section for construction sites.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "A worker's 'right of refusal' (s. 12 OHS Act) allows them to:",
+  "options": [
+   "Refuse to wear PPE",
+   "Refuse any work they dislike",
+   "Refuse overtime",
+   "Refuse to perform work if they have reasonable grounds to believe there is a danger to their health or safety"
+  ],
+  "answer": "D",
+  "explanation": "Section 12 of the OHS Act protects a worker who refuses dangerous work. The employer cannot sanction them. A CNESST inspector may be called.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "'PPE' (personal protective equipment) on a construction site includes:",
+  "options": [
+   "Gloves only",
+   "Boots only",
+   "Hard hat, safety glasses, gloves, harness, hearing protection, depending on the hazards",
+   "No equipment"
+  ],
+  "answer": "C",
+  "explanation": "PPE is the last line of defence: hard hat, safety glasses, gloves, harness, hearing protectors, safety footwear, depending on the identified hazards.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "'WHMIS' (Workplace Hazardous Materials Information System) requires:",
+  "options": [
+   "Labelling and safety data sheets (SDS) for all hazardous products",
+   "For paints only",
+   "For industrial chemicals only",
+   "No labels"
+  ],
+  "answer": "A",
+  "explanation": "WHMIS (aligned with GHS) requires labelling of hazardous products and the availability of SDS for all exposed workers.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "'Lockout/tagout' is a procedure for:",
+  "options": [
+   "Securing materials",
+   "Closing the site for the night",
+   "Locking the site gates",
+   "Controlling hazardous energy before equipment maintenance or repair"
+  ],
+  "answer": "D",
+  "explanation": "Lockout/tagout isolates and dissipates energy sources (electrical, hydraulic, pneumatic, gravitational) before any intervention, preventing accidental start-ups.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "'Working at height' in Quebec requires a safety harness starting at:",
+  "options": [
+   "No specific height",
+   "10 metres",
+   "1 metre",
+   "3 metres (or less if there is a risk of injury)"
+  ],
+  "answer": "D",
+  "explanation": "The OHSR requires fall protection starting at 3 m, or less if there is a risk of injury (e.g., above moving parts).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "'Scaffolding' on a construction site must be:",
+  "options": [
+   "Erected, modified, and dismantled by competent persons, and inspected before each use",
+   "Painted white only",
+   "Erected by anyone",
+   "Anchored to the building only"
+  ],
+  "answer": "A",
+  "explanation": "The OHSR requires that scaffolding be erected by trained persons, inspected daily, and compliant with capacity standards.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "'Trenches' deeper than 1.2 m require:",
+  "options": [
+   "Signage only",
+   "A permit only",
+   "Shoring, sloping, or shielding to prevent cave-ins",
+   "No protection"
+  ],
+  "answer": "C",
+  "explanation": "The OHSR requires protection against cave-ins (shoring, sloping, shielding) for any trench 1.2 m or deeper. This is a leading cause of fatalities.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "A 'confined space' on a construction site (tank, sewer, silo) requires:",
+  "options": [
+   "An entry permit, atmospheric monitoring, an attendant, and a rescue plan",
+   "A mask only",
+   "A flashlight only",
+   "No precautions"
+  ],
+  "answer": "A",
+  "explanation": "Confined space entry is strictly regulated: permit, atmosphere testing, ventilation, external attendant, rescue equipment.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "A 'health and safety committee' (HSC) on a construction site is mandatory when:",
+  "options": [
+   "It is never mandatory",
+   "On public projects only",
+   "The number of workers reaches a threshold defined by the OHS Act (typically 20+)",
+   "There are more than 100 workers"
+  ],
+  "answer": "C",
+  "explanation": "The OHS Act requires an HSC on sites with a sufficient number of workers (variable threshold). The committee brings together the employer and workers.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "A 'prevention program' on a construction site is:",
+  "options": [
+   "For large projects only",
+   "A one-time document with no updates",
+   "Optional",
+   "Mandatory and must identify hazards, control measures, and OHS responsibilities"
+  ],
+  "answer": "D",
+  "explanation": "The prevention program (OHS Act) is mandatory: hazard identification, safe work methods, training, inspection, investigation.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "An 'accident investigation' on a construction site must:",
+  "options": [
+   "Blame the worker",
+   "Identify root causes and corrective measures to prevent recurrence",
+   "Be kept secret",
+   "Be conducted by the police only"
+  ],
+  "answer": "B",
+  "explanation": "The investigation aims at prevention: analyzing causes (immediate and root), correcting deficiencies, and avoiding repetition. No blame.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "'Safety signage' on a construction site uses standardized colours:",
+  "options": [
+   "Random colours",
+   "Red (danger/prohibition), yellow (warning), blue (mandatory), green (safety/first aid)",
+   "Red only",
+   "Black and white only"
+  ],
+  "answer": "B",
+  "explanation": "Colours are standardized (CSA Z321): red = danger/stop, yellow = caution, blue = mandatory, green = safety/first aid.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "'First aid' on a construction site requires:",
+  "options": [
+   "A telephone only",
+   "No first aid kit",
+   "An accessible first aid kit and trained first aiders according to the number of workers",
+   "An on-site physician only"
+  ],
+  "answer": "C",
+  "explanation": "The OHSR requires a first aid kit and a minimum number of certified first aiders based on the site workforce.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "The Act respecting contracting by public bodies requires:",
+  "options": [
+   "Sole-source negotiation for all contracts",
+   "No rules",
+   "Public calls for tenders and transparency rules for government contracts",
+   "Lump-sum contracts only"
+  ],
+  "answer": "C",
+  "explanation": "The Act governs public contracts: calls for tenders, evaluation criteria, transparency, and accountability for public bodies.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'SEAO' (Système électronique d'appel d'offres) in Quebec is:",
+  "options": [
+   "The mandatory portal for publishing public calls for tenders",
+   "A construction company",
+   "A union",
+   "Accounting software"
+  ],
+  "answer": "A",
+  "explanation": "The SEAO (seao.ca) is the official system for publishing tender notices from Quebec public bodies.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'Autorité des marchés publics' (AMP) has the role of:",
+  "options": [
+   "Monitoring public contracts and preventing collusion and corruption",
+   "Training workers",
+   "Managing construction sites",
+   "Issuing building permits"
+  ],
+  "answer": "A",
+  "explanation": "The AMP (created in 2019) monitors the integrity of public contracts, investigates collusion, and may exclude companies from public contracts.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'REA' (Registre des entreprises autorisées) is:",
+  "options": [
+   "An RBQ licence register",
+   "The list of companies authorized to contract with public bodies",
+   "A union",
+   "A vehicle registry"
+  ],
+  "answer": "B",
+  "explanation": "The REA (managed by the AMP) lists companies authorized to bid on public contracts. Exclusion from the REA prevents contracting.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "The Competition Act (federal) prohibits in calls for tenders:",
+  "options": [
+   "Low bids",
+   "Bid bonds",
+   "Bid-rigging, price-fixing, and market allocation",
+   "Fair competition"
+  ],
+  "answer": "C",
+  "explanation": "The Competition Act criminalizes bid-rigging, price-fixing, and market allocation, with severe penalties.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "A typical 'bid bond' is:",
+  "options": [
+   "10% of the bid amount",
+   "5%",
+   "25%",
+   "1%"
+  ],
+  "answer": "A",
+  "explanation": "A bid bond is typically 10% of the bid amount, guaranteeing that the successful bidder will sign the contract.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "A 'letter of intent' (LOI) in a construction project:",
+  "options": [
+   "Is illegal",
+   "Expresses the intention to contract without creating a firm obligation (except for specific clauses)",
+   "Is a complete and final contract",
+   "Replaces the building permit"
+  ],
+  "answer": "B",
+  "explanation": "An LOI expresses an intention to contract. It may be binding on certain points (confidentiality, exclusivity) but not on the final contract.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "'CCDC 2' is:",
+  "options": [
+   "A municipal bylaw",
+   "A widely used Canadian standard stipulated-price construction contract",
+   "A safety standard",
+   "A building code"
+  ],
+  "answer": "B",
+  "explanation": "CCDC 2 (Canadian Construction Documents Committee) is the most widely used standard stipulated-price contract in Canada for construction projects.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'NQ 1809-900 standard' in Quebec concerns:",
+  "options": [
+   "Automobile insurance",
+   "Standard construction contracts for Quebec public bodies",
+   "Wages",
+   "Driver's licences"
+  ],
+  "answer": "B",
+  "explanation": "The NQ 1809-900 standard (and its variants) establishes standard general conditions for construction contracts of Quebec public bodies.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "'Arbitration' in a construction dispute is:",
+  "options": [
+   "A private dispute resolution method where an arbitrator renders a binding decision",
+   "An informal negotiation",
+   "A non-binding mediation",
+   "A public trial before a judge"
+  ],
+  "answer": "A",
+  "explanation": "Arbitration is a private and confidential process in which an arbitrator (or arbitral tribunal) renders a binding award, often provided for in construction contracts.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "'Mediation' in a construction dispute is:",
+  "options": [
+   "A voluntary process in which a mediator facilitates negotiation without imposing a solution",
+   "An arbitration",
+   "A trial",
+   "A decision imposed by a judge"
+  ],
+  "answer": "A",
+  "explanation": "Mediation is an amicable process: the mediator helps the parties reach an agreement, without decision-making power. It is often a prerequisite to arbitration.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The 'legal construction hypothec' (art. 2726 C.C.Q.) encumbers:",
+  "options": [
+   "The building on which the work was performed",
+   "The contractor's bank account",
+   "Movable property",
+   "Construction vehicles"
+  ],
+  "answer": "A",
+  "explanation": "The legal construction hypothec encumbers the building benefiting from the work, securing the claims of workers, subcontractors, and suppliers.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "A material supplier's 'lien' in construction is:",
+  "options": [
+   "Non-existent in Quebec",
+   "Unlimited in time",
+   "5 years",
+   "Limited to 30 days after delivery to register a lien on the building"
+  ],
+  "answer": "D",
+  "explanation": "The supplier must register their lien within 30 days of the last delivery. After this deadline, the lien is lost.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "'Substantial completion' of the work marks:",
+  "options": [
+   "The transfer of custody of the work to the client and the start of warranty periods",
+   "The end of the warranty",
+   "The start of the work",
+   "The final payment"
+  ],
+  "answer": "A",
+  "explanation": "Substantial completion transfers custody to the client, triggers warranty periods (GCR), and releases a portion of the retainage.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "'Final completion' of the work takes place:",
+  "options": [
+   "Before substantial completion",
+   "After the warranty periods expire and deficiencies are corrected",
+   "For bridges only",
+   "At the beginning of the project"
+  ],
+  "answer": "B",
+  "explanation": "Final completion occurs after the warranty period and the clearing of deficiencies, releasing the final retainage and closing the contract.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "'Deficiencies' (punch list) at substantial completion are:",
+  "options": [
+   "Pending payments",
+   "Workers on standby",
+   "The list of incomplete or defective work to be corrected before final completion",
+   "Surplus materials"
+  ],
+  "answer": "C",
+  "explanation": "The punch list identifies deficiencies and work to be completed. The contractor must correct them within the agreed deadlines.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "The 1-year 'completion warranty' (GCR) covers:",
+  "options": [
+   "Roofing only",
+   "Plumbing only",
+   "Incomplete or poorly executed work discovered within one year of substantial completion",
+   "Major structural defects"
+  ],
+  "answer": "C",
+  "explanation": "The completion warranty (1 year) covers defects and incomplete work reported within one year of substantial completion.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The 3-year 'hidden defects warranty' (GCR) covers:",
+  "options": [
+   "Defects not apparent at substantial completion that render the building unfit for its intended use",
+   "Colour changes",
+   "Delivery delays",
+   "Aesthetic defects"
+  ],
+  "answer": "A",
+  "explanation": "The 3-year warranty covers hidden defects (not detectable at substantial completion) affecting the building's functionality.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "The 5-year 'structural warranty' (GCR) covers:",
+  "options": [
+   "Appliances",
+   "Design or construction defects compromising the structural integrity of the building",
+   "Landscaping",
+   "Paint"
+  ],
+  "answer": "B",
+  "explanation": "The 5-year warranty covers major design/construction defects affecting the strength or stability of the building.",
+  "difficulty": "MEDIUM"
+ }
+]

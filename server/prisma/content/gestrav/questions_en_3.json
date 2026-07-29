@@ -1,0 +1,1575 @@
+[
+ {
+  "chapter": 5,
+  "question": "The OHS Act (Occupational Health and Safety Act) requires the employer to:",
+  "options": [
+   "Take all necessary measures to protect the health and safety of workers",
+   "No obligation",
+   "Only pay wages",
+   "Only provide tools"
+  ],
+  "answer": "A",
+  "explanation": "Section 51 of the OHS Act imposes a general duty of care on the employer: identify hazards, provide training, supervise, and supply safe equipment.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "Under the OHS Act, the worker is required to:",
+  "options": [
+   "Work without PPE",
+   "Ignore safety instructions",
+   "Report hazards only to coworkers",
+   "Review the prevention program and comply with safety instructions"
+  ],
+  "answer": "D",
+  "explanation": "Section 49 of the OHS Act requires the worker to comply with safety measures, use PPE, and report hazards to the employer.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'prevention program' on a construction site must be:",
+  "options": [
+   "Posted and accessible to all workers, and updated regularly",
+   "Optional for small sites",
+   "Kept secret",
+   "Provided only to management"
+  ],
+  "answer": "A",
+  "explanation": "The prevention program must be accessible to workers, posted on the site, and revised when conditions change.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'job safety analysis' (JSA) consists of:",
+  "options": [
+   "Breaking down a task into steps, identifying the hazards of each step, and defining control measures",
+   "Checking material quality",
+   "Measuring productivity",
+   "Evaluating the cost of a task"
+  ],
+  "answer": "A",
+  "explanation": "The JSA breaks down the task, identifies hazards at each step, and prescribes controls before work begins.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "A 'work permit' is required for:",
+  "options": [
+   "Painting only",
+   "High-risk work: confined spaces, hot work, deep excavation, work at height",
+   "No work",
+   "All tasks"
+  ],
+  "answer": "B",
+  "explanation": "A work permit formally authorizes high-risk tasks after verifying safety conditions and control measures.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Hot work' (welding, grinding, cutting) requires:",
+  "options": [
+   "No precautions",
+   "A hot work permit, a nearby fire extinguisher, and a fire watch",
+   "Safety glasses only",
+   "A hard hat only"
+  ],
+  "answer": "B",
+  "explanation": "Hot work generates sparks and heat. The permit requires a fire extinguisher, post-work fire watch (30–60 min), and removal of combustibles.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Fall protection' is mandatory starting at:",
+  "options": [
+   "10 metres",
+   "1 metre",
+   "3 metres in height (or less if there is a risk of injury)",
+   "5 metres"
+  ],
+  "answer": "C",
+  "explanation": "The OHS Regulation (s. 346) requires fall protection at 3 m, or less if the worker could fall onto moving parts or into a liquid.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Fall protection systems include:",
+  "options": [
+   "No system",
+   "Hard hat only",
+   "Guardrails, safety nets, and a harness with a lanyard and shock absorber",
+   "Boots only"
+  ],
+  "answer": "C",
+  "explanation": "The hierarchy: eliminate the hazard > guardrail > safety net > harness. The harness must be anchored to a certified anchor point (≥ 22 kN).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'anchor point' for a safety harness must withstand a minimum force of:",
+  "options": [
+   "22 kN (≈ 5,000 lbs) per attached worker",
+   "50 kN",
+   "100 N",
+   "1 kN"
+  ],
+  "answer": "A",
+  "explanation": "The OHS Regulation requires an anchor point capable of withstanding 22 kN per worker, certified by an engineer or compliant with CSA Z259.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'fall factor' is calculated by:",
+  "options": [
+   "Weight / height",
+   "Height × weight",
+   "Lanyard length / fall distance",
+   "Fall distance / lanyard length"
+  ],
+  "answer": "D",
+  "explanation": "Fall factor = fall distance / lanyard length. Factor 2 (fall above the anchor point) = most severe. Factor 0 = ideal.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'shock absorber' on a lanyard:",
+  "options": [
+   "Replaces the harness",
+   "Reduces the arrest force on the worker's body by deploying progressively",
+   "Has no function",
+   "Increases the impact force"
+  ],
+  "answer": "B",
+  "explanation": "The shock absorber tears progressively during a fall, limiting the arrest force to < 6 kN on the body and preventing internal injuries.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "A 'guardrail' on a construction site must have a minimum height of:",
+  "options": [
+   "2 m",
+   "1.5 m",
+   "0.9 m (900 mm) with a mid rail and toe board",
+   "0.5 m"
+  ],
+  "answer": "C",
+  "explanation": "The OHS Regulation requires a 0.9 m guardrail with a mid rail and a 100 mm toe board to prevent objects from falling.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Floor openings' on a construction site must be:",
+  "options": [
+   "Ignored",
+   "Marked with tape only",
+   "Securely covered (labelled, secured cover) or protected by a guardrail",
+   "Left open for ventilation"
+  ],
+  "answer": "C",
+  "explanation": "Every floor opening must be covered (cover marked 'OPENING', secured) or surrounded by a guardrail to prevent falls.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "A 'safety harness' must be inspected:",
+  "options": [
+   "Only after a fall",
+   "Never",
+   "Once a year",
+   "Before each use, and formally at least once a year"
+  ],
+  "answer": "D",
+  "explanation": "Pre-use inspection (visual) and formal annual inspection (by a competent person) are mandatory. Any harness that has sustained a fall must be removed from service.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'WHMIS 2015' is aligned with:",
+  "options": [
+   "The Globally Harmonized System (GHS) for chemical classification",
+   "European standards only",
+   "No international system",
+   "US OSHA standards"
+  ],
+  "answer": "A",
+  "explanation": "WHMIS 2015 incorporates the UN GHS: standardized pictograms, hazard classes, 16-section SDSs, and standardized labels.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "WHMIS pictograms include:",
+  "options": [
+   "Colours only",
+   "Standardized symbols: flame, skull, corrosion, exclamation mark, etc.",
+   "Product photos",
+   "Text only"
+  ],
+  "answer": "B",
+  "explanation": "The GHS uses 9 pictograms: flame (flammable), skull (toxic), corrosion (corrosive), exploding bomb (explosive), etc.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'safety data sheet' (SDS) must contain:",
+  "options": [
+   "The manufacturer only",
+   "16 standardized sections: identification, hazards, composition, first aid, handling, etc.",
+   "The price only",
+   "The product name only"
+  ],
+  "answer": "B",
+  "explanation": "The 16-section SDS is mandatory for any hazardous product. It must be accessible to exposed workers.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Lockout' consists of:",
+  "options": [
+   "Locking the site gates",
+   "Turning off the water valve",
+   "Isolating, dissipating, and locking out all energy sources before servicing equipment",
+   "Turning off the lights"
+  ],
+  "answer": "C",
+  "explanation": "Lockout isolates all energy sources (electrical, hydraulic, pneumatic, gravitational, thermal) and locks them with a personal padlock.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'zero-energy verification' after lockout consists of:",
+  "options": [
+   "Checking the colour of the padlock",
+   "Counting the padlocks",
+   "Checking that the padlock is properly closed",
+   "Attempting to start the equipment to confirm the absence of residual energy"
+  ],
+  "answer": "D",
+  "explanation": "After lockout, a start attempt (test) is made to confirm complete isolation. This is the critical verification step.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "The personal 'lockout padlock' is:",
+  "options": [
+   "Shared among all workers",
+   "Unique to each worker, with a single key kept by its owner",
+   "Provided by the client",
+   "Optional"
+  ],
+  "answer": "B",
+  "explanation": "Each worker applies their own padlock and keeps the key. No one else can remove it, ensuring individual protection.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "'Hazardous residual materials' on a construction site include:",
+  "options": [
+   "Wood only",
+   "No materials",
+   "Solvents, oils, batteries, asbestos, PCBs, chemicals, pressurized containers",
+   "Paint only"
+  ],
+  "answer": "C",
+  "explanation": "Hazardous residual materials include all dangerous residues: solvents, oils, batteries, asbestos, PCBs, aerosols. Their management is regulated (Environment Quality Act, OHS Regulation).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "'Asbestos' is a recognized carcinogen primarily causing:",
+  "options": [
+   "Asbestosis, mesothelioma, and lung cancer",
+   "Fractures",
+   "Skin allergies only",
+   "Burns"
+  ],
+  "answer": "A",
+  "explanation": "Inhaling asbestos fibres causes asbestosis (fibrosis), mesothelioma (cancer of the pleura), and lung cancer, with a latency period of 20–40 years.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Asbestos removal on a construction site requires:",
+  "options": [
+   "Gloves only",
+   "No precautions",
+   "A certified firm, containment, negative pressure, specific PPE, and controlled disposal",
+   "A mask only"
+  ],
+  "answer": "C",
+  "explanation": "Asbestos removal is strictly regulated: airtight containment, negative pressure, HEPA filtration, PPE (coverall, respirator), and disposal at an authorized site.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 5,
+  "question": "'Noise' on a construction site is regulated starting at:",
+  "options": [
+   "120 dB(A)",
+   "85 dB(A) over 8 hours (daily exposure level)",
+   "50 dB(A)",
+   "No threshold"
+  ],
+  "answer": "B",
+  "explanation": "The OHS Regulation sets the limit at 85 dB(A) over 8 h. Above this, a hearing conservation program is required: PPE, rotation, audiograms.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Hand-arm vibrations' (jackhammer, grinder) can cause:",
+  "options": [
+   "Raynaud's syndrome (white fingers) and nerve damage",
+   "Allergies",
+   "Fractures",
+   "Burns"
+  ],
+  "answer": "A",
+  "explanation": "Prolonged exposure to vibrations causes hand-arm vibration syndrome (Raynaud's), neuropathies, and musculoskeletal disorders.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Manual handling' of heavy loads is regulated:",
+  "options": [
+   "For women only",
+   "For apprentices only",
+   "The OHS Regulation recommends limits (e.g., 23 kg) and requires mechanical aids beyond that",
+   "No limits"
+  ],
+  "answer": "C",
+  "explanation": "The OHS Regulation and CNESST guides recommend lifting limits (23 kg under optimal conditions) and require mechanical equipment for heavy loads.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Musculoskeletal disorders' (MSDs) in construction are caused by:",
+  "options": [
+   "Repetitive movements, awkward postures, vibrations, and manual handling",
+   "Cold only",
+   "Accidents only",
+   "Chemicals"
+  ],
+  "answer": "A",
+  "explanation": "MSDs (tendinitis, bursitis, lower back pain) result from accumulated stressors: repetition, posture, force, vibration, cold.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Ergonomics' on a construction site aims to:",
+  "options": [
+   "Eliminate breaks",
+   "Increase work speed",
+   "Reduce wages",
+   "Adapt work to the human: postures, tools, and organization to reduce physical stress"
+  ],
+  "answer": "D",
+  "explanation": "Ergonomics designs workstations, tools, and methods to minimize physical stress and prevent MSDs.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "'Heat stress' (heat stroke) on a construction site is a risk:",
+  "options": [
+   "Major in summer: intense physical work + heat + sun can cause fatal heat stroke",
+   "Only in winter",
+   "Only in offices",
+   "Non-existent"
+  ],
+  "answer": "A",
+  "explanation": "Heat stroke is a life-threatening medical emergency. The OHS Regulation requires measures: hydration, shade breaks, acclimatization, monitoring.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Extreme cold' on a Quebec construction site can cause:",
+  "options": [
+   "Frostbite, hypothermia, and accidents (loss of dexterity, slippery surfaces)",
+   "Delays only",
+   "Discomfort only",
+   "No risk"
+  ],
+  "answer": "A",
+  "explanation": "Cold causes frostbite, hypothermia, and increases accident risks (loss of sensation, slips). The OHS Regulation requires protective measures.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "'Air quality' on a construction site (dust, fumes, vapours) is controlled by:",
+  "options": [
+   "Windows only",
+   "No measures",
+   "Ventilation, source extraction, respiratory PPE, and atmospheric monitoring",
+   "Masks only"
+  ],
+  "answer": "C",
+  "explanation": "The hierarchy of controls: elimination > substitution > ventilation/extraction > respiratory PPE. Monitoring measures concentrations.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "A 'respirator' must be:",
+  "options": [
+   "Worn only in winter",
+   "Used only for painting",
+   "Chosen at random",
+   "Individually fitted (fit test), maintained, and suited to the specific contaminant"
+  ],
+  "answer": "D",
+  "explanation": "The respirator must be selected according to the contaminant, fitted (annual fit test), maintained, and worn correctly to be effective.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Crystalline silica' (concrete, brick dust) is:",
+  "options": [
+   "A nuisance only",
+   "Harmless",
+   "A recognized carcinogen causing silicosis and lung cancer",
+   "An aesthetic issue only"
+  ],
+  "answer": "C",
+  "explanation": "Crystalline silica (quartz) is classified as a carcinogen. Inhalation causes silicosis (pulmonary fibrosis) and lung cancer. Concrete grinding generates it.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "Controlling silica dust during concrete grinding requires:",
+  "options": [
+   "No measures",
+   "Source extraction (tool with integrated HEPA vacuum) or wet grinding",
+   "Safety glasses only",
+   "A surgical mask only"
+  ],
+  "answer": "B",
+  "explanation": "The OHS Regulation requires integrated HEPA extraction or wet grinding to capture silica at the source, supplemented by respiratory PPE if necessary.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Electricity' on a construction site presents a risk of:",
+  "options": [
+   "No risk",
+   "Short circuits only",
+   "Electrocution, electric shock, arc flash, and fire",
+   "Power outages only"
+  ],
+  "answer": "C",
+  "explanation": "Electrical hazards: direct/indirect contact (electrocution), arc flash (burns), fire. Lockout and grounding are essential.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "The minimum 'approach distance' near overhead power lines is:",
+  "options": [
+   "No distance",
+   "10 metres",
+   "Defined by the OHS Regulation according to voltage (e.g., 3 m for < 125 kV)",
+   "1 metre"
+  ],
+  "answer": "C",
+  "explanation": "The OHS Regulation sets minimum distances by voltage: 3 m (< 125 kV), 4.5 m (125–250 kV), etc. No work within these distances without special measures.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 5,
+  "question": "'Grounding' of electrical equipment on a construction site:",
+  "options": [
+   "Is optional",
+   "Is mandatory to prevent electrocution in case of insulation failure",
+   "Is only for large equipment",
+   "Has no function"
+  ],
+  "answer": "B",
+  "explanation": "Grounding diverts fault current to earth, tripping the breaker and protecting people from electrocution.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "A 'ground fault circuit interrupter' (GFCI) on a construction site protects against:",
+  "options": [
+   "Power outages",
+   "Short circuits only",
+   "Current leakage to ground (electrocution), by cutting the circuit in < 30 ms",
+   "Overloads only"
+  ],
+  "answer": "C",
+  "explanation": "The GFCI detects the current difference between phase and neutral (leakage to ground) and cuts off in < 30 ms, preventing electrocution.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Personal protective equipment' (PPE) is:",
+  "options": [
+   "For visitors only",
+   "Optional",
+   "The first protective measure to implement",
+   "The last line of defence, after hazard elimination and collective controls"
+  ],
+  "answer": "D",
+  "explanation": "The hierarchy of controls: elimination > substitution > engineering > administrative > PPE. PPE is the last resort, not the first solution.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "A 'hard hat' protects against:",
+  "options": [
+   "No hazard",
+   "The sun only",
+   "Falling object impacts, bumps, and electrical contact (depending on class)",
+   "Rain only"
+  ],
+  "answer": "C",
+  "explanation": "The hard hat (CSA Z94.1 standard) protects against falling objects, lateral impacts, and, depending on class (E, G, C), electrical contact.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "'Safety boots' on a construction site must have:",
+  "options": [
+   "No requirements",
+   "A non-slip sole only",
+   "A steel toe (or composite), puncture-resistant sole, and non-slip sole",
+   "Laces only"
+  ],
+  "answer": "C",
+  "explanation": "Safety boots (CSA Z195) have a protective toe cap, puncture-resistant and non-slip sole, suited to site hazards.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "'Safety glasses' are mandatory for:",
+  "options": [
+   "All work generating projections: grinding, drilling, cutting, jackhammering",
+   "Welding only",
+   "No work",
+   "Painting only"
+  ],
+  "answer": "A",
+  "explanation": "Safety glasses (CSA Z94.3) protect against flying particles, chips, and dust. They are required for most manual tasks.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "A 'high-visibility vest' on a construction site is required:",
+  "options": [
+   "At night only",
+   "When the worker is exposed to traffic or mobile equipment",
+   "Never",
+   "For visitors only"
+  ],
+  "answer": "B",
+  "explanation": "The high-visibility vest (CSA Z96) is mandatory near traffic, cranes, and site vehicles, to be seen by operators.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "A CNESST 'investigation and inspection' on a construction site can:",
+  "options": [
+   "Have no consequences",
+   "Only issue warnings",
+   "Be refused by the employer",
+   "Result in corrective orders, fines, and work stoppage"
+  ],
+  "answer": "D",
+  "explanation": "The CNESST inspector can order corrections, impose fines, suspend work, and even shut down a site in case of serious danger.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'accident notice' to the CNESST must be submitted:",
+  "options": [
+   "Only if the worker requests it",
+   "Within 24 hours for a serious or fatal accident",
+   "Within 30 days",
+   "Never"
+  ],
+  "answer": "B",
+  "explanation": "A serious or fatal accident must be reported to the CNESST within 24 hours. The site is preserved for the investigation.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "'Preserving the accident scene' means:",
+  "options": [
+   "Moving nothing (except to rescue) until authorized by the CNESST",
+   "Cleaning up immediately",
+   "Taking photos only",
+   "Resuming work"
+  ],
+  "answer": "A",
+  "explanation": "The scene must be preserved intact for the CNESST investigation. Only rescue actions are permitted. Moving elements may constitute an offence.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'accident and incident register' on a construction site must:",
+  "options": [
+   "Be destroyed after 1 year",
+   "Be kept secret",
+   "Document all accidents, incidents, and first aid, and be accessible",
+   "Contain only fatal accidents"
+  ],
+  "answer": "C",
+  "explanation": "The register records all events: accidents, near misses, first aid. It is used for trend analysis and prevention.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "A 'near miss' is:",
+  "options": [
+   "A minor accident",
+   "A work delay",
+   "A serious accident",
+   "An event that could have caused an accident but did not, requiring analysis"
+  ],
+  "answer": "D",
+  "explanation": "A near miss is a warning sign: the same conditions could have caused an accident. Analyzing it prevents future accidents.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'hierarchy of controls' in OHS places first:",
+  "options": [
+   "Signage",
+   "Administrative controls",
+   "Elimination of the hazard at the source",
+   "PPE"
+  ],
+  "answer": "C",
+  "explanation": "The hierarchy: 1) Elimination, 2) Substitution, 3) Engineering, 4) Administrative, 5) PPE. Elimination is always the priority measure.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'site committee' (or OHS committee) meets:",
+  "options": [
+   "Periodically (typically monthly) to review safety issues",
+   "Only after an accident",
+   "Once a year",
+   "Never"
+  ],
+  "answer": "A",
+  "explanation": "The OHS committee meets regularly (monthly): inspections, accident analysis, program review, follow-up on corrective actions.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "OHS 'training' for workers on a construction site is:",
+  "options": [
+   "For supervisors only",
+   "For new hires only",
+   "Mandatory: safety orientation, task-specific and hazard-specific training",
+   "Optional"
+  ],
+  "answer": "C",
+  "explanation": "Every worker must receive a safety orientation (site rules, emergencies) and training specific to their tasks and the hazards present.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'safety orientation' for a new worker covers:",
+  "options": [
+   "Wages only",
+   "Site rules, emergency procedures, required PPE, specific hazards",
+   "The schedule only",
+   "No content"
+  ],
+  "answer": "B",
+  "explanation": "Safety orientation covers: rules, emergency exits, first aid, PPE, specific hazards, right of refusal, emergency procedures.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'emergency plan' on a construction site must provide for:",
+  "options": [
+   "No plan",
+   "Earthquakes only",
+   "Fires only",
+   "Evacuations, first aid, emergency contacts, assembly points, and drills"
+  ],
+  "answer": "D",
+  "explanation": "The emergency plan covers: evacuation, assembly point, first aid, contacts (911, CNESST, hospital), periodic drills.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 5,
+  "question": "An 'evacuation drill' on a construction site must be:",
+  "options": [
+   "For large projects only",
+   "Never conducted",
+   "Conducted only once",
+   "Conducted periodically to validate the emergency plan and train workers"
+  ],
+  "answer": "D",
+  "explanation": "Evacuation drills validate the plan, identify gaps, and familiarize workers with emergency procedures.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "'First aid' on a construction site requires:",
+  "options": [
+   "A doctor only",
+   "No kit",
+   "A complete, accessible, and checked first aid kit, with trained first aiders",
+   "A telephone only"
+  ],
+  "answer": "C",
+  "explanation": "The OHS Regulation requires a compliant kit, checked regularly, and a minimum number of certified first aiders based on workforce size.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "A 'first aider' on a construction site is:",
+  "options": [
+   "A visitor",
+   "A doctor",
+   "The foreman only",
+   "A worker trained in first aid (general + CPR) designated by the employer"
+  ],
+  "answer": "D",
+  "explanation": "The first aider is a trained worker (general first aid, CPR, AED) and designated. The required number depends on workforce size and hazards.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "The 'first aid kit' on a construction site must contain:",
+  "options": [
+   "No specific content",
+   "Alcohol only",
+   "Bandages only",
+   "Materials compliant with the OHS Regulation: dressings, gauze, bandages, scissors, gloves, etc."
+  ],
+  "answer": "D",
+  "explanation": "The content is regulated by the OHS Regulation (schedule) based on workforce size: dressings, sterile gauze, bandages, scissors, gloves, blanket, etc.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "An 'AED' (automated external defibrillator) on a construction site:",
+  "options": [
+   "Is recommended and increasingly required, with first aiders trained in its use",
+   "Is for hospitals only",
+   "Has no use",
+   "Is prohibited"
+  ],
+  "answer": "A",
+  "explanation": "An AED can save a life in case of cardiac arrest. More and more sites are equipped with them, with trained first aiders.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "'Safety signage' on a construction site uses signs that are:",
+  "options": [
+   "Standardized (CSA Z321): shape and colour according to message type",
+   "Random",
+   "In English only",
+   "Verbal only"
+  ],
+  "answer": "A",
+  "explanation": "Signs are standardized: red circle (prohibition), yellow triangle (warning), blue circle (mandatory), green square (emergency).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 5,
+  "question": "'Barricading' a danger zone on a construction site uses:",
+  "options": [
+   "Paint only",
+   "Signs only",
+   "Tape, barriers, fencing, and signals according to the risk level",
+   "No barricading"
+  ],
+  "answer": "C",
+  "explanation": "Barricading delineates hazardous zones: tape (warning), barrier (restricted access), fencing (no access), according to the risk.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "A lump sum construction contract commits the contractor to:",
+  "options": [
+   "Perform all the work described for a fixed total price",
+   "Be paid according to actual costs",
+   "Guarantee nothing",
+   "Provide labour only"
+  ],
+  "answer": "A",
+  "explanation": "Under a lump sum contract, the contractor commits to completing all contract work for a set total price, assuming the risk of quantities and costs.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "A unit price contract is preferable when:",
+  "options": [
+   "The work is residential only",
+   "The client wants a guaranteed fixed price",
+   "Quantities are uncertain or may vary (e.g., excavation, civil engineering)",
+   "The scope is perfectly defined"
+  ],
+  "answer": "C",
+  "explanation": "Unit pricing suits uncertain quantities: payment is based on actual measured quantities, not a lump sum estimate.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "A cost-plus contract transfers the cost risk:",
+  "options": [
+   "To the client (owner), who pays actual costs plus a fee",
+   "To the architect",
+   "To the contractor",
+   "To the subcontractor"
+  ],
+  "answer": "A",
+  "explanation": "In a cost-plus contract, the owner bears the overrun risk: they reimburse actual costs and pay a fee (fixed or percentage).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'change order clause' in a contract allows:",
+  "options": [
+   "Ignoring the plans",
+   "Reducing wages",
+   "Unilaterally cancelling the contract",
+   "Modifying the scope, price, or schedule by written agreement between the parties"
+  ],
+  "answer": "D",
+  "explanation": "A change order (amendment) adjusts the contract in writing: additional/omitted work, price change, schedule extension. It must be signed.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'change order' not signed by the client:",
+  "options": [
+   "May not be payable if the contract requires prior written authorization",
+   "Cancels the contract",
+   "Is automatically approved",
+   "Is always valid"
+  ],
+  "answer": "A",
+  "explanation": "Most contracts require written authorization before additional work. Without a signature, the contractor risks not being paid.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "'Liquidated damages' for delay are:",
+  "options": [
+   "A bonus for the contractor",
+   "A criminal fine",
+   "A government tax",
+   "A pre-agreed lump sum amount, payable per day of delay beyond the contractual date"
+  ],
+  "answer": "D",
+  "explanation": "Liquidated damages are a pre-agreed daily amount (e.g., $500/day) compensating the client for delay, without having to prove the loss.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'force majeure clause' in a contract:",
+  "options": [
+   "Cancels all obligations",
+   "Increases prices",
+   "Reduces deadlines",
+   "Relieves the parties of liability for unforeseeable and uncontrollable events (strike, disaster)"
+  ],
+  "answer": "D",
+  "explanation": "Force majeure (unforeseeable, irresistible, external event) suspends obligations and deadlines without penalty for the parties.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The 10% 'contractual holdback' is:",
+  "options": [
+   "A discount",
+   "A tax",
+   "An amount withheld from each progress payment to guarantee completion of the work",
+   "A penalty"
+  ],
+  "answer": "C",
+  "explanation": "The 10% holdback is deducted from each payment and retained until completion, guaranteeing the correction of deficiencies.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "The release of the 10% holdback takes place:",
+  "options": [
+   "Only at the end of the 5-year warranty",
+   "At substantial completion (partial) and final completion, after expiry of claim periods",
+   "At the start of the project",
+   "Never"
+  ],
+  "answer": "B",
+  "explanation": "Part is released at substantial completion, the balance after final completion and expiry of claim periods (legal hypothec).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'performance bond' protects:",
+  "options": [
+   "The workers",
+   "The contractor",
+   "The client against contractor default, by guaranteeing completion of the work",
+   "The subcontractors"
+  ],
+  "answer": "C",
+  "explanation": "The performance bond (typically 50% of the contract) guarantees the client that the work will be completed even if the contractor defaults.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'labour and material payment bond' protects:",
+  "options": [
+   "The architects",
+   "The client only",
+   "The engineers",
+   "Subcontractors and suppliers against non-payment by the general contractor"
+  ],
+  "answer": "D",
+  "explanation": "The payment bond guarantees that subcontractors and suppliers will be paid, even if the general contractor defaults.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'bid bond' is typically:",
+  "options": [
+   "1%",
+   "25%",
+   "5%",
+   "10% of the bid amount"
+  ],
+  "answer": "D",
+  "explanation": "The bid bond (10%) ensures that the successful bidder will sign the contract and provide the required bonds.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'legal hypothec for construction' (s. 2726 C.C.Q.) is:",
+  "options": [
+   "A loan agreement",
+   "A building permit",
+   "A security interest on the property for the benefit of unpaid workers, subcontractors, and suppliers",
+   "An insurance policy"
+  ],
+  "answer": "C",
+  "explanation": "The legal hypothec secures claims related to work on the property. It must be registered within 30 days of completion of the work.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "The deadline to register a legal hypothec for construction is:",
+  "options": [
+   "1 year",
+   "5 years",
+   "30 days after completion of the work or termination of the contract",
+   "No deadline"
+  ],
+  "answer": "C",
+  "explanation": "Registration must be made within 30 days of completion of the work or termination. After this deadline, the right to the hypothec is lost.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'waiver' (release) in a construction contract is:",
+  "options": [
+   "An invoice",
+   "A permit",
+   "A document by which a party gives up a right (e.g., lien, claim) in exchange for payment",
+   "A plan"
+  ],
+  "answer": "C",
+  "explanation": "The waiver (release) confirms payment and renounces claim or lien rights for the covered work.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "'Mediation' in a construction dispute is:",
+  "options": [
+   "A voluntary and confidential process where a mediator facilitates an agreement without imposing a solution",
+   "A trial",
+   "A criminal prosecution",
+   "An arbitration"
+  ],
+  "answer": "A",
+  "explanation": "Mediation is an amicable process: the mediator helps the parties negotiate. It is often a mandatory prerequisite before arbitration.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "'Arbitration' in a construction dispute is:",
+  "options": [
+   "A mediation",
+   "A private process where an arbitrator renders a binding decision, often provided for in the contract",
+   "An informal negotiation",
+   "A public trial"
+  ],
+  "answer": "B",
+  "explanation": "Arbitration is a private tribunal: the arbitrator hears the parties and renders a binding award. It is often faster and confidential compared to a trial.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'arbitration clause' in a construction contract:",
+  "options": [
+   "Cancels the contract",
+   "Prohibits arbitration",
+   "Sets wages",
+   "Requires the parties to submit their disputes to arbitration rather than the courts"
+  ],
+  "answer": "D",
+  "explanation": "The arbitration clause commits the parties to use arbitration for any dispute arising from the contract, excluding ordinary courts.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'limitation period' for a contractual action in construction in Quebec is:",
+  "options": [
+   "30 years",
+   "3 years (general law) from the triggering event or discovery",
+   "1 year",
+   "10 years"
+  ],
+  "answer": "B",
+  "explanation": "The general limitation period is 3 years (s. 2925 C.C.Q.). For hidden defects, it runs from the discovery of the defect.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'formal notice' (demand letter) in a construction dispute is:",
+  "options": [
+   "An invoice",
+   "A permit",
+   "A formal notification demanding performance of an obligation, prerequisite to legal action",
+   "A plan"
+  ],
+  "answer": "C",
+  "explanation": "The formal notice (s. 1597 C.C.Q.) calls on the debtor to perform their obligation. It is often required before initiating legal proceedings.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'defect of consent' (error, fraud, lesion) can:",
+  "options": [
+   "Strengthen the contract",
+   "Lead to the nullity of the contract if a party was deceived or mistaken about an essential element",
+   "Increase the price",
+   "Have no effect"
+  ],
+  "answer": "B",
+  "explanation": "A defect of consent (error, fraud, fear) can render the contract voidable if a party would not have contracted without that error or deception.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "The contractor's 'contractual liability' covers:",
+  "options": [
+   "Damages resulting from non-performance or defective performance of the contract",
+   "Delays only",
+   "No liability",
+   "Bodily injury only"
+  ],
+  "answer": "A",
+  "explanation": "The contractor is liable for damages caused by non-performance: defects, delays, non-compliance, subject to contractual exclusions.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "'Extra-contractual liability' (tort) can engage:",
+  "options": [
+   "Any person causing damage to another through their fault, even without a contract",
+   "No one",
+   "The contractor only",
+   "The client only"
+  ],
+  "answer": "A",
+  "explanation": "Section 1457 C.C.Q. requires every person to repair damage caused to another by their fault, regardless of any contract.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'warranty of quality' (hidden defects) of the seller/builder is:",
+  "options": [
+   "Optional",
+   "Non-existent in Quebec",
+   "Contractual only",
+   "Legal and automatic: the property must be free of hidden defects rendering it unfit for use"
+  ],
+  "answer": "D",
+  "explanation": "The warranty of quality (s. 1726 C.C.Q.) is legal: the seller/builder guarantees that the property is free of hidden defects, even without a clause.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "'Acceptance of work' without reservation constitutes:",
+  "options": [
+   "Cancellation of the contract",
+   "Extension of the contract",
+   "Acceptance of the work, transferring custody to the client and triggering warranties",
+   "Rejection of the work"
+  ],
+  "answer": "C",
+  "explanation": "Acceptance (even tacit) transfers custody to the client, triggers warranty periods, and releases the contractor from the duty of custody.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "'Punch list items' at acceptance:",
+  "options": [
+   "Identify work to be corrected without preventing acceptance, but maintain the contractor's obligation",
+   "Have no effect",
+   "Extend the contract indefinitely",
+   "Cancel the acceptance"
+  ],
+  "answer": "A",
+  "explanation": "Punch list items list deficiencies to be corrected. Acceptance takes place, but the contractor remains obligated to correct the reserved items.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'disclaimer clause' in a contract:",
+  "options": [
+   "May be invalid if it excludes liability for gross negligence or fraud",
+   "Is mandatory",
+   "Is always valid",
+   "Cancels all obligations"
+  ],
+  "answer": "A",
+  "explanation": "A disclaimer clause may be set aside if it attempts to exclude liability for gross negligence, fraud, or breach of an essential obligation.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'subcontractor' is contractually bound to:",
+  "options": [
+   "The general contractor, not directly to the client (except in certain cases)",
+   "Directly to the client (owner)",
+   "The municipality",
+   "The architect"
+  ],
+  "answer": "A",
+  "explanation": "The subcontractor contracts with the general contractor, not with the owner. The legal relationship is with the contractor (except under a direct contract).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "'Direct payment' to the subcontractor by the client is possible:",
+  "options": [
+   "Under certain conditions (e.g., contractor default, contractual clause, legal hypothec)",
+   "For public projects only",
+   "Never",
+   "Only if the subcontractor requests it"
+  ],
+  "answer": "A",
+  "explanation": "The client may pay the subcontractor directly in case of contractor default or if the contract provides for it, to avoid liens.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "'Joint and several liability' between the general contractor and the subcontractor towards the client:",
+  "options": [
+   "Exists only if provided for in the contract or by law",
+   "Never exists",
+   "Is automatic in all cases",
+   "Is prohibited"
+  ],
+  "answer": "A",
+  "explanation": "Joint and several liability is not presumed: it must be stipulated in the contract or provided for by law. Without it, each party is liable only for their share.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "'CCDC 2' (Canadian standard contract) provides that changes must be:",
+  "options": [
+   "Approved by the municipality",
+   "Verbal",
+   "In writing and authorized by the architect/engineer (consultant) on behalf of the client",
+   "Unilateral by the contractor"
+  ],
+  "answer": "C",
+  "explanation": "CCDC 2 requires that changes be documented in writing and authorized by the consultant (architect/engineer) acting for the client.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The role of the 'architect' or 'engineer' (consultant) in a CCDC contract is to:",
+  "options": [
+   "Represent the contractor",
+   "Represent the subcontractors",
+   "Have no role",
+   "Act as the client's agent and impartial interpreter of the contract"
+  ],
+  "answer": "D",
+  "explanation": "The consultant (architect/engineer) acts for the client: they administer the contract, interpret documents, certify payments, and judge compliance.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'payment certificate' issued by the consultant:",
+  "options": [
+   "Attests that the work is compliant and recommends payment to the client",
+   "Cancels the contract",
+   "Is an invoice from the contractor",
+   "Is an actual payment"
+  ],
+  "answer": "A",
+  "explanation": "The payment certificate is a recommendation by the consultant to the client to pay an amount, based on progress and compliance of the work.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "'Termination for cause' allows the client to:",
+  "options": [
+   "Terminate the contract after formal notice and a cure period, if the contractor does not remedy the default",
+   "Terminate only by court judgment",
+   "Terminate the contract without notice",
+   "Terminate at any time without reason"
+  ],
+  "answer": "A",
+  "explanation": "Termination for cause requires a formal notice and a reasonable period to cure. If the contractor does not remedy, the client may terminate.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "'Termination for convenience':",
+  "options": [
+   "Is free for the client",
+   "Allows the client to terminate without contractor fault, with compensation for work performed",
+   "Cancels all payments",
+   "Does not exist"
+  ],
+  "answer": "B",
+  "explanation": "Termination for convenience (if provided for in the contract) allows the client to stop the project without fault, paying for work done and termination costs.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "'Damages' in case of contractual breach aim to:",
+  "options": [
+   "Enrich the injured party",
+   "Compensate the injured party for the loss suffered and the lost gain, without enriching them",
+   "Punish the party at fault",
+   "Replace the contract"
+  ],
+  "answer": "B",
+  "explanation": "Damages are compensatory: they place the injured party in the position they would have been in had the contract been performed.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'duty to mitigate' (minimize damages) requires the injured party to:",
+  "options": [
+   "Sue immediately",
+   "Take reasonable steps to limit the extent of their loss",
+   "Let the damages worsen",
+   "Ignore the problem"
+  ],
+  "answer": "B",
+  "explanation": "The injured party must act reasonably to limit their damages (e.g., find another contractor). They cannot let the loss worsen.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'penalty clause' in a Quebec contract:",
+  "options": [
+   "Sets the amount of damages in advance, but the court may reduce it if it is abusive",
+   "Is mandatory",
+   "Replaces the contract",
+   "Is always invalid"
+  ],
+  "answer": "A",
+  "explanation": "The penalty clause (s. 1622 C.C.Q.) sets damages in advance. The court may reduce it if it is manifestly abusive or disproportionate.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'vendor's privilege' on equipment at a construction site:",
+  "options": [
+   "May exist if the equipment is unpaid for and not incorporated into the property",
+   "Is always a priority",
+   "Does not exist",
+   "Replaces the hypothec"
+  ],
+  "answer": "A",
+  "explanation": "The seller of unincorporated equipment may have a privilege or retention of title. Once incorporated, the equipment becomes part of the property.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "'Retention of title' in a supply contract:",
+  "options": [
+   "Maintains ownership with the seller until full payment",
+   "Is prohibited",
+   "Cancels the sale",
+   "Transfers ownership immediately"
+  ],
+  "answer": "A",
+  "explanation": "Retention of title stipulates that the seller remains the owner until full payment, protecting the supplier in case of the buyer's insolvency.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'insolvency' of the general contractor affects subcontractors because:",
+  "options": [
+   "They risk not being paid, hence the importance of the payment bond and legal hypothec",
+   "They are automatically paid",
+   "They become owners",
+   "The contract is automatically transferred"
+  ],
+  "answer": "A",
+  "explanation": "In case of insolvency, subcontractors are unsecured creditors. The payment bond and legal hypothec are their protections.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'Bankruptcy and Insolvency Act' (federal) can:",
+  "options": [
+   "Guarantee payment to everyone",
+   "Cancel all contracts",
+   "Suspend creditors' remedies and impose a priority order for claims",
+   "Eliminate hypothecs"
+  ],
+  "answer": "C",
+  "explanation": "Bankruptcy suspends individual proceedings (stay) and establishes a distribution order. Secured claims (hypothec) take priority over unsecured ones.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'pledge' (security on receivables) in construction:",
+  "options": [
+   "Replaces the bond",
+   "Can secure a loan by assigning the contract receivables (payments to be received)",
+   "Cancels the contract",
+   "Is prohibited"
+  ],
+  "answer": "B",
+  "explanation": "A pledge of receivables assigns payments to be received to a lender as security. It must be notified to the client to be enforceable.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "'Assignment of contract' in construction:",
+  "options": [
+   "Generally requires the consent of the other party (intuitu personae)",
+   "Cancels the warranties",
+   "Is prohibited",
+   "Is always unrestricted"
+  ],
+  "answer": "A",
+  "explanation": "A construction contract is often intuitu personae (based on the person). Assignment to a third party requires the other party's consent.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "'Second-tier subcontracting' (sub-subcontracting) is:",
+  "options": [
+   "Automatically authorized",
+   "Without legal effect",
+   "Always prohibited",
+   "Possible but often subject to authorization by the general contractor or the client"
+  ],
+  "answer": "D",
+  "explanation": "Sub-subcontracting may be permitted but is often conditional on approval. The general contractor remains responsible to the client.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'confidentiality clause' in a construction contract:",
+  "options": [
+   "Is mandatory by law",
+   "Is worthless",
+   "Requires the parties not to disclose sensitive project information",
+   "Cancels the contract"
+  ],
+  "answer": "C",
+  "explanation": "The confidentiality clause protects sensitive information: prices, methods, client data. Its breach can result in damages.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'intellectual property clause' in a construction contract:",
+  "options": [
+   "Cancels patents",
+   "Determines who owns the plans, methods, and innovations developed",
+   "Never exists",
+   "Is mandatory"
+  ],
+  "answer": "B",
+  "explanation": "The IP clause assigns ownership of plans, methods, and innovations. Without it, disputes may arise over ownership of developments.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "'Dispute resolution' in a contract typically provides for:",
+  "options": [
+   "Mediation only",
+   "No mechanism",
+   "A sequence: negotiation → mediation → arbitration (or courts)",
+   "Courts only"
+  ],
+  "answer": "C",
+  "explanation": "Contracts provide for escalation: negotiation between the parties, then mediation, then arbitration or courts, to resolve disputes efficiently.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'governing law clause' in a Quebec construction contract:",
+  "options": [
+   "Is mandatory",
+   "Designates Quebec (or Canadian) law as governing the contract",
+   "Is useless",
+   "Cancels the contract"
+  ],
+  "answer": "B",
+  "explanation": "The governing law clause designates the law that governs the interpretation of the contract. In Quebec, it is Quebec civil law.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'competent court' (jurisdiction) in a construction dispute in Quebec is:",
+  "options": [
+   "The Superior Court of Quebec (or the Court of Quebec for small claims)",
+   "Arbitration only",
+   "The Federal Court only",
+   "A foreign court"
+  ],
+  "answer": "A",
+  "explanation": "Construction disputes fall under the Superior Court (or Court of Quebec < $85,000), unless the parties have agreed to arbitration.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "The 3-year 'extinctive prescription' in Quebec means that:",
+  "options": [
+   "The right to take legal action expires 3 years after the triggering event or knowledge of the damage",
+   "The project must last 3 years",
+   "The contract expires after 3 years",
+   "Warranties last 3 years"
+  ],
+  "answer": "A",
+  "explanation": "Extinctive prescription (s. 2925 C.C.Q.) extinguishes the right of action after 3 years. Acting after this deadline results in the claim being inadmissible.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "'Interruption of prescription' can result from:",
+  "options": [
+   "Inaction",
+   "The passage of time",
+   "Silence",
+   "An acknowledgment of debt, a formal notice, or the filing of a claim"
+  ],
+  "answer": "D",
+  "explanation": "Prescription is interrupted by: acknowledgment of the right, legal proceedings, seizure. The period starts over from zero after interruption.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'burden of proof' in a construction dispute falls on:",
+  "options": [
+   "The defendant only",
+   "The judge",
+   "The party alleging a fact (plaintiff for fault, defendant for exceptions)",
+   "The expert"
+  ],
+  "answer": "C",
+  "explanation": "The burden of proof follows the rule 'actori incumbit probatio': the one who alleges must prove. The plaintiff proves fault, the defendant proves their defences.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "'Judicial expertise' in a construction dispute:",
+  "options": [
+   "Is mandatory in all cases",
+   "Allows the court to appoint a neutral expert to clarify technical issues",
+   "Is prohibited",
+   "Replaces the judge"
+  ],
+  "answer": "B",
+  "explanation": "The court may appoint an expert (engineer, architect) to give a neutral technical opinion on defects, costs, or causes.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'class action' in construction:",
+  "options": [
+   "Is prohibited",
+   "Replaces arbitration",
+   "Is possible for a group of owners affected by a common defect (e.g., condos)",
+   "Is mandatory"
+  ],
+  "answer": "C",
+  "explanation": "A class action allows a group (e.g., co-owners) to sue collectively for a common harm, such as construction defects.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'settlement' in a construction dispute:",
+  "options": [
+   "An agreement between the parties ending the dispute, with mutual concessions",
+   "Cancels the contract",
+   "Is a judgment",
+   "Is imposed by the judge"
+  ],
+  "answer": "A",
+  "explanation": "A settlement (s. 2631 C.C.Q.) is a contract by which the parties resolve their dispute through reciprocal concessions. It has the authority of res judicata.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'waiver clause' (no-waiver clause) in a contract:",
+  "options": [
+   "Cancels the contract",
+   "Requires renouncing all rights",
+   "Specifies that failure to exercise a right does not constitute a waiver of exercising it later",
+   "Is illegal"
+  ],
+  "answer": "C",
+  "explanation": "The no-waiver clause protects the parties: tolerating a breach once does not mean waiving rights for the future.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "A 'contract of adhesion' in construction (e.g., imposed general conditions):",
+  "options": [
+   "Has no value",
+   "Is always invalid",
+   "Is interpreted against the party that drafted it (contra proferentem rule)",
+   "Is mandatory"
+  ],
+  "answer": "C",
+  "explanation": "A contract of adhesion (conditions imposed without negotiation) is interpreted against its drafter in case of ambiguity, protecting the weaker party.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "'Good faith' (ss. 6, 7, 1375 C.C.Q.) in the performance of a construction contract requires:",
+  "options": [
+   "Loyal, honest, and cooperative behaviour between the parties",
+   "Compliance with the text only",
+   "Ignoring the other party",
+   "Maximizing one's profit"
+  ],
+  "answer": "A",
+  "explanation": "Good faith is a fundamental principle of Quebec law: parties must act with loyalty, honesty, and cooperation in performing the contract.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 6,
+  "question": "'Abuse of rights' in the exercise of a contractual right can:",
+  "options": [
+   "Engage the liability of its author if the exercise is excessive, unreasonable, or in bad faith",
+   "Strengthen the right",
+   "Have no consequences",
+   "Cancel the contract"
+  ],
+  "answer": "A",
+  "explanation": "Abuse of rights (s. 7 C.C.Q.) sanctions the excessive or unreasonable exercise of a right, even a legitimate one, causing harm to another.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 6,
+  "question": "The 'theory of unforeseeability' in Quebec contract law:",
+  "options": [
+   "Always allows renegotiating the price",
+   "Cancels all contracts",
+   "Is mandatory",
+   "Is generally not recognized: the contract binds the parties even if circumstances change"
+  ],
+  "answer": "D",
+  "explanation": "Quebec law is reluctant to accept unforeseeability: the contract is law between the parties. Changes in circumstances do not automatically release them.",
+  "difficulty": "HARD"
+ }
+]

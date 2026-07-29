@@ -1,0 +1,1692 @@
+[
+ {
+  "chapter": 3,
+  "question": "La CCQ (Commission de la construction du Québec) a pour rôle principal :",
+  "options": [
+   "Approuver les plans de construction",
+   "Gérer les permis municipaux",
+   "Administrer le régime de relations de travail et les conventions collectives de l'industrie de la construction",
+   "Délivrer les licences d'entrepreneur"
+  ],
+  "answer": "C",
+  "explanation": "La CCQ administre les conventions collectives, les fonds de pension, la formation et les certificats de compétence dans l'industrie de la construction au Québec.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Le certificat de compétence CCQ est :",
+  "options": [
+   "Une licence d'entrepreneur",
+   "Un diplôme universitaire",
+   "Un document obligatoire pour travailler sur un chantier de construction au Québec",
+   "Un permis de conduire"
+  ],
+  "answer": "C",
+  "explanation": "Tout travailleur de la construction doit détenir un certificat de compétence CCQ valide pour travailler sur un chantier assujetti à la Loi R-20.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "La Loi R-20 (Loi sur les relations de travail, la formation professionnelle et la gestion de la main-d'œuvre dans l'industrie de la construction) s'applique :",
+  "options": [
+   "Uniquement aux projets résidentiels",
+   "À tous les travaux de construction au Québec, avec certaines exemptions",
+   "Uniquement aux projets gouvernementaux",
+   "Uniquement aux projets de plus de 1 million $"
+  ],
+  "answer": "B",
+  "explanation": "La Loi R-20 encadre l'ensemble de l'industrie de la construction au Québec. Certaines exemptions existent (entretien, travaux mineurs, autoconstruction).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Les quatre secteurs de l'industrie de la construction au Québec sont :",
+  "options": [
+   "Nord, sud, est, ouest",
+   "Résidentiel léger, résidentiel lourd, commercial/institutionnel, industriel, génie civil et voirie",
+   "Public, privé, mixte, international",
+   "Résidentiel, commercial, industriel, génie civil"
+  ],
+  "answer": "B",
+  "explanation": "La CCQ divise l'industrie en secteurs : résidentiel léger, résidentiel lourd, commercial/institutionnel, industriel, génie civil et voirie, chacun avec sa convention.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le ratio d'apprentis par compagnon sur un chantier est :",
+  "options": [
+   "Illimité",
+   "Déterminé par la convention collective (typiquement 1 apprenti par compagnon)",
+   "Déterminé par le client",
+   "Toujours de 3 apprentis par compagnon"
+  ],
+  "answer": "B",
+  "explanation": "Les conventions collectives CCQ limitent le ratio apprentis/compagnons pour assurer la formation adéquate et la qualité des travaux.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "L'embauche de travailleurs de la construction au Québec passe par :",
+  "options": [
+   "Le placement syndical (bureau de placement) ou l'embauche directe selon la convention",
+   "Uniquement les agences de placement",
+   "Uniquement les petites annonces",
+   "Le gouvernement fédéral"
+  ],
+  "answer": "A",
+  "explanation": "Selon le secteur et la convention, l'embauche peut se faire par le bureau de placement syndical ou directement par l'employeur, avec priorité aux travailleurs locaux.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Les heures supplémentaires sur un chantier de construction sont généralement payées à :",
+  "options": [
+   "Temps double dès la première heure",
+   "Temps et demi (1,5×) pour les premières heures, temps double (2×) ensuite",
+   "Aucune majoration",
+   "Taux normal"
+  ],
+  "answer": "B",
+  "explanation": "Les conventions CCQ prévoient typiquement 1,5× après 8h/jour ou 40h/semaine, et 2× au-delà, avec des variations selon le secteur.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "La sous-traitance en construction consiste à :",
+  "options": [
+   "Louer de l'équipement",
+   "Acheter des matériaux en gros",
+   "Embaucher des employés directement",
+   "Confier une portion des travaux à une entreprise spécialisée (sous-traitant)"
+  ],
+  "answer": "D",
+  "explanation": "Le sous-traitant est une entreprise engagée par l'entrepreneur général pour exécuter un lot de travaux spécialisé (électricité, plomberie, etc.).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "L'entrepreneur général est responsable envers le client :",
+  "options": [
+   "D'aucun travail, tout est sous-traité",
+   "De l'ensemble des travaux, incluant ceux des sous-traitants",
+   "Uniquement de ses propres travaux",
+   "Uniquement de la coordination"
+  ],
+  "answer": "B",
+  "explanation": "L'entrepreneur général assume la responsabilité contractuelle globale. Les défaillances des sous-traitants sont sa responsabilité envers le client.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "La coordination entre sous-traitants sur un chantier est la responsabilité de :",
+  "options": [
+   "L'entrepreneur général ou le chargé de projet",
+   "Chaque sous-traitant individuellement",
+   "L'architecte",
+   "Le client"
+  ],
+  "answer": "A",
+  "explanation": "L'entrepreneur général (ou son représentant) coordonne les séquences, les accès et les interfaces entre les différents sous-traitants.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « syndicat » dans l'industrie de la construction québécoise représente :",
+  "options": [
+   "Les travailleurs (salariés) pour la négociation des conditions de travail",
+   "Les entrepreneurs",
+   "Les clients",
+   "Les fournisseurs de matériaux"
+  ],
+  "answer": "A",
+  "explanation": "Les syndicats (FTQ-Construction, CSN, CSD, etc.) représentent les travailleurs et négocient les conventions collectives avec les associations patronales.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "La convention collective de la construction au Québec détermine :",
+  "options": [
+   "Les salaires, les avantages sociaux, les conditions de travail, les heures, les congés et les règles d'embauche",
+   "Uniquement les heures de travail",
+   "Uniquement les congés",
+   "Uniquement les salaires"
+  ],
+  "answer": "A",
+  "explanation": "La convention collective est un contrat global couvrant tous les aspects des conditions de travail : salaires, avantages, horaires, mobilité, etc.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « bassin de main-d'œuvre » dans la construction réfère à :",
+  "options": [
+   "Une piscine sur le chantier",
+   "Le budget de main-d'œuvre",
+   "Le nombre de sous-traitants",
+   "Le nombre de travailleurs disponibles et qualifiés dans une région"
+  ],
+  "answer": "D",
+  "explanation": "Le bassin de main-d'œuvre est le pool de travailleurs certifiés disponibles dans une région, influençant la planification et les coûts.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "La productivité de la main-d'œuvre se mesure par :",
+  "options": [
+   "Le ratio output/input (ex. : m² installés par heure-ouvrier)",
+   "Le nombre d'employés",
+   "Le salaire horaire",
+   "Le nombre d'heures travaillées"
+  ],
+  "answer": "A",
+  "explanation": "La productivité = quantité produite / heures travaillées. Elle varie selon les conditions de chantier, la compétence et la coordination.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Un facteur qui réduit la productivité sur un chantier est :",
+  "options": [
+   "Un approvisionnement régulier en matériaux",
+   "Les heures supplémentaires prolongées (fatigue cumulative)",
+   "Des plans clairs et complets",
+   "Une bonne coordination"
+  ],
+  "answer": "B",
+  "explanation": "Les heures sup prolongées causent de la fatigue, réduisant la productivité marginale. Des études montrent une baisse significative après 50h/semaine.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « crew » (équipe de travail) typique en construction est composé de :",
+  "options": [
+   "Uniquement des apprentis",
+   "Des ingénieurs et des architectes",
+   "Un compagnon et un ou plusieurs apprentis/aides, selon le métier et la convention",
+   "Uniquement des compagnons"
+  ],
+  "answer": "C",
+  "explanation": "Le crew standard respecte les ratios de la convention : ex. 1 compagnon + 1 apprenti, ou 1 compagnon + 2 manœuvres selon le métier.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « placement syndical » (union dispatch) fonctionne par :",
+  "options": [
+   "Tirage au sort",
+   "Enchères sur les salaires",
+   "Choix aléatoire des travailleurs",
+   "Liste de priorité basée sur l'ancienneté et la disponibilité"
+  ],
+  "answer": "D",
+  "explanation": "Le bureau de placement syndical assigne les travailleurs selon une liste de priorité (ancienneté, disponibilité, compétences) et les besoins de l'employeur.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "La « mobilité de la main-d'œuvre » dans la construction signifie :",
+  "options": [
+   "Que les salaires sont mobiles",
+   "Que les travailleurs se déplacent entre chantiers et régions selon les besoins",
+   "Que les travailleurs changent de métier",
+   "Que les chantiers se déplacent"
+  ],
+  "answer": "B",
+  "explanation": "La mobilité est essentielle dans la construction : les travailleurs suivent les projets, se déplaçant entre chantiers et parfois entre régions.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "L'indemnité de déplacement (travel allowance) est versée quand :",
+  "options": [
+   "Le chantier est situé au-delà d'une certaine distance du domicile ou du bureau syndical",
+   "Le travailleur prend des vacances",
+   "Le projet est annulé",
+   "Le travailleur est en retard"
+  ],
+  "answer": "A",
+  "explanation": "Les conventions prévoient des indemnités de déplacement quand le chantier est éloigné, couvrant le transport et parfois l'hébergement.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « T-4 » et le « relevé 1 » sont des documents liés à :",
+  "options": [
+   "La fiscalité et les déclarations de revenus des travailleurs",
+   "Les permis de construction",
+   "La qualité des travaux",
+   "La planification de chantier"
+  ],
+  "answer": "A",
+  "explanation": "Le T-4 (fédéral) et le relevé 1 (Québec) sont les feuillets fiscaux émis par l'employeur, déclarant les revenus et retenues du travailleur.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Les charges sociales de l'employeur dans la construction comprennent :",
+  "options": [
+   "Uniquement le salaire",
+   "Aucune charge supplémentaire",
+   "Les cotisations RRQ, RQAP, assurance-emploi, CSST, fonds de pension CCQ et avantages sociaux",
+   "Uniquement les taxes"
+  ],
+  "answer": "C",
+  "explanation": "Le coût réel de la M-O inclut les charges patronales : RRQ, AE, RQAP, CNESST, fonds CCQ, assurances, vacances, congés — typiquement 35-45 % du salaire.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « fardeau salarial » (labor burden) de 40 % sur un salaire de 40 $/h donne un coût réel de :",
+  "options": [
+   "80 $/h",
+   "56 $/h",
+   "40 $/h",
+   "24 $/h"
+  ],
+  "answer": "B",
+  "explanation": "40 $ × 1,40 = 56 $/h. Le fardeau salarial ajoute les charges patronales au salaire de base pour obtenir le coût réel de la M-O.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "La « clause de réserve » dans une convention collective permet :",
+  "options": [
+   "À l'employeur de garder certains travailleurs clés entre les projets",
+   "De réserver des matériaux",
+   "De réserver le chantier",
+   "D'annuler la convention"
+  ],
+  "answer": "A",
+  "explanation": "La clause de réserve (ou liste de rappel) permet à l'employeur de retenir des travailleurs essentiels pour assurer la continuité entre les projets.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « décret de convention collective » dans la construction est :",
+  "options": [
+   "Un acte gouvernemental rendant la convention obligatoire pour tous les employeurs et travailleurs du secteur",
+   "Une recommandation syndicale",
+   "Une suggestion non contraignante",
+   "Un contrat individuel"
+  ],
+  "answer": "A",
+  "explanation": "Le décret rend la convention collective obligatoire pour toute l'industrie dans le secteur et la région visés, même pour les non-syndiqués.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "La « formation continue » obligatoire dans la construction québécoise est :",
+  "options": [
+   "Optionnelle et sans conséquence",
+   "Uniquement pour les ingénieurs",
+   "Uniquement pour les apprentis",
+   "Exigée par la CCQ pour maintenir le certificat de compétence (150h/3 ans)"
+  ],
+  "answer": "D",
+  "explanation": "La CCQ exige des heures de formation continue pour le renouvellement du certificat de compétence, assurant le maintien des compétences.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « carnet d'apprentissage » CCQ sert à :",
+  "options": [
+   "Calculer les impôts",
+   "Documenter les heures de travail et les compétences acquises par l'apprenti",
+   "Enregistrer les absences",
+   "Noter les heures de repas"
+  ],
+  "answer": "B",
+  "explanation": "Le carnet d'apprentissage consigne les heures travaillées et les compétences développées, menant à l'obtention du certificat de compagnon.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Un « lock-out » dans l'industrie de la construction est :",
+  "options": [
+   "Un arrêt de travail initié par l'employeur lors d'un conflit de négociation",
+   "Une panne d'équipement",
+   "Une grève des travailleurs",
+   "Un retard de livraison"
+  ],
+  "answer": "A",
+  "explanation": "Le lock-out est la fermeture temporaire du chantier par l'employeur en réponse à un conflit collectif, parallèle au droit de grève des travailleurs.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "La « grève » dans la construction est :",
+  "options": [
+   "Un retard individuel",
+   "Uniquement illégale",
+   "Interdite en tout temps",
+   "Un arrêt de travail concerté des travailleurs, encadré par le Code du travail"
+  ],
+  "answer": "D",
+  "explanation": "La grève est un droit constitutionnel encadré par le Code du travail. Dans la construction, des dispositions spéciales (Loi R-20) peuvent limiter son exercice.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « taux de salaire » dans une convention collective varie selon :",
+  "options": [
+   "Le métier, le secteur, la région et le statut (apprenti/compagnon)",
+   "Uniquement la taille du projet",
+   "Le nom de l'employeur",
+   "Uniquement l'âge du travailleur"
+  ],
+  "answer": "A",
+  "explanation": "Les taux sont négociés par métier, secteur (résidentiel, commercial, etc.), région administrative et niveau de qualification.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "L'« affectation » d'un travailleur sur un chantier signifie :",
+  "options": [
+   "Son transfert à un autre employeur",
+   "Son assignation à un chantier, un métier et une équipe spécifiques",
+   "Son licenciement",
+   "Sa promotion"
+  ],
+  "answer": "B",
+  "explanation": "L'affectation est l'assignation officielle d'un travailleur à un projet, déterminant son lieu, son équipe et ses conditions de travail.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « temps de voyage » rémunéré dans la construction s'applique quand :",
+  "options": [
+   "Le travailleur voyage pour ses vacances",
+   "Le déplacement vers un chantier éloigné dépasse un seuil défini par la convention",
+   "Le chantier est en ville",
+   "Le travailleur est en formation"
+  ],
+  "answer": "B",
+  "explanation": "Les conventions prévoient une rémunération du temps de déplacement au-delà d'un certain rayon (ex. : 50 km) du point de rassemblement.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "La « semaine de travail » standard dans la construction au Québec est de :",
+  "options": [
+   "50 heures",
+   "35 heures",
+   "40 heures (8h/jour, 5 jours)",
+   "45 heures"
+  ],
+  "answer": "C",
+  "explanation": "La semaine standard est de 40 heures (8h × 5 jours). Les heures au-delà sont des heures supplémentaires majorées selon la convention.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « congé de chantier » (shutdown) planifié est :",
+  "options": [
+   "Une période d'arrêt programmée (ex. : vacances de la construction, fêtes)",
+   "Un licenciement collectif",
+   "Une grève sauvage",
+   "Un arrêt imprévu dû à la météo"
+  ],
+  "answer": "A",
+  "explanation": "Les congés planifiés (2 semaines en été, 2 semaines en hiver, fêtes) sont prévus aux conventions et intégrés dans la planification.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Les « vacances de la construction » au Québec ont lieu typiquement :",
+  "options": [
+   "En mars et en octobre",
+   "Les deux dernières semaines de juillet et les deux premières de janvier",
+   "En décembre",
+   "Il n'y a pas de vacances fixes"
+  ],
+  "answer": "B",
+  "explanation": "L'industrie de la construction au Québec ferme typiquement 2 semaines fin juillet et 2 semaines fin décembre/début janvier (vacances CCQ).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « harcèlement psychologique » sur un chantier est :",
+  "options": [
+   "Acceptable si c'est une blague",
+   "Interdit par la Loi sur les normes du travail et la LSST, avec obligation de prévention",
+   "Sans recours pour la victime",
+   "Uniquement un problème civil"
+  ],
+  "answer": "B",
+  "explanation": "La LNT et la LSST interdisent le harcèlement psychologique. L'employeur doit prévenir et traiter les plaintes. La CNESST peut intervenir.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "La « diversité » sur les chantiers de construction québécois est :",
+  "options": [
+   "Interdite",
+   "Uniquement une question de quotas",
+   "Encouragée par des programmes d'accès à l'égalité et des cibles d'embauche",
+   "Sans importance"
+  ],
+  "answer": "C",
+  "explanation": "Des programmes (ex. : Programme d'accès à l'égalité) visent à augmenter la représentation des femmes, minorités et autochtones dans la construction.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « mentorat » sur un chantier de construction consiste à :",
+  "options": [
+   "Un compagnon expérimenté guide et forme un apprenti dans l'exécution des travaux",
+   "Ignorer les nouveaux travailleurs",
+   "Déléguer toutes les tâches à l'apprenti",
+   "Punir les apprentis"
+  ],
+  "answer": "A",
+  "explanation": "Le mentorat est essentiel à la formation : le compagnon transmet son savoir-faire, supervise et évalue la progression de l'apprenti.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « taux d'absentéisme » sur un chantier affecte directement :",
+  "options": [
+   "Aucun aspect du projet",
+   "Uniquement le moral",
+   "Uniquement les salaires",
+   "La productivité, l'échéancier et les coûts du projet"
+  ],
+  "answer": "D",
+  "explanation": "L'absentéisme réduit la force de travail disponible, retarde les activités et augmente les coûts (remplacement, heures sup).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "La « rétention de main-d'œuvre » dans la construction est un défi car :",
+  "options": [
+   "Les salaires sont trop élevés",
+   "Les travailleurs sont trop nombreux",
+   "Il n'y a pas de formation",
+   "L'industrie est cyclique, les projets sont temporaires et la concurrence pour les travailleurs qualifiés est forte"
+  ],
+  "answer": "D",
+  "explanation": "La construction est cyclique (saisons, projets), les travailleurs changent d'employeur fréquemment, et la pénurie de main-d'œuvre qualifiée intensifie la concurrence.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « contrat de sous-traitance » doit idéalement préciser :",
+  "options": [
+   "Le scope des travaux, les délais, les normes de qualité, les assurances, les retenues et les modalités de paiement",
+   "Uniquement le nom du sous-traitant",
+   "Uniquement le prix",
+   "Uniquement les délais"
+  ],
+  "answer": "A",
+  "explanation": "Un contrat de sous-traitance complet définit le scope, les échéances, les standards, les assurances, les garanties et les conditions de paiement.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "La « retenue de garantie » sur les paiements au sous-traitant est typiquement de :",
+  "options": [
+   "10 %",
+   "1 %",
+   "5 %",
+   "25 %"
+  ],
+  "answer": "A",
+  "explanation": "La retenue de 10 % est la norme, prélevée sur chaque paiement progressif et libérée après la réception des travaux et l'expiration des délais de réclamation.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « lien de construction » (construction lien) protège :",
+  "options": [
+   "Uniquement l'entrepreneur général",
+   "Les architectes uniquement",
+   "Les sous-traitants et fournisseurs en garantissant leur paiement sur l'immeuble",
+   "Uniquement le client"
+  ],
+  "answer": "C",
+  "explanation": "L'hypothèque légale de la construction (art. 2726 C.c.Q.) permet aux sous-traitants et fournisseurs impayés de grever l'immeuble pour garantir leur créance.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "Le délai pour inscrire un lien de construction au Québec est de :",
+  "options": [
+   "30 jours après la fin des travaux ou la résiliation du contrat",
+   "5 ans",
+   "Aucun délai",
+   "1 an"
+  ],
+  "answer": "A",
+  "explanation": "Le lien doit être inscrit dans les 30 jours de la fin des travaux ou de la résiliation du contrat. Passé ce délai, le droit est perdu.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "La « quittance » (waiver of lien) est un document par lequel :",
+  "options": [
+   "Le syndicat autorise une grève",
+   "Le sous-traitant renonce à son droit de lien en échange du paiement",
+   "L'entrepreneur général démissionne",
+   "Le client annule le contrat"
+  ],
+  "answer": "B",
+  "explanation": "La quittance (lien waiver) est signée par le sous-traitant/fournisseur confirmant le paiement et renonçant à tout droit de lien pour les travaux couverts.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « paiement progressif » au sous-traitant est basé sur :",
+  "options": [
+   "L'avancement des travaux vérifié, moins la retenue",
+   "Le prix des matériaux uniquement",
+   "Le paiement total à la fin du projet",
+   "Le nombre d'employés présents"
+  ],
+  "answer": "A",
+  "explanation": "Les paiements progressifs sont calculés selon le % d'avancement vérifié, avec déduction de la retenue de 10 % et des montants précédents.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "La « coordination santé-sécurité » entre sous-traitants est :",
+  "options": [
+   "Optionnelle",
+   "La responsabilité de chaque sous-traitant uniquement",
+   "Une obligation de l'entrepreneur général qui doit assurer un chantier sécuritaire pour tous",
+   "La responsabilité du client uniquement"
+  ],
+  "answer": "C",
+  "explanation": "L'entrepreneur général a l'obligation légale (LSST) de coordonner la SST sur le chantier et de s'assurer que tous les sous-traitants respectent les normes.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « plan de main-d'œuvre » (manpower plan) d'un projet détaille :",
+  "options": [
+   "Les contrats de sous-traitance",
+   "Les spécifications techniques",
+   "Les coûts de matériaux",
+   "Les besoins en travailleurs par métier et par période, basé sur l'échéancier"
+  ],
+  "answer": "D",
+  "explanation": "Le plan de M-O traduit l'échéancier en besoins de main-d'œuvre : combien de compagnons/apprentis par métier, pour chaque semaine du projet.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « pic de main-d'œuvre » (peak manpower) sur un chantier se produit typiquement :",
+  "options": [
+   "À la fin du projet",
+   "Il n'y a jamais de pic",
+   "Au début du projet",
+   "Au milieu du projet, quand plusieurs métiers travaillent simultanément"
+  ],
+  "answer": "D",
+  "explanation": "Le pic survient quand les métiers se chevauchent (structure + mécanique + électrique), nécessitant une coordination et des ressources maximales.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "La « courbe de main-d'œuvre » (manpower curve) d'un projet a typiquement une forme :",
+  "options": [
+   "Linéaire",
+   "Exponentielle",
+   "Constante",
+   "En cloche : montée progressive, pic au milieu, décroissance vers la fin"
+  ],
+  "answer": "D",
+  "explanation": "La courbe de M-O suit la courbe en S : peu de travailleurs au début (excavation), pic au milieu (structure + MEP), décroissance aux finitions.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « taux horaire chargé » (loaded rate) d'un ouvrier inclut :",
+  "options": [
+   "Le salaire de base + les charges patronales + les avantages sociaux + les congés",
+   "Uniquement les charges",
+   "Uniquement les avantages",
+   "Uniquement le salaire de base"
+  ],
+  "answer": "A",
+  "explanation": "Le taux chargé est le coût réel complet : salaire + charges (RRQ, AE, CNESST) + avantages (fonds CCQ, assurances) + congés payés.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "La « pénurie de main-d'œuvre » dans la construction québécoise est causée par :",
+  "options": [
+   "Uniquement la météo",
+   "Le vieillissement de la main-d'œuvre, les départs à la retraite et l'attractivité limitée de l'industrie",
+   "Un excès de travailleurs",
+   "Les salaires trop élevés"
+  ],
+  "answer": "B",
+  "explanation": "La pénurie résulte du vieillissement, des retraites massives, de la concurrence d'autres industries et de la perception négative des métiers manuels.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « programme d'apprentissage » CCQ a une durée typique de :",
+  "options": [
+   "Aucune durée fixe",
+   "1 mois",
+   "2 à 5 ans selon le métier (ex. : 4 ans pour électricien)",
+   "10 ans"
+  ],
+  "answer": "C",
+  "explanation": "L'apprentissage dure 2-5 ans selon le métier, combinant heures de chantier (ex. : 6 000-8 000h) et cours théoriques pour obtenir le certificat de compagnon.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « compagnon » dans la construction est :",
+  "options": [
+   "Un ingénieur",
+   "Un débutant",
+   "Un superviseur",
+   "Un travailleur qualifié ayant complété son apprentissage et détenant un certificat de compétence"
+  ],
+  "answer": "D",
+  "explanation": "Le compagnon est un travailleur pleinement qualifié, certifié par la CCQ après son apprentissage, pouvant exécuter tous les travaux de son métier.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "L'« aide » (manœuvre) sur un chantier est :",
+  "options": [
+   "Un inspecteur",
+   "Un sous-traitant",
+   "Un ingénieur",
+   "Un travailleur non spécialisé qui assiste les ouvriers qualifiés (transport, nettoyage, préparation)"
+  ],
+  "answer": "D",
+  "explanation": "Le manœuvre (laborer) effectue des tâches physiques non spécialisées : transport de matériaux, nettoyage, préparation du site, assistance aux métiers.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « contremaître » (foreman) sur un chantier est :",
+  "options": [
+   "Un comptable",
+   "Un architecte",
+   "Un travailleur d'expérience qui supervise une équipe et coordonne les travaux quotidiens",
+   "Un ouvrier sans responsabilité"
+  ],
+  "answer": "C",
+  "explanation": "Le contremaître est le lien entre la direction et les ouvriers : il assigne les tâches, vérifie la qualité, assure la sécurité et rapporte l'avancement.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "La « clause de non-concurrence » dans un contrat de sous-traitance :",
+  "options": [
+   "Peut limiter le droit du sous-traitant de travailler pour des concurrents pendant une période définie",
+   "Est toujours illégale",
+   "S'applique uniquement aux employés",
+   "N'a aucune valeur juridique"
+  ],
+  "answer": "A",
+  "explanation": "La clause de non-concurrence peut être valide si elle est raisonnable (durée, territoire, scope limités) et protège un intérêt légitime.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « cautionnement d'exécution » (performance bond) protège :",
+  "options": [
+   "Le sous-traitant",
+   "Le client (donneur d'ouvrage) contre la défaillance de l'entrepreneur",
+   "Les ouvriers",
+   "Les fournisseurs uniquement"
+  ],
+  "answer": "B",
+  "explanation": "Le cautionnement d'exécution (typiquement 50 % du contrat) garantit au client que les travaux seront complétés même si l'entrepreneur fait défaut.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « cautionnement de paiement » (labour and material bond) protège :",
+  "options": [
+   "Les architectes",
+   "Uniquement le client",
+   "Les ingénieurs",
+   "Les sous-traitants et fournisseurs contre le non-paiement par l'entrepreneur général"
+  ],
+  "answer": "D",
+  "explanation": "Le cautionnement de paiement garantit que les sous-traitants et fournisseurs seront payés même si l'entrepreneur général ne les paie pas.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "La « Loi sur les normes du travail » (LNT) au Québec s'applique aux travailleurs de la construction :",
+  "options": [
+   "Oui, mais plusieurs dispositions sont adaptées par la Loi R-20 et les conventions collectives",
+   "Uniquement pour le salaire minimum",
+   "Uniquement pour les vacances",
+   "Pas du tout, ils sont exclus"
+  ],
+  "answer": "A",
+  "explanation": "La LNT s'applique en complément de la Loi R-20. Les conventions collectives peuvent prévoir des conditions plus favorables que la LNT.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « relevé d'emploi » (RE) est émis par l'employeur quand :",
+  "options": [
+   "Le travailleur cesse de travailler (fin de contrat, mise à pied) pour l'assurance-emploi",
+   "Le travailleur est embauché",
+   "Le travailleur prend des vacances",
+   "Le chantier ouvre"
+  ],
+  "answer": "A",
+  "explanation": "Le RE est requis pour que le travailleur puisse réclamer des prestations d'assurance-emploi après une perte d'emploi.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 3,
+  "question": "La « santé mentale » sur les chantiers de construction est :",
+  "options": [
+   "Sans importance",
+   "Un enjeu croissant : l'industrie a des taux élevés de stress, d'épuisement et de suicide",
+   "Interdite de discussion",
+   "Uniquement un problème individuel"
+  ],
+  "answer": "B",
+  "explanation": "La construction a des taux de suicide et de détresse psychologique supérieurs à la moyenne. Des programmes d'aide et de prévention se développent.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 3,
+  "question": "Le « harcèlement sexuel » sur un chantier est :",
+  "options": [
+   "Toléré si c'est une blague",
+   "Strictement interdit et peut mener à des sanctions disciplinaires, civiles et criminelles",
+   "Sans conséquence pour l'employeur",
+   "Uniquement un problème civil"
+  ],
+  "answer": "B",
+  "explanation": "Le harcèlement sexuel est interdit par la LNT, la LSST, la Charte des droits et le Code criminel. L'employeur a une obligation de prévention et d'intervention.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La RBQ (Régie du bâtiment du Québec) a pour mission principale :",
+  "options": [
+   "Gérer les chantiers de construction",
+   "Former les ouvriers",
+   "Assurer la qualité des travaux de construction et la sécurité du public par la réglementation et la surveillance",
+   "Négocier les conventions collectives"
+  ],
+  "answer": "C",
+  "explanation": "La RBQ délivre les licences, administre le Code de construction et le Code de sécurité, et surveille la qualité et la conformité des travaux.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "La licence RBQ est obligatoire pour :",
+  "options": [
+   "Uniquement les projets de plus de 1 million $",
+   "Tout entrepreneur qui exécute ou fait exécuter des travaux de construction au Québec",
+   "Uniquement les projets publics",
+   "Uniquement les électriciens"
+  ],
+  "answer": "B",
+  "explanation": "La Loi sur le bâtiment exige une licence RBQ pour tout entrepreneur en construction, avec des exemptions limitées (autoconstruction, travaux mineurs).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "Les catégories de licence RBQ comprennent :",
+  "options": [
+   "Des catégories générales (1.1, 1.2, 1.3) et des catégories spécialisées (par métier)",
+   "Uniquement des catégories résidentielles",
+   "Uniquement des catégories commerciales",
+   "Une seule catégorie générale"
+  ],
+  "answer": "A",
+  "explanation": "La RBQ a des catégories générales (entrepreneur général) et spécialisées (électricien, plombier, etc.), chacune avec des sous-catégories.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La catégorie de licence RBQ 1.1 correspond à :",
+  "options": [
+   "Entrepreneur général en bâtiments neufs (tous types)",
+   "Entrepreneur en excavation",
+   "Entrepreneur en démolition",
+   "Entrepreneur en plomberie"
+  ],
+  "answer": "A",
+  "explanation": "La catégorie 1.1 est l'entrepreneur général en bâtiments neufs, autorisant la coordination de tous les travaux de construction neuve.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La catégorie de licence RBQ 1.2 correspond à :",
+  "options": [
+   "Entrepreneur en électricité",
+   "Entrepreneur en génie civil",
+   "Entrepreneur en toiture",
+   "Entrepreneur général en rénovation et restauration"
+  ],
+  "answer": "D",
+  "explanation": "La catégorie 1.2 couvre les travaux de rénovation, restauration et entretien de bâtiments existants.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La catégorie de licence RBQ 1.3 correspond à :",
+  "options": [
+   "Entrepreneur en démolition",
+   "Entrepreneur en peinture",
+   "Entrepreneur en génie civil et voirie",
+   "Entrepreneur en plomberie"
+  ],
+  "answer": "C",
+  "explanation": "La catégorie 1.3 est l'entrepreneur général en génie civil et voirie : routes, ponts, aqueducs, égouts, etc.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "Le Code de construction du Québec est basé sur :",
+  "options": [
+   "Aucune norme existante",
+   "Le Code national du bâtiment du Canada (CNB) avec des modifications québécoises",
+   "Uniquement les normes européennes",
+   "Les normes américaines uniquement"
+  ],
+  "answer": "B",
+  "explanation": "Le Code de construction du Québec adopte le CNB avec des amendements provinciaux, couvrant la conception et la construction des bâtiments.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "Le Code de sécurité du Québec (CSTC) concerne :",
+  "options": [
+   "Uniquement la sécurité incendie",
+   "Uniquement les chantiers",
+   "La sécurité des bâtiments existants : entretien, inspection, équipements, accessibilité",
+   "La sécurité routière"
+  ],
+  "answer": "C",
+  "explanation": "Le Code de sécurité (chapitre Bâtiment) encadre la sécurité des bâtiments en exploitation : entretien, inspections, équipements, accessibilité.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La Loi sur le bâtiment (L.R.Q., c. B-1.1) encadre :",
+  "options": [
+   "Les relations de travail",
+   "Uniquement les permis municipaux",
+   "La qualification des entrepreneurs, la qualité des travaux et la sécurité du public",
+   "Uniquement les salaires"
+  ],
+  "answer": "C",
+  "explanation": "La Loi sur le bâtiment établit le cadre légal : licences RBQ, Code de construction, Code de sécurité, garanties et mécanismes de contrôle.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "Un permis de construction municipal est requis pour :",
+  "options": [
+   "Aucun travail",
+   "La plupart des travaux de construction, rénovation ou démolition sur un bâtiment",
+   "Uniquement les projets de plus de 100 000 $",
+   "Uniquement les bâtiments commerciaux"
+  ],
+  "answer": "B",
+  "explanation": "Les municipalités exigent un permis pour la plupart des travaux, vérifiant la conformité au zonage, aux codes et aux règlements d'urbanisme.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "L'inspection municipale pendant les travaux vérifie :",
+  "options": [
+   "La conformité aux codes de construction, au zonage et aux règlements municipaux",
+   "Uniquement les coûts",
+   "Uniquement l'esthétique",
+   "Les salaires des ouvriers"
+  ],
+  "answer": "A",
+  "explanation": "L'inspecteur municipal vérifie la conformité aux codes (structure, incendie, plomberie, électricité) et aux règlements de zonage et d'urbanisme.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « certificat d'occupation » (ou certificat de conformité) est émis :",
+  "options": [
+   "Avant le début des travaux",
+   "Uniquement pour les bâtiments commerciaux",
+   "Après l'inspection finale confirmant que le bâtiment est conforme et habitable",
+   "Pendant la construction"
+  ],
+  "answer": "C",
+  "explanation": "Le certificat d'occupation atteste que le bâtiment est conforme aux codes et règlements, autorisant son occupation. Il est requis après l'inspection finale.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La « garantie des bâtiments résidentiels neufs » (GCR) au Québec est :",
+  "options": [
+   "Uniquement pour les maisons de plus de 500 000 $",
+   "Obligatoire pour tous les bâtiments résidentiels neufs, couvrant les vices de construction",
+   "Optionnelle",
+   "Uniquement pour les condos"
+  ],
+  "answer": "B",
+  "explanation": "La GCR (Garantie de construction résidentielle) est obligatoire au Québec pour les bâtiments résidentiels neufs, couvrant 1 an, 3 ans et 5 ans.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La garantie GCR couvre les vices cachés pendant :",
+  "options": [
+   "1 an",
+   "5 ans",
+   "3 ans",
+   "10 ans"
+  ],
+  "answer": "B",
+  "explanation": "La GCR couvre : 1 an (parachèvement), 3 ans (vices cachés), 5 ans (vices de conception/construction majeurs). Les vices cachés = 5 ans.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "La « Régie du bâtiment du Québec » peut imposer des sanctions pour :",
+  "options": [
+   "Uniquement les problèmes esthétiques",
+   "Les retards de livraison uniquement",
+   "Uniquement les retards de paiement",
+   "Travaux sans licence, non-conformité aux codes, pratiques illégales"
+  ],
+  "answer": "D",
+  "explanation": "La RBQ peut suspendre/révoquer des licences, imposer des amendes et ordonner la cessation de travaux pour non-conformité ou pratique illégale.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "L'amende maximale pour exercice illégal de la profession d'entrepreneur (sans licence RBQ) est de :",
+  "options": [
+   "100 $",
+   "1 000 $",
+   "Aucune amende",
+   "Jusqu'à 100 000 $ pour une personne physique et 200 000 $ pour une personne morale"
+  ],
+  "answer": "D",
+  "explanation": "La Loi sur le bâtiment prévoit des amendes sévères : jusqu'à 100 000 $ (personne physique) et 200 000 $ (personne morale) pour travail sans licence.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « plan de garantie » obligatoire pour les bâtiments résidentiels neufs est administré par :",
+  "options": [
+   "Les municipalités",
+   "Un organisme d'arbitrage autorisé (ex. : GCR, APCHQ)",
+   "La RBQ directement",
+   "Les syndicats"
+  ],
+  "answer": "B",
+  "explanation": "Le plan de garantie est administré par des organismes autorisés (GCR, Garantie des bâtiments résidentiels de l'APCHQ) sous la supervision de la RBQ.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "La « Loi sur l'aménagement et l'urbanisme » (LAU) donne aux municipalités le pouvoir de :",
+  "options": [
+   "Former les ouvriers",
+   "Adopter des règlements de zonage, de lotissement et de construction",
+   "Délivrer les licences RBQ",
+   "Gérer les chantiers"
+  ],
+  "answer": "B",
+  "explanation": "La LAU habilite les municipalités à réglementer l'aménagement du territoire : zonage, lotissement, PIIA, permis et certificats.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « zonage » municipal détermine :",
+  "options": [
+   "Les horaires de travail",
+   "Les prix des matériaux",
+   "Les salaires des ouvriers",
+   "Les usages permis, les hauteurs, les marges et les densités pour chaque zone"
+  ],
+  "answer": "D",
+  "explanation": "Le règlement de zonage divise le territoire en zones et prescrit les usages autorisés, les normes d'implantation et les densités.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "Un « PIIA » (Plan d'implantation et d'intégration architecturale) est :",
+  "options": [
+   "Une inspection de sécurité",
+   "Un permis de construire",
+   "Un plan de chantier",
+   "Un processus municipal d'évaluation qualitative de l'intégration architecturale d'un projet"
+  ],
+  "answer": "D",
+  "explanation": "Le PIIA est un processus discrétionnaire où le CCU évalue l'intégration du projet dans son milieu (architecture, paysage, patrimoine).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « CCU » (Comité consultatif d'urbanisme) est :",
+  "options": [
+   "Un tribunal",
+   "Une entreprise de construction",
+   "Un comité qui conseille le conseil municipal sur les questions d'urbanisme et les PIIA",
+   "Un syndicat"
+  ],
+  "answer": "C",
+  "explanation": "Le CCU est un comité consultatif formé de citoyens et d'élus qui donne des avis au conseil municipal sur les projets et les règlements d'urbanisme.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La « dérogation mineure » en urbanisme permet :",
+  "options": [
+   "D'ignorer tous les règlements",
+   "De construire sans permis",
+   "De construire en zone agricole",
+   "D'autoriser un projet qui ne respecte pas certaines normes du règlement de zonage, si l'écart est mineur"
+  ],
+  "answer": "D",
+  "explanation": "La dérogation mineure est une procédure discrétionnaire permettant de s'écarter légèrement d'une norme (marge, hauteur) sans changer l'esprit du règlement.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « certificat de localisation » est un document préparé par :",
+  "options": [
+   "Un arpenteur-géomètre, décrivant la position du bâtiment sur le terrain",
+   "L'architecte",
+   "L'entrepreneur",
+   "Le notaire"
+  ],
+  "answer": "A",
+  "explanation": "Le certificat de localisation est un rapport de l'arpenteur-géomètre confirmant l'implantation du bâtiment, les servitudes et la conformité aux règlements.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "La « servitude » sur un terrain est :",
+  "options": [
+   "Un type de contrat de travail",
+   "Un permis de construction",
+   "Une charge imposée à un immeuble (fonds servant) au bénéfice d'un autre (fonds dominant)",
+   "Une taxe municipale"
+  ],
+  "answer": "C",
+  "explanation": "La servitude est un droit réel : ex. passage, vue, égout. Elle grève le fonds servant et profite au fonds dominant, survivant aux changements de propriétaire.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « Code national du bâtiment – Canada » (CNB) est publié par :",
+  "options": [
+   "L'APCHQ",
+   "Le Conseil national de recherches du Canada (CNRC)",
+   "La CCQ",
+   "La RBQ"
+  ],
+  "answer": "B",
+  "explanation": "Le CNB est publié par le CNRC. Les provinces l'adoptent avec des modifications locales (ex. : Code de construction du Québec).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La « norme CSA » dans la construction canadienne est :",
+  "options": [
+   "Un permis gouvernemental",
+   "Un type de contrat",
+   "Une norme technique de l'Association canadienne de normalisation, souvent rendue obligatoire par les codes",
+   "Une suggestion optionnelle"
+  ],
+  "answer": "C",
+  "explanation": "Les normes CSA (ex. : CSA A23.1 pour le béton, CSA C22.1 pour l'électricité) sont des standards techniques référencés et rendus obligatoires par les codes.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "L'« amiante » dans les bâtiments existants est réglementée par :",
+  "options": [
+   "Aucune réglementation",
+   "Le Code de sécurité, la LSST et des règlements spécifiques sur le retrait et la disposition",
+   "Uniquement les municipalités",
+   "Uniquement les assureurs"
+  ],
+  "answer": "B",
+  "explanation": "L'amiante est strictement réglementée : identification, retrait par des entreprises certifiées, dispositions spéciales (RSST, Code de sécurité).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « registre des licences RBQ » est :",
+  "options": [
+   "Réservé aux entrepreneurs",
+   "Public et consultable en ligne, permettant de vérifier la validité d'une licence",
+   "Uniquement papier",
+   "Secret"
+  ],
+  "answer": "B",
+  "explanation": "Le registre RBQ est public (rbq.gouv.qc.ca). Tout citoyen peut vérifier si un entrepreneur détient une licence valide et ses catégories.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "La « responsabilité décennale » en construction québécoise :",
+  "options": [
+   "Dure exactement 10 ans",
+   "Est remplacée par la garantie GCR (1/3/5 ans) et la responsabilité civile de droit commun",
+   "N'existe pas au Québec",
+   "S'applique uniquement aux ponts"
+  ],
+  "answer": "B",
+  "explanation": "Le Québec n'a pas de responsabilité décennale comme en France. La protection vient de la GCR (résidentiel) et du droit commun (vices cachés, 3 ans).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « vice caché » en droit québécois (C.c.Q.) est :",
+  "options": [
+   "Un défaut important qui rend le bien impropre à l'usage et qui n'était pas apparent lors de la vente",
+   "Un retard de construction",
+   "Un défaut esthétique mineur",
+   "Un défaut visible lors de l'inspection"
+  ],
+  "answer": "A",
+  "explanation": "Le vice caché (art. 1726 C.c.Q.) est un défaut grave, non apparent, existant au moment de la vente, rendant le bien impropre à son usage.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le délai de prescription pour un recours en vice caché au Québec est de :",
+  "options": [
+   "3 ans à partir de la découverte du vice",
+   "1 an",
+   "10 ans",
+   "Aucun délai"
+  ],
+  "answer": "A",
+  "explanation": "Le recours en vice caché se prescrit par 3 ans à compter de la découverte du vice (art. 2925 C.c.Q.), avec un délai de dénonciation raisonnable.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "La « CNESST » (Commission des normes, de l'équité, de la santé et de la sécurité du travail) est issue de la fusion de :",
+  "options": [
+   "L'APCHQ et la FTQ",
+   "La RBQ et la CCQ",
+   "La CSST et la Commission des normes du travail",
+   "La GCR et la RBQ"
+  ],
+  "answer": "C",
+  "explanation": "La CNESST (2016) regroupe la CSST (santé-sécurité) et la CNT (normes du travail), administrant la LSST, la LNT et les régimes de compensation.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La « Loi sur la qualité de l'environnement » (LQE) impose aux chantiers :",
+  "options": [
+   "Uniquement le recyclage",
+   "Aucune obligation",
+   "Uniquement la réduction du bruit",
+   "Des mesures de contrôle de l'érosion, de gestion des déchets et de protection des cours d'eau"
+  ],
+  "answer": "D",
+  "explanation": "La LQE et ses règlements encadrent les impacts environnementaux des chantiers : érosion, sédiments, déchets, matières dangereuses, bruit.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « BAPE » (Bureau d'audiences publiques sur l'environnement) intervient pour :",
+  "options": [
+   "Les projets à l'étranger",
+   "Uniquement les projets miniers",
+   "Les projets majeurs ayant des impacts environnementaux significatifs",
+   "Les petits projets résidentiels"
+  ],
+  "answer": "C",
+  "explanation": "Le BAPE tient des audiences publiques pour les projets assujettis à la procédure d'évaluation environnementale (grands projets d'infrastructure).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La « norme BNQ 9011-950 » concerne :",
+  "options": [
+   "Les permis de conduire",
+   "La gestion des matières résiduelles sur les chantiers de construction",
+   "Les assurances",
+   "Les salaires"
+  ],
+  "answer": "B",
+  "explanation": "La norme BNQ 9011-950 établit les exigences pour la gestion des matières résiduelles (tri, recyclage, valorisation) sur les chantiers.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « Règlement sur la santé et la sécurité du travail » (RSST) s'applique :",
+  "options": [
+   "Uniquement aux bureaux",
+   "Uniquement aux usines",
+   "Uniquement aux mines",
+   "À tous les établissements et chantiers au Québec, avec des sections spécifiques pour la construction"
+  ],
+  "answer": "D",
+  "explanation": "Le RSST (pris en vertu de la LSST) établit les normes de SST pour tous les milieux de travail, avec une section spécifique aux chantiers.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « droit de refus » d'un travailleur (art. 12 LSST) lui permet de :",
+  "options": [
+   "Refuser de porter un EPI",
+   "Refuser tout travail qui lui déplaît",
+   "Refuser les heures supplémentaires",
+   "Refuser d'exécuter un travail s'il a des motifs raisonnables de croire qu'il y a un danger pour sa santé ou sa sécurité"
+  ],
+  "answer": "D",
+  "explanation": "L'art. 12 LSST protège le travailleur qui refuse un travail dangereux. L'employeur ne peut le sanctionner. Un inspecteur CNESST peut être appelé.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "L'« EPI » (équipement de protection individuelle) sur un chantier inclut :",
+  "options": [
+   "Uniquement les gants",
+   "Uniquement les bottes",
+   "Casque, lunettes, gants, harnais, protection auditive, selon les risques",
+   "Aucun équipement"
+  ],
+  "answer": "C",
+  "explanation": "Les EPI sont la dernière ligne de défense : casque, lunettes, gants, harnais, protecteurs auditifs, chaussures de sécurité, selon les risques identifiés.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « SIMDUT » (Système d'information sur les matières dangereuses utilisées au travail) exige :",
+  "options": [
+   "L'étiquetage et les fiches de données de sécurité (FDS) pour tous les produits dangereux",
+   "Uniquement pour les peintures",
+   "Uniquement pour les produits chimiques industriels",
+   "Aucune étiquette"
+  ],
+  "answer": "A",
+  "explanation": "Le SIMDUT (aligné sur le SGH) oblige l'étiquetage des produits dangereux et la disponibilité des FDS pour tous les travailleurs exposés.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « cadenassage » (lockout/tagout) est une procédure de :",
+  "options": [
+   "Sécurisation des matériaux",
+   "Fermeture du chantier pour la nuit",
+   "Verrouillage des portes du chantier",
+   "Maîtrise des énergies dangereuses avant l'entretien ou la réparation d'équipements"
+  ],
+  "answer": "D",
+  "explanation": "Le cadenassage isole et dissipe les énergies (électrique, hydraulique, pneumatique, gravitationnelle) avant toute intervention, prévenant les démarrages accidentels.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « travail en hauteur » au Québec nécessite un harnais de sécurité à partir de :",
+  "options": [
+   "Aucune hauteur spécifique",
+   "10 mètres",
+   "1 mètre",
+   "3 mètres (ou moins si risque de blessure)"
+  ],
+  "answer": "D",
+  "explanation": "Le RSST exige une protection contre les chutes à partir de 3 m, ou moins si le risque de blessure est présent (ex. : au-dessus de pièces mobiles).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "L'« échafaudage » sur un chantier doit être :",
+  "options": [
+   "Monté, modifié et démonté par des personnes compétentes, et inspecté avant chaque utilisation",
+   "Uniquement peint en blanc",
+   "Monté par n'importe qui",
+   "Ancré au bâtiment uniquement"
+  ],
+  "answer": "A",
+  "explanation": "Le RSST exige que les échafaudages soient montés par des personnes formées, inspectés quotidiennement et conformes aux normes de capacité.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "Les « tranchées » de plus de 1,2 m de profondeur nécessitent :",
+  "options": [
+   "Uniquement une signalisation",
+   "Uniquement un permis",
+   "Un blindage, un talutage ou un étaiement pour prévenir les effondrements",
+   "Aucune protection"
+  ],
+  "answer": "C",
+  "explanation": "Le RSST exige une protection contre les effondrements (blindage, talus, étai) pour toute tranchée de 1,2 m et plus. C'est une cause majeure de décès.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "L'« espace clos » sur un chantier (réservoir, égout, silo) nécessite :",
+  "options": [
+   "Un permis d'entrée, une surveillance atmosphérique, un surveillant et un plan de sauvetage",
+   "Uniquement un masque",
+   "Uniquement une lampe de poche",
+   "Aucune précaution"
+  ],
+  "answer": "A",
+  "explanation": "L'entrée en espace clos est strictement réglementée : permis, test d'atmosphère, ventilation, surveillant extérieur, équipement de sauvetage.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « comité de santé et sécurité » (CSS) sur un chantier est obligatoire quand :",
+  "options": [
+   "Il n'est jamais obligatoire",
+   "Uniquement sur les projets publics",
+   "Le nombre de travailleurs atteint un seuil défini par la LSST (typiquement 20+)",
+   "Il y a plus de 100 ouvriers"
+  ],
+  "answer": "C",
+  "explanation": "La LSST exige un CSS sur les chantiers avec un nombre suffisant de travailleurs (seuil variable). Le comité réunit employeur et travailleurs.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « programme de prévention » sur un chantier est :",
+  "options": [
+   "Uniquement pour les grands projets",
+   "Un document unique sans mise à jour",
+   "Optionnel",
+   "Obligatoire et doit identifier les risques, les mesures de contrôle et les responsabilités SST"
+  ],
+  "answer": "D",
+  "explanation": "Le programme de prévention (LSST) est obligatoire : identification des risques, méthodes de travail sécuritaires, formation, inspection, enquête.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "L'« enquête d'accident » sur un chantier doit :",
+  "options": [
+   "Blâmer le travailleur",
+   "Identifier les causes profondes et les mesures correctives pour prévenir la récurrence",
+   "Être gardée secrète",
+   "Être menée uniquement par la police"
+  ],
+  "answer": "B",
+  "explanation": "L'enquête vise la prévention : analyser les causes (immédiates et profondes), corriger les lacunes et éviter la répétition. Pas de blâme.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "La « signalisation de sécurité » sur un chantier utilise des couleurs normalisées :",
+  "options": [
+   "Aléatoires",
+   "Rouge (danger/interdiction), jaune (avertissement), bleu (obligation), vert (secours)",
+   "Uniquement le rouge",
+   "Uniquement le noir et blanc"
+  ],
+  "answer": "B",
+  "explanation": "Les couleurs sont normalisées (CSA Z321) : rouge = danger/arrêt, jaune = attention, bleu = obligation, vert = sécurité/secours.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « premier secours » sur un chantier exige :",
+  "options": [
+   "Uniquement un téléphone",
+   "Aucune trousse",
+   "Une trousse de premiers soins accessible et des secouristes formés selon le nombre de travailleurs",
+   "Uniquement un médecin sur place"
+  ],
+  "answer": "C",
+  "explanation": "Le RSST exige une trousse de premiers soins et un nombre minimal de secouristes certifiés selon l'effectif du chantier.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "La « Loi sur les contrats des organismes publics » (LCOP) impose :",
+  "options": [
+   "La négociation de gré à gré pour tous les contrats",
+   "Aucune règle",
+   "Des appels d'offres publics et des règles de transparence pour les contrats gouvernementaux",
+   "Uniquement des contrats à forfait"
+  ],
+  "answer": "C",
+  "explanation": "La LCOP encadre les contrats publics : appels d'offres, critères d'évaluation, transparence, reddition de comptes pour les organismes publics.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « SEAO » (Système électronique d'appel d'offres) au Québec est :",
+  "options": [
+   "Le portail obligatoire de publication des appels d'offres publics",
+   "Une entreprise de construction",
+   "Un syndicat",
+   "Un logiciel de comptabilité"
+  ],
+  "answer": "A",
+  "explanation": "Le SEAO (seao.ca) est le système officiel de publication des avis d'appel d'offres des organismes publics québécois.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "L'« Autorité des marchés publics » (AMP) a pour rôle :",
+  "options": [
+   "Surveiller les contrats publics, prévenir la collusion et la corruption",
+   "Former les ouvriers",
+   "Gérer les chantiers",
+   "Délivrer les permis de construire"
+  ],
+  "answer": "A",
+  "explanation": "L'AMP (créée en 2019) surveille l'intégrité des contrats publics, enquête sur la collusion et peut exclure des entreprises des contrats publics.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « REA » (Registre des entreprises autorisées) est :",
+  "options": [
+   "Un registre de licences RBQ",
+   "La liste des entreprises autorisées à contracter avec les organismes publics",
+   "Un syndicat",
+   "Un registre de voitures"
+  ],
+  "answer": "B",
+  "explanation": "Le REA (géré par l'AMP) liste les entreprises autorisées à soumissionner sur les contrats publics. L'exclusion du REA empêche de contracter.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "La « Loi sur la concurrence » (fédérale) interdit dans les appels d'offres :",
+  "options": [
+   "Les soumissions basses",
+   "Les garanties de soumission",
+   "Le truquage des offres (bid-rigging), la fixation des prix et le partage des marchés",
+   "La compétition loyale"
+  ],
+  "answer": "C",
+  "explanation": "La Loi sur la concurrence criminalise le truquage des offres, la fixation des prix et le partage de marchés, avec des peines sévères.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « cautionnement de soumission » (bid bond) typique est de :",
+  "options": [
+   "10 % du montant soumissionné",
+   "5 %",
+   "25 %",
+   "1 %"
+  ],
+  "answer": "A",
+  "explanation": "Le cautionnement de soumission est typiquement de 10 % du montant de la soumission, garantissant que le soumissionnaire retenu signera le contrat.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La « lettre d'intention » (LOI) dans un projet de construction :",
+  "options": [
+   "Est illégale",
+   "Exprime l'intention de contracter sans créer d'obligation ferme (sauf clauses spécifiques)",
+   "Est un contrat complet et définitif",
+   "Remplace le permis de construire"
+  ],
+  "answer": "B",
+  "explanation": "La LOI (letter of intent) exprime une intention de contracter. Elle peut lier sur certains points (confidentialité, exclusivité) mais pas sur le contrat final.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « CCDC 2 » est :",
+  "options": [
+   "Un règlement municipal",
+   "Un contrat type canadien de construction à forfait largement utilisé",
+   "Une norme de sécurité",
+   "Un code de construction"
+  ],
+  "answer": "B",
+  "explanation": "Le CCDC 2 (Comité canadien des documents de construction) est le contrat type à forfait le plus utilisé au Canada pour les projets de construction.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La « norme NQ 1809-900 » au Québec concerne :",
+  "options": [
+   "Les assurances automobiles",
+   "Les contrats types de construction pour les organismes publics québécois",
+   "Les salaires",
+   "Les permis de conduire"
+  ],
+  "answer": "B",
+  "explanation": "La norme NQ 1809-900 (et ses variantes) établit les conditions générales types pour les contrats de construction des organismes publics québécois.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "L'« arbitrage » dans un litige de construction est :",
+  "options": [
+   "Un mode privé de résolution de conflits où un arbitre rend une décision liante",
+   "Une négociation informelle",
+   "Une médiation non contraignante",
+   "Un procès public devant un juge"
+  ],
+  "answer": "A",
+  "explanation": "L'arbitrage est un processus privé et confidentiel où un arbitre (ou tribunal arbitral) rend une sentence liante, souvent prévu aux contrats de construction.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La « médiation » dans un litige de construction est :",
+  "options": [
+   "Un processus volontaire où un médiateur facilite la négociation sans imposer de solution",
+   "Un arbitrage",
+   "Un procès",
+   "Une décision imposée par un juge"
+  ],
+  "answer": "A",
+  "explanation": "La médiation est un mode amiable : le médiateur aide les parties à trouver un accord, sans pouvoir décisionnel. Elle est souvent préalable à l'arbitrage.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "L'« hypothèque légale de la construction » (art. 2726 C.c.Q.) grève :",
+  "options": [
+   "L'immeuble sur lequel les travaux ont été exécutés",
+   "Le compte bancaire de l'entrepreneur",
+   "Les meubles",
+   "Les véhicules de chantier"
+  ],
+  "answer": "A",
+  "explanation": "L'hypothèque légale de la construction grève l'immeuble bénéficiant des travaux, garantissant les créances des ouvriers, sous-traitants et fournisseurs.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "Le « privilège » du fournisseur de matériaux dans la construction est :",
+  "options": [
+   "Inexistant au Québec",
+   "Illimité dans le temps",
+   "De 5 ans",
+   "Limité à 30 jours après la livraison pour inscrire un lien sur l'immeuble"
+  ],
+  "answer": "D",
+  "explanation": "Le fournisseur doit inscrire son lien dans les 30 jours de la dernière livraison. Passé ce délai, le privilège est perdu.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 4,
+  "question": "La « réception provisoire » des travaux marque :",
+  "options": [
+   "Le transfert de la garde de l'ouvrage au client et le début des délais de garantie",
+   "La fin de la garantie",
+   "Le début des travaux",
+   "Le paiement final"
+  ],
+  "answer": "A",
+  "explanation": "La réception provisoire transfère la garde au client, déclenche les délais de garantie (GCR) et libère une partie de la retenue.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La « réception définitive » des travaux a lieu :",
+  "options": [
+   "Avant la réception provisoire",
+   "Après l'expiration des délais de garantie et la correction des réserves",
+   "Uniquement pour les ponts",
+   "Au début du projet"
+  ],
+  "answer": "B",
+  "explanation": "La réception définitive intervient après la période de garantie et la levée des réserves, libérant la retenue finale et clôturant le contrat.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "Les « réserves » (punch list) à la réception provisoire sont :",
+  "options": [
+   "Des paiements en attente",
+   "Des ouvriers en attente",
+   "La liste des travaux incomplets ou défectueux à corriger avant la réception définitive",
+   "Des matériaux en surplus"
+  ],
+  "answer": "C",
+  "explanation": "La liste de réserves (punch list) identifie les déficiences et travaux à parachever. L'entrepreneur doit les corriger dans les délais convenus.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 4,
+  "question": "La « garantie de parachèvement » de 1 an (GCR) couvre :",
+  "options": [
+   "Uniquement la toiture",
+   "Uniquement la plomberie",
+   "Les travaux incomplets ou mal exécutés découverts dans l'année suivant la réception",
+   "Les vices majeurs de structure"
+  ],
+  "answer": "C",
+  "explanation": "La garantie de parachèvement (1 an) couvre les malfaçons et travaux incomplets signalés dans l'année suivant la réception provisoire.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La « garantie des vices cachés » de 3 ans (GCR) couvre :",
+  "options": [
+   "Les vices non apparents à la réception qui rendent le bâtiment impropre à l'usage",
+   "Les changements de couleur",
+   "Les retards de livraison",
+   "Les défauts esthétiques"
+  ],
+  "answer": "A",
+  "explanation": "La garantie de 3 ans couvre les vices cachés (non décelables à la réception) affectant la fonctionnalité du bâtiment.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 4,
+  "question": "La « garantie de structure » de 5 ans (GCR) couvre :",
+  "options": [
+   "Les appareils électroménagers",
+   "Les vices de conception ou de construction compromettant la solidité de la structure",
+   "Le paysagement",
+   "La peinture"
+  ],
+  "answer": "B",
+  "explanation": "La garantie de 5 ans couvre les vices majeurs de conception/construction affectant la solidité ou la stabilité du bâtiment.",
+  "difficulty": "MEDIUM"
+ }
+]

@@ -382,7 +382,7 @@ function ExamsPage() {
     }
   };
 
-  const finishExam = () => {
+  const finishExam = async () => {
     setTimerActive(false);
     let correct = 0;
     const resultAnswers: ExamResult['answers'] = [];
@@ -457,11 +457,12 @@ function ExamsPage() {
       setSaved(true);
     } catch { /* ignore */ }
 
-    // Persist to server (non-blocking — localStorage is the fallback)
-    try {
+    // Persist to server (blocking with retry — DB is the source of truth)
+    const persistToServer = async (retries = 2) => {
       const token = localStorage.getItem('token');
-      if (token) {
-        fetch(`${API_BASE}/api/attempts`, {
+      if (!token) return;
+      try {
+        const res = await fetch(`${API_BASE}/api/attempts`, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${token}` },
           body: JSON.stringify({
@@ -478,9 +479,19 @@ function ExamsPage() {
               isCorrect: a.correct,
             })),
           }),
-        }).catch(() => {});
+        });
+        if (!res.ok && retries > 0) {
+          await new Promise((r) => setTimeout(r, 1000));
+          return persistToServer(retries - 1);
+        }
+      } catch {
+        if (retries > 0) {
+          await new Promise((r) => setTimeout(r, 1000));
+          return persistToServer(retries - 1);
+        }
       }
-    } catch { /* ignore — server tracking is best-effort */ }
+    };
+    await persistToServer();
   };
 
   const resetExam = () => {

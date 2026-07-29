@@ -1,0 +1,1536 @@
+[
+ {
+  "chapter": 1,
+  "question": "Quel document détaille les quantités de matériaux nécessaires pour un projet de construction?",
+  "options": [
+   "Le bordereau de prix",
+   "Le métré",
+   "Le cahier des charges",
+   "Le devis technique"
+  ],
+  "answer": "B",
+  "explanation": "Le métré (quantity takeoff) est le relevé détaillé des quantités de matériaux et d'ouvrages nécessaires à la réalisation d'un projet.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Les coûts directs d'un projet de construction comprennent :",
+  "options": [
+   "Les taxes foncières du siège social",
+   "Les frais juridiques et comptables",
+   "Les frais de bureau et l'assurance responsabilité",
+   "La main-d'œuvre, les matériaux et l'équipement directement affectés aux travaux"
+  ],
+  "answer": "D",
+  "explanation": "Les coûts directs sont ceux qui peuvent être attribués spécifiquement à un ouvrage : main-d'œuvre, matériaux et équipement utilisés directement sur le chantier.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Qu'est-ce qu'un coût indirect (frais généraux) en construction?",
+  "options": [
+   "Le coût des matériaux incorporés dans l'ouvrage",
+   "La marge bénéficiaire de l'entrepreneur",
+   "Les dépenses qui profitent à l'ensemble des projets (administration, loyer du bureau)",
+   "Le salaire d'un ouvrier affecté à un chantier précis"
+  ],
+  "answer": "C",
+  "explanation": "Les coûts indirects (overhead) sont des dépenses non attribuables à un projet spécifique : administration, loyer, assurances générales, etc.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Une contingence de 10 % sur un estimé de 500 000 $ représente :",
+  "options": [
+   "50 000 $",
+   "100 000 $",
+   "5 000 $",
+   "500 000 $"
+  ],
+  "answer": "A",
+  "explanation": "10 % × 500 000 $ = 50 000 $. La contingence couvre les imprévus et les variations de quantités.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "La marge bénéficiaire se calcule généralement :",
+  "options": [
+   "En dollars fixes par projet",
+   "En pourcentage des coûts directs uniquement",
+   "En fonction du nombre d'employés",
+   "En pourcentage du coût total du projet"
+  ],
+  "answer": "D",
+  "explanation": "La marge bénéficiaire est habituellement exprimée en pourcentage du coût total (directs + indirects + contingence) et représente le profit de l'entrepreneur.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Quel type de soumission engage l'entrepreneur à réaliser l'ouvrage pour un prix global fixe?",
+  "options": [
+   "Soumission à coût majoré",
+   "Soumission à régie",
+   "Soumission à forfait (prix fixe)",
+   "Soumission à prix unitaire"
+  ],
+  "answer": "C",
+  "explanation": "La soumission à forfait (lump sum) engage l'entrepreneur à exécuter tous les travaux décrits pour un prix global déterminé à l'avance.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Dans une soumission à prix unitaire, le paiement final dépend :",
+  "options": [
+   "Des coûts réels plus un pourcentage",
+   "Des quantités réellement exécutées multipliées par les prix unitaires",
+   "Du prix forfaitaire convenu",
+   "D'une entente verbale entre les parties"
+  ],
+  "answer": "B",
+  "explanation": "À prix unitaire, on paie selon les quantités mesurées sur le chantier × les prix unitaires soumissionnés. Le montant final varie selon les quantités réelles.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Le contrat à coût majoré (cost-plus) signifie que le client paie :",
+  "options": [
+   "Les coûts réels de construction plus une rémunération convenue pour l'entrepreneur",
+   "Un prix unitaire par mètre carré",
+   "Un prix fixe déterminé à l'avance",
+   "Uniquement les matériaux"
+  ],
+  "answer": "A",
+  "explanation": "En coût majoré, le propriétaire rembourse les coûts réels (main-d'œuvre, matériaux, équipement) et verse à l'entrepreneur un honoraire (pourcentage ou montant fixe).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Quel document accompagne souvent l'appel d'offres et liste les ouvrages avec leurs prix unitaires?",
+  "options": [
+   "Le plan d'architecture",
+   "Le permis de construction",
+   "Le bordereau de prix (schedule of prices)",
+   "Le certificat de localisation"
+  ],
+  "answer": "C",
+  "explanation": "Le bordereau de prix énumère chaque poste d'ouvrage avec son unité de mesure et le prix unitaire soumissionné. Il sert de base pour les paiements progressifs.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "L'unité de mesure « ml » dans un métré signifie :",
+  "options": [
+   "Mètre carré",
+   "Mètre cube",
+   "Mille litres",
+   "Mètre linéaire"
+  ],
+  "answer": "D",
+  "explanation": "« ml » = mètre linéaire, utilisé pour mesurer des ouvrages linéaires (clôtures, tuyaux, bordures, poutres).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Un facteur de majoration de 1,25 appliqué à un coût direct de 80 000 $ donne un prix de vente de :",
+  "options": [
+   "125 000 $",
+   "100 000 $",
+   "200 000 $",
+   "80 000 $"
+  ],
+  "answer": "B",
+  "explanation": "80 000 $ × 1,25 = 100 000 $. Le facteur de majoration inclut les frais indirects et la marge dans un seul multiplicateur.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "L'analyse de prix unitaires consiste à :",
+  "options": [
+   "Évaluer la valeur marchande d'un immeuble",
+   "Négocier un rabais avec le client",
+   "Décomposer un prix en ses composantes (main-d'œuvre, matériaux, équipement, frais, profit)",
+   "Comparer les prix de différents fournisseurs"
+  ],
+  "answer": "C",
+  "explanation": "L'analyse de prix unitaire décompose chaque poste en ses éléments constitutifs pour vérifier la justesse du prix et identifier les postes à risque.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Quel est le rôle principal de l'estimateur en construction?",
+  "options": [
+   "Négocier les contrats avec les clients",
+   "Évaluer les coûts et préparer les soumissions",
+   "Superviser les ouvriers sur le chantier",
+   "Dessiner les plans d'architecture"
+  ],
+  "answer": "B",
+  "explanation": "L'estimateur analyse les plans et devis, effectue le métré, consulte les fournisseurs et prépare l'estimation des coûts et la soumission.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "La méthode du métré « avant-métré » consiste à :",
+  "options": [
+   "Estimer les coûts selon l'expérience passée",
+   "Vérifier les factures des sous-traitants",
+   "Calculer les quantités à partir des plans avant le début des travaux",
+   "Mesurer les ouvrages après leur exécution"
+  ],
+  "answer": "C",
+  "explanation": "L'avant-métré est le calcul des quantités d'ouvrages à réaliser à partir des plans et devis, avant le début de l'exécution.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Dans un appel d'offres public au Québec, quel principe fondamental doit être respecté?",
+  "options": [
+   "La négociation de gré à gré",
+   "L'égalité de traitement et la transparence entre les soumissionnaires",
+   "L'attribution sans critères prédéfinis",
+   "La sélection du soumissionnaire le plus cher"
+  ],
+  "answer": "B",
+  "explanation": "Les appels d'offres publics sont régis par des principes de transparence, d'égalité de traitement et d'impartialité pour assurer une concurrence loyale.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Un entrepreneur soumissionne 150 $/m³ pour l'excavation. Si le volume réel est de 800 m³ au lieu des 600 m³ estimés, le montant payé sera :",
+  "options": [
+   "60 000 $",
+   "90 000 $",
+   "150 000 $",
+   "120 000 $"
+  ],
+  "answer": "D",
+  "explanation": "En prix unitaire : 800 m³ × 150 $/m³ = 120 000 $. Le paiement suit les quantités réelles, pas les quantités estimées.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Les frais de chantier (job site overhead) comprennent :",
+  "options": [
+   "L'installation de chantier, la clôture temporaire, les toilettes chimiques et le bureau de chantier",
+   "La publicité de l'entreprise",
+   "Les honoraires de l'architecte",
+   "Le loyer du siège social de l'entreprise"
+  ],
+  "answer": "A",
+  "explanation": "Les frais de chantier sont des coûts indirects spécifiques au projet : installation, clôture, sanitaires, bureau, éclairage temporaire, etc.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Quel pourcentage de contingence est typique pour un projet bien défini avec plans détaillés?",
+  "options": [
+   "5 à 10 %",
+   "50 %",
+   "1 à 3 %",
+   "25 à 30 %"
+  ],
+  "answer": "A",
+  "explanation": "Pour un projet bien défini, une contingence de 5 à 10 % est courante. Les projets moins définis peuvent nécessiter 15 à 25 %.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Le « takeoff » numérique utilise :",
+  "options": [
+   "Un drone pour survoler le chantier",
+   "Une calculatrice et des tables de conversion",
+   "Un logiciel de métré qui lit les plans numériques (ex. : PlanSwift, Bluebeam)",
+   "Un ruban à mesurer et un crayon"
+  ],
+  "answer": "C",
+  "explanation": "Le takeoff numérique utilise des logiciels spécialisés pour extraire les quantités directement des plans PDF ou CAO, améliorant la précision et la vitesse.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Dans une soumission, les « exclusions » servent à :",
+  "options": [
+   "Réduire le prix de la soumission",
+   "Préciser les travaux qui ne sont PAS inclus dans le prix soumissionné",
+   "Éliminer les concurrents",
+   "Exclure les taxes du calcul"
+  ],
+  "answer": "B",
+  "explanation": "Les exclusions délimitent le scope en précisant ce qui n'est pas couvert, évitant les malentendus et les réclamations ultérieures.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Un prix unitaire comprend typiquement :",
+  "options": [
+   "Uniquement le coût des matériaux",
+   "Uniquement la main-d'œuvre",
+   "Les taxes et les permis uniquement",
+   "La main-d'œuvre, les matériaux, l'équipement, les frais indirects et le profit"
+  ],
+  "answer": "D",
+  "explanation": "Un prix unitaire complet inclut toutes les composantes : M-O, matériaux, équipement, overhead alloué et marge bénéficiaire.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "La « règle du pouce » (rule of thumb) en estimation est :",
+  "options": [
+   "Une méthode précise basée sur des calculs détaillés",
+   "Un logiciel d'estimation",
+   "Une exigence légale de la RBQ",
+   "Une approximation rapide basée sur l'expérience et des ratios historiques"
+  ],
+  "answer": "D",
+  "explanation": "La règle du pouce est une estimation approximative (ex. : $/pi²) utile en phase préliminaire, mais insuffisante pour une soumission ferme.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Quel organisme encadre les appels d'offres publics des municipalités au Québec?",
+  "options": [
+   "Le ministère des Affaires municipales et de l'Habitation (MAMH)",
+   "L'APCHQ",
+   "La CCQ",
+   "La RBQ"
+  ],
+  "answer": "A",
+  "explanation": "Le MAMH établit les règles pour les contrats municipaux. Les municipalités doivent suivre des politiques de gestion contractuelle conformes.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Le rendement de main-d'œuvre de 0,5 heure/m² signifie que :",
+  "options": [
+   "Le projet dure 0,5 heure",
+   "Le coût est de 0,50 $ par m²",
+   "Un ouvrier produit 0,5 m² par heure",
+   "Il faut 0,5 heure de travail pour exécuter 1 m² d'ouvrage"
+  ],
+  "answer": "D",
+  "explanation": "Le rendement exprime le temps nécessaire par unité d'ouvrage. 0,5 h/m² = 30 minutes de travail par mètre carré.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Si le coût de main-d'œuvre est de 45 $/h et le rendement est de 0,8 h/m², le coût de M-O par m² est :",
+  "options": [
+   "56,25 $/m²",
+   "36 $/m²",
+   "45 $/m²",
+   "0,8 $/m²"
+  ],
+  "answer": "B",
+  "explanation": "45 $/h × 0,8 h/m² = 36 $/m². Le coût de M-O unitaire = taux horaire × rendement.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "L'indice d'escalation des coûts en construction sert à :",
+  "options": [
+   "Ajuster les estimations pour tenir compte de l'inflation entre la soumission et l'exécution",
+   "Déterminer le nombre d'ouvriers nécessaires",
+   "Réduire les prix des matériaux",
+   "Calculer la marge bénéficiaire"
+  ],
+  "answer": "A",
+  "explanation": "L'indice d'escalation permet d'actualiser les coûts estimés en fonction de l'évolution prévisible des prix des matériaux et de la M-O.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Quel document l'entrepreneur doit-il fournir pour garantir sa soumission dans un appel d'offres?",
+  "options": [
+   "Un certificat de naissance",
+   "Une lettre de recommandation",
+   "Une garantie de soumission (bid bond), généralement 10 % du montant soumissionné",
+   "Un chèque personnel"
+  ],
+  "answer": "C",
+  "explanation": "La garantie de soumission (bid bond) assure au donneur d'ouvrage que le soumissionnaire retenu signera le contrat. Elle est typiquement de 10 %.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Le « front-end loading » dans un bordereau de prix consiste à :",
+  "options": [
+   "Majorer les prix des ouvrages exécutés en début de projet pour améliorer les flux de trésorerie",
+   "Commencer les travaux avant la signature du contrat",
+   "Réduire les prix des premiers postes",
+   "Éliminer les derniers postes du bordereau"
+  ],
+  "answer": "A",
+  "explanation": "Le front-end loading est une pratique (parfois contestée) qui consiste à gonfler les prix des items exécutés tôt pour obtenir des paiements anticipés plus élevés.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Un métré de béton pour une dalle de 10 m × 8 m × 0,15 m d'épaisseur donne un volume de :",
+  "options": [
+   "1 200 m³",
+   "120 m³",
+   "12 m³",
+   "1,2 m³"
+  ],
+  "answer": "C",
+  "explanation": "Volume = 10 × 8 × 0,15 = 12 m³. Le métré de béton se calcule en mètres cubes (m³).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "La surface d'un mur de 4 m de haut × 12 m de long est de :",
+  "options": [
+   "16 m²",
+   "48 m²",
+   "4,8 m²",
+   "480 m²"
+  ],
+  "answer": "B",
+  "explanation": "Surface = 4 × 12 = 48 m². Les surfaces (murs, planchers, toitures) se mesurent en mètres carrés.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Dans une estimation, les « allowances » (provisions) sont :",
+  "options": [
+   "Des pénalités de retard",
+   "Des rabais accordés au client",
+   "Des taxes gouvernementales",
+   "Des montants réservés pour des éléments non encore définis (ex. : choix de finitions)"
+  ],
+  "answer": "D",
+  "explanation": "Les provisions (allowances) sont des montants inclus dans le contrat pour des éléments dont le choix ou le prix n'est pas encore déterminé.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Quel est l'objectif principal d'une estimation de classe A (détaillée)?",
+  "options": [
+   "Obtenir un ordre de grandeur rapide",
+   "Éviter de consulter les fournisseurs",
+   "Remplacer le métré",
+   "Fournir une estimation précise (±5 %) basée sur des plans et devis complets"
+  ],
+  "answer": "D",
+  "explanation": "L'estimation de classe A (définitive) est basée sur des documents complets et vise une précision de ±5 %. Elle sert de base à la soumission ferme.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Le coût de l'équipement dans une estimation inclut :",
+  "options": [
+   "Uniquement le prix d'achat des machines",
+   "La location ou l'amortissement, le carburant, l'entretien et l'opérateur",
+   "Uniquement le carburant",
+   "Les taxes d'immatriculation uniquement"
+  ],
+  "answer": "B",
+  "explanation": "Le coût d'équipement comprend la location/amortissement, le carburant, l'entretien, les assurances et souvent le salaire de l'opérateur.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Un entrepreneur utilise un facteur de majoration de 1,35. Si ses coûts directs sont de 200 000 $, son prix de vente est :",
+  "options": [
+   "235 000 $",
+   "335 000 $",
+   "200 000 $",
+   "270 000 $"
+  ],
+  "answer": "D",
+  "explanation": "200 000 $ × 1,35 = 270 000 $. Le facteur de 1,35 ajoute 35 % pour couvrir les frais indirects et la marge.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "La « ventilation » d'une soumission consiste à :",
+  "options": [
+   "Décomposer le prix global en postes détaillés pour permettre l'analyse et les paiements progressifs",
+   "Réduire le nombre de pages",
+   "Aérer les documents de soumission",
+   "Traduire la soumission en anglais"
+  ],
+  "answer": "A",
+  "explanation": "La ventilation (breakdown) détaille le prix global en composantes, facilitant l'évaluation des offres et le suivi des paiements.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Quel risque principal l'entrepreneur assume-t-il dans un contrat à forfait?",
+  "options": [
+   "Aucun risque, le client paie tout",
+   "Le risque de change uniquement",
+   "Le risque de météo uniquement",
+   "Le risque de dépassement de coûts si les quantités réelles dépassent les estimations"
+  ],
+  "answer": "D",
+  "explanation": "À forfait, l'entrepreneur assume le risque de quantité et de prix. Si les coûts réels dépassent la soumission, c'est à ses dépens.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Le « bid leveling » (nivellement des soumissions) consiste à :",
+  "options": [
+   "Ajuster les soumissions pour les rendre comparables (inclusions, exclusions, alternatives)",
+   "Choisir automatiquement la soumission la plus basse",
+   "Annuler l'appel d'offres",
+   "Négocier les prix après l'ouverture des soumissions"
+  ],
+  "answer": "A",
+  "explanation": "Le nivellement consiste à uniformiser les soumissions en ajoutant ou retirant des items pour comparer les offres sur une base équivalente.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Un bordereau de prix unitaires pour l'excavation indique 25 $/m³. Pour 1 500 m³ excavés, le montant est :",
+  "options": [
+   "25 000 $",
+   "15 000 $",
+   "37 500 $",
+   "1 500 $"
+  ],
+  "answer": "C",
+  "explanation": "1 500 m³ × 25 $/m³ = 37 500 $. Le paiement en prix unitaire = quantité réelle × prix unitaire.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Les « conditions générales » d'un contrat de construction définissent :",
+  "options": [
+   "Les droits, obligations et procédures administratives des parties",
+   "Les spécifications techniques des matériaux",
+   "Les plans d'architecture",
+   "Le prix de chaque ouvrage"
+  ],
+  "answer": "A",
+  "explanation": "Les conditions générales (ex. : CCDC 2, NQ 1809-900) encadrent la relation contractuelle : rôles, délais, paiements, modifications, litiges.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "La productivité de la main-d'œuvre peut être affectée par :",
+  "options": [
+   "Le nombre de pages du contrat",
+   "Les conditions météo, l'encombrement du chantier, les heures supplémentaires et la coordination",
+   "Uniquement la qualité des matériaux",
+   "Uniquement le salaire des ouvriers"
+  ],
+  "answer": "B",
+  "explanation": "La productivité dépend de nombreux facteurs : météo, accès, congestion, heures sup (fatigue), coordination entre métiers, etc.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Un estimé préliminaire de classe C a une précision typique de :",
+  "options": [
+   "±50 %",
+   "±10 à 15 %",
+   "±5 %",
+   "±25 à 30 %"
+  ],
+  "answer": "D",
+  "explanation": "L'estimation de classe C (conceptuelle) est basée sur des informations limitées et a une précision de ±25 à 30 %. Elle sert en phase de faisabilité.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Le « markup » (majoration) de 20 % sur un coût de 100 000 $ donne un prix de vente de :",
+  "options": [
+   "80 000 $",
+   "120 000 $",
+   "100 000 $",
+   "200 000 $"
+  ],
+  "answer": "B",
+  "explanation": "100 000 $ × 1,20 = 120 000 $. Le markup de 20 % ajoute 20 000 $ de frais et profit.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Dans un métré, le « waste factor » (facteur de perte) de 10 % sur 100 m² de céramique signifie qu'on commande :",
+  "options": [
+   "200 m²",
+   "100 m²",
+   "110 m²",
+   "90 m²"
+  ],
+  "answer": "C",
+  "explanation": "100 m² × 1,10 = 110 m². Le facteur de perte couvre les coupes, les bris et les défauts. Il varie selon le matériau (5-15 % typique).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Quel type de soumission est le plus approprié quand le scope est mal défini et peut changer?",
+  "options": [
+   "Soumission à rabais",
+   "Soumission à forfait",
+   "Soumission verbale",
+   "Soumission à prix unitaire ou à coût majoré"
+  ],
+  "answer": "D",
+  "explanation": "Quand le scope est incertain, le prix unitaire ou le coût majoré offrent plus de flexibilité que le forfait, qui transfère tout le risque à l'entrepreneur.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Le « value engineering » (ingénierie de valeur) vise à :",
+  "options": [
+   "Optimiser le rapport fonction/coût en proposant des alternatives équivalentes moins chères",
+   "Augmenter le prix du contrat",
+   "Éliminer les garanties",
+   "Réduire la qualité des matériaux"
+  ],
+  "answer": "A",
+  "explanation": "L'ingénierie de valeur cherche à maintenir la fonction et la qualité tout en réduisant les coûts par des solutions alternatives.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Un appel d'offres sur invitation (privé) se distingue d'un appel d'offres public car :",
+  "options": [
+   "Il n'exige pas de garantie de soumission",
+   "Il est ouvert à tous les entrepreneurs",
+   "Il est toujours moins cher",
+   "Seuls les entrepreneurs invités peuvent soumissionner"
+  ],
+  "answer": "D",
+  "explanation": "L'appel d'offres sur invitation limite la concurrence à des entrepreneurs présélectionnés, contrairement à l'appel public ouvert à tous.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Le « cash flow » (flux de trésorerie) d'un projet de construction est influencé par :",
+  "options": [
+   "Le nombre de pages du devis",
+   "Le calendrier des paiements, les retenues, les délais de facturation et les déboursés",
+   "Uniquement le salaire des employés",
+   "Uniquement le prix de la soumission"
+  ],
+  "answer": "B",
+  "explanation": "Le flux de trésorerie dépend du timing des entrées (paiements du client) et des sorties (M-O, matériaux, sous-traitants), affecté par les retenues et délais.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "La retenue contractuelle typique au Québec est de :",
+  "options": [
+   "5 %",
+   "10 %",
+   "1 %",
+   "25 %"
+  ],
+  "answer": "B",
+  "explanation": "La retenue de 10 % est la norme au Québec (et au Canada). Elle est prélevée sur chaque paiement progressif et libérée à la réception.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Un métré de coffrage pour une poutre de 6 m de long, 0,4 m de large et 0,6 m de haut (3 faces) donne une surface de :",
+  "options": [
+   "1,44 m²",
+   "2,4 m²",
+   "9,6 m²",
+   "14,4 m²"
+  ],
+  "answer": "C",
+  "explanation": "3 faces : fond (6×0,4=2,4) + 2 côtés (6×0,6×2=7,2) = 9,6 m². Le coffrage se mesure en m² de surface en contact avec le béton.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Le « bid shopping » (magasinage de soumissions) est une pratique :",
+  "options": [
+   "Considérée contraire à l'éthique : utiliser la soumission la plus basse pour négocier avec d'autres",
+   "Obligatoire dans les contrats publics",
+   "Sans conséquence sur l'industrie",
+   "Encouragée par la RBQ"
+  ],
+  "answer": "A",
+  "explanation": "Le bid shopping consiste à divulguer le prix le plus bas à des concurrents pour obtenir un rabais. C'est contraire à l'éthique et mine la confiance.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "L'estimation paramétrique utilise :",
+  "options": [
+   "Les prix de vente des concurrents",
+   "Des ratios historiques (ex. : $/m², $/lit) appliqués aux paramètres du projet",
+   "Uniquement l'intuition de l'estimateur",
+   "Des plans détaillés et un métré complet"
+  ],
+  "answer": "B",
+  "explanation": "L'estimation paramétrique applique des coûts unitaires historiques à des paramètres clés (surface, volume) pour une estimation rapide en phase amont.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Si un projet de 2 000 m² a un coût historique de 350 $/m², l'estimation paramétrique donne :",
+  "options": [
+   "700 000 $",
+   "70 000 $",
+   "1 750 000 $",
+   "350 000 $"
+  ],
+  "answer": "A",
+  "explanation": "2 000 m² × 350 $/m² = 700 000 $. L'estimation paramétrique multiplie le paramètre (surface) par le coût unitaire historique.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "Les « conditions particulières » d'un contrat de construction :",
+  "options": [
+   "Remplacent les conditions générales",
+   "Ne concernent que les sous-traitants",
+   "Sont optionnelles et sans valeur juridique",
+   "Précisent et adaptent les conditions générales au projet spécifique (délais, pénalités, assurances)"
+  ],
+  "answer": "D",
+  "explanation": "Les conditions particulières complètent et modifient les conditions générales pour refléter les exigences spécifiques du projet et du donneur d'ouvrage.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Un entrepreneur reçoit 3 soumissions de sous-traitants : 45 000 $, 48 000 $ et 52 000 $. Pour sa soumission, il devrait :",
+  "options": [
+   "Utiliser 45 000 $ sans vérification",
+   "Prendre la moyenne des trois",
+   "Ignorer les soumissions et estimer lui-même",
+   "Analyser la conformité de chaque soumission avant de retenir la plus basse conforme"
+  ],
+  "answer": "D",
+  "explanation": "L'estimateur doit vérifier que chaque soumission couvre le même scope. La plus basse n'est retenue que si elle est conforme et complète.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Le « escalation clause » (clause d'indexation) dans un contrat permet :",
+  "options": [
+   "D'éliminer les retenues",
+   "D'augmenter la marge bénéficiaire",
+   "De réduire les délais",
+   "D'ajuster le prix du contrat en fonction de la variation des coûts des matériaux ou de la M-O"
+  ],
+  "answer": "D",
+  "explanation": "La clause d'indexation protège les parties contre les fluctuations majeures de coûts (ex. : acier, carburant) en ajustant le prix contractuel.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "La « méthode des ratios » pour estimer les frais indirects consiste à :",
+  "options": [
+   "Calculer chaque dépense indirecte individuellement",
+   "Demander au client de payer les frais indirects séparément",
+   "Appliquer un pourcentage historique des coûts directs pour couvrir l'overhead",
+   "Ignorer les frais indirects"
+  ],
+  "answer": "C",
+  "explanation": "La méthode des ratios applique un pourcentage (ex. : 12-18 %) aux coûts directs pour couvrir les frais indirects, basé sur l'expérience de l'entreprise.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 1,
+  "question": "Un devis de performance (performance specification) se distingue d'un devis prescriptif car il :",
+  "options": [
+   "Décrit exactement les matériaux et méthodes à utiliser",
+   "Définit le résultat attendu en laissant l'entrepreneur choisir les moyens",
+   "Est toujours moins détaillé",
+   "Ne s'applique qu'aux projets résidentiels"
+  ],
+  "answer": "B",
+  "explanation": "Le devis de performance fixe les objectifs et critères de résultat, laissant à l'entrepreneur la liberté des moyens pour les atteindre.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Le « bid closing » (fermeture des soumissions) est :",
+  "options": [
+   "La date et l'heure limites pour déposer les soumissions",
+   "L'annulation de l'appel d'offres",
+   "La signature du contrat",
+   "Le moment où l'entrepreneur commence les travaux"
+  ],
+  "answer": "A",
+  "explanation": "Le bid closing est la date/heure limite de dépôt. Toute soumission reçue après est généralement rejetée pour préserver l'équité.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 1,
+  "question": "L'analyse de sensibilité d'une estimation consiste à :",
+  "options": [
+   "Mesurer la satisfaction du client",
+   "Comparer les soumissions des concurrents",
+   "Évaluer l'impact de variations de paramètres clés (prix, quantités, productivité) sur le coût total",
+   "Vérifier l'orthographe de la soumission"
+  ],
+  "answer": "C",
+  "explanation": "L'analyse de sensibilité teste la robustesse de l'estimation en faisant varier les hypothèses critiques pour identifier les postes à risque.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 1,
+  "question": "Un « addenda » (additif) dans un appel d'offres est :",
+  "options": [
+   "Une garantie supplémentaire",
+   "Un bonus financier pour le soumissionnaire",
+   "Un type de contrat",
+   "Une modification ou précision aux documents d'appel d'offres émise avant la fermeture"
+  ],
+  "answer": "D",
+  "explanation": "Les addenda sont des modifications officielles aux documents d'appel d'offres. Tous les soumissionnaires doivent en tenir compte dans leur prix.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Le diagramme de Gantt représente :",
+  "options": [
+   "La planification temporelle des activités sous forme de barres horizontales",
+   "La hiérarchie organisationnelle",
+   "Les flux de trésorerie",
+   "Les coûts du projet"
+  ],
+  "answer": "A",
+  "explanation": "Le diagramme de Gantt visualise les activités sur un axe temporel avec des barres proportionnelles à leur durée, facilitant le suivi de l'avancement.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "La méthode CPM (Critical Path Method) sert à :",
+  "options": [
+   "Contrôler la qualité des travaux",
+   "Gérer les ressources humaines",
+   "Calculer les coûts du projet",
+   "Identifier le chemin critique et les activités qui déterminent la durée minimale du projet"
+  ],
+  "answer": "D",
+  "explanation": "Le CPM identifie la séquence d'activités sans flottement (chemin critique) qui détermine la durée totale du projet.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Le chemin critique d'un projet est :",
+  "options": [
+   "La séquence d'activités ayant un flottement total nul, déterminant la durée minimale du projet",
+   "Le chemin le moins coûteux",
+   "Le chemin le plus court à travers le réseau",
+   "Le chemin avec le plus de ressources"
+  ],
+  "answer": "A",
+  "explanation": "Le chemin critique est la plus longue séquence d'activités dépendantes. Tout retard sur ce chemin retarde l'ensemble du projet.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Le flottement total (total float) d'une activité est :",
+  "options": [
+   "Le temps qu'un ouvrier passe en pause",
+   "Le délai maximum qu'une activité peut subir sans retarder la date de fin du projet",
+   "Le nombre d'ouvriers assignés",
+   "La différence entre le coût prévu et le coût réel"
+  ],
+  "answer": "B",
+  "explanation": "Le flottement total = date de fin au plus tard - date de fin au plus tôt. Un flottement nul indique une activité critique.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "La méthode PERT utilise trois estimations de durée :",
+  "options": [
+   "Théorique, réelle et corrigée",
+   "Courte, moyenne et longue",
+   "Matin, midi et soir",
+   "Optimiste (a), probable (m) et pessimiste (b)"
+  ],
+  "answer": "D",
+  "explanation": "PERT pondère trois estimations : durée attendue = (a + 4m + b) / 6, intégrant l'incertitude dans la planification.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Avec PERT, si a=4 jours, m=7 jours, b=16 jours, la durée attendue est :",
+  "options": [
+   "9 jours",
+   "8 jours",
+   "7 jours",
+   "12 jours"
+  ],
+  "answer": "B",
+  "explanation": "Durée PERT = (4 + 4×7 + 16) / 6 = (4+28+16)/6 = 48/6 = 8 jours.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Un jalon (milestone) dans un échéancier est :",
+  "options": [
+   "Un événement ponctuel de durée nulle marquant une étape importante",
+   "Un type de ressource",
+   "Une activité de longue durée",
+   "Un coût fixe"
+  ],
+  "answer": "A",
+  "explanation": "Un jalon est un point de repère temporel (durée = 0) : fin de fondation, obtention d'un permis, livraison d'équipement, etc.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Le séquencage des activités consiste à :",
+  "options": [
+   "Commander les matériaux",
+   "Déterminer l'ordre logique d'exécution et les dépendances entre activités",
+   "Embaucher les ouvriers",
+   "Assigner les coûts à chaque activité"
+  ],
+  "answer": "B",
+  "explanation": "Le séquencage établit les relations de dépendance (fin-début, début-début, etc.) entre les activités pour construire le réseau du projet.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Une relation de dépendance « fin à début » (FS) signifie que :",
+  "options": [
+   "Les deux activités commencent en même temps",
+   "L'activité précédente dépend de la suivante",
+   "L'activité suivante ne peut commencer que lorsque la précédente est terminée",
+   "Les deux activités se terminent en même temps"
+  ],
+  "answer": "C",
+  "explanation": "La relation FS (Finish-to-Start) est la plus courante : le coulage de la dalle (B) ne peut commencer qu'après la fin du coffrage (A).",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « lead time » (chevauchement) dans une relation FS permet :",
+  "options": [
+   "De commencer l'activité suivante avant la fin complète de la précédente",
+   "De retarder le début de l'activité suivante",
+   "D'éliminer la dépendance",
+   "D'augmenter la durée du projet"
+  ],
+  "answer": "A",
+  "explanation": "Le lead (avance) permet un chevauchement : ex. commencer l'installation électrique 2 jours avant la fin du gros œuvre.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « lag time » (décalage) dans une relation FS impose :",
+  "options": [
+   "Une réduction de la durée",
+   "Un délai d'attente obligatoire entre la fin d'une activité et le début de la suivante",
+   "Une annulation de la dépendance",
+   "Un chevauchement entre activités"
+  ],
+  "answer": "B",
+  "explanation": "Le lag (retard) impose un délai : ex. attendre 7 jours (cure du béton) avant de décoffrer après le coulage.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "L'histogramme des ressources montre :",
+  "options": [
+   "La charge de travail (nombre d'ouvriers ou heures) par période",
+   "Les relations contractuelles",
+   "Les coûts cumulés du projet",
+   "La qualité des matériaux"
+  ],
+  "answer": "A",
+  "explanation": "L'histogramme des ressources visualise l'allocation des ressources dans le temps, identifiant les surcharges et les sous-utilisations.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Le nivellement des ressources (resource leveling) vise à :",
+  "options": [
+   "Éliminer le chemin critique",
+   "Réduire les coûts de matériaux",
+   "Augmenter le nombre d'ouvriers",
+   "Réduire les fluctuations de charge en ajustant les dates des activités non critiques"
+  ],
+  "answer": "D",
+  "explanation": "Le nivellement utilise le flottement des activités non critiques pour lisser la demande de ressources et éviter les pics.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Le phasage d'un projet de construction consiste à :",
+  "options": [
+   "Éliminer les étapes inutiles",
+   "Réduire le nombre de phases",
+   "Commencer toutes les activités en même temps",
+   "Diviser le projet en étapes séquentielles (excavation, fondation, structure, enveloppe, finitions)"
+  ],
+  "answer": "D",
+  "explanation": "Le phasage organise les travaux en phases logiques successives, chacune devant être complétée ou suffisamment avancée avant la suivante.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Les contraintes météo au Québec affectent principalement :",
+  "options": [
+   "Aucun type de travaux",
+   "Les travaux intérieurs uniquement",
+   "Les travaux extérieurs : excavation, bétonnage, toiture, pavage (gel, neige, pluie)",
+   "Uniquement la peinture"
+  ],
+  "answer": "C",
+  "explanation": "Au Québec, le gel (nov-mars) et les précipitations limitent les travaux extérieurs. Le bétonnage nécessite des précautions sous 5°C.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Le coulage de béton par temps froid (< 5°C) nécessite :",
+  "options": [
+   "D'ajouter plus d'eau au mélange",
+   "De réduire le temps de cure",
+   "Des mesures de protection : chauffage, abris, adjuvants accélérateurs, coffrages isolés",
+   "Aucune précaution particulière"
+  ],
+  "answer": "C",
+  "explanation": "Par temps froid, le béton doit être protégé du gel pendant la cure : abris, chauffage, adjuvants, coffrages isolants (norme CSA A23.1).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Le calendrier d'exécution (construction schedule) doit être :",
+  "options": [
+   "Mis à jour régulièrement pour refléter l'avancement réel et les changements",
+   "Établi uniquement par le client",
+   "Gardé secret",
+   "Établi une seule fois et jamais modifié"
+  ],
+  "answer": "A",
+  "explanation": "Le calendrier est un document vivant, mis à jour périodiquement (hebdo/mensuel) pour comparer le prévu au réel et ajuster la planification.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "La WBS (Work Breakdown Structure) est :",
+  "options": [
+   "Une décomposition hiérarchique du projet en livrables et lots de travail",
+   "Un budget détaillé",
+   "Un organigramme de l'entreprise",
+   "Un diagramme de Gantt"
+  ],
+  "answer": "A",
+  "explanation": "La WBS (structure de découpage) décompose le projet en éléments gérables : phases → lots → activités, servant de base à la planification et au contrôle.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Si une activité du chemin critique prend 3 jours de retard, le projet :",
+  "options": [
+   "Ne sera pas affecté",
+   "Sera retardé de 6 jours",
+   "Sera retardé de 3 jours (sauf compression ultérieure)",
+   "Sera en avance"
+  ],
+  "answer": "C",
+  "explanation": "Toute activité du chemin critique a un flottement nul. Un retard de 3 jours sur le chemin critique retarde la fin du projet de 3 jours.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "La compression d'échéancier (schedule compression) peut se faire par :",
+  "options": [
+   "L'augmentation des délais",
+   "La suppression d'activités",
+   "La réduction de la qualité",
+   "Le crashing (ajout de ressources) ou le fast-tracking (chevauchement d'activités)"
+  ],
+  "answer": "D",
+  "explanation": "Le crashing ajoute des ressources (coût ↑), le fast-tracking chevauche des activités séquentielles (risque ↑). Les deux réduisent la durée.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Le fast-tracking (exécution en parallèle) augmente principalement :",
+  "options": [
+   "La qualité des travaux",
+   "Les coûts de matériaux",
+   "Le nombre de jalons",
+   "Le risque de retours en arrière et de modifications"
+  ],
+  "answer": "D",
+  "explanation": "Chevaucher des activités normalement séquentielles accroît le risque de conflits, d'erreurs et de reprises si les hypothèses changent.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Le crashing (ajout de ressources) augmente principalement :",
+  "options": [
+   "Les risques",
+   "La durée du projet",
+   "Les coûts directs du projet",
+   "Le flottement des activités"
+  ],
+  "answer": "C",
+  "explanation": "Ajouter des ressources (heures sup, équipes additionnelles, équipement) réduit la durée mais augmente les coûts directs.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Une activité avec un flottement libre de 5 jours peut être retardée de 5 jours sans :",
+  "options": [
+   "Affecter la fin du projet",
+   "Nécessiter de ressources",
+   "Retarder le début de l'activité suivante",
+   "Coûter plus cher"
+  ],
+  "answer": "C",
+  "explanation": "Le flottement libre est le délai qu'une activité peut subir sans retarder le début au plus tôt de ses successeurs immédiats.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Le diagramme de Gantt présente une limite principale :",
+  "options": [
+   "Il ne peut pas inclure de dates",
+   "Il est réservé aux petits projets",
+   "Il est trop complexe à lire",
+   "Il ne montre pas clairement les dépendances entre activités et le chemin critique"
+  ],
+  "answer": "D",
+  "explanation": "Le Gantt montre les durées mais pas les liens de dépendance. Le réseau (CPM/PERT) est nécessaire pour identifier le chemin critique.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "La courbe en S (S-curve) d'un projet représente :",
+  "options": [
+   "Les variations de température",
+   "La structure de l'organigramme",
+   "Le profil du terrain",
+   "L'évolution cumulative des coûts ou de l'avancement dans le temps"
+  ],
+  "answer": "D",
+  "explanation": "La courbe en S montre la progression cumulative (coûts, heures, %). Sa forme caractéristique : lent au début, rapide au milieu, lent à la fin.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « look-ahead schedule » (calendrier prospectif) couvre typiquement :",
+  "options": [
+   "Les 2 à 6 prochaines semaines de travaux détaillés",
+   "Uniquement la journée en cours",
+   "L'ensemble du projet",
+   "Les 5 prochaines années"
+  ],
+  "answer": "A",
+  "explanation": "Le look-ahead (2-6 semaines) détaille les activités à venir avec les ressources, matériaux et contraintes, servant à la coordination hebdomadaire.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "La réunion de coordination hebdomadaire de chantier sert à :",
+  "options": [
+   "Revoir l'avancement, identifier les conflits et planifier les travaux de la semaine suivante",
+   "Négocier les contrats",
+   "Signer les chèques de paie",
+   "Approuver les plans d'architecture"
+  ],
+  "answer": "A",
+  "explanation": "La réunion de chantier hebdomadaire (OAC) fait le point sur l'avancement, les problèmes, les livraisons et la coordination entre métiers.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « float » (flottement) d'un projet est :",
+  "options": [
+   "La marge de temps disponible sur les activités non critiques",
+   "Le délai de paiement du client",
+   "Le nombre d'ouvriers en attente",
+   "Le budget de contingence"
+  ],
+  "answer": "A",
+  "explanation": "Le flottement est la flexibilité temporelle des activités non critiques. Il permet d'ajuster les ressources sans affecter la date de fin.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Un réseau de projet (network diagram) utilise des nœuds pour représenter :",
+  "options": [
+   "Les matériaux",
+   "Les ouvriers",
+   "Les coûts",
+   "Les activités ou événements du projet"
+  ],
+  "answer": "D",
+  "explanation": "Dans un réseau (PDM/AON), chaque nœud représente une activité et les flèches indiquent les dépendances logiques.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "La date de début au plus tôt (ES) d'une activité est :",
+  "options": [
+   "Toujours le jour 1 du projet",
+   "La date imposée par le client",
+   "La date de fin de l'activité précédente moins 1 jour",
+   "La date la plus précoce à laquelle l'activité peut commencer, compte tenu de ses prédécesseurs"
+  ],
+  "answer": "D",
+  "explanation": "L'ES (Early Start) est calculé par le passage avant (forward pass) : ES = max(EF des prédécesseurs).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Le passage arrière (backward pass) dans le CPM calcule :",
+  "options": [
+   "Les quantités de matériaux",
+   "Les coûts du projet",
+   "Le nombre d'ouvriers",
+   "Les dates de début et de fin au plus tard (LS, LF) de chaque activité"
+  ],
+  "answer": "D",
+  "explanation": "Le backward pass part de la fin du projet et remonte pour calculer LS et LF, permettant de déterminer le flottement de chaque activité.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Si EF d'une activité = jour 15 et LF = jour 20, le flottement total est :",
+  "options": [
+   "35 jours",
+   "20 jours",
+   "15 jours",
+   "5 jours"
+  ],
+  "answer": "D",
+  "explanation": "Flottement total = LF - EF = 20 - 15 = 5 jours (ou LS - ES). L'activité peut être retardée de 5 jours sans affecter le projet.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "La « baseline » (référence) d'un échéancier est :",
+  "options": [
+   "Un document optionnel",
+   "La version approuvée du calendrier servant de référence pour mesurer les écarts",
+   "Le calendrier le plus récent",
+   "Le calendrier du sous-traitant"
+  ],
+  "answer": "B",
+  "explanation": "La baseline est le calendrier initial approuvé. Les écarts (variances) entre le réel et la baseline mesurent la performance de planification.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "L'indicateur SPI (Schedule Performance Index) de 0,85 signifie que :",
+  "options": [
+   "Le projet est en avance de 15 %",
+   "Le projet est terminé à 85 %",
+   "Le budget est dépassé de 15 %",
+   "Le projet progresse à 85 % du rythme prévu (en retard)"
+  ],
+  "answer": "D",
+  "explanation": "SPI = valeur acquise / valeur planifiée. SPI < 1 = retard. SPI = 0,85 signifie que pour chaque jour planifié, seulement 0,85 jour de travail est réalisé.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « critical chain » (chaîne critique) diffère du chemin critique car elle :",
+  "options": [
+   "Ignore les dépendances",
+   "Ne s'applique qu'aux projets informatiques",
+   "Est toujours plus courte",
+   "Intègre les contraintes de ressources et ajoute des tampons (buffers) de projet"
+  ],
+  "answer": "D",
+  "explanation": "La chaîne critique (Goldratt) tient compte des ressources limitées et protège le projet avec des tampons plutôt que des contingences par activité.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Un « buffer » (tampon) de projet dans la méthode de la chaîne critique est :",
+  "options": [
+   "Un type de contrat",
+   "Un mur de protection sur le chantier",
+   "Une réserve de temps placée à la fin du chemin critique pour absorber les retards",
+   "Une assurance contre les intempéries"
+  ],
+  "answer": "C",
+  "explanation": "Le tampon de projet protège la date de livraison en absorbant les variations des activités critiques, remplaçant les contingences individuelles.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "La planification à rebours (backward scheduling) consiste à :",
+  "options": [
+   "Ignorer les délais",
+   "Commencer par les finitions",
+   "Partir de la date de livraison imposée et remonter pour déterminer les dates de début",
+   "Planifier les activités dans le désordre"
+  ],
+  "answer": "C",
+  "explanation": "La planification à rebours part de l'échéance finale et calcule les dates limites de début pour chaque activité, identifiant les contraintes.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « resource histogram » montre une surcharge quand :",
+  "options": [
+   "La barre dépasse la capacité disponible pour une période donnée",
+   "La barre est exactement à la capacité",
+   "Il n'y a pas de barre",
+   "La barre est sous la ligne de capacité"
+  ],
+  "answer": "A",
+  "explanation": "Quand la demande de ressources dépasse la disponibilité (barre au-dessus de la ligne), il y a surcharge nécessitant un nivellement.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "La « contrainte de ressources » (resource constraint) signifie que :",
+  "options": [
+   "Seuls les matériaux sont limités",
+   "La disponibilité limitée des ressources peut allonger la durée du projet",
+   "Les ressources sont illimitées",
+   "Les ressources n'affectent pas l'échéancier"
+  ],
+  "answer": "B",
+  "explanation": "Si une ressource (grue, équipe spécialisée) n'est pas disponible quand nécessaire, les activités attendent, allongeant le projet.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « Takt time » en construction lean est :",
+  "options": [
+   "Le temps de pause des ouvriers",
+   "Le rythme de production requis pour livrer selon l'échéancier (temps disponible / unités)",
+   "Le délai de livraison des matériaux",
+   "Le temps total du projet"
+  ],
+  "answer": "B",
+  "explanation": "Le Takt time = temps disponible / demande. Il synchronise le rythme des équipes pour un flux continu, inspiré du lean manufacturing.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "La « Last Planner System » (LPS) est une approche de planification qui :",
+  "options": [
+   "Est utilisée uniquement en manufacturing",
+   "Implique les exécutants (contremaîtres) dans la planification des engagements hebdomadaires",
+   "Impose un calendrier du haut vers le bas",
+   "Élimine le besoin de calendrier"
+  ],
+  "answer": "B",
+  "explanation": "Le LPS (Lean Construction) engage les derniers planificateurs (ceux qui exécutent) à prendre des engagements fiables, améliorant le PPC (Percent Plan Complete).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Le PPC (Percent Plan Complete) mesure :",
+  "options": [
+   "Le pourcentage d'activités planifiées pour la semaine qui ont été complétées",
+   "Le pourcentage du budget dépensé",
+   "Le pourcentage de matériaux livrés",
+   "Le pourcentage d'ouvriers présents"
+  ],
+  "answer": "A",
+  "explanation": "Le PPC = activités complétées / activités planifiées × 100. Un PPC élevé (>80 %) indique une planification fiable et exécutable.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Un « Gantt lié » (linked Gantt) améliore le Gantt simple en :",
+  "options": [
+   "Montrant les dépendances entre activités par des flèches",
+   "Ajoutant des couleurs",
+   "Réduisant le nombre d'activités",
+   "Ajoutant les coûts"
+  ],
+  "answer": "A",
+  "explanation": "Le Gantt lié (avec liens FS, SS, etc.) visualise les dépendances, permettant de voir l'impact d'un retard sur les activités suivantes.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "La « fenêtre de tir » (work window) pour des travaux extérieurs au Québec est :",
+  "options": [
+   "Uniquement en été (juin-août)",
+   "Toute l'année sans restriction",
+   "Uniquement en hiver",
+   "La période où les conditions météo permettent les travaux (typiquement avril à novembre)"
+  ],
+  "answer": "D",
+  "explanation": "La fenêtre de travail extérieure au Québec est limitée par le gel et la neige. La planification doit intégrer ces contraintes saisonnières.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « pull planning » (planification tirée) dans le lean construction :",
+  "options": [
+   "Planifie à rebours à partir du jalon de livraison, en identifiant les conditions préalables",
+   "Est identique au Gantt classique",
+   "Élimine la planification",
+   "Planifie du début vers la fin"
+  ],
+  "answer": "A",
+  "explanation": "Le pull planning part de l'objectif final et remonte : « Que faut-il pour livrer? Et avant ça? » Chaque équipe s'engage sur ses conditions.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Un « chemin quasi-critique » (near-critical path) est :",
+  "options": [
+   "Un chemin avec beaucoup de flottement",
+   "Un chemin sans importance",
+   "Une séquence d'activités avec un flottement faible qui pourrait devenir critique en cas de retard",
+   "Le chemin le plus court"
+  ],
+  "answer": "C",
+  "explanation": "Le chemin quasi-critique a un flottement faible (ex. : 1-3 jours). Un léger retard peut le rendre critique, nécessitant une surveillance.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "La « matrice de responsabilités » (RACI) dans la planification définit :",
+  "options": [
+   "Les délais de livraison",
+   "Qui est Responsable, Approbateur, Consulté et Informé pour chaque tâche",
+   "Les coûts de chaque activité",
+   "Les spécifications techniques"
+  ],
+  "answer": "B",
+  "explanation": "La matrice RACI clarifie les rôles : Responsible (exécute), Accountable (approuve), Consulted (consulté), Informed (informé).",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « float banking » (mise en réserve de flottement) est une pratique qui :",
+  "options": [
+   "Élimine le flottement",
+   "Consiste à utiliser tout le flottement immédiatement",
+   "Préserve le flottement des activités non critiques comme réserve pour les imprévus",
+   "Transfère le flottement au client"
+  ],
+  "answer": "C",
+  "explanation": "Le float banking garde le flottement en réserve plutôt que de le consommer, offrant une marge de manœuvre en cas de perturbation.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Un « milestone schedule » (calendrier de jalons) est utile pour :",
+  "options": [
+   "La gestion des ressources",
+   "La communication avec la direction et le client sur les étapes clés du projet",
+   "Le calcul des coûts",
+   "La planification détaillée quotidienne"
+  ],
+  "answer": "B",
+  "explanation": "Le calendrier de jalons est une vue simplifiée montrant les dates clés (fondation, structure, enveloppe, livraison) pour le reporting.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "La « contrainte de délai » (deadline constraint) dans un logiciel de planification :",
+  "options": [
+   "Impose une date limite sans changer le chemin critique, générant une alerte si dépassée",
+   "Remplace le Gantt",
+   "Modifie la logique du réseau",
+   "Élimine le flottement"
+  ],
+  "answer": "A",
+  "explanation": "La deadline est une contrainte informative : elle n'altère pas le calcul CPM mais signale si la date de fin prévue dépasse l'échéance imposée.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « time-cost trade-off » (compromis temps-coût) analyse :",
+  "options": [
+   "Les taxes vs les subventions",
+   "Le coût additionnel pour réduire la durée du projet (compression)",
+   "La qualité vs la quantité",
+   "Le nombre d'ouvriers vs le nombre de machines"
+  ],
+  "answer": "B",
+  "explanation": "Le compromis temps-coût évalue combien coûte la compression de chaque activité critique pour déterminer la compression optimale.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "La « mise à jour de l'échéancier » (schedule update) doit inclure :",
+  "options": [
+   "Uniquement les activités terminées",
+   "Uniquement les retards",
+   "Uniquement les coûts",
+   "Les dates réelles de début/fin, l'avancement en cours et les prévisions révisées"
+  ],
+  "answer": "D",
+  "explanation": "La mise à jour intègre le réel (dates, %), l'en-cours et révise les prévisions pour les activités futures, maintenant le calendrier pertinent.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « logic diagram » (diagramme logique) d'un projet montre :",
+  "options": [
+   "Les relations de dépendance entre activités sans échelle de temps",
+   "Les coûts par activité",
+   "L'organigramme de l'équipe",
+   "Les spécifications des matériaux"
+  ],
+  "answer": "A",
+  "explanation": "Le diagramme logique (réseau PDM) montre les liens entre activités sans représentation temporelle, servant à calculer le chemin critique.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "Une activité « hammock » (hamac) dans un échéancier est :",
+  "options": [
+   "Une activité récapitulative qui s'étend sur un groupe d'activités (ex. : location de grue)",
+   "Une activité sans dépendance",
+   "Une activité supprimée",
+   "Une activité très courte"
+  ],
+  "answer": "A",
+  "explanation": "L'activité hamac couvre une période définie par d'autres activités (ex. : frais de chantier du début à la fin d'une phase).",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « schedule variance » (SV) en valeur acquise est calculé par :",
+  "options": [
+   "SV = ACWP - BCWP",
+   "SV = BCWP / BCWS",
+   "SV = BCWS - BCWP",
+   "SV = BCWP - BCWS (valeur acquise - valeur planifiée)"
+  ],
+  "answer": "D",
+  "explanation": "SV = BCWP - BCWS. SV négatif = retard. BCWP (Earned Value) = travail réalisé valorisé, BCWS (Planned Value) = travail planifié valorisé.",
+  "difficulty": "HARD"
+ },
+ {
+  "chapter": 2,
+  "question": "La « planification collaborative » (integrated project planning) implique :",
+  "options": [
+   "Toutes les parties prenantes : client, architecte, ingénieurs, entrepreneur, sous-traitants",
+   "Uniquement les ouvriers",
+   "Uniquement le chargé de projet",
+   "Uniquement le client"
+  ],
+  "answer": "A",
+  "explanation": "La planification collaborative intègre les expertises de toutes les parties pour un échéancier réaliste et partagé, réduisant les conflits.",
+  "difficulty": "EASY"
+ },
+ {
+  "chapter": 2,
+  "question": "Le « BIM 4D » ajoute quelle dimension au modèle 3D?",
+  "options": [
+   "La sécurité",
+   "Le coût",
+   "Le temps (séquence de construction simulée)",
+   "La qualité"
+  ],
+  "answer": "C",
+  "explanation": "Le BIM 4D lie les éléments du modèle 3D aux activités de l'échéancier, permettant de visualiser la séquence de construction dans le temps.",
+  "difficulty": "MEDIUM"
+ },
+ {
+  "chapter": 2,
+  "question": "La « contrainte météo » dans un échéancier est modélisée par :",
+  "options": [
+   "Des jours non travaillables (calendrier) ou des activités tampons pour les intempéries",
+   "La réduction du nombre d'ouvriers",
+   "L'ignorance totale des conditions climatiques",
+   "L'augmentation des coûts"
+  ],
+  "answer": "A",
+  "explanation": "Les contraintes météo sont intégrées via des calendriers (jours fériés, saison) et des provisions de temps pour les jours de pluie/neige.",
+  "difficulty": "MEDIUM"
+ }
+]

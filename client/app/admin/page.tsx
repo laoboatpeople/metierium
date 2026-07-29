@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import {
   LineChart,
@@ -200,6 +201,7 @@ function formatMonthLabel(monthStr: string): string {
 
 export default function AdminDashboard() {
   const { t, locale } = useLocale();
+  const router = useRouter();
   const [data, setData] = useState<DashboardData | null>(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -213,6 +215,25 @@ export default function AdminDashboard() {
     messages: { id: string; role: string; content: string; createdAt: string }[];
   } | null>(null);
   const [chatLoading, setChatLoading] = useState(false);
+
+  // ── Active today modal ──
+  const [activeToday, setActiveToday] = useState<Array<{
+    id: string; name: string | null; email: string; activity: string; lastActive: string;
+  }> | null>(null);
+  const [activeTodayLoading, setActiveTodayLoading] = useState(false);
+
+  const openActiveToday = useCallback(async () => {
+    setActiveTodayLoading(true);
+    setActiveToday([]);
+    try {
+      const json = await authApi('/api/admin/analytics/active-today');
+      setActiveToday(json.data ?? []);
+    } catch {
+      setActiveToday([]);
+    } finally {
+      setActiveTodayLoading(false);
+    }
+  }, []);
 
   const openChat = useCallback(async (id: string) => {
     setChatLoading(true);
@@ -272,6 +293,7 @@ export default function AdminDashboard() {
       icon: Users,
       color: 'from-[#3B82F6] to-[#06B6D4]',
       href: '/admin/users',
+      onClick: undefined,
       sub: data ? `${data.newUsersThisPeriod} ${t('adminNewUsers').toLowerCase()}` : undefined,
     },
     {
@@ -280,6 +302,7 @@ export default function AdminDashboard() {
       icon: CreditCard,
       color: 'from-[#10B981] to-[#059669]',
       href: '/admin/users',
+      onClick: undefined,
       sub: undefined,
     },
     {
@@ -288,6 +311,7 @@ export default function AdminDashboard() {
       icon: DollarSign,
       color: 'from-[#F59E0B] to-[#D97706]',
       href: null,
+      onClick: undefined,
       sub: undefined,
     },
     {
@@ -296,6 +320,7 @@ export default function AdminDashboard() {
       icon: Briefcase,
       color: 'from-[#8B5CF6] to-[#7C3AED]',
       href: '/admin/trades',
+      onClick: undefined,
       sub: undefined,
     },
     {
@@ -304,6 +329,7 @@ export default function AdminDashboard() {
       icon: BookOpen,
       color: 'from-[#EC4899] to-[#DB2777]',
       href: '/admin/chapters',
+      onClick: undefined,
       sub: undefined,
     },
     {
@@ -312,6 +338,7 @@ export default function AdminDashboard() {
       icon: HelpCircle,
       color: 'from-[#F59E0B] to-[#D97706]',
       href: '/admin/questions',
+      onClick: undefined,
       sub: data
         ? `${data.questionsByLocale?.fr ?? 0} FR / ${data.questionsByLocale?.en ?? 0} EN`
         : undefined,
@@ -322,6 +349,7 @@ export default function AdminDashboard() {
       icon: UserCheck,
       color: 'from-[#06B6D4] to-[#0891B2]',
       href: null,
+      onClick: openActiveToday,
       sub: undefined,
     },
     {
@@ -330,6 +358,7 @@ export default function AdminDashboard() {
       icon: ClipboardCheck,
       color: 'from-[#3B82F6] to-[#2563EB]',
       href: null,
+      onClick: undefined,
       sub: undefined,
     },
     {
@@ -338,6 +367,7 @@ export default function AdminDashboard() {
       icon: Target,
       color: 'from-[#10B981] to-[#059669]',
       href: null,
+      onClick: undefined,
       sub: undefined,
     },
   ];
@@ -429,7 +459,7 @@ export default function AdminDashboard() {
                 <div className={`w-9 h-9 rounded-lg bg-gradient-to-br ${card.color} flex items-center justify-center`}>
                   <Icon size={17} className="text-white" />
                 </div>
-                {card.href && (
+                {(card.href || card.onClick) && (
                   <ArrowRight size={14} className="text-[#64748B] opacity-0 -translate-x-1 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-200" />
                 )}
               </div>
@@ -447,7 +477,15 @@ export default function AdminDashboard() {
               {inner}
             </Link>
           ) : (
-            <div key={card.label} className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5">
+            <div
+              key={card.label}
+              onClick={card.onClick}
+              className={`bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5 ${
+                card.onClick
+                  ? 'group cursor-pointer hover:border-[#06B6D4]/50 hover:-translate-y-0.5 transition-all duration-200'
+                  : ''
+              }`}
+            >
               {inner}
             </div>
           );
@@ -919,6 +957,93 @@ export default function AdminDashboard() {
                   </div>
                 );
               })}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* ── Active today modal ─────────────────────────────────── */}
+      {activeToday !== null && (
+        <div
+          className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setActiveToday(null)}
+        >
+          <div
+            className="bg-[#1A2035] border border-[#2D3A52] rounded-xl w-full max-w-lg flex flex-col overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="px-5 py-4 border-b border-[#2D3A52] flex items-center justify-between flex-shrink-0">
+              <div className="flex items-center gap-2.5 min-w-0">
+                <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#06B6D4] to-[#0891B2] flex items-center justify-center flex-shrink-0">
+                  <UserCheck size={15} className="text-white" />
+                </div>
+                <div className="min-w-0">
+                  <h3 className="text-sm font-semibold text-[#F8FAFC]">{t('adminActiveToday')}</h3>
+                  <p className="text-[11px] text-[#64748B]">
+                    {locale === 'fr' ? '10 derniers utilisateurs actifs' : 'Last 10 active users'}
+                  </p>
+                </div>
+              </div>
+              <button
+                onClick={() => setActiveToday(null)}
+                className="p-1.5 rounded-lg hover:bg-[#0F1525] text-[#94A3B8] hover:text-[#F8FAFC] transition-colors flex-shrink-0"
+              >
+                <X size={16} />
+              </button>
+            </div>
+
+            {/* List */}
+            <div className="p-3 max-h-[60vh] overflow-y-auto">
+              {activeTodayLoading ? (
+                <div className="flex items-center justify-center py-12">
+                  <Loader2 size={20} className="animate-spin text-[#06B6D4]" />
+                </div>
+              ) : activeToday.length === 0 ? (
+                <div className="py-12 text-center text-sm text-[#64748B]">
+                  {locale === 'fr' ? "Personne n'est actif aujourd'hui" : 'No one active today'}
+                </div>
+              ) : (
+                <ul className="space-y-1">
+                  {activeToday.map((u, i) => (
+                    <li key={u.id}>
+                      <button
+                        onClick={() => { setActiveToday(null); router.push(`/admin/users/${u.id}`); }}
+                        className="group/row w-full flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#0F1525] transition-colors text-left"
+                      >
+                        <span className="text-[10px] font-bold text-[#64748B] w-4 flex-shrink-0">{i + 1}</span>
+                        <div className="w-8 h-8 rounded-full bg-[#06B6D4]/15 border border-[#06B6D4]/20 flex items-center justify-center flex-shrink-0">
+                          <span className="text-[11px] font-bold text-[#06B6D4]">
+                            {(u.name || u.email).charAt(0).toUpperCase()}
+                          </span>
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm font-medium text-[#F8FAFC] truncate group-hover/row:text-[#06B6D4] transition-colors">{u.name || u.email}</p>
+                          {u.name && <p className="text-[11px] text-[#64748B] truncate">{u.email}</p>}
+                        </div>
+                        <span
+                          className={`px-2 py-0.5 text-[10px] font-medium rounded border flex-shrink-0 ${
+                            u.activity === 'exam'
+                              ? 'bg-[#3B82F6]/10 text-[#3B82F6] border-[#3B82F6]/20'
+                              : 'bg-[#10B981]/10 text-[#10B981] border-[#10B981]/20'
+                          }`}
+                        >
+                          {u.activity === 'exam'
+                            ? locale === 'fr' ? 'Examen' : 'Exam'
+                            : locale === 'fr' ? 'Tuteur' : 'Tutor'}
+                        </span>
+                        <span className="text-[11px] text-[#64748B] flex-shrink-0 w-10 text-right">
+                          {new Date(u.lastActive).toLocaleTimeString(locale === 'fr' ? 'fr-CA' : 'en-CA', {
+                            hour: '2-digit',
+                            minute: '2-digit',
+                          })}
+                        </span>
+                        <ArrowRight size={13} className="text-[#64748B] opacity-0 -translate-x-1 group-hover/row:opacity-100 group-hover/row:translate-x-0 transition-all duration-200 flex-shrink-0" />
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           </div>
         </div>
