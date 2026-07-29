@@ -37,6 +37,7 @@ import {
   CheckCircle2,
   XCircle,
   ListChecks,
+  X,
 } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -203,6 +204,27 @@ export default function AdminDashboard() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [dateRange, setDateRange] = useState(30);
+
+  // ── Tutor chat viewer modal ──
+  const [selectedChat, setSelectedChat] = useState<{
+    id: string;
+    topic: string | null;
+    user: { id: string; name: string | null; email: string } | null;
+    messages: { id: string; role: string; content: string; createdAt: string }[];
+  } | null>(null);
+  const [chatLoading, setChatLoading] = useState(false);
+
+  const openChat = useCallback(async (id: string) => {
+    setChatLoading(true);
+    try {
+      const json = await authApi(`/api/admin/chat-sessions/${id}`);
+      setSelectedChat(json);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : t('somethingWentWrong'));
+    } finally {
+      setChatLoading(false);
+    }
+  }, [t]);
 
   const fetchDashboard = useCallback(async () => {
     setLoading(true);
@@ -840,7 +862,12 @@ export default function AdminDashboard() {
           ) : data?.recentChats && data.recentChats.length > 0 ? (
             <div className="space-y-1 max-h-80 overflow-y-auto">
               {data.recentChats.map((cs) => (
-                <div key={cs.id} className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-[#0F1525] transition-colors">
+                <button
+                  key={cs.id}
+                  onClick={() => openChat(cs.id)}
+                  disabled={chatLoading}
+                  className="w-full text-left flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-[#0F1525] transition-colors cursor-pointer disabled:opacity-50"
+                >
                   <div className="w-8 h-8 rounded-full bg-[#3B82F6]/15 flex items-center justify-center flex-shrink-0">
                     <MessageSquare size={14} className="text-[#3B82F6]" />
                   </div>
@@ -852,7 +879,7 @@ export default function AdminDashboard() {
                     <p className="text-[10px] text-[#94A3B8]">{cs.messageCount} {locale === 'fr' ? 'messages' : 'msgs'}</p>
                     <p className="text-[10px] text-[#64748B]">{formatRelativeTime(cs.updatedAt)}</p>
                   </div>
-                </div>
+                </button>
               ))}
             </div>
           ) : (
@@ -860,6 +887,68 @@ export default function AdminDashboard() {
           )}
         </div>
       </div>
+
+      {/* ── Tutor conversation viewer modal ─────────────────────── */}
+      {selectedChat && (
+        <div
+          className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setSelectedChat(null)}
+        >
+          <div
+            className="bg-[#1A2035] border border-[#2D3A52] rounded-xl w-full max-w-2xl max-h-[85vh] flex flex-col overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="px-5 py-4 border-b border-[#2D3A52] flex items-center justify-between flex-shrink-0">
+              <div className="min-w-0">
+                <h3 className="text-sm font-semibold text-[#F8FAFC] truncate">
+                  {selectedChat.topic || (locale === 'fr' ? 'Conversation tuteur' : 'Tutor conversation')}
+                </h3>
+                <p className="text-[11px] text-[#64748B] truncate">
+                  {selectedChat.user?.name || selectedChat.user?.email || (locale === 'fr' ? 'Utilisateur' : 'User')}
+                  {' · '}
+                  {selectedChat.messages.length} {locale === 'fr' ? 'messages' : 'messages'}
+                </p>
+              </div>
+              <button
+                onClick={() => setSelectedChat(null)}
+                className="p-1.5 rounded-lg hover:bg-[#0F1525] text-[#94A3B8] hover:text-[#F8FAFC] transition-colors flex-shrink-0"
+              >
+                <X size={16} />
+              </button>
+            </div>
+
+            {/* Messages */}
+            <div className="flex-1 overflow-y-auto p-5 space-y-4">
+              {selectedChat.messages.map((msg) => {
+                const isUser = msg.role === 'user';
+                return (
+                  <div key={msg.id} className={`flex ${isUser ? 'justify-end' : 'justify-start'}`}>
+                    <div
+                      className={`max-w-[85%] rounded-xl px-4 py-2.5 ${
+                        isUser
+                          ? 'bg-[#3B82F6] text-white rounded-br-sm'
+                          : 'bg-[#0F1525] border border-[#2D3A52] text-[#E2E8F0] rounded-bl-sm'
+                      }`}
+                    >
+                      <p className="text-[10px] font-semibold uppercase tracking-wider mb-1 opacity-60">
+                        {isUser
+                          ? selectedChat.user?.name || selectedChat.user?.email || (locale === 'fr' ? 'Étudiant' : 'Student')
+                          : locale === 'fr' ? 'Tuteur IA' : 'AI Tutor'}
+                        {' · '}
+                        {new Date(msg.createdAt).toLocaleString(locale === 'fr' ? 'fr-CA' : 'en-CA', {
+                          month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit',
+                        })}
+                      </p>
+                      <p className="text-sm whitespace-pre-wrap leading-relaxed">{msg.content}</p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -868,4 +868,28 @@ router.put('/questions/:id', async (req: Request, res: Response): Promise<void> 
   }
 });
 
+/**
+ * GET /api/admin/chat-sessions/:id
+ * Return a full tutor chat session with all its messages (admin view).
+ */
+router.get('/chat-sessions/:id', async (req: Request, res: Response): Promise<void> => {
+  try {
+    const session = await prisma.chatSession.findUnique({
+      where: { id: req.params.id },
+      include: {
+        user: { select: { id: true, name: true, email: true } },
+        messages: { orderBy: { createdAt: 'asc' } },
+      },
+    });
+    if (!session) {
+      res.status(404).json({ message: 'Session not found' });
+      return;
+    }
+    res.json(session);
+  } catch (err) {
+    console.error('[Admin] Get chat session error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
 export default router;
