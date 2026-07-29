@@ -561,32 +561,6 @@ export default function AdminDashboard() {
         </div>
       </div>
 
-      {/* Questions by Trade — Horizontal bar */}
-      <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6 mb-8">
-        <h3 className="text-sm font-semibold text-[#F8FAFC] mb-4">{t('adminQuestionsByTrade')}</h3>
-        {loading ? (
-          <div className="h-48 bg-[#0F1525] rounded-lg animate-pulse" />
-        ) : tradeData.length > 0 ? (
-          <ResponsiveContainer width="100%" height={Math.max(120, tradeData.length * 36)}>
-            <BarChart data={tradeData} layout="vertical" margin={{ left: 60 }}>
-              <CartesianGrid strokeDasharray="3 3" stroke="#2D3A52" horizontal={false} />
-              <XAxis type="number" tick={{ fill: '#64748B', fontSize: 11 }} tickLine={false} axisLine={{ stroke: '#2D3A52' }} allowDecimals={false} />
-              <YAxis type="category" dataKey="code" tick={{ fill: '#94A3B8', fontSize: 12 }} tickLine={false} axisLine={false} width={56} />
-              <Tooltip
-                contentStyle={TOOLTIP_STYLE}
-                formatter={((value: number, _name: string, props: { payload?: { name?: string } }) => [
-                  `${value} questions`,
-                  props?.payload?.name ?? '',
-                ]) as never}
-              />
-              <Bar dataKey="count" fill="#8B5CF6" radius={[0, 4, 4, 0]} />
-            </BarChart>
-          </ResponsiveContainer>
-        ) : (
-          <div className="h-32 flex items-center justify-center text-[#64748B] text-sm">{t('adminNoData')}</div>
-        )}
-      </div>
-
       {/* Recent registrations */}
       <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6">
         <h3 className="text-sm font-semibold text-[#F8FAFC] mb-4">{t('adminRecentRegistrations')}</h3>

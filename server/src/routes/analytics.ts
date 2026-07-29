@@ -118,9 +118,13 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
           chapter: { select: { name: true, nameFr: true, trade: { select: { code: true } } } },
         },
       }),
-      // active users today (updatedAt today — proxy for login/activity)
+      // active users today — distinct users with real activity (exams/answered questions, tutor chats)
       prisma.$queryRawUnsafe<Array<{ count: bigint }>>(
-        `SELECT COUNT(*)::int as count FROM "User" WHERE "updatedAt" >= $1::timestamp`,
+        `SELECT COUNT(DISTINCT uid)::int as count FROM (
+           SELECT "userId" as uid FROM "ExamAttempt" WHERE "completedAt" >= $1::timestamp
+           UNION
+           SELECT s."userId" as uid FROM "ChatMessage" m JOIN "ChatSession" s ON m."sessionId" = s.id WHERE m."createdAt" >= $1::timestamp
+         ) active`,
         new Date(new Date().setHours(0, 0, 0, 0)).toISOString()
       ).catch(() => [{ count: BigInt(0) }]),
       // total exams taken (learning tracking)
