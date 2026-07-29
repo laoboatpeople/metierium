@@ -287,6 +287,13 @@ export default function AdminUsers() {
                     <td className="px-6 py-4">
                       <div className="flex items-center justify-end gap-2">
                         <button
+                          onClick={(e) => { e.stopPropagation(); openEmailModal(u); }}
+                          className="p-2 rounded-lg text-[#94A3B8] hover:text-[#06B6D4] hover:bg-[#06B6D4]/10 transition-colors"
+                          title={t('adminEmailUser')}
+                        >
+                          <Mail size={15} />
+                        </button>
+                        <button
                           onClick={(e) => { e.stopPropagation(); openEditModal(u); }}
                           className="p-2 rounded-lg text-[#94A3B8] hover:text-[#3B82F6] hover:bg-[#3B82F6]/10 transition-colors"
                           title={t('adminEditUser')}
@@ -462,6 +469,87 @@ export default function AdminUsers() {
                 {t('adminDelete')}
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Email Modal */}
+      {emailTarget && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center">
+          <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" onClick={() => setEmailTarget(null)} />
+          <div className="relative w-full max-w-lg mx-4 bg-[#1A2035] border border-[#2D3A52] rounded-xl shadow-2xl">
+            {/* Modal header */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#2D3A52]">
+              <div className="flex items-center gap-3">
+                <div className="w-9 h-9 rounded-full bg-[#06B6D4]/10 flex items-center justify-center">
+                  <Mail size={16} className="text-[#06B6D4]" />
+                </div>
+                <div>
+                  <h2 className="text-base font-semibold text-[#F8FAFC]">{t('adminEmailUser')}</h2>
+                  <p className="text-xs text-[#64748B]">{emailTarget.name} &middot; {emailTarget.email}</p>
+                </div>
+              </div>
+              <button onClick={() => setEmailTarget(null)} className="p-1 rounded-lg text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#2D3A52] transition-colors">
+                <X size={18} />
+              </button>
+            </div>
+
+            {/* Modal body */}
+            <form onSubmit={handleSendEmail} className="px-6 py-5 space-y-4">
+              {emailResult && (
+                <div className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-sm border ${
+                  emailResult.ok
+                    ? 'bg-[#10B981]/10 border-[#10B981]/20 text-[#10B981]'
+                    : 'bg-[#EF4444]/10 border-[#EF4444]/20 text-[#EF4444]'
+                }`}>
+                  {emailResult.ok ? <CheckCircle2 size={14} /> : <AlertCircle size={14} />}
+                  {emailResult.msg}
+                </div>
+              )}
+
+              <div>
+                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminEmailSubject')} *</label>
+                <input
+                  type="text"
+                  required
+                  value={emailSubject}
+                  onChange={(e) => setEmailSubject(e.target.value)}
+                  className="w-full px-3 py-2.5 bg-[#0A0E1A] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 focus:border-[#06B6D4]"
+                  placeholder={t('adminEmailSubject')}
+                />
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">{t('adminEmailMessage')} *</label>
+                <textarea
+                  required
+                  rows={7}
+                  value={emailBody}
+                  onChange={(e) => setEmailBody(e.target.value)}
+                  className="w-full px-3 py-2.5 bg-[#0A0E1A] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:ring-2 focus:ring-[#06B6D4]/50 focus:border-[#06B6D4] resize-none"
+                  placeholder={t('adminEmailMessage')}
+                />
+              </div>
+
+              {/* Actions */}
+              <div className="flex items-center justify-end gap-3 pt-2">
+                <button
+                  type="button"
+                  onClick={() => setEmailTarget(null)}
+                  className="px-4 py-2.5 text-sm font-medium text-[#94A3B8] hover:text-[#F8FAFC] border border-[#2D3A52] rounded-lg hover:bg-[#2D3A52]/50 transition-colors"
+                >
+                  {t('adminCancel')}
+                </button>
+                <button
+                  type="submit"
+                  disabled={emailSending || !emailSubject.trim() || !emailBody.trim()}
+                  className="flex items-center gap-2 px-4 py-2.5 bg-[#06B6D4] hover:bg-[#0891B2] disabled:opacity-50 text-white text-sm font-medium rounded-lg transition-colors"
+                >
+                  {emailSending ? <Loader2 size={14} className="animate-spin" /> : <Send size={14} />}
+                  {t('adminEmailSend')}
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       )}
