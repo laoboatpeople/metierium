@@ -449,8 +449,12 @@ export default function DashboardPage() {
   };
 
   const sorted = [...byExam].sort((a, b) => b.averageScore - a.averageScore);
-  const strongest = sorted.length > 0 && sorted[sorted.length - 1].averageScore > 0 ? sorted[0] : null;
-  const weakest = sorted.find(e => e.averageScore < 70 && e.totalAttempts >= 2) || null;
+  // strongest: highest average (only if > 0)
+  const strongest = sorted.length > 0 && sorted[0].averageScore > 0 ? sorted[0] : null;
+  // weakest: the single lowest-average exam, shown whenever it's actually below 70 —
+  // regardless of attempt count (a 22% average on one attempt is still a weakness)
+  const weakestCandidate = sorted.length > 0 ? sorted[sorted.length - 1] : null;
+  const weakest = weakestCandidate && weakestCandidate.averageScore < 70 ? weakestCandidate : null;
   const tradeIds = [...new Set(examHistory.map(r => r.tradeId))];
   const statsData = selectedTrade ? getTradeStats(selectedTrade) : null;
 
@@ -638,7 +642,7 @@ export default function DashboardPage() {
           )}
           {weakest ? (
             <div
-              className="bg-[#1A2035] border border-[#EF4444]/20 rounded-xl p-4 cursor-pointer hover:bg-[#243047]/30 transition-colors"
+              className="bg-[#EF4444]/[0.08] border border-[#EF4444]/40 rounded-xl p-4 cursor-pointer hover:bg-[#EF4444]/[0.14] transition-colors"
               onClick={() => window.location.href = `/exams`}
             >
               <div className="flex items-center gap-2 mb-2">
@@ -646,8 +650,8 @@ export default function DashboardPage() {
                 <span className="text-xs font-bold uppercase tracking-wider text-[#EF4444]">{t('dashboardWeakness')}</span>
               </div>
               <p className="text-sm font-medium text-[#F8FAFC] truncate">{weakest.examCode} — {getTradeNameLocalized(weakest.examName, locale)}</p>
-              <div className="flex gap-4 mt-2 text-xs text-[#94A3B8]">
-                <span>Avg. <span className="text-[#EF4444] font-semibold">{weakest.averageScore}%</span></span>
+              <div className="flex gap-4 mt-2 text-xs text-[#FCA5A5]">
+                <span>Avg. <span className="text-[#EF4444] font-bold">{weakest.averageScore}%</span></span>
                 <span>Best <span className="text-[#F59E0B] font-semibold">{weakest.bestScore}%</span></span>
                 <span>{t('dashboardAttemptsShort', { count: weakest.totalAttempts })}</span>
               </div>
