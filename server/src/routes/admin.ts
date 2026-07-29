@@ -166,15 +166,42 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
     const totalCorrect = attempts.reduce((s, a) => s + a.correctCount, 0);
     const totalTimeSpent = attempts.reduce((s, a) => s + a.timeSpent, 0);
 
-    // Per-trade breakdown
-    const tradePerf = new Map<string, { attempts: number; scoreSum: number; best: number; passed: number }>();
+    // Study streak: count distinct days with activity (capped at 7, mirrors student dashboard)
+    let studyStreak = 1;
+    if (attempts.length > 0) {
+      const days = [...new Set(attempts.map((a) => new Date(a.completedAt).toISOString().split('T')[0]))];
+      studyStreak = Math.max(1, Math.min(days.length, 7));
+    }
+
+    // Momentum: recent performance vs slightly older (attempts are desc by completedAt)
+    let momentum = 0;
+    if (totalAttempts >= 6) {
+      const last3 = attempts.slice(0, 3);
+      const prev3 = attempts.slice(3, 6);
+      const lastAvg = last3.reduce((s, a) => s + a.score, 0) / 3;
+      const prevAvg = prev3.reduce((s, a) => s + a.score, 0) / 3;
+      momentum = Math.round(lastAvg - prevAvg);
+    } else if (totalAttempts >= 2) {
+      const rest = attempts.slice(1);
+      const restAvg = rest.reduce((s, a) => s + a.score, 0) / rest.length;
+      momentum = Math.round(attempts[0].score - restAvg);
+    }
+
+    // Per-trade breakdown (with lastScore + trend for the performance table)
+    const tradePerf = new Map<string, { attempts: number; scoreSum: number; best: number; passed: number; lastScore: number; scores: number[] }>();
     for (const a of attempts) {
-      const p = tradePerf.get(a.tradeId) || { attempts: 0, scoreSum: 0, best: 0, passed: 0 };
+      const p = tradePerf.get(a.tradeId) || { attempts: 0, scoreSum: 0, best: 0, passed: 0, lastScore: 0, scores: [] };
       p.attempts += 1;
       p.scoreSum += a.score;
       p.best = Math.max(p.best, a.score);
+      p.scores.push(a.score);
       if (a.score >= PASS_THRESHOLD) p.passed += 1;
       tradePerf.set(a.tradeId, p);
+    }
+    // lastScore = most recent attempt per trade (attempts sorted desc by completedAt)
+    for (const [tid, p] of tradePerf) {
+      const latest = attempts.find((a) => a.tradeId === tid);
+      p.lastScore = latest ? latest.score : 0;
     }
 
     // Resolve trade names for attempts + per-trade breakdown
@@ -190,15 +217,19 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
     const byTrade = [...tradePerf.entries()]
       .map(([tid, p]) => {
         const trade = attemptTradeMap.get(tid);
+        const averageScore = Math.round(p.scoreSum / p.attempts);
         return {
           tradeId: tid,
           code: trade?.code ?? tid,
           name: trade?.name ?? tid,
           nameFr: trade?.nameFr ?? trade?.name ?? tid,
           attempts: p.attempts,
-          averageScore: Math.round(p.scoreSum / p.attempts),
+          averageScore,
           bestScore: p.best,
+          lastScore: p.lastScore,
           passed: p.passed,
+          passRate: Math.round((p.passed / p.attempts) * 100),
+          trending: p.lastScore >= averageScore,
         };
       })
       .sort((a, b) => b.attempts - a.attempts);
@@ -218,6 +249,66 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
         trade: trade ? { code: trade.code, name: trade.name, nameFr: trade.nameFr } : null,
       };
     });
+
+    // ── Chapter-level performance (reconstructed from DB, mirrors student localStorage) ──
+    // Join ExamAttemptQuestion -> Question(chapterId, tradeId) -> Chapter(number, name, nameFr)
+    type ChapterAgg = { chapterId: string; tradeId: string; correct: number; total: number };
+    const chapterAgg = new Map<string, ChapterAgg>();
+    if (attempts.length > 0) {
+      const attemptIds = attempts.map((a) => a.id);
+      const qRows = await prisma.examAttemptQuestion.findMany({
+        where: { attemptId: { in: attemptIds } },
+        select: {
+          isCorrect: true,
+          question: { select: { chapterId: true, tradeId: true } },
+        },
+      });
+      for (const row of qRows) {
+        const chId = row.question?.chapterId;
+        const trId = row.question?.tradeId;
+        if (!chId || !trId) continue;
+        const key = `${trId}::${chId}`;
+        const agg = chapterAgg.get(key) || { chapterId: chId, tradeId: trId, correct: 0, total: 0 };
+        agg.total += 1;
+        if (row.isCorrect) agg.correct += 1;
+        chapterAgg.set(key, agg);
+      }
+    }
+
+    // Resolve chapter names
+    const chapterIds = [...new Set([...chapterAgg.values()].map((c) => c.chapterId))];
+    const chapters = chapterIds.length > 0
+      ? await prisma.chapter.findMany({
+          where: { id: { in: chapterIds } },
+          select: { id: true, number: true, name: true, nameFr: true, tradeId: true },
+        })
+      : [];
+    const chapterMap = new Map(chapters.map((c) => [c.id, c]));
+
+    const chapterPerformance = [...chapterAgg.values()]
+      .map((agg) => {
+        const ch = chapterMap.get(agg.chapterId);
+        const trade = attemptTradeMap.get(agg.tradeId);
+        return {
+          chapterId: agg.chapterId,
+          tradeId: agg.tradeId,
+          chapterNumber: ch?.number ?? 999,
+          chapterName: ch?.name ?? agg.chapterId,
+          chapterNameFr: ch?.nameFr ?? ch?.name ?? agg.chapterId,
+          tradeCode: trade?.code ?? agg.tradeId,
+          tradeName: trade?.name ?? agg.tradeId,
+          tradeNameFr: trade?.nameFr ?? trade?.name ?? agg.tradeId,
+          correct: agg.correct,
+          total: agg.total,
+          percentage: agg.total > 0 ? Math.round((agg.correct / agg.total) * 100) : 0,
+        };
+      })
+      .sort((a, b) => a.chapterNumber - b.chapterNumber);
+
+    // Strengths / weaknesses / needs-review (same thresholds as student dashboard)
+    const strengths = chapterPerformance.filter((c) => c.total >= 5 && c.percentage >= 75).slice(0, 3);
+    const weaknesses = chapterPerformance.filter((c) => c.total >= 5 && c.percentage < 60).slice(0, 3);
+    const needsReview = chapterPerformance.filter((c) => c.total >= 3 && c.percentage < 60);
 
     // ── Tutor activity ─────────────────────────────────────────
     const [chatSessionCount, chatMessageCount, lastChat] = await Promise.all([
@@ -254,12 +345,18 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
         totalCorrect,
         accuracy: totalQuestionsAnswered > 0 ? Math.round((totalCorrect / totalQuestionsAnswered) * 100) : 0,
         totalTimeSpent,
+        studyStreak,
+        momentum,
         firstAttemptAt: attempts.length > 0 ? attempts[attempts.length - 1].completedAt : null,
         lastAttemptAt: attempts.length > 0 ? attempts[0].completedAt : null,
         tradesStudied: tradePerf.size,
       },
       byTrade,
       recentAttempts,
+      chapterPerformance,
+      strengths,
+      weaknesses,
+      needsReview,
       tutorStats: {
         sessions: chatSessionCount,
         messages: chatMessageCount,

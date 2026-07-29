@@ -23,9 +23,14 @@ import {
   Target,
   Trophy,
   TrendingUp,
+  TrendingDown,
   BookOpen,
   Bot,
   Activity,
+  Flame,
+  Brain,
+  AlertTriangle,
+  CheckCircle,
 } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -75,6 +80,8 @@ interface UserDetail {
     totalCorrect: number;
     accuracy: number;
     totalTimeSpent: number;
+    studyStreak: number;
+    momentum: number;
     firstAttemptAt: string | null;
     lastAttemptAt: string | null;
     tradesStudied: number;
@@ -87,7 +94,10 @@ interface UserDetail {
     attempts: number;
     averageScore: number;
     bestScore: number;
+    lastScore: number;
     passed: number;
+    passRate: number;
+    trending: boolean;
   }[];
   recentAttempts: {
     id: string;
@@ -101,6 +111,22 @@ interface UserDetail {
     completedAt: string;
     trade: { code: string; name: string; nameFr: string } | null;
   }[];
+  chapterPerformance: {
+    chapterId: string;
+    tradeId: string;
+    chapterNumber: number;
+    chapterName: string;
+    chapterNameFr: string;
+    tradeCode: string;
+    tradeName: string;
+    tradeNameFr: string;
+    correct: number;
+    total: number;
+    percentage: number;
+  }[];
+  strengths: { chapterId: string; tradeId: string; chapterName: string; chapterNameFr: string; tradeName: string; tradeNameFr: string; percentage: number; correct: number; total: number }[];
+  weaknesses: { chapterId: string; tradeId: string; chapterName: string; chapterNameFr: string; tradeName: string; tradeNameFr: string; percentage: number; correct: number; total: number }[];
+  needsReview: { chapterId: string; tradeId: string; chapterName: string; chapterNameFr: string; tradeName: string; tradeNameFr: string; percentage: number; correct: number; total: number }[];
   tutorStats: {
     sessions: number;
     messages: number;
@@ -370,7 +396,7 @@ export default function UserDetailPage() {
             ))}
           </div>
 
-          {/* ── Learning performance ─────────────────────────────── */}
+          {/* ── Learning performance (mirrors student dashboard) ──── */}
           <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl overflow-hidden">
             <div className="px-6 py-4 border-b border-[#2D3A52] flex items-center gap-2">
               <GraduationCap size={15} className="text-[#06B6D4]" />
@@ -381,8 +407,8 @@ export default function UserDetailPage() {
 
             {user.examStats.totalAttempts > 0 ? (
               <div className="p-6 space-y-6">
-                {/* Key metrics */}
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                {/* ── Stat cards (5) ── */}
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-4">
                   <div className="bg-[#0F1424] border border-[#2D3A52] rounded-lg p-3">
                     <div className="flex items-center gap-1.5 mb-1">
                       <BookOpen size={12} className="text-[#3B82F6]" />
@@ -433,76 +459,317 @@ export default function UserDetailPage() {
                       {user.examStats.totalCorrect}/{user.examStats.totalQuestionsAnswered} {locale === 'fr' ? 'bonnes' : 'correct'}
                     </p>
                   </div>
+                  <div className="bg-[#0F1424] border border-[#2D3A52] rounded-lg p-3">
+                    <div className="flex items-center gap-1.5 mb-1">
+                      <Flame size={12} className="text-[#EF4444]" />
+                      <p className="text-[9px] font-medium text-[#64748B] uppercase tracking-wide">
+                        {locale === 'fr' ? 'Série' : 'Streak'}
+                      </p>
+                    </div>
+                    <p className="text-xl font-bold text-[#F8FAFC]">{user.examStats.studyStreak}</p>
+                    <p className="text-[10px] text-[#64748B]">
+                      {locale === 'fr' ? 'jour(s)' : 'day(s)'}
+                    </p>
+                  </div>
                 </div>
 
-                {/* Time + last activity */}
-                <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-[#64748B]">
-                  <span>
-                    ⏱ {locale === 'fr' ? 'Temps total' : 'Total time'}:{' '}
-                    <span className="text-[#F8FAFC] font-medium">{formatDuration(user.examStats.totalTimeSpent)}</span>
-                  </span>
-                  {user.examStats.lastAttemptAt && (
-                    <span>
-                      {locale === 'fr' ? 'Dernier examen' : 'Last exam'}:{' '}
-                      <span className="text-[#F8FAFC] font-medium">{formatRelativeTime(user.examStats.lastAttemptAt)}</span>
-                    </span>
-                  )}
+                {/* ── Insights row (5) ── */}
+                <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
+                  <div className="bg-[#0F1424] border border-[#2D3A52] rounded-lg p-3 text-center">
+                    <p className="text-[9px] font-medium text-[#64748B] uppercase tracking-wide mb-1">
+                      {locale === 'fr' ? 'Record perso' : 'Personal best'}
+                    </p>
+                    <p className="text-lg font-bold text-[#10B981]">{user.examStats.bestScore}%</p>
+                  </div>
+                  <div className="bg-[#0F1424] border border-[#2D3A52] rounded-lg p-3 text-center">
+                    <p className="text-[9px] font-medium text-[#64748B] uppercase tracking-wide mb-1">
+                      {locale === 'fr' ? 'Taux réussite' : 'Success rate'}
+                    </p>
+                    <p className="text-lg font-bold text-[#F8FAFC]">{user.examStats.passRate}%</p>
+                  </div>
+                  <div className="bg-[#0F1424] border border-[#2D3A52] rounded-lg p-3 text-center">
+                    <p className="text-[9px] font-medium text-[#64748B] uppercase tracking-wide mb-1">
+                      {locale === 'fr' ? 'Questions' : 'Questions'}
+                    </p>
+                    <p className="text-lg font-bold text-[#F8FAFC]">{user.examStats.totalQuestionsAnswered}</p>
+                    <p className="text-[10px] text-[#64748B]">{user.examStats.accuracy}% {locale === 'fr' ? 'précision' : 'accuracy'}</p>
+                  </div>
+                  <div className="bg-[#0F1424] border border-[#2D3A52] rounded-lg p-3 text-center">
+                    <p className="text-[9px] font-medium text-[#64748B] uppercase tracking-wide mb-1">
+                      {locale === 'fr' ? 'Momentum' : 'Momentum'}
+                    </p>
+                    <p className={`text-lg font-bold ${user.examStats.momentum >= 0 ? 'text-[#10B981]' : 'text-[#EF4444]'}`}>
+                      {user.examStats.momentum >= 0 ? '+' : ''}{user.examStats.momentum}%
+                    </p>
+                  </div>
+                  <div className="bg-[#0F1424] border border-[#2D3A52] rounded-lg p-3 text-center">
+                    <p className="text-[9px] font-medium text-[#64748B] uppercase tracking-wide mb-1">
+                      {locale === 'fr' ? 'Dernière activité' : 'Last activity'}
+                    </p>
+                    <p className="text-sm font-bold text-[#F8FAFC]">
+                      {user.examStats.lastAttemptAt ? formatRelativeTime(user.examStats.lastAttemptAt) : '—'}
+                    </p>
+                  </div>
                 </div>
 
-                {/* Per-trade breakdown */}
+                {/* ── Strength / Weakness cards ── */}
+                {user.byTrade.length >= 1 && (
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {/* Strength */}
+                    {(() => {
+                      const strongest = [...user.byTrade].sort((a, b) => b.averageScore - a.averageScore)[0];
+                      return strongest ? (
+                        <div className="bg-[#0F1424] border border-[#10B981]/30 rounded-xl p-4">
+                          <div className="flex items-center gap-2 mb-2">
+                            <Trophy size={16} className="text-[#10B981]" />
+                            <p className="text-xs font-semibold text-[#10B981] uppercase tracking-wide">
+                              {locale === 'fr' ? 'Force' : 'Strength'}
+                            </p>
+                          </div>
+                          <p className="text-sm font-medium text-[#F8FAFC]">
+                            {locale === 'fr' ? strongest.nameFr : strongest.name}
+                          </p>
+                          <p className="text-2xl font-bold text-[#10B981] mt-1">{strongest.averageScore}%</p>
+                          <p className="text-[10px] text-[#64748B]">
+                            {strongest.attempts} {locale === 'fr' ? 'essai(s)' : 'attempt(s)'} · {locale === 'fr' ? 'meilleur' : 'best'} {strongest.bestScore}%
+                          </p>
+                        </div>
+                      ) : null;
+                    })()}
+                    {/* Weakness */}
+                    {(() => {
+                      const weakest = [...user.byTrade].filter(t => t.averageScore < 70).sort((a, b) => a.averageScore - b.averageScore)[0];
+                      return weakest ? (
+                        <div className="bg-[#EF4444]/5 border border-[#EF4444]/30 rounded-xl p-4">
+                          <div className="flex items-center gap-2 mb-2">
+                            <AlertTriangle size={16} className="text-[#EF4444]" />
+                            <p className="text-xs font-semibold text-[#EF4444] uppercase tracking-wide">
+                              {locale === 'fr' ? 'Faiblesse' : 'Weakness'}
+                            </p>
+                          </div>
+                          <p className="text-sm font-medium text-[#F8FAFC]">
+                            {locale === 'fr' ? weakest.nameFr : weakest.name}
+                          </p>
+                          <p className="text-2xl font-bold text-[#EF4444] mt-1">{weakest.averageScore}%</p>
+                          <p className="text-[10px] text-[#64748B]">
+                            {weakest.attempts} {locale === 'fr' ? 'essai(s)' : 'attempt(s)'} · {locale === 'fr' ? 'meilleur' : 'best'} {weakest.bestScore}%
+                          </p>
+                        </div>
+                      ) : (
+                        <div className="bg-[#0F1424] border border-[#2D3A52] rounded-xl p-4 flex items-center justify-center">
+                          <p className="text-sm text-[#64748B]">
+                            {locale === 'fr' ? 'Tous les examens au-dessus de 70%' : 'All exams above 70%'}
+                          </p>
+                        </div>
+                      );
+                    })()}
+                  </div>
+                )}
+
+                {/* ── Exam Performance table (by trade) ── */}
                 {user.byTrade.length > 0 && (
                   <div>
-                    <p className="text-[10px] font-medium text-[#64748B] uppercase tracking-wide mb-2">
-                      {locale === 'fr' ? 'Par métier' : 'By trade'}
-                    </p>
-                    <div className="space-y-2">
-                      {user.byTrade.map((t) => (
-                        <div key={t.tradeId} className="flex items-center gap-3">
-                          <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#3B82F6]/10 text-[#3B82F6] font-mono flex-shrink-0">
-                            {t.code}
-                          </span>
-                          <span className="text-sm text-[#F8FAFC] flex-1 truncate">
-                            {locale === 'fr' ? t.nameFr : t.name}
-                          </span>
-                          <span className="text-[11px] text-[#64748B] flex-shrink-0">
-                            {t.attempts} {locale === 'fr' ? 'essai(s)' : 'attempt(s)'}
-                          </span>
-                          <div className="w-24 h-1.5 bg-[#0F1424] rounded-full overflow-hidden flex-shrink-0">
-                            <div
-                              className={`h-full rounded-full ${t.averageScore >= 70 ? 'bg-[#10B981]' : t.averageScore >= 50 ? 'bg-[#F59E0B]' : 'bg-[#EF4444]'}`}
-                              style={{ width: `${t.averageScore}%` }}
-                            />
-                          </div>
-                          <span className={`text-sm font-mono font-medium w-10 text-right flex-shrink-0 ${scoreColor(t.averageScore)}`}>
-                            {t.averageScore}%
-                          </span>
-                        </div>
-                      ))}
+                    <h3 className="text-base font-semibold text-[#F8FAFC] mb-3 flex items-center gap-2">
+                      <BarChart3 size={18} className="text-[#3B82F6]" />
+                      {locale === 'fr' ? 'Performance par métier' : 'Exam performance'}
+                    </h3>
+                    <div className="bg-[#0F1424] border border-[#2D3A52] rounded-xl overflow-hidden">
+                      <table className="w-full text-sm">
+                        <thead>
+                          <tr className="border-b border-[#2D3A52] text-[10px] text-[#64748B] uppercase tracking-wide">
+                            <th className="text-left px-4 py-2.5 font-medium">{locale === 'fr' ? 'Métier' : 'Trade'}</th>
+                            <th className="text-center px-3 py-2.5 font-medium">{locale === 'fr' ? 'Dernier' : 'Last'}</th>
+                            <th className="text-center px-3 py-2.5 font-medium">{locale === 'fr' ? 'Moyenne' : 'Avg'}</th>
+                            <th className="text-center px-3 py-2.5 font-medium">{locale === 'fr' ? 'Meilleur' : 'Best'}</th>
+                            <th className="text-center px-3 py-2.5 font-medium">{locale === 'fr' ? 'Essais' : 'Attempts'}</th>
+                            <th className="text-center px-3 py-2.5 font-medium">{locale === 'fr' ? 'Tendance' : 'Trend'}</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-[#2D3A52]/50">
+                          {user.byTrade.map((t) => (
+                            <tr key={t.tradeId} className="hover:bg-[#1A2035]/50 transition-colors">
+                              <td className="px-4 py-2.5">
+                                <div className="flex items-center gap-2">
+                                  <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#3B82F6]/10 text-[#3B82F6] font-mono">
+                                    {t.code}
+                                  </span>
+                                  <span className="text-[#F8FAFC] font-medium">
+                                    {locale === 'fr' ? t.nameFr : t.name}
+                                  </span>
+                                </div>
+                              </td>
+                              <td className={`text-center px-3 py-2.5 font-mono font-medium ${scoreColor(t.lastScore)}`}>
+                                {t.lastScore}%
+                              </td>
+                              <td className={`text-center px-3 py-2.5 font-mono font-medium ${scoreColor(t.averageScore)}`}>
+                                {t.averageScore}%
+                              </td>
+                              <td className="text-center px-3 py-2.5 font-mono text-[#F8FAFC]">
+                                {t.bestScore}%
+                              </td>
+                              <td className="text-center px-3 py-2.5 text-[#94A3B8]">
+                                {t.attempts}
+                              </td>
+                              <td className="text-center px-3 py-2.5">
+                                {t.trending
+                                  ? <TrendingUp size={14} className="text-[#10B981] inline" />
+                                  : <TrendingDown size={14} className="text-[#EF4444] inline" />
+                                }
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
                     </div>
                   </div>
                 )}
 
-                {/* Recent attempts */}
+                {/* ── Chapter-level strengths / weaknesses / needs review ── */}
+                {(user.strengths.length > 0 || user.weaknesses.length > 0 || user.needsReview.length > 0) && (
+                  <div>
+                    <h3 className="text-base font-semibold text-[#F8FAFC] mb-3 flex items-center gap-2">
+                      <Brain size={18} className="text-[#8B5CF6]" />
+                      {locale === 'fr' ? 'Analyse par chapitre' : 'Chapter analysis'}
+                    </h3>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                      {/* Strengths */}
+                      <div className="bg-[#0F1424] border border-[#10B981]/20 rounded-xl p-4">
+                        <p className="text-xs font-semibold text-[#10B981] uppercase tracking-wide mb-3">
+                          {locale === 'fr' ? 'Points forts' : 'Strengths'}
+                        </p>
+                        {user.strengths.length > 0 ? (
+                          <div className="space-y-2">
+                            {user.strengths.map((s) => (
+                              <div key={s.chapterId} className="flex items-center justify-between">
+                                <span className="text-xs text-[#F8FAFC] truncate flex-1 mr-2">
+                                  {locale === 'fr' ? s.chapterNameFr : s.chapterName}
+                                </span>
+                                <span className="text-xs font-mono font-medium text-[#10B981]">{s.percentage}%</span>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-xs text-[#64748B]">{locale === 'fr' ? 'Aucune donnée' : 'No data'}</p>
+                        )}
+                      </div>
+                      {/* Weaknesses */}
+                      <div className="bg-[#0F1424] border border-[#EF4444]/20 rounded-xl p-4">
+                        <p className="text-xs font-semibold text-[#EF4444] uppercase tracking-wide mb-3">
+                          {locale === 'fr' ? 'Faiblesses' : 'Weaknesses'}
+                        </p>
+                        {user.weaknesses.length > 0 ? (
+                          <div className="space-y-2">
+                            {user.weaknesses.map((w) => (
+                              <div key={w.chapterId} className="flex items-center justify-between">
+                                <span className="text-xs text-[#F8FAFC] truncate flex-1 mr-2">
+                                  {locale === 'fr' ? w.chapterNameFr : w.chapterName}
+                                </span>
+                                <span className="text-xs font-mono font-medium text-[#EF4444]">{w.percentage}%</span>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-xs text-[#64748B]">{locale === 'fr' ? 'Aucune donnée' : 'No data'}</p>
+                        )}
+                      </div>
+                      {/* Needs review */}
+                      <div className="bg-[#0F1424] border border-[#F59E0B]/20 rounded-xl p-4">
+                        <p className="text-xs font-semibold text-[#F59E0B] uppercase tracking-wide mb-3">
+                          {locale === 'fr' ? 'À réviser' : 'Needs review'}
+                        </p>
+                        {user.needsReview.length > 0 ? (
+                          <div className="space-y-2">
+                            {user.needsReview.map((n) => (
+                              <div key={n.chapterId} className="flex items-center justify-between">
+                                <span className="text-xs text-[#F8FAFC] truncate flex-1 mr-2">
+                                  {locale === 'fr' ? n.chapterNameFr : n.chapterName}
+                                </span>
+                                <span className="text-xs font-mono font-medium text-[#F59E0B]">{n.percentage}%</span>
+                              </div>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-xs text-[#64748B]">{locale === 'fr' ? 'Aucune donnée' : 'No data'}</p>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                )}
+
+                {/* ── Chapter Performance bars ── */}
+                {user.chapterPerformance.length > 0 && (
+                  <div>
+                    <h3 className="text-base font-semibold text-[#F8FAFC] mb-3 flex items-center gap-2">
+                      <Brain size={18} className="text-[#8B5CF6]" />
+                      {locale === 'fr' ? 'Performance par chapitre' : 'Chapter performance'}
+                    </h3>
+                    <div className="bg-[#0F1424] border border-[#2D3A52] rounded-xl p-5 space-y-3">
+                      {user.chapterPerformance.map((ch) => {
+                        const color = ch.percentage >= 70 ? '#22C55E' : ch.percentage >= 50 ? '#F59E0B' : '#EF4444';
+                        return (
+                          <div key={ch.chapterId}>
+                            <div className="flex justify-between text-xs mb-1">
+                              <span className="text-[#F8FAFC] font-medium">
+                                {locale === 'fr' ? ch.tradeNameFr : ch.tradeName} &gt; {locale === 'fr' ? ch.chapterNameFr : ch.chapterName}
+                              </span>
+                              <span className="font-medium" style={{ color }}>{ch.percentage}%</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <div className="flex-1 h-2.5 bg-[#111827] rounded-full overflow-hidden">
+                                <div
+                                  className="h-full rounded-full transition-all"
+                                  style={{ width: `${ch.percentage}%`, backgroundColor: color }}
+                                />
+                              </div>
+                              <span className="text-[10px] text-[#64748B] w-12 text-right">{ch.correct}/{ch.total}</span>
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )}
+
+                {/* ── Recent exams ── */}
                 {user.recentAttempts.length > 0 && (
                   <div>
-                    <p className="text-[10px] font-medium text-[#64748B] uppercase tracking-wide mb-2">
+                    <h3 className="text-base font-semibold text-[#F8FAFC] mb-3 flex items-center gap-2">
+                      <Clock size={18} className="text-[#3B82F6]" />
                       {locale === 'fr' ? 'Examens récents' : 'Recent exams'}
-                    </p>
-                    <div className="space-y-1.5">
+                    </h3>
+                    <div className="space-y-2">
                       {user.recentAttempts.map((a) => (
-                        <div key={a.id} className="flex items-center gap-3 bg-[#0F1424] border border-[#2D3A52]/50 rounded-lg px-3 py-2">
-                          <div className={`w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0 ${a.passed ? 'bg-[#10B981]/10' : 'bg-[#EF4444]/10'}`}>
-                            {a.passed ? <CheckCircle2 size={13} className="text-[#10B981]" /> : <XCircle size={13} className="text-[#EF4444]" />}
+                        <div
+                          key={a.id}
+                          className="bg-[#0F1424] border border-[#2D3A52] rounded-xl p-4 flex items-center justify-between"
+                        >
+                          <div className="flex items-center gap-3">
+                            <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${
+                              a.passed ? 'bg-[#22C55E]/10' : 'bg-[#EF4444]/10'
+                            }`}>
+                              {a.passed
+                                ? <CheckCircle size={18} className="text-[#22C55E]" />
+                                : <AlertTriangle size={18} className="text-[#EF4444]" />
+                              }
+                            </div>
+                            <div>
+                              <p className="text-sm font-medium text-[#F8FAFC]">
+                                {a.trade ? (locale === 'fr' ? a.trade.nameFr : a.trade.name) : '—'} — {a.correctCount}/{a.totalQuestions}
+                              </p>
+                              <p className="text-xs text-[#64748B]">
+                                {new Date(a.completedAt).toLocaleDateString(locale === 'fr' ? 'fr-CA' : 'en-CA', {
+                                  year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit'
+                                })}
+                                {' · '}
+                                {formatDuration(a.timeSpent)}
+                              </p>
+                            </div>
                           </div>
-                          <div className="flex-1 min-w-0">
-                            <p className="text-xs text-[#F8FAFC] truncate">
-                              {a.trade ? (locale === 'fr' ? a.trade.nameFr : a.trade.name) : '—'}
-                            </p>
-                            <p className="text-[10px] text-[#64748B]">
-                              {a.correctCount}/{a.totalQuestions} · {formatDuration(a.timeSpent)} · {formatRelativeTime(a.completedAt)}
+                          <div className="text-right">
+                            <p className={`text-lg font-bold ${a.passed ? 'text-[#22C55E]' : 'text-[#EF4444]'}`}>
+                              {a.score}%
                             </p>
                           </div>
-                          <span className={`text-sm font-mono font-bold flex-shrink-0 ${scoreColor(a.score)}`}>{a.score}%</span>
                         </div>
                       ))}
                     </div>
