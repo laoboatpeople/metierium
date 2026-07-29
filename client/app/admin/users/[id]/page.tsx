@@ -655,7 +655,7 @@ export default function UserDetailPage() {
                       {/* Weaknesses */}
                       <div className="bg-[#0F1424] border border-[#EF4444]/20 rounded-xl p-4">
                         <p className="text-xs font-semibold text-[#EF4444] uppercase tracking-wide mb-3">
-                          {locale === 'fr' ? 'Faiblesses' : 'Weaknesses'}
+                          {locale === 'fr' ? 'Points à améliorer' : 'Areas to Improve'}
                         </p>
                         {user.weaknesses.length > 0 ? (
                           <div className="space-y-2">
