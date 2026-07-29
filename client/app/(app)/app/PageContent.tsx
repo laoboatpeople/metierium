@@ -437,6 +437,23 @@ export default function DashboardPage() {
   const totalPassed = byExam.reduce((sum, e) => sum + e.passedCount, 0);
   const accuracy = totalQuestionsAnswered > 0 ? Math.round((totalCorrect / totalQuestionsAnswered) * 100) : 0;
 
+  // Deep-link helper: /exams pre-selects trade + chapter via URL params.
+  // Picks the weakest (or strongest) chapter for the trade so the user lands
+  // directly on targeted practice instead of a blank exam setup.
+  const chapterLinkFor = (tradeId: string, mode: 'weakest' | 'strongest'): string => {
+    const base = `/exams?tradeId=${encodeURIComponent(tradeId)}`;
+    const stats = getTradeStats(tradeId);
+    if (!stats) return base;
+    // Only real chapter ids — skip the `ch_N` fallback keys that won't resolve on /exams
+    const chapters = stats.chapterPerformance.filter(
+      c => c.total > 0 && c.chapterId && !c.chapterId.startsWith('ch_')
+    );
+    if (chapters.length === 0) return base;
+    const sortedCh = [...chapters].sort((a, b) => a.percentage - b.percentage);
+    const target = mode === 'weakest' ? sortedCh[0] : sortedCh[sortedCh.length - 1];
+    return `${base}&chapterId=${encodeURIComponent(target.chapterId)}`;
+  };
+
   const getLocalizedChapterName = (chapterId: string | undefined, fallback: string) => {
     if (!chapterId) return fallback;
     return chapterNameMap[chapterId] || fallback;
@@ -626,7 +643,7 @@ export default function DashboardPage() {
           {strongest && (
             <div
               className="bg-[#1A2035] border border-[#22C55E]/20 rounded-xl p-4 cursor-pointer hover:bg-[#243047]/30 transition-colors"
-              onClick={() => window.location.href = `/exams`}
+              onClick={() => window.location.href = chapterLinkFor(strongest.examId, 'strongest')}
             >
               <div className="flex items-center gap-2 mb-2">
                 <Award size={14} className="text-[#22C55E]" />
@@ -643,7 +660,7 @@ export default function DashboardPage() {
           {weakest ? (
             <div
               className="bg-[#EF4444]/[0.08] border border-[#EF4444]/40 rounded-xl p-4 cursor-pointer hover:bg-[#EF4444]/[0.14] transition-colors"
-              onClick={() => window.location.href = `/exams`}
+              onClick={() => window.location.href = chapterLinkFor(weakest.examId, 'weakest')}
             >
               <div className="flex items-center gap-2 mb-2">
                 <Target size={14} className="text-[#EF4444]" />
@@ -705,7 +722,7 @@ export default function DashboardPage() {
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.2 + i * 0.04 }}
                       className="border-b border-[#2D3A52]/50 last:border-b-0 hover:bg-[#243047]/30 transition-colors cursor-pointer"
-                      onClick={() => window.location.href = `/exams`}
+                      onClick={() => window.location.href = chapterLinkFor(exam.examId, 'weakest')}
                     >
                       <td className="px-5 py-3 text-[#F8FAFC] font-medium">
                         <div className="flex items-center gap-2">
@@ -990,10 +1007,22 @@ export default function DashboardPage() {
                     {t('dashboardRecentExams')}
                   </h3>
                   <div className="space-y-2">
-                    {statsData.recentHistory.map(record => (
+                    {statsData.recentHistory.map(record => {
+                      // Deep-link to this attempt's trade + its weakest real chapter
+                      const realChapters = (record.chapterResults || []).filter(
+                        (c: any) => c.total > 0 && c.chapterId && !String(c.chapterId).startsWith('ch_')
+                      );
+                      const weakestCh = realChapters.length > 0
+                        ? [...realChapters].sort((a: any, b: any) =>
+                            (a.correct / a.total) - (b.correct / b.total))[0]
+                        : null;
+                      const recordLink = `/exams?tradeId=${encodeURIComponent(record.tradeId)}` +
+                        (weakestCh ? `&chapterId=${encodeURIComponent(weakestCh.chapterId)}` : '');
+                      return (
                       <div
                         key={record.id}
-                        className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4 flex items-center justify-between"
+                        className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4 flex items-center justify-between cursor-pointer hover:bg-[#243047]/30 hover:border-[#3B82F6]/40 transition-colors"
+                        onClick={() => window.location.href = recordLink}
                       >
                         <div className="flex items-center gap-3">
                           <div className={`w-9 h-9 rounded-lg flex items-center justify-center ${
@@ -1023,7 +1052,8 @@ export default function DashboardPage() {
                           <p className="text-xs text-[#64748B]">{record.correct}/{record.totalQuestions}</p>
                         </div>
                       </div>
-                    ))}
+                      );
+                    })}
                   </div>
                 </div>
 
