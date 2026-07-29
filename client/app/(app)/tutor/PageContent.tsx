@@ -306,6 +306,19 @@ export default function TutorPage() {
           </button>
         </div>
 
+        {/* Back to Results — only show when coming from exam results */}
+        {returnUrl && (
+        <div className="p-3 pb-0">
+          <button
+            onClick={handleGoBack}
+            className="w-full flex items-center gap-2 px-3 py-2 text-xs text-[#94A3B8] border border-[#2D3A52] rounded-lg hover:border-[#3B82F6]/40 hover:text-[#F8FAFC] transition-all"
+          >
+            <ArrowLeft size={14} />
+            {t('tutorBackToResults')}
+          </button>
+        </div>
+        )}
+
         {/* New Chat button */}
         <div className="p-3 border-b border-[#1E2D45]">
           <button
@@ -369,19 +382,6 @@ export default function TutorPage() {
             </p>
           )}
         </div>
-
-        {/* Back to Results — only show when coming from exam results */}
-        {returnUrl && (
-        <div className="p-3 border-t border-[#1E2D45]">
-          <button
-            onClick={handleGoBack}
-            className="w-full flex items-center gap-2 px-3 py-2 text-xs text-[#94A3B8] border border-[#2D3A52] rounded-lg hover:border-[#3B82F6]/40 hover:text-[#F8FAFC] transition-all"
-          >
-            <ArrowLeft size={14} />
-            {t('tutorBackToResults')}
-          </button>
-        </div>
-        )}
       </aside>
 
       {/* ── Mobile overlay backdrop ── */}
