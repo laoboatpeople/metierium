@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { useRouter } from 'next/navigation';
-import { Loader2, AlertCircle, Users, Shield, CreditCard, Circle, Plus, Pencil, Trash2, X } from 'lucide-react';
+import { Loader2, AlertCircle, Users, Shield, CreditCard, Circle, Plus, Pencil, Trash2, X, Mail, Send, CheckCircle2 } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
@@ -44,6 +44,50 @@ export default function AdminUsers() {
   const [deleteTarget, setDeleteTarget] = useState<AppUser | null>(null);
   const [deleting, setDeleting] = useState(false);
   const [deleteError, setDeleteError] = useState<string | null>(null);
+
+  // Email modal state
+  const [emailTarget, setEmailTarget] = useState<AppUser | null>(null);
+  const [emailSubject, setEmailSubject] = useState('');
+  const [emailBody, setEmailBody] = useState('');
+  const [emailSending, setEmailSending] = useState(false);
+  const [emailResult, setEmailResult] = useState<{ ok: boolean; msg: string } | null>(null);
+
+  function openEmailModal(user: AppUser) {
+    setEmailTarget(user);
+    setEmailSubject('');
+    setEmailBody('');
+    setEmailResult(null);
+  }
+
+  async function handleSendEmail(e: React.FormEvent) {
+    e.preventDefault();
+    if (!emailTarget || !emailSubject.trim() || !emailBody.trim()) return;
+    setEmailSending(true);
+    setEmailResult(null);
+    try {
+      const res = await authApi('/api/admin/contact-messages/send', {
+        method: 'POST',
+        body: JSON.stringify({
+          to: emailTarget.email,
+          toName: emailTarget.name || '',
+          subject: emailSubject.trim(),
+          body: emailBody.trim(),
+        }),
+      });
+      if (res.emailSent) {
+        setEmailResult({ ok: true, msg: t('adminEmailSent') });
+        setEmailSubject('');
+        setEmailBody('');
+        setTimeout(() => setEmailTarget(null), 1500);
+      } else {
+        setEmailResult({ ok: false, msg: t('adminEmailFailed') });
+      }
+    } catch (err) {
+      setEmailResult({ ok: false, msg: err instanceof Error ? err.message : t('adminEmailFailed') });
+    } finally {
+      setEmailSending(false);
+    }
+  }
 
   const fetchUsers = useCallback(async () => {
     try {

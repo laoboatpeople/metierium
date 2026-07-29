@@ -149,8 +149,8 @@ router.get('/conversations', authenticate, async (req: Request, res: Response): 
 /**
  * PATCH /api/admin/contact-messages/:id/reply
  *
- * Admin-only endpoint. Marks a contact message as replied with the given reply text.
- * Requires a valid admin Bearer token.
+ * Admin-only endpoint. Sends an email reply to the contact message sender,
+ * marks the original as replied, and creates an outbound message in the thread.
  */
 router.patch('/:id/reply', authenticate, async (req: Request, res: Response): Promise<void> => {
   try {
@@ -174,20 +174,91 @@ router.patch('/:id/reply', authenticate, async (req: Request, res: Response): Pr
       return;
     }
 
+    const trimmed = replyText.trim();
+
+    // Send the actual email
+    const subject = `Re: Metierium — ${original.message.substring(0, 60)}${original.message.length > 60 ? '…' : ''}`;
+    const emailSent = await sendContactReplyEmail({
+      to: original.email,
+      toName: original.name,
+      subject,
+      body: trimmed,
+    });
+
+    // Mark original as replied
     const updated = await prisma.contactMessage.update({
       where: { id },
       data: {
-        replyText: replyText.trim(),
+        replyText: trimmed,
         repliedAt: new Date(),
         repliedBy: user.id,
         status: 'replied',
       },
     });
 
-    res.json({ success: true, message: updated });
+    // Create outbound message in the thread
+    await prisma.contactMessage.create({
+      data: {
+        name: 'Metierium',
+        email: original.email,
+        message: trimmed,
+        direction: 'outbound',
+        status: emailSent ? 'sent' : 'failed',
+        repliedBy: user.id,
+      },
+    });
+
+    res.json({ success: true, emailSent, message: updated });
   } catch (err) {
     console.error('[ContactAdmin] Reply error:', err);
-    res.status(500).json({ error: 'Failed to mark message as replied.' });
+    res.status(500).json({ error: 'Failed to send reply.' });
+  }
+});
+
+/**
+ * POST /api/admin/contact-messages/send
+ *
+ * Admin-only endpoint. Send a new email to any address (proactive outreach).
+ * Body: { to, toName?, subject, body }
+ */
+router.post('/send', authenticate, async (req: Request, res: Response): Promise<void> => {
+  try {
+    const user = (req as any).user;
+    if (user?.role !== 'ADMIN') {
+      res.status(403).json({ error: 'Admin access required.' });
+      return;
+    }
+
+    const { to, toName, subject, body } = req.body;
+
+    if (!to || !subject || !body) {
+      res.status(400).json({ error: 'to, subject, and body are required.' });
+      return;
+    }
+
+    const emailSent = await sendContactReplyEmail({
+      to,
+      toName: toName || '',
+      subject,
+      body: body.trim(),
+    });
+
+    // Record as outbound message
+    await prisma.contactMessage.create({
+      data: {
+        name: toName || to,
+        email: to,
+        message: `[${subject}]\n\n${body.trim()}`,
+        direction: 'outbound',
+        status: emailSent ? 'sent' : 'failed',
+        repliedBy: user.id,
+      },
+    });
+
+    res.json({ success: true, emailSent });
+  } catch (err) {
+    console.error('[ContactAdmin] Send error:', err);
+    res.status(500).json({ error: 'Failed to send email.' });
   }
 });
 

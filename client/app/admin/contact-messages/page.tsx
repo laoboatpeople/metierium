@@ -11,6 +11,8 @@ import {
   ChevronLeft,
   User,
   CheckCheck,
+  Plus,
+  X,
 } from 'lucide-react';
 import { authApi } from '@/lib/api';
 
@@ -53,6 +55,15 @@ export default function AdminContactMessagesPage() {
   const [totalConvs, setTotalConvs] = useState(0);
   const limit = 20;
   const threadEndRef = useRef<HTMLDivElement>(null);
+
+  // Compose modal state
+  const [composeOpen, setComposeOpen] = useState(false);
+  const [composeTo, setComposeTo] = useState('');
+  const [composeName, setComposeName] = useState('');
+  const [composeSubject, setComposeSubject] = useState('');
+  const [composeBody, setComposeBody] = useState('');
+  const [composeStatus, setComposeStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
+  const [composeMsg, setComposeMsg] = useState('');
 
   const fetchConversations = useCallback(async () => {
     try {
@@ -141,6 +152,45 @@ export default function AdminContactMessagesPage() {
     }
   };
 
+  const handleCompose = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!composeTo.trim() || !composeSubject.trim() || !composeBody.trim()) return;
+
+    setComposeStatus('loading');
+    setComposeMsg('');
+    try {
+      const res = await authApi('/api/admin/contact-messages/send', {
+        method: 'POST',
+        body: JSON.stringify({
+          to: composeTo.trim(),
+          toName: composeName.trim() || undefined,
+          subject: composeSubject.trim(),
+          body: composeBody.trim(),
+        }),
+      });
+      if (res.emailSent) {
+        setComposeStatus('success');
+        setComposeMsg('Email envoyé avec succès !');
+      } else {
+        setComposeStatus('error');
+        setComposeMsg('Message enregistré mais l\'email n\'a pas pu être envoyé (service email indisponible).');
+      }
+      setComposeTo('');
+      setComposeName('');
+      setComposeSubject('');
+      setComposeBody('');
+      fetchConversations();
+      setTimeout(() => {
+        setComposeStatus('idle');
+        setComposeMsg('');
+        if (res.emailSent) setComposeOpen(false);
+      }, 2000);
+    } catch (err: unknown) {
+      setComposeStatus('error');
+      setComposeMsg(err instanceof Error ? err.message : 'Failed to send email');
+    }
+  };
+
   const filtered = conversations.filter((conv) =>
     conv.name.toLowerCase().includes(search.toLowerCase()) ||
     conv.email.toLowerCase().includes(search.toLowerCase())
@@ -181,6 +231,13 @@ export default function AdminContactMessagesPage() {
             {totalPending} en attente &middot; {totalConvs} conversations
           </p>
         </div>
+        <button
+          onClick={() => setComposeOpen(true)}
+          className="px-4 py-2.5 rounded-lg bg-[#3B82F6] text-white text-sm font-medium hover:bg-[#2563EB] transition-colors flex items-center gap-2"
+        >
+          <Plus size={16} />
+          Nouveau message
+        </button>
       </div>
 
       {error && (
@@ -438,6 +495,120 @@ export default function AdminContactMessagesPage() {
           )}
         </div>
       </div>
+
+      {/* ── Compose modal ─────────────────────────────────────────── */}
+      {composeOpen && (
+        <div
+          className="fixed inset-0 z-50 bg-black/70 backdrop-blur-sm flex items-center justify-center p-4"
+          onClick={() => setComposeOpen(false)}
+        >
+          <div
+            className="bg-[#1A2035] border border-[#2D3A52] rounded-xl w-full max-w-lg flex flex-col overflow-hidden shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Header */}
+            <div className="px-5 py-4 border-b border-[#2D3A52] flex items-center justify-between">
+              <h3 className="text-sm font-semibold text-[#F8FAFC] flex items-center gap-2">
+                <Send size={14} className="text-[#3B82F6]" />
+                Envoyer un email
+              </h3>
+              <button
+                onClick={() => setComposeOpen(false)}
+                className="p-1.5 rounded-lg hover:bg-[#0F1525] text-[#94A3B8] hover:text-[#F8FAFC] transition-colors"
+              >
+                <X size={16} />
+              </button>
+            </div>
+
+            {/* Form */}
+            <form onSubmit={handleCompose} className="p-5 space-y-4">
+              <div className="grid grid-cols-2 gap-3">
+                <div>
+                  <label className="block text-[11px] font-medium text-[#94A3B8] uppercase tracking-wider mb-1.5">
+                    Email destinataire *
+                  </label>
+                  <input
+                    type="email"
+                    value={composeTo}
+                    onChange={(e) => setComposeTo(e.target.value)}
+                    placeholder="user@example.com"
+                    required
+                    className="w-full px-3 py-2.5 rounded-lg bg-[#0A0E1A] border border-[#2D3A52] text-sm text-[#F8FAFC] placeholder:text-[#64748B] focus:outline-none focus:border-[#3B82F6]/50"
+                  />
+                </div>
+                <div>
+                  <label className="block text-[11px] font-medium text-[#94A3B8] uppercase tracking-wider mb-1.5">
+                    Nom (optionnel)
+                  </label>
+                  <input
+                    type="text"
+                    value={composeName}
+                    onChange={(e) => setComposeName(e.target.value)}
+                    placeholder="Jean Tremblay"
+                    className="w-full px-3 py-2.5 rounded-lg bg-[#0A0E1A] border border-[#2D3A52] text-sm text-[#F8FAFC] placeholder:text-[#64748B] focus:outline-none focus:border-[#3B82F6]/50"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label className="block text-[11px] font-medium text-[#94A3B8] uppercase tracking-wider mb-1.5">
+                  Sujet *
+                </label>
+                <input
+                  type="text"
+                  value={composeSubject}
+                  onChange={(e) => setComposeSubject(e.target.value)}
+                  placeholder="Sujet de l'email"
+                  required
+                  className="w-full px-3 py-2.5 rounded-lg bg-[#0A0E1A] border border-[#2D3A52] text-sm text-[#F8FAFC] placeholder:text-[#64748B] focus:outline-none focus:border-[#3B82F6]/50"
+                />
+              </div>
+
+              <div>
+                <label className="block text-[11px] font-medium text-[#94A3B8] uppercase tracking-wider mb-1.5">
+                  Message *
+                </label>
+                <textarea
+                  value={composeBody}
+                  onChange={(e) => setComposeBody(e.target.value)}
+                  placeholder="Votre message..."
+                  required
+                  rows={6}
+                  className="w-full px-3 py-2.5 rounded-lg bg-[#0A0E1A] border border-[#2D3A52] text-sm text-[#F8FAFC] placeholder:text-[#64748B] focus:outline-none focus:border-[#3B82F6]/50 resize-none"
+                />
+              </div>
+
+              {composeMsg && (
+                <p className={`text-xs ${composeStatus === 'success' ? 'text-green-400' : 'text-[#EF4444]'}`}>
+                  {composeMsg}
+                </p>
+              )}
+
+              <div className="flex justify-end gap-3 pt-1">
+                <button
+                  type="button"
+                  onClick={() => setComposeOpen(false)}
+                  className="px-4 py-2.5 rounded-lg text-sm font-medium text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#243047] transition-colors"
+                >
+                  Annuler
+                </button>
+                <button
+                  type="submit"
+                  disabled={composeStatus === 'loading' || !composeTo.trim() || !composeSubject.trim() || !composeBody.trim()}
+                  className="px-5 py-2.5 rounded-lg bg-[#3B82F6] text-white text-sm font-medium hover:bg-[#2563EB] disabled:opacity-50 transition-colors flex items-center gap-2"
+                >
+                  {composeStatus === 'loading' ? (
+                    <Loader2 size={16} className="animate-spin" />
+                  ) : (
+                    <Send size={16} />
+                  )}
+                  Envoyer
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

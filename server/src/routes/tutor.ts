@@ -81,8 +81,8 @@ Communication style:
 - Maximum 300 words per response
 - If a question is outside your knowledge, say so honestly
 - ALWAYS respond in the same language as the user's question (French or English)
-- When a question matches a trade covered by this platform (electrician, plumber, welder, HVAC, heavy vehicle mechanic, fire safety, sheet metal, bricklayer, heavy equipment operator, gas technician, elevator mechanic, refrigeration, builder-renovator, building inspector, safety coordinator, general contractor), feel free to mention the platform as a study resource and include a link to the theory page: https://metierium.com/theory
-- If the question is about a trade or topic NOT covered here, do NOT promote the platform — instead give the best external answer you can or suggest where to find that information
+- When a question matches a trade covered by this platform (electrician, plumber, welder, HVAC, heavy vehicle mechanic, fire safety, sheet metal, bricklayer, heavy equipment operator, gas technician, elevator mechanic, refrigeration, builder-renovator, building inspector, safety coordinator, general contractor, construction project management / Gestion des travaux), feel free to mention the platform as a study resource and include a link to the theory page: https://metierium.com/theory
+- If the question is about a trade or topic NOT covered here, do NOT promote the platform — instead give the best external answer you can or suggest where to find that information. IMPORTANT: Start your response with the exact marker [UNCOVERED_TOPIC] on the first line so the system can flag it.
 - Be honest: if you don't have good info on a topic, say so
 
 SCOPE RESTRICTION:
@@ -148,7 +148,42 @@ Remember: students are preparing for high-stakes licensing exams. Accuracy and e
     }
 
     const data = await response.json() as { choices?: { message?: { content?: string } }[] };
-    const reply = data.choices?.[0]?.message?.content || 'Je n\'ai pas de réponse pour le moment.';
+    let reply = data.choices?.[0]?.message?.content || 'Je n\'ai pas de réponse pour le moment.';
+
+    // ── Detect uncovered topics and notify Discord ──────────
+    const isUncovered = reply.includes('[UNCOVERED_TOPIC]');
+    if (isUncovered) {
+      // Strip the marker from the user-facing reply
+      reply = reply.replace('[UNCOVERED_TOPIC]', '').trim();
+
+      // Fire-and-forget Discord notification via bot API
+      const botToken = process.env.DISCORD_BOT_TOKEN;
+      const alertChannel = process.env.TUTOR_ALERTS_CHANNEL_ID;
+      if (botToken && alertChannel) {
+        const user = await prisma.user.findUnique({ where: { id: userId }, select: { name: true, email: true } }).catch(() => null);
+        const embed = {
+          embeds: [{
+            title: '🔍 Sujet non couvert détecté',
+            description: `**Question :** ${message.slice(0, 500)}`,
+            color: 0xF59E0B,
+            fields: [
+              { name: 'Utilisateur', value: user?.name || user?.email || userId, inline: true },
+              { name: 'Session', value: session.id, inline: true },
+            ],
+            footer: { text: 'Metierium Tutor Alert' },
+            timestamp: new Date().toISOString(),
+          }],
+        };
+        fetch(`https://discord.com/api/v10/channels/${alertChannel}/messages`, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Authorization': `Bot ${botToken}`,
+          },
+          body: JSON.stringify(embed),
+        }).catch((err) => console.error('[Tutor] Discord alert failed:', err));
+      }
+    }
 
     // ── Store the assistant reply ───────────────────────────
     await prisma.chatMessage.create({
