@@ -160,3 +160,75 @@ export async function sendPlanChangeEmail(opts: {
     console.error(`[Email] Failed to send plan change email to ${to}:`, err);
   }
 }
+
+/* ── Contact reply / admin outbound email ── */
+
+export async function sendContactReplyEmail(opts: {
+  to: string;
+  toName: string;
+  subject: string;
+  body: string;
+}): Promise<boolean> {
+  const t = getTransporter();
+  if (!t) {
+    console.warn('[Email] Transporter unavailable — contact reply not sent');
+    return false;
+  }
+
+  const { to, toName, subject, body } = opts;
+  const name = toName || 'Bonjour';
+
+  const html = `
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"></head>
+<body style="margin:0;padding:0;background:#0A0E1A;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;">
+  <table width="100%" cellpadding="0" cellspacing="0" style="background:#0A0E1A;padding:40px 20px;">
+    <tr><td align="center">
+      <table width="560" cellpadding="0" cellspacing="0" style="background:#1A2035;border-radius:16px;overflow:hidden;border:1px solid #2D3A52;">
+        <!-- Header -->
+        <tr>
+          <td style="background:linear-gradient(135deg,#3B82F6,#06B6D4);padding:24px 40px;text-align:center;">
+            <h1 style="margin:0;color:#fff;font-size:20px;font-weight:700;">Metierium</h1>
+          </td>
+        </tr>
+        <!-- Body -->
+        <tr>
+          <td style="padding:32px 40px;">
+            <p style="margin:0 0 16px;color:#F8FAFC;font-size:15px;">${name},</p>
+            <div style="margin:0 0 24px;color:#94A3B8;font-size:14px;line-height:1.7;white-space:pre-wrap;">${body.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</div>
+            <table cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="background:linear-gradient(135deg,#3B82F6,#06B6D4);border-radius:8px;padding:12px 32px;">
+                  <a href="${env.FRONTEND_URL}" style="color:#fff;font-size:14px;font-weight:600;text-decoration:none;">
+                    Accéder à Metierium →
+                  </a>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <!-- Footer -->
+        <tr>
+          <td style="background:#111827;padding:20px 40px;text-align:center;">
+            <p style="margin:0;color:#64748B;font-size:12px;">
+              Metierium — Préparation aux examens des métiers de la construction au Québec<br>
+              <a href="${env.FRONTEND_URL}" style="color:#3B82F6;text-decoration:none;">metierium.com</a>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td></tr>
+  </table>
+</body>
+</html>`;
+
+  try {
+    await t.sendMail({ from: FROM, to, subject, html });
+    console.log(`[Email] Contact reply sent to ${to}: "${subject}"`);
+    return true;
+  } catch (err) {
+    console.error(`[Email] Failed to send contact reply to ${to}:`, err);
+    return false;
+  }
+}

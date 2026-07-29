@@ -370,6 +370,7 @@ function CategoryCard({ category, preselectedChapterId, preselectedTradeCode }: 
       GAZ:'gaz', ASCEN:'ascenseurs', REFRIG:'refrigeration',
       CONSTR:'constructeur', ENTGEN:'entrepreneur-general',
       INSPECT:'inspecteur', SST:'coordonnateur-sst',
+      GESTRAV:'gestion-travaux',
     };
     const slug = slugMap[cat.code] || cat.code.toLowerCase();
     const url = `${window.location.origin}/theory?trade=${slug}`;
@@ -515,6 +516,7 @@ export default function TheoryPage() {
     gaz: 'GAZ', ascenseurs: 'ASCEN', refrigeration: 'REFRIG',
     constructeur: 'CONSTR', 'entrepreneur-general': 'ENTGEN',
     inspecteur: 'INSPECT', 'coordonnateur-sst': 'SST',
+    'gestion-travaux': 'GESTRAV', gestrav: 'GESTRAV',
   };
 
   const DESCRIPTION_EN: Record<string, string> = {
@@ -534,6 +536,7 @@ export default function TheoryPage() {
     ENTGEN: 'General contractor — RBQ certification exam for construction business management.',
     INSPECT: 'Building inspection — RBQ certification for building codes, structures and envelope inspection.',
     SST: 'Safety coordination — ASP Construction certification for workplace safety management.',
+    GESTRAV: 'Construction project management — RBQ exam covering estimation, planning, workforce, legal framework, OHS, contracts, finances and project closeout.',
   };
 
   // Read chapterId from URL on every render — fires after hydration

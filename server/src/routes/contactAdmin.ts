@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { prisma } from '../config/database';
 import { authenticate } from '../middleware/auth';
+import { sendContactReplyEmail } from '../lib/email';
 
 const router = Router();
 
