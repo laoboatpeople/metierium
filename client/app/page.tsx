@@ -902,8 +902,8 @@ export default function LandingPage() {
                     { text: t('pricingFeatOneTrade'), inc: true },
                     { text: t('pricingFeatTheory'), inc: true },
                     { text: t('pricingFeatLimitedQ'), inc: true },
+                    { text: t('pricingFeatAiTutorLimited'), inc: true },
                     { text: t('pricingFeatUnlimitedExams'), inc: false },
-                    { text: t('pricingFeatAiTutor'), inc: false },
                   ].map((f) => (
                     <li key={f.text} className="flex items-start gap-2">
                       {f.inc ? (

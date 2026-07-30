@@ -48,6 +48,10 @@ router.post('/register', async (req: Request, res: Response): Promise<void> => {
 
     const token = signToken({ id: user.id, email: user.email, role: user.role });
 
+    await prisma.activityLog.create({
+      data: { userId: user.id, action: 'LOGIN', ipAddress: req.ip || null },
+    }).catch(() => {});
+
     // Notify admin of new registration (best-effort)
     const settings = getSettings();
     const apiKey = env.RESEND_API_KEY;
@@ -115,6 +119,10 @@ router.post('/login', async (req: Request, res: Response): Promise<void> => {
       res.status(401).json({ message: 'Invalid credentials' });
       return;
     }
+
+    await prisma.activityLog.create({
+      data: { userId: user.id, action: 'LOGIN', ipAddress: req.ip || null },
+    }).catch(() => {});
 
     const token = signToken({ id: user.id, email: user.email, role: user.role });
 

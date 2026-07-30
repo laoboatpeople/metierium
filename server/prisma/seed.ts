@@ -93,13 +93,15 @@ async function main() {
       }
     }
 
-    // If no files loaded, use defaults
+    // If no files loaded, use defaults — WARNING: generates stub content.
+    // Real theory must be generated via the metierium-theory-generation workflow.
     if (chapters.length === 0) {
+      console.warn(`⚠️  No content files found for ${tradeCode} — creating STUB chapters. Run theory generation before going live.`);
       chapters = defaultChapters.map(ch => ({
         ...ch,
         nameFr: ch.nameFr || ch.name,
         nameEn: ch.name || ch.nameFr,
-        theoryContent: `# ${ch.nameFr || ch.name}\n\nContenu en préparation pour ce chapitre. Revenez bientôt !`,
+        theoryContent: `# ${ch.nameFr || ch.name}\n\n> ⚠️ **Contenu non généré.** Ce chapitre nécessite une génération complète via le workflow standard (EN → FR, formules, exemples, questions d'examen). Voir skill metierium-theory-generation.`,
       }));
     }
 

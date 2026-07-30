@@ -1,9 +1,10 @@
 'use client';
 
 import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 import {
   MessageSquare, Send, Bot, User, Loader2, Sparkles,
-  AlertCircle, ArrowLeft, Plus, ChevronRight, Trash2,
+  AlertCircle, ArrowLeft, Plus, ChevronRight, Trash2, Lock,
 } from 'lucide-react';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
@@ -25,13 +26,35 @@ const STORAGE_KEY = 'tutorChatHistories';
 
 // ── Simple LaTeX + Markdown renderer for AI responses ──
 function renderAIResponse(content: string): string {
-  let html = content
+  // ── Protect inline <svg>...</svg> blocks from the markdown regexes below ──
+  // The tutor emits raw SVG for schema/diagram questions; we must not mangle it.
+  const svgBlocks: string[] = [];
+  let html = content.replace(/<svg[\s\S]*?<\/svg>/gi, (m) => {
+    svgBlocks.push(m);
+    return `\u0000SVG${svgBlocks.length - 1}\u0000`;
+  });
+
+  html = html
     // Bold markers
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     // Horizontal rules
     .replace(/^---+/gm, '<hr class="border-[#2D3A52] my-2" />')
     // Lines starting with - as list items
     .replace(/^- (.+)$/gm, '<li class="ml-4 text-[#94A3B8]">$1</li>');
+
+  // ── Links: markdown [text](url) first, then bare URLs ──
+  // Markdown links
+  html = html.replace(
+    /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[#3B82F6] hover:underline break-all">$1</a>'
+  );
+  // Bare URLs (not already inside an href="..."). The // in https:// can never
+  // appear inside an attribute value, so we won't double-link existing anchors.
+  html = html.replace(
+    /(^|[\s(>])(https?:\/\/[^\s<]+[^\s<.,;:!?)\]])/g,
+    (_m, pre: string, url: string) =>
+      `${pre}<a href="${url}" target="_blank" rel="noopener noreferrer" class="text-[#3B82F6] hover:underline break-all">${url}</a>`
+  );
 
   // Display math \[ ... \]
   html = html.replace(/\\\[([\s\S]*?)\\\]/g, (_m, math: string) => {
@@ -44,6 +67,9 @@ function renderAIResponse(content: string): string {
     const cleaned = cleanLatex(math);
     return `<code class="bg-[#1A2332] px-1.5 py-0.5 rounded text-xs font-mono text-[#E2E8F0]">${cleaned}</code>`;
   });
+
+  // ── Re-insert the preserved SVG blocks ──
+  html = html.replace(/\u0000SVG(\d+)\u0000/g, (_m, i: string) => svgBlocks[Number(i)] ?? '');
 
   return html;
 }
@@ -97,6 +123,7 @@ export default function TutorPage() {
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [limitReached, setLimitReached] = useState(false);
   const [returnUrl, setReturnUrl] = useState<string | null>(null);
   const [chatHistories, setChatHistories] = useState<ChatHistory[]>([]);
   const [currentChatId, setCurrentChatId] = useState<string | null>(null);
@@ -215,7 +242,16 @@ export default function TutorPage() {
         body: JSON.stringify({ message: text, sessionId: serverSessionId }),
       });
 
-      if (!res.ok) throw new Error(t('tutorServerError'));
+      if (!res.ok) {
+        let body: any = {};
+        try { body = await res.json(); } catch {}
+        if (res.status === 403 && body.code === 'TUTOR_LIMIT_REACHED') {
+          setLimitReached(true);
+          setLoading(false);
+          return;
+        }
+        throw new Error(t('tutorServerError'));
+      }
       const data = await res.json();
       if (data.sessionId) setServerSessionId(data.sessionId);
       setMessages((prev) => [
@@ -247,6 +283,7 @@ export default function TutorPage() {
     setCurrentChatId(null);
     setServerSessionId(null);
     setError(null);
+    setLimitReached(false);
     setInput('');
     setTimeout(() => inputRef.current?.focus(), 100);
   };
@@ -438,7 +475,7 @@ export default function TutorPage() {
                   <div className="w-7 h-7 rounded-full bg-[#8B5CF6]/20 flex items-center justify-center flex-shrink-0 mt-1">
                     <Bot size={14} className="text-[#8B5CF6]" />
                   </div>
-                  <div className="bg-[#0D1117] border border-[#2D3A52] rounded-xl px-4 py-2.5 text-sm leading-relaxed text-[#F8FAFC]">
+                  <div className="bg-[#0D1117] border border-[#2D3A52] rounded-xl px-4 py-2.5 text-sm leading-relaxed text-[#F8FAFC] [&_svg]:max-w-full [&_svg]:h-auto [&_svg]:mx-auto [&_svg]:my-3 [&_svg]:block [&_svg]:rounded-lg [&_svg]:border [&_svg]:border-[#2D3A52] [&_svg]:p-2 [&_svg]:bg-white">
                     <div dangerouslySetInnerHTML={{ __html: renderAIResponse(msg.content) }} />
                   </div>
                 </div>
@@ -465,6 +502,28 @@ export default function TutorPage() {
             <div className="flex items-center gap-2 px-4 py-2.5 bg-[#EF4444]/10 border border-[#EF4444]/20 rounded-lg text-sm text-[#EF4444]">
               <AlertCircle size={14} />
               {error}
+            </div>
+          )}
+
+          {/* Free-plan limit reached banner */}
+          {limitReached && (
+            <div className="flex flex-col gap-3 px-4 py-4 bg-[#1A2035] border border-[#3B82F6]/40 rounded-xl">
+              <div className="flex items-start gap-3">
+                <div className="flex items-center justify-center w-9 h-9 rounded-lg bg-[#3B82F6]/15 shrink-0">
+                  <Lock size={18} className="text-[#06B6D4]" />
+                </div>
+                <div className="flex flex-col gap-1">
+                  <p className="text-sm font-semibold text-[#F8FAFC]">{t('tutorLimitReached')}</p>
+                  <p className="text-xs text-[#94A3B8]">{t('tutorLimitUpgrade')}</p>
+                </div>
+              </div>
+              <Link
+                href="/pricing"
+                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white text-sm font-semibold hover:opacity-90 transition-opacity"
+              >
+                <Sparkles size={15} />
+                {t('tutorLimitUpgrade')}
+              </Link>
             </div>
           )}
 
@@ -504,12 +563,12 @@ export default function TutorPage() {
               value={input}
               onChange={(e) => setInput(e.target.value)}
               placeholder={t('tutorInputPlaceholder')}
-              disabled={loading}
+              disabled={loading || limitReached}
               className="flex-1 px-4 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] focus:ring-1 focus:ring-[#3B82F6]/30 disabled:opacity-50"
             />
             <button
               type="submit"
-              disabled={!input.trim() || loading}
+              disabled={!input.trim() || loading || limitReached}
               className="w-10 h-10 flex items-center justify-center bg-[#3B82F6] hover:bg-[#2563EB] rounded-lg text-white disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
             >
               <Send size={16} />

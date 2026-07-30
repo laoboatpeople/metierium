@@ -4,6 +4,8 @@ import { prisma } from '../config/database';
 
 const router = Router();
 
+const FREE_TUTOR_MESSAGE_LIMIT = 100;
+
 interface ChatRequest {
   message: string;
   sessionId?: string;
@@ -24,6 +26,23 @@ router.post('/', authenticate, async (req: Request, res: Response): Promise<void
     if (!message || typeof message !== 'string') {
       res.status(400).json({ message: 'Message is required' });
       return;
+    }
+
+    // ── Enforce free-plan message cap ───────────────────────
+    const dbUser = await prisma.user.findUnique({ where: { id: userId }, select: { plan: true } });
+    if (dbUser?.plan === 'FREE') {
+      const messageCount = await prisma.chatMessage.count({
+        where: { role: 'user', session: { userId, source: 'tutor' } },
+      });
+      if (messageCount >= FREE_TUTOR_MESSAGE_LIMIT) {
+        res.status(403).json({
+          code: 'TUTOR_LIMIT_REACHED',
+          message: 'Free plan limit reached',
+          limit: FREE_TUTOR_MESSAGE_LIMIT,
+          count: messageCount,
+        });
+        return;
+      }
     }
 
     // ── Resolve or create the chat session ──────────────────
@@ -81,7 +100,26 @@ Communication style:
 - Maximum 300 words per response
 - If a question is outside your knowledge, say so honestly
 - ALWAYS respond in the same language as the user's question (French or English)
-- When a question matches a trade covered by this platform (electrician, plumber, welder, HVAC, heavy vehicle mechanic, fire safety, sheet metal, bricklayer, heavy equipment operator, gas technician, elevator mechanic, refrigeration, builder-renovator, building inspector, safety coordinator, general contractor, construction project management / Gestion des travaux), feel free to mention the platform as a study resource and include a link to the theory page: https://metierium.com/theory
+- When a question matches a trade covered by this platform, mention the platform as a study resource and include a PRECISE deep link to that trade's theory section (NOT the generic /theory page). Use this exact map of trade → URL slug:
+  * Électricien / electrician (CMEQ) → https://metierium.com/theory?trade=cmeq
+  * Plombier / plumber (CMMTQ) → https://metierium.com/theory?trade=cmmtq
+  * Soudeur / welder (QBQ) → https://metierium.com/theory?trade=qbq
+  * HVAC / réfrigération-climatisation → https://metierium.com/theory?trade=hvac
+  * Mécanicien véhicules lourds / heavy vehicle mechanic → https://metierium.com/theory?trade=mvl
+  * Sécurité incendie / fire safety → https://metierium.com/theory?trade=securite-incendie
+  * Ferblantier / sheet metal → https://metierium.com/theory?trade=ferblantier
+  * Briqueteur-maçon / bricklayer-mason → https://metierium.com/theory?trade=briqueteur
+  * Opérateur d'équipement lourd / heavy equipment operator → https://metierium.com/theory?trade=operateur-equipement-lourd
+  * Technicien en gaz / gas technician → https://metierium.com/theory?trade=gaz
+  * Mécanicien d'ascenseurs / elevator mechanic → https://metierium.com/theory?trade=ascenseurs
+  * Réfrigération / refrigeration → https://metierium.com/theory?trade=refrigeration
+  * Constructeur-rénovateur / builder-renovator → https://metierium.com/theory?trade=constructeur
+  * Entrepreneur général / general contractor → https://metierium.com/theory?trade=entrepreneur-general
+  * Inspecteur en bâtiment / building inspector → https://metierium.com/theory?trade=inspecteur
+  * Coordonnateur SST / safety coordinator → https://metierium.com/theory?trade=coordonnateur-sst
+  * Gestion des travaux / construction project management → https://metierium.com/theory?trade=gestion-travaux
+  ALWAYS pick the single best-matching trade and give its specific ?trade= link. Only fall back to https://metierium.com/theory if the question genuinely spans multiple trades and none fits.
+- CROSS-SELL RULE: When a question touches on MULTIPLE trades offered by the platform (e.g., a Catégorie 16 electrician needs BOTH technical CMEQ content AND business management / RBQ exam prep), you MUST suggest ALL relevant trades the platform covers — not just the primary one. Never tell the user to "find external resources" for a topic that IS covered by another trade on this platform. Example: "Pour la partie technique → https://metierium.com/theory?trade=cmeq. Pour la gestion d'entreprise et la réglementation RBQ → https://metierium.com/theory?trade=gestion-travaux."
 - If the question is about a trade or topic NOT covered here, do NOT promote the platform — instead give the best external answer you can or suggest where to find that information. IMPORTANT: Start your response with the exact marker [UNCOVERED_TOPIC] on the first line so the system can flag it.
 - Be honest: if you don't have good info on a topic, say so
 
@@ -89,6 +127,22 @@ SCOPE RESTRICTION:
 - ONLY answer questions related to Quebec construction trades, trade certification exams, building codes, or exam/chapter context
 - If a user asks about anything unrelated (cooking, sports, general trivia, personal advice, etc.), politely decline and redirect back to trade topics
 - Do NOT engage with off-topic conversation, even if the user insists
+
+SCHÉMAS ET DIAGRAMMES / SCHEMATICS:
+- When a student asks for a schema, diagram, circuit, schematic, montage, câblage, or wiring (schéma, diagramme, circuit, montage, câblage, branchement), DO NOT produce ASCII art (no pipes |, dashes -, plus +, or box-drawing characters). Instead generate a clean INLINE SVG diagram.
+- SVG rules (apply to ANY electrical or trades diagram — generators, motors, loads, panels, piping, etc.):
+  * Root element MUST include xmlns, a viewBox, and an explicit width (use width="600" so it scales; the viewBox sets the aspect ratio).
+  * First child: a light background rect covering the whole viewBox (fill="#ffffff").
+  * Wires: dark navy (stroke="#16233b"), stroke-width ~2.6, straight lines with right-angle corners only, stroke-linecap="round".
+  * Use standard electrical symbols: resistor = IEC rectangle (a small <rect> outline), inductor/coil = a series of semicircle bumps (an SVG <path> with arc "A" commands), DC source = one long + one short parallel line, ground = three decreasing horizontal lines. Add small filled circles (r~4) at connection nodes.
+  * Label every component and terminal (A1/A2, F1/F2, L1/N, etc.) with <text>. Labels MUST be in the SAME LANGUAGE as the user's question (French labels for French questions). Use a sans-serif font, dark navy fill.
+  * Add a short bold title <text> at the top describing the diagram.
+- CRITICAL OUTPUT RULE: output the SVG RAW and INLINE in your response — the literal <svg ...>...</svg> markup. NEVER wrap it in a \`\`\` code fence and NEVER escape it. The frontend renders raw SVG as a real image; a code fence would break it.
+- Keep the surrounding explanation short (you still have a 300-word limit): one brief caption sentence before and/or after the SVG is enough.
+- Example of the expected style for "schéma d'une génératrice shunt" (compact — match this quality and structure):
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600"><rect width="600" height="400" fill="#ffffff"/><text x="300" y="30" font-family="Arial, sans-serif" font-size="20" fill="#0b5394" text-anchor="middle" font-weight="bold">Génératrice shunt</text><circle cx="140" cy="210" r="45" fill="#ffffff" stroke="#16233b" stroke-width="2.6"/><text x="140" y="208" font-family="Arial, sans-serif" font-size="14" fill="#16233b" text-anchor="middle" font-weight="bold">Induit</text><text x="140" y="226" font-family="Arial, sans-serif" font-size="13" fill="#0b5394" text-anchor="middle">(E)</text><line x1="140" y1="165" x2="140" y2="110" stroke="#16233b" stroke-width="2.6"/><line x1="140" y1="110" x2="480" y2="110" stroke="#16233b" stroke-width="2.6"/><line x1="140" y1="255" x2="140" y2="320" stroke="#16233b" stroke-width="2.6"/><line x1="140" y1="320" x2="480" y2="320" stroke="#16233b" stroke-width="2.6"/><path d="M 300 110 L 300 160 A 8 8 0 0 1 300 176 A 8 8 0 0 1 300 192 A 8 8 0 0 1 300 208 A 8 8 0 0 1 300 224 L 300 260" fill="none" stroke="#16233b" stroke-width="2.6"/><line x1="300" y1="260" x2="300" y2="320" stroke="#16233b" stroke-width="2.6"/><text x="312" y="195" font-family="Arial, sans-serif" font-size="14" fill="#16233b" font-weight="bold">Inducteur shunt</text><rect x="467" y="185" width="26" height="60" rx="2" fill="#ffffff" stroke="#16233b" stroke-width="2.6"/><line x1="480" y1="110" x2="480" y2="185" stroke="#16233b" stroke-width="2.6"/><line x1="480" y1="245" x2="480" y2="320" stroke="#16233b" stroke-width="2.6"/><text x="500" y="220" font-family="Arial, sans-serif" font-size="14" fill="#16233b" font-weight="bold">Charge (R)</text><text x="126" y="105" font-family="Arial, sans-serif" font-size="13" fill="#0b5394" text-anchor="end" font-weight="bold">A1</text><text x="126" y="335" font-family="Arial, sans-serif" font-size="13" fill="#0b5394" text-anchor="end" font-weight="bold">A2</text></svg>
+
+- COMPLETENESS: When generating multiple schemas in one response, you MUST complete ALL of them. Never stop mid-diagram. If space is limited, make each SVG more compact (fewer decorative elements, shorter labels) rather than cutting one off. Every schema must have its full <svg>...</svg> block closed properly.
 
 Remember: students are preparing for high-stakes licensing exams. Accuracy and educational value are critical.`;
 
@@ -131,7 +185,7 @@ Remember: students are preparing for high-stakes licensing exams. Accuracy and e
       body: JSON.stringify({
         model: 'deepseek-chat',
         messages,
-        max_tokens: 2048,
+        max_tokens: 4096,
         temperature: 0.7,
       }),
     });

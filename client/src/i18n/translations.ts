@@ -41,6 +41,10 @@ const fr: Record<string, unknown> = {
   theoryCharacters: '{count} caractères',
   theoryMarkedRead: 'Marquée comme lue',
   theoryClose: 'Fermer',
+  theoryFullSearchPlaceholder: 'Rechercher dans la théorie… (ex: génératrice, loi d\'Ohm)',
+  theorySearchResultsCount: '{count} résultat(s) pour « {query} »',
+  theorySearchNoResults: 'Aucun résultat pour « {query} »',
+  theorySearchNoResultsDesc: 'Essayez un autre terme (ex: tension, soudage, plomberie)',
   testChapter: 'Tester mes connaissances',
 
   // License sections
@@ -654,7 +658,7 @@ const fr: Record<string, unknown> = {
   dashboardNoHistory: 'Aucun examen complété pour le moment.',
   dashboardNoExamsYet: 'Aucun examen complété',
   dashboardNoExamsDesc: 'Commencez à pratiquer pour voir vos performances dans tous les métiers.',
-  dashboardPracticedFormat: '{count} of {total} practiced',
+  dashboardPracticedFormat: '{count} sur {total} pratiqués',
 
   // Pricing page (app)
   pricingPageBadge: 'Forfaits simples et transparents',
@@ -689,6 +693,7 @@ const fr: Record<string, unknown> = {
   pricingFeatUnlimitedQ: 'Questions illimitées',
   pricingFeatUnlimitedExams: 'Examens illimités',
   pricingFeatAiTutor: 'Tuteur IA',
+  pricingFeatAiTutorLimited: 'Tuteur IA (100 messages)',
   pricingFeatLocked: '🔒 Métier verrouillé',
   pricingFeatAllTrades: 'Tous les métiers',
   pricingFeatUpdates: 'Mises à jour incluses',
@@ -765,6 +770,7 @@ const fr: Record<string, unknown> = {
   pricingFeatureUnlimitedQ: 'Questions illimitées',
   pricingFeatureUnlimitedExams: 'Examens illimités',
   pricingFeatureAiTutor: 'Tuteur IA',
+  pricingFeatureAiTutorLimited: 'Tuteur IA (100 messages)',
   pricingFeatureSwitchTrade: 'Changez de métier librement',
   pricingFeatureLockedTrade: '🔒 Métier verrouillé',
   pricingFeatureAllTrades: 'Tous les métiers',
@@ -786,6 +792,8 @@ const fr: Record<string, unknown> = {
   tutorNoResponse: "Je n'ai pas de réponse pour le moment.",
   tutorConnectionError: 'Erreur de connexion',
   tutorSorryMessage: "Désolé, je n'ai pas pu traiter votre demande. Veuillez réessayer.",
+  tutorLimitReached: "Vous avez atteint la limite de 100 messages gratuits avec le tuteur IA.",
+  tutorLimitUpgrade: "Passez à un plan payant pour des messages illimités",
 
   // Sidebar
   sidebarExamPrep: 'Préparation aux examens',
@@ -885,6 +893,10 @@ const en: Record<string, string> = {
   theoryCharacters: '{count} characters',
   theoryMarkedRead: 'Marked as read',
   theoryClose: 'Close',
+  theoryFullSearchPlaceholder: "Search theory… (e.g. generator, Ohm's law)",
+  theorySearchResultsCount: '{count} result(s) for « {query} »',
+  theorySearchNoResults: 'No results for « {query} »',
+  theorySearchNoResultsDesc: 'Try another term (e.g. voltage, welding, plumbing)',
   testChapter: 'Test my knowledge',
 
   // License sections
@@ -1532,6 +1544,7 @@ const en: Record<string, string> = {
   pricingFeatUnlimitedQ: 'Unlimited questions',
   pricingFeatUnlimitedExams: 'Unlimited practice exams',
   pricingFeatAiTutor: 'AI Tutor',
+  pricingFeatAiTutorLimited: 'AI Tutor (100 messages)',
   pricingFeatLocked: '🔒 Trade locked',
   pricingFeatAllTrades: 'All trades',
   pricingFeatUpdates: 'Updates included',
@@ -1608,6 +1621,7 @@ const en: Record<string, string> = {
   pricingFeatureUnlimitedQ: 'Unlimited questions',
   pricingFeatureUnlimitedExams: 'Unlimited practice exams',
   pricingFeatureAiTutor: 'AI Tutor',
+  pricingFeatureAiTutorLimited: 'AI Tutor (100 messages)',
   pricingFeatureSwitchTrade: 'Switch trades freely',
   pricingFeatureLockedTrade: '🔒 Trade locked',
   pricingFeatureAllTrades: 'All trades',
@@ -1629,6 +1643,8 @@ const en: Record<string, string> = {
   tutorNoResponse: 'I have no response at the moment.',
   tutorConnectionError: 'Connection error',
   tutorSorryMessage: 'Sorry, I could not process your request. Please try again.',
+  tutorLimitReached: "You've reached the limit of 100 free AI tutor messages.",
+  tutorLimitUpgrade: 'Upgrade to a paid plan for unlimited messages',
 
   // Sidebar
   sidebarExamPrep: 'Exam Preparation',

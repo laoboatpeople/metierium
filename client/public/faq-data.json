@@ -48,7 +48,7 @@
   {
     "slug": "metierium-difference-gratuit-payant",
     "question": "Quelle est la différence entre le plan gratuit et les plans payants ?",
-    "answer": "<p>Avec le <strong>plan gratuit</strong>, vous avez accès au premier chapitre de théorie et aux questions correspondantes pour chaque métier. C'est suffisant pour évaluer la plateforme.</p><p>Les <strong>plans payants</strong> (Mensuel ou À vie) débloquent :</p><ul><li>Tous les chapitres de théorie pour tous les métiers</li><li>Toutes les questions d'examen (des centaines par métier)</li><li>Le Tuteur IA pour vous aider à comprendre les concepts</li><li>Le suivi de progression détaillé</li><li>Les statistiques de performance</li></ul>",
+    "answer": "<p>Avec le <strong>plan gratuit</strong>, vous avez accès au premier chapitre de théorie et aux questions correspondantes pour chaque métier. C'est suffisant pour évaluer la plateforme.</p><p>Les <strong>plans payants</strong> (Mensuel ou À vie) débloquent :</p><ul><li>Tous les chapitres de théorie pour tous les métiers</li><li>Toutes les questions d'examen (des centaines par métier)</li><li>Le Tuteur IA illimité (le plan gratuit inclut 100 messages)</li><li>Le suivi de progression détaillé</li><li>Les statistiques de performance</li></ul>",
     "category": "Metierium",
     "trade": "Général",
     "keywords": [
@@ -77,7 +77,7 @@
   {
     "slug": "metierium-tuteur-ia",
     "question": "Comment fonctionne le Tuteur IA sur Metierium ?",
-    "answer": "<p>Le <strong>Tuteur IA</strong> est un assistant virtuel alimenté par l'intelligence artificielle qui peut :</p><ul><li>Répondre à vos questions théoriques sur les métiers</li><li>Vous expliquer des concepts difficiles en détail</li><li>Vous donner des exemples concrets adaptés au contexte québécois</li><li>Vous aider à comprendre pourquoi une réponse est correcte ou incorrecte</li></ul><p>Disponible sur tous les plans payants. Posez vos questions en langage naturel, comme vous le feriez avec un professeur.</p>",
+    "answer": "<p>Le <strong>Tuteur IA</strong> est un assistant virtuel alimenté par l'intelligence artificielle qui peut :</p><ul><li>Répondre à vos questions théoriques sur les métiers</li><li>Vous expliquer des concepts difficiles en détail</li><li>Vous donner des exemples concrets adaptés au contexte québécois</li><li>Vous aider à comprendre pourquoi une réponse est correcte ou incorrecte</li></ul><p>Disponible sur tous les plans — 100 messages gratuits, illimité avec un abonnement. Posez vos questions en langage naturel, comme vous le feriez avec un professeur.</p>",
     "category": "Metierium",
     "trade": "Général",
     "keywords": [
@@ -233,7 +233,7 @@
   {
     "slug": "free-vs-paid-plan-differences",
     "question": "What is the difference between the free plan and paid plans?",
-    "answer": "<p>With the <strong>free plan</strong>, you get access to the first theory chapter and its corresponding questions for each trade. That's enough to evaluate the platform.</p><p>The <strong>paid plans</strong> (Monthly or Lifetime) unlock:</p><ul><li>All theory chapters for all trades</li><li>All exam questions (hundreds per trade)</li><li>The AI Tutor to help you understand concepts</li><li>Detailed progress tracking</li><li>Performance statistics</li></ul>",
+    "answer": "<p>With the <strong>free plan</strong>, you get access to the first theory chapter and its corresponding questions for each trade. That's enough to evaluate the platform.</p><p>The <strong>paid plans</strong> (Monthly or Lifetime) unlock:</p><ul><li>All theory chapters for all trades</li><li>All exam questions (hundreds per trade)</li><li>Unlimited AI Tutor (free plan includes 100 messages)</li><li>Detailed progress tracking</li><li>Performance statistics</li></ul>",
     "category": "Metierium",
     "trade": "Général",
     "keywords": [
@@ -262,7 +262,7 @@
   {
     "slug": "how-ai-tutor-works",
     "question": "How does the AI Tutor work on Metierium?",
-    "answer": "<p>The <strong>AI Tutor</strong> is a virtual assistant powered by artificial intelligence that can:</p><ul><li>Answer your theoretical questions about the trades</li><li>Explain difficult concepts in detail</li><li>Give you concrete examples adapted to the Quebec context</li><li>Help you understand why an answer is correct or incorrect</li></ul><p>Available on all paid plans. Ask your questions in natural language, just like you would with a teacher.</p>",
+    "answer": "<p>The <strong>AI Tutor</strong> is a virtual assistant powered by artificial intelligence that can:</p><ul><li>Answer your theoretical questions about the trades</li><li>Explain difficult concepts in detail</li><li>Give you concrete examples adapted to the Quebec context</li><li>Help you understand why an answer is correct or incorrect</li></ul><p>Available on all plans — 100 free messages, unlimited with a subscription. Ask your questions in natural language, just like you would with a teacher.</p>",
     "category": "Metierium",
     "trade": "Général",
     "keywords": [

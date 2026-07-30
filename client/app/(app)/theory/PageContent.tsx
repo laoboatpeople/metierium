@@ -23,6 +23,8 @@ import {
   ArrowUp,
   XCircle,
   Search,
+  SearchX,
+  X,
   Clock,
   CheckCircle,
   Loader2,
@@ -91,8 +93,29 @@ function TheoryRenderer({ content, color }: { content: string; color: SectionCol
     const lines = content.split('\n');
     const result: { type: string; content: string; level?: number }[] = [];
 
+    let svgBuffer: string[] | null = null;
+
     for (const line of lines) {
       const trimmed = line.trim();
+
+      // SVG block accumulation (multi-line <svg>...</svg>)
+      if (svgBuffer !== null) {
+        svgBuffer.push(line);
+        if (trimmed.includes('</svg>')) {
+          result.push({ type: 'svg', content: svgBuffer.join('\n') });
+          svgBuffer = null;
+        }
+        continue;
+      }
+      if (trimmed.startsWith('<svg')) {
+        svgBuffer = [line];
+        if (trimmed.includes('</svg>')) {
+          result.push({ type: 'svg', content: svgBuffer.join('\n') });
+          svgBuffer = null;
+        }
+        continue;
+      }
+
       if (!trimmed) continue;
 
       // Headings
@@ -128,6 +151,13 @@ function TheoryRenderer({ content, color }: { content: string; color: SectionCol
   return (
     <div className="prose prose-sm max-w-none">
       {segments.map((seg, i) => {
+        if (seg.type === 'svg') {
+          return (
+            <div key={i} className="my-4 overflow-x-auto rounded-xl border border-white/[0.06] bg-white/[0.02] p-3">
+              <div className="mx-auto max-w-full [&_svg]:h-auto [&_svg]:w-full" dangerouslySetInnerHTML={{ __html: seg.content }} />
+            </div>
+          );
+        }
         if (seg.type === 'heading') {
           const H = `h${Math.min(seg.level! + 1, 4)}` as keyof JSX.IntrinsicElements;
           const sizeClass = seg.level === 1 ? 'text-base font-bold mt-5 mb-2'
@@ -357,10 +387,6 @@ function CategoryCard({ category, preselectedChapterId, preselectedTradeCode }: 
   const effectiveChId = chFromUrl || preselectedChapterId;
   const hasPreselected = category.chapters.some(ch => ch.id === effectiveChId) || category.code === preselectedTradeCode;
   const [expanded, setExpanded] = useState(hasPreselected);
-  // Force expand during render when preselected — prevents effect cascade issues
-  if (hasPreselected && !expanded) {
-    setExpanded(true);
-  }
 
   const shareCategory = useCallback((cat: TheoryCategory) => {
     const slugMap: Record<string, string> = {
@@ -481,6 +507,113 @@ function getSectionColor(code: string): SectionColor {
   return 'blue';
 }
 
+// ─── Full-text search ─────────────────────────────────────
+
+/** Lowercase + strip accents so "generatrice" matches "génératrice". */
+function normalizeText(s: string): string {
+  return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+}
+
+interface SearchResult {
+  chapter: TheoryChapter;
+  category: TheoryCategory;
+  score: number;
+  /** Raw snippet around the first content match (null for name-only matches). */
+  snippet: string | null;
+  snippetStart: number;
+}
+
+/**
+ * Build a ~120-char window around the FIRST occurrence of `normQuery`
+ * inside the normalized content, snapped to word boundaries.
+ */
+function extractSnippet(normContent: string, rawContent: string, normQuery: string): { snippet: string; start: number } | null {
+  const idx = normContent.indexOf(normQuery);
+  if (idx === -1) return null;
+  const matchEnd = idx + normQuery.length;
+  let start = Math.max(0, idx - 45);
+  let end = Math.min(rawContent.length, matchEnd + 75);
+  // Snap to word boundaries for cleaner snippets
+  if (start > 0) {
+    while (start < idx && !/\s/.test(rawContent[start])) start++;
+    while (start < idx && /\s/.test(rawContent[start])) start++;
+  } else {
+    start = 0;
+  }
+  while (end < rawContent.length && !/\s/.test(rawContent[end - 1])) end++;
+  return { snippet: rawContent.slice(start, end).replace(/\s+/g, ' ').trim(), start };
+}
+
+/**
+ * Client-side full-text search over every chapter of every category.
+ * Ranking: chapter name > category name/code > theory content.
+ */
+function searchTheory(categories: TheoryCategory[], query: string): SearchResult[] {
+  const normQuery = normalizeText(query.trim());
+  if (normQuery.length < 2) return [];
+  const results: SearchResult[] = [];
+  for (const category of categories) {
+    const normCatName = normalizeText(category.name);
+    const normCatCode = normalizeText(category.code);
+    for (const chapter of category.chapters) {
+      if (chapter.questionCount === 0 && !chapter.hasTheory) continue;
+      const normChName = normalizeText(chapter.name);
+      let score = 0;
+      if (normChName.includes(normQuery)) {
+        score = normChName.startsWith(normQuery) ? 100 : 90; // chapter name match
+      } else if (normCatName.includes(normQuery) || normCatCode === normQuery) {
+        score = 60; // category match
+      } else if (chapter.theoryContent) {
+        const normContent = normalizeText(chapter.theoryContent);
+        const hit = extractSnippet(normContent, chapter.theoryContent, normQuery);
+        if (hit) score = 30; // content match
+        if (score > 0) {
+          results.push({ chapter, category, score, snippet: hit!.snippet, snippetStart: hit!.start });
+          continue;
+        }
+      }
+      if (score > 0) {
+        results.push({ chapter, category, score, snippet: null, snippetStart: 0 });
+      }
+    }
+  }
+  return results.sort((a, b) => b.score - a.score || a.chapter.number - b.chapter.number);
+}
+
+/** Snippet text with every occurrence of the query highlighted (accent-insensitive). */
+function HighlightedSnippet({ text, query }: { text: string; query: string }) {
+  const parts = useMemo(() => {
+    const normText = normalizeText(text);
+    const normQuery = normalizeText(query.trim());
+    if (!normQuery) return [{ text, hit: false }];
+    const out: { text: string; hit: boolean }[] = [];
+    let cursor = 0;
+    let idx = normText.indexOf(normQuery);
+    while (idx !== -1) {
+      if (idx > cursor) out.push({ text: text.slice(cursor, idx), hit: false });
+      out.push({ text: text.slice(idx, idx + normQuery.length), hit: true });
+      cursor = idx + normQuery.length;
+      idx = normText.indexOf(normQuery, cursor);
+    }
+    if (cursor < text.length) out.push({ text: text.slice(cursor), hit: false });
+    return out.length > 0 ? out : [{ text, hit: false }];
+  }, [text, query]);
+
+  return (
+    <>
+      {parts.map((p, i) =>
+        p.hit ? (
+          <mark key={i} className="bg-amber/20 text-amber rounded px-0.5 font-medium">
+            {p.text}
+          </mark>
+        ) : (
+          <span key={i}>{p.text}</span>
+        )
+      )}
+    </>
+  );
+}
+
 // ─── Main Page ────────────────────────────────────────────
 
 export default function TheoryPage() {
@@ -587,6 +720,60 @@ export default function TheoryPage() {
   useEffect(() => {
     document.title = `${t('theory')} | Metierium`;
   }, [t]);
+
+  // ─── Full-text search state ─────────────────────────────
+  const [searchQuery, setSearchQuery] = useState('');
+  const [debouncedQuery, setDebouncedQuery] = useState('');
+  const [searchFocused, setSearchFocused] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
+
+  // Debounce input ~200ms before running the search
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedQuery(searchQuery), 200);
+    return () => clearTimeout(timer);
+  }, [searchQuery]);
+
+  // "/" anywhere on the page focuses the search (unless already typing)
+  useEffect(() => {
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+      const target = e.target as HTMLElement | null;
+      if (target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable)) return;
+      e.preventDefault();
+      searchInputRef.current?.focus();
+    };
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
+
+  const searchActive = debouncedQuery.trim().length >= 2;
+
+  const searchResults = useMemo(
+    () => (searchActive ? searchTheory(categories, debouncedQuery) : []),
+    [categories, debouncedQuery, searchActive]
+  );
+
+  // Jump from a search result to its chapter: clear search, expand the
+  // category + chapter, scroll to it — reuses the preselectedChapterId
+  // mechanism (the effect at lines ~566 clicks [data-chapter-id]).
+  const jumpToResult = useCallback((result: SearchResult) => {
+    setSearchQuery('');
+    setDebouncedQuery('');
+    setPreselectedTradeCode(null);
+    setPreselectedChapterId(result.chapter.id);
+    try { localStorage.setItem('lastTheoryChapter', result.chapter.id); } catch {}
+    // Categories re-render after the state update; give the DOM a tick
+    // before looking up the chapter element to expand + scroll.
+    setTimeout(() => {
+      const el = document.querySelector(`[data-chapter-id="${result.chapter.id}"]`) as HTMLElement | null;
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (el.getAttribute('aria-expanded') !== 'true') {
+          el.click();
+        }
+      }
+    }, 150);
+  }, []);
 
   async function fetchTheory() {
     try {
@@ -733,6 +920,55 @@ export default function TheoryPage() {
         )}
       </div>
 
+      {/* Full-text search bar */}
+      {!loading && categories.length > 0 && (
+        <div className="relative group">
+          <Search
+            size={18}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-text-tertiary pointer-events-none transition-colors group-focus-within:text-blue"
+          />
+          <input
+            ref={searchInputRef}
+            type="text"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
+            onFocus={() => setSearchFocused(true)}
+            onBlur={() => setSearchFocused(false)}
+            onKeyDown={(e) => {
+              if (e.key === 'Escape') {
+                setSearchQuery('');
+                (e.target as HTMLInputElement).blur();
+              }
+            }}
+            placeholder={t('theoryFullSearchPlaceholder')}
+            aria-label={t('theoryFullSearchPlaceholder')}
+            className="w-full bg-card border border-border focus:border-blue/50 focus:ring-2 focus:ring-blue/15 rounded-xl pl-11 pr-12 py-3 text-sm text-text-primary placeholder:text-text-tertiary outline-none transition-all duration-200"
+          />
+          {searchQuery ? (
+            <button
+              onClick={() => {
+                setSearchQuery('');
+                searchInputRef.current?.focus();
+              }}
+              aria-label={t('theoryClearSearch')}
+              title={t('theoryClearSearch')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 p-1.5 rounded-lg text-text-tertiary hover:text-text-primary hover:bg-hover/60 transition-colors"
+            >
+              <X size={15} />
+            </button>
+          ) : (
+            !searchFocused && (
+              <kbd
+                aria-hidden="true"
+                className="absolute right-3.5 top-1/2 -translate-y-1/2 hidden sm:flex items-center justify-center h-6 w-6 rounded-md border border-border bg-primary/40 text-[11px] font-mono text-text-tertiary pointer-events-none"
+              >
+                /
+              </kbd>
+            )
+          )}
+        </div>
+      )}
+
       {/* Error */}
       {error && (
         <div className="flex items-center gap-3 px-4 py-3 bg-red/10 border border-red/20 rounded-card text-sm text-red">
@@ -761,8 +997,88 @@ export default function TheoryPage() {
         </div>
       )}
 
+      {/* Search results — replaces the category cards while a query is active */}
+      {!loading && searchActive && (
+        <div>
+          {searchResults.length > 0 ? (
+            <>
+              <div className="flex items-center gap-2 mb-4">
+                <p className="text-sm text-text-secondary">
+                  {t('theorySearchResultsCount', { count: searchResults.length, query: debouncedQuery.trim() })}
+                </p>
+              </div>
+              <motion.div
+                initial="hidden"
+                animate="visible"
+                variants={{ hidden: {}, visible: { transition: { staggerChildren: 0.035 } } }}
+                className="space-y-2"
+              >
+                {searchResults.map((result) => {
+                  const color = getSectionColor(result.category.code);
+                  const colors = SECTION_STYLES[color];
+                  return (
+                    <motion.button
+                      key={result.chapter.id}
+                      variants={{
+                        hidden: { opacity: 0, y: 8 },
+                        visible: { opacity: 1, y: 0, transition: { duration: 0.22 } },
+                      }}
+                      onClick={() => jumpToResult(result)}
+                      className="w-full text-left bg-card border border-border rounded-card px-4 py-3.5 hover:border-blue/40 hover:bg-hover/30 transition-colors group"
+                    >
+                      <div className="flex items-center gap-2.5 flex-wrap">
+                        <span className={`h-7 w-7 rounded-lg ${colors.bg} flex items-center justify-center shrink-0`}>
+                          <Layers size={13} className={colors.text} />
+                        </span>
+                        <p className="text-sm font-semibold text-text-primary group-hover:text-blue transition-colors min-w-0">
+                          {result.chapter.number}. {result.chapter.name}
+                        </p>
+                        <span className="text-[10px] font-mono px-1.5 py-0.5 rounded border border-border text-text-tertiary">
+                          {result.category.code}
+                        </span>
+                        <span className="ml-auto text-xs text-text-tertiary shrink-0">
+                          {result.chapter.questionCount} {result.chapter.questionCount > 1 ? t('questions') : t('question')}
+                        </span>
+                      </div>
+                      <p className="text-xs text-text-secondary mt-2 line-clamp-2 leading-relaxed pl-[38px]">
+                        {result.snippet ? (
+                          <>
+                            {result.snippetStart > 0 && <span className="text-text-tertiary">…</span>}
+                            <HighlightedSnippet text={result.snippet} query={debouncedQuery} />
+                            <span className="text-text-tertiary">…</span>
+                          </>
+                        ) : (
+                          <span className="text-text-tertiary italic">{result.category.name}</span>
+                        )}
+                      </p>
+                    </motion.button>
+                  );
+                })}
+              </motion.div>
+            </>
+          ) : (
+            <motion.div
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.25 }}
+              className="flex flex-col items-center justify-center py-16"
+            >
+              <div className="w-14 h-14 rounded-full bg-card border border-border flex items-center justify-center mb-4">
+                <SearchX size={22} className="text-text-tertiary" />
+              </div>
+              <h2 className="text-base font-medium text-text-primary mb-1">
+                {t('theorySearchNoResults', { query: debouncedQuery.trim() })}
+              </h2>
+              <p className="text-sm text-text-secondary max-w-sm text-center">
+                {t('theorySearchNoResultsDesc')}
+              </p>
+            </motion.div>
+          )}
+        </div>
+      )}
+
       {/* Sections */}
-      {!loading && categories.length > 0 && (
+      {!loading && !searchActive && categories.length > 0 && (
         <div className="space-y-6">
           {categories.map((cat) => (
             <CategoryCard key={cat.id} category={cat} preselectedChapterId={preselectedChapterId || undefined} preselectedTradeCode={preselectedTradeCode} />

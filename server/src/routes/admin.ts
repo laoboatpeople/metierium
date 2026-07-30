@@ -103,6 +103,12 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
       },
     });
 
+    const lastLogin = await prisma.activityLog.findFirst({
+      where: { userId: id, action: 'LOGIN' },
+      orderBy: { createdAt: 'desc' },
+      select: { createdAt: true },
+    });
+
     if (!user) {
       res.status(404).json({ message: 'User not found' });
       return;
@@ -344,6 +350,7 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
 
     res.json({
       ...user,
+      lastLoginAt: lastLogin?.createdAt ?? null,
       subscriptions,
       contactMessages,
       examStats: {
