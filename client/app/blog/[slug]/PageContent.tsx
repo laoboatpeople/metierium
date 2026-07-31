@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import Script from 'next/script';
 import { Calendar, Clock, ArrowLeft, ChevronRight, Share2, Loader2 } from 'lucide-react';
 import Nav from '@/components/Nav';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -22,15 +21,26 @@ interface BlogPost {
   tags: string[];
 }
 
-export default function BlogPostPage() {
+interface Props {
+  initialPost?: BlogPost | null;
+  initialAllPosts?: BlogPost[];
+}
+
+function formatDate(dateStr: string, locale: string): string {
+  const date = new Date(dateStr + 'T00:00:00Z');
+  return date.toLocaleDateString(locale === 'en' ? 'en-CA' : 'fr-CA', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
+export default function BlogPostPage({ initialPost, initialAllPosts }: Props) {
   const { t, locale } = useLocale();
   const params = useParams();
   const slug = params?.slug as string;
-  const [post, setPost] = useState<BlogPost | null>(null);
-  const [allPosts, setAllPosts] = useState<BlogPost[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [post, setPost] = useState<BlogPost | null>(initialPost ?? null);
+  const [allPosts, setAllPosts] = useState<BlogPost[]>(initialAllPosts || []);
+  const [loading, setLoading] = useState(!initialPost && initialPost !== null);
 
   useEffect(() => {
+    if (initialPost !== undefined) return; // Data already provided from server
     fetch('/blog-data.json')
       .then(r => r.json())
       .then((data: BlogPost[]) => {
@@ -39,7 +49,7 @@ export default function BlogPostPage() {
       })
       .catch(() => setPost(null))
       .finally(() => setLoading(false));
-  }, [slug]);
+  }, [slug, initialPost]);
 
   if (loading) {
     return (
@@ -70,16 +80,6 @@ export default function BlogPostPage() {
         <p>Category: {post.category} | Author: {post.author} | Published: {post.date}</p>
         {post.tags.map(tag => (<span key={tag}>#{tag} </span>))}
       </div>
-      <Script id="blog-article" type="application/ld+json" strategy="afterInteractive">{`
-        {
-          "@context": "https://schema.org",
-          "@type": "Article",
-          "headline": ${JSON.stringify(locale === 'en' && post.titleEn ? post.titleEn : post.title)},
-          "datePublished": "${post.date}",
-          "author": { "@type": "Person", "name": "${post.author}" },
-          "publisher": { "@type": "Organization", "name": "Metierium" }
-        }
-      `}</Script>
 
       <div className="max-w-3xl mx-auto px-4 py-8">
         <nav className="flex items-center gap-2 text-xs text-[#64748B] mb-6">
@@ -92,7 +92,7 @@ export default function BlogPostPage() {
 
         <article className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-6 md:p-8">
           <div className="flex items-center gap-3 text-xs text-[#64748B] mb-3">
-            <time dateTime={post.date} className="flex items-center gap-1"><Calendar size={12} /> {post.date}</time>
+            <time dateTime={post.date} className="flex items-center gap-1"><Calendar size={12} /> {formatDate(post.date, locale)}</time>
             <span className="flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
             <span className="px-1.5 py-0.5 rounded bg-[#3B82F6]/10 text-[#3B82F6]">{post.category}</span>
           </div>
@@ -103,20 +103,21 @@ export default function BlogPostPage() {
           <button
             onClick={() => {
               const url = window.location.href;
+              const shareTitle = locale === 'en' && post.titleEn ? post.titleEn : post.title;
               if (typeof navigator !== 'undefined' && navigator.share) {
-                navigator.share({ title: post.title, url }).catch(() => {});
+                navigator.share({ title: shareTitle, url }).catch(() => {});
               } else {
                 navigator.clipboard.writeText(url).catch(() => {});
               }
             }}
             className="text-xs text-[#64748B] hover:text-[#3B82F6] transition-colors p-1"
-            aria-label="Partager"
+            aria-label={locale === 'en' ? 'Share' : 'Partager'}
           >
             <Share2 size={14} />
           </button>
         </div>
 
-          <div className="prose prose-sm max-w-none text-[#94A3B8] leading-relaxed"
+          <div className="prose prose-sm prose-invert max-w-none text-[#94A3B8] leading-relaxed"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
@@ -138,7 +139,7 @@ export default function BlogPostPage() {
               {related.map(r => (
                 <Link key={r.slug} href={`/blog/${r.slug}`}
                   className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4 hover:border-[#3B82F6]/30 transition-colors">
-                  <p className="text-xs text-[#64748B]">{r.date}</p>
+                  <p className="text-xs text-[#64748B]">{formatDate(r.date, locale)}</p>
                   <p className="text-sm font-medium text-[#F8FAFC] mt-1 line-clamp-2">{locale === 'en' && r.titleEn ? r.titleEn : r.title}</p>
                 </Link>
               ))}

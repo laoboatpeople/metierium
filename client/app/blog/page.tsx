@@ -4,7 +4,7 @@ import blogData from '@/public/blog-data.json';
 
 export const metadata: Metadata = {
   title: 'Blog | Metierium',
-  description: 'Read articles about Quebec trade certification, exam preparation tips, code changes, Sceau Rouge (Red Seal), and industry news for tradespeople.',
+  description: 'Articles sur la certification des métiers au Québec, conseils de préparation aux examens, modifications du Code, Sceau Rouge (Red Seal) et actualités de l\'industrie pour les travailleurs de la construction.',
   alternates: {
     canonical: 'https://metierium.com/blog',
     languages: {
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'Blog | Metierium',
-    description: 'Quebec trade certification articles, exam tips, and industry news.',
-    locale: 'en_CA',
-    alternateLocale: ['fr_CA'],
+    description: 'Articles sur la certification des métiers au Québec, conseils d\'examen et actualités de l\'industrie.',
+    locale: 'fr_CA',
+    alternateLocale: ['en_CA'],
     siteName: 'Metierium',
   },
 };

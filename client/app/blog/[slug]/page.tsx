@@ -11,7 +11,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   if (post) {
     return {
       title: `${post.title} | Metierium Blog`,
-      description: post.excerpt?.replace(/<[^>]*>/g, '').slice(0, 160) || `Read about ${post.category} — Quebec trade exam certification tips and insights.`,
+      description: post.excerpt?.replace(/<[^>]*>/g, '').slice(0, 160) || `Articles sur ${post.category} — conseils et astuces pour la certification des métiers au Québec.`,
       alternates: {
         canonical: `https://metierium.com/blog/${slug}`,
         languages: {
@@ -23,8 +23,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
         title: `${post.title} | Metierium Blog`,
         description: post.excerpt?.replace(/<[^>]*>/g, '').slice(0, 160),
         type: 'article',
-        locale: 'en_CA',
-        alternateLocale: ['fr_CA'],
+        locale: 'fr_CA',
+        alternateLocale: ['en_CA'],
         siteName: 'Metierium',
         publishedTime: post.date,
         authors: [post.author],
@@ -33,8 +33,8 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   }
 
   return {
-    title: 'Blog Post | Metierium',
-    description: 'Read articles about Quebec trade certification and exam preparation.',
+    title: 'Article de blog | Metierium',
+    description: 'Articles sur la certification des métiers au Québec et la préparation aux examens.',
     alternates: {
       canonical: `https://metierium.com/blog/${slug}`,
     },
@@ -97,7 +97,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
             <span>{post.readTime}</span>
           </div>
         </div>
-        <BlogPostPage />
+        <BlogPostPage initialPost={post} initialAllPosts={posts} />
       </>
     );
   }

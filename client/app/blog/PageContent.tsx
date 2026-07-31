@@ -23,6 +23,11 @@ interface Props {
   initialData?: BlogPost[];
 }
 
+function formatDate(dateStr: string, locale: string): string {
+  const date = new Date(dateStr + 'T00:00:00Z');
+  return date.toLocaleDateString(locale === 'en' ? 'en-CA' : 'fr-CA', { year: 'numeric', month: 'long', day: 'numeric' });
+}
+
 function BlogContent({ initialData }: Props) {
   const { t, locale } = useLocale();
   const [posts, setPosts] = useState<BlogPost[]>(initialData || []);
@@ -110,7 +115,7 @@ function BlogContent({ initialData }: Props) {
                 className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5 hover:border-[#3B82F6]/30 transition-all group"
               >
                 <div className="flex items-center gap-3 text-xs text-[#64748B] mb-2">
-                  <time dateTime={post.date} className="flex items-center gap-1"><Calendar size={12} /> {post.date}</time>
+                  <time dateTime={post.date} className="flex items-center gap-1"><Calendar size={12} /> {formatDate(post.date, locale)}</time>
                   <span className="flex items-center gap-1"><Clock size={12} /> {post.readTime}</span>
                   <span className="px-1.5 py-0.5 rounded bg-[#3B82F6]/10 text-[#3B82F6]">{post.category}</span>
                 </div>
@@ -130,14 +135,15 @@ function BlogContent({ initialData }: Props) {
                     <button
                       onClick={() => {
                         const url = `${window.location.origin}/blog/${post.slug}`;
+                        const shareTitle = locale === 'en' && post.titleEn ? post.titleEn : post.title;
                         if (typeof navigator !== 'undefined' && navigator.share) {
-                          navigator.share({ title: post.title, url }).catch(() => {});
+                          navigator.share({ title: shareTitle, url }).catch(() => {});
                         } else {
                           navigator.clipboard.writeText(url).catch(() => {});
                         }
                       }}
                       className="text-xs text-[#64748B] hover:text-[#3B82F6] transition-colors p-1"
-                      aria-label="Partager"
+                      aria-label={locale === 'en' ? 'Share' : 'Partager'}
                     >
                       <Share2 size={14} />
                     </button>
