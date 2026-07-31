@@ -121,6 +121,9 @@ function ExamsPage() {
   const [examResult, setExamResult] = useState<ExamResult | null>(null);
   const [examTime, setExamTime] = useState(0);
   const [timerActive, setTimerActive] = useState(false);
+  // TODO: questionCount should be configurable per trade (real CMEQ exams vary:
+  // e.g. Électricien ~90 questions, Plombier ~80). DB Trade/Chapter tables have no
+  // questionsPerExam field yet — add one and fetch it when selecting a trade.
   const [questionCount, setQuestionCount] = useState(50);
   const [difficulty, setDifficulty] = useState<string>('');
   const [chapters, setChapters] = useState<Chapter[]>([]);
@@ -240,6 +243,14 @@ function ExamsPage() {
     }
     return () => clearInterval(interval);
   }, [timerActive]);
+
+  // Auto-submit when exam timer expires (uses ref to avoid stale closure)
+  const finishExamRef = useRef<() => void>(() => {});
+  useEffect(() => {
+    if (timerActive && examTime >= EXAM_DURATION) {
+      finishExamRef.current();
+    }
+  }, [examTime, timerActive, EXAM_DURATION]);
 
   // Clear auto-advance on unmount
   useEffect(() => {
@@ -493,6 +504,9 @@ function ExamsPage() {
     };
     await persistToServer();
   };
+
+  // Keep ref in sync so the auto-submit effect always calls the latest finishExam
+  finishExamRef.current = finishExam;
 
   const resetExam = () => {
     setPhase('setup');
@@ -856,6 +870,10 @@ function ExamsPage() {
                 }`}>
                   <Clock size={14} />
                   {formatTime(examTime)}
+                  <span className="text-[#4B5563]">/</span>
+                  <span className={timeRemaining < 5 * 60 ? 'text-[#EF4444]' : 'text-[#94A3B8]'}>
+                    {formatTime(timeRemaining)}
+                  </span>
                 </span>
               )}
             </div>
@@ -882,6 +900,14 @@ function ExamsPage() {
                 className={`h-full rounded-full transition-all duration-1000 ${timerBarColor}`}
                 style={{ width: `${Math.min(timerPercent, 100)}%` }}
               />
+            </div>
+          )}
+
+          {/* Time-almost-up warning (< 5 min remaining) */}
+          {!reviewMode && timeRemaining < 5 * 60 && timeRemaining > 0 && (
+            <div className="mt-2 flex items-center gap-2 text-[#EF4444] animate-pulse text-sm font-semibold">
+              <AlertCircle size={16} />
+              {t('examsTimeAlmostUp')}
             </div>
           )}
         </div>
