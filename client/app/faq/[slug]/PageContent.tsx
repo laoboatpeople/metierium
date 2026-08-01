@@ -111,7 +111,7 @@ export default function FaqPage() {
             <span className="text-[10px] text-[#64748B]">{entry.category}</span>
           </div>
           <h1 className="text-2xl font-bold text-[#F8FAFC] mb-4">{entry.question}</h1>
-          <div className="prose prose-sm max-w-none text-[#94A3B8] leading-relaxed"
+          <div className="prose prose-sm prose-invert max-w-none text-[#94A3B8] leading-relaxed"
             dangerouslySetInnerHTML={{ __html: entry.answer }}
           />
 

@@ -94,9 +94,25 @@ function TheoryRenderer({ content, color }: { content: string; color: SectionCol
     const result: { type: string; content: string; level?: number }[] = [];
 
     let svgBuffer: string[] | null = null;
+    let codeBuffer: string[] | null = null;
 
     for (const line of lines) {
       const trimmed = line.trim();
+
+      // Fenced code block accumulation (``` ... ```)
+      if (codeBuffer !== null) {
+        if (trimmed.startsWith('```')) {
+          result.push({ type: 'code', content: codeBuffer.join('\n') });
+          codeBuffer = null;
+        } else {
+          codeBuffer.push(line);
+        }
+        continue;
+      }
+      if (trimmed.startsWith('```')) {
+        codeBuffer = [];
+        continue;
+      }
 
       // SVG block accumulation (multi-line <svg>...</svg>)
       if (svgBuffer !== null) {
@@ -149,13 +165,20 @@ function TheoryRenderer({ content, color }: { content: string; color: SectionCol
   }, [content]);
 
   return (
-    <div className="prose prose-sm max-w-none">
+    <div className="prose prose-sm prose-invert max-w-none">
       {segments.map((seg, i) => {
         if (seg.type === 'svg') {
           return (
             <div key={i} className="my-4 overflow-x-auto rounded-xl border border-white/[0.06] bg-white/[0.02] p-3">
               <div className="mx-auto max-w-full [&_svg]:h-auto [&_svg]:w-full" dangerouslySetInnerHTML={{ __html: seg.content }} />
             </div>
+          );
+        }
+        if (seg.type === 'code') {
+          return (
+            <pre key={i} className="my-3 overflow-x-auto rounded-lg border border-[#2D3A52] bg-[#111827] px-4 py-3 text-xs leading-relaxed text-[#E2E8F0]">
+              <code className="font-mono">{seg.content}</code>
+            </pre>
           );
         }
         if (seg.type === 'heading') {
