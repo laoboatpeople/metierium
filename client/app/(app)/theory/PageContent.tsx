@@ -338,6 +338,11 @@ function ChapterSection({ chapter, color, preselected, onContentLoaded }: {
   const [contentError, setContentError] = useState(false);
   const [retryNonce, setRetryNonce] = useState(0);
   const headerRef = useRef<HTMLButtonElement>(null);
+  // Refs mirror content/contentLoading so the lazy-load effect can guard
+  // against re-entry WITHOUT listing them as dependencies (which would
+  // re-trigger the effect and cancel the in-flight fetch via cleanup).
+  const contentRef = useRef<string | null>(chapter.theoryContent);
+  const loadingRef = useRef(false);
   const colors = SECTION_STYLES[color];
   const { t } = useLocale();
   const router = useRouter();
@@ -386,9 +391,17 @@ function ChapterSection({ chapter, color, preselected, onContentLoaded }: {
   // ── Lazy on-demand load of the theory content ───────────
   // Fires the first time the chapter is expanded and its content isn't
   // already in memory. Cached in local state so re-expanding is instant.
+  //
+  // IMPORTANT: the guard reads contentRef/loadingRef (refs), NOT the state
+  // values, and the dependency array deliberately EXCLUDES content and
+  // contentLoading. If they were dependencies, setting contentLoading=true
+  // would re-run this effect, its cleanup would set cancelled=true and KILL
+  // the in-flight fetch, leaving the spinner spinning forever.
   useEffect(() => {
-    if (!expanded || !chapter.hasTheory || content !== null || contentLoading) return;
+    if (!expanded || !chapter.hasTheory) return;
+    if (contentRef.current !== null || loadingRef.current) return;
     let cancelled = false;
+    loadingRef.current = true;
     setContentLoading(true);
     setContentError(false);
     (async () => {
@@ -401,16 +414,18 @@ function ChapterSection({ chapter, color, preselected, onContentLoaded }: {
         const json = await res.json();
         const text: string | null = json?.data?.theoryContent ?? null;
         if (cancelled) return;
+        contentRef.current = text;
         setContent(text);
         if (text) onContentLoaded?.(chapter.id, text);
       } catch {
         if (!cancelled) setContentError(true);
       } finally {
+        loadingRef.current = false;
         if (!cancelled) setContentLoading(false);
       }
     })();
     return () => { cancelled = true; };
-  }, [expanded, chapter.hasTheory, chapter.id, content, contentLoading, locale, onContentLoaded, retryNonce]);
+  }, [expanded, chapter.hasTheory, chapter.id, locale, onContentLoaded, retryNonce]);
 
   if (chapter.questionCount === 0 && !chapter.hasTheory) return null;
 
