@@ -315,7 +315,13 @@ function SkeletonPage() {
 
 // ─── Chapter Section ──────────────────────────────────────
 
-function ChapterSection({ chapter, color, preselected }: { chapter: TheoryChapter; color: SectionColor; preselected?: boolean }) {
+function ChapterSection({ chapter, color, preselected, onContentLoaded }: {
+  chapter: TheoryChapter;
+  color: SectionColor;
+  preselected?: boolean;
+  /** Called once the chapter's theory content has been loaded (feeds the search index). */
+  onContentLoaded?: (chapterId: string, content: string) => void;
+}) {
   const [expanded, setExpanded] = useState(() => {
     if (preselected) return true;
     try {
@@ -323,6 +329,14 @@ function ChapterSection({ chapter, color, preselected }: { chapter: TheoryChapte
         localStorage.getItem('lastTheoryChapter') === chapter.id;
     } catch { return false; }
   });
+  const { locale } = useLocale();
+  // Lazy-loaded theory content. Starts from whatever the parent already has
+  // (usually null after the lightweight outline load) and is fetched on
+  // demand the first time the chapter is expanded.
+  const [content, setContent] = useState<string | null>(chapter.theoryContent);
+  const [contentLoading, setContentLoading] = useState(false);
+  const [contentError, setContentError] = useState(false);
+  const [retryNonce, setRetryNonce] = useState(0);
   const headerRef = useRef<HTMLButtonElement>(null);
   const colors = SECTION_STYLES[color];
   const { t } = useLocale();
@@ -369,6 +383,35 @@ function ChapterSection({ chapter, color, preselected }: { chapter: TheoryChapte
     }
   }, [expanded, chapter.id]);
 
+  // ── Lazy on-demand load of the theory content ───────────
+  // Fires the first time the chapter is expanded and its content isn't
+  // already in memory. Cached in local state so re-expanding is instant.
+  useEffect(() => {
+    if (!expanded || !chapter.hasTheory || content !== null || contentLoading) return;
+    let cancelled = false;
+    setContentLoading(true);
+    setContentError(false);
+    (async () => {
+      try {
+        const token = localStorage.getItem('token');
+        const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+        if (token) headers['Authorization'] = `Bearer ${token}`;
+        const res = await fetch(`${API_BASE}/api/theory/${chapter.id}/content?locale=${locale}`, { headers });
+        if (!res.ok) throw new Error('Failed to load chapter');
+        const json = await res.json();
+        const text: string | null = json?.data?.theoryContent ?? null;
+        if (cancelled) return;
+        setContent(text);
+        if (text) onContentLoaded?.(chapter.id, text);
+      } catch {
+        if (!cancelled) setContentError(true);
+      } finally {
+        if (!cancelled) setContentLoading(false);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [expanded, chapter.hasTheory, chapter.id, content, contentLoading, locale, onContentLoaded, retryNonce]);
+
   if (chapter.questionCount === 0 && !chapter.hasTheory) return null;
 
   return (
@@ -409,8 +452,51 @@ function ChapterSection({ chapter, color, preselected }: { chapter: TheoryChapte
         )}
       </button>
 
+      {/* Loading spinner while the chapter content is fetched on demand */}
       <AnimatePresence>
-        {expanded && chapter.hasTheory && chapter.theoryContent && (
+        {expanded && chapter.hasTheory && contentLoading && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="border-t border-border px-5 py-8 flex flex-col items-center justify-center gap-2">
+              <Loader2 size={22} className="animate-spin text-blue" />
+              <p className="text-xs text-text-tertiary">{t('theoryLoading')}</p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Error state with retry */}
+      <AnimatePresence>
+        {expanded && chapter.hasTheory && !contentLoading && contentError && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: 'auto', opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="border-t border-border px-5 py-6 flex flex-col items-center justify-center gap-2">
+              <AlertCircle size={20} className="text-red" />
+              <p className="text-xs text-text-secondary">{t('theoryLoadError')}</p>
+              <button
+                onClick={() => { setContent(null); setContentError(false); setRetryNonce(n => n + 1); }}
+                className="flex items-center gap-1.5 text-xs font-medium text-blue hover:text-blue/80 transition-colors px-3 py-1.5 rounded-lg bg-blue/10 hover:bg-blue/20"
+              >
+                <RefreshCw size={12} />
+                {t('retry')}
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      <AnimatePresence>
+        {expanded && chapter.hasTheory && !contentLoading && !contentError && content && (
           <motion.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
@@ -419,7 +505,7 @@ function ChapterSection({ chapter, color, preselected }: { chapter: TheoryChapte
             className="overflow-hidden"
           >
             <div className="border-t border-border px-5 py-5">
-              <TheoryRenderer content={chapter.theoryContent} color={color} />
+              <TheoryRenderer content={content} color={color} />
               <div className="mt-4 flex items-center justify-start gap-2">
                 <button
                   onClick={() => router.push(`/exams?tradeId=${chapter.tradeId}&chapterId=${chapter.id}`)}
@@ -468,7 +554,7 @@ function ChapterSection({ chapter, color, preselected }: { chapter: TheoryChapte
 
 // ─── Category Card ────────────────────────────────────────
 
-function CategoryCard({ category, preselectedChapterId, preselectedTradeCode }: { category: TheoryCategory; preselectedChapterId?: string; preselectedTradeCode?: string | null }) {
+function CategoryCard({ category, preselectedChapterId, preselectedTradeCode, onChapterContentLoaded }: { category: TheoryCategory; preselectedChapterId?: string; preselectedTradeCode?: string | null; onChapterContentLoaded?: (chapterId: string, content: string) => void }) {
   const color = getSectionColor(category.code);
   const colors = SECTION_STYLES[color];
   const chaptersWithTheory = category.chapters.filter(ch => ch.hasTheory).length;
@@ -577,7 +663,7 @@ function CategoryCard({ category, preselectedChapterId, preselectedTradeCode }: 
                 category.chapters
                   .filter(ch => ch.questionCount > 0 || ch.hasTheory)
                   .map((ch) => (
-                    <ChapterSection key={ch.id} chapter={ch} color={color} preselected={ch.id === effectiveChId} />
+                    <ChapterSection key={ch.id} chapter={ch} color={color} preselected={ch.id === effectiveChId} onContentLoaded={onChapterContentLoaded} />
                   ))
               ) : (
                 <div className="py-8 text-center">
@@ -640,8 +726,9 @@ function extractSnippet(normContent: string, rawContent: string, normQuery: stri
 /**
  * Client-side full-text search over every chapter of every category.
  * Ranking: chapter name > category name/code > theory content.
+ * `contentIndex` maps chapterId -> theoryContent (loaded on demand).
  */
-function searchTheory(categories: TheoryCategory[], query: string): SearchResult[] {
+function searchTheory(categories: TheoryCategory[], query: string, contentIndex: Map<string, string>): SearchResult[] {
   const normQuery = normalizeText(query.trim());
   if (normQuery.length < 2) return [];
   const results: SearchResult[] = [];
@@ -656,13 +743,16 @@ function searchTheory(categories: TheoryCategory[], query: string): SearchResult
         score = normChName.startsWith(normQuery) ? 100 : 90; // chapter name match
       } else if (normCatName.includes(normQuery) || normCatCode === normQuery) {
         score = 60; // category match
-      } else if (chapter.theoryContent) {
-        const normContent = normalizeText(chapter.theoryContent);
-        const hit = extractSnippet(normContent, chapter.theoryContent, normQuery);
-        if (hit) score = 30; // content match
-        if (score > 0) {
-          results.push({ chapter, category, score, snippet: hit!.snippet, snippetStart: hit!.start });
-          continue;
+      } else {
+        const theoryContent = contentIndex.get(chapter.id);
+        if (theoryContent) {
+          const normContent = normalizeText(theoryContent);
+          const hit = extractSnippet(normContent, theoryContent, normQuery);
+          if (hit) score = 30; // content match
+          if (score > 0) {
+            results.push({ chapter, category, score, snippet: hit!.snippet, snippetStart: hit!.start });
+            continue;
+          }
         }
       }
       if (score > 0) {
@@ -820,6 +910,59 @@ export default function TheoryPage() {
   const [searchFocused, setSearchFocused] = useState(false);
   const searchInputRef = useRef<HTMLInputElement>(null);
 
+  // ─── On-demand search index ─────────────────────────────
+  // The heavy theory content is NOT loaded with the page anymore. When the
+  // user starts typing a search, we fetch all content once and build an
+  // index (chapterId -> content). Chapters expanded by the user also feed
+  // this index incrementally via onChapterContentLoaded.
+  const searchActive = debouncedQuery.trim().length >= 2;
+
+  const [contentIndex, setContentIndex] = useState<Map<string, string>>(() => new Map());
+  const [searchIndexLoading, setSearchIndexLoading] = useState(false);
+  const searchIndexLoadedRef = useRef(false);
+
+  // Feed the index whenever a chapter's content is lazy-loaded by expansion.
+  const handleChapterContentLoaded = useCallback((chapterId: string, content: string) => {
+    setContentIndex(prev => {
+      if (prev.has(chapterId)) return prev;
+      const next = new Map(prev);
+      next.set(chapterId, content);
+      return next;
+    });
+  }, []);
+
+  // Load the full content index the first time a search query becomes active.
+  useEffect(() => {
+    if (!searchActive || searchIndexLoadedRef.current || searchIndexLoading) return;
+    let cancelled = false;
+    setSearchIndexLoading(true);
+    (async () => {
+      try {
+        const token = localStorage.getItem('token');
+        const headers: Record<string, string> = { 'Content-Type': 'application/json' };
+        if (token) headers['Authorization'] = `Bearer ${token}`;
+        const res = await fetch(`${API_BASE}/api/theory/all-content?locale=${locale}`, { headers });
+        if (!res.ok) throw new Error('Failed to load search index');
+        const json = await res.json();
+        const rows: any[] = json?.data || [];
+        if (cancelled) return;
+        setContentIndex(prev => {
+          const next = new Map(prev);
+          for (const row of rows) {
+            if (row.theoryContent && !next.has(row.id)) next.set(row.id, row.theoryContent);
+          }
+          return next;
+        });
+        searchIndexLoadedRef.current = true;
+      } catch {
+        // Index load failed — name/category search still works.
+      } finally {
+        if (!cancelled) setSearchIndexLoading(false);
+      }
+    })();
+    return () => { cancelled = true; };
+  }, [searchActive, searchIndexLoading, locale]);
+
   // Debounce input ~200ms before running the search
   useEffect(() => {
     const timer = setTimeout(() => setDebouncedQuery(searchQuery), 200);
@@ -839,11 +982,9 @@ export default function TheoryPage() {
     return () => window.removeEventListener('keydown', onKeyDown);
   }, []);
 
-  const searchActive = debouncedQuery.trim().length >= 2;
-
   const searchResults = useMemo(
-    () => (searchActive ? searchTheory(categories, debouncedQuery) : []),
-    [categories, debouncedQuery, searchActive]
+    () => (searchActive ? searchTheory(categories, debouncedQuery, contentIndex) : []),
+    [categories, debouncedQuery, searchActive, contentIndex]
   );
 
   // Jump from a search result to its chapter: clear search, expand the
@@ -876,27 +1017,36 @@ export default function TheoryPage() {
       const headers: Record<string, string> = { 'Content-Type': 'application/json' };
       if (token) headers['Authorization'] = `Bearer ${token}`;
 
-      // First, load all trades
+      // First, load all trades (lightweight metadata)
       const tradesRes = await fetch(`${API_BASE}/api/trades?locale=${locale}`, { headers });
       if (!tradesRes.ok) throw new Error('Failed to load trades');
       const tradesData = await tradesRes.json();
       const trades = Array.isArray(tradesData) ? tradesData : tradesData.data ?? [];
 
-      // Then load theory for each trade and group by category
-      const allCategories: TheoryCategory[] = [];
-      const seenCodes = new Set<string>();
+      // Then load the chapter OUTLINE (metadata only — NO theory content).
+      // The heavy theoryContent is fetched per-chapter on demand when the
+      // user expands a chapter, keeping the initial page load fast.
+      const outlineRes = await fetch(`${API_BASE}/api/theory/outline?locale=${locale}`, { headers });
+      if (!outlineRes.ok) throw new Error('Failed to load theory outline');
+      const outlineData = await outlineRes.json();
+      const outlineChapters: any[] = outlineData.data || [];
+      const byTrade = new Map<string, any[]>();
+      for (const ch of outlineChapters) {
+        if (!byTrade.has(ch.tradeId)) byTrade.set(ch.tradeId, []);
+        byTrade.get(ch.tradeId)!.push(ch);
+      }
 
+      // Group chapters by trade/category
+      const allCategories: TheoryCategory[] = [];
       for (const trade of trades) {
-        const theoryRes = await fetch(`${API_BASE}/api/theory?tradeId=${trade.id}&locale=${locale}`, { headers });
-        if (!theoryRes.ok) continue;
-        const theoryData = await theoryRes.json();
-        const chapters: TheoryChapter[] = (theoryData.data || []).map((ch: any) => ({
+        const rawChapters = byTrade.get(trade.id) || [];
+        const chapters: TheoryChapter[] = rawChapters.map((ch: any) => ({
           id: ch.id,
           number: ch.number,
           name: ch.name,
           questionCount: ch.questionCount || 0,
-          theoryContent: ch.theoryContent || null,
-          hasTheory: !!ch.theoryContent,
+          theoryContent: null, // lazy — loaded on demand via /:chapterId/content
+          hasTheory: !!ch.hasTheory,
           tradeId: trade.id,
         }));
 
@@ -1099,6 +1249,12 @@ export default function TheoryPage() {
                 <p className="text-sm text-text-secondary">
                   {t('theorySearchResultsCount', { count: searchResults.length, query: debouncedQuery.trim() })}
                 </p>
+                {searchIndexLoading && (
+                  <span className="flex items-center gap-1.5 text-xs text-text-tertiary">
+                    <Loader2 size={12} className="animate-spin text-blue" />
+                    {t('theoryIndexing')}
+                  </span>
+                )}
               </div>
               <motion.div
                 initial="hidden"
@@ -1174,7 +1330,7 @@ export default function TheoryPage() {
       {!loading && !searchActive && categories.length > 0 && (
         <div className="space-y-6">
           {categories.map((cat) => (
-            <CategoryCard key={cat.id} category={cat} preselectedChapterId={preselectedChapterId || undefined} preselectedTradeCode={preselectedTradeCode} />
+            <CategoryCard key={cat.id} category={cat} preselectedChapterId={preselectedChapterId || undefined} preselectedTradeCode={preselectedTradeCode} onChapterContentLoaded={handleChapterContentLoaded} />
           ))}
         </div>
       )}

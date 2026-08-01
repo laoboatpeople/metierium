@@ -24,6 +24,9 @@ const fr: Record<string, unknown> = {
   // Theory page
   theoryAvailable: 'Théorie disponible',
   theoryInPreparation: 'Le contenu théorique pour ce chapitre est en préparation.',
+  theoryLoading: 'Chargement de la théorie…',
+  theoryLoadError: 'Impossible de charger ce chapitre.',
+  theoryIndexing: 'Indexation du contenu…',
   theoryBasedOn: 'Basé sur {count} questions disponibles.',
   theoryProgress: 'Théorie disponible dans {withTheory}/{total} chapitres',
   theoryEmptyTitle: 'Aucune théorie disponible',
@@ -879,6 +882,9 @@ const en: Record<string, string> = {
   // Theory page
   theoryAvailable: 'Theory available',
   theoryInPreparation: 'Theoretical content for this chapter is in preparation.',
+  theoryLoading: 'Loading theory…',
+  theoryLoadError: 'Could not load this chapter.',
+  theoryIndexing: 'Indexing content…',
   theoryBasedOn: 'Based on {count} available questions.',
   theoryProgress: 'Theory available in {withTheory}/{total} chapters',
   theoryEmptyTitle: 'No theory available',
