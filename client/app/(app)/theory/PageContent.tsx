@@ -88,16 +88,56 @@ const COLOR_MAP: Record<SectionColor, string> = {
 
 // ─── Simple Markdown Renderer ─────────────────────────────
 
+const inline = (s: string) =>
+  s.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>').replace(/\*(.+?)\*/g, '<em>$1</em>');
+
 function TheoryRenderer({ content, color }: { content: string; color: SectionColor }) {
   const segments = useMemo(() => {
     const lines = content.split('\n');
-    const result: { type: string; content: string; level?: number }[] = [];
+    const result: { type: string; content: string; level?: number; table?: { header: string[]; body: string[][] } }[] = [];
 
     let svgBuffer: string[] | null = null;
     let codeBuffer: string[] | null = null;
+    let tableBuffer: string[] | null = null;
+
+    const flushTable = () => {
+      if (tableBuffer && tableBuffer.length > 0) {
+        const rows = tableBuffer
+          .map(r => r.trim())
+          .filter(r => r.startsWith('|'))
+          .map(r => r.replace(/^\|/, '').replace(/\|\s*$/, '').split('|').map(c => c.trim()));
+        const sepIdx = rows.findIndex(r => r.length > 0 && r.every(c => /^:?-{2,}:?$/.test(c)));
+        if (sepIdx > 0) {
+          result.push({
+            type: 'table',
+            content: '',
+            table: { header: rows[sepIdx - 1], body: rows.slice(sepIdx + 1) },
+          });
+        } else if (rows.length > 0) {
+          // Malformed table (no separator) — fall back to paragraphs
+          rows.forEach(r => result.push({ type: 'paragraph', content: inline(r.join(' | ')) }));
+        }
+      }
+      tableBuffer = null;
+    };
 
     for (const line of lines) {
       const trimmed = line.trim();
+
+      // Table row accumulation (consecutive | ... | lines)
+      const isTableRow = trimmed.startsWith('|');
+      if (tableBuffer !== null) {
+        if (isTableRow) {
+          tableBuffer.push(trimmed);
+          continue;
+        }
+        flushTable();
+        // fall through to process the current non-table line
+      }
+      if (isTableRow) {
+        tableBuffer = [trimmed];
+        continue;
+      }
 
       // Fenced code block accumulation (``` ... ```)
       if (codeBuffer !== null) {
@@ -161,6 +201,7 @@ function TheoryRenderer({ content, color }: { content: string; color: SectionCol
           .replace(/\*(.+?)\*/g, '<em>$1</em>'),
       });
     }
+    flushTable();
     return result;
   }, [content]);
 
@@ -179,6 +220,35 @@ function TheoryRenderer({ content, color }: { content: string; color: SectionCol
             <pre key={i} className="my-3 overflow-x-auto rounded-lg border border-[#2D3A52] bg-[#111827] px-4 py-3 text-xs leading-relaxed text-[#E2E8F0]">
               <code className="font-mono">{seg.content}</code>
             </pre>
+          );
+        }
+        if (seg.type === 'table' && seg.table) {
+          const { header, body } = seg.table;
+          return (
+            <div key={i} className="my-4 overflow-x-auto rounded-xl border border-[#2D3A52] bg-[#111827]">
+              <table className="w-full min-w-max border-collapse text-left text-sm">
+                <thead>
+                  <tr className="border-b border-[#2D3A52] bg-[#1A2035]">
+                    {header.map((h, j) => (
+                      <th key={j} className="px-4 py-2.5 text-xs font-semibold uppercase tracking-wide text-[#F8FAFC]">
+                        <span dangerouslySetInnerHTML={{ __html: inline(h) }} />
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {body.map((row, j) => (
+                    <tr key={j} className="border-b border-[#2D3A52]/50 last:border-b-0 transition-colors hover:bg-[#1A2035]/60">
+                      {row.map((cell, k) => (
+                        <td key={k} className="px-4 py-2 text-[#94A3B8]">
+                          <span dangerouslySetInnerHTML={{ __html: inline(cell) }} />
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
           );
         }
         if (seg.type === 'heading') {
