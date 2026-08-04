@@ -211,7 +211,7 @@ function TheoryRenderer({ content, color }: { content: string; color: SectionCol
         if (seg.type === 'svg') {
           return (
             <div key={i} className="my-4 overflow-x-auto rounded-xl border border-white/[0.06] bg-white/[0.02] p-3">
-              <div className="mx-auto max-w-full [&_svg]:h-auto [&_svg]:w-full" dangerouslySetInnerHTML={{ __html: seg.content }} />
+              <div className="mx-auto max-w-full [&_svg]:max-w-full [&_svg]:h-auto" dangerouslySetInnerHTML={{ __html: seg.content }} />
             </div>
           );
         }

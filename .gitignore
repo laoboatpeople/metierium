@@ -31,3 +31,10 @@ insert_en.js
 check_en.js
 extract_fr.js
 get_remaining*.js
+
+# Backups and audit temp files
+backups/
+tmp_*/
+verify_*.js
+*.png
+*.csv
