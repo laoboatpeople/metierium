@@ -167,6 +167,23 @@ export default function FaqListing({ initialData }: Props) {
               <li>Source: <strong className="text-[#94A3B8]">Code de construction du Québec</strong> — Chapitre V (Électricité), Chapitre III (Plomberie)</li>
               <li>Source: <strong className="text-[#94A3B8]">Emploi-Québec / EDSC</strong> — Programme du Sceau rouge (Red Seal)</li>
             </ul>
+            <div className="mt-4 pt-4 border-t border-[#2D3A52]">
+              <h4 className="text-xs font-semibold text-[#94A3B8] uppercase tracking-wider mb-2">Plateformes d'étude similaires</h4>
+              <ul className="space-y-1.5 text-xs text-[#64748B]">
+                <li>
+                  <a href="https://realtylicence.com" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#60A5FA] transition-colors">
+                    RealtyLicence
+                  </a>{' '}
+                  — préparation aux examens de courtage immobilier (OACIQ, RECO, BCFSA, RECA)
+                </li>
+                <li>
+                  <a href="https://skylicence.cloud" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#60A5FA] transition-colors">
+                    Sky Licence
+                  </a>{' '}
+                  — préparation aux examens de maintenance aéronautique (Transports Canada / TEA)
+                </li>
+              </ul>
+            </div>
           </div>
         )}
 
