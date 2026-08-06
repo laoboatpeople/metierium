@@ -1,35 +1,78 @@
 # Metierium
-> Quebec trade exam preparation platform
+> Plateforme québécoise de préparation aux examens de certification des métiers (CMEQ, CMMTQ, QBQ, CCQ, RBQ)
 
-## Key pages
-- https://metierium.com/ - Home
-- https://metierium.com/theory - Theory content
-- https://metierium.com/exams - Practice exams
-- https://metierium.com/pricing - Pricing plans
-- https://metierium.com/tutor - AI tutor
-- https://metierium.com/faq - FAQ
+## Pages principales
+- https://metierium.com/ - Accueil
+- https://metierium.com/theory - Contenu théorique
+- https://metierium.com/exams - Examens blancs
+- https://metierium.com/pricing - Tarifs
+- https://metierium.com/tutor - Tuteur IA
+- https://metierium.com/faq - Foire aux questions
 - https://metierium.com/blog - Blog
-- https://metierium.com/contact - Contact us
-- https://metierium.com/auth/login - Login
-- https://metierium.com/auth/register - Register
+- https://metierium.com/contact - Contact
 
-## Trades (16)
-- https://metierium.com/trade/cmeq - Electrician (CMEQ)
-- https://metierium.com/trade/cmmtq - Plumber (CMMTQ)
-- https://metierium.com/trade/qbq - Welder (QBQ)
-- https://metierium.com/trade/hvac - HVAC (CMMTQ)
-- https://metierium.com/trade/mvl - Heavy Vehicle Mechanic (CCQ)
-- https://metierium.com/trade/securite-incendie - Fire Safety (RBQ)
-- https://metierium.com/trade/ferblantier - Sheet Metal Worker (CCQ)
-- https://metierium.com/trade/briqueteur - Bricklayer (CCQ)
-- https://metierium.com/trade/operateur-equipement-lourd - Heavy Equipment Operator (CCQ)
-- https://metierium.com/trade/gaz - Gas Technician (RBQ)
-- https://metierium.com/trade/ascenseurs - Elevator Mechanic (RBQ)
-- https://metierium.com/trade/refrigeration - Refrigeration Operator (RBQ)
-- https://metierium.com/trade/constructeur - Builder-Renovator (RBQ)
-- https://metierium.com/trade/entrepreneur-general - General Contractor (RBQ)
-- https://metierium.com/trade/inspecteur - Building Inspector (RBQ)
-- https://metierium.com/trade/coordonnateur-sst - Safety Coordinator (ASP Const.)
+## Métiers (16)
+- https://metierium.com/trade/cmeq - Électricien (CMEQ)
+- https://metierium.com/trade/cmmtq - Plombier (CMMTQ)
+- https://metierium.com/trade/qbq - Soudeur (QBQ)
+- https://metierium.com/trade/hvac - CVC (CMMTQ)
+- https://metierium.com/trade/mvl - Mécanicien véhicules lourds (CCQ)
+- https://metierium.com/trade/securite-incendie - Sécurité incendie (RBQ)
+- https://metierium.com/trade/ferblantier - Ferblantier (CCQ)
+- https://metierium.com/trade/briqueteur - Briqueteur (CCQ)
+- https://metierium.com/trade/operateur-equipement-lourd - Opérateur équipement lourd (CCQ)
+- https://metierium.com/trade/gaz - Technicien gaz (RBQ)
+- https://metierium.com/trade/ascenseurs - Mécanicien ascenseurs (RBQ)
+- https://metierium.com/trade/refrigeration - Opérateur réfrigération (RBQ)
+- https://metierium.com/trade/constructeur - Constructeur-rénovateur (RBQ)
+- https://metierium.com/trade/entrepreneur-general - Entrepreneur général (RBQ)
+- https://metierium.com/trade/inspecteur - Inspecteur bâtiment (RBQ)
+- https://metierium.com/trade/coordonnateur-sst - Coordonnateur SST (ASP Const.)
 
-## Blog
-- https://metierium.com/blog - All blog posts
+## Articles de blog
+- Mise à la terre et liaison équipotentielle : les règles les plus testées à l'examen CMEQ: https://metierium.com/blog/mise-a-la-terre-liaison-equipotentielle-examen-cmeq
+- Les 6 défauts de soudure qui font échouer l'examen QBQ (et comment les éviter): https://metierium.com/blog/6-defauts-soudure-echec-examen-qbq
+- Nouveau règlement sur la plomberie au Québec : ce qui change pour l'examen CMMTQ en 2026: https://metierium.com/blog/code-plomberie-quebec-modifications-2026-examen-cmmtq
+- Le Sceau rouge au Québec : guide complet pour obtenir la certification interprovinciale: https://metierium.com/blog/sceau-rouge-quebec-certification-interprovinciale
+- 10 conseils pour réussir l'examen CMEQ du premier coup: https://metierium.com/blog/10-conseils-reussir-examen-cmeq-premier-coup
+- Nouvelles modifications du Code de construction du Québec 2026: https://metierium.com/blog/nouvelles-modifications-code-construction-quebec-2026
+- Guide complet : Devenir plombier certifié au Québec en 2026: https://metierium.com/blog/guide-complet-devenir-plombier-certifie-quebec-2026
+- Examen QBQ soudeur : tout ce que vous devez savoir: https://metierium.com/blog/examen-qbq-soudeur-tout-savoir
+- CMEQ vs CCQ : quelle est la différence ?: https://metierium.com/blog/cmeq-vs-ccq-difference
+- Combien gagne un électricien au Québec en 2026 ?: https://metierium.com/blog/combien-gagne-electricien-quebec-2026
+- Les erreurs les plus fréquentes à l'examen de plomberie CMMTQ: https://metierium.com/blog/erreurs-frequentes-examen-plomberie-cmmtq
+- Comment choisir entre le soudage SMAW et GMAW ?: https://metierium.com/blog/choisir-soudage-smaw-gmaw-differences
+- Préparation examen de métier : 5 outils indispensables: https://metierium.com/blog/preparation-examen-metier-5-outils-indispensables
+- Tout savoir sur les DDFT et DFARC au Québec: https://metierium.com/blog/tout-savoir-ddft-dfarc-quebec
+
+## FAQ (questions fréquentes)
+- Qu'est-ce que Metierium ?: https://metierium.com/faq/metierium-cest-quoi
+- Comment fonctionne Metierium ?: https://metierium.com/faq/metierium-comment-ca-marche
+- Combien coûte Metierium ? Quels sont les abonnements disponibles ?: https://metierium.com/faq/metierium-prix-abonnement
+- Quelle est la différence entre le plan gratuit et les plans payants ?: https://metierium.com/faq/metierium-difference-gratuit-payant
+- Combien de questions d'examen sont disponibles sur Metierium ?: https://metierium.com/faq/metierium-combien-questions
+- Comment fonctionne le Tuteur IA sur Metierium ?: https://metierium.com/faq/metierium-tuteur-ia
+- Comment se déroule une simulation d'examen sur Metierium ?: https://metierium.com/faq/metierium-quiz-examen
+- Le contenu est-il accessible sur mobile et tablette ?: https://metierium.com/faq/metierium-acces-contenu
+- Comment commencer à utiliser Metierium ?: https://metierium.com/faq/metierium-comment-commencer
+- Quels sont les 17 métiers couverts par Metierium ?: https://metierium.com/faq/metierium-types-metiers
+- Comment annuler mon abonnement ? Y a-t-il un remboursement ?: https://metierium.com/faq/metierium-annulation-remboursement
+- Le contenu de Metierium est-il disponible en anglais ?: https://metierium.com/faq/metierium-langue-francais-anglais
+- Combien de questions à l'examen CMEQ ?: https://metierium.com/faq/cmeq-combien-questions-examen
+- Comment appliquer la Loi d'Ohm dans les calculs d'électricité ?: https://metierium.com/faq/cmeq-loi-ohm-formule
+- Quelle est la chute de tension maximale permise au Code ?: https://metierium.com/faq/cmeq-chute-tension-calcul
+- Quelle est la différence entre les câbles NM-B, AC90 et TECK90 ?: https://metierium.com/faq/cmeq-cable-nm-b-ac90-teck90
+- Quel est l'espacement maximal entre les prises électriques dans une maison ?: https://metierium.com/faq/cmeq-espacement-prises-electriques
+- Quelle est la différence entre un DDFT et un DFARC ?: https://metierium.com/faq/cmeq-ddft-disjoncteur-arc
+- Quand appliquer le facteur de charge continue de 125 % ?: https://metierium.com/faq/cmeq-charge-continue-125-pourcent
+- Comment dimensionner un moteur et son sectionneur ?: https://metierium.com/faq/cmeq-calcul-moteur-vfd-sectionneur
+- Quelles sont les règles électriques pour les panneaux solaires au Québec ?: https://metierium.com/faq/cmeq-panneaux-solaires-net-metering
+- Comment calculer la charge électrique d'une maison unifamiliale ?: https://metierium.com/faq/cmeq-calcul-charge-residentiel
+- Quels sont les prérequis et le processus pour obtenir le permis RBQ électricien : https://metierium.com/faq/cmeq-permis-rbq-electricien
+- Quelle est la différence entre la CMEQ et la CCQ ?: https://metierium.com/faq/cmeq-difference-cmeq-ccq
+- Combien de temps faut-il pour devenir électricien et quel est le salaire ?: https://metierium.com/faq/cmeq-temps-devenir-electricien-salaire
+- Quel calibre de fil AWG choisir selon le courant ?: https://metierium.com/faq/cmeq-awg-tableau-calibres
+- Comment brancher une cuisinière électrique ?: https://metierium.com/faq/cmeq-cuisiniere-electrique-branchement
+- Quelles sont les exigences électriques pour une borne de recharge de véhicule él: https://metierium.com/faq/cmeq-prise-vehicule-electrique
+- Quelle est la différence entre un circuit série et un circuit parallèle ?: https://metierium.com/faq/cmeq-circuit-parallele-serie
+- Comment choisir le bon calibre de disjoncteur ?: https://metierium.com/faq/cmeq-disjoncteur-choix-calibre
