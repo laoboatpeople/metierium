@@ -76,14 +76,7 @@ export default function LandingPage() {
                 { "@type": "Course", "name": "Préparation Examen Inspecteur Bâtiment RBQ", "description": "Préparation à l'examen de certification RBQ en inspection de bâtiments — code, structures, enveloppe et sécurité", "provider": { "@type": "Organization", "name": "Metierium" } },
                 { "@type": "Course", "name": "Préparation Examen Coordonnateur SST ASP Construction", "description": "Préparation à l'examen de certification ASP Construction en coordination SST — prévention, IRSST, gestion de chantier", "provider": { "@type": "Organization", "name": "Metierium" } },
                 { "@type": "Course", "name": "Préparation Examen Gestion des Travaux RBQ", "description": "Préparation à l'examen RBQ en gestion des travaux — estimation de coûts, planification, main-d'œuvre, cadre légal, SST, contrats, finances et clôture de projet", "provider": { "@type": "Organization", "name": "Metierium" } }
-              ],
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "4.8",
-                "bestRating": "5",
-                "ratingCount": "342",
-                "reviewCount": "127"
-              }
+              ]
             },
             {
               "@type": "HowTo",

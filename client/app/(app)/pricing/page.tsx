@@ -78,12 +78,6 @@ export default function Page() {
         availability: 'https://schema.org/InStock',
       },
     ],
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '4.8',
-      bestRating: '5',
-      ratingCount: '342',
-    },
   };
 
   return (

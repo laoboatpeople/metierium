@@ -26,10 +26,13 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const trade = tradeNames[slug];
 
   return {
-    title: trade ? `${trade.name} Exam Preparation | Metierium` : `Trade Exam Prep | Metierium`,
+    // FR-first metadata: the site targets Quebec francophone searchers
+    title: trade
+      ? `Préparation examen ${trade.nameFr} | Metierium`
+      : `Préparation examen de métier au Québec | Metierium`,
     description: trade
-      ? `Prepare for your ${trade.name} certification exam in Quebec with complete theory, practice tests, and AI tutor.`
-      : `Prepare for your Quebec trade certification exam with Metierium.`,
+      ? `Préparez votre examen de certification ${trade.nameFr} au Québec avec théorie complète, examens blancs et tuteur IA. Questions réelles du Code, simulations et suivi de progression.`
+      : `Préparez votre examen de certification de métier au Québec avec Metierium : théorie complète, examens blancs et tuteur IA.`,
     alternates: {
       canonical: `https://metierium.com/trade/${slug}`,
       languages: {
@@ -38,12 +41,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       },
     },
     openGraph: {
-      title: trade ? `${trade.name} Exam Preparation | Metierium` : `Trade Exam Prep | Metierium`,
+      title: trade
+        ? `Préparation examen ${trade.nameFr} | Metierium`
+        : `Préparation examen de métier au Québec | Metierium`,
       description: trade
-        ? `Prepare for your ${trade.name} certification exam in Quebec.`
-        : `Prepare for your Quebec trade certification exam.`,
-      locale: 'en_CA',
-      alternateLocale: ['fr_CA'],
+        ? `Préparez votre examen ${trade.nameFr} au Québec avec théorie complète, examens blancs et tuteur IA.`
+        : `Préparez votre examen de métier au Québec avec Metierium.`,
+      locale: 'fr_CA',
+      alternateLocale: ['en_CA'],
       siteName: 'Metierium',
     },
   };

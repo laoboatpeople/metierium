@@ -1,4 +1,6 @@
 import { MetadataRoute } from 'next';
+import blogData from '@/public/blog-data.json';
+import faqData from '@/public/faq-data.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://metierium.com';
@@ -29,53 +31,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     changeFrequency: 'weekly' as const,
   }));
 
-  // Blog posts
-  const blogSlugs = [
-    'guide-examen-electricien-cmeq',
-    'guide-examen-plombier-cmmtq',
-    'guide-examen-soudeur-qbq',
-    'guide-examen-hvac',
-    'guide-examen-mvl',
-    'guide-examen-securite-incendie',
-    'guide-examen-ferblantier',
-    'guide-examen-briqueteur',
-    'guide-examen-opequip',
-    'guide-examen-gaz',
-    'guide-examen-ascenseurs',
-    'guide-examen-refrigeration',
-    'guide-examen-constructeur',
-    'guide-examen-entrepreneur-general',
-    'guide-examen-inspecteur',
-    'guide-examen-coordonnateur-sst',
-    'calendrier-examens-metier-quebec-2026',
-  ];
-
-  const blogPages = blogSlugs.map((slug) => ({
-    url: `${baseUrl}/blog/${slug}`,
+  // Blog posts — from the REAL data file (not hardcoded slugs)
+  const blogPosts = blogData as Array<{ slug: string; date?: string }>;
+  const blogPages = blogPosts.map((post) => ({
+    url: `${baseUrl}/blog/${post.slug}`,
     priority: 0.6,
     changeFrequency: 'monthly' as const,
+    ...(post.date ? { lastModified: post.date } : {}),
   }));
 
-  // FAQ pages
-  const faqSlugs = [
-    'cmeq-examen-questions',
-    'cmeq-combien-questions',
-    'cmeq-preparation',
-    'cmeq-prerequis',
-    'cmmtq-examen-questions',
-    'qbq-soudeur-certification',
-    'examen-metier-cout',
-    'ou-passer-examen-metier-quebec',
-    'constr-examen-questions',
-    'entgen-examen-questions',
-    'inspect-examen-questions',
-  ];
-
-  const faqPages = faqSlugs.map((slug) => ({
-    url: `${baseUrl}/faq/${slug}`,
-    priority: 0.5,
-    changeFrequency: 'monthly' as const,
-  }));
+  // FAQ pages — from the REAL data file (FR only; EN FAQs have separate slugs)
+  const faqPosts = faqData as Array<{ slug: string; locale?: string }>;
+  const faqPages = faqPosts
+    .filter((f) => !f.locale || f.locale === 'fr')
+    .map((f) => ({
+      url: `${baseUrl}/faq/${f.slug}`,
+      priority: 0.5,
+      changeFrequency: 'monthly' as const,
+    }));
 
   return [
     ...staticPages,
