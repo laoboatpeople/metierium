@@ -164,6 +164,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
   return (
     <html lang={langAttr} className={inter.variable}>
+      <head>
+        {/* hreflang — Next.js 14.2 alternates.languages is intermittent; inject manually */}
+        <link rel="alternate" hrefLang="fr-CA" href="https://metierium.com/" />
+        <link rel="alternate" hrefLang="en-CA" href="https://metierium.com/en" />
+        <link rel="alternate" hrefLang="x-default" href="https://metierium.com/" />
+      </head>
       <Script id="schema-organization" type="application/ld+json" strategy="beforeInteractive">
         {JSON.stringify(organizationSchema)}
       </Script>
