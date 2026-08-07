@@ -175,7 +175,7 @@ function TheoryRenderer({ content, color }: { content: string; color: SectionCol
       if (!trimmed) continue;
 
       // Headings
-      const hMatch = trimmed.match(/^(#{1,4})\s+(.+)$/);
+      const hMatch = trimmed.match(/^(#{1,6})\s+(.+)$/);
       if (hMatch) {
         result.push({ type: 'heading', level: hMatch[1].length, content: hMatch[2] });
         continue;
