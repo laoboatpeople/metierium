@@ -82,3 +82,17 @@ a { color: inherit; text-decoration: none; }
   border-color: var(--accent-blue);
   box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
 }
+
+/* Theory diagrams: scale SVGs to the text column width instead of
+   overflowing at their native 800px size. Keeps aspect ratio via height:auto.
+   SVGs that lack a width attribute default to 100% of the container (huge);
+   cap them at 800px intrinsic width, then scale down responsively. */
+.prose svg {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+.prose svg:not([width]) {
+  width: 800px;
+  max-width: 100%;
+}
