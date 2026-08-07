@@ -210,9 +210,8 @@ function TheoryRenderer({ content, color }: { content: string; color: SectionCol
       {segments.map((seg, i) => {
         if (seg.type === 'svg') {
           return (
-            <div key={i} className="my-4 overflow-x-auto rounded-xl border border-white/[0.06] bg-white/[0.02] p-3">
-              <div className="mx-auto max-w-full [&_svg]:max-w-full [&_svg]:h-auto" dangerouslySetInnerHTML={{ __html: seg.content }} />
-            </div>
+            <div key={i} className="my-4 flex justify-center overflow-x-auto rounded-card border border-white/[0.06] bg-white/[0.02] p-3"
+              dangerouslySetInnerHTML={{ __html: seg.content }} />
           );
         }
         if (seg.type === 'code') {
