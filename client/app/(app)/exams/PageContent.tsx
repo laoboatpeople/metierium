@@ -1413,8 +1413,8 @@ function ExamsPage() {
                             chapterLabel ? (locale === 'en' ? `Chapter: ${chapterLabel}` : `Chapitre : ${chapterLabel}`) : '',
                           ].filter(Boolean).join('\n');
                           const prompt = locale === 'en'
-                            ? `Can you explain this exam question in detail?\n\n${contextLines ? `${contextLines}\n\n` : ''}Question: ${q.question}\n${optionLines ? `\nOptions:\n${optionLines}\n` : ''}\nMy answer: ${ans?.selected || '—'}\nCorrect answer: ${correctText}\n\nExplain why the correct answer is right and why the other options are wrong.`
-                            : `Peux-tu m'expliquer cette question d'examen en détail ?\n\n${contextLines ? `${contextLines}\n\n` : ''}Question : ${q.question}\n${optionLines ? `\nOptions :\n${optionLines}\n` : ''}\nMa réponse : ${ans?.selected || '—'}\nBonne réponse : ${correctText}\n\nExplique pourquoi la bonne réponse est correcte et pourquoi les autres options sont fausses.`;
+                            ? `This question comes from Metierium's own exam question bank, so it IS covered by the platform.\n\nCan you explain this exam question in detail?\n\n${contextLines ? `${contextLines}\n\n` : ''}Question: ${q.question}\n${optionLines ? `\nOptions:\n${optionLines}\n` : ''}\nMy answer: ${ans?.selected || '—'}\nCorrect answer: ${correctText}\n\nExplain why the correct answer is right and why the other options are wrong.`
+                            : `Cette question provient de la banque de questions d'examen de Metierium, donc elle EST couverte par la plateforme.\n\nPeux-tu m'expliquer cette question d'examen en détail ?\n\n${contextLines ? `${contextLines}\n\n` : ''}Question : ${q.question}\n${optionLines ? `\nOptions :\n${optionLines}\n` : ''}\nMa réponse : ${ans?.selected || '—'}\nBonne réponse : ${correctText}\n\nExplique pourquoi la bonne réponse est correcte et pourquoi les autres options sont fausses.`;
                           localStorage.setItem('tutorContext', JSON.stringify({
                             question: prompt,
                             tradeId: selectedTrade,
