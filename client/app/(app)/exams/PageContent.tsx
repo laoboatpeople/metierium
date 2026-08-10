@@ -926,6 +926,7 @@ function ExamsPage() {
     const selectedAnswer = answers[q.id];
     const answeredCount = Object.keys(answers).length;
     const allAnswered = answeredCount === questions.length;
+    const progress = ((currentIndex + 1) / questions.length) * 100;
 
     // Visual timer bar
     const timeRemaining = Math.max(0, EXAM_DURATION - examTime);
@@ -967,12 +968,6 @@ function ExamsPage() {
                 </span>
               )}
               <span className="text-xs text-[#94A3B8]">{t('examsAnsweredCountShort', { answered: answeredCount, total: questions.length })}</span>
-              <div className="w-20 h-1.5 bg-[#111827] rounded-full overflow-hidden">
-                <div
-                  className="h-full bg-[#06B6D4] rounded-full transition-all"
-                  style={{ width: `${(answeredCount / questions.length) * 100}%` }}
-                />
-              </div>
             </div>
           </div>
 
@@ -1001,6 +996,11 @@ function ExamsPage() {
             {currentChapterName}
           </div>
         )}
+
+        {/* Progress bar */}
+        <div className="w-full h-1 bg-[#111827] rounded-full overflow-hidden">
+          <div className="h-full bg-[#3B82F6] transition-all" style={{ width: `${progress}%` }} />
+        </div>
 
         {/* Question card */}
         <AnimatePresence mode="wait">
