@@ -970,6 +970,18 @@ function ExamsPage() {
                 </span>
               )}
               <span className="text-xs text-[#94A3B8]">{t('examsAnsweredCountShort', { answered: answeredCount, total: questions.length })}</span>
+              <button
+                onClick={() => {
+                  if (window.confirm(t('examsQuitConfirm'))) {
+                    resetExam();
+                  }
+                }}
+                title={t('examsQuitExam')}
+                className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-medium text-[#EF4444] hover:bg-[#EF4444]/10 border border-[#EF4444]/30 hover:border-[#EF4444]/50 transition-all"
+              >
+                <XCircle size={14} />
+                {t('examsQuitExam')}
+              </button>
             </div>
           </div>
 
