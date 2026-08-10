@@ -1399,10 +1399,17 @@ function ExamsPage() {
                     )}
                     <button
                       onClick={() => {
-                        // Save context to localStorage for the tutor page to read
+                        // Save FULL context to localStorage for the tutor page to read:
+                        // question + options + correct answer + user answer, never the question alone.
                         try {
+                          const optionLines = Array.isArray(q.options)
+                            ? q.options.map((opt: string, i: number) => `${String.fromCharCode(65 + i)}. ${opt}`).join('\n')
+                            : '';
+                          const prompt = locale === 'en'
+                            ? `Can you explain this exam question in detail?\n\nQuestion: ${q.question}\n${optionLines ? `\nOptions:\n${optionLines}\n` : ''}\nMy answer: ${ans?.selected || '—'}\nCorrect answer: ${correctText}\n\nExplain why the correct answer is right and why the other options are wrong.`
+                            : `Peux-tu m'expliquer cette question d'examen en détail ?\n\nQuestion : ${q.question}\n${optionLines ? `\nOptions :\n${optionLines}\n` : ''}\nMa réponse : ${ans?.selected || '—'}\nBonne réponse : ${correctText}\n\nExplique pourquoi la bonne réponse est correcte et pourquoi les autres options sont fausses.`;
                           localStorage.setItem('tutorContext', JSON.stringify({
-                            question: q.question,
+                            question: prompt,
                             tradeId: selectedTrade,
                             chapterId: q.chapterId,
                           }));
