@@ -1405,9 +1405,16 @@ function ExamsPage() {
                           const optionLines = Array.isArray(q.options)
                             ? q.options.map((opt: string, i: number) => `${String.fromCharCode(65 + i)}. ${opt}`).join('\n')
                             : '';
+                          const tradeName = selectedTrade ? getTradeName(selectedTrade, trades, locale) : '';
+                          const chapter = q.chapterId ? chapters.find((c) => c.id === q.chapterId) : undefined;
+                          const chapterLabel = chapter ? `Ch. ${chapter.number} — ${chapter.name}` : '';
+                          const contextLines = [
+                            tradeName ? (locale === 'en' ? `Trade: ${tradeName}` : `Métier : ${tradeName}`) : '',
+                            chapterLabel ? (locale === 'en' ? `Chapter: ${chapterLabel}` : `Chapitre : ${chapterLabel}`) : '',
+                          ].filter(Boolean).join('\n');
                           const prompt = locale === 'en'
-                            ? `Can you explain this exam question in detail?\n\nQuestion: ${q.question}\n${optionLines ? `\nOptions:\n${optionLines}\n` : ''}\nMy answer: ${ans?.selected || '—'}\nCorrect answer: ${correctText}\n\nExplain why the correct answer is right and why the other options are wrong.`
-                            : `Peux-tu m'expliquer cette question d'examen en détail ?\n\nQuestion : ${q.question}\n${optionLines ? `\nOptions :\n${optionLines}\n` : ''}\nMa réponse : ${ans?.selected || '—'}\nBonne réponse : ${correctText}\n\nExplique pourquoi la bonne réponse est correcte et pourquoi les autres options sont fausses.`;
+                            ? `Can you explain this exam question in detail?\n\n${contextLines ? `${contextLines}\n\n` : ''}Question: ${q.question}\n${optionLines ? `\nOptions:\n${optionLines}\n` : ''}\nMy answer: ${ans?.selected || '—'}\nCorrect answer: ${correctText}\n\nExplain why the correct answer is right and why the other options are wrong.`
+                            : `Peux-tu m'expliquer cette question d'examen en détail ?\n\n${contextLines ? `${contextLines}\n\n` : ''}Question : ${q.question}\n${optionLines ? `\nOptions :\n${optionLines}\n` : ''}\nMa réponse : ${ans?.selected || '—'}\nBonne réponse : ${correctText}\n\nExplique pourquoi la bonne réponse est correcte et pourquoi les autres options sont fausses.`;
                           localStorage.setItem('tutorContext', JSON.stringify({
                             question: prompt,
                             tradeId: selectedTrade,
