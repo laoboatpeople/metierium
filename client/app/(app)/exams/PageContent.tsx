@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useRef, useMemo, Suspense } from 'react';
+import { useEffect, useState, useRef, useMemo, useCallback, Suspense } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useRouter } from 'next/navigation';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -196,6 +196,17 @@ function ExamsPage() {
     if (spec) {
       setQuestionCount(spec.questions);
     }
+  }, [selectedTrade, trades]);
+
+  // Selecting "Exam simulation" resets to a real-exam setup: no chapter filter
+  // (empty = all chapters), difficulty all, question count = real exam spec.
+  const selectSimulationMode = useCallback(() => {
+    setSelectedChapters(new Set());
+    setDifficulty('');
+    const tr = trades.find((t) => t.id === selectedTrade);
+    const spec = tr ? TRADE_EXAM_SPECS[tr.code] : undefined;
+    if (spec) setQuestionCount(spec.questions);
+    setReviewMode(false);
   }, [selectedTrade, trades]);
 
   useEffect(() => {
@@ -809,7 +820,7 @@ function ExamsPage() {
 
               {/* Exam simulation (timed) — paid feature */}
               <button
-                onClick={() => userPlan === 'FREE' ? router.push('/pricing') : setReviewMode(false)}
+                onClick={() => userPlan === 'FREE' ? router.push('/pricing') : selectSimulationMode()}
                 className={`relative p-4 rounded-xl border-2 text-left transition-all duration-200 ${
                   userPlan === 'FREE'
                     ? 'border-[#2D3A52] bg-[#111827]/50 opacity-70 cursor-pointer hover:border-[#F59E0B]/40'
