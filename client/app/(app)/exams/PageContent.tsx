@@ -396,6 +396,7 @@ function ExamsPage() {
       setPhase('exam');
       setCurrentIndex(0);
       setAnswers({});
+      setSkipped(new Set());
       setExamResult(null);
       setExamTime(0);
       setSaved(false);
@@ -558,6 +559,7 @@ function ExamsPage() {
     setQuestions([]);
     setCurrentIndex(0);
     setAnswers({});
+    setSkipped(new Set());
     setExamResult(null);
     setExamTime(0);
     setTimerActive(false);
