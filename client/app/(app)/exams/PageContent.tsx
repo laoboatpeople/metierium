@@ -1223,7 +1223,9 @@ function ExamsPage() {
     return (
       <div className="max-w-3xl mx-auto space-y-6">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-[#F8FAFC]">{t('examsResultTitle')}</h1>
+          <h1 className="text-2xl font-bold text-[#F8FAFC]">
+            {selectedTrade ? `${getTradeName(selectedTrade, trades, locale)} — ` : ''}{t('examsResultTitle')}
+          </h1>
           <p className="text-sm text-[#94A3B8] mt-1">
             {t('examsTime', { time: formatTime(examResult.timeSpent) })}
             {reviewMode && (
