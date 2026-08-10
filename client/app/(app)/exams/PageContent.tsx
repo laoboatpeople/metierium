@@ -662,12 +662,20 @@ function ExamsPage() {
               </div>
             </div>
 
+            {!reviewMode && (
+              <div className="flex items-center gap-2 bg-[#F59E0B]/8 border border-[#F59E0B]/25 rounded-lg px-3 py-2.5">
+                <Lock size={14} className="text-[#F59E0B] shrink-0" />
+                <p className="text-xs text-[#F59E0B] font-medium">{t('examsConfigLocked')}</p>
+              </div>
+            )}
+
             <div className="grid sm:grid-cols-2 gap-4">
               {/* Question count */}
-              <div ref={questionCountRef} className="bg-[#111827]/60 rounded-lg p-3.5 border border-[#2D3A52]/50">
+              <div ref={questionCountRef} className={`bg-[#111827]/60 rounded-lg p-3.5 border border-[#2D3A52]/50 ${!reviewMode ? 'opacity-60' : ''}`}>
                 <label className="block text-xs font-medium text-[#94A3B8] mb-2.5 flex items-center gap-1.5">
                   <BarChart3 size={14} className="text-[#3B82F6]" />
                   {t('examsQuestionCount')}
+                  {!reviewMode && <Lock size={11} className="text-[#64748B]" />}
                 </label>
                 <div className="flex gap-1.5 flex-wrap">
                   {(() => {
@@ -679,17 +687,19 @@ function ExamsPage() {
                       : base;
                     return options.map((n) => {
                       const isLockedCount = userPlan === 'FREE' && n > 50;
+                      const isDisabled = !reviewMode; // simulation = locked to real exam spec
                       return (
                         <button
                           key={n}
                           onClick={() => isLockedCount ? router.push('/pricing') : setQuestionCount(n)}
+                          disabled={isDisabled}
                           className={`flex-1 min-w-[40px] py-2 rounded-lg border text-sm font-medium transition-all flex items-center justify-center gap-1 ${
                             isLockedCount
                               ? 'border-[#2D3A52]/40 bg-transparent text-[#64748B]/50 cursor-pointer hover:border-[#3B82F6]/20'
                               : questionCount === n
                                 ? 'border-[#3B82F6] bg-[#3B82F6]/10 text-[#3B82F6]'
                                 : 'border-[#2D3A52] bg-transparent text-[#94A3B8] hover:border-[#3B82F6]/30 hover:text-[#F8FAFC]'
-                          }`}
+                          } ${isDisabled ? 'cursor-not-allowed opacity-70' : ''}`}
                         >
                           {n}
                           {isLockedCount && <Lock size={10} />}
@@ -701,10 +711,11 @@ function ExamsPage() {
               </div>
 
               {/* Difficulty */}
-              <div className="bg-[#111827]/60 rounded-lg p-3.5 border border-[#2D3A52]/50">
+              <div className={`bg-[#111827]/60 rounded-lg p-3.5 border border-[#2D3A52]/50 ${!reviewMode ? 'opacity-60' : ''}`}>
                 <label className="block text-xs font-medium text-[#94A3B8] mb-2.5 flex items-center gap-1.5">
                   <Target size={14} className="text-[#F59E0B]" />
                   {t('examsDifficulty')}
+                  {!reviewMode && <Lock size={11} className="text-[#64748B]" />}
                 </label>
                 <div className="flex gap-1.5">
                   {[
@@ -716,11 +727,12 @@ function ExamsPage() {
                     <button
                       key={d.value}
                       onClick={() => setDifficulty(d.value)}
+                      disabled={!reviewMode}
                       className={`flex-1 py-2 rounded-lg border text-sm font-medium transition-all ${
                         difficulty === d.value
                           ? 'border-[#F59E0B] bg-[#F59E0B]/10 text-[#F59E0B]'
                           : 'border-[#2D3A52] bg-transparent text-[#94A3B8] hover:border-[#F59E0B]/30 hover:text-[#F8FAFC]'
-                      }`}
+                      } ${!reviewMode ? 'cursor-not-allowed opacity-70' : ''}`}
                     >
                       {d.label}
                     </button>
@@ -731,11 +743,12 @@ function ExamsPage() {
 
             {/* Chapter filter */}
             {selectedTrade && (
-              <div className="bg-[#111827]/60 rounded-lg p-3.5 border border-[#2D3A52]/50">
+              <div className={`bg-[#111827]/60 rounded-lg p-3.5 border border-[#2D3A52]/50 ${!reviewMode ? 'opacity-60' : ''}`}>
                 <div className="flex items-center justify-between mb-2.5">
                   <label className="text-xs font-medium text-[#94A3B8] flex items-center gap-1.5">
                     <BookOpen size={14} className="text-[#06B6D4]" />
                     {t('examsChaptersToStudy')}
+                    {!reviewMode && <Lock size={11} className="text-[#64748B]" />}
                   </label>
                   <span className="text-[10px] text-[#64748B]">{t('examsChaptersOptional')}</span>
                 </div>
@@ -749,27 +762,31 @@ function ExamsPage() {
                     {chapters.map((ch) => {
                       const isChSelected = selectedChapters.has(ch.id);
                       const isLocked = userPlan === 'FREE' && ch.number > 1;
+                      const isSimLocked = !reviewMode; // simulation = all chapters, no filtering
                       return (
                         <label
                           key={ch.id}
-                          onClick={() => isLocked ? router.push('/pricing') : toggleChapter(ch.id)}
-                          className={`flex items-center gap-2.5 px-3 py-2 rounded-lg border cursor-pointer text-sm transition-all ${
-                            isLocked
-                              ? 'border-[#2D3A52]/50 bg-transparent text-[#64748B]/50 cursor-pointer hover:border-[#06B6D4]/20'
-                              : isChSelected
-                                ? 'border-[#06B6D4] bg-[#06B6D4]/8 text-[#06B6D4]'
-                                : 'border-[#2D3A52] bg-transparent text-[#94A3B8] hover:border-[#06B6D4]/30'
+                          onClick={() => isSimLocked ? undefined : (isLocked ? router.push('/pricing') : toggleChapter(ch.id))}
+                          className={`flex items-center gap-2.5 px-3 py-2 rounded-lg border text-sm transition-all ${
+                            isSimLocked
+                              ? 'border-[#2D3A52]/40 bg-transparent text-[#64748B]/50 cursor-not-allowed'
+                              : isLocked
+                                ? 'border-[#2D3A52]/50 bg-transparent text-[#64748B]/50 cursor-pointer hover:border-[#06B6D4]/20'
+                                : isChSelected
+                                  ? 'border-[#06B6D4] bg-[#06B6D4]/8 text-[#06B6D4] cursor-pointer'
+                                  : 'border-[#2D3A52] bg-transparent text-[#94A3B8] cursor-pointer hover:border-[#06B6D4]/30'
                           }`}
                         >
                           <div className={`w-4 h-4 rounded flex items-center justify-center flex-shrink-0 transition-all ${
-                            isLocked ? 'border border-[#2D3A52]/30'
-                              : isChSelected
-                                ? 'bg-[#06B6D4]'
-                                : 'border border-[#2D3A52]'
+                            isSimLocked ? 'border border-[#2D3A52]/30'
+                              : isLocked ? 'border border-[#2D3A52]/30'
+                                : isChSelected
+                                  ? 'bg-[#06B6D4]'
+                                  : 'border border-[#2D3A52]'
                           }`}>
                             {isChSelected && <CheckCircle size={10} className="text-white" />}
                           </div>
-                          <span className={`truncate ${isLocked ? 'text-[#64748B]/50' : ''}`}>Ch. {ch.number} — {ch.name}</span>
+                          <span className={`truncate ${isSimLocked || isLocked ? 'text-[#64748B]/50' : ''}`}>Ch. {ch.number} — {ch.name}</span>
                           {isLocked && <Lock size={12} className="shrink-0 text-[#64748B]/40 ml-auto" />}
                         </label>
                       );
