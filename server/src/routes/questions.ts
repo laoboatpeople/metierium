@@ -32,6 +32,12 @@ router.get('/', authenticate, async (req: Request, res: Response): Promise<void>
     const user = (req as any).user;
     const isFree = !user || user.plan === 'FREE';
 
+    // Simulations (timed exam mode) are a paid feature — FREE users get 403
+    if (isFree && req.query.mode === 'simulation') {
+      res.status(403).json({ message: 'Upgrade to access exam simulations' });
+      return;
+    }
+
     const where: Record<string, unknown> = {
       tradeId: tradeId as string,
     };

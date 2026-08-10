@@ -350,7 +350,7 @@ function ExamsPage() {
           allocated += count;
           if (count < 1) return null;
 
-          let url = `${API_BASE}/api/questions?tradeId=${selectedTrade}&chapterId=${ch.id}&limit=${count}&locale=${locale}`;
+          let url = `${API_BASE}/api/questions?tradeId=${selectedTrade}&chapterId=${ch.id}&limit=${count}&locale=${locale}&mode=${reviewMode ? 'review' : 'simulation'}`;
           if (difficulty) url += `&difficulty=${difficulty}`;
           return fetch(url, {
             headers: { Authorization: `Bearer ${token}` },
@@ -365,7 +365,7 @@ function ExamsPage() {
           qs.push(...chapterQs);
         }
       } else {
-        const url = `${API_BASE}/api/questions?tradeId=${selectedTrade}&limit=${questionCount}&locale=${locale}${difficulty ? `&difficulty=${difficulty}` : ''}`;
+        const url = `${API_BASE}/api/questions?tradeId=${selectedTrade}&limit=${questionCount}&locale=${locale}&mode=${reviewMode ? 'review' : 'simulation'}${difficulty ? `&difficulty=${difficulty}` : ''}`;
         const res = await fetch(url, {
           headers: { Authorization: `Bearer ${token}` },
         });
@@ -782,27 +782,34 @@ function ExamsPage() {
             </div>
 
             <div className="grid sm:grid-cols-2 gap-3">
-              {/* Normal mode */}
+              {/* Normal mode (timed exam simulation) — paid feature */}
               <button
-                onClick={() => setReviewMode(false)}
+                onClick={() => userPlan === 'FREE' ? router.push('/pricing') : setReviewMode(false)}
                 className={`relative p-4 rounded-xl border-2 text-left transition-all duration-200 ${
-                  !reviewMode
-                    ? 'border-[#3B82F6] bg-[#3B82F6]/8'
-                    : 'border-[#2D3A52] bg-[#111827]/50 hover:border-[#3B82F6]/30'
+                  userPlan === 'FREE'
+                    ? 'border-[#2D3A52] bg-[#111827]/50 opacity-70 cursor-pointer hover:border-[#F59E0B]/40'
+                    : !reviewMode
+                      ? 'border-[#3B82F6] bg-[#3B82F6]/8'
+                      : 'border-[#2D3A52] bg-[#111827]/50 hover:border-[#3B82F6]/30'
                 }`}
               >
                 <div className="flex items-start gap-3">
                   <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                    !reviewMode ? 'bg-[#3B82F6]/15' : 'bg-[#2D3A52]/50'
+                    userPlan === 'FREE' ? 'bg-[#2D3A52]/50' : !reviewMode ? 'bg-[#3B82F6]/15' : 'bg-[#2D3A52]/50'
                   }`}>
-                    <Clock size={18} className={!reviewMode ? 'text-[#3B82F6]' : 'text-[#64748B]'} />
+                    {userPlan === 'FREE'
+                      ? <Lock size={18} className="text-[#F59E0B]" />
+                      : <Clock size={18} className={!reviewMode ? 'text-[#3B82F6]' : 'text-[#64748B]'} />}
                   </div>
                   <div>
-                    <span className={`block text-sm font-semibold ${!reviewMode ? 'text-[#F8FAFC]' : 'text-[#94A3B8]'}`}>{t('examsTimed')}</span>
+                    <span className={`block text-sm font-semibold ${userPlan === 'FREE' ? 'text-[#F59E0B]' : !reviewMode ? 'text-[#F8FAFC]' : 'text-[#94A3B8]'}`}>{t('examsTimed')}</span>
                     <span className="text-xs text-[#64748B] mt-0.5 block">{t('examsTimedDesc')}</span>
                   </div>
                 </div>
-                {!reviewMode && (
+                {userPlan === 'FREE' && (
+                  <span className="absolute top-2.5 right-2.5 text-[10px] font-medium text-[#F59E0B] bg-[#F59E0B]/10 border border-[#F59E0B]/20 rounded px-1.5 py-0.5">{t('planUpgrade')}</span>
+                )}
+                {!reviewMode && userPlan !== 'FREE' && (
                   <CheckCircle size={14} className="absolute top-2.5 right-2.5 text-[#3B82F6]" />
                 )}
               </button>
@@ -864,12 +871,19 @@ function ExamsPage() {
                 </div>
               </div>
               <button
-                onClick={startExam}
+                onClick={() => {
+                  // Simulations (timed mode) are paid — FREE users go to pricing
+                  if (userPlan === 'FREE' && !reviewMode) {
+                    router.push('/pricing');
+                    return;
+                  }
+                  startExam();
+                }}
                 disabled={!selectedTrade || starting}
                 className="px-8 py-3 bg-gradient-to-r from-[#06B6D4] to-[#3B82F6] rounded-xl font-semibold text-white hover:shadow-[0_0_25px_rgba(6,182,212,0.3)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shrink-0"
               >
-                {starting ? <Loader2 size={18} className="animate-spin" /> : <Target size={18} />}
-                {starting ? t('examsPreparing') : t('examsStartExam')}
+                {starting ? <Loader2 size={18} className="animate-spin" /> : userPlan === 'FREE' && !reviewMode ? <Lock size={18} /> : <Target size={18} />}
+                {starting ? t('examsPreparing') : userPlan === 'FREE' && !reviewMode ? t('planUpgrade') : t('examsStartExam')}
               </button>
             </div>
           </div>
