@@ -92,9 +92,9 @@ export default function AdminSettingsPage() {
   const [orgName, setOrgName] = useState('Metierium');
   const [orgEmail, setOrgEmail] = useState('info@metierium.com');
   const [timezone, setTimezone] = useState('America/Toronto');
-  const [passingScore, setPassingScore] = useState(70);
+  const [passingScore, setPassingScore] = useState(60);
   const [timeLimit, setTimeLimit] = useState(60);
-  const [questionsPerSimulation, setQuestionsPerSimulation] = useState(50);
+  const [questionsPerSimulation, setQuestionsPerSimulation] = useState(60);
   const [randomizeOrder, setRandomizeOrder] = useState(false);
   const [emailNotifications, setEmailNotifications] = useState(true);
   const [welcomeEmail, setWelcomeEmail] = useState(true);
@@ -315,7 +315,7 @@ export default function AdminSettingsPage() {
                 min={10}
                 max={200}
                 value={questionsPerSimulation}
-                onChange={(e) => setQuestionsPerSimulation(parseInt(e.target.value) || 50)}
+                onChange={(e) => setQuestionsPerSimulation(parseInt(e.target.value) || 60)}
                 className="w-full px-4 py-2.5 bg-[#0A0E1A] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
               />
             </div>

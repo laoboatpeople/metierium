@@ -99,7 +99,31 @@ function weightedShuffle<T>(arr: T[]): T[] {
   return copy;
 }
 
-const PASS_THRESHOLD = 70;
+const PASS_THRESHOLD = 60;
+
+// Real exam specs per trade, from official CCQ "Fiches de renseignements" (ccq.org, Aug 2026)
+// and RBQ examination guidelines. All CCQ qualification exams: 3h, 60% passing score.
+const TRADE_EXAM_SPECS: Record<string, { questions: number; passingScore: number }> = {
+  CMEQ:    { questions: 60, passingScore: 60 }, // Électricien — CCQ 60q/3h/60%
+  CMMTQ:   { questions: 61, passingScore: 60 }, // Plombier (tuyauteur) — CCQ 61q/3h/60%
+  FERBLAN: { questions: 60, passingScore: 60 }, // Ferblantier — CCQ 60q/3h/60%
+  BRIQUE:  { questions: 60, passingScore: 60 }, // Briqueteur-maçon — CCQ 60q/3h/60%
+  REFRIG:  { questions: 60, passingScore: 60 }, // Frigoriste — CCQ 60q/3h/60%
+  ASCEN:   { questions: 61, passingScore: 60 }, // Mécanicien d'ascenseur — CCQ 61q/3h/60%
+  MVL:     { questions: 65, passingScore: 60 }, // Mécanique machines lourdes — CCQ 65q/3h/60%
+  INCENDIE:{ questions: 61, passingScore: 60 }, // Mécanicien protection-incendie — CCQ 61q/3h/60%
+  QBQ:     { questions: 60, passingScore: 60 }, // Soudeur (chaudronnier) — CCQ 60q/3h/60%
+  HVAC:    { questions: 60, passingScore: 60 }, // Poseur d'appareils de chauffage — CCQ 60q/3h/60%
+  OPEQUIP: { questions: 61, passingScore: 60 }, // Opérateur pelles mécaniques — CCQ 61q/3h/60%
+  // RBQ entrepreneur exams (CONSTR/ENTGEN/GESTRAV) and other trades (GAZ/INSPECT/SST):
+  // ~60 MCQs, 3h, 60% — per RBQ examination guidelines.
+  CONSTR:  { questions: 60, passingScore: 60 },
+  ENTGEN:  { questions: 60, passingScore: 60 },
+  GESTRAV: { questions: 60, passingScore: 60 },
+  GAZ:     { questions: 60, passingScore: 60 },
+  INSPECT: { questions: 60, passingScore: 60 },
+  SST:     { questions: 60, passingScore: 60 },
+};
 
 export default function ExamsPageWrapper() {
   return (
@@ -121,10 +145,10 @@ function ExamsPage() {
   const [examResult, setExamResult] = useState<ExamResult | null>(null);
   const [examTime, setExamTime] = useState(0);
   const [timerActive, setTimerActive] = useState(false);
-  // TODO: questionCount should be configurable per trade (real CMEQ exams vary:
-  // e.g. Électricien ~90 questions, Plombier ~80). DB Trade/Chapter tables have no
-  // questionsPerExam field yet — add one and fetch it when selecting a trade.
-  const [questionCount, setQuestionCount] = useState(50);
+  // Default question count per trade comes from TRADE_EXAM_SPECS (official CCQ/RBQ specs).
+  // When the selected trade changes, apply its real exam question count (and passing score
+  // via PASS_THRESHOLD — all CCQ qualification exams pass at 60%).
+  const [questionCount, setQuestionCount] = useState(60);
   const [difficulty, setDifficulty] = useState<string>('');
   const [chapters, setChapters] = useState<Chapter[]>([]);
   const [selectedChapters, setSelectedChapters] = useState<Set<string>>(new Set());
@@ -163,6 +187,16 @@ function ExamsPage() {
       }
     }
   }, [chapters, searchParams]);
+
+  // Apply real exam specs (question count) for the selected trade
+  useEffect(() => {
+    if (!selectedTrade) return;
+    const tr = trades.find((t) => t.id === selectedTrade);
+    const spec = tr ? TRADE_EXAM_SPECS[tr.code] : undefined;
+    if (spec) {
+      setQuestionCount(spec.questions);
+    }
+  }, [selectedTrade, trades]);
 
   useEffect(() => {
     (async () => {
@@ -625,25 +659,33 @@ function ExamsPage() {
                   {t('examsQuestionCount')}
                 </label>
                 <div className="flex gap-1.5 flex-wrap">
-                  {[10, 20, 30, 50, 100, 150].map((n) => {
-                    const isLockedCount = userPlan === 'FREE' && n > 50;
-                    return (
-                      <button
-                        key={n}
-                        onClick={() => isLockedCount ? router.push('/pricing') : setQuestionCount(n)}
-                        className={`flex-1 min-w-[40px] py-2 rounded-lg border text-sm font-medium transition-all flex items-center justify-center gap-1 ${
-                          isLockedCount
-                            ? 'border-[#2D3A52]/40 bg-transparent text-[#64748B]/50 cursor-pointer hover:border-[#3B82F6]/20'
-                            : questionCount === n
-                              ? 'border-[#3B82F6] bg-[#3B82F6]/10 text-[#3B82F6]'
-                              : 'border-[#2D3A52] bg-transparent text-[#94A3B8] hover:border-[#3B82F6]/30 hover:text-[#F8FAFC]'
-                        }`}
-                      >
-                        {n}
-                        {isLockedCount && <Lock size={10} />}
-                      </button>
-                    );
-                  })}
+                  {(() => {
+                    const tr = trades.find((t) => t.id === selectedTrade);
+                    const spec = tr ? TRADE_EXAM_SPECS[tr.code] : undefined;
+                    const base = [10, 20, 30, 50, 100, 150];
+                    const options = spec && !base.includes(spec.questions)
+                      ? [...base, spec.questions].sort((a, b) => a - b)
+                      : base;
+                    return options.map((n) => {
+                      const isLockedCount = userPlan === 'FREE' && n > 50;
+                      return (
+                        <button
+                          key={n}
+                          onClick={() => isLockedCount ? router.push('/pricing') : setQuestionCount(n)}
+                          className={`flex-1 min-w-[40px] py-2 rounded-lg border text-sm font-medium transition-all flex items-center justify-center gap-1 ${
+                            isLockedCount
+                              ? 'border-[#2D3A52]/40 bg-transparent text-[#64748B]/50 cursor-pointer hover:border-[#3B82F6]/20'
+                              : questionCount === n
+                                ? 'border-[#3B82F6] bg-[#3B82F6]/10 text-[#3B82F6]'
+                                : 'border-[#2D3A52] bg-transparent text-[#94A3B8] hover:border-[#3B82F6]/30 hover:text-[#F8FAFC]'
+                          }`}
+                        >
+                          {n}
+                          {isLockedCount && <Lock size={10} />}
+                        </button>
+                      );
+                    });
+                  })()}
                 </div>
               </div>
 

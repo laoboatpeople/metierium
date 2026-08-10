@@ -214,7 +214,7 @@ function formatDuration(seconds: number): string {
 }
 
 function scoreColor(score: number): string {
-  if (score >= 70) return 'text-[#10B981]';
+  if (score >= 60) return 'text-[#10B981]';
   if (score >= 50) return 'text-[#F59E0B]';
   return 'text-[#EF4444]';
 }
@@ -634,7 +634,7 @@ export default function UserDetailPage() {
                       ) : (
                         <div className="bg-[#0F1424] border border-[#2D3A52] rounded-xl p-4 flex items-center justify-center">
                           <p className="text-sm text-[#64748B]">
-                            {locale === 'fr' ? 'Tous les examens au-dessus de 70%' : 'All exams above 70%'}
+                            {locale === 'fr' ? 'Tous les examens au-dessus de 60%' : 'All exams above 60%'}
                           </p>
                         </div>
                       );
@@ -781,7 +781,7 @@ export default function UserDetailPage() {
                     </h3>
                     <div className="bg-[#0F1424] border border-[#2D3A52] rounded-xl p-5 space-y-3">
                       {user.chapterPerformance.map((ch) => {
-                        const color = ch.percentage >= 70 ? '#22C55E' : ch.percentage >= 50 ? '#F59E0B' : '#EF4444';
+                        const color = ch.percentage >= 60 ? '#22C55E' : ch.percentage >= 50 ? '#F59E0B' : '#EF4444';
                         return (
                           <div key={ch.chapterId}>
                             <div className="flex justify-between text-xs mb-1">

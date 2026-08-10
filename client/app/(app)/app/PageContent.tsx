@@ -295,7 +295,8 @@ export default function DashboardPage() {
           }
           const entry = examMap.get(key)!;
           entry.scores.push(r.score || 0);
-          if ((r.score || 0) >= 70) entry.passedCount++;
+          // Real trade exams (CCQ/RBQ) pass at 60%
+          if ((r.score || 0) >= 60) entry.passedCount++;
         }
 
         const byExam: ExamPerformance[] = [];
@@ -584,10 +585,10 @@ export default function DashboardPage() {
           <div className="flex items-center justify-between mb-3">
             <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748B]">{t('dashboardAvgScore')}</span>
             <div className="h-8 w-8 rounded-lg bg-[#F59E0B]/10 flex items-center justify-center">
-              <TrendingUp size={16} className={`${averageScore >= 70 ? 'text-[#22C55E]' : 'text-[#F59E0B]'}`} />
+              <TrendingUp size={16} className={`${averageScore >= 60 ? 'text-[#22C55E]' : 'text-[#F59E0B]'}`} />
             </div>
           </div>
-          <p className={`text-2xl font-bold ${averageScore >= 70 ? 'text-[#22C55E]' : 'text-[#F59E0B]'}`}>
+          <p className={`text-2xl font-bold ${averageScore >= 60 ? 'text-[#22C55E]' : 'text-[#F59E0B]'}`}>
             {totalAttempts > 0 ? `${averageScore}%` : '—'}
           </p>
           <p className="text-xs text-[#94A3B8] mt-1">
@@ -606,10 +607,10 @@ export default function DashboardPage() {
           <div className="flex items-center justify-between mb-3">
             <span className="text-[11px] font-semibold uppercase tracking-wider text-[#64748B]">{t('dashboardPassRate')}</span>
             <div className="h-8 w-8 rounded-lg bg-[#F59E0B]/10 flex items-center justify-center">
-              <Target size={16} className={passRate >= 70 ? 'text-[#22C55E]' : 'text-[#F59E0B]'} />
+              <Target size={16} className={passRate >= 60 ? 'text-[#22C55E]' : 'text-[#F59E0B]'} />
             </div>
           </div>
-          <p className={`text-2xl font-bold ${passRate >= 70 ? 'text-[#22C55E]' : 'text-[#F59E0B]'}`}>
+          <p className={`text-2xl font-bold ${passRate >= 60 ? 'text-[#22C55E]' : 'text-[#F59E0B]'}`}>
             {totalAttempts > 0 ? `${passRate}%` : '—'}
           </p>
           <p className="text-xs text-[#94A3B8] mt-1">
@@ -642,7 +643,7 @@ export default function DashboardPage() {
           title={t('dashboardPersonalBest')}
           value={totalAttempts > 0 ? `${bestScore}%` : '—'}
           icon={<Trophy size={16} />}
-          color={bestScore >= 70 ? 'green' : 'amber'}
+          color={bestScore >= 60 ? 'green' : 'amber'}
           subtitle={t('dashboardPersonalBestSubtitle')}
         />
         <StatCardS
@@ -782,11 +783,11 @@ export default function DashboardPage() {
                         </div>
                       </td>
                       <td className="px-5 py-3 text-right text-[#F8FAFC] font-mono tabular-nums">{exam.totalAttempts}</td>
-                      <td className={`px-5 py-3 text-right font-mono tabular-nums ${exam.averageScore >= 70 ? 'text-[#22C55E]' : 'text-[#F59E0B]'}`}>
+                      <td className={`px-5 py-3 text-right font-mono tabular-nums ${exam.averageScore >= 60 ? 'text-[#22C55E]' : 'text-[#F59E0B]'}`}>
                         {exam.averageScore}%
                       </td>
                       <td className="px-5 py-3 text-right font-mono tabular-nums text-[#22C55E]">{exam.bestScore}%</td>
-                      <td className={`px-5 py-3 text-right font-mono tabular-nums ${exam.lastScore >= 70 ? 'text-[#22C55E]' : 'text-[#EF4444]'}`}>
+                      <td className={`px-5 py-3 text-right font-mono tabular-nums ${exam.lastScore >= 60 ? 'text-[#22C55E]' : 'text-[#EF4444]'}`}>
                         {exam.lastScore}%
                       </td>
                       <td className="px-5 py-3 text-center">
@@ -795,7 +796,7 @@ export default function DashboardPage() {
                           : <TrendingDown size={16} className="text-[#EF4444] mx-auto" />}
                       </td>
                       <td className="px-5 py-3 text-right">
-                        <span className={`text-xs font-medium ${exam.passRate >= 70 ? 'text-[#22C55E]' : 'text-[#EF4444]'}`}>
+                        <span className={`text-xs font-medium ${exam.passRate >= 60 ? 'text-[#22C55E]' : 'text-[#EF4444]'}`}>
                           {exam.passedCount}/{exam.totalAttempts}
                         </span>
                       </td>
@@ -904,7 +905,7 @@ export default function DashboardPage() {
                     <p className="text-2xl font-bold text-[#F8FAFC]">{statsData.averageScore}%</p>
                     <div className="mt-2 w-full h-1.5 bg-[#111827] rounded-full overflow-hidden">
                       <div
-                        className={`h-full rounded-full ${statsData.averageScore >= 70 ? 'bg-[#22C55E]' : 'bg-[#EF4444]'}`}
+                        className={`h-full rounded-full ${statsData.averageScore >= 60 ? 'bg-[#22C55E]' : 'bg-[#EF4444]'}`}
                         style={{ width: `${statsData.averageScore}%` }}
                       />
                     </div>
@@ -1026,7 +1027,7 @@ export default function DashboardPage() {
                   <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5 space-y-3">
                     {statsData.chapterPerformance.length > 0 ? (
                       statsData.chapterPerformance.map(ch => {
-                        const color = ch.percentage >= 70 ? '#22C55E' : ch.percentage >= 50 ? '#F59E0B' : '#EF4444';
+                        const color = ch.percentage >= 60 ? '#22C55E' : ch.percentage >= 50 ? '#F59E0B' : '#EF4444';
                         return (
                           <div key={ch.chapterNumber}>
                             <div className="flex justify-between text-xs mb-1">

@@ -771,7 +771,7 @@ export default function AdminDashboard() {
           ) : data?.recentAttempts && data.recentAttempts.length > 0 ? (
             <div className="space-y-1 max-h-80 overflow-y-auto">
               {data.recentAttempts.map((a) => {
-                const passed = a.score >= 70;
+                const passed = a.score >= 60;
                 return (
                   <div key={a.id} className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-[#0F1525] transition-colors">
                     <div className={`w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ${passed ? 'bg-[#10B981]/15' : 'bg-[#EF4444]/15'}`}>

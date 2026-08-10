@@ -26,7 +26,7 @@ let settings: AdminSettings = {
   orgName: 'Metierium',
   orgEmail: 'info@metierium.com',
   timezone: 'America/Toronto',
-  passingScore: 70,
+  passingScore: 60,
   timeLimit: 60,
   questionsPerSimulation: 50,
   randomizeOrder: false,

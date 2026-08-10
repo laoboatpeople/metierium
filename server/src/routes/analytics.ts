@@ -260,7 +260,7 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
 
     // ─── Learning tracking ─────────────────────────────────
     const overallPassRate = allAttempts.length > 0
-      ? Math.round((allAttempts.filter((a: { score: number }) => a.score >= 70).length / allAttempts.length) * 100)
+      ? Math.round((allAttempts.filter((a: { score: number }) => a.score >= 60).length / allAttempts.length) * 100)
       : 0;
 
     const recentAttempts = (recentExamAttempts as any[]).map((a) => ({

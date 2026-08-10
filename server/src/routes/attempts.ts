@@ -184,7 +184,7 @@ router.get('/stats', authenticate, async (req: Request, res: Response): Promise<
 
     const totalAttempts = attempts.length;
     const avgScore = Math.round(attempts.reduce((s, a) => s + a.score, 0) / totalAttempts);
-    const passedCount = attempts.filter((a) => a.score >= 70).length;
+    const passedCount = attempts.filter((a) => a.score >= 60).length;
     const passRate = Math.round((passedCount / totalAttempts) * 100);
     const bestScore = Math.max(...attempts.map((a) => a.score));
     const totalQuestionsAnswered = attempts.reduce((s, a) => s + a.totalQuestions, 0);
@@ -201,7 +201,7 @@ router.get('/stats', authenticate, async (req: Request, res: Response): Promise<
 
     const byExam = Array.from(byTradeMap.entries()).map(([tid, arr]) => {
       const scores = arr.map((a) => a.score);
-      const passed = arr.filter((a) => a.score >= 70).length;
+      const passed = arr.filter((a) => a.score >= 60).length;
       return {
         examId: tid,
         examCode: arr[0].trade.code,
