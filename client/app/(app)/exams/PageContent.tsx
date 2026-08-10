@@ -155,7 +155,7 @@ function ExamsPage() {
   const [chaptersLoading, setChaptersLoading] = useState(false);
   const [userPlan, setUserPlan] = useState<string>('FREE');
   const [skipped, setSkipped] = useState<Set<number>>(new Set());
-  const [reviewMode, setReviewMode] = useState(false);
+  const [reviewMode, setReviewMode] = useState(true);
   const [saved, setSaved] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
   const { t, locale } = useLocale();
@@ -782,7 +782,32 @@ function ExamsPage() {
             </div>
 
             <div className="grid sm:grid-cols-2 gap-3">
-              {/* Normal mode (timed exam simulation) — paid feature */}
+              {/* Practice mode (self-paced) — free */}
+              <button
+                onClick={() => setReviewMode(true)}
+                className={`relative p-4 rounded-xl border-2 text-left transition-all duration-200 ${
+                  reviewMode
+                    ? 'border-[#06B6D4] bg-[#06B6D4]/8'
+                    : 'border-[#2D3A52] bg-[#111827]/50 hover:border-[#06B6D4]/30'
+                }`}
+              >
+                <div className="flex items-start gap-3">
+                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
+                    reviewMode ? 'bg-[#06B6D4]/15' : 'bg-[#2D3A52]/50'
+                  }`}>
+                    <BookOpen size={18} className={reviewMode ? 'text-[#06B6D4]' : 'text-[#64748B]'} />
+                  </div>
+                  <div>
+                    <span className={`block text-sm font-semibold ${reviewMode ? 'text-[#F8FAFC]' : 'text-[#94A3B8]'}`}>{t('examsReview')}</span>
+                    <span className="text-xs text-[#64748B] mt-0.5 block">{t('examsReviewDesc')}</span>
+                  </div>
+                </div>
+                {reviewMode && (
+                  <CheckCircle size={14} className="absolute top-2.5 right-2.5 text-[#06B6D4]" />
+                )}
+              </button>
+
+              {/* Exam simulation (timed) — paid feature */}
               <button
                 onClick={() => userPlan === 'FREE' ? router.push('/pricing') : setReviewMode(false)}
                 className={`relative p-4 rounded-xl border-2 text-left transition-all duration-200 ${
@@ -811,31 +836,6 @@ function ExamsPage() {
                 )}
                 {!reviewMode && userPlan !== 'FREE' && (
                   <CheckCircle size={14} className="absolute top-2.5 right-2.5 text-[#3B82F6]" />
-                )}
-              </button>
-
-              {/* Review mode */}
-              <button
-                onClick={() => setReviewMode(true)}
-                className={`relative p-4 rounded-xl border-2 text-left transition-all duration-200 ${
-                  reviewMode
-                    ? 'border-[#06B6D4] bg-[#06B6D4]/8'
-                    : 'border-[#2D3A52] bg-[#111827]/50 hover:border-[#06B6D4]/30'
-                }`}
-              >
-                <div className="flex items-start gap-3">
-                  <div className={`w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 ${
-                    reviewMode ? 'bg-[#06B6D4]/15' : 'bg-[#2D3A52]/50'
-                  }`}>
-                    <BookOpen size={18} className={reviewMode ? 'text-[#06B6D4]' : 'text-[#64748B]'} />
-                  </div>
-                  <div>
-                    <span className={`block text-sm font-semibold ${reviewMode ? 'text-[#F8FAFC]' : 'text-[#94A3B8]'}`}>{t('examsReview')}</span>
-                    <span className="text-xs text-[#64748B] mt-0.5 block">{t('examsReviewDesc')}</span>
-                  </div>
-                </div>
-                {reviewMode && (
-                  <CheckCircle size={14} className="absolute top-2.5 right-2.5 text-[#06B6D4]" />
                 )}
               </button>
             </div>
@@ -872,7 +872,7 @@ function ExamsPage() {
               </div>
               <button
                 onClick={() => {
-                  // Simulations (timed mode) are paid — FREE users go to pricing
+                  // Exam simulations (timed mode) are paid — FREE users go to pricing
                   if (userPlan === 'FREE' && !reviewMode) {
                     router.push('/pricing');
                     return;
@@ -882,8 +882,8 @@ function ExamsPage() {
                 disabled={!selectedTrade || starting}
                 className="px-8 py-3 bg-gradient-to-r from-[#06B6D4] to-[#3B82F6] rounded-xl font-semibold text-white hover:shadow-[0_0_25px_rgba(6,182,212,0.3)] transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2 shrink-0"
               >
-                {starting ? <Loader2 size={18} className="animate-spin" /> : userPlan === 'FREE' && !reviewMode ? <Lock size={18} /> : <Target size={18} />}
-                {starting ? t('examsPreparing') : userPlan === 'FREE' && !reviewMode ? t('planUpgrade') : t('examsStartExam')}
+                {starting ? <Loader2 size={18} className="animate-spin" /> : userPlan === 'FREE' && !reviewMode ? <Lock size={18} /> : reviewMode ? <BookOpen size={18} /> : <Target size={18} />}
+                {starting ? t('examsPreparing') : reviewMode ? t('examsStartPractice') : userPlan === 'FREE' ? t('planUpgrade') : t('examsStartExam')}
               </button>
             </div>
           </div>
