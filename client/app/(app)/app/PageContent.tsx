@@ -27,6 +27,7 @@ import {
   Brain,
   RefreshCw,
   Trash2,
+  ChevronRight,
 } from 'lucide-react';
 import { getExamHistory, getTradeStats, clearExamHistory, ExamRecord } from '@/lib/examStorage';
 
@@ -206,6 +207,39 @@ function timeAgo(iso: string, t: (path: string, vars?: Record<string, string | n
   if (hours < 24) return t('timeAgoHour', { count: hours });
   const days = Math.floor(hours / 24);
   return t('timeAgoDay', { count: days });
+}
+
+// ─── Chapter Donut (RealtyLicence parity) ───────────────
+
+function ChapterDonut({ percentage }: { percentage: number }) {
+  const isPass = percentage >= 60;
+  const isWarn = percentage >= 50 && !isPass;
+  const color = isPass ? '#10B981' : isWarn ? '#F59E0B' : '#EF4444';
+  const textColor = isPass ? 'text-[#22C55E]' : isWarn ? 'text-[#F59E0B]' : 'text-[#EF4444]';
+  const R = 15.9155; // circumference = 100
+  const offset = 100 - Math.min(percentage, 100);
+  return (
+    <div className="relative h-14 w-14 shrink-0">
+      <svg viewBox="0 0 42 42" className="h-14 w-14 -rotate-90">
+        <circle cx="21" cy="21" r={R} fill="none" stroke="#2D3A52" strokeWidth="4" />
+        <circle
+          cx="21"
+          cy="21"
+          r={R}
+          fill="none"
+          stroke={color}
+          strokeWidth="4"
+          strokeLinecap="round"
+          strokeDasharray="100"
+          strokeDashoffset={offset}
+          className="transition-all duration-700"
+        />
+      </svg>
+      <span className={`absolute inset-0 flex items-center justify-center text-xs font-bold tabular-nums ${textColor}`}>
+        {percentage}%
+      </span>
+    </div>
+  );
 }
 
 // ─── Main Dashboard ─────────────────────────────────────
@@ -1047,43 +1081,58 @@ export default function DashboardPage() {
                   </div>
                 </div>
 
-                {/* Chapter Performance */}
+                {/* Chapter Performance — donut grid, clickable to targeted practice */}
                 <div>
                   <h3 className="text-base font-semibold text-[#F8FAFC] mb-3 flex items-center gap-2">
                     <Brain size={18} className="text-[#8B5CF6]" />
                     {t('dashboardChapterPerformance')}
                   </h3>
-                  <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-5 space-y-3">
-                    {statsData.chapterPerformance.length > 0 ? (
-                      statsData.chapterPerformance.map(ch => {
-                        const color = ch.percentage >= 60 ? '#22C55E' : ch.percentage >= 50 ? '#F59E0B' : '#EF4444';
-                        return (
-                          <div key={ch.chapterNumber}>
-                            <div className="flex justify-between text-xs mb-1">
-                              <span className="text-[#F8FAFC] font-medium">{ch.tradeName ? `${getTradeNameLocalized(ch.tradeName, locale)} > ` : ''}{getLocalizedChapterName(ch.chapterId, ch.chapterName)}</span>
-                              <span className="font-medium" style={{ color }}>{ch.percentage}%</span>
-                            </div>
-                            <div className="flex items-center gap-2">
-                              <div className="flex-1 h-2.5 bg-[#111827] rounded-full overflow-hidden">
-                                <div
-                                  className="h-full rounded-full transition-all"
-                                  style={{ width: `${ch.percentage}%`, backgroundColor: color }}
-                                />
+                  {statsData.chapterPerformance.length > 0 ? (
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      {[...statsData.chapterPerformance]
+                        .sort((a, b) => b.percentage - a.percentage)
+                        .map(ch => {
+                          const isRealChapter = ch.chapterId && !String(ch.chapterId).startsWith('ch_');
+                          const cardContent = (
+                            <>
+                              <ChapterDonut percentage={ch.percentage} />
+                              <div className="min-w-0 flex-1">
+                                <p className="text-sm font-medium text-[#F8FAFC] truncate group-hover:text-[#3B82F6] transition-colors">
+                                  {ch.tradeName ? `${getTradeNameLocalized(ch.tradeName, locale)} > ` : ''}{getLocalizedChapterName(ch.chapterId, ch.chapterName)}
+                                </p>
+                                <p className="text-[11px] text-[#64748B] truncate mt-1">
+                                  {t('dashboardChapterPractice')}
+                                </p>
+                                <p className="text-[11px] text-[#64748B] tabular-nums mt-1">
+                                  {ch.correct}/{ch.attempted}
+                                  {ch.total > ch.attempted && (
+                                    <span className="text-[#64748B]/60"> · {ch.total} {locale === 'fr' ? 'en chapitre' : 'in chapter'}</span>
+                                  )}
+                                </p>
                               </div>
-                              <span className="text-[10px] text-[#64748B] text-right">
-                                {ch.correct}/{ch.attempted}
-                                {ch.total > ch.attempted && (
-                                  <span className="text-[#64748B]/60"> · {ch.total} {locale === 'fr' ? 'en chapitre' : 'in chapter'}</span>
-                                )}
-                              </span>
+                              <ChevronRight size={16} className="shrink-0 text-[#64748B]/50 group-hover:text-[#3B82F6] group-hover:translate-x-0.5 transition-all" />
+                            </>
+                          );
+                          const cardClass = "group bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4 flex items-center gap-4 transition-colors hover:border-[#3B82F6]/50 hover:bg-[#243047]/20";
+                          return isRealChapter ? (
+                            <Link
+                              key={ch.chapterNumber}
+                              href={`/exams?tradeId=${encodeURIComponent(ch.tradeId || selectedTrade)}&chapterId=${encodeURIComponent(ch.chapterId)}`}
+                              className={cardClass}
+                              aria-label={`${getLocalizedChapterName(ch.chapterId, ch.chapterName)} — ${t('dashboardChapterPractice')}`}
+                            >
+                              {cardContent}
+                            </Link>
+                          ) : (
+                            <div key={ch.chapterNumber} className={cardClass}>
+                              {cardContent}
                             </div>
-                          </div>
-                        );
-                      })
-                    ) : (
-                      <p className="text-sm text-[#64748B]">{t('statsNoChapterData')}</p>
-                    )}
-                  </div>
+                          );
+                        })}
+                    </div>
+                  ) : (
+                    <p className="text-sm text-[#64748B]">{t('statsNoChapterData')}</p>
+                  )}
                 </div>
 
                 {/* Recent history */}

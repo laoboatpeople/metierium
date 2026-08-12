@@ -159,6 +159,7 @@ function ExamsPage() {
   const [reviewMode, setReviewMode] = useState(true);
   const [saved, setSaved] = useState(false);
   const [showConfirm, setShowConfirm] = useState(false);
+  const [highlightChapterId, setHighlightChapterId] = useState<string | null>(null);
   const { t, locale } = useLocale();
   const autoAdvanceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const questionCountRef = useRef<HTMLDivElement>(null);
@@ -188,6 +189,18 @@ function ExamsPage() {
       }
     }
   }, [chapters, searchParams]);
+
+  // When arriving with ?chapterId=, scroll the target chapter into view and flash-highlight it
+  useEffect(() => {
+    const chapterParam = searchParams.get('chapterId');
+    if (!chapterParam || chaptersLoading || chapters.length === 0) return;
+    const el = document.getElementById(`chapter-${chapterParam}`);
+    if (!el) return;
+    setHighlightChapterId(chapterParam);
+    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    const timer = setTimeout(() => setHighlightChapterId(null), 2500);
+    return () => clearTimeout(timer);
+  }, [searchParams, chaptersLoading, chapters]);
 
   // Apply real exam specs (question count) for the selected trade
   useEffect(() => {
@@ -782,15 +795,18 @@ function ExamsPage() {
                       return (
                         <label
                           key={ch.id}
+                          id={`chapter-${ch.id}`}
                           onClick={() => isSimLocked ? undefined : (isLocked ? router.push('/pricing') : toggleChapter(ch.id))}
                           className={`flex items-center gap-2.5 px-3 py-2 rounded-lg border text-sm transition-all ${
-                            isSimLocked
-                              ? 'border-[#2D3A52]/40 bg-transparent text-[#64748B]/50 cursor-not-allowed'
-                              : isLocked
-                                ? 'border-[#2D3A52]/50 bg-transparent text-[#64748B]/50 cursor-pointer hover:border-[#06B6D4]/20'
-                                : isChSelected
-                                  ? 'border-[#06B6D4] bg-[#06B6D4]/8 text-[#06B6D4] cursor-pointer'
-                                  : 'border-[#2D3A52] bg-transparent text-[#94A3B8] cursor-pointer hover:border-[#06B6D4]/30'
+                            highlightChapterId === ch.id
+                              ? 'border-[#06B6D4] ring-2 ring-[#06B6D4]/40 shadow-lg shadow-[#06B6D4]/10 bg-[#06B6D4]/5'
+                              : isSimLocked
+                                ? 'border-[#2D3A52]/40 bg-transparent text-[#64748B]/50 cursor-not-allowed'
+                                : isLocked
+                                  ? 'border-[#2D3A52]/50 bg-transparent text-[#64748B]/50 cursor-pointer hover:border-[#06B6D4]/20'
+                                  : isChSelected
+                                    ? 'border-[#06B6D4] bg-[#06B6D4]/8 text-[#06B6D4] cursor-pointer'
+                                    : 'border-[#2D3A52] bg-transparent text-[#94A3B8] cursor-pointer hover:border-[#06B6D4]/30'
                           }`}
                         >
                           <div className={`w-4 h-4 rounded flex items-center justify-center flex-shrink-0 transition-all ${
