@@ -1191,22 +1191,6 @@ export default function DashboardPage() {
                     })}
                   </div>
                 </div>
-
-                {/* CTA */}
-                <div className="flex gap-3">
-                  <Link
-                    href="/exams"
-                    className="flex-1 py-3 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] rounded-xl font-medium text-white text-center hover:shadow-[0_0_15px_rgba(59,130,246,0.3)]"
-                  >
-                    {t('dashboardNewExam')}
-                  </Link>
-                  <Link
-                    href="/theory"
-                    className="flex-1 py-3 border border-[#2D3A52] rounded-xl font-medium text-[#94A3B8] text-center hover:border-[#3B82F6]/40 hover:text-[#F8FAFC]"
-                  >
-                    {t('dashboardReviewTheory')}
-                  </Link>
-                </div>
               </>
             )}
           </>
