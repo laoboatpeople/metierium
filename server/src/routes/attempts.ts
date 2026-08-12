@@ -69,6 +69,41 @@ router.post('/', authenticate, async (req: Request, res: Response): Promise<void
 });
 
 /**
+ * DELETE /api/attempts
+ * Delete all exam attempts (and their answers) for the current user.
+ * Used by the "Reset stats" button on the dashboard.
+ */
+router.delete('/', authenticate, async (req: Request, res: Response): Promise<void> => {
+  try {
+    const user = (req as any).user;
+
+    const result = await prisma.$transaction(async (tx) => {
+      const deletedAnswers = await tx.examAttemptQuestion.deleteMany({
+        where: { attempt: { userId: user.id } },
+      });
+      const deletedAttempts = await tx.examAttempt.deleteMany({
+        where: { userId: user.id },
+      });
+      return { deletedAnswers: deletedAnswers.count, deletedAttempts: deletedAttempts.count };
+    });
+
+    await prisma.activityLog.create({
+      data: {
+        userId: user.id,
+        action: 'STATS_RESET',
+        details: { deletedAttempts: result.deletedAttempts, deletedAnswers: result.deletedAnswers },
+        ipAddress: req.ip,
+      },
+    }).catch(() => {}); // non-blocking
+
+    res.json({ success: true, ...result });
+  } catch (err) {
+    console.error('[Attempts] Delete error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
  * POST /api/attempts/sync
  * Bulk-sync exam history from client localStorage to DB.
  * Body: { attempts: [{ tradeId, score, totalQuestions, correctCount, timeSpent, difficulty, reviewMode, date }] }

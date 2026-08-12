@@ -7,6 +7,12 @@ export interface ChapterResult {
   total: number;
   tradeName?: string;
   chapterId?: string;
+  /** Full approved question count of the chapter (denominator for stats). */
+  questionCount?: number;
+  /** Question ids answered correctly for this chapter (dedup numerator). */
+  correctQuestionIds?: string[];
+  /** Question ids attempted for this chapter (dedup confidence threshold). */
+  attemptedQuestionIds?: string[];
 }
 
 export interface ExamRecord {
@@ -76,8 +82,10 @@ export function getTradeStats(tradeId: string) {
   const tradeName = history[0]?.tradeName || '';
   const firstTradeId = history[0]?.tradeId || '';
 
-  // Aggregate chapter performance — keyed by chapterId for accuracy
-  const chapterMap = new Map<string, { chapterNumber: number; name: string; correct: number; total: number }>();
+  // Aggregate chapter performance — keyed by chapterId for accuracy.
+  // Denominator = the chapter's full question bank (questionCount), so
+  // unanswered questions count as incorrect (same rule as realtylicence).
+  const chapterMap = new Map<string, { chapterNumber: number; name: string; correctIds: Set<string>; attemptedIds: Set<string>; total: number }>();
   const chapterIdMap = new Map<string, string>();
   for (const record of history) {
     for (const cr of record.chapterResults) {
@@ -85,11 +93,36 @@ export function getTradeStats(tradeId: string) {
       const existing = chapterMap.get(key) || {
         chapterNumber: cr.chapterNumber,
         name: cr.chapterName,
-        correct: 0,
+        correctIds: new Set<string>(),
+        attemptedIds: new Set<string>(),
         total: 0,
       };
-      existing.correct += cr.correct;
-      existing.total += cr.total;
+      // Attempted: unique question ids actually tried (confidence thresholds)
+      if (cr.attemptedQuestionIds?.length) {
+        for (const qid of cr.attemptedQuestionIds) existing.attemptedIds.add(qid);
+      } else {
+        // Legacy records without attempted ids: fall back to correct ids + a
+        // synthesized key per wrong answer (best-effort count preservation).
+        if (cr.correctQuestionIds?.length) {
+          for (const qid of cr.correctQuestionIds) existing.attemptedIds.add(qid);
+        }
+        const wrongCount = Math.max(0, (cr.total || 0) - cr.correct);
+        for (let i = 0; i < wrongCount; i++) {
+          existing.attemptedIds.add(`legacy_attempt_${record.id}_${key}_${i}`);
+        }
+      }
+      // Numerator: unique question ids answered correctly (dedup across attempts)
+      if (cr.correctQuestionIds?.length) {
+        for (const qid of cr.correctQuestionIds) existing.correctIds.add(qid);
+      } else if (cr.correct > 0) {
+        // Legacy records without question ids: synthesize unique keys so the
+        // count is preserved (capped at the chapter bank).
+        for (let i = 0; i < cr.correct; i++) {
+          existing.correctIds.add(`legacy_${record.id}_${key}_${i}`);
+        }
+      }
+      // Denominator: full chapter bank (keep the largest known count)
+      existing.total = Math.max(existing.total, cr.questionCount || 0);
       chapterMap.set(key, existing);
       if (cr.chapterId && !chapterIdMap.has(key)) {
         chapterIdMap.set(key, cr.chapterId);
@@ -98,21 +131,28 @@ export function getTradeStats(tradeId: string) {
   }
 
   const chapterPerformance = Array.from(chapterMap.entries())
-    .map(([key, data]) => ({
-      chapterNumber: data.chapterNumber,
-      chapterId: chapterIdMap.get(key) || key,
-      chapterName: data.name,
-      correct: data.correct,
-      total: data.total,
-      percentage: data.total > 0 ? Math.round((data.correct / data.total) * 100) : 0,
-      tradeName,
-      tradeId: firstTradeId,
-    }))
+    .map(([key, data]) => {
+      const correct = data.correctIds.size;
+      const total = data.total;
+      return {
+        chapterNumber: data.chapterNumber,
+        chapterId: chapterIdMap.get(key) || key,
+        chapterName: data.name,
+        correct,
+        total,
+        attempted: data.attemptedIds.size,
+        percentage: total > 0 ? Math.round((correct / total) * 100) : 0,
+        tradeName,
+        tradeId: firstTradeId,
+      };
+    })
     .sort((a, b) => a.chapterNumber - b.chapterNumber);
 
-  const strengths = chapterPerformance.filter(c => c.total >= 5 && c.percentage >= 75).slice(0, 3);
-  const weaknesses = chapterPerformance.filter(c => c.total >= 5 && c.percentage < 60).slice(0, 3);
-  const needsReview = chapterPerformance.filter(c => c.total >= 3 && c.percentage < 60);
+  // Confidence thresholds use ATTEMPTED (unique questions actually tried), not
+  // the full bank — otherwise every chapter passes and the sections duplicate.
+  const strengths = chapterPerformance.filter(c => c.attempted >= 5 && c.percentage >= 75).slice(0, 3);
+  const weaknesses = chapterPerformance.filter(c => c.attempted >= 5 && c.percentage < 60).slice(0, 3);
+  const needsReview = chapterPerformance.filter(c => c.attempted >= 3 && c.percentage < 60);
 
   return {
     totalExams,

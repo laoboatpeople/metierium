@@ -45,6 +45,7 @@ interface Chapter {
   name: string;
   theoryContent: string;
   tradeId: string;
+  questionCount?: number;
 }
 
 interface Trade {
@@ -61,7 +62,7 @@ interface ExamResult {
   score: number;
   answers: { questionId: string; selected: string; correct: boolean; chapterId: string | null }[];
   timeSpent: number;
-  chapterBreakdown: { chapterId: string | null; chapterName: string; correct: number; total: number }[];
+  chapterBreakdown: { chapterId: string | null; chapterName: string; correct: number; total: number; questionCount?: number; correctQuestionIds?: string[]; attemptedQuestionIds?: string[] }[];
 }
 
 type ExamPhase = 'setup' | 'exam' | 'result';
@@ -443,7 +444,7 @@ function ExamsPage() {
     setTimerActive(false);
     let correct = 0;
     const resultAnswers: ExamResult['answers'] = [];
-    const chapterMap = new Map<string, { correct: number; total: number; name: string }>();
+    const chapterMap = new Map<string, { correct: number; total: number; name: string; correctIds: string[]; attemptedIds: string[] }>();
 
     for (const q of questions) {
       const selected = answers[q.id] || '';
@@ -459,19 +460,30 @@ function ExamsPage() {
       const chId = q.chapterId || 'none';
       if (!chapterMap.has(chId)) {
         const ch = chapters.find((c) => c.id === chId);
-        chapterMap.set(chId, { correct: 0, total: 0, name: ch ? ch.name : t('examsGeneral') });
+        chapterMap.set(chId, { correct: 0, total: 0, name: ch ? ch.name : t('examsGeneral'), correctIds: [], attemptedIds: [] });
       }
       const entry = chapterMap.get(chId)!;
       entry.total++;
-      if (isCorrect) entry.correct++;
+      entry.attemptedIds.push(q.id);
+      if (isCorrect) {
+        entry.correct++;
+        entry.correctIds.push(q.id);
+      }
     }
 
-    const chapterBreakdown = Array.from(chapterMap.entries()).map(([chapterId, data]) => ({
-      chapterId,
-      chapterName: data.name,
-      correct: data.correct,
-      total: data.total,
-    }));
+    const chapterBreakdown = Array.from(chapterMap.entries()).map(([chapterId, data]) => {
+      const ch = chapters.find((c) => c.id === chapterId);
+      return {
+        chapterId,
+        chapterName: data.name,
+        correct: data.correct,
+        total: data.total,
+        // Full approved question bank of the chapter (denominator for chapter stats)
+        questionCount: ch?.questionCount || data.total,
+        correctQuestionIds: data.correctIds,
+        attemptedQuestionIds: data.attemptedIds,
+      };
+    });
 
     const score = Math.round((correct / questions.length) * 100);
     const result: ExamResult = {
@@ -505,6 +517,8 @@ function ExamsPage() {
           total: cb.total,
           tradeName: getTradeName(selectedTrade, trades, locale),
           chapterId: cb.chapterId || undefined,
+          questionCount: (cb as any).questionCount,
+          correctQuestionIds: (cb as any).correctQuestionIds,
         })),
         difficulty,
         passed: score >= PASS_THRESHOLD,

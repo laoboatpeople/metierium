@@ -516,6 +516,7 @@ const fr: Record<string, unknown> = {
   statsClearConfirmDesc: 'Toutes vos statistiques d\u2019examens seront définitivement supprim\u00e9es. Cette action est irr\u00e9versible.',
   statsCancel: 'Annuler',
   statsConfirmClear: 'Effacer',
+  resetStats: 'Réinitialiser les stats',
 
   // Exams page
   examsHeaderTitle: 'Simulation Examen',
@@ -1370,6 +1371,7 @@ const en: Record<string, string> = {
   statsClearConfirmDesc: 'All your exam statistics will be permanently deleted. This action is irreversible.',
   statsCancel: 'Cancel',
   statsConfirmClear: 'Clear',
+  resetStats: 'Reset stats',
 
   // Exams page
   examsHeaderTitle: 'Practice Exam',

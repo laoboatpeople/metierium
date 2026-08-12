@@ -258,7 +258,7 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
 
     // ── Chapter-level performance (reconstructed from DB, mirrors student localStorage) ──
     // Join ExamAttemptQuestion -> Question(chapterId, tradeId) -> Chapter(number, name, nameFr)
-    type ChapterAgg = { chapterId: string; tradeId: string; correct: number; total: number };
+    type ChapterAgg = { chapterId: string; tradeId: string; correctIds: Set<string>; attemptedIds: Set<string> };
     const chapterAgg = new Map<string, ChapterAgg>();
     if (attempts.length > 0) {
       const attemptIds = attempts.map((a) => a.id);
@@ -266,7 +266,7 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
         where: { attemptId: { in: attemptIds } },
         select: {
           isCorrect: true,
-          question: { select: { chapterId: true, tradeId: true } },
+          question: { select: { id: true, chapterId: true, tradeId: true } },
         },
       });
       for (const row of qRows) {
@@ -274,9 +274,9 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
         const trId = row.question?.tradeId;
         if (!chId || !trId) continue;
         const key = `${trId}::${chId}`;
-        const agg = chapterAgg.get(key) || { chapterId: chId, tradeId: trId, correct: 0, total: 0 };
-        agg.total += 1;
-        if (row.isCorrect) agg.correct += 1;
+        const agg = chapterAgg.get(key) || { chapterId: chId, tradeId: trId, correctIds: new Set<string>(), attemptedIds: new Set<string>() };
+        if (row.question?.id) agg.attemptedIds.add(row.question.id);
+        if (row.isCorrect && row.question?.id) agg.correctIds.add(row.question.id);
         chapterAgg.set(key, agg);
       }
     }
@@ -291,10 +291,26 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
       : [];
     const chapterMap = new Map(chapters.map((c) => [c.id, c]));
 
-    const chapterPerformance = [...chapterAgg.values()]
-      .map((agg) => {
+    // Denominator = the chapter's full question bank (metierium has no APPROVED
+    // status), so unanswered questions count as incorrect (same rule as realtylicence).
+    const chapterCounts = chapterAgg.size > 0
+      ? await prisma.question.groupBy({
+          by: ['chapterId', 'tradeId'],
+          where: {
+            chapterId: { in: chapterIds },
+            tradeId: { in: [...new Set([...chapterAgg.values()].map((c) => c.tradeId))] },
+          },
+          _count: { _all: true },
+        })
+      : [];
+    const totalByKey = new Map(chapterCounts.map((c) => [`${c.tradeId}::${c.chapterId}`, c._count._all]));
+
+    const chapterPerformance = [...chapterAgg.entries()]
+      .map(([key, agg]) => {
         const ch = chapterMap.get(agg.chapterId);
         const trade = attemptTradeMap.get(agg.tradeId);
+        const total = totalByKey.get(key) ?? 0;
+        const correct = agg.correctIds.size;
         return {
           chapterId: agg.chapterId,
           tradeId: agg.tradeId,
@@ -304,17 +320,20 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
           tradeCode: trade?.code ?? agg.tradeId,
           tradeName: trade?.name ?? agg.tradeId,
           tradeNameFr: trade?.nameFr ?? trade?.name ?? agg.tradeId,
-          correct: agg.correct,
-          total: agg.total,
-          percentage: agg.total > 0 ? Math.round((agg.correct / agg.total) * 100) : 0,
+          correct,
+          total,
+          attempted: agg.attemptedIds.size,
+          percentage: total > 0 ? Math.round((correct / total) * 100) : 0,
         };
       })
       .sort((a, b) => a.chapterNumber - b.chapterNumber);
 
-    // Strengths / weaknesses / needs-review (same thresholds as student dashboard)
-    const strengths = chapterPerformance.filter((c) => c.total >= 5 && c.percentage >= 75).slice(0, 3);
-    const weaknesses = chapterPerformance.filter((c) => c.total >= 5 && c.percentage < 60).slice(0, 3);
-    const needsReview = chapterPerformance.filter((c) => c.total >= 3 && c.percentage < 60);
+    // Strengths / weaknesses / needs-review (same thresholds as student dashboard).
+    // Thresholds use ATTEMPTED (unique questions actually tried), not the full
+    // bank — otherwise every chapter passes and the sections duplicate.
+    const strengths = chapterPerformance.filter((c) => c.attempted >= 5 && c.percentage >= 75).slice(0, 3);
+    const weaknesses = chapterPerformance.filter((c) => c.attempted >= 5 && c.percentage < 60).slice(0, 3);
+    const needsReview = chapterPerformance.filter((c) => c.attempted >= 3 && c.percentage < 60);
 
     // ── Tutor activity ─────────────────────────────────────────
     const [chatSessionCount, chatMessageCount, lastChat, chatSessions] = await Promise.all([

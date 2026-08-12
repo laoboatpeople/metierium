@@ -26,6 +26,7 @@ import {
   Loader2,
   Brain,
   RefreshCw,
+  Trash2,
 } from 'lucide-react';
 import { getExamHistory, getTradeStats, clearExamHistory, ExamRecord } from '@/lib/examStorage';
 
@@ -216,8 +217,37 @@ export default function DashboardPage() {
   const [examHistory, setExamHistoryState] = useState<ExamRecord[]>([]);
   const [selectedTrade, setSelectedTrade] = useState<string>('');
   const [showClearConfirm, setShowClearConfirm] = useState(false);
+  const [clearing, setClearing] = useState(false);
+  const [clearError, setClearError] = useState<string | null>(null);
   const { t, locale } = useLocale();
   const [chapterNameMap, setChapterNameMap] = useState<Record<string, string>>({});
+
+  async function handleClearStats() {
+    setClearing(true);
+    setClearError(null);
+    try {
+      // Delete DB attempts first (if authenticated), then clear localStorage.
+      const token = typeof window !== 'undefined' ? localStorage.getItem('token') : null;
+      if (token) {
+        const res = await fetch(`${API_BASE}/api/attempts`, {
+          method: 'DELETE',
+          headers: { Authorization: `Bearer ${token}` },
+        });
+        if (!res.ok) {
+          const errBody = await res.json().catch(() => ({ message: 'Request failed' }));
+          throw new Error(errBody.message || `HTTP ${res.status}`);
+        }
+      }
+      clearExamHistory();
+      setExamHistoryState([]);
+      setShowClearConfirm(false);
+      loadStats();
+    } catch (err) {
+      setClearError(err instanceof Error ? err.message : t('somethingWentWrong'));
+    } finally {
+      setClearing(false);
+    }
+  }
 
   function loadStats() {
     setLoading(true);
@@ -539,6 +569,13 @@ export default function DashboardPage() {
           <h1 className="text-xl font-bold text-[#F8FAFC]">{t('dashboard')}</h1>
           <p className="text-sm text-[#94A3B8] mt-0.5">{t('dashboardSubtitle')}</p>
         </div>
+        <button
+          onClick={() => setShowClearConfirm(true)}
+          className="shrink-0 flex items-center gap-1.5 text-xs font-medium text-[#EF4444] hover:text-[#DC2626] px-3 py-2 rounded-lg border border-[#EF4444]/30 hover:bg-[#EF4444]/10 transition-colors"
+        >
+          <Trash2 size={14} />
+          {t('resetStats')}
+        </button>
       </motion.div>
 
       {/* Stat cards — 5 across */}
@@ -853,14 +890,6 @@ export default function DashboardPage() {
             <BarChart3 size={20} className="text-[#3B82F6]" />
             {t('dashboardTradeStats')}
           </h2>
-          {examHistory.length > 0 && (
-            <button
-              onClick={() => setShowClearConfirm(true)}
-              className="text-xs text-[#EF4444] hover:text-[#DC2626] px-3 py-1.5 rounded-lg border border-[#EF4444]/20 hover:bg-[#EF4444]/10 transition-colors"
-            >
-              {t('dashboardClearHistory')}
-            </button>
-          )}
         </div>
 
         {examHistory.length === 0 ? (
@@ -1138,22 +1167,23 @@ export default function DashboardPage() {
             <p className="text-sm text-[#94A3B8] mb-4">
               {t('statsClearConfirmDesc')}
             </p>
+            {clearError && (
+              <p className="text-sm text-[#EF4444] mb-4">{clearError}</p>
+            )}
             <div className="flex gap-3">
               <button
                 onClick={() => setShowClearConfirm(false)}
-                className="flex-1 py-2.5 border border-[#2D3A52] rounded-lg text-sm text-[#94A3B8] hover:text-[#F8FAFC]"
+                disabled={clearing}
+                className="flex-1 py-2.5 border border-[#2D3A52] rounded-lg text-sm text-[#94A3B8] hover:text-[#F8FAFC] disabled:opacity-50"
               >
                 {t('statsCancel')}
               </button>
               <button
-                onClick={() => {
-                  clearExamHistory();
-                  setExamHistoryState([]);
-                  setShowClearConfirm(false);
-                }}
-                className="flex-1 py-2.5 bg-[#EF4444] rounded-lg text-sm text-white font-medium hover:bg-[#DC2626]"
+                onClick={handleClearStats}
+                disabled={clearing}
+                className="flex-1 py-2.5 bg-[#EF4444] rounded-lg text-sm text-white font-medium hover:bg-[#DC2626] disabled:opacity-50"
               >
-                {t('statsConfirmClear')}
+                {clearing ? t('loading') : t('statsConfirmClear')}
               </button>
             </div>
           </div>
