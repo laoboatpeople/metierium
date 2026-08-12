@@ -1070,7 +1070,12 @@ export default function DashboardPage() {
                                   style={{ width: `${ch.percentage}%`, backgroundColor: color }}
                                 />
                               </div>
-                              <span className="text-[10px] text-[#64748B] w-12 text-right">{ch.correct}/{ch.total}</span>
+                              <span className="text-[10px] text-[#64748B] text-right">
+                                {ch.correct}/{ch.attempted}
+                                {ch.total > ch.attempted && (
+                                  <span className="text-[#64748B]/60"> · {ch.total} {locale === 'fr' ? 'en chapitre' : 'in chapter'}</span>
+                                )}
+                              </span>
                             </div>
                           </div>
                         );

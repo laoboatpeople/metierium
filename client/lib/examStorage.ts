@@ -134,14 +134,17 @@ export function getTradeStats(tradeId: string) {
     .map(([key, data]) => {
       const correct = data.correctIds.size;
       const total = data.total;
+      const attempted = data.attemptedIds.size;
       return {
         chapterNumber: data.chapterNumber,
         chapterId: chapterIdMap.get(key) || key,
         chapterName: data.name,
         correct,
         total,
-        attempted: data.attemptedIds.size,
-        percentage: total > 0 ? Math.round((correct / total) * 100) : 0,
+        attempted,
+        // Denominator = what the user actually attempted, so a 10-question
+        // quiz shows 3/10, not 3/57. The full bank (total) is shown as context.
+        percentage: attempted > 0 ? Math.round((correct / attempted) * 100) : 0,
         tradeName,
         tradeId: firstTradeId,
       };

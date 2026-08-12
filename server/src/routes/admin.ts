@@ -311,6 +311,7 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
         const trade = attemptTradeMap.get(agg.tradeId);
         const total = totalByKey.get(key) ?? 0;
         const correct = agg.correctIds.size;
+        const attempted = agg.attemptedIds.size;
         return {
           chapterId: agg.chapterId,
           tradeId: agg.tradeId,
@@ -322,8 +323,10 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
           tradeNameFr: trade?.nameFr ?? trade?.name ?? agg.tradeId,
           correct,
           total,
-          attempted: agg.attemptedIds.size,
-          percentage: total > 0 ? Math.round((correct / total) * 100) : 0,
+          attempted,
+          // Denominator = what the user actually attempted, so a 10-question
+          // quiz shows 3/10, not 3/57. The full bank (total) is shown as context.
+          percentage: attempted > 0 ? Math.round((correct / attempted) * 100) : 0,
         };
       })
       .sort((a, b) => a.chapterNumber - b.chapterNumber);
