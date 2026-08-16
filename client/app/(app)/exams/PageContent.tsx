@@ -819,6 +819,17 @@ function ExamsPage() {
                             {isChSelected && <CheckCircle size={10} className="text-white" />}
                           </div>
                           <span className={`truncate ${isSimLocked || isLocked ? 'text-[#64748B]/50' : ''}`}>Ch. {ch.number} — {ch.name}</span>
+                          {!isSimLocked && !isLocked && (
+                            <a
+                              href={`/theory?chapterId=${ch.id}`}
+                              onClick={(e) => e.stopPropagation()}
+                              className="ml-auto flex items-center justify-center gap-1 px-2.5 py-1 bg-blue/10 border border-blue/20 text-blue rounded-lg text-[10px] font-medium hover:bg-blue/20 transition-colors whitespace-nowrap"
+                              title={t('examsStudyChapterDesc')}
+                            >
+                              <BookOpen size={11} />
+                              {t('examsStudyChapter')}
+                            </a>
+                          )}
                           {isLocked && <Lock size={12} className="shrink-0 text-[#64748B]/40 ml-auto" />}
                         </label>
                       );
