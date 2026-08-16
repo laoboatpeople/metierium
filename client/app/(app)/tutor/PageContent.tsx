@@ -35,6 +35,10 @@ function renderAIResponse(content: string): string {
   });
 
   html = html
+    // Markdown headings (# → h3, ## → h4, ### → h5) — keep visual hierarchy small in chat
+    .replace(/^### (.+)$/gm, '<h5 class="text-sm font-semibold mt-3 mb-1 text-[#F8FAFC]">$1</h5>')
+    .replace(/^## (.+)$/gm, '<h4 class="text-base font-semibold mt-3 mb-1 text-[#F8FAFC]">$1</h4>')
+    .replace(/^# (.+)$/gm, '<h3 class="text-lg font-semibold mt-3 mb-1 text-[#F8FAFC]">$1</h3>')
     // Bold markers
     .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
     // Horizontal rules
