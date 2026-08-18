@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Nav from '@/components/Nav';
+import Captcha from '@/components/Captcha';
 import { Send, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
@@ -10,6 +11,7 @@ export default function ContactPage() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  const [captchaToken, setCaptchaToken] = useState<string | null>(null);
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
   const [statusMsg, setStatusMsg] = useState('');
 
@@ -19,6 +21,12 @@ export default function ContactPage() {
     if (!name.trim() || !email.trim() || !message.trim()) {
       setStatus('error');
       setStatusMsg(t('contactValidationError'));
+      return;
+    }
+
+    if (!captchaToken) {
+      setStatus('error');
+      setStatusMsg(t('contactCaptchaError'));
       return;
     }
 
@@ -35,6 +43,7 @@ export default function ContactPage() {
             name: name.trim(),
             email: email.trim(),
             message: message.trim(),
+            turnstileToken: captchaToken,
           }),
         }
       );
@@ -138,6 +147,9 @@ export default function ContactPage() {
                   {statusMsg}
                 </div>
               )}
+
+              {/* Security check */}
+              <Captcha onVerify={(token) => setCaptchaToken(token)} onExpire={() => setCaptchaToken(null)} />
 
               {/* Submit */}
               <button

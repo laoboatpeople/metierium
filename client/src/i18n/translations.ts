@@ -732,6 +732,7 @@ const fr: Record<string, unknown> = {
   contactSuccessDesc: 'Votre message a été envoyé avec succès ! Nous vous répondrons dans les plus brefs délais.',
   contactSendAnother: 'Envoyer un autre message',
   contactValidationError: 'Veuillez remplir tous les champs.',
+  contactCaptchaError: 'Veuillez compléter le captcha de sécurité.',
   contactGenericError: 'Une erreur est survenue. Veuillez réessayer.',
   contactAltEmail: 'Vous pouvez aussi nous écrire directement à',
 
@@ -1596,6 +1597,7 @@ const en: Record<string, string> = {
   contactSuccessDesc: 'Your message has been sent successfully! We will get back to you as soon as possible.',
   contactSendAnother: 'Send another message',
   contactValidationError: 'Please fill in all fields.',
+  contactCaptchaError: 'Please complete the security captcha.',
   contactGenericError: 'An error occurred. Please try again.',
   contactAltEmail: 'You can also email us directly at',
 

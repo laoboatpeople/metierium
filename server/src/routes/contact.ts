@@ -12,7 +12,7 @@ const FROM_EMAIL = 'Metierium <info@metierium.com>';
  * Sends a contact form submission via email + saves to DB.
  */
 router.post('/', async (req: Request, res: Response): Promise<void> => {
-  const { name, email, message } = req.body;
+  const { name, email, message, turnstileToken } = req.body;
 
   if (!name || !email || !message) {
     res.status(400).json({ error: 'Name, email, and message are required' });
@@ -24,6 +24,32 @@ router.post('/', async (req: Request, res: Response): Promise<void> => {
   if (!emailRegex.test(email)) {
     res.status(400).json({ error: 'Please provide a valid email address.' });
     return;
+  }
+
+  // Cloudflare Turnstile — required on public forms (anti-spam)
+  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
+  if (turnstileSecret) {
+    if (!turnstileToken || typeof turnstileToken !== 'string' || turnstileToken.length < 10) {
+      res.status(400).json({ error: 'Please complete the security check and try again.' });
+      return;
+    }
+    try {
+      const form = new URLSearchParams();
+      form.append('secret', turnstileSecret);
+      form.append('response', turnstileToken);
+      const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
+        method: 'POST',
+        body: form,
+      });
+      const data = (await verifyRes.json()) as { success?: boolean };
+      if (data.success !== true) {
+        res.status(400).json({ error: 'Security check failed. Please try again.' });
+        return;
+      }
+    } catch {
+      res.status(500).json({ error: 'Security check unavailable. Please try again.' });
+      return;
+    }
   }
 
   const apiKey = process.env.RESEND_API_KEY;
