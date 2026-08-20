@@ -611,9 +611,10 @@ export default function AdminDashboard() {
         ) : data?.lastRegisteredUsers && data.lastRegisteredUsers.length > 0 ? (
           <div className="space-y-1">
             {data.lastRegisteredUsers.map((user) => (
-              <div
+              <Link
                 key={user.id}
-                className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-[#0F1525] transition-colors"
+                href={`/admin/users/${user.id}`}
+                className="flex items-center gap-3 py-2.5 px-3 rounded-lg hover:bg-[#0F1525] transition-colors cursor-pointer"
               >
                 <UserPlus size={14} className="text-[#64748B] flex-shrink-0" />
                 <div className="min-w-0 flex-1">
@@ -636,7 +637,7 @@ export default function AdminDashboard() {
                 <span className="text-[10px] text-[#64748B] flex-shrink-0">
                   {formatRelativeTime(user.createdAt)}
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
         ) : (
