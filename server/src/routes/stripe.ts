@@ -140,9 +140,11 @@ router.post('/webhook', async (req: Request, res: Response): Promise<void> => {
         const now = new Date();
         const periodEnd = plan === 'LIFETIME'
           ? new Date('2099-12-31')
-          : new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
+          : plan === 'PRO'
+            ? new Date(now.getTime() + 365 * 24 * 60 * 60 * 1000)
+            : new Date(now.getTime() + 30 * 24 * 60 * 60 * 1000);
 
-        const dbPlan = plan === 'LIFETIME' ? 'LIFETIME' : plan === 'PRO' ? 'MONTHLY' : 'MONTHLY';
+        const dbPlan = plan === 'LIFETIME' ? 'LIFETIME' : plan === 'PRO' ? 'YEARLY' : 'MONTHLY';
 
         // Upsert subscription
         const existing = await prisma.subscription.findFirst({

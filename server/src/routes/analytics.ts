@@ -215,7 +215,7 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
     }
 
     // Plan distribution
-    const planDistribution: Record<string, number> = { FREE: 0, MONTHLY: 0, LIFETIME: 0 };
+    const planDistribution: Record<string, number> = { FREE: 0, MONTHLY: 0, YEARLY: 0, LIFETIME: 0 };
     if (Array.isArray(planDistributionRaw)) {
       for (const row of planDistributionRaw as Array<{ plan: string; count: bigint }>) {
         const key = row.plan?.toUpperCase() || 'FREE';
@@ -231,7 +231,7 @@ router.get('/dashboard', async (req: Request, res: Response): Promise<void> => {
       select: { plan: true, createdAt: true },
     });
 
-    const planAmount: Record<string, number> = { FREE: 0, MONTHLY: 2999, LIFETIME: 19900 };
+    const planAmount: Record<string, number> = { FREE: 0, MONTHLY: 2999, YEARLY: 9900, LIFETIME: 19900 };
     const revenueMap: Record<string, { month: string; amount: number }> = {};
     for (const sub of subsLast12Months) {
       const monthKey = sub.createdAt.toISOString().slice(0, 7);

@@ -126,9 +126,9 @@ router.get('/', authenticate, async (req: Request, res: Response): Promise<void>
       select: { plan: true, subStatus: true },
     });
 
-    // Detect Pro: MONTHLY plan with no tradeId lock
+    // Detect Pro: YEARLY (or legacy MONTHLY) plan with no tradeId lock
     let userPlan: string = dbUser?.plan || 'FREE';
-    if (userPlan === 'MONTHLY') {
+    if (userPlan === 'MONTHLY' || userPlan === 'YEARLY') {
       const activeSub = await prisma.subscription.findFirst({
         where: { userId: req.user!.id, status: { in: ['ACTIVE', 'CANCELLED'] } },
         orderBy: { createdAt: 'desc' },

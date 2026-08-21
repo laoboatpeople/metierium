@@ -29,7 +29,8 @@ const FROM = 'Metierium <noreply@metierium.com>';
 
 const PLAN_LABELS: Record<string, { fr: string; en: string }> = {
   FREE: { fr: 'Gratuit', en: 'Free' },
-  MONTHLY: { fr: 'Mensuel (Pro)', en: 'Monthly (Pro)' },
+  MONTHLY: { fr: 'Mensuel (Essentiel)', en: 'Monthly (Essential)' },
+  YEARLY: { fr: 'Annuel (Pro)', en: 'Yearly (Pro)' },
   LIFETIME: { fr: 'À vie', en: 'Lifetime' },
 };
 

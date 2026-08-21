@@ -155,12 +155,14 @@ const DIFFICULTY_LABELS: Record<string, { fr: string; en: string }> = {
 const PLAN_COLORS: Record<string, string> = {
   FREE: '#64748B',
   MONTHLY: '#3B82F6',
+  YEARLY: '#8B5CF6',
   LIFETIME: '#10B981',
 };
 
 const PLAN_LABELS: Record<string, { fr: string; en: string }> = {
   FREE: { fr: 'Gratuit', en: 'Free' },
   MONTHLY: { fr: 'Mensuel', en: 'Monthly' },
+  YEARLY: { fr: 'Annuel (Pro)', en: 'Yearly (Pro)' },
   LIFETIME: { fr: 'À vie', en: 'Lifetime' },
 };
 
@@ -629,6 +631,8 @@ export default function AdminDashboard() {
                       ? 'bg-[#10B981]/15 text-[#10B981]'
                       : user.plan === 'MONTHLY'
                       ? 'bg-[#3B82F6]/15 text-[#3B82F6]'
+                      : user.plan === 'YEARLY'
+                      ? 'bg-[#8B5CF6]/15 text-[#8B5CF6]'
                       : 'bg-[#64748B]/15 text-[#64748B]'
                   }`}
                 >

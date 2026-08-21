@@ -169,8 +169,8 @@ router.get('/me', authenticate, async (req: Request, res: Response): Promise<voi
       name: user.name,
       role: user.role,
       plan: (() => {
-        // Pro is stored as MONTHLY but has no tradeId lock
-        if (user.plan === 'MONTHLY' && user.subscription[0] && !user.subscription[0].tradeId) {
+        // Pro is stored as YEARLY (or legacy MONTHLY) but has no tradeId lock
+        if ((user.plan === 'MONTHLY' || user.plan === 'YEARLY') && user.subscription[0] && !user.subscription[0].tradeId) {
           return 'PRO';
         }
         return user.plan;

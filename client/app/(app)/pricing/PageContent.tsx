@@ -125,6 +125,7 @@ export default function PricingPage() {
           const map: Record<string, string> = {
             'FREE': 'free',
             'MONTHLY': 'essential',
+            'YEARLY': 'pro',
             'PRO': 'pro',
             'LIFETIME': 'lifetime',
           };

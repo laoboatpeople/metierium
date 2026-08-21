@@ -23,7 +23,7 @@ interface Subscription {
   id: string;
   userId: string;
   user: SubscriptionUser;
-  plan: 'FREE' | 'MONTHLY' | 'LIFETIME';
+  plan: 'FREE' | 'MONTHLY' | 'YEARLY' | 'LIFETIME';
   status: string;
   startedAt: string;
   renewsAt: string;
@@ -47,6 +47,7 @@ interface SubscriptionsData {
 const PLAN_COLORS: Record<string, string> = {
   FREE: 'bg-[#64748B]',
   MONTHLY: 'bg-[#3B82F6]',
+  YEARLY: 'bg-[#8B5CF6]',
   LIFETIME: 'bg-[#06B6D4]',
 };
 
@@ -59,6 +60,7 @@ const STATUS_COLORS: Record<string, string> = {
 const PLAN_FEATURES: Record<string, string[]> = {
   FREE: ['1 trade category', 'Basic statistics', 'Standard explanations'],
   MONTHLY: ['Unlimited questions', 'All trade categories', 'Progress tracking', 'Full AI tutor access', 'Unlimited exams', 'Detailed explanations'],
+  YEARLY: ['Unlimited questions', 'All trade categories', 'Progress tracking', 'Full AI tutor access', 'Unlimited exams', 'Detailed explanations'],
   LIFETIME: ['Unlimited questions', 'All trade categories', 'Progress tracking', 'Full AI tutor access', 'Unlimited exams', 'Detailed explanations'],
 };
 
@@ -230,11 +232,12 @@ export default function AdminSubscriptionsPage() {
       </div>
 
       {/* Plans */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-8">
         {[
           { plan: 'FREE', label: 'Free', price: '$0', period: '', features: PLAN_FEATURES.FREE },
-          { plan: 'MONTHLY', label: 'Monthly', price: '$29.99', period: '/mo', features: PLAN_FEATURES.MONTHLY },
-          { plan: 'LIFETIME', label: 'Lifetime', price: '$199', period: ' once', features: PLAN_FEATURES.LIFETIME },
+          { plan: 'MONTHLY', label: 'Monthly', price: '$29', period: '/mo', features: PLAN_FEATURES.MONTHLY },
+          { plan: 'YEARLY', label: 'Yearly', price: '$99', period: '/yr', features: PLAN_FEATURES.YEARLY },
+          { plan: 'LIFETIME', label: 'Lifetime', price: '$399', period: ' once', features: PLAN_FEATURES.LIFETIME },
         ].map(({ plan, label, price, period, features }) => (
           <div
             key={plan}
@@ -299,10 +302,11 @@ export default function AdminSubscriptionsPage() {
             onChange={(e) => { setFilterPlan(e.target.value); setPage(1); }}
             className="px-3 py-2 bg-[#0A0E1A] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] focus:outline-none focus:border-[#3B82F6]"
           >
-            <option value="" className="bg-[#0A0E1A]">All Plans</option>
-            <option value="FREE" className="bg-[#0A0E1A]">Free</option>
-            <option value="MONTHLY" className="bg-[#0A0E1A]">Monthly</option>
-            <option value="LIFETIME" className="bg-[#0A0E1A]">Lifetime</option>
+            <option value='' className='bg-[#0A0E1A]'>All Plans</option>
+            <option value='FREE' className='bg-[#0A0E1A]'>Free</option>
+            <option value='MONTHLY' className='bg-[#0A0E1A]'>Monthly</option>
+            <option value='YEARLY' className='bg-[#0A0E1A]'>Yearly</option>
+            <option value='LIFETIME' className='bg-[#0A0E1A]'>Lifetime</option>
           </select>
         </div>
 

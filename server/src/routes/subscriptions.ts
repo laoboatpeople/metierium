@@ -11,6 +11,7 @@ router.use(requireRoles('ADMIN'));
 const PLAN_PRICES: Record<string, number> = {
   FREE: 0,
   MONTHLY: 2999,
+  YEARLY: 9900,
   LIFETIME: 19900,
 };
 
@@ -35,7 +36,7 @@ router.get('/', async (req: Request, res: Response): Promise<void> => {
     }
 
     if (req.query.plan) {
-      const validPlans = ['FREE', 'MONTHLY', 'LIFETIME'];
+      const validPlans = ['FREE', 'MONTHLY', 'YEARLY', 'LIFETIME'];
       if (validPlans.includes(req.query.plan as string)) {
         where.plan = req.query.plan;
       }
@@ -61,8 +62,9 @@ router.get('/', async (req: Request, res: Response): Promise<void> => {
     const totalActive = allSubscriptions.filter((s) => s.status === 'ACTIVE').length;
     const activeSubscriptions = allSubscriptions.filter((s) => s.status === 'ACTIVE');
     const monthlySubs = activeSubscriptions.filter((s) => s.plan === 'MONTHLY').length;
+    const yearlySubs = activeSubscriptions.filter((s) => s.plan === 'YEARLY').length;
     const lifetimeSubs = activeSubscriptions.filter((s) => s.plan === 'LIFETIME').length;
-    const monthlyRevenue = (monthlySubs * PLAN_PRICES.MONTHLY) / 100;
+    const monthlyRevenue = (monthlySubs * PLAN_PRICES.MONTHLY + yearlySubs * PLAN_PRICES.YEARLY / 12) / 100;
     const yearlyRevenue = (lifetimeSubs * PLAN_PRICES.LIFETIME) / 100;
     const totalCancelled = allSubscriptions.filter((s) => s.status === 'CANCELLED').length;
     const churnRate = allSubscriptions.length > 0
@@ -74,7 +76,7 @@ router.get('/', async (req: Request, res: Response): Promise<void> => {
       id: sub.id,
       userId: sub.userId,
       user: { name: sub.user.name, email: sub.user.email },
-      plan: sub.plan as 'FREE' | 'MONTHLY' | 'LIFETIME',
+      plan: sub.plan as 'FREE' | 'MONTHLY' | 'YEARLY' | 'LIFETIME',
       status: sub.status,
       startedAt: sub.createdAt.toISOString(),
       renewsAt: sub.currentPeriod ? sub.currentPeriod.toISOString() : sub.createdAt.toISOString(),

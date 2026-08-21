@@ -266,12 +266,14 @@ export default function AdminUsers() {
                       <span className={`inline-flex items-center gap-1 px-2 py-0.5 text-xs rounded border ${
                         u.plan?.toUpperCase() === 'MONTHLY'
                           ? 'bg-[#10B981]/10 text-[#10B981] border-[#10B981]/20'
+                          : u.plan?.toUpperCase() === 'YEARLY'
+                          ? 'bg-[#8B5CF6]/10 text-[#8B5CF6] border-[#8B5CF6]/20'
                           : u.plan?.toUpperCase() === 'LIFETIME'
                           ? 'bg-[#F59E0B]/10 text-[#F59E0B] border-[#F59E0B]/20'
                           : 'bg-[#64748B]/10 text-[#64748B] border-[#64748B]/20'
                       }`}>
                         <CreditCard size={10} />
-                        {u.plan?.toUpperCase() === 'MONTHLY' ? t('adminPlanMonthly') : u.plan?.toUpperCase() === 'LIFETIME' ? 'Lifetime' : t('adminPlanFree')}
+                        {u.plan?.toUpperCase() === 'MONTHLY' ? t('adminPlanMonthly') : u.plan?.toUpperCase() === 'YEARLY' ? 'Yearly (Pro)' : u.plan?.toUpperCase() === 'LIFETIME' ? 'Lifetime' : t('adminPlanFree')}
                       </span>
                     </td>
                     <td className="px-6 py-4">
@@ -401,6 +403,7 @@ export default function AdminUsers() {
                   >
                     <option value="FREE">FREE</option>
                     <option value="MONTHLY">MONTHLY</option>
+                    <option value="YEARLY">YEARLY (Pro)</option>
                     <option value="LIFETIME">LIFETIME</option>
                   </select>
                 </div>

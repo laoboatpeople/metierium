@@ -162,6 +162,7 @@ interface UserDetail {
 const PLAN_COLORS: Record<string, string> = {
   FREE: 'bg-[#64748B]/15 text-[#64748B]',
   MONTHLY: 'bg-[#3B82F6]/15 text-[#3B82F6]',
+  YEARLY: 'bg-[#8B5CF6]/15 text-[#8B5CF6]',
   LIFETIME: 'bg-[#10B981]/15 text-[#10B981]',
 };
 

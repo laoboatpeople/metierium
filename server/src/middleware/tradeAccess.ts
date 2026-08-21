@@ -24,9 +24,10 @@ export async function requireTradeAccess(req: Request, res: Response, next: Next
     orderBy: { createdAt: 'desc' },
   });
 
-  // LIFETIME or MONTHLY with null tradeId = access to ALL trades
+  // LIFETIME, YEARLY (Pro) or MONTHLY with null tradeId = access to ALL trades
   const hasAllAccess = activeSub && (
     activeSub.plan === 'LIFETIME' ||
+    (activeSub.plan === 'YEARLY' && !activeSub.tradeId) ||
     (activeSub.plan === 'MONTHLY' && !activeSub.tradeId)
   );
 
@@ -75,7 +76,7 @@ export async function getUserTradeAccess(userId: string): Promise<{
     return { type: 'all' };
   }
 
-  if (activeSub.plan === 'MONTHLY' && !activeSub.tradeId) {
+  if ((activeSub.plan === 'YEARLY' || activeSub.plan === 'MONTHLY') && !activeSub.tradeId) {
     return { type: 'all' };
   }
 
