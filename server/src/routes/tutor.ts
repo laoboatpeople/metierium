@@ -9,6 +9,7 @@ const FREE_TUTOR_MESSAGE_LIMIT = 100;
 interface ChatRequest {
   message: string;
   sessionId?: string;
+  chapterId?: string;
   history?: { role: string; content: string }[];
 }
 
@@ -21,7 +22,7 @@ interface ChatRequest {
 router.post('/', authenticate, async (req: Request, res: Response): Promise<void> => {
   try {
     const userId = (req as Request & { user: { id: string } }).user.id;
-    const { message, sessionId, history } = req.body as ChatRequest;
+    const { message, sessionId, chapterId, history } = req.body as ChatRequest;
 
     if (!message || typeof message !== 'string') {
       res.status(400).json({ message: 'Message is required' });
@@ -119,6 +120,7 @@ Communication style:
   * Coordonnateur SST / safety coordinator → https://metierium.com/theory?trade=coordonnateur-sst
   * Gestion des travaux / construction project management → https://metierium.com/theory?trade=gestion-travaux
   ALWAYS pick the single best-matching trade and give its specific ?trade= link. Only fall back to https://metierium.com/theory if the question genuinely spans multiple trades and none fits.
+  IMPORTANT PRIORITY: If a PRECISE DEEP LINK instruction is present later in this prompt (a chapterId provided for the user's question), that exact ?chapterId= link takes priority over this trade map — use it and do NOT use the ?trade= links for that question.
 - CROSS-SELL RULE: When a question touches on MULTIPLE trades offered by the platform (e.g., a Catégorie 16 electrician needs BOTH technical CMEQ content AND business management / RBQ exam prep), you MUST suggest ALL relevant trades the platform covers — not just the primary one. Never tell the user to "find external resources" for a topic that IS covered by another trade on this platform. Example: "Pour la partie technique → https://metierium.com/theory?trade=cmeq. Pour la gestion d'entreprise et la réglementation RBQ → https://metierium.com/theory?trade=gestion-travaux."
 - If the question is about a trade or topic NOT covered here, do NOT promote the platform — instead give the best external answer you can or suggest where to find that information. IMPORTANT: Start your response with the exact marker [UNCOVERED_TOPIC] on the first line so the system can flag it.
 - EXCEPTION: When the user asks you to explain an exam question that includes Question/Options/Correct answer fields (messages starting with "Question d'examen:" / "Exam question:" — sent by the platform's own quiz "ask AI tutor" button), the topic IS covered by the platform. NEVER mark such questions as [UNCOVERED_TOPIC] — explain them fully and reference the platform as a study resource with the relevant trade theory link.
@@ -176,8 +178,14 @@ Remember: students are preparing for high-stakes licensing exams. Accuracy and e
       ? '\n\nIMPORTANT: The user is asking about a question from this platform\'s own exam question bank (it includes Question/Options/Correct answer fields). This topic IS covered by the platform — NEVER tell the user it is not covered or outside scope. Explain it fully and reference the platform as a study resource with the relevant trade theory link.'
       : '';
 
+    // Precise theory deep-link: when the quiz passes the question's chapterId, force
+    // the tutor to link to that exact chapter (?chapterId=) instead of the generic trade section.
+    const chapterLinkInstruction = chapterId
+      ? `\n\nPRECISE DEEP LINK: The user's current question belongs to a specific theory chapter (chapterId: ${chapterId}). When you reference the platform as a study resource, use EXACTLY this deep link (it opens the correct chapter, NOT the generic section): https://metierium.com/theory?chapterId=${chapterId} — never use the ?trade= links for this question.`
+      : '';
+
     const messages = [
-      { role: 'system', content: systemPrompt + examBankInstruction },
+      { role: 'system', content: systemPrompt + examBankInstruction + chapterLinkInstruction },
       ...contextHistory,
       { role: 'user', content: message },
     ];

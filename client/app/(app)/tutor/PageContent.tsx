@@ -132,6 +132,7 @@ export default function TutorPage() {
   const [chatHistories, setChatHistories] = useState<ChatHistory[]>([]);
   const [currentChatId, setCurrentChatId] = useState<string | null>(null);
   const [serverSessionId, setServerSessionId] = useState<string | null>(null);
+  const [activeChapterId, setActiveChapterId] = useState<string | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(true);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
@@ -181,9 +182,10 @@ export default function TutorPage() {
       if (stored) {
         const ctx = JSON.parse(stored);
         localStorage.removeItem('tutorContext');
+        if (ctx.chapterId) setActiveChapterId(ctx.chapterId);
         if (ctx.question) {
           const prompt = ctx.question;
-          setTimeout(() => sendMessage(prompt), 500);
+          setTimeout(() => sendMessage(prompt, ctx.chapterId), 500);
         }
       }
     } catch {
@@ -226,7 +228,7 @@ export default function TutorPage() {
     });
   };
 
-  const sendMessage = async (text: string) => {
+  const sendMessage = async (text: string, chapterIdOverride?: string | null) => {
     if (!text.trim() || loading) return;
     setError(null);
 
@@ -243,7 +245,7 @@ export default function TutorPage() {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ message: text, sessionId: serverSessionId }),
+        body: JSON.stringify({ message: text, sessionId: serverSessionId, chapterId: chapterIdOverride || activeChapterId || undefined }),
       });
 
       if (!res.ok) {
