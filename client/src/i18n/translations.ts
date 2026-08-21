@@ -459,7 +459,7 @@ const fr: Record<string, unknown> = {
   faqQ6: "Quels sont les prérequis pour l'examen d'électricien ?",
   faqA6: "Pour passer l'examen d'électricien au Québec, il faut généralement avoir complété un DEP en électricité (1 800 heures), accumulé les heures d'apprentissage requises, et être inscrit à la Commission de la construction du Québec (CCQ).",
   faqQ7: "Combien coûte la préparation aux examens ?",
-  faqA7: "Nos plans commencent à 0$ pour le plan GRATUIT (accès limité à un métier), 29$/mois pour le plan ESSENTIEL (théorie complète et examens blancs) et 49$/mois pour le plan PRO (tous les métiers). Un accès À VIE est disponible pour 559$.",
+  faqA7: "Nos plans commencent à 0$ pour le plan GRATUIT (accès limité à un métier), 29$/mois pour le plan ESSENTIEL (théorie complète et examens blancs) et 99$/an pour le plan PRO (tous les métiers). Un accès À VIE est disponible pour 399$.",
   faqQ8: "Où puis-je passer l'examen de métier au Québec ?",
   faqA8: "Les examens sont administrés par la CCQ, la RBQ, le QBQ et les corporations (CMEQ, CMMTQ). La préparation peut se faire en ligne via notre plateforme avec théorie complète, 2 161 questions d'entraînement et un tuteur IA pour vous accompagner.",
 
@@ -686,6 +686,7 @@ const fr: Record<string, unknown> = {
   pricingPageCtaSubscribe: "S'abonner",
   pricingPageCtaLifetime: 'Acheter à vie',
   pricingPagePerMonth: '/mois',
+  pricingPagePerYear: '/an',
   pricingPageRedirecting: 'Redirection...',
   pricingPageCancelAnytime: 'Vous pouvez annuler à tout moment. Aucune question, aucun engagement.',
   pricingPageErrorPayment: 'Erreur de paiement',
@@ -1324,7 +1325,7 @@ const en: Record<string, string> = {
   faqQ6: "What are the prerequisites for the electrician exam?",
   faqA6: "To take the electrician exam in Quebec, you generally need to have completed a DEP in electricity (1,800 hours), accumulated the required apprenticeship hours, and be registered with the Commission de la construction du Québec (CCQ).",
   faqQ7: "How much does exam preparation cost?",
-  faqA7: "Our plans start at $0 for the FREE plan (limited access to one trade), $29/month for the ESSENTIAL plan (complete theory and practice exams), $49/month for the PRO plan (all trades). A LIFETIME plan is available for $559.",
+  faqA7: "Our plans start at $0 for the FREE plan (limited access to one trade), $29/month for the ESSENTIAL plan (complete theory and practice exams), and $99/year for the PRO plan (all trades). A LIFETIME plan is available for $399.",
   faqQ8: "Where can I take a trade exam in Quebec?",
   faqA8: "Exams are administered by the CCQ, RBQ, QBQ, and trade corporations (CMEQ, CMMTQ). Online preparation is available through our platform with complete theory, 2,161 practice questions, and an AI tutor to guide you.",
 
@@ -1551,6 +1552,7 @@ const en: Record<string, string> = {
   pricingPageCtaSubscribe: 'Subscribe',
   pricingPageCtaLifetime: 'Buy lifetime',
   pricingPagePerMonth: '/month',
+  pricingPagePerYear: '/year',
   pricingPageRedirecting: 'Redirecting...',
   pricingPageCancelAnytime: 'Cancel anytime. No questions asked, no commitment.',
   pricingPageErrorPayment: 'Payment error',

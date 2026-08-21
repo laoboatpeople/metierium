@@ -962,9 +962,9 @@ export default function LandingPage() {
                 <h3 className="text-base font-semibold text-[#8B5CF6] mb-1">PRO</h3>
                 <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">{t('pricingPagePlanProDesc')}</p>
                 <div className="flex items-baseline gap-0.5 mb-5">
-                  <span className="text-3xl font-bold text-[#F8FAFC]">49</span>
+                  <span className="text-3xl font-bold text-[#F8FAFC]">99</span>
                   <span className="text-xs text-[#94A3B8]">$</span>
-                  <span className="text-xs text-[#64748B]">{t('pricingPagePerMonth')}</span>
+                  <span className="text-xs text-[#64748B]">{t('pricingPagePerYear')}</span>
                 </div>
                 <ul className="space-y-2 mb-5">
                   {[
@@ -996,7 +996,7 @@ export default function LandingPage() {
                 <h3 className="text-base font-semibold text-[#F59E0B] mb-1">À VIE</h3>
                 <p className="text-[11px] text-[#94A3B8] mb-4 min-h-[28px]">{t('pricingPagePlanLifetimeDesc')}</p>
                 <div className="flex items-baseline gap-0.5 mb-5">
-                  <span className="text-3xl font-bold text-[#F8FAFC]">559</span>
+                  <span className="text-3xl font-bold text-[#F8FAFC]">399</span>
                   <span className="text-xs text-[#94A3B8]">$</span>
                 </div>
                 <ul className="space-y-2 mb-5">

@@ -53,8 +53,8 @@ export default function PricingPage() {
     {
       id: 'pro',
       name: t('pricingPagePro'),
-      price: '49',
-      period: t('pricingPagePerMonth'),
+      price: '99',
+      period: t('pricingPagePerYear'),
       desc: t('pricingPagePlanProDesc'),
       features: [
         { text: t('pricingFeatureAllTrades'), included: true },
@@ -71,7 +71,7 @@ export default function PricingPage() {
     {
       id: 'lifetime',
       name: t('pricingPageLifetime'),
-      price: '559',
+      price: '399',
       period: '',
       desc: t('pricingPagePlanLifetimeDesc'),
       features: [
