@@ -129,7 +129,9 @@ export function renderAIResponse(content: string): string {
     // Horizontal rules
     .replace(/^---+/gm, '<hr class="border-[#2D3A52] my-2" />')
     // Lines starting with - as list items
-    .replace(/^- (.+)$/gm, '<li class="ml-4 mb-1.5 text-[#94A3B8]">$1</li>');
+    .replace(/^- (.+)$/gm, '<li class="ml-4 mb-1.5 text-[#94A3B8]">$1</li>')
+    // Numbered list items (1. item)
+    .replace(/^(\d+)\. (.+)$/gm, '<li class="ml-4 mb-1.5 text-[#94A3B8]">$1. $2</li>');
 
   // ── Links: markdown [text](url) first, then bare URLs ──
   // Markdown links
@@ -157,12 +159,49 @@ export function renderAIResponse(content: string): string {
     return `<code class="bg-[#1A2332] px-2 py-0.5 rounded text-xs font-mono text-[#E2E8F0]">${cleaned}</code>`;
   });
 
+  // ── Markdown tables: | a | b | with --- separator → real <table> ──
+  const tableBlocks: string[] = [];
+  html = html.replace(/((?:^\s*\|.*\|\s*$[\r\n]*)+)/gm, (block) => {
+    const lines = block
+      .split('\n')
+      .map((l) => l.trim())
+      .filter((l) => l.startsWith('|') && l.endsWith('|') && l.length > 2);
+    if (lines.length < 2) return block;
+    const isSep = (l: string) => /^\|[\s:|-]+\|$/.test(l);
+    const cells = (r: string) => r.replace(/^\|/, '').replace(/\|$/, '').split('|').map((c) => c.trim());
+    let header: string | null = null;
+    let body = lines;
+    if (isSep(lines[1] ?? '')) {
+      header = lines[0];
+      body = lines.slice(2);
+    }
+    let t = '<div class="overflow-x-auto my-2.5"><table class="w-full text-xs border-collapse">';
+    if (header) {
+      t += '<thead><tr>' + cells(header)
+        .map((c) => `<th class="border border-[#2D3A52] bg-[#1A2332] px-2 py-1.5 text-left font-semibold text-[#F8FAFC]">${c}</th>`)
+        .join('') + '</tr></thead>';
+    }
+    t += '<tbody>';
+    for (const r of body) {
+      t += '<tr>' + cells(r)
+        .map((c) => `<td class="border border-[#2D3A52] px-2 py-1.5 text-[#94A3B8]">${c}</td>`)
+        .join('') + '</tr>';
+    }
+    t += '</tbody></table></div>';
+    const idx = tableBlocks.length;
+    tableBlocks.push(t);
+    return `\u0000TABLE${idx}\u0000`;
+  });
+
   // ── Convert remaining newlines to visible spacing (HTML collapses raw \n) ──
   // Double newlines = paragraph break; single newlines = line break.
   html = html.replace(/\n{2,}/g, '<div class="h-2.5"></div>').replace(/\n/g, '<br/>');
 
   // ── Re-insert the preserved SVG blocks ──
   html = html.replace(/\u0000SVG(\d+)\u0000/g, (_m, i: string) => svgBlocks[Number(i)] ?? '');
+
+  // ── Re-insert the preserved table blocks ──
+  html = html.replace(/\u0000TABLE(\d+)\u0000/g, (_m, i: string) => tableBlocks[Number(i)] ?? '');
 
   return html;
 }
