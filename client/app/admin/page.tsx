@@ -42,6 +42,7 @@ import {
 } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
+import { renderAIResponse } from '@/lib/ai-markdown';
 
 // ─── Types ───────────────────────────────────────────────────
 
@@ -957,7 +958,11 @@ export default function AdminDashboard() {
                           month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit',
                         })}
                       </p>
-                      <p className="text-sm whitespace-pre-wrap leading-relaxed">{msg.content}</p>
+                      {isUser ? (
+                        <p className="text-sm whitespace-pre-wrap leading-relaxed">{msg.content}</p>
+                      ) : (
+                        <div className="text-sm leading-relaxed" dangerouslySetInnerHTML={{ __html: renderAIResponse(msg.content) }} />
+                      )}
                     </div>
                   </div>
                 );
