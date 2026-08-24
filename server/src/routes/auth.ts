@@ -6,6 +6,7 @@ import { prisma } from '../config/database';
 import { env } from '../config/env';
 import { authenticate } from '../middleware/auth';
 import { getSettings } from '../config/settings';
+import { verifyTurnstileToken } from '../lib/turnstile';
 
 const router = Router();
 
@@ -18,7 +19,7 @@ function signToken(payload: { id: string; email: string; role: string }): string
  */
 router.post('/register', async (req: Request, res: Response): Promise<void> => {
   try {
-    const { email, password, name } = req.body;
+    const { email, password, name, turnstileToken } = req.body;
 
     if (!email || !password) {
       res.status(400).json({ message: 'Email and password are required' });
@@ -27,6 +28,13 @@ router.post('/register', async (req: Request, res: Response): Promise<void> => {
 
     if (password.length < 8) {
       res.status(400).json({ message: 'Password must be at least 8 characters' });
+      return;
+    }
+
+    // Cloudflare Turnstile — required on public auth forms (anti-bot), fail-closed
+    const captchaOk = await verifyTurnstileToken(turnstileToken);
+    if (!captchaOk) {
+      res.status(400).json({ message: 'Security verification failed. Please try again.' });
       return;
     }
 
@@ -101,10 +109,17 @@ router.post('/register', async (req: Request, res: Response): Promise<void> => {
  */
 router.post('/login', async (req: Request, res: Response): Promise<void> => {
   try {
-    const { email, password } = req.body;
+    const { email, password, turnstileToken } = req.body;
 
     if (!email || !password) {
       res.status(400).json({ message: 'Email and password are required' });
+      return;
+    }
+
+    // Cloudflare Turnstile — required on public auth forms (anti-bot), fail-closed
+    const captchaOk = await verifyTurnstileToken(turnstileToken);
+    if (!captchaOk) {
+      res.status(400).json({ message: 'Security verification failed. Please try again.' });
       return;
     }
 

@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { prisma } from '../config/database';
 import { authenticate } from '../middleware/auth';
+import { verifyTurnstileToken } from '../lib/turnstile';
 
 const router = Router();
 
@@ -26,30 +27,11 @@ router.post('/', async (req: Request, res: Response): Promise<void> => {
     return;
   }
 
-  // Cloudflare Turnstile — required on public forms (anti-spam)
-  const turnstileSecret = process.env.TURNSTILE_SECRET_KEY;
-  if (turnstileSecret) {
-    if (!turnstileToken || typeof turnstileToken !== 'string' || turnstileToken.length < 10) {
-      res.status(400).json({ error: 'Please complete the security check and try again.' });
-      return;
-    }
-    try {
-      const form = new URLSearchParams();
-      form.append('secret', turnstileSecret);
-      form.append('response', turnstileToken);
-      const verifyRes = await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify', {
-        method: 'POST',
-        body: form,
-      });
-      const data = (await verifyRes.json()) as { success?: boolean };
-      if (data.success !== true) {
-        res.status(400).json({ error: 'Security check failed. Please try again.' });
-        return;
-      }
-    } catch {
-      res.status(500).json({ error: 'Security check unavailable. Please try again.' });
-      return;
-    }
+  // Cloudflare Turnstile — required on public forms (anti-spam), fail-closed
+  const captchaOk = await verifyTurnstileToken(turnstileToken);
+  if (!captchaOk) {
+    res.status(400).json({ error: 'Please complete the security check and try again.' });
+    return;
   }
 
   const apiKey = process.env.RESEND_API_KEY;
