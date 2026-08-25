@@ -233,3 +233,51 @@ export async function sendContactReplyEmail(opts: {
     return false;
   }
 }
+
+export interface TutorFeedbackNotificationParams {
+  siteName: string;
+  adminUrl: string;
+  rating: 'up' | 'down';
+  comment: string | null;
+  userEmail: string;
+  userName: string | null;
+  messagePreview: string;
+  sessionTopic: string | null;
+}
+
+export async function sendTutorFeedbackNotification(
+  params: TutorFeedbackNotificationParams
+): Promise<boolean> {
+  const t = getTransporter();
+  if (!t) return false;
+
+  const emoji = params.rating === 'up' ? '👍' : '👎';
+  const subject = `${emoji} Tutor Feedback — ${params.siteName} — ${params.userName || params.userEmail}`;
+  const text = [
+    `━━━ Tutor Feedback — ${params.siteName} ━━━`,
+    '',
+    `Rating    : ${params.rating === 'up' ? 'Up 👍' : 'Down 👎'}`,
+    `Comment   : ${params.comment || '—'}`,
+    '',
+    `━━━ Utilisateur ━━━`,
+    `Nom       : ${params.userName || '—'}`,
+    `Email     : ${params.userEmail}`,
+    '',
+    `━━━ Message tutor ━━━`,
+    params.sessionTopic ? `Sujet     : ${params.sessionTopic}` : '',
+    `Extrait   : ${params.messagePreview.slice(0, 400)}`,
+    '',
+    `Admin     : ${params.adminUrl}/admin/tutor`,
+    `Date      : ${new Date().toISOString()}`,
+    '',
+  ].filter(Boolean).join('\n');
+
+  try {
+    await t.sendMail({ from: FROM, to: 'chuck.onekeo@gmail.com', subject, text });
+    console.log(`[Email] Tutor feedback notification sent: "${subject}"`);
+    return true;
+  } catch (err) {
+    console.error('[Email] Failed to send tutor feedback notification:', err);
+    return false;
+  }
+}

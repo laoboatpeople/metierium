@@ -1,6 +1,7 @@
 import { Router, Request, Response } from 'express';
 import { authenticate } from '../middleware/auth';
 import { prisma } from '../config/database';
+import { sendTutorFeedbackNotification } from '../lib/email';
 
 const router = Router();
 
@@ -309,7 +310,7 @@ router.post('/feedback', authenticate, async (req: Request, res: Response): Prom
     // The message must belong to a chat session owned by this user
     const message = await prisma.chatMessage.findFirst({
       where: { id: chatMessageId, session: { userId } },
-      select: { id: true },
+      select: { id: true, content: true, session: { select: { topic: true } } },
     });
     if (!message) {
       res.status(404).json({ message: 'Message not found' });
@@ -322,6 +323,18 @@ router.post('/feedback', authenticate, async (req: Request, res: Response): Prom
       // Never wipe an existing comment with an empty one — only update rating
       update: { rating, ...(comment ? { comment } : {}) },
     });
+
+    // Fire-and-forget notification email to site owner
+    sendTutorFeedbackNotification({
+      siteName: 'Metierium',
+      adminUrl: 'https://metierium.com',
+      rating,
+      comment: comment || null,
+      userEmail: (req as any).user.email as string,
+      userName: (req as any).user.name ?? null,
+      messagePreview: message.content,
+      sessionTopic: message.session.topic,
+    }).catch(() => {});
 
     res.json({ data: feedback });
   } catch (err) {
