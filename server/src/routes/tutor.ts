@@ -64,7 +64,7 @@ router.post('/', authenticate, async (req: Request, res: Response): Promise<void
     }
 
     // ── Store the user message ──────────────────────────────
-    await prisma.chatMessage.create({
+    const userMessage = await prisma.chatMessage.create({
       data: { sessionId: session.id, role: 'user', content: message },
     });
 
@@ -193,10 +193,10 @@ Remember: students are preparing for high-stakes licensing exams. Accuracy and e
     const apiKey = process.env.DEEPSEEK_API_KEY;
     if (!apiKey) {
       const fallback = `Je suis votre tuteur IA. Pour vous donner une réponse précise sur "${message}", j'ai besoin que la clé API DeepSeek soit configurée par l'administrateur. En attendant, voici un conseil général :\n\nConsultez le contenu théorique dans la section Théorie et pratiquez avec les examens blancs. Si vous avez une question spécifique sur un chapitre ou un article du Code, référez-vous d'abord au matériel d'étude fourni.`;
-      await prisma.chatMessage.create({
+      const fallbackMsg = await prisma.chatMessage.create({
         data: { sessionId: session.id, role: 'assistant', content: fallback },
       });
-      res.json({ response: fallback, model: 'fallback', sessionId: session.id });
+      res.json({ response: fallback, model: 'fallback', sessionId: session.id, userMessageId: userMessage.id, assistantMessageId: fallbackMsg.id });
       return;
     }
 
@@ -218,10 +218,10 @@ Remember: students are preparing for high-stakes licensing exams. Accuracy and e
       const errorText = await response.text();
       console.error('[Tutor] DeepSeek API error:', response.status, errorText);
       const errMsg = `Désolé, le service IA est temporairement indisponible. Veuillez réessayer plus tard ou consulter la section Théorie pour vos révisions.`;
-      await prisma.chatMessage.create({
+      const errMsgRec = await prisma.chatMessage.create({
         data: { sessionId: session.id, role: 'assistant', content: errMsg },
       });
-      res.json({ response: errMsg, model: 'error', sessionId: session.id });
+      res.json({ response: errMsg, model: 'error', sessionId: session.id, userMessageId: userMessage.id, assistantMessageId: errMsgRec.id });
       return;
     }
 
@@ -264,14 +264,91 @@ Remember: students are preparing for high-stakes licensing exams. Accuracy and e
     }
 
     // ── Store the assistant reply ───────────────────────────
-    await prisma.chatMessage.create({
+    const assistantMessage = await prisma.chatMessage.create({
       data: { sessionId: session.id, role: 'assistant', content: reply },
     });
 
-    res.json({ response: reply, model: 'deepseek-chat', sessionId: session.id });
+    res.json({
+      response: reply,
+      model: 'deepseek-chat',
+      sessionId: session.id,
+      userMessageId: userMessage.id,
+      assistantMessageId: assistantMessage.id,
+    });
   } catch (err) {
     console.error('[Tutor] Error:', err);
     res.status(500).json({ message: 'Erreur lors du traitement de votre question.' });
+  }
+});
+
+// ─── POST /api/tutor/feedback ──────────────────────────────
+// Submit (or update) thumbs up/down feedback on an AI tutor message.
+
+router.post('/feedback', authenticate, async (req: Request, res: Response): Promise<void> => {
+  const userId = (req as Request & { user: { id: string } }).user.id;
+  const { chatMessageId, rating, comment } = req.body as {
+    chatMessageId?: unknown;
+    rating?: unknown;
+    comment?: unknown;
+  };
+
+  if (typeof chatMessageId !== 'string' || chatMessageId.length === 0 || chatMessageId.length > 64) {
+    res.status(400).json({ message: 'chatMessageId is required' });
+    return;
+  }
+  if (rating !== 'up' && rating !== 'down') {
+    res.status(400).json({ message: 'rating must be "up" or "down"' });
+    return;
+  }
+  if (comment !== undefined && (typeof comment !== 'string' || comment.length > 2000)) {
+    res.status(400).json({ message: 'comment must be a string (max 2000 chars)' });
+    return;
+  }
+
+  try {
+    // The message must belong to a chat session owned by this user
+    const message = await prisma.chatMessage.findFirst({
+      where: { id: chatMessageId, session: { userId } },
+      select: { id: true },
+    });
+    if (!message) {
+      res.status(404).json({ message: 'Message not found' });
+      return;
+    }
+
+    const feedback = await prisma.tutorFeedback.upsert({
+      where: { chatMessageId_userId: { chatMessageId, userId } },
+      create: { chatMessageId, userId, rating, comment: comment || null },
+      // Never wipe an existing comment with an empty one — only update rating
+      update: { rating, ...(comment ? { comment } : {}) },
+    });
+
+    res.json({ data: feedback });
+  } catch (err) {
+    console.error('[Tutor Feedback Error]', err);
+    res.status(500).json({ message: 'Failed to save feedback' });
+  }
+});
+
+// ─── GET /api/tutor/feedback?sessionId= ────────────────────
+// Get the current user's feedback for a session (restore icon state).
+
+router.get('/feedback', authenticate, async (req: Request, res: Response): Promise<void> => {
+  const userId = (req as Request & { user: { id: string } }).user.id;
+  const sessionId = req.query.sessionId as string | undefined;
+  if (!sessionId) {
+    res.status(400).json({ message: 'sessionId query param is required' });
+    return;
+  }
+  try {
+    const feedbacks = await prisma.tutorFeedback.findMany({
+      where: { userId, message: { sessionId } },
+      select: { chatMessageId: true, rating: true, comment: true },
+    });
+    res.json({ data: feedbacks });
+  } catch (err) {
+    console.error('[Tutor Feedback Error]', err);
+    res.status(500).json({ message: 'Failed to load feedback' });
   }
 });
 

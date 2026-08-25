@@ -5,6 +5,7 @@ import Link from 'next/link';
 import {
   MessageSquare, Send, Bot, User, Loader2, Sparkles,
   AlertCircle, ArrowLeft, Plus, ChevronRight, Trash2, Lock,
+  ThumbsUp, ThumbsDown, X,
 } from 'lucide-react';
 import { useLocale } from '@/src/contexts/LocaleContext';
 import { renderAIResponse } from '@/lib/ai-markdown';
@@ -14,6 +15,7 @@ const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 interface ChatMessage {
   role: 'user' | 'assistant';
   content: string;
+  id?: string;
 }
 
 interface ChatHistory {
@@ -65,6 +67,13 @@ export default function TutorPage() {
   const [serverSessionId, setServerSessionId] = useState<string | null>(null);
   const [activeChapterId, setActiveChapterId] = useState<string | null>(null);
   const [sidebarOpen, setSidebarOpen] = useState(true);
+  // ── Tutor feedback (thumbs up/down + comment) ──
+  const [feedbackMap, setFeedbackMap] = useState<Record<string, 'up' | 'down'>>({});
+  const [feedbackComments, setFeedbackComments] = useState<Record<string, string>>({});
+  const [feedbackModal, setFeedbackModal] = useState<string | null>(null);
+  const [feedbackComment, setFeedbackComment] = useState('');
+  const [feedbackError, setFeedbackError] = useState('');
+  const [feedbackSaving, setFeedbackSaving] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const isRestoringRef = useRef(false);
@@ -193,7 +202,11 @@ export default function TutorPage() {
       if (data.sessionId) setServerSessionId(data.sessionId);
       setMessages((prev) => [
         ...prev,
-        { role: 'assistant', content: data.response || data.message || t('tutorNoResponse') },
+        {
+          role: 'assistant',
+          content: data.response || data.message || t('tutorNoResponse'),
+          id: data.assistantMessageId || `resp-${Date.now()}`,
+        },
       ]);
     } catch (err) {
       setError(err instanceof Error ? err.message : t('tutorConnectionError'));
@@ -214,6 +227,59 @@ export default function TutorPage() {
     sendMessage(q);
   };
 
+  // ── Tutor feedback (thumbs up/down + comment) ──
+  const handleFeedback = (messageId: string, rating: 'up' | 'down') => {
+    // Toggle off if clicking the same rating again
+    if (feedbackMap[messageId] === rating) {
+      setFeedbackMap((prev) => {
+        const next = { ...prev };
+        delete next[messageId];
+        return next;
+      });
+      return;
+    }
+    setFeedbackMap((prev) => ({ ...prev, [messageId]: rating }));
+    setFeedbackComment(feedbackComments[messageId] || '');
+    setFeedbackError('');
+    setFeedbackModal(messageId);
+  };
+
+  const handleFeedbackSubmit = async () => {
+    if (!feedbackModal) return;
+    const rating = feedbackMap[feedbackModal];
+    if (!rating) return;
+    setFeedbackSaving(true);
+    setFeedbackError('');
+    try {
+      const token = localStorage.getItem('token');
+      const res = await fetch(`${API_BASE}/api/tutor/feedback`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({
+          chatMessageId: feedbackModal,
+          rating,
+          comment: feedbackComment.trim() || undefined,
+        }),
+      });
+      if (!res.ok) throw new Error('feedback failed');
+      const data = await res.json();
+      if (data.data?.comment) {
+        setFeedbackComments((prev) => ({ ...prev, [feedbackModal]: data.data.comment }));
+      }
+      setFeedbackModal(null);
+      setFeedbackComment('');
+    } catch {
+      // Keep the modal open and surface the error — silent failure made
+      // users believe their feedback was saved when it wasn't.
+      setFeedbackError(t('feedbackError') || 'Failed to save feedback. Please try again.');
+    } finally {
+      setFeedbackSaving(false);
+    }
+  };
+
   // ── New Chat ──
   const handleNewChat = () => {
     setMessages([{ ...initialMessage }]);
@@ -222,6 +288,10 @@ export default function TutorPage() {
     setError(null);
     setLimitReached(false);
     setInput('');
+    setFeedbackMap({});
+    setFeedbackComments({});
+    setFeedbackModal(null);
+    setFeedbackError('');
     setTimeout(() => inputRef.current?.focus(), 100);
   };
 
@@ -412,8 +482,40 @@ export default function TutorPage() {
                   <div className="w-7 h-7 rounded-full bg-[#8B5CF6]/20 flex items-center justify-center flex-shrink-0 mt-1">
                     <Bot size={14} className="text-[#8B5CF6]" />
                   </div>
-                  <div className="bg-[#0D1117] border border-[#2D3A52] rounded-xl px-4 py-2.5 text-sm leading-relaxed text-[#F8FAFC] [&_svg]:max-w-full [&_svg]:h-auto [&_svg]:mx-auto [&_svg]:my-3 [&_svg]:block [&_svg]:rounded-lg [&_svg]:border [&_svg]:border-[#2D3A52] [&_svg]:p-2 [&_svg]:bg-white">
-                    <div dangerouslySetInnerHTML={{ __html: renderAIResponse(msg.content) }} />
+                  <div className="min-w-0 flex-1">
+                    <div className="bg-[#0D1117] border border-[#2D3A52] rounded-xl px-4 py-2.5 text-sm leading-relaxed text-[#F8FAFC] [&_svg]:max-w-full [&_svg]:h-auto [&_svg]:mx-auto [&_svg]:my-3 [&_svg]:block [&_svg]:rounded-lg [&_svg]:border [&_svg]:border-[#2D3A52] [&_svg]:p-2 [&_svg]:bg-white">
+                      <div dangerouslySetInnerHTML={{ __html: renderAIResponse(msg.content) }} />
+                    </div>
+                    {msg.id && (
+                      <div className="flex items-center gap-1 mt-2 pt-2 border-t border-[#1E2D45]">
+                        <button
+                          type="button"
+                          onClick={() => handleFeedback(msg.id!, 'up')}
+                          className={`p-1.5 rounded-lg transition-colors ${
+                            feedbackMap[msg.id] === 'up'
+                              ? 'bg-green/15 text-green'
+                              : 'text-[#64748B] hover:text-[#F8FAFC] hover:bg-[#1E2D45]'
+                          }`}
+                          aria-label={t('feedbackHelpful')}
+                          title={t('feedbackHelpful')}
+                        >
+                          <ThumbsUp size={14} />
+                        </button>
+                        <button
+                          type="button"
+                          onClick={() => handleFeedback(msg.id!, 'down')}
+                          className={`p-1.5 rounded-lg transition-colors ${
+                            feedbackMap[msg.id] === 'down'
+                              ? 'bg-red/15 text-red'
+                              : 'text-[#64748B] hover:text-[#F8FAFC] hover:bg-[#1E2D45]'
+                          }`}
+                          aria-label={t('feedbackNotHelpful')}
+                          title={t('feedbackNotHelpful')}
+                        >
+                          <ThumbsDown size={14} />
+                        </button>
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
@@ -513,6 +615,107 @@ export default function TutorPage() {
           </div>
         </form>
       </div>
+
+      {/* ── Feedback modal ── */}
+      {feedbackModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+          onClick={() => {
+            if (!feedbackSaving) {
+              setFeedbackModal(null);
+              setFeedbackError('');
+            }
+          }}
+        >
+          <div
+            className="w-full max-w-md bg-[#0D1117] border border-[#2D3A52] rounded-2xl p-5"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="flex items-center justify-between mb-4">
+              <h3 className="text-base font-bold text-[#F8FAFC]">
+                {feedbackMap[feedbackModal] === 'down' ? t('feedbackTitleDown') : t('feedbackTitleUp')}
+              </h3>
+              <button
+                onClick={() => {
+                  if (!feedbackSaving) {
+                    setFeedbackModal(null);
+                    setFeedbackError('');
+                  }
+                }}
+                className="p-1.5 rounded-lg text-[#64748B] hover:text-[#F8FAFC] hover:bg-[#1E2D45] transition-colors"
+                aria-label="Close"
+              >
+                <X size={16} />
+              </button>
+            </div>
+
+            <p className="text-xs text-[#94A3B8] mb-4">{t('feedbackSubtitle')}</p>
+
+            <div className="flex items-center gap-2 mb-4">
+              <button
+                type="button"
+                onClick={() => feedbackMap[feedbackModal] !== 'up' && setFeedbackMap((prev) => ({ ...prev, [feedbackModal]: 'up' }))}
+                className={`flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium transition-all border ${
+                  feedbackMap[feedbackModal] === 'up'
+                    ? 'bg-green/15 text-green border-green/40'
+                    : 'bg-[#111827] text-[#94A3B8] border-[#2D3A52] hover:border-[#3B82F6]/40'
+                }`}
+              >
+                <ThumbsUp size={14} />
+                {t('feedbackHelpful')}
+              </button>
+              <button
+                type="button"
+                onClick={() => feedbackMap[feedbackModal] !== 'down' && setFeedbackMap((prev) => ({ ...prev, [feedbackModal]: 'down' }))}
+                className={`flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-lg text-sm font-medium transition-all border ${
+                  feedbackMap[feedbackModal] === 'down'
+                    ? 'bg-red/15 text-red border-red/40'
+                    : 'bg-[#111827] text-[#94A3B8] border-[#2D3A52] hover:border-[#3B82F6]/40'
+                }`}
+              >
+                <ThumbsDown size={14} />
+                {t('feedbackNotHelpful')}
+              </button>
+            </div>
+
+            <textarea
+              value={feedbackComment}
+              onChange={(e) => setFeedbackComment(e.target.value)}
+              placeholder={t('feedbackCommentPlaceholder')}
+              rows={3}
+              maxLength={2000}
+              className="w-full px-3 py-2.5 bg-[#111827] border border-[#2D3A52] rounded-lg text-sm text-[#F8FAFC] placeholder-[#64748B] focus:outline-none focus:border-[#3B82F6] focus:ring-1 focus:ring-[#3B82F6]/30 resize-none"
+            />
+
+            {feedbackError && (
+              <p className="mt-2 text-xs text-[#EF4444]">{feedbackError}</p>
+            )}
+
+            <div className="flex justify-end gap-2 mt-4">
+              <button
+                onClick={() => {
+                  if (!feedbackSaving) {
+                    setFeedbackModal(null);
+                    setFeedbackError('');
+                  }
+                }}
+                disabled={feedbackSaving}
+                className="px-4 py-2 rounded-lg text-sm text-[#94A3B8] hover:text-[#F8FAFC] hover:bg-[#1E2D45] transition-colors disabled:opacity-50"
+              >
+                {t('feedbackCancel')}
+              </button>
+              <button
+                onClick={handleFeedbackSubmit}
+                disabled={feedbackSaving || !feedbackMap[feedbackModal]}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#3B82F6] hover:bg-[#2563EB] text-white text-sm font-medium transition-colors disabled:opacity-50"
+              >
+                {feedbackSaving && <Loader2 size={14} className="animate-spin" />}
+                {t('feedbackSubmit')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

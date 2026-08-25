@@ -21,6 +21,7 @@ import tutorRoutes from './routes/tutor';
 import settingsRoutes from './routes/settings';
 import contactRoutes from './routes/contact';
 import contactAdminRoutes from './routes/contactAdmin';
+import tutorFeedbackRoutes from './routes/tutorFeedback';
 import newsletterRoutes from './routes/newsletter';
 import subscriptionsRoutes from './routes/subscriptions';
 import analyticsRoutes from './routes/analytics';
@@ -110,6 +111,9 @@ app.use('/api/contact', contactRoutes);
 
 // Contact admin routes — admin-only contact message management
 app.use('/api/admin/contact-messages', contactAdminRoutes);
+
+// Tutor feedback admin routes — admin-only view of AI tutor feedback
+app.use('/api/admin/tutor-feedback', tutorFeedbackRoutes);
 
 // Newsletter admin routes — admin-only subscriber management
 app.use('/api/admin/newsletter', newsletterRoutes);

@@ -102,6 +102,7 @@ model User {
   examAttempts  ExamAttempt[]
   activityLogs  ActivityLog[]
   chatSessions  ChatSession[]
+  tutorFeedback TutorFeedback[]
   createdAt     DateTime     @default(now())
   updatedAt     DateTime     @updatedAt
 }
@@ -194,7 +195,26 @@ model ChatMessage {
   content   String
   createdAt DateTime @default(now())
 
+  feedback TutorFeedback[]
+
   @@index([sessionId])
+}
+
+/// TutorFeedback — thumbs up/down + optional comment on AI tutor messages
+model TutorFeedback {
+  id            String   @id @default(cuid())
+  chatMessageId String
+  userId        String
+  rating        String   // 'up' | 'down'
+  comment       String?
+  createdAt     DateTime @default(now())
+
+  // Relations
+  message ChatMessage @relation(fields: [chatMessageId], references: [id], onDelete: Cascade)
+  user    User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([chatMessageId, userId])
+  @@index([userId])
 }
 
 /// ContactMessage — submissions from the public contact form
