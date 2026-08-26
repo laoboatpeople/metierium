@@ -269,6 +269,12 @@ Remember: students are preparing for high-stakes licensing exams. Accuracy and e
       data: { sessionId: session.id, role: 'assistant', content: reply },
     });
 
+    // Track last activity (tutor question = user activity)
+    await prisma.user.update({
+      where: { id: userId },
+      data: { lastActiveAt: new Date() },
+    }).catch(() => {});
+
     res.json({
       response: reply,
       model: 'deepseek-chat',
@@ -323,6 +329,12 @@ router.post('/feedback', authenticate, async (req: Request, res: Response): Prom
       // Never wipe an existing comment with an empty one — only update rating
       update: { rating, ...(comment ? { comment } : {}) },
     });
+
+    // Track last activity (tutor feedback = user activity)
+    await prisma.user.update({
+      where: { id: userId },
+      data: { lastActiveAt: new Date() },
+    }).catch(() => {});
 
     // Fire-and-forget notification email to site owner
     sendTutorFeedbackNotification({

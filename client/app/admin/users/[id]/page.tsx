@@ -73,6 +73,7 @@ interface UserDetail {
   createdAt: string;
   updatedAt: string;
   lastLoginAt: string | null;
+  lastActiveAt: string | null;
   subscriptions: SubscriptionDetail[];
   contactMessages: ContactMsg[];
   examStats: {
@@ -585,7 +586,11 @@ export default function UserDetailPage() {
                       {locale === 'fr' ? 'Dernière activité' : 'Last activity'}
                     </p>
                     <p className="text-sm font-bold text-[#F8FAFC]">
-                      {user.examStats.lastAttemptAt ? formatRelativeTime(user.examStats.lastAttemptAt) : '—'}
+                      {user.lastActiveAt
+                        ? formatRelativeTime(user.lastActiveAt)
+                        : user.examStats.lastAttemptAt
+                          ? formatRelativeTime(user.examStats.lastAttemptAt)
+                          : '—'}
                     </p>
                   </div>
                 </div>

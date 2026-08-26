@@ -96,6 +96,7 @@ model User {
   plan          Plan         @default(FREE)
   subStatus     SubStatus?   @default(ACTIVE)
   stripeId      String?
+  lastActiveAt  DateTime?
   resetToken    String?
   resetTokenExpires DateTime?
   subscription  Subscription[]

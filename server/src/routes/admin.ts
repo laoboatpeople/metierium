@@ -44,6 +44,7 @@ router.get('/users', async (_req: Request, res: Response): Promise<void> => {
         role: true,
         plan: true,
         subStatus: true,
+        lastActiveAt: true,
         createdAt: true,
         updatedAt: true,
         subscription: {
@@ -85,6 +86,7 @@ router.get('/users/:id', async (req: Request, res: Response): Promise<void> => {
         plan: true,
         subStatus: true,
         stripeId: true,
+        lastActiveAt: true,
         createdAt: true,
         updatedAt: true,
         subscription: {

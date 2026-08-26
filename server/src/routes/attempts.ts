@@ -61,6 +61,12 @@ router.post('/', authenticate, async (req: Request, res: Response): Promise<void
       },
     }).catch(() => {}); // non-blocking
 
+    // Track last activity (exam submission = user activity)
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { lastActiveAt: new Date() },
+    }).catch(() => {});
+
     res.status(201).json({ id: attempt.id, completedAt: attempt.completedAt });
   } catch (err) {
     console.error('[Attempts] Save error:', err);

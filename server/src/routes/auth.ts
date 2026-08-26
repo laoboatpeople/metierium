@@ -139,6 +139,12 @@ router.post('/login', async (req: Request, res: Response): Promise<void> => {
       data: { userId: user.id, action: 'LOGIN', ipAddress: req.ip || null },
     }).catch(() => {});
 
+    // Track last activity so admin dashboards show real user activity
+    await prisma.user.update({
+      where: { id: user.id },
+      data: { lastActiveAt: new Date() },
+    }).catch(() => {});
+
     const token = signToken({ id: user.id, email: user.email, role: user.role });
 
     res.json({
