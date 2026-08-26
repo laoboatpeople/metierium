@@ -34,6 +34,7 @@ import {
   X,
   ChevronRight,
   LogIn,
+  Eye,
 } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
@@ -260,6 +261,43 @@ export default function UserDetailPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
+  // ── View-as-user (impersonation) ──
+  const [impersonating, setImpersonating] = useState(false);
+
+  const handleImpersonate = useCallback(async () => {
+    if (!user) return;
+    setImpersonating(true);
+    try {
+      const data = await authApi(`/api/admin/users/${userId}/impersonate`, { method: 'POST' });
+      // Back up the admin session so it can be restored from the view-as banner
+      const adminToken = localStorage.getItem('token') || '';
+      const adminUser = localStorage.getItem('user') || '';
+      let adminId = '';
+      try {
+        adminId = (JSON.parse(adminUser) as { id?: string })?.id ?? '';
+      } catch { /* ignore */ }
+      localStorage.setItem('impersonate_backup_token', adminToken);
+      localStorage.setItem('impersonate_backup_user', adminUser);
+      localStorage.setItem('impersonate_backup_admin_id', adminId);
+      // Switch to the target user session
+      localStorage.setItem('token', data.token);
+      localStorage.setItem(
+        'user',
+        JSON.stringify({ id: data.user.id, name: data.user.name ?? data.user.email, email: data.user.email, role: data.user.role })
+      );
+      localStorage.setItem(
+        'impersonating',
+        JSON.stringify({ id: data.user.id, name: data.user.name ?? data.user.email, email: data.user.email })
+      );
+      router.push('/app');
+    } catch (err) {
+      console.error('[Admin] Impersonate failed:', err);
+      alert(locale === 'fr' ? "Impossible de lancer le mode visualisation" : 'Failed to start view-as mode');
+    } finally {
+      setImpersonating(false);
+    }
+  }, [user, userId, router, locale]);
+
   // ── Tutor chat viewer modal ──
   const [selectedChat, setSelectedChat] = useState<{
     id: string;
@@ -457,6 +495,20 @@ export default function UserDetailPage() {
             </div>
           </div>
         </div>
+
+        {/* View-as-user */}
+        <button
+          onClick={handleImpersonate}
+          disabled={impersonating}
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg text-sm font-medium bg-[#8B5CF6] hover:bg-[#7C3AED] text-white transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex-shrink-0"
+        >
+          {impersonating ? (
+            <Loader2 size={16} className="animate-spin" />
+          ) : (
+            <Eye size={16} />
+          )}
+          {locale === 'fr' ? 'Voir comme utilisateur' : 'View as user'}
+        </button>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">

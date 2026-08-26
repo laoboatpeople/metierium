@@ -1,6 +1,8 @@
 import { Router, Request, Response } from 'express';
 import * as bcrypt from 'bcryptjs';
+import * as jwt from 'jsonwebtoken';
 import { prisma } from '../config/database';
+import { env } from '../config/env';
 import { authenticate, requireRoles } from '../middleware/auth';
 import { sendPlanChangeEmail } from '../lib/email';
 
@@ -936,6 +938,33 @@ router.get('/chat-sessions/:id', async (req: Request, res: Response): Promise<vo
     res.json(session);
   } catch (err) {
     console.error('[Admin] Get chat session error:', err);
+    res.status(500).json({ message: 'Internal server error' });
+  }
+});
+
+/**
+ * POST /api/admin/users/:id/impersonate
+ * Mint a short-lived JWT (1h) for the target user so an admin can view
+ * their /app dashboard exactly as the user sees it. Admin-only (router guard).
+ */
+router.post('/users/:id/impersonate', async (req: Request, res: Response): Promise<void> => {
+  try {
+    const target = await prisma.user.findUnique({
+      where: { id: req.params.id },
+      select: { id: true, email: true, name: true, role: true },
+    });
+    if (!target) {
+      res.status(404).json({ message: 'User not found' });
+      return;
+    }
+    const token = jwt.sign(
+      { id: target.id, email: target.email, role: target.role, impersonating: true },
+      env.JWT_SECRET,
+      { expiresIn: '1h' }
+    );
+    res.json({ token, user: target });
+  } catch (err) {
+    console.error('[Admin] Impersonate error:', err);
     res.status(500).json({ message: 'Internal server error' });
   }
 });

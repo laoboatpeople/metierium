@@ -16,6 +16,7 @@ import {
   Menu,
   X,
   Shield,
+  Eye,
 } from 'lucide-react';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
@@ -42,6 +43,14 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<UserProfile | null>(null);
   const [loading, setLoading] = useState(true);
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [impersonation, setImpersonation] = useState<{ id: string; name: string; email: string } | null>(null);
+
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem('impersonating');
+      if (raw) setImpersonation(JSON.parse(raw));
+    } catch { /* ignore malformed */ }
+  }, []);
 
   useEffect(() => {
     const token = localStorage.getItem('token');
@@ -84,6 +93,21 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
     localStorage.removeItem('user');
     document.cookie = 'auth_role=; path=/; max-age=0; SameSite=Lax';
     router.push('/auth/login');
+  }
+
+  // Exit view-as mode: restore the admin session (if backed up) and go back to admin
+  function handleExitImpersonation() {
+    const adminToken = localStorage.getItem('impersonate_backup_token');
+    const adminUser = localStorage.getItem('impersonate_backup_user');
+    const adminId = localStorage.getItem('impersonate_backup_admin_id') || '';
+    if (adminToken) localStorage.setItem('token', adminToken);
+    if (adminUser) localStorage.setItem('user', adminUser);
+    localStorage.removeItem('impersonating');
+    localStorage.removeItem('impersonate_backup_token');
+    localStorage.removeItem('impersonate_backup_user');
+    localStorage.removeItem('impersonate_backup_admin_id');
+    setImpersonation(null);
+    router.push(adminId ? `/admin/users/${adminId}` : '/admin');
   }
 
   if (loading) {
@@ -221,7 +245,28 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
         </header>
 
         {/* Page content */}
-        <main className="p-4 md:p-6 lg:p-8">{children}</main>
+        <main className="p-4 md:p-6 lg:p-8">
+          {impersonation && (
+            <div className="mb-4 flex items-center justify-between gap-3 px-4 py-3 rounded-xl border border-[#F59E0B]/30 bg-[#F59E0B]/10">
+              <div className="flex items-center gap-2.5 text-sm text-[#F59E0B] min-w-0">
+                <Eye size={16} className="flex-shrink-0" />
+                <span className="truncate">
+                  {locale === 'fr'
+                    ? `Mode visualisation — vous voyez le tableau de bord de ${impersonation.name} (${impersonation.email})`
+                    : `View-as mode — viewing ${impersonation.name}'s dashboard (${impersonation.email})`}
+                </span>
+              </div>
+              <button
+                onClick={handleExitImpersonation}
+                className="flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-[#F59E0B] hover:bg-[#D97706] text-white transition-colors"
+              >
+                <X size={13} />
+                {locale === 'fr' ? 'Quitter le mode' : 'Exit view-as'}
+              </button>
+            </div>
+          )}
+          {children}
+        </main>
       </div>
     </div>
   );
