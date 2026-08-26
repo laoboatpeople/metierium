@@ -4,6 +4,7 @@ import { env } from '../config/env';
 import { authenticate } from '../middleware/auth';
 import stripe, { Stripe } from '../config/stripe';
 import { sendPlanChangeEmail } from '../lib/email';
+import { getSettings } from '../config/settings';
 
 const router = Router();
 
@@ -209,6 +210,33 @@ router.post('/webhook', async (req: Request, res: Response): Promise<void> => {
             newPlan: dbPlan,
             source: 'stripe',
           });
+        }
+
+        // Notify admin of the new subscription (best-effort)
+        const adminEmail = getSettings().adminNotificationEmail || 'chuck.onekeo@gmail.com';
+        if (env.RESEND_API_KEY && env.RESEND_API_KEY !== 're_placeholder' && planUser) {
+          fetch('https://api.resend.com/emails', {
+            method: 'POST',
+            headers: {
+              'Authorization': `Bearer ${env.RESEND_API_KEY}`,
+              'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+              from: 'Metierium <info@metierium.com>',
+              to: adminEmail,
+              subject: `Nouvel abonnement — ${planUser.email}`,
+              html: `<div style="font-family:sans-serif;max-width:480px;margin:0 auto;padding:24px;background:#0A0E1A;color:#F8FAFC;border-radius:12px">
+                <h1 style="color:#3B82F6;font-size:22px">Nouvel abonnement</h1>
+                <p style="color:#94A3B8;line-height:1.5">Un utilisateur vient de s'abonner sur Metierium.</p>
+                <table style="color:#F8FAFC;font-size:14px;margin:16px 0;width:100%">
+                  <tr><td style="padding:4px 0;color:#64748B">Email</td><td style="padding:4px 0">${planUser.email}</td></tr>
+                  <tr><td style="padding:4px 0;color:#64748B">Nom</td><td style="padding:4px 0">${planUser.name || 'Non fourni'}</td></tr>
+                  <tr><td style="padding:4px 0;color:#64748B">Plan</td><td style="padding:4px 0">${dbPlan}</td></tr>
+                  <tr><td style="padding:4px 0;color:#64748B">Date</td><td style="padding:4px 0">${new Date().toLocaleString('fr-CA')}</td></tr>
+                </table>
+              </div>`,
+            }),
+          }).catch(() => {});
         }
         break;
       }
