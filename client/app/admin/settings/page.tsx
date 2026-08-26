@@ -350,6 +350,9 @@ export default function AdminSettingsPage() {
               <label className="block text-sm font-medium text-[#94A3B8] mb-1.5">
                 Admin Notification Email
               </label>
+              <p className="text-xs text-[#64748B] mb-3">
+                Notifications (new signups, tutor and theory feedbacks) will be sent to this address.
+              </p>
               <input
                 type="email"
                 value={adminNotificationEmail}
