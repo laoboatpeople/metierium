@@ -29,6 +29,15 @@ router.get('/', authenticate, async (req: Request, res: Response): Promise<void>
             session: { select: { id: true, topic: true } },
           },
         },
+        chapter: {
+          select: {
+            id: true,
+            number: true,
+            name: true,
+            nameFr: true,
+            trade: { select: { code: true, name: true, nameFr: true } },
+          },
+        },
       },
     });
     res.json({ data: feedbacks });

@@ -29,8 +29,11 @@ import {
   CheckCircle,
   Loader2,
   Share2,
+  ThumbsUp,
+  ThumbsDown,
 } from 'lucide-react';
 import { useLocale } from '@/src/contexts/LocaleContext';
+import { getTheoryFeedback, submitTheoryFeedback } from '@/lib/feedback';
 
 const API_BASE = process.env.NEXT_PUBLIC_API_URL || '';
 
@@ -336,6 +339,12 @@ function ChapterSection({ chapter, color, preselected, onContentLoaded }: {
   const [contentLoading, setContentLoading] = useState(false);
   const [contentError, setContentError] = useState(false);
   const [retryNonce, setRetryNonce] = useState(0);
+  // Theory feedback (thumbs up/down)
+  const [feedback, setFeedback] = useState<'up' | 'down' | null>(null);
+  const [feedbackModal, setFeedbackModal] = useState<{ rating: 'up' | 'down' } | null>(null);
+  const [feedbackComment, setFeedbackComment] = useState('');
+  const [feedbackError, setFeedbackError] = useState('');
+  const [feedbackSaving, setFeedbackSaving] = useState(false);
   const headerRef = useRef<HTMLButtonElement>(null);
   // Refs mirror content/contentLoading so the lazy-load effect can guard
   // against re-entry WITHOUT listing them as dependencies (which would
@@ -355,6 +364,41 @@ function ChapterSection({ chapter, color, preselected, onContentLoaded }: {
       try { navigator.clipboard.writeText(url); } catch {}
     }
   }, []);
+
+  // ── Theory feedback (thumbs up/down) ─────────────────────
+  // Restore existing feedback state when the chapter mounts
+  useEffect(() => {
+    let cancelled = false;
+    getTheoryFeedback(chapter.id)
+      .then((res) => {
+        if (!cancelled && res.data) {
+          setFeedback(res.data.rating === 'up' ? 'up' : 'down');
+          setFeedbackComment(res.data.comment ?? '');
+        }
+      })
+      .catch(() => {});
+    return () => { cancelled = true; };
+  }, [chapter.id]);
+
+  const handleFeedback = useCallback((rating: 'up' | 'down') => {
+    setFeedbackModal({ rating });
+    setFeedbackError('');
+  }, []);
+
+  const handleFeedbackSubmit = useCallback(async () => {
+    if (!feedbackModal) return;
+    setFeedbackSaving(true);
+    setFeedbackError('');
+    try {
+      await submitTheoryFeedback(chapter.id, feedbackModal.rating, feedbackComment.trim() || undefined);
+      setFeedback(feedbackModal.rating);
+      setFeedbackModal(null);
+    } catch (err) {
+      setFeedbackError(err instanceof Error ? err.message : 'Something went wrong');
+    } finally {
+      setFeedbackSaving(false);
+    }
+  }, [feedbackModal, feedbackComment, chapter.id]);
 
   // Ensure expanded opens when preselected — handles edge cases where useState
   // initial value might not pick up the prop due to timing
@@ -535,6 +579,30 @@ function ChapterSection({ chapter, color, preselected, onContentLoaded }: {
                   <Share2 size={14} />
                   {t('share')}
                 </button>
+                <button
+                  onClick={() => handleFeedback('up')}
+                  aria-label={t('feedbackHelpful')}
+                  title={t('feedbackHelpful')}
+                  className={`flex items-center gap-1.5 text-xs font-medium transition-colors px-3 py-1.5 rounded-lg ${
+                    feedback === 'up'
+                      ? 'text-green bg-green/15'
+                      : 'text-text-tertiary hover:text-green bg-primary hover:bg-green/10 border border-border'
+                  }`}
+                >
+                  <ThumbsUp size={14} />
+                </button>
+                <button
+                  onClick={() => handleFeedback('down')}
+                  aria-label={t('feedbackNotHelpful')}
+                  title={t('feedbackNotHelpful')}
+                  className={`flex items-center gap-1.5 text-xs font-medium transition-colors px-3 py-1.5 rounded-lg ${
+                    feedback === 'down'
+                      ? 'text-red bg-red/15'
+                      : 'text-text-tertiary hover:text-red bg-primary hover:bg-red/10 border border-border'
+                  }`}
+                >
+                  <ThumbsDown size={14} />
+                </button>
               </div>
             </div>
           </motion.div>
@@ -562,6 +630,79 @@ function ChapterSection({ chapter, color, preselected, onContentLoaded }: {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {feedbackModal && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60"
+          onClick={() => setFeedbackModal(null)}
+        >
+          <div
+            className="bg-card border border-border rounded-card p-6 w-full max-w-md shadow-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <h3 className="text-base font-semibold text-text-primary mb-1">
+              {feedbackModal.rating === 'up' ? t('feedbackTitleUp') : t('feedbackTitleDown')}
+            </h3>
+            <p className="text-sm text-text-secondary mb-4">{t('feedbackSubtitle')}</p>
+
+            <div className="flex items-center gap-2 mb-4">
+              <button
+                type="button"
+                onClick={() => setFeedbackModal({ rating: 'up' })}
+                className={`flex-1 flex items-center justify-center gap-2 p-3 rounded-card border transition-colors ${
+                  feedbackModal.rating === 'up'
+                    ? 'bg-green/15 border-green/40 text-green'
+                    : 'border-border text-text-tertiary hover:text-text-primary'
+                }`}
+              >
+                <ThumbsUp size={16} /> {t('feedbackHelpful')}
+              </button>
+              <button
+                type="button"
+                onClick={() => setFeedbackModal({ rating: 'down' })}
+                className={`flex-1 flex items-center justify-center gap-2 p-3 rounded-card border transition-colors ${
+                  feedbackModal.rating === 'down'
+                    ? 'bg-red/15 border-red/40 text-red'
+                    : 'border-border text-text-tertiary hover:text-text-primary'
+                }`}
+              >
+                <ThumbsDown size={16} /> {t('feedbackNotHelpful')}
+              </button>
+            </div>
+
+            <textarea
+              value={feedbackComment}
+              onChange={(e) => setFeedbackComment(e.target.value)}
+              placeholder={t('feedbackCommentPlaceholder')}
+              rows={3}
+              className="w-full px-3 py-2.5 rounded-card bg-primary border border-border text-text-primary text-sm placeholder:text-text-tertiary focus:outline-none focus:ring-2 focus:ring-blue focus:ring-offset-2 focus:ring-offset-primary transition-colors resize-none"
+            />
+
+            {feedbackError && (
+              <p className="text-sm text-red mt-2">{feedbackError}</p>
+            )}
+
+            <div className="flex items-center justify-end gap-2 mt-4">
+              <button
+                type="button"
+                onClick={() => setFeedbackModal(null)}
+                className="px-4 py-2 rounded-card text-sm text-text-tertiary hover:text-text-primary transition-colors"
+              >
+                {t('cancel')}
+              </button>
+              <button
+                type="button"
+                onClick={handleFeedbackSubmit}
+                disabled={feedbackSaving}
+                className="flex items-center gap-2 px-4 py-2 rounded-card bg-blue text-white text-sm hover:bg-blue/90 transition-colors disabled:opacity-40"
+              >
+                {feedbackSaving && <Loader2 size={14} className="animate-spin" />}
+                {t('feedbackSubmit')}
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import { Loader2, RefreshCw, ThumbsUp, ThumbsDown, Trash2, MessageSquare } from 'lucide-react';
+import { Loader2, RefreshCw, ThumbsUp, ThumbsDown, Trash2, MessageSquare, BookMarked } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
@@ -10,13 +10,21 @@ interface TutorFeedbackItem {
   rating: string;
   comment: string | null;
   createdAt: string;
+  source: string;
   user: { id: string; name: string | null; email: string };
   message: {
     id: string;
     content: string;
     createdAt: string;
     session: { id: string; topic: string | null };
-  };
+  } | null;
+  chapter: {
+    id: string;
+    number: number;
+    name: string;
+    nameFr: string;
+    trade: { code: string; name: string; nameFr: string };
+  } | null;
 }
 
 const stripForPreview = (content: string): string => {
@@ -39,12 +47,8 @@ export default function AdminTutorFeedbackPage() {
     async (silent = false) => {
       if (!silent) setLoading(true);
       try {
-        const res = await authApi('/api/admin/tutor-feedback');
-        if (res.status === 401 || res.status === 403) {
-          setError('Unauthorized');
-          return;
-        }
-        const data = await res.json();
+        // authApi returns the parsed JSON body (NOT a Response) — see lib/api.ts handleResponse
+        const data = await authApi('/api/admin/tutor-feedback');
         setFeedbacks(data.data ?? []);
         setError('');
       } catch {
@@ -79,8 +83,7 @@ export default function AdminTutorFeedbackPage() {
     setConfirmId(null);
     setDeletingId(id);
     try {
-      const res = await authApi(`/api/admin/tutor-feedback/${id}`, { method: 'DELETE' });
-      if (!res.ok) throw new Error('delete failed');
+      await authApi(`/api/admin/tutor-feedback/${id}`, { method: 'DELETE' });
       setFeedbacks((prev) => prev.filter((f) => f.id !== id));
     } catch {
       setError('Failed to delete feedback');
@@ -93,9 +96,9 @@ export default function AdminTutorFeedbackPage() {
     <div className="p-6 max-w-5xl mx-auto">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h1 className="text-xl font-bold text-[#F8FAFC]">Tutor Feedback</h1>
+          <h1 className="text-xl font-bold text-[#F8FAFC]">Feedback</h1>
           <p className="text-xs text-[#64748B] mt-1">
-            Thumbs up/down + comments from the AI tutor
+            Thumbs up/down from the AI tutor and theory chapters
           </p>
         </div>
         <button
@@ -119,7 +122,7 @@ export default function AdminTutorFeedbackPage() {
         </div>
       ) : feedbacks.length === 0 ? (
         <div className="text-center py-20 text-sm text-[#64748B] border border-dashed border-[#2D3A52] rounded-xl">
-          No tutor feedback yet
+          No feedback yet
         </div>
       ) : (
         <div className="space-y-3">
@@ -171,13 +174,34 @@ export default function AdminTutorFeedbackPage() {
               )}
 
               <div className="mt-2 flex items-start gap-2 text-xs text-[#94A3B8]">
-                <MessageSquare size={12} className="mt-0.5 flex-shrink-0" />
-                <span className="line-clamp-2">
-                  {f.message.session.topic && (
-                    <span className="text-[#64748B] mr-1">[{f.message.session.topic}]</span>
-                  )}
-                  {stripForPreview(f.message.content)}
-                </span>
+                {f.source === 'theory' && f.chapter ? (
+                  <>
+                    <BookMarked size={12} className="mt-0.5 flex-shrink-0" />
+                    <span className="line-clamp-2">
+                      <span className="text-[#64748B] mr-1">
+                        [{f.chapter.trade.name} — {f.chapter.number}. {f.chapter.name}]
+                      </span>
+                    </span>
+                    <a
+                      href={`/theory?chapterId=${f.chapter.id}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="ml-auto flex-shrink-0 text-blue hover:text-blue/80 transition-colors"
+                    >
+                      View theory section
+                    </a>
+                  </>
+                ) : f.message ? (
+                  <>
+                    <MessageSquare size={12} className="mt-0.5 flex-shrink-0" />
+                    <span className="line-clamp-2">
+                      {f.message.session.topic && (
+                        <span className="text-[#64748B] mr-1">[{f.message.session.topic}]</span>
+                      )}
+                      {stripForPreview(f.message.content)}
+                    </span>
+                  </>
+                ) : null}
               </div>
             </div>
           ))}

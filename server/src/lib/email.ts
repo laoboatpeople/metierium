@@ -267,7 +267,7 @@ export async function sendTutorFeedbackNotification(
     params.sessionTopic ? `Sujet     : ${params.sessionTopic}` : '',
     `Extrait   : ${params.messagePreview.slice(0, 400)}`,
     '',
-    `Admin     : ${params.adminUrl}/admin/tutor`,
+    `Admin     : ${params.adminUrl}/admin/feedback`,
     `Date      : ${new Date().toISOString()}`,
     '',
   ].filter(Boolean).join('\n');

@@ -59,6 +59,7 @@ model Chapter {
   theoryContent String?
   theoryContentEn String?
   questions     Question[]
+  feedback      TutorFeedback[]
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
 
@@ -201,20 +202,24 @@ model ChatMessage {
   @@index([sessionId])
 }
 
-/// TutorFeedback — thumbs up/down + optional comment on AI tutor messages
+/// TutorFeedback — thumbs up/down + optional comment on AI tutor messages / theory chapters
 model TutorFeedback {
-  id            String   @id @default(cuid())
-  chatMessageId String
+  id            String    @id @default(cuid())
+  chatMessageId String?
   userId        String
-  rating        String   // 'up' | 'down'
+  chapterId     String?
+  source        String    @default("tutor")   // 'tutor' | 'theory'
+  rating        String    // 'up' | 'down'
   comment       String?
-  createdAt     DateTime @default(now())
+  createdAt     DateTime  @default(now())
 
   // Relations
-  message ChatMessage @relation(fields: [chatMessageId], references: [id], onDelete: Cascade)
-  user    User        @relation(fields: [userId], references: [id], onDelete: Cascade)
+  message ChatMessage? @relation(fields: [chatMessageId], references: [id], onDelete: Cascade)
+  user    User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  chapter Chapter?     @relation(fields: [chapterId], references: [id], onDelete: Cascade)
 
   @@unique([chatMessageId, userId])
+  @@unique([chapterId, userId])
   @@index([userId])
 }
 

@@ -39,7 +39,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
     { href: '/admin/users', label: 'Utilisateurs', icon: Users },
     { href: '/admin/notifications', label: 'Notifications', icon: Bell },
     { href: '/admin/contact-messages', label: 'Contact', icon: MessageSquare },
-    { href: '/admin/tutor', label: 'Tutor Feedback', icon: ThumbsUp },
+    { href: '/admin/feedback', label: 'Feedback', icon: ThumbsUp },
     { href: '/admin/settings', label: 'Settings', icon: Settings },
     { href: '/admin/newsletter', label: 'Newsletter', icon: Mail },
     { href: '/admin/subscriptions', label: 'Subscriptions', icon: CreditCard },

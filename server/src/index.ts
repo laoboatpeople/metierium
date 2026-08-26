@@ -22,6 +22,7 @@ import settingsRoutes from './routes/settings';
 import contactRoutes from './routes/contact';
 import contactAdminRoutes from './routes/contactAdmin';
 import tutorFeedbackRoutes from './routes/tutorFeedback';
+import theoryFeedbackRoutes from './routes/theoryFeedback';
 import newsletterRoutes from './routes/newsletter';
 import subscriptionsRoutes from './routes/subscriptions';
 import analyticsRoutes from './routes/analytics';
@@ -98,6 +99,7 @@ app.get('/api/health', async (_req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/trades', tradesRoutes);
+app.use('/api/theory/feedback', theoryFeedbackRoutes);  // MUST be mounted BEFORE /api/theory so the prefix wins
 app.use('/api/theory', theoryRoutes);
 app.use('/api/questions', questionsRoutes);
 app.use('/api/stripe', stripeRoutes);
