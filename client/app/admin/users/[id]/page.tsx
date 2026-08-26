@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { useRouter, useParams } from 'next/navigation';
 import Link from 'next/link';
 import {
@@ -383,6 +383,20 @@ export default function UserDetailPage() {
   }, [userId, router]);
 
   useEffect(() => { fetchUser(); }, [fetchUser]);
+
+  // Deep-link ?chat=<sessionId> from the feedback page ("View conversation"):
+  // auto-open the tutor chat modal once the user has loaded, then clean the URL
+  // so a refresh doesn't re-open it.
+  const chatOpenedRef = useRef(false);
+  useEffect(() => {
+    if (loading || !user || chatOpenedRef.current) return;
+    const chatParam = new URLSearchParams(window.location.search).get('chat');
+    if (chatParam) {
+      chatOpenedRef.current = true;
+      openChat(chatParam);
+      router.replace(`/admin/users/${userId}`, { scroll: false });
+    }
+  }, [loading, user, userId, router, openChat]);
 
   // ─── Loading ───
   if (loading) {

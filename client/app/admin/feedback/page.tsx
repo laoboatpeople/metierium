@@ -1,7 +1,8 @@
 'use client';
 
 import { useEffect, useState, useCallback } from 'react';
-import { Loader2, RefreshCw, ThumbsUp, ThumbsDown, Trash2, MessageSquare, BookMarked } from 'lucide-react';
+import Link from 'next/link';
+import { ThumbsUp, ThumbsDown, Loader2, MessageSquare, BookMarked, Clock, RefreshCw, Trash2 } from 'lucide-react';
 import { authApi } from '@/lib/api';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
@@ -27,182 +28,199 @@ interface TutorFeedbackItem {
   } | null;
 }
 
-const stripForPreview = (content: string): string => {
-  return content
-    .replace(/<svg[\s\S]*?<\/svg>/gi, '[diagram]')
-    .replace(/[#>*`_[\]]/g, '')
+function messagePreview(content: string): string {
+  // Compact plain-text preview: strip SVG diagrams + markdown syntax
+  const noSvg = content.replace(/<svg[\s\S]*?<\/svg>/gi, '[diagram]');
+  const plain = noSvg
+    .replace(/[#>*`_[\]]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
-};
+  return plain.length > 180 ? plain.slice(0, 180) + '…' : plain;
+}
 
-export default function AdminTutorFeedbackPage() {
-  const { t } = useLocale();
+function formatDate(iso: string): string {
+  try {
+    return new Date(iso).toLocaleString('fr-CA', {
+      year: 'numeric', month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit',
+    });
+  } catch {
+    return iso;
+  }
+}
+
+export default function AdminFeedbackPage() {
+  const { locale } = useLocale();
   const [feedbacks, setFeedbacks] = useState<TutorFeedbackItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
-  const [deletingId, setDeletingId] = useState<string | null>(null);
-  const [confirmId, setConfirmId] = useState<string | null>(null);
 
   const fetchFeedbacks = useCallback(
     async (silent = false) => {
       if (!silent) setLoading(true);
+      setError('');
       try {
         // authApi returns the parsed JSON body (NOT a Response) — see lib/api.ts handleResponse
         const data = await authApi('/api/admin/tutor-feedback');
         setFeedbacks(data.data ?? []);
-        setError('');
-      } catch {
-        if (!silent) setError('Failed to load feedback');
+      } catch (err) {
+        setError(err instanceof Error && err.message.includes('401')
+          ? 'Unauthorized — admin access required'
+          : 'Failed to load feedback');
       } finally {
-        if (!silent) setLoading(false);
+        setLoading(false);
       }
     },
     []
   );
 
-  // Initial load + silent refetch on focus/visibilitychange (PITFALL: stale admin pages)
   useEffect(() => {
     fetchFeedbacks();
-    const onFocus = () => fetchFeedbacks(true);
+  }, [fetchFeedbacks]);
+
+  // Refetch silently when the tab regains focus (e.g. coming back from /theory or /tutor)
+  useEffect(() => {
     const onVisible = () => {
       if (document.visibilityState === 'visible') fetchFeedbacks(true);
     };
-    window.addEventListener('focus', onFocus);
+    window.addEventListener('focus', onVisible);
     document.addEventListener('visibilitychange', onVisible);
     return () => {
-      window.removeEventListener('focus', onFocus);
+      window.removeEventListener('focus', onVisible);
       document.removeEventListener('visibilitychange', onVisible);
     };
   }, [fetchFeedbacks]);
 
-  const handleDelete = async (id: string) => {
-    if (confirmId !== id) {
-      setConfirmId(id);
-      return;
-    }
-    setConfirmId(null);
-    setDeletingId(id);
-    try {
-      await authApi(`/api/admin/tutor-feedback/${id}`, { method: 'DELETE' });
-      setFeedbacks((prev) => prev.filter((f) => f.id !== id));
-    } catch {
-      setError('Failed to delete feedback');
-    } finally {
-      setDeletingId(null);
-    }
-  };
+  const handleDelete = useCallback(
+    async (id: string) => {
+      if (!window.confirm('Delete this feedback?')) return;
+      try {
+        await authApi(`/api/admin/tutor-feedback/${id}`, { method: 'DELETE' });
+        fetchFeedbacks(true);
+      } catch {
+        setError('Failed to delete feedback');
+      }
+    },
+    [fetchFeedbacks]
+  );
 
   return (
-    <div className="p-6 max-w-5xl mx-auto">
+    <div className="p-6">
       <div className="flex items-center justify-between mb-6">
         <div>
           <h1 className="text-xl font-bold text-[#F8FAFC]">Feedback</h1>
           <p className="text-xs text-[#64748B] mt-1">
-            Thumbs up/down from the AI tutor and theory chapters
+            Thumbs up/down from theories and AI tutor
           </p>
         </div>
-        <button
-          onClick={() => fetchFeedbacks(true)}
-          className="flex items-center gap-2 px-3 py-2 text-xs bg-[#111827] border border-[#2D3A52] rounded-lg text-[#94A3B8] hover:border-[#3B82F6]/40 hover:text-[#F8FAFC] transition-all"
-        >
-          <RefreshCw size={14} className={loading ? 'animate-spin' : ''} />
-          Refresh
-        </button>
+        {!loading && !error && (
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-[#64748B]">
+              {feedbacks.length} feedback{feedbacks.length === 1 ? '' : 's'}
+            </span>
+            <button
+              onClick={() => fetchFeedbacks()}
+              className="inline-flex items-center gap-1.5 text-xs text-[#3B82F6] hover:underline"
+            >
+              <RefreshCw size={12} className={loading ? 'animate-spin' : ''} /> Refresh
+            </button>
+          </div>
+        )}
       </div>
 
-      {error && (
-        <div className="mb-4 px-4 py-2.5 bg-[#EF4444]/10 border border-[#EF4444]/20 rounded-lg text-sm text-[#EF4444]">
-          {error}
+      {loading && (
+        <div className="flex items-center justify-center py-16">
+          <Loader2 size={24} className="text-[#3B82F6] animate-spin" />
         </div>
       )}
 
-      {loading ? (
-        <div className="flex items-center justify-center py-20">
-          <Loader2 size={24} className="animate-spin text-[#3B82F6]" />
+      {error && (
+        <div className="flex items-center justify-center py-16">
+          <p className="text-sm text-[#EF4444]">{error}</p>
         </div>
-      ) : feedbacks.length === 0 ? (
-        <div className="text-center py-20 text-sm text-[#64748B] border border-dashed border-[#2D3A52] rounded-xl">
-          No feedback yet
+      )}
+
+      {!loading && !error && feedbacks.length === 0 && (
+        <div className="flex flex-col items-center justify-center py-16 text-[#64748B]">
+          <ThumbsUp size={28} className="mb-2" />
+          <p className="text-sm">No feedback yet</p>
         </div>
-      ) : (
+      )}
+
+      {!loading && !error && feedbacks.length > 0 && (
         <div className="space-y-3">
-          {feedbacks.map((f) => (
-            <div
-              key={f.id}
-              className="bg-[#0D1117] border border-[#1E2D45] rounded-xl p-4"
-            >
-              <div className="flex items-start justify-between gap-3">
+          {feedbacks.map((fb) => (
+            <div key={fb.id} className="bg-[#0D1117] border border-[#1E2D45] rounded-xl p-4">
+              <div className="flex items-center justify-between gap-3 flex-wrap">
                 <div className="flex items-center gap-2">
-                  {f.rating === 'up' ? (
-                    <span className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium bg-green/15 text-green">
-                      <ThumbsUp size={12} /> Up
-                    </span>
-                  ) : (
-                    <span className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-xs font-medium bg-red/15 text-red">
-                      <ThumbsDown size={12} /> Down
-                    </span>
-                  )}
-                  <span className="text-sm font-medium text-[#F8FAFC]">
-                    {f.user.name || f.user.email}
+                  <span
+                    className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium ${
+                      fb.rating === 'up'
+                        ? 'bg-green/15 text-green'
+                        : 'bg-red/15 text-red'
+                    }`}
+                  >
+                    {fb.rating === 'up' ? <ThumbsUp size={12} /> : <ThumbsDown size={12} />}
+                    {fb.rating === 'up' ? 'Helpful' : 'Not helpful'}
                   </span>
-                  <span className="text-xs text-[#64748B]">
-                    {new Date(f.createdAt).toLocaleString('fr-CA')}
-                  </span>
+                  <Link
+                    href={`/admin/users/${fb.user.id}`}
+                    className="text-sm font-medium text-[#3B82F6] hover:underline"
+                  >
+                    {fb.user.name || fb.user.email}
+                  </Link>
+                  <span className="text-xs text-[#64748B]">{fb.user.email}</span>
                 </div>
-                <button
-                  onClick={() => handleDelete(f.id)}
-                  disabled={deletingId === f.id}
-                  className={`p-1.5 rounded-lg transition-all ${
-                    confirmId === f.id
-                      ? 'bg-[#EF4444] text-white'
-                      : 'text-[#64748B] hover:text-[#EF4444] hover:bg-[#1E2D45]'
-                  }`}
-                  title={confirmId === f.id ? 'Confirm delete' : 'Delete'}
-                >
-                  {deletingId === f.id ? (
-                    <Loader2 size={14} className="animate-spin" />
-                  ) : (
-                    <Trash2 size={14} />
-                  )}
-                </button>
+                <div className="flex items-center gap-3">
+                  <span className="flex items-center gap-1 text-xs text-[#64748B]">
+                    <Clock size={12} />
+                    {formatDate(fb.createdAt)}
+                  </span>
+                  {fb.source === 'theory' && fb.chapter ? (
+                    <Link
+                      href={`/theory?chapterId=${fb.chapter.id}`}
+                      target="_blank"
+                      className="inline-flex items-center gap-1.5 text-xs text-[#06B6D4] hover:underline"
+                    >
+                      <BookMarked size={12} />
+                      View theory section
+                    </Link>
+                  ) : fb.message ? (
+                    <Link
+                      href={`/admin/users/${fb.user.id}?chat=${fb.message.session.id}`}
+                      className="inline-flex items-center gap-1.5 text-xs text-[#06B6D4] hover:underline"
+                    >
+                      <MessageSquare size={12} />
+                      View conversation
+                    </Link>
+                  ) : null}
+                  <button
+                    onClick={() => handleDelete(fb.id)}
+                    className="inline-flex items-center gap-1 text-xs text-[#EF4444] hover:underline"
+                    title="Delete feedback"
+                  >
+                    <Trash2 size={12} /> Delete
+                  </button>
+                </div>
               </div>
 
-              {f.comment && (
-                <p className="mt-2 text-sm text-[#F8FAFC] bg-[#111827] border border-[#2D3A52] rounded-lg px-3 py-2">
-                  {f.comment}
+              {fb.comment && (
+                <p className="mt-3 text-sm text-[#F8FAFC] bg-[#111827] border border-[#2D3A52] rounded-lg px-3 py-2">
+                  “{fb.comment}”
                 </p>
               )}
 
-              <div className="mt-2 flex items-start gap-2 text-xs text-[#94A3B8]">
-                {f.source === 'theory' && f.chapter ? (
-                  <>
-                    <BookMarked size={12} className="mt-0.5 flex-shrink-0" />
-                    <span className="line-clamp-2">
-                      <span className="text-[#64748B] mr-1">
-                        [{f.chapter.trade.name} — {f.chapter.number}. {f.chapter.name}]
-                      </span>
-                    </span>
-                    <a
-                      href={`/theory?chapterId=${f.chapter.id}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="ml-auto flex-shrink-0 text-blue hover:text-blue/80 transition-colors"
-                    >
-                      View theory section
-                    </a>
-                  </>
-                ) : f.message ? (
-                  <>
-                    <MessageSquare size={12} className="mt-0.5 flex-shrink-0" />
-                    <span className="line-clamp-2">
-                      {f.message.session.topic && (
-                        <span className="text-[#64748B] mr-1">[{f.message.session.topic}]</span>
-                      )}
-                      {stripForPreview(f.message.content)}
-                    </span>
-                  </>
-                ) : null}
-              </div>
+              {fb.source === 'theory' && fb.chapter ? (
+                <p className="mt-2 text-xs text-[#64748B] leading-relaxed">
+                  {fb.chapter.trade.code} — {fb.chapter.number}. {fb.chapter.name}
+                  {locale === 'fr' && fb.chapter.nameFr && fb.chapter.nameFr !== fb.chapter.name
+                    ? ` · ${fb.chapter.nameFr}`
+                    : ''}
+                </p>
+              ) : fb.message ? (
+                <p className="mt-2 text-xs text-[#64748B] leading-relaxed">
+                  {messagePreview(fb.message.content)}
+                </p>
+              ) : null}
             </div>
           ))}
         </div>
