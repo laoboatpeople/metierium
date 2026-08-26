@@ -1,5 +1,6 @@
 import nodemailer from 'nodemailer';
 import { env } from '../config/env';
+import { getSettings } from '../config/settings';
 
 /* ── Transporter Resend via SMTP ── */
 
@@ -273,7 +274,7 @@ export async function sendTutorFeedbackNotification(
   ].filter(Boolean).join('\n');
 
   try {
-    await t.sendMail({ from: FROM, to: 'chuck.onekeo@gmail.com', subject, text });
+    await t.sendMail({ from: FROM, to: getSettings().adminNotificationEmail || 'chuck.onekeo@gmail.com', subject, text });
     console.log(`[Email] Tutor feedback notification sent: "${subject}"`);
     return true;
   } catch (err) {
