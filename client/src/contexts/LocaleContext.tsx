@@ -23,15 +23,9 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
     const stored = localStorage.getItem(STORAGE_KEY);
     if (stored === 'en' || stored === 'fr') {
       setLocaleState(stored);
-    } else {
-      // Browser language detection fallback
-      try {
-        const browserLang = navigator.language || navigator.languages?.[0] || '';
-        if (browserLang.startsWith('en')) {
-          setLocaleState('en');
-        }
-      } catch {}
     }
+    // No browser-language fallback — the site defaults to the server locale
+    // (fr) unless the user explicitly chose a language (localStorage).
   }, []);
 
   // Sync <html lang> with locale
