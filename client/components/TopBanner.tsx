@@ -50,6 +50,7 @@ export function TopBanner() {
           onClick={() => {
             localStorage.setItem(STORAGE_KEY, '1');
             setVisible(false);
+            window.dispatchEvent(new Event('topbanner-dismissed'));
           }}
           className="text-[#64748B] hover:text-white transition-colors shrink-0"
           aria-label={isEn ? 'Close' : 'Fermer'}

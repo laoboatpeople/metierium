@@ -16,11 +16,16 @@ export default function Nav() {
   const [bannerVisible, setBannerVisible] = useState(false);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
-    const dismissed = localStorage.getItem('metierium:topbanner-dismissed') === '1';
-    const p = (pathname || '').replace(/^\/en/, '');
-    const hidden = HIDDEN_PREFIXES.some((prefix) => p === prefix || p.startsWith(prefix + '/'));
-    setBannerVisible(!dismissed && !hidden);
+    const compute = () => {
+      if (typeof window === 'undefined') return;
+      const dismissed = localStorage.getItem('metierium:topbanner-dismissed') === '1';
+      const p = (pathname || '').replace(/^\/en/, '');
+      const hidden = HIDDEN_PREFIXES.some((prefix) => p === prefix || p.startsWith(prefix + '/'));
+      setBannerVisible(!dismissed && !hidden);
+    };
+    compute();
+    window.addEventListener('topbanner-dismissed', compute);
+    return () => window.removeEventListener('topbanner-dismissed', compute);
   }, [pathname]);
 
   // The TopBanner replaces the top nav menu while visible
