@@ -1,6 +1,7 @@
 'use client';
 
 import PracticeQuestionWidget from '@/components/PracticeQuestionWidget';
+import Nav from '@/components/Nav';
 import Link from 'next/link';
 import Script from 'next/script';
 import {
@@ -19,7 +20,6 @@ import {
   Shield,
   ArrowRight,
   Globe,
-  Menu,
   X,
   Thermometer,
   Truck,
@@ -32,7 +32,6 @@ import { useLocale } from '@/src/contexts/LocaleContext';
 
 export default function LandingPage() {
   const { t, locale, toggleLocale } = useLocale();
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
 
   return (
@@ -175,77 +174,7 @@ export default function LandingPage() {
         }
       `}</Script>
       {/* ===== NAVIGATION ===== */}
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0A0E1A]/80 border-b border-white/5">
-        <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center">
-              <GraduationCap className="w-5 h-5 text-white" />
-            </div>
-            <span className="font-bold text-xl">{t('navBrand')}</span>
-          </div>
-
-          {/* Desktop nav links */}
-          <div className="hidden md:flex items-center gap-8">
-            <a href="#features" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navFeatures')}</a>
-            <a href="#trades" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navTrades')}</a>
-            <a href="#pricing" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navPricing')}</a>
-            <Link href="/faq" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navFaq')}</Link>
-            <Link href="/blog" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navBlog')}</Link>
-            <Link href="/contact" className="text-sm text-[#94A3B8] hover:text-white transition-colors">{t('navContact')}</Link>
-            <button
-              onClick={toggleLocale}
-              className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-sm text-[#94A3B8] hover:text-white hover:border-white/20 transition-all"
-            >
-              <Globe className="w-4 h-4" />
-              {locale === 'fr' ? 'EN' : 'FR'}
-            </button>
-          </div>
-
-          <div className="flex items-center gap-3">
-            <Link
-              href="/auth/login"
-              className="hidden md:inline-flex px-4 py-2 bg-[#3B82F6] hover:bg-[#2563EB] rounded-lg text-sm font-medium transition-colors"
-            >
-              {t('navSignIn')}
-            </Link>
-            {/* Mobile menu toggle */}
-            <button
-              className="md:hidden p-2 text-[#94A3B8] hover:text-white"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
-            </button>
-          </div>
-        </div>
-
-        {/* Mobile menu */}
-        {mobileMenuOpen && (
-          <div className="md:hidden border-t border-white/5 bg-[#0A0E1A]/95 backdrop-blur-md">
-            <div className="px-6 py-4 flex flex-col gap-3">
-              <a href="#features" onClick={() => setMobileMenuOpen(false)} className="text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navFeatures')}</a>
-              <a href="#trades" onClick={() => setMobileMenuOpen(false)} className="text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navTrades')}</a>
-              <a href="#pricing" onClick={() => setMobileMenuOpen(false)} className="text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navPricing')}</a>
-              <Link href="/faq" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navFaq')}</Link>
-              <Link href="/blog" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navBlog')}</Link>
-              <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="block text-sm text-[#94A3B8] hover:text-white transition-colors py-2">{t('navContact')}</Link>
-              <button
-                onClick={() => { toggleLocale(); setMobileMenuOpen(false); }}
-                className="flex items-center gap-1.5 px-3 py-2 rounded-lg border border-white/10 bg-white/5 text-sm text-[#94A3B8] hover:text-white w-fit"
-              >
-                <Globe className="w-4 h-4" />
-                {locale === 'fr' ? 'EN' : 'FR'}
-              </button>
-              <Link
-                href="/auth/login"
-                onClick={() => setMobileMenuOpen(false)}
-                className="px-4 py-2 bg-[#3B82F6] hover:bg-[#2563EB] rounded-lg text-sm font-medium transition-colors text-center"
-              >
-                {t('navSignIn')}
-              </Link>
-            </div>
-          </div>
-        )}
-      </nav>
+      <Nav />
 
       {/* ===== HERO SECTION ===== */}
       <section className="relative pt-32 pb-20 px-6 overflow-hidden">

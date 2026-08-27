@@ -24,26 +24,26 @@ export function TopBanner() {
   const isEn = (pathname || '').startsWith('/en');
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-[60] h-8 bg-gradient-to-r from-[#0F172A] to-[#1E293B] border-b border-white/10">
-      <div className="max-w-7xl mx-auto h-full px-4 flex items-center justify-center gap-3 text-xs">
+    <div className="fixed top-0 left-0 right-0 z-[60] h-10 bg-gradient-to-r from-[#0F172A] to-[#1E293B] border-b border-white/10">
+      <div className="max-w-7xl mx-auto h-full px-4 flex items-center justify-center gap-3 text-xs sm:text-sm">
         <span className="text-[#94A3B8] truncate">
           {isEn ? (
             <>
-              Preparing for the <strong className="text-white">Transport Canada AME red seal exams</strong>?
+              Preparing for the <strong className="text-white">Red Seal exam</strong>?
             </>
           ) : (
             <>
-              Vous préparez les examens <strong className="text-white">AME de Transports Canada</strong>?
+              Vous préparez votre examen <strong className="text-white">Sceau Rouge</strong>?
             </>
           )}
         </span>
         <a
-          href="https://skylicence.cloud"
+          href="https://redsealpractice.com/"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1 font-medium text-[#3B82F6] hover:text-[#06B6D4] transition-colors shrink-0"
         >
-          {isEn ? 'Try SkyLicence' : 'Découvrir SkyLicence'}
+          {isEn ? 'Try RedSealPractice' : 'Essayer RedSealPractice'}
           <ExternalLink size={12} />
         </a>
         <button

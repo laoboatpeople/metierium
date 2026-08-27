@@ -23,9 +23,12 @@ export default function Nav() {
     setBannerVisible(!dismissed && !hidden);
   }, [pathname]);
 
+  // The TopBanner replaces the top nav menu while visible
+  if (bannerVisible) return null;
+
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0A0E1A]/80 border-b border-white/5 transition-[top] duration-200 ${bannerVisible ? 'top-8' : ''}`}>
+      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0A0E1A]/80 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center">
