@@ -1,17 +1,31 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { GraduationCap, Menu, X, Globe } from 'lucide-react';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
+// Matches TopBanner: app routes where the banner (and its nav offset) are hidden
+const HIDDEN_PREFIXES = ['/app', '/exams', '/pricing', '/profile', '/theory', '/tutor', '/admin', '/auth', '/payment'];
+
 export default function Nav() {
   const { t, locale, toggleLocale } = useLocale();
+  const pathname = usePathname();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [bannerVisible, setBannerVisible] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const dismissed = localStorage.getItem('metierium:topbanner-dismissed') === '1';
+    const p = (pathname || '').replace(/^\/en/, '');
+    const hidden = HIDDEN_PREFIXES.some((prefix) => p === prefix || p.startsWith(prefix + '/'));
+    setBannerVisible(!dismissed && !hidden);
+  }, [pathname]);
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0A0E1A]/80 border-b border-white/5">
+      <nav className={`fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-[#0A0E1A]/80 border-b border-white/5 transition-[top] duration-200 ${bannerVisible ? 'top-8' : ''}`}>
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
             <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center">

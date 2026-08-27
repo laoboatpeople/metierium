@@ -4,6 +4,7 @@ import { headers } from 'next/headers';
 import Script from 'next/script';
 import './globals.css';
 import Providers from './providers';
+import { TopBanner } from '@/components/TopBanner';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -180,6 +181,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
         {JSON.stringify(breadcrumbListSchema)}
       </Script>
       <body className="font-sans antialiased">
+        <TopBanner />
         <Providers>{children}</Providers>
       </body>
     </html>
