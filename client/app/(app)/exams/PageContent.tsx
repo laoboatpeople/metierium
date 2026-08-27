@@ -1045,6 +1045,13 @@ function ExamsPage() {
           )}
         </div>
 
+        {/* Chapter name below header */}
+        {currentChapterName && (
+          <div className="text-xs text-[#06B6D4] bg-[#06B6D4]/5 px-3 py-1.5 rounded-lg border border-[#06B6D4]/10 inline-block">
+            {currentChapterName}
+          </div>
+        )}
+
         {/* Progress bar */}
         <div className="w-full h-1 bg-[#111827] rounded-full overflow-hidden">
           <div className="h-full bg-[#3B82F6] transition-all" style={{ width: `${progress}%` }} />
@@ -1066,11 +1073,6 @@ function ExamsPage() {
                   {currentIndex + 1}
                 </div>
                 <span className="text-sm text-[#94A3B8]">{t('examsOf', { total: questions.length })}</span>
-                {currentChapterName && (
-                  <span className="ml-2 text-xs text-[#06B6D4]/70 bg-[#06B6D4]/8 px-2 py-0.5 rounded-full">
-                    {currentChapterName}
-                  </span>
-                )}
               </div>
               <div className="flex items-center gap-2">
                 <span className={`text-[11px] font-medium px-2 py-0.5 rounded-full ${
