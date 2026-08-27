@@ -306,7 +306,7 @@ function ExamsPage() {
   // Auto-submit when exam timer expires (uses ref to avoid stale closure)
   const finishExamRef = useRef<() => void>(() => {});
   useEffect(() => {
-    if (timerActive && examTime >= EXAM_DURATION) {
+    if (timerActive && !reviewMode && examTime >= EXAM_DURATION) {
       finishExamRef.current();
     }
   }, [examTime, timerActive, EXAM_DURATION]);
@@ -414,7 +414,7 @@ function ExamsPage() {
       setExamResult(null);
       setExamTime(0);
       setSaved(false);
-      setTimerActive(!reviewMode);
+      setTimerActive(true);
     } catch (err) {
       alert(t('examsLoadError'));
     }
