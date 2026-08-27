@@ -1045,13 +1045,6 @@ function ExamsPage() {
           )}
         </div>
 
-        {/* Chapter name below header */}
-        {currentChapterName && (
-          <div className="text-xs text-[#06B6D4] bg-[#06B6D4]/5 px-3 py-1.5 rounded-lg border border-[#06B6D4]/10 inline-block">
-            {currentChapterName}
-          </div>
-        )}
-
         {/* Progress bar */}
         <div className="w-full h-1 bg-[#111827] rounded-full overflow-hidden">
           <div className="h-full bg-[#3B82F6] transition-all" style={{ width: `${progress}%` }} />
