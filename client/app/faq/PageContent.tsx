@@ -182,6 +182,30 @@ export default function FaqListing({ initialData }: Props) {
                   </a>{' '}
                   — préparation aux examens de maintenance aéronautique (Transports Canada / TEA)
                 </li>
+                <li>
+                  <a href="https://skylicense.cloud" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#60A5FA] transition-colors">
+                    Sky License FAA
+                  </a>{' '}
+                  — préparation aux examens FAA A&P (General, Airframe, Powerplant)
+                </li>
+                <li>
+                  <a href="https://skylicence.com" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#60A5FA] transition-colors">
+                    Skylicence Europe
+                  </a>{' '}
+                  — préparation aux examens EASA Part-66 (licence de maintenance aéronautique)
+                </li>
+                <li>
+                  <a href="https://redsealpractice.com" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#60A5FA] transition-colors">
+                    Red Seal Practice
+                  </a>{' '}
+                  — préparation aux examens interprovinciaux du Sceau rouge (54 métiers)
+                </li>
+                <li>
+                  <a href="https://sky107.com" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#60A5FA] transition-colors">
+                    Sky107
+                  </a>{' '}
+                  — préparation à l'examen de télépilote de drone FAA Part 107
+                </li>
               </ul>
             </div>
           </div>
