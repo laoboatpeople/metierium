@@ -122,6 +122,11 @@ export function renderAIResponse(content: string): string {
     return `\u0000SVG${svgBlocks.length - 1}\u0000`;
   });
 
+  // Defensive: the AI occasionally emits an UNCLOSED <svg> (truncated response).
+  // An unclosed <svg> in the DOM swallows the rest of the bubble and renders as
+  // a blank white box — strip everything from an unclosed <svg> to the end.
+  html = html.replace(/<svg[\s\S]*$/i, '');
+
   html = html
     // Markdown headings (# → h3, ## → h4, ### → h5) — keep visual hierarchy small in chat
     .replace(/^### (.+)$/gm, '<h5 class="text-sm font-semibold mt-3 mb-1 text-[#F8FAFC]">$1</h5>')
