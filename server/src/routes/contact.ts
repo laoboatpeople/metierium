@@ -50,6 +50,8 @@ router.post('/', async (req: Request, res: Response): Promise<void> => {
     '',
     '── Message ──',
     message,
+    '',
+    'View in admin: https://metierium.com/admin/contact-messages',
   ].join('\n');
 
   try {
