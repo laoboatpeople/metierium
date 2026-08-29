@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
 import blogData from '@/public/blog-data.json';
 import faqData from '@/public/faq-data.json';
+import theoryData from '@/src/data/theory-data.json';
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://metierium.com';
@@ -49,8 +50,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.5,
       changeFrequency: 'monthly' as const,
     }));
+  const theoryChapters: MetadataRoute.Sitemap = theoryData.map((ch) => ({ url: `${baseUrl}/theory/${ch.id}`, lastModified: new Date(), changeFrequency: 'monthly' as const, priority: 0.9 }));
 
-  return [
+
+  return [...theoryChapters, 
     ...staticPages,
     ...tradePages,
     ...blogPages,
