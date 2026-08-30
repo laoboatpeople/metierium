@@ -28,6 +28,18 @@ export async function generateMetadata(): Promise<Metadata> {
       title: 'Metierium — Trade exam prep in Quebec | CMEQ, CMMTQ, QBQ',
       description: 'Prepare to pass your Quebec trade certification exam with complete theory, practice exams, and AI-powered tracking. CMEQ, CMMTQ, QBQ and more.',
       keywords: ['Quebec trade exam', 'CMEQ', 'CMMTQ', 'QBQ', 'electrician', 'plumber', 'welder', 'Quebec certification', 'RBQ exam', 'Quebec Construction Code', 'electrician exam prep', 'plumber exam Quebec'],
+      icons: {
+        icon: [
+          { url: '/favicon.ico?v=1', sizes: 'any' },
+          { url: '/favicon-16x16.png?v=1', sizes: '16x16', type: 'image/png' },
+          { url: '/favicon-32x32.png?v=1', sizes: '32x32', type: 'image/png' },
+          { url: '/favicon-48x48.png?v=1', sizes: '48x48', type: 'image/png' },
+          { url: '/favicon-96x96.png?v=1', sizes: '96x96', type: 'image/png' },
+          { url: '/favicon-192x192.png?v=1', sizes: '192x192', type: 'image/png' },
+          { url: '/favicon-512x512.png?v=1', sizes: '512x512', type: 'image/png' },
+        ],
+        apple: '/apple-touch-icon.png?v=1',
+      },
       openGraph: {
         title: 'Metierium — Prepare for your trade exams in Quebec',
         description: 'Pass your certification exam with complete theory, practice exams, and personalized tracking.',
@@ -59,6 +71,18 @@ export async function generateMetadata(): Promise<Metadata> {
     title: 'Metierium — Préparez vos examens de métiers | CMEQ, CMMTQ, QBQ',
     description: 'Réussissez votre examen de certification au Québec avec théorie complète, examens blancs et suivi IA. Électricien, plombier, soudeur et 13 autres métiers.',
     keywords: ['examen métier Québec', 'CMEQ', 'CMMTQ', 'QBQ', 'électricien', 'plombier', 'soudeur', 'certification Québec', 'examen RBQ', 'Code construction Québec', 'préparation examen électricien', 'examen plombier Québec'],
+    icons: {
+      icon: [
+        { url: '/favicon.ico?v=1', sizes: 'any' },
+        { url: '/favicon-16x16.png?v=1', sizes: '16x16', type: 'image/png' },
+        { url: '/favicon-32x32.png?v=1', sizes: '32x32', type: 'image/png' },
+        { url: '/favicon-48x48.png?v=1', sizes: '48x48', type: 'image/png' },
+        { url: '/favicon-96x96.png?v=1', sizes: '96x96', type: 'image/png' },
+        { url: '/favicon-192x192.png?v=1', sizes: '192x192', type: 'image/png' },
+        { url: '/favicon-512x512.png?v=1', sizes: '512x512', type: 'image/png' },
+      ],
+      apple: '/apple-touch-icon.png?v=1',
+    },
     openGraph: {
       title: 'Metierium — Préparez vos examens de métiers au Québec',
       description: 'Réussissez votre examen de certification avec théorie complète, examens blancs et suivi personnalisé.',
