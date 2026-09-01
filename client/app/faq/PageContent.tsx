@@ -212,6 +212,12 @@ export default function FaqListing({ initialData }: Props) {
                   </a>{' '}
                   — Vous préparez plutôt une certification ICC d'inspecteur en bâtiment? Inspect Practice couvre les examens ICC B1, B2, E1, P1 et M1 avec des questions pratiques propulsées par l'IA, la théorie IRC/IBC/NEC/IPC/IMC et des simulations d'examen.
                 </li>
+                <li>
+                  <a href="https://ccmapractice.com" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#60A5FA] transition-colors">
+                    CCMAPractice
+                  </a>{' '}
+                  — Vous préparez plutôt l'examen de certification CCMA (assistant médical clinique)? CCMAPractice couvre le blueprint de l'examen NHA CCMA avec des questions pratiques propulsées par l'IA, la théorie et des simulations d'examen.
+                </li>
               </ul>
             </div>
           </div>
