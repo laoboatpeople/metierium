@@ -36,3 +36,161 @@
 
 ## Blog
 - https://metierium.com/blog - All blog posts — articles about Quebec trade certification, exam tips, code changes, Sceau Rouge (Red Seal), and industry news.
+
+## Theory Chapters (138)
+
+### CMEQ
+- Loi d'Ohm: https://metierium.com/theory/cmrbe6r1m0004eap3y265ifms
+- Circuits CC/CA: https://metierium.com/theory/cmrbe6r1p0006eap3czigjhxx
+- Câblage résidentiel: https://metierium.com/theory/cmrbe6r1s0008eap3ubpkjmcw
+- Protection des circuits: https://metierium.com/theory/cmrbe6r1v000aeap3vjeu5zti
+- Moteurs électriques: https://metierium.com/theory/cmrbe6r1x000ceap35e3znjz6
+- Panneaux solaires: https://metierium.com/theory/cmrbe6r1z000eeap3gcajozxz
+- Systèmes de sécurité: https://metierium.com/theory/cmrbe6r20000geap3vcc4yrne
+- Code de construction: https://metierium.com/theory/cmrbe6r22000ieap3p4jcwwk0
+- Schémas électriques: https://metierium.com/theory/cmrbe6r24000keap32laxpiww
+- Calculs de charge: https://metierium.com/theory/cmrbe6r25000meap3ebm19zgw
+### CMMTQ
+- Introduction à la Plomberie: https://metierium.com/theory/cmrbe6sbg01hgeap3h2meorgo
+- Code de Plomberie du Québec: https://metierium.com/theory/cmrbe6sbi01hieap3tua74sj3
+- Alimentation en Eau Potable: https://metierium.com/theory/cmrbe6sbk01hkeap3bhg92ifl
+- Évacuation et Ventilation: https://metierium.com/theory/cmrbe6sbl01hmeap3fmel0o50
+- Appareils Sanitaires: https://metierium.com/theory/cmrbe6sbn01hoeap32bjx4m3i
+- Chauffage de l'Eau: https://metierium.com/theory/cmrbe6sbo01hqeap3osgg4prz
+- Gaz Naturel et Propane: https://metierium.com/theory/cmrbe6sbq01hseap3gb2ocqg3
+- Systèmes de Protection Incendie: https://metierium.com/theory/cmrbe6sbt01hueap3s8cv1bo9
+### QBQ
+- Introduction au Soudage: https://metierium.com/theory/cmrbe6t4t02feeap36umezzb5
+- Normes et Codes de Soudage: https://metierium.com/theory/cmrbe6t4v02fgeap30y02ogkq
+- Sécurité en Soudage: https://metierium.com/theory/cmrbe6t4x02fieap3v9zo8ed2
+- Lecture de Plans et Symboles de Soudage: https://metierium.com/theory/cmrbe6t4z02fkeap3kmeq0sfx
+- Métallurgie du Soudage: https://metierium.com/theory/cmrbe6t5102fmeap3k9sv1e3u
+- Procédé SMAW: https://metierium.com/theory/cmrbe6t5302foeap3esv3ifka
+- Procédé GMAW/FCAW: https://metierium.com/theory/cmrbe6t5602fqeap33p4p56sq
+- Inspection et Contrôle Qualité: https://metierium.com/theory/cmrbe6t5802fseap3ba69sib8
+### HVAC
+- Thermodynamique et transfert thermique: https://metierium.com/theory/ch_hvac_01
+- Systemes de chauffage: https://metierium.com/theory/ch_hvac_02
+- Climatisation et refrigeration: https://metierium.com/theory/ch_hvac_03
+- Ventilation et distribution d air: https://metierium.com/theory/ch_hvac_04
+- Controles et thermostatiques: https://metierium.com/theory/ch_hvac_05
+- Refrigerants et environnement: https://metierium.com/theory/ch_hvac_06
+- Codes et normes (RBQ/B149): https://metierium.com/theory/ch_hvac_07
+- Securite et outils: https://metierium.com/theory/ch_hvac_08
+### MVL
+- Moteurs diesel: https://metierium.com/theory/ch_mvl_01
+- Transmissions et boites de vitesses: https://metierium.com/theory/ch_mvl_02
+- Systemes hydrauliques: https://metierium.com/theory/ch_mvl_03
+- Systemes electriques: https://metierium.com/theory/ch_mvl_04
+- Freins pneumatiques: https://metierium.com/theory/ch_mvl_05
+- Direction et suspension: https://metierium.com/theory/ch_mvl_06
+- Diagnostic electronique: https://metierium.com/theory/ch_mvl_07
+- Securite et normes CCQ: https://metierium.com/theory/ch_mvl_08
+### INCENDIE
+- Systèmes d'alarme incendie: https://metierium.com/theory/ch_inc_01
+- Systèmes de gicleurs: https://metierium.com/theory/ch_inc_02
+- Détection et signalisation: https://metierium.com/theory/ch_inc_03
+- Extincteurs portatifs: https://metierium.com/theory/ch_inc_04
+- Codes de sécurité incendie: https://metierium.com/theory/ch_inc_05
+- Ventilation et contrôle des fumées: https://metierium.com/theory/ch_inc_06
+- Éclairage d'urgence et signalisation: https://metierium.com/theory/ch_inc_07
+- Occupation et évacuation: https://metierium.com/theory/ch_inc_08
+### FERBLAN
+- Matériaux et métaux: https://metierium.com/theory/ch_fer_01
+- Tracé et développement: https://metierium.com/theory/ch_fer_02
+- Coupe et formage: https://metierium.com/theory/ch_fer_03
+- Assemblage et fixation: https://metierium.com/theory/ch_fer_04
+- Ventilation et conduits: https://metierium.com/theory/ch_fer_05
+- Toiture et bardage: https://metierium.com/theory/ch_fer_06
+- Plans et devis: https://metierium.com/theory/ch_fer_07
+- Santé et sécurité: https://metierium.com/theory/ch_fer_08
+### BRIQUE
+- Matériaux et unités de maçonnerie: https://metierium.com/theory/ch_bri_01
+- Mortier et coulis: https://metierium.com/theory/ch_bri_02
+- Appareillage et pose: https://metierium.com/theory/ch_bri_03
+- Murs creux et parement: https://metierium.com/theory/ch_bri_04
+- Ouvertures et arcs: https://metierium.com/theory/ch_bri_05
+- Maçonnerie de pierre: https://metierium.com/theory/ch_bri_06
+- Plans et devis: https://metierium.com/theory/ch_bri_07
+- Santé et sécurité: https://metierium.com/theory/ch_bri_08
+### OPEQUIP
+- Types d'équipement lourd: https://metierium.com/theory/ch_op_01
+- Opération et commandes: https://metierium.com/theory/ch_op_02
+- Excavation et terrassement: https://metierium.com/theory/ch_op_03
+- Chargement et transport: https://metierium.com/theory/ch_op_04
+- Nivellement et finition: https://metierium.com/theory/ch_op_05
+- Chemins et sites d'enfouissement: https://metierium.com/theory/ch_op_06
+- Plans et topographie: https://metierium.com/theory/ch_op_07
+- Santé et sécurité: https://metierium.com/theory/ch_op_08
+### GAZ
+- Code CSA B149.1 — Gaz naturel: https://metierium.com/theory/ch_gaz_01
+- Code CSA B149.2 — Propane: https://metierium.com/theory/ch_gaz_02
+- Évacuation et air de combustion: https://metierium.com/theory/ch_gaz_03
+- Appareils et contrôles: https://metierium.com/theory/ch_gaz_04
+- Dimensionnement et tuyauterie: https://metierium.com/theory/ch_gaz_05
+- Tests et mise en service: https://metierium.com/theory/ch_gaz_06
+- Réglementation RBQ et permis: https://metierium.com/theory/ch_gaz_07
+- Sécurité et interventions: https://metierium.com/theory/ch_gaz_08
+### ASCEN
+- Code CSA B44 — Sécurité: https://metierium.com/theory/ch_asc_01
+- Systèmes électriques et commandes: https://metierium.com/theory/ch_asc_02
+- Ascenseurs hydrauliques: https://metierium.com/theory/ch_asc_03
+- Ascenseurs à traction: https://metierium.com/theory/ch_asc_04
+- Portes et verrouillages: https://metierium.com/theory/ch_asc_05
+- Installation et entretien: https://metierium.com/theory/ch_asc_06
+- Inspection et essais: https://metierium.com/theory/ch_asc_07
+- Sécurité et interventions: https://metierium.com/theory/ch_asc_08
+### REFRIG
+- Thermodynamique et cycle frigorifique: https://metierium.com/theory/ch_ref_01
+- Gaz frigorigènes et ozone: https://metierium.com/theory/ch_ref_02
+- Compresseurs: https://metierium.com/theory/ch_ref_03
+- Condenseurs et évaporateurs: https://metierium.com/theory/ch_ref_04
+- Contrôles et sécurités: https://metierium.com/theory/ch_ref_05
+- Tuyauterie et calorifuge: https://metierium.com/theory/ch_ref_06
+- Mise en service et entretien: https://metierium.com/theory/ch_ref_07
+- Sécurité et réglementation: https://metierium.com/theory/ch_ref_08
+### CONSTR
+- Licence RBQ et réglementation: https://metierium.com/theory/ch_con_01
+- Gestion d'entreprise: https://metierium.com/theory/ch_con_02
+- Contrats et droit de la construction: https://metierium.com/theory/ch_con_03
+- Code de construction et plans: https://metierium.com/theory/ch_con_04
+- Gestion de chantier et sécurité: https://metierium.com/theory/ch_con_05
+- Estimation et budget de projet: https://metierium.com/theory/ch_con_06
+- Matériaux et méthodes: https://metierium.com/theory/ch_con_07
+- Contrôle qualité et garantie: https://metierium.com/theory/ch_con_08
+### ENTGEN
+- Licence RBQ et réglementation: https://metierium.com/theory/ch_entgen_01
+- Gestion d'entreprise: https://metierium.com/theory/ch_entgen_02
+- Contrats et droit de la construction: https://metierium.com/theory/ch_entgen_03
+- Code de construction et plans: https://metierium.com/theory/ch_entgen_04
+- Gestion de chantier et SST: https://metierium.com/theory/ch_entgen_05
+- Estimation et budget de projet: https://metierium.com/theory/ch_entgen_06
+- Matériaux et méthodes: https://metierium.com/theory/ch_entgen_07
+- Contrôle qualité et réception des travaux: https://metierium.com/theory/ch_entgen_08
+### INSPECT
+- Code du bâtiment et réglementation: https://metierium.com/theory/ch_ins_01
+- Systèmes structuraux: https://metierium.com/theory/ch_ins_02
+- Enveloppe du bâtiment: https://metierium.com/theory/ch_ins_03
+- Plomberie et systèmes mécaniques: https://metierium.com/theory/ch_ins_04
+- Systèmes électriques: https://metierium.com/theory/ch_ins_05
+- Finitions intérieures et sécurité: https://metierium.com/theory/ch_ins_06
+- Processus et rapport d'inspection: https://metierium.com/theory/ch_ins_07
+- Responsabilité et éthique: https://metierium.com/theory/ch_ins_08
+### SST
+- Lois et règlements: https://metierium.com/theory/ch_sst_01
+- Identification des dangers: https://metierium.com/theory/ch_sst_02
+- Protection contre les chutes: https://metierium.com/theory/ch_sst_03
+- Espaces clos: https://metierium.com/theory/ch_sst_04
+- Sécurité électrique: https://metierium.com/theory/ch_sst_05
+- Sécurité incendie et urgences: https://metierium.com/theory/ch_sst_06
+- Surveillance santé et ergonomie: https://metierium.com/theory/ch_sst_07
+- Inspection et enquête: https://metierium.com/theory/ch_sst_08
+### GESTRAV
+- Estimation de coûts et soumissions: https://metierium.com/theory/cms64nslp000213amk6375wx8
+- Planification et ordonnancement des travaux: https://metierium.com/theory/cms64nslv000413amg2w1wesl
+- Gestion de la main-d'œuvre et sous-traitance: https://metierium.com/theory/cms64nslx000613amy4si54yq
+- Cadre légal et réglementaire (RBQ, CCQ): https://metierium.com/theory/cms64nsly000813amkrxb39rn
+- Santé et sécurité sur les chantiers (LSST, RSST): https://metierium.com/theory/cms64nsm0000a13am413x9s0m
+- Gestion des contrats et aspects juridiques: https://metierium.com/theory/cms64nsm1000c13ametf889dl
+- Gestion financière et contrôle budgétaire: https://metierium.com/theory/cms64nsm3000e13amnuwo5sj0
+- Qualité, environnement et clôture de projet: https://metierium.com/theory/cms64nsm4000g13amk0mhuyzl

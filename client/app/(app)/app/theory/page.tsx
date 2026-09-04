@@ -5,9 +5,9 @@ export const metadata: Metadata = {
   title: 'Theory | Metierium',
   description: 'Browse trade theory content organized by chapter. Study Quebec construction codes, electrical, plumbing, welding, and more with detailed explanations.',
   alternates: {
-    canonical: 'https://metierium.com/theory',
+    canonical: 'https://metierium.com/app/theory',
     languages: {
-      'fr-CA': 'https://metierium.com/theory',
+      'fr-CA': 'https://metierium.com/app/theory',
       'en-CA': 'https://metierium.com/en/theory',
     },
   },
