@@ -104,7 +104,7 @@ const TEXT_CLASS: Record<string, string> = {
   purple: 'text-purple',
 };
 
-export function TheoryContent({ content, color = 'blue' }: { content: string; color?: string }) {
+export function TheoryContent({ content, color = 'blue', onDark = false }: { content: string; color?: string; onDark?: boolean }) {
   const segments = parseTheorySegments(content);
   return (
     <div className="prose prose-sm max-w-none">
@@ -159,7 +159,10 @@ export function TheoryContent({ content, color = 'blue' }: { content: string; co
                 <thead>
                   <tr>
                     {header.map((h, hi) => (
-                      <th key={hi} className="border-b border-border px-3 py-2 text-left">
+                      <th
+                        key={hi}
+                        className={`border-b px-3 py-2 text-left ${onDark ? 'border-white/15 text-[#F8FAFC]' : 'border-border'}`}
+                      >
                         {h}
                       </th>
                     ))}
@@ -171,7 +174,7 @@ export function TheoryContent({ content, color = 'blue' }: { content: string; co
                       {row.map((cell, ci) => (
                         <td
                           key={ci}
-                          className={`border-b border-border px-3 py-2 ${ci === 0 ? 'font-medium' : ''}`}
+                          className={`border-b px-3 py-2 ${ci === 0 ? 'font-medium' : ''} ${onDark ? 'border-white/10 text-[#DCE9F2]' : 'border-border'}`}
                           dangerouslySetInnerHTML={{ __html: cell }}
                         />
                       ))}

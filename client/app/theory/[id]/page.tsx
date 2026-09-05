@@ -98,7 +98,7 @@ export default async function TheoryChapterPage({ params }: { params: Promise<{ 
         </div>
 
         <div className="bg-[#1A2035] border border-white/10 rounded-2xl p-6 md:p-8">
-          <TheoryContent content={chapter.content} color="blue" />
+          <TheoryContent content={chapter.content} color="blue" onDark />
         </div>
 
         <div className="mt-8 grid grid-cols-2 gap-4">
