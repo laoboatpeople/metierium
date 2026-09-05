@@ -107,7 +107,7 @@ const TEXT_CLASS: Record<string, string> = {
 export function TheoryContent({ content, color = 'blue', onDark = false }: { content: string; color?: string; onDark?: boolean }) {
   const segments = parseTheorySegments(content);
   return (
-    <div className="prose prose-sm max-w-none">
+    <div className={`prose prose-sm max-w-none ${onDark ? 'prose-invert' : ''}`}>
       {segments.map((seg, i) => {
         if (seg.type === 'svg') {
           return (

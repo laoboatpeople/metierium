@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import fs from 'fs';
 import path from 'path';
-import { BookOpen, ChevronRight, Home, ArrowRight } from 'lucide-react';
+import { BookOpen, ChevronRight, Home, ArrowRight, GraduationCap } from 'lucide-react';
 import theoryData from '@/src/data/theory-data.json';
 import chapterTrades from '@/src/data/theory-trades.json';
 
@@ -114,7 +114,10 @@ export default function TheoryIndexPage() {
       <header className="border-b border-white/5 bg-[#061C33]/80 backdrop-blur-md sticky top-0 z-40">
         <div className="max-w-4xl mx-auto px-6 py-4 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-2" aria-label="Metierium home">
-            <img src="/logo/logo-main.png?v=2" alt="Metierium" className="h-7 w-auto" />
+            <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-[#3B82F6] to-[#06B6D4] flex items-center justify-center">
+              <GraduationCap className="w-4 h-4 text-white" />
+            </div>
+            <span className="font-bold text-lg text-[#F6FBFF]">Metierium</span>
           </Link>
           <nav className="flex items-center gap-4 text-sm">
             <Link href="/theory" className="text-[#F6FBFF] font-medium transition-colors">Tous les chapitres</Link>
