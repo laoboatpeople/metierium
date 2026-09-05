@@ -956,6 +956,15 @@ export default function LandingPage() {
           <p className="text-center text-sm text-[#64748B] mt-8">
             {t('planCancelAnytime')}
           </p>
+          <div className="text-center mt-6">
+            <Link
+              href="/pricing"
+              className="inline-flex items-center gap-1.5 text-sm text-[#94A3B8] hover:text-[#3B82F6] transition-colors group"
+            >
+              {t('pricingCompareLink')}
+              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </Link>
+          </div>
         </div>
       </section>
 

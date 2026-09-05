@@ -203,6 +203,7 @@ const fr: Record<string, unknown> = {
   planFeatureTracking: 'Suivi de progression',
   planFeatureStats: 'Statistiques détaillées',
   planCancelAnytime: 'Vous pouvez annuler à tout moment. Aucune question, aucun engagement.',
+  pricingCompareLink: 'Voir la comparaison détaillée des plans',
 
   // Landing page - CTA
   ctaTitle: 'Prêt à réussir votre examen ?',
@@ -1078,6 +1079,7 @@ const en: Record<string, string> = {
   planFeatureTracking: 'Progress tracking',
   planFeatureStats: 'Detailed statistics',
   planCancelAnytime: 'Cancel anytime. No questions asked, no commitment.',
+  pricingCompareLink: 'View detailed plan comparison',
 
   // Landing page - CTA
   ctaTitle: 'Ready to pass your exam?',

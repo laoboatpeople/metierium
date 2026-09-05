@@ -32,7 +32,7 @@ const NAV_ITEMS = [
   { href: '/theory', label: 'theory', icon: BookMarked },
   { href: '/exams', label: 'exams', icon: BookOpen },
   { href: '/tutor', label: 'aiTutor', icon: MessageSquare },
-  { href: '/pricing', label: 'pricing', icon: CreditCard },
+  { href: '/app/pricing', label: 'pricing', icon: CreditCard },
   { href: '/profile', label: 'profile', icon: User },
 ];
 

@@ -78,7 +78,7 @@ export default function ProfilePage() {
       </div>
 
       {/* Subscription */}
-      <Link href="/pricing">
+      <Link href="/app/pricing">
         <div className="bg-[#1A2035] border border-[#2D3A52] rounded-xl p-4 hover:border-[#3B82F6]/40 transition-colors flex items-center justify-between group">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-[#F59E0B]/10 flex items-center justify-center">

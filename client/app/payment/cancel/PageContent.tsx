@@ -19,7 +19,7 @@ export default function PaymentCancel() {
           </p>
           <div className="flex flex-col gap-3">
             <Link
-              href="/pricing"
+              href="/app/pricing"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white rounded-xl font-medium hover:shadow-lg hover:shadow-[#3B82F6]/20 transition-all"
             >
               {t('paymentRetry')}

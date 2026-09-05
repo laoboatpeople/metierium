@@ -720,7 +720,7 @@ function ExamsPage() {
                       return (
                         <button
                           key={n}
-                          onClick={() => isLockedCount ? router.push('/pricing') : setQuestionCount(n)}
+                          onClick={() => isLockedCount ? router.push('/app/pricing') : setQuestionCount(n)}
                           disabled={isDisabled}
                           className={`flex-1 min-w-[40px] py-2 rounded-lg border text-sm font-medium transition-all flex items-center justify-center gap-1 ${
                             isLockedCount
@@ -796,7 +796,7 @@ function ExamsPage() {
                         <label
                           key={ch.id}
                           id={`chapter-${ch.id}`}
-                          onClick={() => isSimLocked ? undefined : (isLocked ? router.push('/pricing') : toggleChapter(ch.id))}
+                          onClick={() => isSimLocked ? undefined : (isLocked ? router.push('/app/pricing') : toggleChapter(ch.id))}
                           className={`flex items-center gap-2.5 px-3 py-2 rounded-lg border text-sm transition-all ${
                             highlightChapterId === ch.id
                               ? 'border-[#06B6D4] ring-2 ring-[#06B6D4]/40 shadow-lg shadow-[#06B6D4]/10 bg-[#06B6D4]/5'
@@ -880,7 +880,7 @@ function ExamsPage() {
 
               {/* Exam simulation (timed) — paid feature */}
               <button
-                onClick={() => userPlan === 'FREE' ? router.push('/pricing') : selectSimulationMode()}
+                onClick={() => userPlan === 'FREE' ? router.push('/app/pricing') : selectSimulationMode()}
                 className={`relative p-4 rounded-xl border-2 text-left transition-all duration-200 ${
                   userPlan === 'FREE'
                     ? 'border-[#2D3A52] bg-[#111827]/50 opacity-70 cursor-pointer hover:border-[#F59E0B]/40'
@@ -945,7 +945,7 @@ function ExamsPage() {
                 onClick={() => {
                   // Exam simulations (timed mode) are paid — FREE users go to pricing
                   if (userPlan === 'FREE' && !reviewMode) {
-                    router.push('/pricing');
+                    router.push('/app/pricing');
                     return;
                   }
                   startExam();

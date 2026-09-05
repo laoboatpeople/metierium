@@ -557,7 +557,7 @@ export default function TutorPage() {
                 </div>
               </div>
               <Link
-                href="/pricing"
+                href="/app/pricing"
                 className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-lg bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] text-white text-sm font-semibold hover:opacity-90 transition-opacity"
               >
                 <Sparkles size={15} />
