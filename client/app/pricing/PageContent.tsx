@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Check, ArrowRight } from 'lucide-react';
+import { Check, ArrowRight, ChevronDown, Minus } from 'lucide-react';
 import Nav from '@/components/Nav';
 import { useLocale } from '@/src/contexts/LocaleContext';
 
@@ -178,8 +178,92 @@ export default function PricingPage() {
         </div>
       </section>
 
+        {/* Compare plans table */}
+        <section className="py-10 px-6 relative">
+          <div className="relative z-10 max-w-7xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+              <span className="bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent">
+                {t('pricingCompareTitle')}
+              </span>
+            </h2>
+            <div className="overflow-x-auto rounded-2xl border border-[#2D3A52] bg-[#0F1524]">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-[#2D3A52]">
+                    <th className="text-left py-4 px-5 text-[#94A3B8] font-medium"></th>
+                    <th className="text-center py-4 px-3 text-[#F8FAFC] font-semibold">GRATUIT</th>
+                    <th className="text-center py-4 px-3 text-[#3B82F6] font-semibold">ESSENTIEL</th>
+                    <th className="text-center py-4 px-3 text-[#8B5CF6] font-semibold">PRO</th>
+                    <th className="text-center py-4 px-3 text-[#F59E0B] font-semibold">À VIE</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#2D3A52]/60">
+                  {[
+                    { label: t('pricingFeatOneTrade'), cells: [true, true, false, false] },
+                    { label: t('pricingFeatAllTrades'), cells: [false, false, true, true] },
+                    { label: t('pricingFeatTheory'), cells: [true, true, true, true] },
+                    { label: t('pricingFeatUnlimitedQ'), cells: [false, true, true, true] },
+                    { label: t('pricingFeatUnlimitedExams'), cells: [false, true, true, true] },
+                    { label: t('pricingFeatAiTutor'), cells: [false, true, true, true] },
+                    { label: t('planFeatureTracking'), cells: [false, false, true, true] },
+                    { label: t('pricingFeatUpdates'), cells: [false, false, false, true] },
+                  ].map((row) => (
+                    <tr key={row.label} className="hover:bg-white/[0.02] transition-colors">
+                      <td className="py-3.5 px-5 text-[#F8FAFC]">{row.label}</td>
+                      {row.cells.map((inc, ci) => (
+                        <td key={ci} className="py-3.5 px-3 text-center">
+                          {inc === true ? (
+                            <Check size={16} className="inline text-[#10B981]" />
+                          ) : (
+                            <Minus size={16} className="inline text-[#475569]" />
+                          )}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-center text-sm text-[#64748B] mt-4">{t('planCancelAnytime')}</p>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section className="py-10 px-6 relative">
+          <div className="relative z-10 max-w-3xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-10">
+              <span className="bg-gradient-to-r from-[#3B82F6] to-[#06B6D4] bg-clip-text text-transparent">
+                {t('faqTitle')}
+              </span>
+            </h2>
+            <div className="space-y-3">
+              {[
+                { q: t('pricingFaqQ1'), a: t('pricingFaqA1') },
+                { q: t('pricingFaqQ2'), a: t('pricingFaqA2') },
+                { q: t('pricingFaqQ3'), a: t('pricingFaqA3') },
+                { q: t('pricingFaqQ4'), a: t('pricingFaqA4') },
+                { q: t('pricingFaqQ5'), a: t('pricingFaqA5') },
+                { q: t('pricingFaqQ6'), a: t('pricingFaqA6') },
+              ].map((item, idx) => (
+                <details
+                  key={idx}
+                  className="group bg-[#1A2035] border border-[#2D3A52] rounded-xl overflow-hidden hover:border-[#3B82F6]/30 transition-colors"
+                >
+                  <summary className="flex items-center justify-between gap-4 px-5 py-4 cursor-pointer list-none text-sm font-medium text-[#F8FAFC]">
+                    {item.q}
+                    <ChevronDown size={16} className="text-[#94A3B8] group-open:rotate-180 transition-transform shrink-0" />
+                  </summary>
+                  <p className="px-5 pb-4 text-sm text-[#94A3B8] leading-relaxed">{item.a}</p>
+                </details>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA */}
         <section className="pb-20 px-6 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-3 text-[#F8FAFC]">{t('pricingCtaTitle')}</h2>
+          <p className="text-sm text-[#94A3B8] max-w-xl mx-auto mb-6">{t('pricingCtaText')}</p>
           <Link
             href="/auth/register"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-[#3B82F6] text-white text-base font-semibold hover:bg-[#2563EB] transition-all"
