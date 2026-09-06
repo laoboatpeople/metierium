@@ -218,6 +218,12 @@ export default function FaqListing({ initialData }: Props) {
                   </a>{' '}
                   — Vous préparez plutôt l'examen de certification CCMA (assistant médical clinique)? CCMAPractice couvre le blueprint de l'examen NHA CCMA avec des questions pratiques propulsées par l'IA, la théorie et des simulations d'examen.
                 </li>
+                <li>
+                  <a href="https://masterelectricianpractice.com" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#60A5FA] transition-colors">
+                    Master Electrician Practice
+                  </a>{' '}
+                  — Vous préparez plutôt à l'examen de maître électricien ? Master Electrician Practice couvre l'examen de Master Electrician du Texas (TDLR, administré par PSI) — volets NEC Knowledge et Calculations — avec des exercices conformes au blueprint officiel sur le NEC 2026, des explications citant le code et des simulations d'examen.
+                </li>
               </ul>
             </div>
           </div>
