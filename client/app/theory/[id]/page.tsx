@@ -16,8 +16,24 @@ const chapters = theoryData as TheoryChapter[];
 const ROMAN = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX','XXI','XXII','XXIII','XXIV','XXV'];
 
 function excerpt(content: string): string {
-  const plain = content
-    .replace(/<svg[\s\S]*?<\/svg>/gi, ' ')
+  // Strip SVGs, then pull the first substantive learning objectives (numbered or
+  // bullet items) after the "Learning Objectives" heading — those are the real
+  // chapter summary phrases. Fall back to plain head text if none are found.
+  const noSvg = content.replace(/<svg[\s\S]*?<\/svg>/gi, ' ');
+  const loMatch = noSvg.match(/#{2,4} Learning Objectives\s*\n+([\s\S]*?)(?=\n#{1,4} |\n---|\n$)/i);
+  let items: string[] = [];
+  if (loMatch) {
+    items = (loMatch[1].match(/^\s*(?:\d+\.\s*|-)\s*(.+)$/gm) || [])
+      .map((l) => l.replace(/^\s*(?:\d+\.\s*|-)\s*/, '').trim())
+      .filter(Boolean);
+  }
+  const pick = items.slice(0, 3).join(' ');
+  if (pick.length >= 60) {
+    const clean = pick.replace(/[#*`>|_]/g, ' ').replace(/\s+/g, ' ').trim();
+    const fixed = clean.replace(/\s+([,.;:!?])/g, '$1').replace(/\(\s+/g, '(').replace(/\s+\)/g, ')');
+    return fixed.length > 155 ? `${fixed.slice(0, 152).trimEnd()}...` : fixed;
+  }
+  const plain = noSvg
     .replace(/[#*`>|_-]/g, ' ')
     .replace(/\s+/g, ' ')
     .trim();
